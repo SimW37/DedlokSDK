@@ -55,8 +55,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// MClassHasEntityLimitedDataDesc
-// MNetworkAssumeNotNetworkable
 class CScriptComponent : public CEntityComponent
 {
 private:
@@ -72,7 +70,6 @@ public:
 // Registered binary: engine2.dll (project 'entity2')
 // Alignment: 8
 // Size: 0x78
-// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int32 m_nameStringableIndex"
 class CEntityIdentity
@@ -99,7 +96,7 @@ public:
 	// MNetworkChangeAccessorFieldPathIndex
 	ChangeAccessorFieldPathIndex_t m_PathIndex; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0042[0x16]; // 0x42
+	[[maybe_unused]] uint8_t __pad0044[0x14]; // 0x44
 public:
 	CEntityIdentity* m_pPrev; // 0x58	
 	CEntityIdentity* m_pNext; // 0x60	
@@ -114,8 +111,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct disallowed
-// MConstructibleClassBase
 // 
 // MNetworkVarNames "CEntityIdentity * m_pEntity"
 // MNetworkVarNames "CScriptComponent::Storage_t m_CScriptComponent"

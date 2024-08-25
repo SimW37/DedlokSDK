@@ -49,7 +49,6 @@ struct FourVectors2D;
 // Size: 0x8
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnSoftbodySpring_t
@@ -64,7 +63,6 @@ public:
 // Size: 0x4
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnSoftbodyParticle_t
@@ -76,7 +74,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0xf8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnHull_t
@@ -123,7 +120,6 @@ public:
 // Size: 0x20
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnSoftbodyCapsule_t
@@ -138,7 +134,6 @@ public:
 // Alignment: 4
 // Size: 0x1c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnCapsule_t
@@ -150,8 +145,7 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x10
-// Construct allowed
+// Size: 0x18
 // 
 // MGetKV3ClassDefaults
 struct RnShapeDesc_t
@@ -160,12 +154,17 @@ public:
 	uint32_t m_nCollisionAttributeIndex; // 0x0	
 	uint32_t m_nSurfacePropertyIndex; // 0x4	
 	CUtlString m_UserFriendlyName; // 0x8	
+	bool m_bUserFriendlyNameSealed; // 0x10	
+	bool m_bUserFriendlyNameLong; // 0x11	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	uint32_t m_nToolMaterialHash; // 0x14	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0xa8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnMesh_t
@@ -186,7 +185,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x620
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PhysFeModelDesc_t
@@ -301,7 +299,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0xd0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnBodyDesc_t
@@ -348,7 +345,6 @@ public:
 // Alignment: 16
 // Size: 0x40
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeBoxRigid_t
@@ -366,7 +362,6 @@ public:
 // Alignment: 4
 // Size: 0x9c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFeJiggleBone
@@ -414,7 +409,6 @@ public:
 // Size: 0x14
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeBandBendLimit_t
@@ -429,7 +423,6 @@ public:
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeTaperedCapsuleStretch_t
@@ -461,7 +454,6 @@ public:
 // Alignment: 16
 // Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdRodConstraintAnim_t
@@ -476,7 +468,6 @@ public:
 // Alignment: 16
 // Size: 0x50
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdRodConstraint_t
@@ -493,7 +484,6 @@ public:
 // Alignment: 16
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSphereRigid_t
@@ -510,7 +500,6 @@ public:
 // Alignment: 16
 // Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdAnimStrayRadius_t
@@ -525,7 +514,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnTriangle_t
@@ -537,7 +525,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeProxyVertexMap_t
@@ -551,7 +538,6 @@ public:
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeNodeIntegrator_t
@@ -565,22 +551,20 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x30
-// Construct allowed
+// Size: 0x38
 // 
 // MGetKV3ClassDefaults
 struct RnCapsuleDesc_t : public RnShapeDesc_t
 {
 public:
-	// -> m_vCenter[2] - 0x10
-	// -> m_flRadius - 0x28
-	RnCapsule_t m_Capsule; // 0x10	
+	// -> m_vCenter[2] - 0x18
+	// -> m_flRadius - 0x30
+	RnCapsule_t m_Capsule; // 0x18	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 16
 // Size: 0xd0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFeNamedJiggleBone
@@ -595,7 +579,6 @@ public:
 // Registered binary: vphysics2.dll (project 'vphysics2')
 // Alignment: 8
 // Size: 0xd8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct vphysics_save_cphysicsbody_t : public RnBodyDesc_t
@@ -608,7 +591,6 @@ public:
 // Alignment: 4
 // Size: 0x48
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct OldFeEdge_t
@@ -632,7 +614,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeFollowNode_t
@@ -645,24 +626,23 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0xb8
-// Construct allowed
+// Size: 0xc0
 // 
 // MGetKV3ClassDefaults
 struct RnMeshDesc_t : public RnShapeDesc_t
 {
 public:
-	// -> m_vMin - 0x10
-	// -> m_vMax - 0x1c
-	// -> m_Nodes - 0x28
-	// -> m_Vertices - 0x40
-	// -> m_Triangles - 0x58
-	// -> m_Wings - 0x70
-	// -> m_Materials - 0x88
-	// -> m_vOrthographicAreas - 0xa0
-	// -> m_nFlags - 0xac
-	// -> m_nDebugFlags - 0xb0
-	RnMesh_t m_Mesh; // 0x10	
+	// -> m_vMin - 0x18
+	// -> m_vMax - 0x24
+	// -> m_Nodes - 0x30
+	// -> m_Vertices - 0x48
+	// -> m_Triangles - 0x60
+	// -> m_Wings - 0x78
+	// -> m_Materials - 0x90
+	// -> m_vOrthographicAreas - 0xa8
+	// -> m_nFlags - 0xb4
+	// -> m_nDebugFlags - 0xb8
+	RnMesh_t m_Mesh; // 0x18	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
@@ -682,7 +662,6 @@ public:
 // Size: 0x10
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnBlendVertex_t
@@ -701,7 +680,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x88
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFeMorphLayer
@@ -723,7 +701,6 @@ public:
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeCtrlSoftOffset_t
@@ -738,7 +715,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeVertexMapDesc_t
@@ -762,7 +738,6 @@ public:
 // Alignment: 16
 // Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeTaperedCapsuleRigid_t
@@ -779,7 +754,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeAnimStrayRadius_t
@@ -795,7 +769,6 @@ public:
 // Size: 0x10
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeEdgeDesc_t
@@ -810,7 +783,6 @@ public:
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeNodeReverseOffset_t
@@ -826,7 +798,6 @@ public:
 // Size: 0x10
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnPlane_t
@@ -840,7 +811,6 @@ public:
 // Alignment: 4
 // Size: 0xa4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFeIndexedJiggleBone
@@ -854,7 +824,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CRegionSVM
@@ -868,7 +837,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeWorldCollisionParams_t
@@ -884,7 +852,6 @@ public:
 // Alignment: 16
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnNode_t
@@ -900,7 +867,6 @@ public:
 // Alignment: 16
 // Size: 0x40
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeFitMatrix_t
@@ -917,7 +883,6 @@ public:
 // Alignment: 16
 // Size: 0x130
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdQuad_t
@@ -933,7 +898,6 @@ public:
 // Alignment: 16
 // Size: 0x50
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdSpringIntegrator_t
@@ -950,7 +914,6 @@ public:
 // Alignment: 16
 // Size: 0x70
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdNodeBase_t
@@ -969,7 +932,6 @@ public:
 // Alignment: 4
 // Size: 0x4c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeQuad_t
@@ -984,7 +946,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnWing_t
@@ -997,7 +958,6 @@ public:
 // Alignment: 2
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeWeightedNode_t
@@ -1010,7 +970,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeEffectDesc_t
@@ -1026,7 +985,6 @@ public:
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSpringIntegrator_t
@@ -1043,7 +1001,6 @@ public:
 // Alignment: 16
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class FourVectors2D
@@ -1057,7 +1014,6 @@ public:
 // Alignment: 4
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeKelagerBend2_t
@@ -1074,7 +1030,6 @@ public:
 // Size: 0x30
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CastSphereSATParams_t
@@ -1095,7 +1050,6 @@ public:
 // Alignment: 2
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeRigidColliderIndices_t
@@ -1111,7 +1065,6 @@ public:
 // Alignment: 4
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeCollisionPlane_t
@@ -1129,7 +1082,6 @@ public:
 // Alignment: 4
 // Size: 0x1c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeStiffHingeBuild_t
@@ -1145,7 +1097,6 @@ public:
 // Alignment: 16
 // Size: 0x50
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeBuildBoxRigid_t : public FeBoxRigid_t
@@ -1158,7 +1109,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x90
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeMorphLayerDepr_t
@@ -1181,7 +1131,6 @@ public:
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeCtrlOffset_t
@@ -1209,7 +1158,6 @@ public:
 // Alignment: 16
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeNodeBase_t
@@ -1227,7 +1175,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeVertexMapBuild_t
@@ -1244,7 +1191,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFeVertexMapBuildArray
@@ -1257,7 +1203,6 @@ public:
 // Alignment: 4
 // Size: 0x1c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeTri_t
@@ -1272,14 +1217,13 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x108
-// Construct allowed
+// Size: 0x110
 // 
 // MGetKV3ClassDefaults
 struct RnHullDesc_t : public RnShapeDesc_t
 {
 public:
-	RnHull_t m_Hull; // 0x10	
+	RnHull_t m_Hull; // 0x18	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
@@ -1287,7 +1231,6 @@ public:
 // Size: 0x18
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CovMatrix3
@@ -1304,7 +1247,6 @@ public:
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnVertex_t
@@ -1318,7 +1260,6 @@ public:
 // Size: 0x68
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct Dop26_t
@@ -1332,7 +1273,6 @@ public:
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnFace_t
@@ -1345,7 +1285,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeCtrlOsOffset_t
@@ -1359,7 +1298,6 @@ public:
 // Alignment: 2
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSourceEdge_t
@@ -1372,7 +1310,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeTwistConstraint_t
@@ -1388,7 +1325,6 @@ public:
 // Alignment: 2
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeNodeWindBase_t
@@ -1404,7 +1340,6 @@ public:
 // Alignment: 4
 // Size: 0x28
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeAxialEdgeBend_t
@@ -1422,7 +1357,6 @@ public:
 // Size: 0x60
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class FourCovMatrices3
@@ -1461,7 +1395,6 @@ public:
 // Alignment: 16
 // Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeBuildSphereRigid_t : public FeSphereRigid_t
@@ -1475,7 +1408,6 @@ public:
 // Alignment: 16
 // Size: 0x40
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeBuildTaperedCapsuleRigid_t : public FeTaperedCapsuleRigid_t
@@ -1489,7 +1421,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSoftParent_t
@@ -1501,21 +1432,19 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x20
-// Construct allowed
+// Size: 0x28
 // 
 // MGetKV3ClassDefaults
 struct RnSphereDesc_t : public RnShapeDesc_t
 {
 public:
-	SphereBase_t< float32 > m_Sphere; // 0x10	
+	SphereBase_t< float32 > m_Sphere; // 0x18	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 2
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeTreeChildren_t
@@ -1528,7 +1457,6 @@ public:
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeRodConstraint_t
@@ -1545,7 +1473,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeFitWeight_t
@@ -1561,7 +1488,6 @@ public:
 // Size: 0x4
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnHalfEdge_t
@@ -1577,7 +1503,6 @@ public:
 // Alignment: 16
 // Size: 0x80
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdTri_t
@@ -1607,7 +1532,6 @@ public:
 // Size: 0xc
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeFitInfluence_t

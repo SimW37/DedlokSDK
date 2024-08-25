@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: assetpreview.dll
-// Classes count: 4 (Allocated) | 105 (Unallocated)
+// Classes count: 4 (Allocated) | 111 (Unallocated)
 // Enums count: 0 (Allocated) | 13 (Unallocated)
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -57,7 +57,7 @@ enum class ConfigurationHandleShape_t : std::uint32_t
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
-// Enumerator count: 2
+// Enumerator count: 3
 // Alignment: 4
 // Size: 0x4
 enum class SmartPropChoiceSelectionMode_t : std::uint32_t
@@ -68,6 +68,9 @@ enum class SmartPropChoiceSelectionMode_t : std::uint32_t
 	// MPropertyFriendlyName "First"
 	// MPropertyDescription "Pick the first valid choice. Selection criteria may be added to a choice to determine if it is valid."
 	FIRST = 0x1,
+	// MPropertyFriendlyName "Specific"
+	// MPropertyDescription "Pick a choice specified by an additional authored value."
+	SPECIFIC = 0x2,
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -229,9 +232,9 @@ struct CSmartPropAttributeRadiusPlacementMode;
 struct CSmartPropAttributeDistributionMode;
 struct CSmartPropAttributeGridPlacementMode;
 struct CSmartPropAttributeGridOriginMode;
+struct CSmartPropAttributeChoiceSelectionMode;
 struct CSmartPropAttributeApplyColorMode;
 struct CSmartPropAttributeDirection;
-struct CSmartPropAttributeChoiceSelectionMode;
 struct CSmartPropAttributeScaleMode;
 struct CSmartPropAttributePickMode;
 struct CSmartPropAttributePathPositions;
@@ -254,8 +257,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// MClassHasEntityLimitedDataDesc
-// MNetworkAssumeNotNetworkable
 class CScriptComponent : public CEntityComponent
 {
 private:
@@ -271,7 +272,6 @@ public:
 // Registered binary: assetpreview.dll (project 'entity2')
 // Alignment: 8
 // Size: 0x78
-// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int32 m_nameStringableIndex"
 class CEntityIdentity
@@ -298,7 +298,7 @@ public:
 	// MNetworkChangeAccessorFieldPathIndex
 	ChangeAccessorFieldPathIndex_t m_PathIndex; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0042[0x16]; // 0x42
+	[[maybe_unused]] uint8_t __pad0044[0x14]; // 0x44
 public:
 	CEntityIdentity* m_pPrev; // 0x58	
 	CEntityIdentity* m_pNext; // 0x60	
@@ -313,8 +313,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct disallowed
-// MConstructibleClassBase
 // 
 // MNetworkVarNames "CEntityIdentity * m_pEntity"
 // MNetworkVarNames "CScriptComponent::Storage_t m_CScriptComponent"
@@ -342,10 +340,9 @@ public:
 // Size: 0x50
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MVDataRoot
+// MVDataBase
 // MVDataNodeType "1"
 // MVDataAnonymousNode
 class CSmartPropModifier
@@ -362,10 +359,9 @@ public:
 // Size: 0x48
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MVDataRoot
+// MVDataBase
 // MVDataNodeType "1"
 // MVDataAnonymousNode
 class CSmartPropSelectionCriteria
@@ -382,7 +378,6 @@ public:
 // Size: 0x50
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSmartPropOperation : public CSmartPropModifier
@@ -394,7 +389,6 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Save Current Scale"
@@ -438,7 +432,6 @@ public:
 // Size: 0x50
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataNodeTintColor
@@ -466,7 +459,6 @@ public:
 // Has VTable
 // Is Abstract
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataRoot
@@ -500,7 +492,6 @@ public:
 // Size: 0x28
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataRoot
@@ -528,7 +519,6 @@ public:
 // Alignment: 8
 // Size: 0x110
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Material Group"
@@ -546,31 +536,37 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x70
+// Size: 0xf0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MPropertyFriendlyName "Tint Color Random"
-// MPropertyDescription "Set the color tint to a random selection from within the defined gradient."
+// MPropertyFriendlyName "Tint Color Gradient"
+// MPropertyDescription "Set the color tint to a selection from within the defined gradient."
 // MVDataClassGroup
 class CSmartPropOperation_RandomColorTintColor : public CSmartPropOperation
 {
 public:
-	// MPropertyDescription "Specifies how the selected color should be applied."
-	ApplyColorMode_t m_Mode; // 0x50	
+	// MPropertyFriendlyName "Selection Mode"
+	// MPropertyDescription "Specifies how the color is to be selected from the authored set of choices"
+	CSmartPropAttributeChoiceSelectionMode m_SelectionMode; // 0x50	
+	// MPropertyFriendlyName "Color Position"
+	// MPropertyDescription "[ 0, 1 ] Value specifying the location on the gradient to pick the color from."
+	// MPropertySuppressExpr "( m_SelectionMode != SPECIFIC )"
+	CSmartPropAttributeFloat m_ColorPosition; // 0x90	
+	// MPropertyFriendlyName "Application Mode"
+	// MPropertyDescription "Specifies how the selected color should be applied to the current color."
+	ApplyColorMode_t m_Mode; // 0xd0	
 private:
-	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
+	[[maybe_unused]] uint8_t __pad00d4[0x4]; // 0xd4
 public:
 	// MPropertyDescription "Defines a color gradient from which a random color will be piked."
-	CColorGradient m_Gradient; // 0x58	
+	CColorGradient m_Gradient; // 0xd8	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Random Rotation"
@@ -589,7 +585,6 @@ public:
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataComponentValidGrandParents
@@ -608,7 +603,6 @@ public:
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Restore State"
@@ -642,7 +636,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Selection Mode"
@@ -658,10 +651,9 @@ public:
 // Alignment: 8
 // Size: 0x80
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MVDataRoot
+// MVDataBase
 // MVDataNodeType "1"
 // MVDataAnonymousNode
 // MPropertyFriendlyName "Smart Prop Element"
@@ -692,7 +684,6 @@ public:
 // Alignment: 8
 // Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Rotate Towards"
@@ -724,7 +715,6 @@ public:
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSmartPropChoiceOption
@@ -741,9 +731,29 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
+// Size: 0xa8
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Material Override"
+// MPropertyDescription "Specifies a table of material replacements to apply to all following models. Mapping goes from the material specified by the model (including material group selection) to the replacement material. Previous material overrides are not considered when determining the base material."
+// MVDataClassGroup
+class CSmartPropOperation_MaterialOverride : public CSmartPropOperation
+{
+public:
+	// MPropertyFriendlyName "Clear Active Overrides"
+	// MPropertyDescription "If enabled, clear any previous material overrides, so that only the material replacements specified in this table will be active."
+	CSmartPropAttributeBool m_bClearCurrentOverrides; // 0x50	
+	// MPropertyAutoExpandSelf
+	// MPropertyFriendlyName "Material Replacements"
+	// MPropertyDescription "Table specifying pairs of existing materials and the material to replace them with."
+	CUtlVector< CSmartPropMaterialReplacement > m_MaterialReplacements; // 0x90	
+};
+
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Grid Placement"
@@ -759,7 +769,6 @@ public:
 // Alignment: 8
 // Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Save Current Surface Normal"
@@ -778,7 +787,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "String"
@@ -792,7 +800,6 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Reset Scale"
@@ -822,7 +829,6 @@ public:
 // Alignment: 8
 // Size: 0xa0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Group"
@@ -844,7 +850,6 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Set Variable"
@@ -861,7 +866,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Distribution Mode"
@@ -877,7 +881,6 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Scale"
@@ -907,7 +910,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Tint Mode"
@@ -921,10 +923,25 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
+// Size: 0x58
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Save Current Color"
+// MPropertyDescription "Save the current color tint value to a specified variable"
+// MVDataClassGroup
+class CSmartPropOperation_SaveColor : public CSmartPropOperation
+{
+public:
+	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Color )"
+	CUtlString m_VariableName; // 0x50	
+};
+
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
 // Size: 0x50
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataNodeTintColor
@@ -935,9 +952,8 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0xa8
+// Size: 0x128
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Tint Color Choice"
@@ -946,10 +962,18 @@ public:
 class CSmartPropOperation_SetTintColor : public CSmartPropOperation
 {
 public:
-	// MPropertyDescription "Specifies how the selected color should be applied."
-	CSmartPropAttributeApplyColorMode m_Mode; // 0x50	
+	// MPropertyFriendlyName "Selection Mode"
+	// MPropertyDescription "Specifies how the color is to be selected from the authored set of choices"
+	CSmartPropAttributeChoiceSelectionMode m_SelectionMode; // 0x50	
+	// MPropertyFriendlyName "Color Selection"
+	// MPropertyDescription "Specifies the index of the color to pick"
+	// MPropertySuppressExpr "( m_SelectionMode != SPECIFIC )"
+	CSmartPropAttributeInt m_ColorSelection; // 0x90	
+	// MPropertyFriendlyName "Application Mode"
+	// MPropertyDescription "Specifies how the selected color should be applied to the current color."
+	CSmartPropAttributeApplyColorMode m_Mode; // 0xd0	
 	// MPropertyDescription "List of possible colors which may be selected"
-	CUtlVector< ColorChoice_t > m_ColorChoices; // 0x90	
+	CUtlVector< ColorChoice_t > m_ColorChoices; // 0x110	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -969,7 +993,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Grid Origin"
@@ -985,7 +1008,6 @@ public:
 // Alignment: 8
 // Size: 0x140
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Model"
@@ -1009,7 +1031,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Angles"
@@ -1036,10 +1057,10 @@ public:
 // Alignment: 8
 // Size: 0x108
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Model"
+// MPropertyDescription "Model Asset Variable"
 class CSmartPropVariable_Model : public CSmartPropVariable
 {
 public:
@@ -1051,7 +1072,6 @@ public:
 // Alignment: 8
 // Size: 0xc8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataComponentValidGrandParents
@@ -1070,7 +1090,6 @@ public:
 // Alignment: 8
 // Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Project Vector"
@@ -1118,7 +1137,6 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Filter: Expression"
@@ -1135,7 +1153,6 @@ public:
 // Alignment: 8
 // Size: 0xd8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Dot Product"
@@ -1157,7 +1174,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Boolean"
@@ -1171,7 +1187,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Vector 2D"
@@ -1183,9 +1198,23 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
+// Size: 0x50
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Transform: Rigid Deformation"
+// MPropertyDescription "Apply the active deformer to the current transform as a rigid deformation and disable the deformer."
+// MVDataClassGroup
+// MVDataComponentRequiresAncestor
+class CSmartPropOperation_RigidDeformation : public CSmartPropTransformOperation
+{
+public:
+};
+
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
 // Size: 0x3a0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Layout Grid"
@@ -1238,10 +1267,9 @@ public:
 // Alignment: 8
 // Size: 0x168
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MPropertyFriendlyName "Smart Prop"
+// MPropertyFriendlyName "Smart Prop Reference"
 // MPropertyDescription "Evaluates a specified smart prop as a child of the current element."
 // MVDataOutlinerAssetNameExpr
 class CSmartPropElement_SmartProp : public CSmartPropElement
@@ -1257,7 +1285,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Vector 4D"
@@ -1271,7 +1298,6 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Filter: Probability"
@@ -1288,7 +1314,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Fit on Line Scale Mode"
@@ -1304,7 +1329,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Trace Miss Behavior"
@@ -1319,7 +1343,6 @@ public:
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0x80
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ColorChoice_t
@@ -1335,7 +1358,6 @@ public:
 // Alignment: 8
 // Size: 0xd8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Save Direction Vector"
@@ -1356,7 +1378,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Choice"
@@ -1377,7 +1398,6 @@ public:
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Translate"
@@ -1396,7 +1416,6 @@ public:
 // Alignment: 8
 // Size: 0x148
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataComponentValidGrandParents
@@ -1423,7 +1442,6 @@ public:
 // Alignment: 8
 // Size: 0x198
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Distance"
@@ -1453,10 +1471,20 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
+// Size: 0xa0
+// Has VTable
+// Is Abstract
+class CSmartPropElement_Deformer : public CSmartPropElement_Group
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
 // Size: 0x310
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSmartPropOperation_Trace : public CSmartPropTransformOperation
@@ -1502,7 +1530,6 @@ public:
 // Alignment: 8
 // Size: 0xe8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Place Multiple"
@@ -1522,7 +1549,6 @@ public:
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Apply Modifiers"
@@ -1541,7 +1567,6 @@ public:
 // Alignment: 8
 // Size: 0x3c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Create Sizer"
@@ -1604,7 +1629,6 @@ public:
 // Alignment: 8
 // Size: 0xd8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Cross Product"
@@ -1626,7 +1650,6 @@ public:
 // Alignment: 8
 // Size: 0x190
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Set Orientation"
@@ -1653,7 +1676,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Direction Vector"
@@ -1667,9 +1689,8 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x228
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Select Single Child"
@@ -1679,31 +1700,34 @@ class CSmartPropElement_PickOne : public CSmartPropElement_Group
 public:
 	// MPropertyDescription "Specifies how the initial selection of a choice should be handled."
 	CSmartPropAttributeChoiceSelectionMode m_SelectionMode; // 0xa0	
+	// MPropertyFriendlyName "Specific Child"
+	// MPropertyDescription "Specifies the index of the child to pick."
+	// MPropertySuppressExpr "( m_SelectionMode != SPECIFIC )"
+	CSmartPropAttributeInt m_SpecificChildIndex; // 0xe0	
 	// MPropertyDescription "Should a control to select the specific choice be shown when this prop is placed in Hammer."
-	CSmartPropAttributeBool m_bConfigurable; // 0xe0	
+	CSmartPropAttributeBool m_bConfigurable; // 0x120	
 	// MPropertyGroupName "Handle Settings"
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Specifies an offset in the local space of the element to apply to the configuration handle."
-	CSmartPropAttributeVector m_vHandleOffset; // 0x120	
+	CSmartPropAttributeVector m_vHandleOffset; // 0x160	
 	// MPropertyGroupName "Handle Settings"
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Color to use to display the configuration handle."
-	CSmartPropAttributeColor m_HandleColor; // 0x160	
+	CSmartPropAttributeColor m_HandleColor; // 0x1a0	
 	// MPropertyGroupName "Handle Settings"
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Size of the configuration handle."
-	CSmartPropAttributeInt m_HandleSize; // 0x1a0	
+	CSmartPropAttributeInt m_HandleSize; // 0x1e0	
 	// MPropertyGroupName "Handle Settings"
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Shape of the configuration handle to display."
-	ConfigurationHandleShape_t m_HandleShape; // 0x1e0	
+	ConfigurationHandleShape_t m_HandleShape; // 0x220	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Create Locator"
@@ -1738,7 +1762,6 @@ public:
 // Alignment: 8
 // Size: 0x260
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Create Rotator"
@@ -1757,7 +1780,7 @@ public:
 	// MPropertyDescription "Radius at which the rotator handle should be displayed."
 	CSmartPropAttributeFloat m_flDisplayRadius; // 0xd8	
 	// MPropertyDescription "Should the rotation be applied to the current transform."
-	CSmartPropAttributeBool m_bApplyToCurrentTrasnform; // 0x118	
+	CSmartPropAttributeBool m_bApplyToCurrentTransform; // 0x118	
 	// MPropertyDescription "Specifies the number of degrees the rotation should snap to. If set to 0, then the rotation snapping will be controlled by the rotation snapping in Hammer."
 	CSmartPropAttributeFloat m_flSnappingIncrement; // 0x158	
 	// MPropertyFriendlyName "Enforce Limits"
@@ -1780,7 +1803,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Color"
@@ -1807,7 +1829,6 @@ public:
 // Alignment: 8
 // Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Vector Between Points"
@@ -1842,7 +1863,6 @@ public:
 // Alignment: 8
 // Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Save Current Position"
@@ -1861,7 +1881,6 @@ public:
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Set Position"
@@ -1880,7 +1899,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Integer"
@@ -1898,9 +1916,42 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
+// Size: 0x260
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Bend Deformer"
+// MPropertyDescription "Creates a bend deformer that is applied to child elements. The deformation bends the local space x-axis around the local space z-axis. The Angles property can be used to rotate the local axis to change the direction of deformation."
+class CSmartPropElement_BendDeformer : public CSmartPropElement_Deformer
+{
+public:
+	// MPropertyFriendlyName "Deformation Enabled"
+	// MPropertyDescription "Should the deformation be applied. If disabled the children will still be placed, but will not be deformed. Esentially making the element behave as a group."
+	CSmartPropAttributeBool m_bDeformationEnabled; // 0xa0	
+	// MPropertyFriendlyName "Origin"
+	// MPropertyDescription "A local offset to apply to the base volume of the deformer that will not apply to its children."
+	CSmartPropAttributeVector m_vOrigin; // 0xe0	
+	// MPropertyFriendlyName "Angles"
+	// MPropertyDescription "A local rotation to apply to apply the base volume of the deformer that will not apply to its children. This can be used to alter the direction of the deformation."
+	CSmartPropAttributeAngles m_vAngles; // 0x120	
+	// MPropertyFriendlyName "Dimensions"
+	// MPropertyDescription "Size of the base volume to be deformed."
+	CSmartPropAttributeVector m_vSize; // 0x160	
+	// MPropertyFriendlyName "Bend Angle"
+	// MPropertyDescription "Bend amount to apply, specified in degrees. Bend occurs along the local x-axis and bends around the local z-axis"
+	CSmartPropAttributeFloat m_flBendAngle; // 0x1a0	
+	// MPropertyFriendlyName "Bend Point"
+	// MPropertyDescription "[ 0, 1 ] Value specifying the location along the local x-axis the bend will occur around"
+	CSmartPropAttributeFloat m_flBendPoint; // 0x1e0	
+	// MPropertyFriendlyName "Bend Radius"
+	// MPropertyDescription "Radius of the bend. If 0 the radius will be computed automatically to preserve the length of the inner edge of the x-axis. If a non-zero value is specified then the inner edge will maintain this radius, but its length will change."
+	CSmartPropAttributeFloat m_flBendRadius; // 0x220	
+};
+
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Random Scale"
@@ -1919,7 +1970,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Float"
@@ -1939,7 +1989,6 @@ public:
 // Alignment: 8
 // Size: 0x150
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Reset Rotation"
@@ -1962,7 +2011,6 @@ public:
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Filter: Surface Angles"
@@ -1981,7 +2029,6 @@ public:
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataComponentValidGrandParents
@@ -1998,7 +2045,6 @@ public:
 // Alignment: 8
 // Size: 0x490
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Trace To Line"
@@ -2029,8 +2075,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0xb0
-// Construct allowed
+// Size: 0xc8
 // 
 // MGetKV3ClassDefaults
 // MSmartPropClassVersion
@@ -2040,7 +2085,7 @@ public:
 // MVDataPreviewWidget
 // MVDataGroupNodeClass
 // MVDataUsesComponentEditor
-// MPropertyFriendlyName "Smart Prop"
+// MPropertyFriendlyName "Smart Prop Root"
 // MPropertyDescription "Root of a smart prop, contains a list of elements to evaluate."
 class CSmartPropRoot
 {
@@ -2058,13 +2103,15 @@ public:
 	// MPropertyDescription "List of the root level elements making up the smart prop definition, each element may be an entire tree."
 	// MVDataPromoteField
 	CUtlVector< CSmartPropElement* > m_Children; // 0x78	
+	// MPropertyFriendlyName "Modifiers"
+	// MVDataPromoteField
+	CUtlVector< CSmartPropModifier* > m_Modifiers; // 0x90	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Rotate"
@@ -2081,7 +2128,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Vector 3D"
@@ -2093,9 +2139,23 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
+// Size: 0x108
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Material"
+// MPropertyDescription "Material Asset Variable"
+class CSmartPropVariable_Material : public CSmartPropVariable
+{
+public:
+	// MPropertyFriendlyName "Default Material"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIMaterial2 > > m_DefaultValue; // 0x28	
+};
+
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
 // Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Normalize Vector"
@@ -2114,7 +2174,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Placement Shape"
@@ -2130,7 +2189,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Path Positions"
@@ -2159,7 +2217,6 @@ public:
 // Alignment: 8
 // Size: 0x410
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Trace To Point"
@@ -2187,7 +2244,6 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Save State"
@@ -2204,9 +2260,25 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
+// Size: 0x80
+// 
+// MGetKV3ClassDefaults
+class CSmartPropMaterialReplacement
+{
+public:
+	// MPropertyAttributeEditor "SmartPropAttributeEditor(MaterialInSmartProp)"
+	// MPropertyFriendlyName "Original Material"
+	// MPropertyDescription "Original material to replace. This is the material specified in the model, including any material group asignment within the model. Does not consider any existing material overrides specified within the smart prop."
+	CSmartPropAttributeMaterialName m_OriginalMaterial; // 0x0	
+	// MPropertyFriendlyName "New Material"
+	// MPropertyDescription "New material to replace the original material with."
+	CSmartPropAttributeMaterialName m_ReplacementMaterial; // 0x40	
+};
+
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
 // Size: 0x320
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Place In Radius"
@@ -2243,7 +2315,6 @@ public:
 // Alignment: 8
 // Size: 0x2e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Fit on Line"
@@ -2281,7 +2352,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Coordinate Space"
@@ -2297,7 +2367,6 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Filter: Variable Value"
@@ -2313,7 +2382,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Fit on Line Pick Mode"
@@ -2329,7 +2397,6 @@ public:
 // Alignment: 8
 // Size: 0x2c0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Place on Path"
@@ -2365,7 +2432,6 @@ public:
 // Alignment: 8
 // Size: 0x188
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataComponentValidGrandParents
@@ -2392,7 +2458,6 @@ public:
 // Alignment: 8
 // Size: 0x3d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Trace In Direction"
@@ -2413,7 +2478,6 @@ public:
 // Alignment: 8
 // Size: 0x80
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Filter: Surface Properties"
@@ -2432,7 +2496,6 @@ public:
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Random Offset"
@@ -2445,60 +2508,5 @@ public:
 	CSmartPropAttributeVector m_vRandomPositionMin; // 0x50	
 	// MPropertyDescription "Maximum random position offset"
 	CSmartPropAttributeVector m_vRandomPositionMax; // 0x90	
-};
-
-// Registered binary: assetpreview.dll (project 'smartprops')
-// Alignment: 8
-// Size: 0x4a0
-// Has VTable
-// Construct allowed
-// 
-// MGetKV3ClassDefaults
-// MPropertyFriendlyName "Layout Circle (Test)"
-// MPropertyDescription "An element which places multiple instances of its child elements within a radius."
-// MVDataExperimentalNodeSet
-class CSmartPropElement_Layout2DCircle_experimental : public CSmartPropElement_Group
-{
-public:
-	// MPropertyDescription "Specifies how the positions are computed based on the radius."
-	CSmartPropAttributeRadiusPlacementMode m_PlacementMode; // 0xa0	
-	// MPropertyDescription "Specifies the method to be used to distribute."
-	CSmartPropAttributeDistributionMode m_DistributionMode; // 0xe0	
-	// MPropertySuppressExpr "m_DistributionMode == RANDOM"
-	// MPropertyDescription "0 to 1 value indicating the amout of random offset that should be applied to the reguluarly spaced positions"
-	CSmartPropAttributeFloat m_flRandomness; // 0x120	
-	// MPropertySuppressExpr "m_PlacementMode == SPHERE"
-	// MPropertyDescription "Vector up direction of the plane of the circle. This in the local space of the current element."
-	CSmartPropAttributeVector m_vPlaneUpDirection; // 0x160	
-	// MPropertyDescription "Minimum number of instances of this object and its children to be placed."
-	CSmartPropAttributeInt m_nCountMin; // 0x1a0	
-	// MPropertyDescription "Maximum number of instances of this object and its children to be placed."
-	CSmartPropAttributeInt m_nCountMax; // 0x1e0	
-	// MPropertyDescription "Inner radius from the placement position where the model can appear."
-	CSmartPropAttributeFloat m_flPositionRadiusInner; // 0x220	
-	// MPropertyDescription "Outer radius from the placement position where the model can appear."
-	CSmartPropAttributeFloat m_flPositionRadiusOuter; // 0x260	
-	// MPropertyDescription "Align the initial orientation of each placed object based on it position on the sphere or circle."
-	CSmartPropAttributeBool m_bAlignOrientation; // 0x2a0	
-	// MPropertyReadonlyExpr
-	// MPropertyDescription "Vector in the local space of the child element to be aligned with sphere or circle"
-	CSmartPropAttributeVector m_vAlignDirection; // 0x2e0	
-	// MPropertyDescription "Trace outwards from center to prevent children from penetrating solid scene geometry."
-	CSmartPropAttributeBool m_bTraceEnabled; // 0x320	
-	// MPropertySuppressExpr "m_bTraceEnabled == false && m_PlacementMode == SPHERE"
-	// MPropertyDescription "Distance along the PlaneUpDirection to offset the trace. (YM: Eliminate in favor of requiring xform on Node? Or keep it and make it a range? )"
-	CSmartPropAttributeFloat m_flTraceHeightBias; // 0x360	
-	// MPropertySuppressExpr "m_bTraceEnabled == false && m_PlacementMode == SPHERE"
-	// MPropertyDescription "Jitter Spread the trace origin to make it look more natural."
-	CSmartPropAttributeFloat m_flTraceOriginRadius; // 0x3a0	
-	// MPropertySuppressExpr "m_bTraceEnabled == false"
-	// MPropertyDescription "Apply a retro bias to accumulated, so that they fall away."
-	CSmartPropAttributeBool m_bTraceAccumRetroFalloff; // 0x3e0	
-	// MPropertySuppressExpr "m_bTraceAllowAccumulate == false && m_PlacementMode == SPHERE"
-	// MPropertyDescription "Back off accumulated hits by at least this distance."
-	CSmartPropAttributeFloat m_flTraceAccumulateRetroBiasMin; // 0x420	
-	// MPropertySuppressExpr "m_bTraceAllowAccumulate == false && m_PlacementMode == SPHERE"
-	// MPropertyDescription "Back off accumulated hits by at most this distance."
-	CSmartPropAttributeFloat m_flTraceAccumulateRetroBiasMax; // 0x460	
 };
 

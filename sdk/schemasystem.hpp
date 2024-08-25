@@ -77,7 +77,6 @@ public:
 // Alignment: 8
 // Size: 0x10
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CExampleSchemaVData_PolymorphicBase
@@ -92,7 +91,6 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CExampleSchemaVData_PolymorphicDerivedA : public CExampleSchemaVData_PolymorphicBase
@@ -105,7 +103,6 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CExampleSchemaVData_PolymorphicDerivedB : public CExampleSchemaVData_PolymorphicBase
@@ -133,7 +130,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CExampleSchemaVData_Monomorphic

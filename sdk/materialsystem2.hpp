@@ -74,7 +74,6 @@ struct PostProcessingLocalContrastParameters_t;
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParam_t
@@ -86,7 +85,6 @@ public:
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParamVector_t : public MaterialParam_t
@@ -98,7 +96,6 @@ public:
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParamString_t : public MaterialParam_t
@@ -111,7 +108,6 @@ public:
 // Alignment: 4
 // Size: 0x24
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PostProcessingVignetteParameters_t
@@ -128,7 +124,6 @@ public:
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParamInt_t : public MaterialParam_t
@@ -141,7 +136,6 @@ public:
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PostProcessingLocalContrastParameters_t
@@ -158,7 +152,6 @@ public:
 // Alignment: 4
 // Size: 0x3c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PostProcessingTonemapParameters_t
@@ -185,7 +178,6 @@ public:
 // Alignment: 4
 // Size: 0x70
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PostProcessingBloomParameters_t
@@ -206,7 +198,6 @@ public:
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParamBuffer_t : public MaterialParam_t
@@ -218,7 +209,6 @@ public:
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x130
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialResourceData_t
@@ -243,7 +233,6 @@ public:
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x118
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PostProcessingResource_t
@@ -295,7 +284,6 @@ public:
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParamFloat_t : public MaterialParam_t
@@ -307,7 +295,6 @@ public:
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParamTexture_t : public MaterialParam_t

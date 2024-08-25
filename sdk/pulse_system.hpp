@@ -30,9 +30,9 @@ public:
 // Alignment: 8
 // Size: 0x80
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
+// MPulseEditorIsControlFlowNode
 class CPulseCell_WaitForCursorsWithTagBase : public CPulseCell_BaseYieldingInflow
 {
 public:
@@ -48,7 +48,6 @@ public:
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -92,7 +91,6 @@ public:
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"

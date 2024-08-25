@@ -10,7 +10,7 @@
 // /////////////////////////////////////////////////////////////
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
-// Enumerator count: 13
+// Enumerator count: 14
 // Alignment: 4
 // Size: 0x4
 enum class ObjectTypeFlags_t : std::uint32_t
@@ -28,6 +28,7 @@ enum class ObjectTypeFlags_t : std::uint32_t
 	OBJECT_TYPE_OVERLAY = 0x2000,
 	OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
 	OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000,
+	OBJECT_TYPE_DISABLE_VIS_CULLING = 0x10000,
 };
 
 struct ChangeAccessorFieldPathIndex_t;
@@ -57,8 +58,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// MClassHasEntityLimitedDataDesc
-// MNetworkAssumeNotNetworkable
 class CScriptComponent : public CEntityComponent
 {
 private:
@@ -74,7 +73,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'entity2')
 // Alignment: 8
 // Size: 0x78
-// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int32 m_nameStringableIndex"
 class CEntityIdentity
@@ -101,7 +99,7 @@ public:
 	// MNetworkChangeAccessorFieldPathIndex
 	ChangeAccessorFieldPathIndex_t m_PathIndex; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0042[0x16]; // 0x42
+	[[maybe_unused]] uint8_t __pad0044[0x14]; // 0x44
 public:
 	CEntityIdentity* m_pPrev; // 0x58	
 	CEntityIdentity* m_pNext; // 0x60	
@@ -116,8 +114,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct disallowed
-// MConstructibleClassBase
 // 
 // MNetworkVarNames "CEntityIdentity * m_pEntity"
 // MNetworkVarNames "CScriptComponent::Storage_t m_CScriptComponent"
@@ -143,7 +139,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x88
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SceneObject_t
@@ -174,7 +169,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AggregateLODSetup_t
@@ -189,7 +183,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct BaseSceneObjectOverride_t
@@ -202,7 +195,6 @@ public:
 // Alignment: 4
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ClutterTile_t
@@ -216,7 +208,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x78
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AggregateSceneObject_t
@@ -238,7 +229,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x50
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct NodeData_t
@@ -272,7 +262,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0xa0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ClutterSceneObject_t
@@ -297,7 +286,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct BakedLightingInfo_t
@@ -321,7 +309,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PermEntityLumpData_t
@@ -337,7 +324,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x140
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct WorldNode_t
@@ -360,9 +346,8 @@ public:
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
-// Size: 0x28
+// Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ExtraVertexStreamOverride_t : public BaseSceneObjectOverride_t
@@ -377,7 +362,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct EntityIOConnectionData_t
@@ -398,7 +382,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x48
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct WorldBuilderParams_t
@@ -419,7 +402,6 @@ public:
 // Size: 0x8
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VoxelVisBlockOffset_t
@@ -446,7 +428,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct WorldNodeOnDiskBufferData_t
@@ -462,7 +443,6 @@ public:
 // Alignment: 4
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AggregateMeshInfo_t
@@ -485,7 +465,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0xa8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct World_t
@@ -505,7 +484,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x70
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct InfoOverlayData_t
@@ -529,7 +507,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialOverride_t : public BaseSceneObjectOverride_t
@@ -547,7 +524,6 @@ public:
 // Alignment: 8
 // Size: 0x40
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct EntityKeyValueData_t
@@ -562,7 +538,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0xa0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CVoxelVisibility

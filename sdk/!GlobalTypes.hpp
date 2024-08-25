@@ -4,30 +4,10 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: !GlobalTypes
-// Classes count: 1,640 (Allocated) | 1,640 (Unallocated)
-// Enums count: 544 (Allocated) | 544 (Unallocated)
+// Classes count: 1,758 (Allocated) | 1,758 (Unallocated)
+// Enums count: 568 (Allocated) | 568 (Unallocated)
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
-
-// Registered binary: server.dll (project 'server')
-// Enumerator count: 12
-// Alignment: 4
-// Size: 0x4
-enum class Hull_t : std::uint32_t
-{
-	HULL_HUMAN = 0x0,
-	HULL_SMALL_CENTERED = 0x1,
-	HULL_WIDE_HUMAN = 0x2,
-	HULL_TINY = 0x3,
-	HULL_MEDIUM = 0x4,
-	HULL_TINY_CENTERED = 0x5,
-	HULL_LARGE = 0x6,
-	HULL_LARGE_CENTERED = 0x7,
-	HULL_MEDIUM_TALL = 0x8,
-	HULL_SMALL = 0x9,
-	NUM_HULLS = 0xa,
-	HULL_NONE = 0xb,
-};
 
 // Registered binary: particles.dll (project 'particles')
 // Enumerator count: 7
@@ -49,6 +29,26 @@ enum class ParticleTextureLayerBlendType_t : std::uint32_t
 	SPRITECARD_TEXTURE_BLEND_AVERAGE = 0x5,
 	// MPropertyFriendlyName "Luminance"
 	SPRITECARD_TEXTURE_BLEND_LUMINANCE = 0x6,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 12
+// Alignment: 4
+// Size: 0x4
+enum class Hull_t : std::uint32_t
+{
+	HULL_HUMAN = 0x0,
+	HULL_SMALL_CENTERED = 0x1,
+	HULL_WIDE_HUMAN = 0x2,
+	HULL_TINY = 0x3,
+	HULL_MEDIUM = 0x4,
+	HULL_TINY_CENTERED = 0x5,
+	HULL_LARGE = 0x6,
+	HULL_LARGE_CENTERED = 0x7,
+	HULL_MEDIUM_TALL = 0x8,
+	HULL_SMALL = 0x9,
+	NUM_HULLS = 0xa,
+	HULL_NONE = 0xb,
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -129,7 +129,7 @@ enum class CitadelEntityMessageIds : std::uint32_t
 };
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
-// Enumerator count: 13
+// Enumerator count: 14
 // Alignment: 4
 // Size: 0x4
 enum class ObjectTypeFlags_t : std::uint32_t
@@ -147,6 +147,7 @@ enum class ObjectTypeFlags_t : std::uint32_t
 	OBJECT_TYPE_OVERLAY = 0x2000,
 	OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
 	OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000,
+	OBJECT_TYPE_DISABLE_VIS_CULLING = 0x10000,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -188,7 +189,7 @@ enum class ParticleModelType_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
-// Enumerator count: 73
+// Enumerator count: 75
 // Alignment: 2
 // Size: 0x2
 enum class PulseInstructionCode_t : std::uint16_t
@@ -252,20 +253,22 @@ enum class PulseInstructionCode_t : std::uint16_t
 	EQ_FLOAT = 0x38,
 	EQ_STRING = 0x39,
 	EQ_ENTITY_NAME = 0x3a,
-	EQ_EHANDLE = 0x3b,
-	EQ_PANEL_HANDLE = 0x3c,
-	EQ_OPAQUE_HANDLE = 0x3d,
-	EQ_TEST_HANDLE = 0x3e,
-	NE_BOOL = 0x3f,
-	NE_INT = 0x40,
-	NE_FLOAT = 0x41,
-	NE_STRING = 0x42,
-	NE_ENTITY_NAME = 0x43,
-	NE_EHANDLE = 0x44,
-	NE_PANEL_HANDLE = 0x45,
-	NE_OPAQUE_HANDLE = 0x46,
-	NE_TEST_HANDLE = 0x47,
-	GET_CONST_INLINE_STORAGE = 0x48,
+	EQ_SCHEMA_ENUM = 0x3b,
+	EQ_EHANDLE = 0x3c,
+	EQ_PANEL_HANDLE = 0x3d,
+	EQ_OPAQUE_HANDLE = 0x3e,
+	EQ_TEST_HANDLE = 0x3f,
+	NE_BOOL = 0x40,
+	NE_INT = 0x41,
+	NE_FLOAT = 0x42,
+	NE_STRING = 0x43,
+	NE_ENTITY_NAME = 0x44,
+	NE_SCHEMA_ENUM = 0x45,
+	NE_EHANDLE = 0x46,
+	NE_PANEL_HANDLE = 0x47,
+	NE_OPAQUE_HANDLE = 0x48,
+	NE_TEST_HANDLE = 0x49,
+	GET_CONST_INLINE_STORAGE = 0x4a,
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -464,28 +467,28 @@ enum class EAbilityBehavior_t : std::uint64_t
 	CITADEL_ABILITY_BEHAVIOR_PREVENT_BOT_USAGE = 0x8000000000,
 	CITADEL_ABILITY_BEHAVIOR_REQUIRE_PREDICTION = 0x10000000000,
 	CITADEL_ABILITY_BEHAVIOR_COOLDOWN_PERSISTS_ACROSS_REBUY = 0x20000000000,
-	CITADEL_ABILITY_BEHAVIOR_DURATION_IGNORES_TIME_SCALE = 0x40000000000,
-	CITADEL_ABILITY_BEHAVIOR_MUST_BE_CAST_ON_GROUND = 0x80000000000,
-	CITADEL_ABILITY_BEHAVIOR_COOLDOWN_REFILLS_ALL_CHARGES = 0x100000000000,
-	CITADEL_ABILITY_BEHAVIOR_CAN_ONLY_CAST_IN_FALSE_DEATH = 0x200000000000,
-	CITADEL_ABILITY_BEHAVIOR_SHOW_CAST_RANGE_AS_SAT_SPHERE_WHILE_CASTING = 0x400000000000,
-	CITADEL_ABILITY_BEHAVIOR_IGNORE_SELECTION_MASH_PROTECTION = 0x800000000000,
-	CITADEL_ABILITY_BEHAVIOR_PREVENT_TRAINING_BOT_USAGE = 0x1000000000000,
-	CITADEL_ABILITY_BEHAVIOR_CAN_CANCEL_DURING_CAST_DELAY = 0x2000000000000,
-	CITADEL_ABILITY_BEHAVIOR_CANNOT_CANCEL_DURING_CHANNEL = 0x4000000000000,
-	CITADEL_ABILITY_BEHAVIOR_CAN_CAST_ON_ZIPLINE = 0x8000000000000,
-	CITADEL_ABILITY_BEHAVIOR_STARTS_ON_COOLDOWN = 0x10000000000000,
-	CITADEL_ABILITY_BEHAVIOR_CAN_HEAL_PLAYERS = 0x20000000000000,
-	CITADEL_ABILITY_BEHAVIOR_SWITCH_AWAY_ON_FAILED_CAST = 0x40000000000000,
-	CITADEL_ABILITY_BEHAVIOR_CASTABLE_WHILE_DODGING = 0x80000000000000,
-	CITADEL_ABILITY_BEHAVIOR_TRIGGER = 0x100000000000000,
-	CITADEL_ABILITY_BEHAVIOR_IS_ALTERNATIVE_WEAPON = 0x200000000000000,
-	CITADEL_ABILITY_BEHAVIOR_PROJECTILE_FIRED_AS_BULLET = 0x400000000000000,
-	CITADEL_ABILITY_BEHAVIOR_COOLDOWN_ON_CHANNEL_END = 0x800000000000000,
-	CITADEL_ABILITY_BEHAVIOR_DONT_CONSUME_ABILITY_RESOURCE_ON_CAST = 0x1000000000000000,
-	CITADEL_ABILITY_BEHAVIOR_ALLOW_ALT_CAST = 0x2000000000000000,
-	CITADEL_ABILITY_BEHAVIOR_DONT_TRIGGER_POST_CAST_ON_CAST_COMPLETE = 0x4000000000000000,
-	CITADEL_ABILITY_BEHAVIOR_USE_INSTANT_CAST_UNIT_TARGET_UI = 0x8000000000000000,
+	CITADEL_ABILITY_BEHAVIOR_MUST_BE_CAST_ON_GROUND = 0x40000000000,
+	CITADEL_ABILITY_BEHAVIOR_COOLDOWN_REFILLS_ALL_CHARGES = 0x80000000000,
+	CITADEL_ABILITY_BEHAVIOR_CAN_ONLY_CAST_IN_FALSE_DEATH = 0x100000000000,
+	CITADEL_ABILITY_BEHAVIOR_SHOW_CAST_RANGE_AS_SAT_SPHERE_WHILE_CASTING = 0x200000000000,
+	CITADEL_ABILITY_BEHAVIOR_IGNORE_SELECTION_MASH_PROTECTION = 0x400000000000,
+	CITADEL_ABILITY_BEHAVIOR_PREVENT_TRAINING_BOT_USAGE = 0x800000000000,
+	CITADEL_ABILITY_BEHAVIOR_CAN_CANCEL_DURING_CAST_DELAY = 0x1000000000000,
+	CITADEL_ABILITY_BEHAVIOR_CANNOT_CANCEL_DURING_CHANNEL = 0x2000000000000,
+	CITADEL_ABILITY_BEHAVIOR_CAN_CAST_ON_ZIPLINE = 0x4000000000000,
+	CITADEL_ABILITY_BEHAVIOR_STARTS_ON_COOLDOWN = 0x8000000000000,
+	CITADEL_ABILITY_BEHAVIOR_CAN_HEAL_PLAYERS = 0x10000000000000,
+	CITADEL_ABILITY_BEHAVIOR_SWITCH_AWAY_ON_FAILED_CAST = 0x20000000000000,
+	CITADEL_ABILITY_BEHAVIOR_CASTABLE_WHILE_DODGING = 0x40000000000000,
+	CITADEL_ABILITY_BEHAVIOR_TRIGGER = 0x80000000000000,
+	CITADEL_ABILITY_BEHAVIOR_IS_ALTERNATIVE_WEAPON = 0x100000000000000,
+	CITADEL_ABILITY_BEHAVIOR_PROJECTILE_FIRED_AS_BULLET = 0x200000000000000,
+	CITADEL_ABILITY_BEHAVIOR_COOLDOWN_ON_CHANNEL_END = 0x400000000000000,
+	CITADEL_ABILITY_BEHAVIOR_DONT_CONSUME_ABILITY_RESOURCE_ON_CAST = 0x800000000000000,
+	CITADEL_ABILITY_BEHAVIOR_ALLOW_ALT_CAST = 0x1000000000000000,
+	CITADEL_ABILITY_BEHAVIOR_DONT_TRIGGER_POST_CAST_ON_CAST_COMPLETE = 0x2000000000000000,
+	CITADEL_ABILITY_BEHAVIOR_USE_INSTANT_CAST_UNIT_TARGET_UI = 0x4000000000000000,
+	CITADEL_ABILITY_BEHAVIOR_MOVEMENT = 0x8000000000000000,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -631,7 +634,7 @@ enum class EModifierPriority : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 17
+// Enumerator count: 15
 // Alignment: 4
 // Size: 0x4
 enum class CLC_Messages : std::uint32_t
@@ -640,19 +643,17 @@ enum class CLC_Messages : std::uint32_t
 	clc_Move = 0x15,
 	clc_VoiceData = 0x16,
 	clc_BaselineAck = 0x17,
-	clc_ListenEvents = 0x18,
 	clc_RespondCvarValue = 0x19,
 	clc_FileCRCCheck = 0x1a,
 	clc_LoadingProgress = 0x1b,
 	clc_SplitPlayerConnect = 0x1c,
-	clc_ClientMessage = 0x1d,
 	clc_SplitPlayerDisconnect = 0x1e,
 	clc_ServerStatus = 0x1f,
-	clc_ServerPing = 0x20,
 	clc_RequestPause = 0x21,
 	clc_CmdKeyValues = 0x22,
 	clc_RconServerDetails = 0x23,
 	clc_HltvReplay = 0x24,
+	clc_Diagnostic = 0x25,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -775,7 +776,7 @@ enum class PointWorldTextJustifyVertical_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 37
+// Enumerator count: 42
 // Alignment: 8
 // Size: 0x8
 enum class TakeDamageFlags_t : std::uint64_t
@@ -819,6 +820,11 @@ enum class TakeDamageFlags_t : std::uint64_t
 	DFLAG_KILL_CREATES_RAGDOLL = 0x100000000,
 	DFLAG_IS_HEALTH_TRANSFER = 0x200000000,
 	DFLAG_DO_NOT_RICOCHET = 0x400000000,
+	DFLAG_NOT_IN_MIDBOSS_PIT = 0x800000000,
+	DFLAG_NOT_IN_TIER3_PIT = 0x1000000000,
+	DFLAG_DO_NOT_TRIGGER_DAMAGE_FLASH = 0x2000000000,
+	DFLAG_TOO_FAR = 0x4000000000,
+	DFLAG_DO_NOT_DISRUPT_HEALING_RITE = 0x8000000000,
 };
 
 // Registered binary: particles.dll (project 'particles')
@@ -969,6 +975,16 @@ enum class ViewFadeMode_t : std::uint32_t
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 2
+// Alignment: 1
+// Size: 0x1
+enum class CNmSyncEventIndexConditionNode__TriggerMode_t : std::uint8_t
+{
+	ExactlyAtEventIndex = 0,
+	GreaterThanEqualToEventIndex = 1,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
 // Enumerator count: 3
 // Alignment: 1
 // Size: 0x1
@@ -988,6 +1004,23 @@ enum class ForcedCrouchState_t : std::uint32_t
 	FORCEDCROUCH_NONE = 0x0,
 	FORCEDCROUCH_CROUCHED = 0x1,
 	FORCEDCROUCH_UNCROUCHED = 0x2,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 9
+// Alignment: 1
+// Size: 0x1
+enum class NmEventConditionRules_t : std::uint8_t
+{
+	LimitSearchToSourceState = 0,
+	IgnoreInactiveEvents = 1,
+	PreferHighestWeight = 2,
+	PreferHighestProgress = 3,
+	OperatorOr = 4,
+	OperatorAnd = 5,
+	SearchOnlyStateEvents = 6,
+	SearchOnlyAnimEvents = 7,
+	SearchBothStateAndAnimEvents = 8,
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
@@ -1251,7 +1284,19 @@ enum class ENextAttackDelayReason_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 54
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class ScriptedHeldWeaponBehavior_t : std::uint32_t
+{
+	eInvalid = 0xffffffff,
+	eHolster = 0x0,
+	eDeploy = 0x1,
+	eDrop = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 55
 // Alignment: 4
 // Size: 0x4
 enum class ECitadelClientAccountEvent : std::uint32_t
@@ -1310,6 +1355,7 @@ enum class ECitadelClientAccountEvent : std::uint32_t
 	k_eViewedGuidePage_30s = 0x34,
 	k_eViewedGuidePage_60s = 0x35,
 	k_eOpenedBookTest = 0x36,
+	k_eSandboxViaHeroPage = 0x37,
 };
 
 // Registered binary: particles.dll (project 'particles')
@@ -1402,6 +1448,18 @@ enum class vote_create_failed_t : std::uint32_t
 	VOTE_FAILED_MAX = 0xf,
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 4
+// Alignment: 1
+// Size: 0x1
+enum class CNmTimeConditionNode__Operator_t : std::uint8_t
+{
+	LessThan = 0,
+	LessThanEqual = 1,
+	GreaterThan = 2,
+	GreaterThanEqual = 3,
+};
+
 // Registered binary: client.dll (project 'client')
 // Enumerator count: 3
 // Alignment: 4
@@ -1414,7 +1472,7 @@ enum class ECaptureTriggerType : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 35
+// Enumerator count: 36
 // Alignment: 4
 // Size: 0x4
 enum class PARTICLE_MESSAGE : std::uint32_t
@@ -1454,10 +1512,11 @@ enum class PARTICLE_MESSAGE : std::uint32_t
 	GAME_PARTICLE_MANAGER_EVENT_CREATE_PHYSICS_SIM = 0x20,
 	GAME_PARTICLE_MANAGER_EVENT_DESTROY_PHYSICS_SIM = 0x21,
 	GAME_PARTICLE_MANAGER_EVENT_SET_VDATA = 0x22,
+	GAME_PARTICLE_MANAGER_EVENT_SET_MATERIAL_OVERRIDE = 0x23,
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 27
+// Enumerator count: 33
 // Alignment: 4
 // Size: 0x4
 enum class EUISound : std::uint32_t
@@ -1514,8 +1573,20 @@ enum class EUISound : std::uint32_t
 	EShopFilterMagicClicked = 0x17,
 	// MPropertyFriendlyName "Sound that plays when the Favorites tab is clicked in the shop"
 	EShopFilterFavoritesClicked = 0x18,
+	// MPropertyFriendlyName "Sound that plays when you invite a friend to the party"
+	EMainMenuPartyInvited = 0x19,
+	// MPropertyFriendlyName "Sound that plays when you leave a party"
+	EMainMenuPartyLeave = 0x1a,
+	// MPropertyFriendlyName "Sound that plays when a person joins the party"
+	EMainMenuPartyNewMember = 0x1b,
+	// MPropertyFriendlyName "Sound that plays when a party enters the choose hero screen"
+	EMainMenuPartyPickHeroesEnter = 0x1c,
+	// MPropertyFriendlyName "Sound that plays when a party member clicks the 'Enter Queue' button"
+	EMainMenuPartyPickHeroesConfirm = 0x1d,
+	// MPropertyFriendlyName "Sound that plays when a party enters the queue"
+	EMainMenuPartyPickHeroesExit = 0x1e,
 	// MPropertySuppressEnumerator
-	EUISoundCount = 0x19,
+	EUISoundCount = 0x1f,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -1574,6 +1645,17 @@ enum class ParticlePostProcessPriorityGroup_t : std::uint32_t
 	PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_HIGH = 0x4,
 	// MPropertyFriendlyName "Global UI"
 	PARTICLE_POST_PROCESS_PRIORITY_GLOBAL_UI = 0x5,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 1
+// Size: 0x1
+enum class EntityPlatformTypes_t : std::uint8_t
+{
+	ENTITY_NOT_PLATFORM = 0,
+	ENTITY_PLATFORM_PLAYER_FOLLOWS_YAW = 1,
+	ENTITY_PLATFORM_PLAYER_IGNORES_YAW = 2,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -1838,7 +1920,7 @@ enum class EDemoCommands : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 69
+// Enumerator count: 70
 // Alignment: 4
 // Size: 0x4
 enum class EModifierEvent : std::uint32_t
@@ -1910,8 +1992,9 @@ enum class EModifierEvent : std::uint32_t
 	MODIFIER_EVENT_ABILITY_DASHCAST_MISS = 0x3f,
 	MODIFIER_EVENT_PRE_BULLET_FIRED = 0x40,
 	MODIFIER_EVENT_BULLET_EVADED = 0x41,
+	MODIFIER_EVENT_MELEE_ATTACK = 0x42,
 	// MPropertySuppressEnumerator
-	MODIFIER_EVENT_COUNT = 0x42,
+	MODIFIER_EVENT_COUNT = 0x43,
 	// MPropertySuppressEnumerator
 	MODIFIER_EVENT_INVALID = 0xff,
 };
@@ -1946,6 +2029,18 @@ enum class MovementGait_t : std::uint8_t
 	eVeryFast = 3,
 	// MPropertySuppressEnumerator
 	eCount = 4,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 4
+// Alignment: 1
+// Size: 0x1
+enum class CNmTimeConditionNode__ComparisonType_t : std::uint8_t
+{
+	PercentageThroughState = 0,
+	PercentageThroughSyncEvent = 1,
+	ElapsedTime = 2,
+	LoopCount = 3,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -2003,7 +2098,7 @@ enum class ParticleFloatInputMode_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 73
+// Enumerator count: 82
 // Alignment: 4
 // Size: 0x4
 enum class EStatsType : std::uint32_t
@@ -2079,8 +2174,17 @@ enum class EStatsType : std::uint32_t
 	EAbilityResourceMax = 0x44,
 	EAbilityResourceRegenPerSecond = 0x45,
 	ECycleTime = 0x46,
-	EStatsCount = 0x47,
-	EStatsInvalid = 0x47,
+	EMeleeTravelDistanceScale = 0x47,
+	EAirMoveDistanceScale = 0x48,
+	ECritDamageReceivedScale = 0x49,
+	EWeaponFalloffMinRange = 0x4a,
+	EWeaponFalloffMaxRange = 0x4b,
+	EBulletSpeed = 0x4c,
+	EBulletSpeedIncrease = 0x4d,
+	EStaminaRegenIncrease = 0x4e,
+	EStaminaCooldown = 0x4f,
+	EStatsCount = 0x50,
+	EStatsInvalid = 0x50,
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -2120,6 +2224,18 @@ enum class NPCStatusEffectType_t : std::uint32_t
 	STATUS_EFFECT_NONE = 0x0,
 	STATUS_EFFECT_LAST = 0x1,
 	STATUS_EFFECT_COUNT = 0x0,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 4
+// Alignment: 1
+// Size: 0x1
+enum class CNmFloatMathNode__Operator_t : std::uint8_t
+{
+	Add = 0,
+	Sub = 1,
+	Mul = 2,
+	Div = 3,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -2170,6 +2286,19 @@ enum class BlurFilterType_t : std::uint32_t
 	BLURFILTER_GAUSSIAN = 0x0,
 	// MPropertyFriendlyName "Box"
 	BLURFILTER_BOX = 0x1,
+};
+
+// Registered binary: particles.dll (project 'particleslib')
+// Enumerator count: 5
+// Alignment: 4
+// Size: 0x4
+enum class ParticleFloatRoundType_t : std::uint32_t
+{
+	PF_ROUND_TYPE_INVALID = 0xffffffff,
+	PF_ROUND_TYPE_NEAREST = 0x0,
+	PF_ROUND_TYPE_FLOOR = 0x1,
+	PF_ROUND_TYPE_CEIL = 0x2,
+	PF_ROUND_TYPE_COUNT = 0x3,
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -2318,7 +2447,7 @@ enum class EconEntityParticleDisableMode_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 10
+// Enumerator count: 11
 // Alignment: 2
 // Size: 0x2
 enum class EShopFilters_t : std::uint16_t
@@ -2343,6 +2472,8 @@ enum class EShopFilters_t : std::uint16_t
 	EShopFilterMovement = 0x80,
 	// MPropertyFriendlyName "Disruption"
 	EShopFilterDisruption = 0x100,
+	// MPropertyFriendlyName "MAX"
+	EShopFilterMax = 0x200,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -2401,7 +2532,7 @@ enum class SelectorTagBehavior_t : std::uint32_t
 };
 
 // Registered binary: particles.dll (project 'particleslib')
-// Enumerator count: 8
+// Enumerator count: 9
 // Alignment: 4
 // Size: 0x4
 enum class ParticleFloatMapType_t : std::uint32_t
@@ -2413,7 +2544,8 @@ enum class ParticleFloatMapType_t : std::uint32_t
 	PF_MAP_TYPE_REMAP_BIASED = 0x3,
 	PF_MAP_TYPE_CURVE = 0x4,
 	PF_MAP_TYPE_NOTCHED = 0x5,
-	PF_MAP_TYPE_COUNT = 0x6,
+	PF_MAP_TYPE_ROUND = 0x6,
+	PF_MAP_TYPE_COUNT = 0x7,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -2634,6 +2766,19 @@ enum class ParticleAttrBoxFlags_t : std::uint32_t
 	PARTICLE_ATTR_BOX_FLAGS_NONE = 0x0,
 	// MPropertyFriendlyName "Water"
 	PARTICLE_ATTR_BOX_FLAGS_WATER = 0x1,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 5
+// Alignment: 1
+// Size: 0x1
+enum class CNmRootMotionOverrideNode__OverrideFlags_t : std::uint8_t
+{
+	AllowMoveX = 0,
+	AllowMoveY = 1,
+	AllowMoveZ = 2,
+	AllowFacingPitch = 3,
+	ListenForEvents = 4,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -2860,8 +3005,8 @@ enum class EAbilityResourceType : std::uint32_t
 {
 	// MPropertyFriendlyName "None"
 	EResourceType_None = 0x0,
-	// MPropertyFriendlyName "Blood"
-	EResourceType_Blood = 0x1,
+	// MPropertyFriendlyName "Rage"
+	EResourceType_Rage = 0x1,
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -2947,6 +3092,20 @@ enum class VectorFloatExpressionType_t : std::uint32_t
 	VECTOR_FLOAT_EXPRESSION_INPUT1_LENGTHSQR = 0x4,
 	// MPropertyFriendlyName "Input 1 Noise"
 	VECTOR_FLOAT_EXPRESSION_INPUT1_NOISE = 0x5,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 6
+// Alignment: 1
+// Size: 0x1
+enum class CNmVectorInfoNode__Info_t : std::uint8_t
+{
+	X = 0,
+	Y = 1,
+	Z = 2,
+	Length = 3,
+	AngleHorizontal = 4,
+	AngleVertical = 5,
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -3210,7 +3369,7 @@ enum class ECitadelMatchMode : std::uint32_t
 };
 
 // Registered binary: server.dll (project 'server')
-// Enumerator count: 9
+// Enumerator count: 10
 // Alignment: 2
 // Size: 0x2
 enum class SoundFlags_t : std::uint16_t
@@ -3226,6 +3385,7 @@ enum class SoundFlags_t : std::uint16_t
 	SOUND_FLAG_DANGER_APPROACH = 0x20,
 	SOUND_FLAG_ALLIES_ONLY = 0x40,
 	SOUND_FLAG_PANIC_NPCS = 0x80,
+	SOUND_FLAG_SQUAD_ONLY = 0x100,
 };
 
 // Registered binary: particles.dll (project 'particles')
@@ -3332,7 +3492,7 @@ enum class PFNoiseModifier_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 5
+// Enumerator count: 4
 // Alignment: 4
 // Size: 0x4
 enum class ECitadelAbilityHUDElementType_t : std::uint32_t
@@ -3340,8 +3500,7 @@ enum class ECitadelAbilityHUDElementType_t : std::uint32_t
 	CITADEL_ABILITY_HUD_ELEMENT_TYPE_GUN = 0x0,
 	CITADEL_ABILITY_HUD_ELEMENT_TYPE_UNIT_TARGET = 0x1,
 	CITADEL_ABILITY_HUD_ELEMENT_TYPE_PROGRESS = 0x2,
-	CITADEL_ABILITY_HUD_ELEMENT_TYPE_ICON = 0x3,
-	CITADEL_ABILITY_HUD_ELEMENT_TYPE_HIDDEN = 0x4,
+	CITADEL_ABILITY_HUD_ELEMENT_TYPE_HIDDEN = 0x3,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -3353,6 +3512,22 @@ enum class PartnerAccountType : std::uint32_t
 	PARTNER_NONE = 0x0,
 	PARTNER_PERFECT_WORLD = 0x1,
 	PARTNER_INVALID = 0x3,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 8
+// Alignment: 4
+// Size: 0x4
+enum class CNmTargetInfoNode__Info_t : std::uint32_t
+{
+	AngleHorizontal = 0x0,
+	AngleVertical = 0x1,
+	Distance = 0x2,
+	DistanceHorizontalOnly = 0x3,
+	DistanceVerticalOnly = 0x4,
+	DeltaOrientationX = 0x5,
+	DeltaOrientationY = 0x6,
+	DeltaOrientationZ = 0x7,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -3462,6 +3637,16 @@ enum class EHUDElementButtonType_t : std::uint32_t
 	EButtonHintType_TwoButtonCombination = 0x1,
 };
 
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class ERejuvenatorRespawnMechanic : std::uint32_t
+{
+	RejuvenatorRespawnMechanic_FixedDelay = 0x0,
+	RejuvenatorRespawnMechanic_PercentOfNormal = 0x1,
+};
+
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Enumerator count: 3
 // Alignment: 4
@@ -3520,11 +3705,11 @@ enum class EHUDElementButtonHint_t : std::uint32_t
 	EButtonHint_DashKey = 0x2,
 	EButtonHint_CrouchKey = 0x3,
 	EButtonHint_Parry = 0x4,
-	EButtonHint_Jump = 0x5,
+	EButtonHint_Cancel = 0x5,
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
-// Enumerator count: 20
+// Enumerator count: 21
 // Alignment: 4
 // Size: 0x4
 enum class PulseValueType_t : std::uint32_t
@@ -3549,26 +3734,28 @@ enum class PulseValueType_t : std::uint32_t
 	PVAL_EHANDLE = 0x7,
 	// MPropertyFriendlyName "Resource"
 	PVAL_RESOURCE = 0x8,
-	// MPropertyFriendlyName "SoundEvent Handle"
+	// MPropertyFriendlyName "SoundEvent Instance Handle"
 	PVAL_SNDEVT_GUID = 0x9,
+	// MPropertyFriendlyName "SoundEvent"
+	PVAL_SNDEVT_NAME = 0xa,
 	// MPropertyFriendlyName "Entity Name"
-	PVAL_ENTITY_NAME = 0xa,
+	PVAL_ENTITY_NAME = 0xb,
 	// MPropertyFriendlyName "Opaque Handle"
-	PVAL_OPAQUE_HANDLE = 0xb,
+	PVAL_OPAQUE_HANDLE = 0xc,
 	// MPropertyFriendlyName "Typesafe Int"
-	PVAL_TYPESAFE_INT = 0xc,
+	PVAL_TYPESAFE_INT = 0xd,
 	// MPropertySuppressEnumerator
-	PVAL_CURSOR_FLOW = 0xd,
+	PVAL_CURSOR_FLOW = 0xe,
 	// MPropertyFriendlyName "Any"
-	PVAL_ANY = 0xe,
+	PVAL_ANY = 0xf,
 	// MPropertyFriendlyName "Schema Enum"
-	PVAL_SCHEMA_ENUM = 0xf,
+	PVAL_SCHEMA_ENUM = 0x10,
 	// MPropertyFriendlyName "Panorama Panel Handle"
-	PVAL_PANORAMA_PANEL_HANDLE = 0x10,
+	PVAL_PANORAMA_PANEL_HANDLE = 0x11,
 	// MPropertyFriendlyName "Test Handle"
-	PVAL_TEST_HANDLE = 0x11,
+	PVAL_TEST_HANDLE = 0x12,
 	// MPropertySuppressEnumerator
-	PVAL_COUNT = 0x12,
+	PVAL_COUNT = 0x13,
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -3658,7 +3845,7 @@ enum class ChoiceBlendMethod : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 31
+// Enumerator count: 30
 // Alignment: 4
 // Size: 0x4
 enum class SVC_Messages : std::uint32_t
@@ -3690,7 +3877,6 @@ enum class SVC_Messages : std::uint32_t
 	svc_FullFrameSplit = 0x46,
 	svc_RconServerDetails = 0x47,
 	svc_UserMessage = 0x48,
-	svc_HltvReplay = 0x49,
 	svc_Broadcast_Command = 0x4a,
 	svc_HltvFixupOperatorStatus = 0x4b,
 	svc_UserCmds = 0x4c,
@@ -3821,7 +4007,7 @@ enum class Explosions : std::uint32_t
 };
 
 // Registered binary: server.dll (project 'server')
-// Enumerator count: 12
+// Enumerator count: 14
 // Alignment: 2
 // Size: 0x2
 enum class SoundTypes_t : std::uint16_t
@@ -3837,7 +4023,9 @@ enum class SoundTypes_t : std::uint16_t
 	SOUND_PLAYER_VEHICLE = 0x8,
 	SOUND_GLASS_BREAK = 0x9,
 	SOUND_PHYSICS_OBJECT = 0xa,
-	NUM_AI_SOUND_TYPES = 0xb,
+	SOUND_WARN_FRIENDS = 0xb,
+	SOUND_FOOD = 0xc,
+	NUM_AI_SOUND_TYPES = 0xd,
 };
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
@@ -4033,11 +4221,11 @@ enum class CNmTransitionNode__TransitionOptions_t : std::uint8_t
 	None = 0,
 	ClampDuration = 1,
 	Synchronized = 2,
-	MatchSourceTime = 4,
-	MatchSyncEventIndex = 8,
-	MatchSyncEventID = 16,
-	MatchSyncEventPercentage = 32,
-	PreferClosestSyncEventID = 64,
+	MatchSourceTime = 3,
+	MatchSyncEventIndex = 4,
+	MatchSyncEventID = 5,
+	MatchSyncEventPercentage = 6,
+	PreferClosestSyncEventID = 7,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -4089,16 +4277,14 @@ enum class EMidBossActivity : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 5
+// Enumerator count: 3
 // Alignment: 4
 // Size: 0x4
 enum class EMiniMapMarkerType_t : std::uint32_t
 {
-	EMarkerShop = 0x0,
-	EMarkerAmmo = 0x1,
-	EMarkerOutpost = 0x2,
-	EMarkerStronghold = 0x3,
-	EMarkerCount = 0x4,
+	EMarkerShopTunnels = 0x0,
+	EMarkerShopTunnelExit = 0x1,
+	EMarkerCount = 0x2,
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -4248,7 +4434,7 @@ enum class EFlinchType : std::uint32_t
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
-// Enumerator count: 2
+// Enumerator count: 3
 // Alignment: 4
 // Size: 0x4
 enum class SmartPropChoiceSelectionMode_t : std::uint32_t
@@ -4259,6 +4445,9 @@ enum class SmartPropChoiceSelectionMode_t : std::uint32_t
 	// MPropertyFriendlyName "First"
 	// MPropertyDescription "Pick the first valid choice. Selection criteria may be added to a choice to determine if it is valid."
 	FIRST = 0x1,
+	// MPropertyFriendlyName "Specific"
+	// MPropertyDescription "Pick a choice specified by an additional authored value."
+	SPECIFIC = 0x2,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -4306,7 +4495,7 @@ enum class LaneSide_t : std::uint8_t
 };
 
 // Registered binary: server.dll (project 'server')
-// Enumerator count: 88
+// Enumerator count: 57
 // Alignment: 4
 // Size: 0x4
 enum class Hint_e : std::uint32_t
@@ -4330,22 +4519,18 @@ enum class Hint_e : std::uint32_t
 	HINT_WORLD_INHIBIT_COMBINE_MINES = 0xf,
 	HINT_WORLD_VISUALLY_INTERESTING_STEALTH = 0x10,
 	HINT_GENERIC = 0x11,
-	HINT_TACTICAL_COVER_MED = 0x64,
-	HINT_TACTICAL_COVER_LOW = 0x65,
+	HINT_TACTICAL_COVER_MED_DEPRECATED = 0x64,
+	HINT_TACTICAL_COVER_CENTER = 0x65,
 	HINT_TACTICAL_HIDE = 0x66,
 	HINT_TACTICAL_PINCH = 0x67,
 	HINT_TACTICAL_SENTRY = 0x68,
 	HINT_TACTICAL_ENEMY_DISADVANTAGED = 0x69,
 	HINT_NOT_USED_HEALTH_KIT = 0x6a,
 	HINT_TACTICAL_HIGH_GROUND = 0x6b,
-	HINT_TACTICAL_WALL_COVER_LEFT = 0x6c,
-	HINT_TACTICAL_WALL_COVER_RIGHT = 0x6d,
-	HINT_TACTICAL_WALL_COVER_BOTH = 0x6e,
-	HINT_TACTICAL_COVER_MED_LEFT = 0x6f,
-	HINT_TACTICAL_COVER_MED_RIGHT = 0x70,
-	HINT_TACTICAL_COVER_LOW_LEFT = 0x71,
-	HINT_TACTICAL_COVER_LOW_RIGHT = 0x72,
-	HINT_TACTICAL_CREATE_COVER = 0x73,
+	HINT_TACTICAL_COVER_LEFT = 0x6c,
+	HINT_TACTICAL_COVER_RIGHT = 0x6d,
+	HINT_TACTICAL_COVER_NARROW = 0x6e,
+	HINT_TACTICAL_CREATE_COVER = 0x6f,
 	HINT_NOT_USED_URBAN_STREETCORNER = 0xc8,
 	HINT_NOT_USED_URBAN_STREETLAMP = 0xc9,
 	HINT_NOT_USED_URBAN_DARK_SPOT = 0xca,
@@ -4372,33 +4557,6 @@ enum class Hint_e : std::uint32_t
 	HINT_PLAYER_ALLY_MOVE_AWAY_DEST = 0x3b6,
 	HINT_PLAYER_ALLY_FEAR_DEST = 0x3b7,
 	HINT_CSTRIKE_HOSTAGE_ESCAPE = 0x44c,
-	HINT_COMBINE_FALLBACK = 0x578,
-	HINT_COMBINE_SIGNAL = 0x579,
-	HINT_COMBINE_CHARGER_SHIELD = 0x57a,
-	HINT_COMBINE_SNIPING_POSITION = 0x57b,
-	HINT_AGENT_WORK = 0x5dc,
-	HINT_INSTIGATOR_LURK = 0x640,
-	HINT_FERAL_MANHACK_DRAG_TOWARDS = 0x641,
-	HINT_KOOSH_CHILD_WATER_SOURCE = 0x642,
-	HINT_FLYGUY_JUMP = 0x6a4,
-	HINT_HOLDOUT_DEFENSIVE_POSITION = 0x708,
-	HINT_HOLDOUT_POWER_CONSUMER = 0x709,
-	HINT_FOUNDRY_COMMS = 0x76c,
-	HINT_FOUNDRY_WELD = 0x76d,
-	HINT_PHYSPROP_PICKUP = 0x76e,
-	HINT_PHYSPROP_DROPOFF = 0x76f,
-	HINT_XENAMBIENT_FOOD_DIG = 0x7d0,
-	HINT_OFFWORLD_WORKER_WORK = 0x834,
-	HINT_OFFWORLD_WORKER_RETURN = 0x835,
-	HINT_XENSWOOPER_CIRCLING_CENTER = 0x898,
-	HINT_XENSWOOPER_LANDING_SPOT = 0x899,
-	HINT_XENSWOOPER_FOOD = 0x89a,
-	HINT_XENJELLYFISH_FOOD = 0x8fc,
-	HINT_XENJELLYFISH_REACH = 0x8fd,
-	HINT_XENGORILLA_RETREAT_SPOT = 0x960,
-	HINT_FLITTER_BURROW = 0x9c4,
-	HINT_OFFWORLD_STORK_RESTOCK = 0xa28,
-	HINT_OFFWORLD_STORK_DEPLOY = 0xa29,
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -4484,6 +4642,19 @@ enum class HandshakeTagType_t : std::uint32_t
 	eCount = 0x2,
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 5
+// Alignment: 1
+// Size: 0x1
+enum class CNmFloatComparisonNode__Comparison_t : std::uint8_t
+{
+	GreaterThanEqual = 0,
+	LessThanEqual = 1,
+	NearEqual = 2,
+	GreaterThan = 3,
+	LessThan = 4,
+};
+
 // Registered binary: particles.dll (project 'particles')
 // Enumerator count: 3
 // Alignment: 4
@@ -4531,8 +4702,8 @@ enum class AnimVectorSource : std::uint32_t
 {
 	// MPropertyFriendlyName "Move Direction"
 	MoveDirection = 0x0,
-	// MPropertyFriendlyName "Facing Direction"
-	FacingDirection = 0x1,
+	// MPropertyFriendlyName "Facing Position"
+	FacingPosition = 0x1,
 	// MPropertyFriendlyName "Look Direction"
 	LookDirection = 0x2,
 	// MPropertyFriendlyName "Parameter"
@@ -4686,6 +4857,16 @@ enum class IKTargetCoordinateSystem : std::uint32_t
 	IKTARGETCOORDINATESYSTEM_COUNT = 0x2,
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 2
+// Alignment: 1
+// Size: 0x1
+enum class CNmRootMotionData__SamplingMode_t : std::uint8_t
+{
+	Delta = 0,
+	WorldSpace = 1,
+};
+
 // Registered binary: client.dll (project 'client')
 // Enumerator count: 3
 // Alignment: 1
@@ -4783,6 +4964,18 @@ enum class EInButtonState : std::uint32_t
 	IN_BUTTON_DOWN_UP_DOWN_UP = 0x6,
 	IN_BUTTON_UP_DOWN_UP_DOWN = 0x7,
 	IN_BUTTON_STATE_COUNT = 0x8,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 4
+// Alignment: 1
+// Size: 0x1
+enum class CNmFloatAngleMathNode__Operation_t : std::uint8_t
+{
+	ClampTo180 = 0,
+	ClampTo360 = 1,
+	FlipHemisphere = 2,
+	FlipHemisphereNegate = 3,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -4969,17 +5162,6 @@ enum class CitadelPingEvent_t : std::uint32_t
 	CITADEL_PING_NEUTRAL_SPAWN = 0x6,
 };
 
-// Registered binary: client.dll (project 'client')
-// Enumerator count: 3
-// Alignment: 4
-// Size: 0x4
-enum class EMobilePaymentProvider : std::uint32_t
-{
-	k_EMobilePaymentProvider_Invalid = 0x0,
-	k_EMobilePaymentProvider_GooglePlay = 0x1,
-	k_EMobilePaymentProvider_AppleAppStore = 0x2,
-};
-
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Enumerator count: 4
 // Alignment: 4
@@ -5105,7 +5287,7 @@ enum class EGCMsgResponse : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 5
+// Enumerator count: 7
 // Alignment: 4
 // Size: 0x4
 enum class P2P_Messages : std::uint32_t
@@ -5115,10 +5297,12 @@ enum class P2P_Messages : std::uint32_t
 	p2p_Ping = 0x102,
 	p2p_VRAvatarPosition = 0x103,
 	p2p_WatchSynchronization = 0x104,
+	p2p_FightingGame_GameData = 0x105,
+	p2p_FightingGame_Connection = 0x106,
 };
 
 // Registered binary: server.dll (project 'server')
-// Enumerator count: 12
+// Enumerator count: 13
 // Alignment: 4
 // Size: 0x4
 enum class AI_NavGoalFlags_t : std::uint32_t
@@ -5127,13 +5311,14 @@ enum class AI_NavGoalFlags_t : std::uint32_t
 	eDisableUpdateGoalPos = 0x2,
 	eLocalSucceedOnWithinTolerance = 0x4,
 	eGoalOffsetInLocalYaw = 0x8,
-	eDestInWorldSpace = 0x10,
-	eDontLimitGoalOffset = 0x20,
-	eInterruptPath = 0x200,
-	eDisablePathSmoothing = 0x400,
-	eClearGoalOffsetOnRepathForMovement = 0x800,
-	eUseTargetPredictedPosition = 0x1000,
-	eDisableTargetPredictedPositionForDynamicPathing = 0x2000,
+	eGoalOffsetInLocalSpace = 0x10,
+	eDestInWorldSpace = 0x20,
+	eDontLimitGoalOffset = 0x40,
+	eInterruptPath = 0x80,
+	eDisablePathSmoothing = 0x100,
+	eClearGoalOffsetOnRepathForMovement = 0x200,
+	eUseTargetPredictedPosition = 0x400,
+	eDisableTargetPredictedPositionForDynamicPathing = 0x800,
 	// MEnumeratorIsNotAFlag
 	eDefault = 0x0,
 };
@@ -5175,7 +5360,7 @@ enum class NPC_STATE : std::uint32_t
 	// MPropertyFriendlyName "Inert"
 	NPC_STATE_INERT = 0x6,
 	// MPropertySuppressEnumerator
-	NPC_STATE_SYNCHRONIZED_SLAVE = 0x7,
+	NPC_STATE_SYNCHRONIZED_SECONDARY = 0x7,
 	// MPropertySuppressEnumerator
 	NUM_NPC_STATES = 0x8,
 };
@@ -5314,7 +5499,7 @@ enum class EModifierScriptVariantType : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 136
+// Enumerator count: 164
 // Alignment: 4
 // Size: 0x4
 enum class EModifierState : std::uint32_t
@@ -5322,139 +5507,167 @@ enum class EModifierState : std::uint32_t
 	MODIFIER_STATE_MATERIAL_OVERRIDE = 0x0,
 	MODIFIER_STATE_ORIENTED_GRAVITY = 0x1,
 	MODIFIER_STATE_UNRESTRICTED_MOVEMENT = 0x2,
-	MODIFIER_STATE_IMMOBILIZED = 0x3,
-	MODIFIER_STATE_DISARMED = 0x4,
-	MODIFIER_STATE_MUTED = 0x5,
-	MODIFIER_STATE_SILENCED = 0x6,
-	MODIFIER_STATE_SILENCE_MOVEMENT_ABILITES = 0x7,
-	MODIFIER_STATE_STUNNED = 0x8,
-	MODIFIER_STATE_INVULNERABLE = 0x9,
-	MODIFIER_STATE_TECH_INVULNERABLE = 0xa,
-	MODIFIER_STATE_TECH_DAMAGE_INVULNERABLE = 0xb,
-	MODIFIER_STATE_TECH_UNTARGETABLE_BY_ENEMIES = 0xc,
-	MODIFIER_STATE_STATUS_IMMUNE = 0xd,
-	MODIFIER_STATE_UNSTOPPABLE = 0xe,
-	MODIFIER_STATE_OUT_OF_GAME = 0xf,
-	MODIFIER_STATE_COMMAND_RESTRICTED = 0x10,
-	MODIFIER_STATE_CHARGING = 0x11,
-	MODIFIER_STATE_OBSCURED = 0x12,
-	MODIFIER_STATE_INVISIBLE_TO_ENEMY = 0x13,
-	MODIFIER_STATE_IGNORED_BY_NPC_TARGETING = 0x14,
-	MODIFIER_STATE_NPC_TARGETABLE_WHILE_INVULNERABLE = 0x15,
-	MODIFIER_STATE_SPRINTING = 0x16,
-	MODIFIER_STATE_UNKILLABLE = 0x17,
-	MODIFIER_STATE_GROUND_DASHING = 0x18,
-	MODIFIER_STATE_ADDITIONAL_AIR_MOVES = 0x19,
-	MODIFIER_STATE_AIR_DASHING = 0x1a,
-	MODIFIER_STATE_MOVEMENT_ABILITY_RESTRICTED = 0x1b,
-	MODIFIER_STATE_SPRINT_NO_INTERRUPT = 0x1c,
-	MODIFIER_STATE_SPRINT_DISABLED = 0x1d,
-	MODIFIER_STATE_IN_SHOP = 0x1e,
-	MODIFIER_STATE_IN_FOUNTAIN = 0x1f,
-	MODIFIER_STATE_IN_ENEMY_BASE = 0x20,
-	MODIFIER_STATE_IN_FRIENDLY_BASE = 0x21,
-	MODIFIER_STATE_IN_MID_BOSS_TEMPLE = 0x22,
-	MODIFIER_STATE_DASH_DISABLED = 0x23,
-	MODIFIER_STATE_DASH_DISABLED_DEBUFF = 0x24,
-	MODIFIER_STATE_BURNING = 0x25,
-	MODIFIER_STATE_HEALTH_REGEN_DISABLED = 0x26,
-	MODIFIER_STATE_HEALING_DISABLED = 0x27,
-	MODIFIER_STATE_DAMAGE_MOVEMENT_PENALTY_IMMUNE = 0x28,
-	MODIFIER_STATE_BUSY_WITH_ACTION = 0x29,
-	MODIFIER_STATE_SLOWED = 0x2a,
-	MODIFIER_STATE_SHOOTING_DISABLED = 0x2b,
-	MODIFIER_STATE_SHOOTING_FORCED_ON = 0x2c,
-	MODIFIER_STATE_MELEE_ATTACKS_ONLY = 0x2d,
-	MODIFIER_STATE_SLIDING = 0x2e,
-	MODIFIER_STATE_VISIBLE_TO_ENEMY = 0x2f,
-	MODIFIER_STATE_INFINITE_CLIP = 0x30,
-	MODIFIER_STATE_KNOCKDOWN_IMMUNE = 0x31,
-	MODIFIER_STATE_JUMP_DISABLED = 0x32,
-	MODIFIER_STATE_DUCKING_DISABLED = 0x33,
-	MODIFIER_STATE_DUCKING_FORCED = 0x34,
-	MODIFIER_STATE_AIR_DUCKING_FORCED = 0x35,
-	MODIFIER_STATE_IS_ASLEEP = 0x36,
-	MODIFIER_STATE_GLOW_THROUGH_WALLS_TO_ENEMY = 0x37,
-	MODIFIER_STATE_GLOW_THROUGH_WALLS_TO_PROVIDER = 0x38,
-	MODIFIER_STATE_GLOW_TO_PROVIDER = 0x39,
-	MODIFIER_STATE_GLOW_IN_LOS_TO_ENEMY = 0x3a,
-	MODIFIER_STATE_DISABLE_AIR_SPREAD_PENALTY = 0x3b,
-	MODIFIER_STATE_ZIPLINE_MASTERY = 0x3c,
-	MODIFIER_STATE_USING_ZIPLINE = 0x3d,
-	MODIFIER_STATE_IN_ALTERNATE_DIMENSION = 0x3e,
-	MODIFIER_STATE_ANIMGRAPH_CONTROLLED_MOVEMENT = 0x3f,
-	MODIFIER_STATE_COMBAT_ABILITIES_DISABLED = 0x40,
-	MODIFIER_STATE_CHAINED = 0x41,
-	MODIFIER_STATE_ALL_ARMOR_DISABLED = 0x42,
-	MODIFIER_STATE_BULLET_INVULNERABLE = 0x43,
-	MODIFIER_STATE_BREAK_ICE_PATH = 0x44,
-	MODIFIER_STATE_REFLECT_ATTACKS = 0x45,
-	MODIFIER_STATE_MANTLE_DISABLED = 0x46,
-	MODIFIER_STATE_AI_FORCE_AGGRO = 0x47,
-	MODIFIER_STATE_AI_FORCE_CALM = 0x48,
-	MODIFIER_STATE_DRONE_ATTACHED = 0x49,
-	MODIFIER_STATE_AIM_FORWARD = 0x4a,
-	MODIFIER_STATE_AIM_FORWARD_WITH_PITCH = 0x4b,
-	MODIFIER_STATE_ZIPLINE_DISABLED = 0x4c,
-	MODIFIER_STATE_ZIPLINE_INTRO = 0x4d,
-	MODIFIER_STATE_RESPAWN_CREDIT = 0x4e,
-	MODIFIER_STATE_DISPLAY_LIFETIME = 0x4f,
-	MODIFIER_STATE_MELEE_DISABLED = 0x50,
-	MODIFIER_STATE_MELEE_DISABLED_DEBUFF = 0x51,
-	MODIFIER_STATE_GLITCHED = 0x52,
-	MODIFIER_STATE_SLIDING_DISABLED = 0x53,
-	MODIFIER_STATE_RELOAD_DISABLED = 0x54,
-	MODIFIER_STATE_RELOAD_MELEE_FULL_SPEED = 0x55,
-	MODIFIER_STATE_MANUAL_RELOAD_DISABLED = 0x56,
-	MODIFIER_STATE_HUD_AMMO_FORCED_ON = 0x57,
-	MODIFIER_STATE_UNIT_STATUS_HEALTH_HIDDEN = 0x58,
-	MODIFIER_STATE_UNIT_STATUS_HIDDEN = 0x59,
-	MODIFIER_STATE_FADE_ALPHA_TO_ZERO = 0x5a,
-	MODIFIER_STATE_FRIENDLY_FIRE_ENABLED = 0x5b,
-	MODIFIER_STATE_FLYING = 0x5c,
-	MODIFIER_STATE_SCOPED = 0x5d,
-	MODIFIER_STATE_ROLLING_BALL = 0x5e,
-	MODIFIER_STATE_SLOW_IMMUNE = 0x5f,
-	MODIFIER_STATE_ROOT_IMMUNE = 0x60,
-	MODIFIER_STATE_IS_MELEE_TARGET = 0x61,
-	MODIFIER_STATE_GLOW_TO_ALLIES_AS_ENEMY = 0x62,
-	MODIFIER_STATE_LADDER_DISABLE = 0x63,
-	MODIFIER_STATE_IGNORE_BULLETS = 0x64,
-	MODIFIER_STATE_IGNORE_MELEE = 0x65,
-	MODIFIER_STATE_HIDE_CROSSHAIR = 0x66,
-	MODIFIER_STATE_APPLY_VERTICAL_DRAG = 0x67,
-	MODIFIER_STATE_FALSE_DEATH = 0x68,
-	MODIFIER_STATE_NO_WINDUP = 0x69,
-	MODIFIER_STATE_TITAN_LASER_VALID_TARGET = 0x6a,
-	MODIFIER_STATE_HAS_HOLLOW_POINT_BULLETS = 0x6b,
-	MODIFIER_STATE_SUPPRESS_AIR_DRAG = 0x6c,
-	MODIFIER_STATE_GROUND_DASH_EARLY_OUT_WINDOW = 0x6d,
-	MODIFIER_STATE_ICEBEAMING = 0x6e,
-	MODIFIER_STATE_IN_ALLY_SMOKE = 0x6f,
-	MODIFIER_STATE_IN_ENEMY_SMOKE = 0x70,
-	MODIFIER_STATE_NIKUMAN_ACTIVE = 0x71,
-	MODIFIER_STATE_NO_OUTGOING_DAMAGE = 0x72,
-	MODIFIER_STATE_NO_INCOMING_DAMAGE = 0x73,
-	MODIFIER_STATE_CHRONO_SWAPING = 0x74,
-	MODIFIER_STATE_BOUNCE_PAD_STOMPING = 0x75,
-	MODIFIER_STATE_FLYING_BEETLE_TARGET = 0x76,
-	MODIFIER_STATE_DREAMWEAVER_SLEEP = 0x77,
-	MODIFIER_STATE_HOLDING_IDOL = 0x78,
-	MODIFIER_STATE_GALVANIC_STORM_BUFF = 0x79,
-	MODIFIER_STATE_IN_ABILITY_ALLOW_ZOOM = 0x7a,
-	MODIFIER_STATE_IN_ABILITY_DISABLE_ZOOM = 0x7b,
-	MODIFIER_STATE_STAMINA_REGEN_PAUSED = 0x7c,
-	MODIFIER_STATE_PREMATCH = 0x7d,
-	MODIFIER_STATE_SELF_DESTRUCT = 0x7e,
-	MODIFIER_STATE_COOP_TETHER_ACTIVE = 0x7f,
-	MODIFIER_STATE_LOCKED_AIM_ANGLES = 0x80,
-	MODIFIER_STATE_ICEPATHING = 0x81,
-	MODIFIER_STATE_BACKDOOR_PROTECTED = 0x82,
-	MODIFIER_STATE_IN_COMBAT = 0x83,
-	MODIFIER_STATE_DASHJUMP_STAMINA_FREE = 0x84,
-	MODIFIER_STATE_YAMATO_SHADOW_FORM = 0x85,
+	MODIFIER_STATE_FORCE_ALERT_STATE = 0x3,
+	MODIFIER_STATE_IMMOBILIZED = 0x4,
+	MODIFIER_STATE_DISARMED = 0x5,
+	MODIFIER_STATE_MUTED = 0x6,
+	MODIFIER_STATE_SILENCED = 0x7,
+	MODIFIER_STATE_SILENCE_MOVEMENT_ABILITES = 0x8,
+	MODIFIER_STATE_SILENCED_HIDDEN = 0x9,
+	MODIFIER_STATE_STUNNED = 0xa,
+	MODIFIER_STATE_INVULNERABLE = 0xb,
+	MODIFIER_STATE_TECH_INVULNERABLE = 0xc,
+	MODIFIER_STATE_TECH_DAMAGE_INVULNERABLE = 0xd,
+	MODIFIER_STATE_TECH_UNTARGETABLE_BY_ENEMIES = 0xe,
+	MODIFIER_STATE_STATUS_IMMUNE = 0xf,
+	MODIFIER_STATE_UNSTOPPABLE = 0x10,
+	MODIFIER_STATE_OUT_OF_GAME = 0x11,
+	MODIFIER_STATE_COMMAND_RESTRICTED = 0x12,
+	MODIFIER_STATE_CHARGING = 0x13,
+	MODIFIER_STATE_OBSCURED = 0x14,
+	MODIFIER_STATE_INVISIBLE_TO_ENEMY = 0x15,
+	MODIFIER_STATE_IGNORED_BY_NPC_TARGETING = 0x16,
+	MODIFIER_STATE_NPC_TARGETABLE_WHILE_INVULNERABLE = 0x17,
+	MODIFIER_STATE_SPRINTING = 0x18,
+	MODIFIER_STATE_UNKILLABLE = 0x19,
+	MODIFIER_STATE_GROUND_DASHING = 0x1a,
+	MODIFIER_STATE_ADDITIONAL_AIR_MOVES = 0x1b,
+	MODIFIER_STATE_AIR_DASHING = 0x1c,
+	MODIFIER_STATE_MOVEMENT_ABILITY_RESTRICTED = 0x1d,
+	MODIFIER_STATE_SPRINT_NO_INTERRUPT = 0x1e,
+	MODIFIER_STATE_SPRINT_DISABLED = 0x1f,
+	MODIFIER_STATE_IN_SHOP = 0x20,
+	MODIFIER_STATE_IN_FOUNTAIN = 0x21,
+	MODIFIER_STATE_IN_ENEMY_BASE = 0x22,
+	MODIFIER_STATE_IN_FRIENDLY_BASE = 0x23,
+	MODIFIER_STATE_IN_MID_BOSS_TEMPLE = 0x24,
+	MODIFIER_STATE_IN_SHOPTUNNEL_SAPPHIRE = 0x25,
+	MODIFIER_STATE_IN_SHOPTUNNEL_AMBER = 0x26,
+	MODIFIER_STATE_DASH_DISABLED = 0x27,
+	MODIFIER_STATE_DASH_DISABLED_DEBUFF = 0x28,
+	MODIFIER_STATE_BURNING = 0x29,
+	MODIFIER_STATE_HEALTH_REGEN_DISABLED = 0x2a,
+	MODIFIER_STATE_HEALING_DISABLED = 0x2b,
+	MODIFIER_STATE_DAMAGE_MOVEMENT_PENALTY_IMMUNE = 0x2c,
+	MODIFIER_STATE_BUSY_WITH_ACTION = 0x2d,
+	MODIFIER_STATE_SLOWED = 0x2e,
+	MODIFIER_STATE_SHOOTING_DISABLED = 0x2f,
+	MODIFIER_STATE_SHOOTING_FORCED_ON = 0x30,
+	MODIFIER_STATE_MELEE_ATTACKS_ONLY = 0x31,
+	MODIFIER_STATE_SLIDING = 0x32,
+	MODIFIER_STATE_VISIBLE_TO_ENEMY = 0x33,
+	MODIFIER_STATE_INFINITE_CLIP = 0x34,
+	MODIFIER_STATE_KNOCKDOWN_IMMUNE = 0x35,
+	MODIFIER_STATE_JUMP_DISABLED = 0x36,
+	MODIFIER_STATE_DUCKING_DISABLED = 0x37,
+	MODIFIER_STATE_DUCKING_FORCED = 0x38,
+	MODIFIER_STATE_AIR_DUCKING_FORCED = 0x39,
+	MODIFIER_STATE_IS_ASLEEP = 0x3a,
+	MODIFIER_STATE_GLOW_THROUGH_WALLS_TO_ENEMY = 0x3b,
+	MODIFIER_STATE_GLOW_THROUGH_WALLS_TO_PROVIDER = 0x3c,
+	MODIFIER_STATE_GLOW_THROUGH_WALLS_TO_PROVIDER_TEAMMATES_WITHIN_RANGE = 0x3d,
+	MODIFIER_STATE_GLOW_TO_PROVIDER = 0x3e,
+	MODIFIER_STATE_GLOW_IN_LOS_TO_ENEMY = 0x3f,
+	MODIFIER_STATE_DISABLE_AIR_SPREAD_PENALTY = 0x40,
+	MODIFIER_STATE_ZIPLINE_MASTERY = 0x41,
+	MODIFIER_STATE_USING_ZIPLINE = 0x42,
+	MODIFIER_STATE_IN_ALTERNATE_DIMENSION = 0x43,
+	MODIFIER_STATE_ANIMGRAPH_CONTROLLED_MOVEMENT = 0x44,
+	MODIFIER_STATE_COMBAT_ABILITIES_DISABLED = 0x45,
+	MODIFIER_STATE_CHAINED = 0x46,
+	MODIFIER_STATE_ALL_ARMOR_DISABLED = 0x47,
+	MODIFIER_STATE_BULLET_INVULNERABLE = 0x48,
+	MODIFIER_STATE_BREAK_ICE_PATH = 0x49,
+	MODIFIER_STATE_REFLECT_ATTACKS = 0x4a,
+	MODIFIER_STATE_MANTLE_DISABLED = 0x4b,
+	MODIFIER_STATE_AI_FORCE_AGGRO = 0x4c,
+	MODIFIER_STATE_AI_FORCE_CALM = 0x4d,
+	MODIFIER_STATE_DRONE_ATTACHED = 0x4e,
+	MODIFIER_STATE_AIM_FORWARD = 0x4f,
+	MODIFIER_STATE_AIM_FORWARD_WITH_PITCH = 0x50,
+	MODIFIER_STATE_ZIPLINE_DISABLED = 0x51,
+	MODIFIER_STATE_ZIPLINE_INTRO = 0x52,
+	MODIFIER_STATE_RESPAWN_CREDIT = 0x53,
+	MODIFIER_STATE_RESPAWN_CREDIT_PERSONAL = 0x54,
+	MODIFIER_STATE_DISPLAY_LIFETIME = 0x55,
+	MODIFIER_STATE_MELEE_DISABLED = 0x56,
+	MODIFIER_STATE_MELEE_DISABLED_DEBUFF = 0x57,
+	MODIFIER_STATE_GLITCHED = 0x58,
+	MODIFIER_STATE_SLIDING_DISABLED = 0x59,
+	MODIFIER_STATE_RELOAD_DISABLED = 0x5a,
+	MODIFIER_STATE_RELOAD_MELEE_FULL_SPEED = 0x5b,
+	MODIFIER_STATE_MANUAL_RELOAD_DISABLED = 0x5c,
+	MODIFIER_STATE_UNIT_STATUS_HEALTH_HIDDEN = 0x5d,
+	MODIFIER_STATE_UNIT_STATUS_HIDDEN = 0x5e,
+	MODIFIER_STATE_FADE_ALPHA_TO_ZERO = 0x5f,
+	MODIFIER_STATE_FRIENDLY_FIRE_ENABLED = 0x60,
+	MODIFIER_STATE_FLYING = 0x61,
+	MODIFIER_STATE_SCOPED = 0x62,
+	MODIFIER_STATE_ROLLING_BALL = 0x63,
+	MODIFIER_STATE_VISCOUS_CUBED = 0x64,
+	MODIFIER_STATE_SLOW_IMMUNE = 0x65,
+	MODIFIER_STATE_ROOT_IMMUNE = 0x66,
+	MODIFIER_STATE_IS_MELEE_TARGET = 0x67,
+	MODIFIER_STATE_GLOW_TO_ALLIES_AS_ENEMY = 0x68,
+	MODIFIER_STATE_LADDER_DISABLE = 0x69,
+	MODIFIER_STATE_IGNORE_BULLETS = 0x6a,
+	MODIFIER_STATE_IGNORE_MELEE = 0x6b,
+	MODIFIER_STATE_HIDE_CROSSHAIR = 0x6c,
+	MODIFIER_STATE_HIDE_STAMINA = 0x6d,
+	MODIFIER_STATE_HIDE_AMMO = 0x6e,
+	MODIFIER_STATE_APPLY_VERTICAL_DRAG = 0x6f,
+	MODIFIER_STATE_FALSE_DEATH = 0x70,
+	MODIFIER_STATE_NO_WINDUP = 0x71,
+	MODIFIER_STATE_TITAN_LASER_VALID_TARGET = 0x72,
+	MODIFIER_STATE_HAS_HOLLOW_POINT_BULLETS = 0x73,
+	MODIFIER_STATE_SUPPRESS_AIR_DRAG = 0x74,
+	MODIFIER_STATE_GROUND_DASH_EARLY_OUT_WINDOW = 0x75,
+	MODIFIER_STATE_ICEBEAMING = 0x76,
+	MODIFIER_STATE_IN_ALLY_SMOKE = 0x77,
+	MODIFIER_STATE_IN_ENEMY_SMOKE = 0x78,
+	MODIFIER_STATE_NIKUMAN_ACTIVE = 0x79,
+	MODIFIER_STATE_NO_OUTGOING_DAMAGE = 0x7a,
+	MODIFIER_STATE_NO_INCOMING_DAMAGE = 0x7b,
+	MODIFIER_STATE_CHRONO_SWAPPING = 0x7c,
+	MODIFIER_STATE_BOUNCE_PAD_STOMPING = 0x7d,
+	MODIFIER_STATE_FLYING_BEETLE_TARGET = 0x7e,
+	MODIFIER_STATE_DREAMWEAVER_SLEEP = 0x7f,
+	MODIFIER_STATE_HOLDING_IDOL = 0x80,
+	MODIFIER_STATE_RETURN_IDOL_AREA = 0x81,
+	MODIFIER_STATE_RETURNING_IDOL = 0x82,
+	MODIFIER_STATE_GALVANIC_STORM_BUFF = 0x83,
+	MODIFIER_STATE_IN_ABILITY_ALLOW_ZOOM = 0x84,
+	MODIFIER_STATE_IN_ABILITY_DISABLE_ZOOM = 0x85,
+	MODIFIER_STATE_STAMINA_REGEN_PAUSED = 0x86,
+	MODIFIER_STATE_PREMATCH = 0x87,
+	MODIFIER_STATE_SELF_DESTRUCT = 0x88,
+	MODIFIER_STATE_COOP_TETHER_ACTIVE = 0x89,
+	MODIFIER_STATE_COOP_TETHER_LOCKED_TARGET = 0x8a,
+	MODIFIER_STATE_LOCKED_AIM_ANGLES = 0x8b,
+	MODIFIER_STATE_ICEPATHING = 0x8c,
+	MODIFIER_STATE_BACKDOOR_PROTECTED = 0x8d,
+	MODIFIER_STATE_IN_COMBAT = 0x8e,
+	MODIFIER_STATE_DASHJUMP_STAMINA_FREE = 0x8f,
+	MODIFIER_STATE_YAMATO_SHADOW_FORM = 0x90,
+	MODIFIER_STATE_IN_MID_BOSS_PIT = 0x91,
+	MODIFIER_STATE_CASTS_IGNORE_CHANNELING = 0x92,
+	MODIFIER_STATE_CAN_ACTIVE_RELOAD = 0x93,
+	MODIFIER_STATE_DIGGER_BURROW_CHANNEL = 0x94,
+	MODIFIER_STATE_DIGGER_SPIN = 0x95,
+	MODIFIER_STATE_NEAR_REJUVINATOR = 0x96,
+	MODIFIER_STATE_IN_TIER3_PHASE2_BOSS_PIT = 0x97,
+	MODIFIER_STATE_TAKES_FULLDAMAGE_NO_FALLOFF = 0x98,
+	MODIFIER_STATE_PREDATORY_STATUE_TARGET = 0x99,
+	MODIFIER_STATE_FOOTSTEP_SOUNDS_DISABLE = 0x9a,
+	MODIFIER_STATE_MOVEMENT_FOLEY_SOUNDS_DISABLE = 0x9b,
+	MODIFIER_STATE_DO_NOT_DRAW_MODEL = 0x9c,
+	MODIFIER_STATE_SHIV_FRENZIED = 0x9d,
+	MODIFIER_STATE_FORCE_ANIM_DUCK = 0x9e,
+	MODIFIER_STATE_FORCE_ANIM_KEEP_STILL = 0x9f,
+	MODIFIER_STATE_SIPHON_BULLET_LOSS = 0xa0,
+	MODIFIER_STATE_APPLY_FOV_MOUSE_SENSITIVITY_SCALE = 0xa1,
 	// MPropertySuppressEnumerator
-	MODIFIER_STATE_COUNT = 0x86,
+	MODIFIER_STATE_COUNT = 0xa2,
 	// MPropertySuppressEnumerator
 	MODIFIER_STATE_INVALID = 0xff,
 };
@@ -5508,6 +5721,16 @@ enum class ParticleDirectionNoiseType_t : std::uint32_t
 	PARTICLE_DIR_NOISE_CURL = 0x1,
 	// MPropertyFriendlyName "Worley"
 	PARTICLE_DIR_NOISE_WORLEY_BASIC = 0x2,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 2
+// Alignment: 1
+// Size: 0x1
+enum class CNmIDComparisonNode__Comparison_t : std::uint8_t
+{
+	Matches = 0,
+	DoesntMatch = 1,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -5881,7 +6104,7 @@ enum class EGCCitadelCommonMessages : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 32
+// Enumerator count: 34
 // Alignment: 4
 // Size: 0x4
 enum class ECurrencySource : std::uint32_t
@@ -5916,8 +6139,10 @@ enum class ECurrencySource : std::uint32_t
 	EOrbBaseSentry = 0x1a,
 	EOrbDeployable = 0x1b,
 	EOrbTrophyKill = 0x1c,
-	ENeutralWorldPickup = 0x1d,
-	ECurrencySourceCount = 0x1e,
+	EOrbTreasureChest = 0x1d,
+	ENeutralWorldPickup = 0x1e,
+	EPlayerKillComeback = 0x1f,
+	ECurrencySourceCount = 0x20,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -5970,6 +6195,18 @@ enum class IChoreoServices__ChoreoState_t : std::uint32_t
 	STATE_PLAY_SCRIPT = 0x4,
 	STATE_PLAY_SCRIPT_POST_IDLE = 0x5,
 	STATE_PLAY_SCRIPT_POST_IDLE_DONE = 0x6,
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 4
+// Alignment: 1
+// Size: 0x1
+enum class NmTargetWarpRule_t : std::uint8_t
+{
+	WarpXY = 0,
+	WarpZ = 1,
+	WarpXYZ = 2,
+	RotationOnly = 3,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -6117,7 +6354,7 @@ enum class ECitadelTeamObjective : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 52
+// Enumerator count: 55
 // Alignment: 4
 // Size: 0x4
 enum class ECitadelAbilityOrders : std::uint32_t
@@ -6165,15 +6402,18 @@ enum class ECitadelAbilityOrders : std::uint32_t
 	ECitadelAbilityOrder_Invalid_OnlyTwoAirJumps = 0x28,
 	ECitadelAbilityOrder_Invalid_OnlyOneAirDash = 0x29,
 	ECitadelAbilityOrder_Invalid_OnlyTwoAirDashes = 0x2a,
-	ECitadelAbilityOrder_Invalid_SlideTakingPriority = 0x2b,
-	ECitadelAbilityOrder_Invalid_NothingToRefresh = 0x2c,
-	ECitadelAbilityOrder_Invalid_BeetleTarget = 0x2d,
-	ECitadelAbilityOrder_Invalid_ClipIsFull = 0x2e,
-	ECitadelAbilityOrder_Invalid_DashJumpFailed = 0x2f,
-	ECitadelAbilityOrder_DebugCommand_RequiresHeroTarget = 0x30,
-	ECitadelAbilityOrder_Invalid_NotEnoughAbilityResource = 0x31,
-	ECitadelAbilityOrder_Invalid_NotEnoughHeadRoom = 0x32,
-	ECitadelAbilityOrder_Max = 0x33,
+	ECitadelAbilityOrder_Invalid_OnlyOneDownDash = 0x2b,
+	ECitadelAbilityOrder_Invalid_OnlyTwoDownDashes = 0x2c,
+	ECitadelAbilityOrder_Invalid_SlideTakingPriority = 0x2d,
+	ECitadelAbilityOrder_Invalid_NothingToRefresh = 0x2e,
+	ECitadelAbilityOrder_Invalid_BeetleTarget = 0x2f,
+	ECitadelAbilityOrder_Invalid_ClipIsFull = 0x30,
+	ECitadelAbilityOrder_Invalid_DashJumpFailed = 0x31,
+	ECitadelAbilityOrder_DebugCommand_RequiresHeroTarget = 0x32,
+	ECitadelAbilityOrder_Invalid_NotEnoughAbilityResource = 0x33,
+	ECitadelAbilityOrder_Invalid_NotEnoughHeadRoom = 0x34,
+	ECitadelAbilityOrder_Invalid_NoDamageToClear = 0x35,
+	ECitadelAbilityOrder_Max = 0x36,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -6225,7 +6465,7 @@ enum class CitadelPingWheelConcept_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 5
+// Enumerator count: 4
 // Alignment: 1
 // Size: 0x1
 enum class ShatterGlassStressType : std::uint8_t
@@ -6233,8 +6473,7 @@ enum class ShatterGlassStressType : std::uint8_t
 	SHATTERGLASS_BLUNT = 0,
 	SHATTERGLASS_BALLISTIC = 1,
 	SHATTERGLASS_PULSE = 2,
-	SHATTERDRYWALL_CHUNKS = 3,
-	SHATTERGLASS_EXPLOSIVE = 4,
+	SHATTERGLASS_EXPLOSIVE = 3,
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
@@ -6568,7 +6807,7 @@ enum class ModifierDisableGroup_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 5
+// Enumerator count: 4
 // Alignment: 4
 // Size: 0x4
 enum class ModifierValueDisplayUnits_t : std::uint32_t
@@ -6577,7 +6816,6 @@ enum class ModifierValueDisplayUnits_t : std::uint32_t
 	EDisplayUnit_Meters = 0x1,
 	EDisplayUnit_MetersPerSecond = 0x2,
 	EDisplayUnit_Invert = 0x3,
-	EDisplayUnit_Hidden = 0x4,
 };
 
 // Registered binary: soundsystem.dll (project 'soundsystem')
@@ -6621,10 +6859,11 @@ enum class EGCEconBaseMsg : std::uint32_t
 // Size: 0x4
 enum class PulseDomainValueType_t : std::uint32_t
 {
+	// MPropertyFriendlyName "Invalid"
 	INVALID = 0xffffffff,
-	// MPropertyFriendlyName "Entity Name"
+	// MPropertyFriendlyName "Parent Map Entity"
 	ENTITY_NAME = 0x0,
-	// MPropertyFriendlyName "Panel ID"
+	// MPropertyFriendlyName "Parent XML Panel"
 	PANEL_ID = 0x1,
 	COUNT = 0x2,
 };
@@ -6765,6 +7004,18 @@ enum class NmFrameSnapEventMode_t : std::uint32_t
 	Round = 0x1,
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 4
+// Alignment: 1
+// Size: 0x1
+enum class NmTargetWarpAlgorithm_t : std::uint8_t
+{
+	Lerp = 0,
+	Hermite = 1,
+	HermiteFeaturePreserving = 2,
+	Bezier = 3,
+};
+
 // Registered binary: client.dll (project 'client')
 // Enumerator count: 3
 // Alignment: 4
@@ -6790,8 +7041,8 @@ enum class EFlexSlotTypes_t : std::uint16_t
 	EFlexSlot_BaseGuardian = 0x2,
 	// MPropertyFriendlyName "Generator"
 	EFlexSlot_Generator = 0x4,
-	// MPropertyFriendlyName "Tier 3"
-	EFlexSlot_Tier3 = 0x8,
+	// MPropertyFriendlyName "All Tier 2"
+	EFlexSlot_AllTier2 = 0x8,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -6815,7 +7066,7 @@ enum class ShadowType_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 76
+// Enumerator count: 83
 // Alignment: 4
 // Size: 0x4
 enum class Class_T : std::uint32_t
@@ -6838,64 +7089,71 @@ enum class Class_T : std::uint32_t
 	CLASS_ABILITY_PROJECTILE = 0xf,
 	CLASS_CRATE = 0x10,
 	CLASS_CRATE_SPAWN = 0x11,
-	CLASS_VEHICLE = 0x12,
-	CLASS_FLARE = 0x13,
-	CLASS_SPAWNED_DRONE = 0x14,
-	CLASS_ROLLERMINE = 0x15,
-	CLASS_PERCHED_PREDATOR_PROJECTILE = 0x16,
-	CLASS_PARACHUTE = 0x17,
-	CLASS_SENTRY = 0x18,
-	CLASS_BASE_SENTRY = 0x19,
-	CLASS_DISPENSER = 0x1a,
-	CLASS_SPY_DRONE = 0x1b,
-	CLASS_GOLD_ORB = 0x1c,
-	CLASS_LANE_NODE = 0x1d,
-	CLASS_WARD = 0x1e,
-	CLASS_ZIP_LINE_NODE = 0x1f,
-	CLASS_DESTROYABLE_BUILDING = 0x20,
-	CLASS_BOSS_TIER_2 = 0x21,
-	CLASS_BOSS_BARRACKS = 0x22,
-	CLASS_BOSS_TIER_3 = 0x23,
-	CLASS_BOSS_TIER_3_DRONE = 0x24,
-	CLASS_ANNOUNCER = 0x25,
-	CLASS_WEAK_NEUTRAL_CAMP = 0x26,
-	CLASS_MEDIUM_NEUTRAL_CAMP = 0x27,
-	CLASS_STRONG_NEUTRAL_CAMP = 0x28,
-	CLASS_VAULT_NEUTRAL_CAMP = 0x29,
-	CLASS_SUPER_NEUTRAL_CAMP = 0x2a,
-	CLASS_LADDER = 0x2b,
-	CLASS_EXPLOSIVE_BARREL = 0x2c,
-	CLASS_PAYLOAD = 0x2d,
-	CLASS_BULLET_TIME_WARP = 0x2e,
-	CLASS_BREAKABLE_PROP_PICKUP = 0x2f,
-	CLASS_ITEM_PICKUP = 0x30,
-	CLASS_GOLDEN_IDOL_PICKUP = 0x31,
-	CLASS_HERO_CLONE = 0x32,
-	CLASS_TRIGGER_HURT = 0x33,
-	CLASS_DRONE_DISPENSER = 0x34,
-	CLASS_HERO_MINION = 0x35,
-	CLASS_PING_MARKER = 0x36,
-	CLASS_PING_LOCATION_TRIGGER = 0x37,
-	CLASS_TESLA_COIL = 0x38,
-	CLASS_FARADAY_CAGE = 0x39,
-	CLASS_DIRECTOR_CAMERA = 0x3a,
-	CLASS_BREAKABLE_PROP = 0x3b,
-	CLASS_TRIGGER_TELEPORT = 0x3c,
-	CLASS_TRIGGER_MODIFIER = 0x3d,
-	CLASS_TRIGGER_OBSCURED_VOLUME = 0x3e,
-	CLASS_TRIGGER_ZIPLINE_CAPTURE = 0x3f,
-	CLASS_BALLISTA_BOMB = 0x40,
-	CLASS_BALLISTA_MINE = 0x41,
-	CLASS_TOMBSTONE = 0x42,
-	CLASS_ICEPATH_SHARD = 0x43,
-	CLASS_TRICKSHOT_TARGET = 0x44,
-	CLASS_GUIDED_ARROW = 0x45,
-	CLASS_PING_LOCATION = 0x46,
-	CLASS_DUSTSTORM_PROJECTILE = 0x47,
-	CLASS_CYCLONE_PROJECTILE = 0x48,
-	CLASS_FIELD_SENTRY = 0x49,
-	CLASS_RIPTIDE_PROJECTILE = 0x4a,
-	NUM_CLASSIFY_CLASSES = 0x4b,
+	CLASS_PICKUP_SPAWN = 0x12,
+	CLASS_VEHICLE = 0x13,
+	CLASS_FLARE = 0x14,
+	CLASS_SPAWNED_DRONE = 0x15,
+	CLASS_ROLLERMINE = 0x16,
+	CLASS_PERCHED_PREDATOR_PROJECTILE = 0x17,
+	CLASS_PARACHUTE = 0x18,
+	CLASS_SENTRY = 0x19,
+	CLASS_BASE_SENTRY = 0x1a,
+	CLASS_DISPENSER = 0x1b,
+	CLASS_SPY_DRONE = 0x1c,
+	CLASS_GOLD_ORB = 0x1d,
+	CLASS_LANE_NODE = 0x1e,
+	CLASS_WARD = 0x1f,
+	CLASS_ZIP_LINE_NODE = 0x20,
+	CLASS_DESTROYABLE_BUILDING = 0x21,
+	CLASS_BOSS_TIER_2 = 0x22,
+	CLASS_BOSS_BARRACKS = 0x23,
+	CLASS_BOSS_TIER_3 = 0x24,
+	CLASS_BOSS_TIER_3_DRONE = 0x25,
+	CLASS_ANNOUNCER = 0x26,
+	CLASS_WEAK_NEUTRAL_CAMP = 0x27,
+	CLASS_MEDIUM_NEUTRAL_CAMP = 0x28,
+	CLASS_STRONG_NEUTRAL_CAMP = 0x29,
+	CLASS_VAULT_NEUTRAL_CAMP = 0x2a,
+	CLASS_SUPER_NEUTRAL_CAMP = 0x2b,
+	CLASS_LADDER = 0x2c,
+	CLASS_EXPLOSIVE_BARREL = 0x2d,
+	CLASS_PAYLOAD = 0x2e,
+	CLASS_BULLET_TIME_WARP = 0x2f,
+	CLASS_BREAKABLE_PROP_PICKUP = 0x30,
+	CLASS_ITEM_PICKUP = 0x31,
+	CLASS_GOLDEN_IDOL_PICKUP = 0x32,
+	CLASS_HERO_CLONE = 0x33,
+	CLASS_TRIGGER_HURT = 0x34,
+	CLASS_DRONE_DISPENSER = 0x35,
+	CLASS_HERO_MINION = 0x36,
+	CLASS_PING_MARKER = 0x37,
+	CLASS_PING_LOCATION_TRIGGER = 0x38,
+	CLASS_TESLA_COIL = 0x39,
+	CLASS_FARADAY_CAGE = 0x3a,
+	CLASS_DIRECTOR_CAMERA = 0x3b,
+	CLASS_BREAKABLE_PROP = 0x3c,
+	CLASS_TRIGGER_IDOL_RETURN = 0x3d,
+	CLASS_TRIGGER_SHOP_TUNNEL = 0x3e,
+	CLASS_TRIGGER_TELEPORT = 0x3f,
+	CLASS_TRIGGER_MODIFIER = 0x40,
+	CLASS_TRIGGER_OBSCURED_VOLUME = 0x41,
+	CLASS_TRIGGER_ZIPLINE_CAPTURE = 0x42,
+	CLASS_TRIGGER_CATAPULT = 0x43,
+	CLASS_BALLISTA_BOMB = 0x44,
+	CLASS_BALLISTA_MINE = 0x45,
+	CLASS_TOMBSTONE = 0x46,
+	CLASS_ICEPATH_SHARD = 0x47,
+	CLASS_TRICKSHOT_TARGET = 0x48,
+	CLASS_GUIDED_ARROW = 0x49,
+	CLASS_PING_LOCATION = 0x4a,
+	CLASS_DUSTSTORM_PROJECTILE = 0x4b,
+	CLASS_CYCLONE_PROJECTILE = 0x4c,
+	CLASS_FIELD_SENTRY = 0x4d,
+	CLASS_RIPTIDE_PROJECTILE = 0x4e,
+	CLASS_ZAP_TRIGGER = 0x4f,
+	CLASS_VISCOUS_CUBE = 0x50,
+	CLASS_FISSURE_WALL_SEGMENT = 0x51,
+	NUM_CLASSIFY_CLASSES = 0x52,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -6984,7 +7242,7 @@ enum class Disposition_t : std::uint32_t
 };
 
 // Registered binary: server.dll (project 'server')
-// Enumerator count: 6
+// Enumerator count: 7
 // Alignment: 4
 // Size: 0x4
 enum class EPointType : std::uint32_t
@@ -6995,6 +7253,7 @@ enum class EPointType : std::uint32_t
 	EPointType_FriendlyBot = 0x3,
 	EPointType_FriendlyTrooper = 0x4,
 	EPointType_DamageZone = 0x5,
+	EPointType_MovingEnemyBot = 0x6,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -7065,19 +7324,6 @@ enum class DampingSpeedFunction : std::uint32_t
 	NoDamping = 0x0,
 	Constant = 0x1,
 	Spring = 0x2,
-};
-
-// Registered binary: client.dll (project 'client')
-// Enumerator count: 5
-// Alignment: 4
-// Size: 0x4
-enum class EHUDElementExclusiveType_t : std::uint32_t
-{
-	EHUDElementExclusivity_None = 0x0,
-	EHUDElementExclusivity_HideGunCrosshair = 0x1,
-	EHUDElementExclusivity_HideStamina = 0x2,
-	EHUDElementExclusivity_HideAllOtherAbilities = 0x3,
-	EHUDElementExclusivity_HideAmmoOnly = 0x4,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -7357,16 +7603,6 @@ enum class RenderMode_t : std::uint8_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 2
-// Alignment: 1
-// Size: 0x1
-enum class ShatterPanelMode : std::uint8_t
-{
-	SHATTER_GLASS = 0,
-	SHATTER_DRYWALL = 1,
-};
-
-// Registered binary: client.dll (project 'client')
 // Enumerator count: 7
 // Alignment: 4
 // Size: 0x4
@@ -7382,7 +7618,7 @@ enum class CameraParam : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 39
+// Enumerator count: 40
 // Alignment: 8
 // Size: 0x8
 enum class InputBitMask_t : std::uint64_t
@@ -7429,6 +7665,7 @@ enum class InputBitMask_t : std::uint64_t
 	IN_ALT_CAST = 0x20000000000000,
 	IN_REPLAY_DEATH = 0x40000000000000,
 	IN_TELEPORT = 0x80000000000000,
+	IN_CANCEL_ABILITY = 0x100000000000000,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -7491,7 +7728,7 @@ enum class ParticleColorBlendType_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 93
+// Enumerator count: 108
 // Alignment: 4
 // Size: 0x4
 enum class EGCCitadelClientMessages : std::uint32_t
@@ -7506,8 +7743,6 @@ enum class EGCCitadelClientMessages : std::uint32_t
 	k_EMsgClientToGCIsInMatchmaking = 0x2339,
 	k_EMsgClientToGCIsInMatchmakingResponse = 0x233a,
 	k_EMsgGCToClientDevPlaytestStatus = 0x233b,
-	k_EMsgClientToGCSubmitUserFeedback = 0x233d,
-	k_EMsgClientToGCSubmitUserFeedbackResponse = 0x233e,
 	k_EMsgClientToGCDevSetMMBias = 0x233f,
 	k_EMsgClientToGCGetProfileCard = 0x2340,
 	k_EMsgClientToGCGetProfileCardResponse = 0x2341,
@@ -7589,10 +7824,27 @@ enum class EGCCitadelClientMessages : std::uint32_t
 	k_EMsgClientToGCGetAccountMatchReportsResponse = 0x23f0,
 	k_EMsgClientToGCDeleteHeroBuild = 0x23f1,
 	k_EMsgClientToGCDeleteHeroBuildResponse = 0x23f2,
+	k_EMsgClientToGCGetActiveMatches = 0x23f3,
+	k_EMsgClientToGCGetActiveMatchesResponse = 0x23f4,
+	k_EMsgClientToGCGetDiscordLink = 0x23f5,
+	k_EMsgClientToGCGetDiscordLinkResponse = 0x23f6,
+	k_EMsgClientToGCPartySetMode = 0x23f7,
+	k_EMsgClientToGCPartySetModeResponse = 0x23f8,
+	k_EMsgClientToGCGrantForumAccess = 0x23f9,
+	k_EMsgClientToGCGrantForumAccessResponse = 0x23fa,
+	k_EMsgClientToGCModeratorRequest = 0x23fb,
+	k_EMsgClientToGCModeratorRequestResponse = 0x23fc,
+	k_EMsgClientToGCGetFriendGameStatus = 0x23fd,
+	k_EMsgClientToGCGetFriendGameStatusResponse = 0x23fe,
+	k_EMsgClientToGCUpdateHeroBuildPreference = 0x23ff,
+	k_EMsgClientToGCUpdateHeroBuildPreferenceResponse = 0x2400,
+	k_EMsgClientToGCGetOldHeroBuildData = 0x2401,
+	k_EMsgClientToGCGetOldHeroBuildDataResponse = 0x2402,
+	k_EMsgClientToGCUpdateSpectatorStatus = 0x2403,
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 4
+// Enumerator count: 5
 // Alignment: 4
 // Size: 0x4
 enum class EPreviewStatFlags : std::uint32_t
@@ -7601,6 +7853,7 @@ enum class EPreviewStatFlags : std::uint32_t
 	EPreviewFlag_WithPreviewItem = 0x1,
 	EPreviewFlag_WithTierBonuses = 0x2,
 	EPreviewFlag_WithPreviewItemConditionals = 0x4,
+	EPreviewFlag_OnlyTierBonuses = 0x8,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -7854,6 +8107,29 @@ enum class EWaveform : std::uint8_t
 	Saw = 2,
 	Triangle = 3,
 	Noise = 4,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class BreakableContentsType_t : std::uint32_t
+{
+	BC_DEFAULT = 0x0,
+	BC_EMPTY = 0x1,
+	BC_PROP_GROUP_OVERRIDE = 0x2,
+	BC_PARTICLE_SYSTEM_OVERRIDE = 0x3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class EntityDistanceMode_t : std::uint32_t
+{
+	eOriginToOrigin = 0x0,
+	eCenterToCenter = 0x1,
+	eAxisToAxis = 0x2,
 };
 
 // Registered binary: particles.dll (project 'particles')
@@ -8136,6 +8412,16 @@ enum class ParticleControlPointAxis_t : std::uint32_t
 	PARTICLE_CP_AXIS_NEGATIVE_Z = 0x5,
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class NmCachedValueMode_t : std::uint32_t
+{
+	OnEntry = 0x0,
+	OnExit = 0x1,
+};
+
 // Registered binary: client.dll (project 'client')
 // Enumerator count: 7
 // Alignment: 4
@@ -8168,6 +8454,34 @@ enum class EAbilityActivation_t : std::uint32_t
 	CITADEL_ABILITY_ACTIVATION_ON_BUTTON_IS_DOWN = 0x8,
 	// MPropertySuppressEnumerator
 	CITADEL_ABILITY_ACTIVATION_COUNT = 0x9,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 10
+// Alignment: 2
+// Size: 0x2
+enum class ECitadelWeaponAttributes : std::uint16_t
+{
+	// MPropertyFriendlyName "None"
+	EWeaponAttribute_None = 0x0,
+	// MPropertyFriendlyName "Rapid Fire"
+	EWeaponAttribute_RapidFire = 0x1,
+	// MPropertyFriendlyName "Burst Fire"
+	EWeaponAttribute_BurstFire = 0x2,
+	// MPropertyFriendlyName "Spreadshot"
+	EWeaponAttribute_Spreadshot = 0x4,
+	// MPropertyFriendlyName "Beam Weapon"
+	EWeaponAttribute_BeamWeapon = 0x8,
+	// MPropertyFriendlyName "Close Range"
+	EWeaponAttribute_CloseRange = 0x10,
+	// MPropertyFriendlyName "Medium Range"
+	EWeaponAttribute_MediumRange = 0x20,
+	// MPropertyFriendlyName "Long Range"
+	EWeaponAttribute_LongRange = 0x40,
+	// MPropertyFriendlyName "Heavy Hitter"
+	EWeaponAttribute_HeavyHitter = 0x80,
+	// MPropertyFriendlyName "Projectile"
+	EWeaponAttribute_Projectile = 0x100,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -8218,7 +8532,7 @@ enum class IKChannelMode : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 45
+// Enumerator count: 48
 // Alignment: 4
 // Size: 0x4
 enum class GameAnimEventIndex_t : std::uint32_t
@@ -8255,19 +8569,22 @@ enum class GameAnimEventIndex_t : std::uint32_t
 	AE_PULSE_GRAPH_AIMAT = 0x1d,
 	AE_PULSE_GRAPH_IKLOCKLEFTARM = 0x1e,
 	AE_PULSE_GRAPH_IKLOCKRIGHTARM = 0x1f,
-	AE_NPC_LEFTFOOT = 0x20,
-	AE_NPC_RIGHTFOOT = 0x21,
-	AE_NPC_BODYDROP_LIGHT = 0x22,
-	AE_NPC_BODYDROP_HEAVY = 0x23,
-	AE_NPC_SWISHSOUND = 0x24,
-	AE_NPC_WEAPON_DROP = 0x25,
-	AE_NPC_RAGDOLL = 0x26,
-	AE_NPC_ATTACK_BROADCAST = 0x27,
-	AE_NPC_GIB = 0x28,
-	AE_HURDLE_RISE_START = 0x29,
-	AE_HURDLE_DROP_START = 0x2a,
-	AE_RAGDOLL_WINDOW = 0x2b,
-	AE_MELEE_ATTACK = 0x2c,
+	AE_DISABLE_PLATFORM = 0x20,
+	AE_ENABLE_PLATFORM = 0x21,
+	AE_ANIMGRAPH_SET_PARAM = 0x22,
+	AE_NPC_LEFTFOOT = 0x23,
+	AE_NPC_RIGHTFOOT = 0x24,
+	AE_NPC_BODYDROP_LIGHT = 0x25,
+	AE_NPC_BODYDROP_HEAVY = 0x26,
+	AE_NPC_SWISHSOUND = 0x27,
+	AE_NPC_WEAPON_DROP = 0x28,
+	AE_NPC_RAGDOLL = 0x29,
+	AE_NPC_ATTACK_BROADCAST = 0x2a,
+	AE_NPC_GIB = 0x2b,
+	AE_HURDLE_RISE_START = 0x2c,
+	AE_HURDLE_DROP_START = 0x2d,
+	AE_RAGDOLL_WINDOW = 0x2e,
+	AE_MELEE_ATTACK = 0x2f,
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
@@ -8433,6 +8750,19 @@ enum class VMixLFOShape_t : std::uint32_t
 	LFO_SHAPE_NOISE = 0x4,
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Enumerator count: 5
+// Alignment: 1
+// Size: 0x1
+enum class NmStateEventTypeCondition_t : std::uint8_t
+{
+	Entry = 0,
+	FullyInState = 1,
+	Exit = 2,
+	Timed = 3,
+	Any = 4,
+};
+
 // Registered binary: client.dll (project 'client')
 // Enumerator count: 49
 // Alignment: 4
@@ -8517,6 +8847,17 @@ enum class LifeState_t : std::uint32_t
 	LIFE_RESPAWNING = 0x4,
 };
 
+// Registered binary: server.dll (project 'server')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class UnreachableTargetType_t : std::uint32_t
+{
+	UTT_ENTITY = 0x0,
+	UTT_WORLDPOS = 0x1,
+	UTT_GLOBALSYMBOL = 0x2,
+};
+
 // Registered binary: client.dll (project 'client')
 // Enumerator count: 5
 // Alignment: 4
@@ -8531,7 +8872,20 @@ enum class IChoreoServices__ScriptState_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 201
+// Enumerator count: 5
+// Alignment: 1
+// Size: 0x1
+enum class ETelepunchState_t : std::uint8_t
+{
+	ETelepunchState_None = 0,
+	ETelepunchState_EnemyPortalTelegraph = 1,
+	ETelepunchState_SelfPortalTelegraph = 2,
+	ETelepunchState_Windup = 3,
+	ETelepunchState_Attack = 4,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 209
 // Alignment: 4
 // Size: 0x4
 enum class EModifierValue : std::uint32_t
@@ -8594,253 +8948,265 @@ enum class EModifierValue : std::uint32_t
 	MODIFIER_VALUE_HEAL_AMP_RECEIVE_PERCENT = 0x20,
 	// MPropertyFriendlyName "HealAmpRegenPercent"
 	MODIFIER_VALUE_HEAL_AMP_REGEN_PERCENT = 0x21,
+	// MPropertyFriendlyName "HealDegenResistance"
+	MODIFIER_VALUE_HEAL_DEGEN_RESISTANCE = 0x22,
 	// MPropertyFriendlyName "BonusClipSize"
-	MODIFIER_VALUE_AMMO_CLIP_SIZE = 0x22,
+	MODIFIER_VALUE_AMMO_CLIP_SIZE = 0x23,
 	// MPropertyFriendlyName "BonusClipSizePercent"
-	MODIFIER_VALUE_AMMO_CLIP_SIZE_PERCENT = 0x23,
+	MODIFIER_VALUE_AMMO_CLIP_SIZE_PERCENT = 0x24,
 	// MPropertyFriendlyName "ClipSizeOverride"
-	MODIFIER_VALUE_AMMO_CLIP_SIZE_OVERRIDE = 0x24,
+	MODIFIER_VALUE_AMMO_CLIP_SIZE_OVERRIDE = 0x25,
 	// MPropertyFriendlyName "ReloadSpeedMultipler"
-	MODIFIER_VALUE_RELOAD_SPEED = 0x25,
+	MODIFIER_VALUE_RELOAD_SPEED = 0x26,
 	// MPropertyFriendlyName "ReloadSpeedConstant"
-	MODIFIER_VALUE_RELOAD_SPEED_CONSTANT = 0x26,
-	MODIFIER_VALUE_MOVE_SPEED_LIMIT = 0x27,
+	MODIFIER_VALUE_RELOAD_SPEED_CONSTANT = 0x27,
+	MODIFIER_VALUE_MOVE_SPEED_LIMIT = 0x28,
 	// MPropertyFriendlyName "BonusMoveSpeed"
-	MODIFIER_VALUE_MOVEMENT_SPEED_MAX = 0x28,
+	MODIFIER_VALUE_MOVEMENT_SPEED_MAX = 0x29,
 	// MPropertyFriendlyName "BonusMoveSpeedPercent"
-	MODIFIER_VALUE_MOVEMENT_SPEED_MAX_PERCENT = 0x29,
+	MODIFIER_VALUE_MOVEMENT_SPEED_MAX_PERCENT = 0x2a,
 	// MPropertyFriendlyName "MoveWhileZoomedSpeedPenaltyReductionPercent"
-	MODIFIER_VALUE_MOVEMENT_SPEED_WHILE_ZOOMED_PENALTY_REDUCTION_PERCENT = 0x2a,
+	MODIFIER_VALUE_MOVEMENT_SPEED_WHILE_ZOOMED_PENALTY_REDUCTION_PERCENT = 0x2b,
 	// MPropertyFriendlyName "MoveWhileShootingSpeedPenaltyReductionPercent"
-	MODIFIER_VALUE_MOVEMENT_SPEED_WHILE_SHOOTING_PENALTY_REDUCTION_PERCENT = 0x2b,
+	MODIFIER_VALUE_MOVEMENT_SPEED_WHILE_SHOOTING_PENALTY_REDUCTION_PERCENT = 0x2c,
 	// MPropertyFriendlyName "MoveSpeedSlowPercent"
-	MODIFIER_VALUE_MOVEMENT_SPEED_SLOW_PERCENT = 0x2c,
+	MODIFIER_VALUE_MOVEMENT_SPEED_SLOW_PERCENT = 0x2d,
 	// MPropertyFriendlyName "MoveGroundReductionPercent"
-	MODIFIER_VALUE_MOVEMENT_GROUND_DASH_REDUCTION_PERCENT = 0x2d,
+	MODIFIER_VALUE_MOVEMENT_GROUND_DASH_REDUCTION_PERCENT = 0x2e,
 	// MPropertyFriendlyName "MoveDashIncreasePercent"
-	MODIFIER_VALUE_MOVEMENT_GROUND_DASH_INCREASE_PERCENT = 0x2e,
+	MODIFIER_VALUE_MOVEMENT_GROUND_DASH_INCREASE_PERCENT = 0x2f,
+	// MPropertyFriendlyName "AirMoveIncreasePercent"
+	MODIFIER_VALUE_AIR_MOVE_DISTANCE_INCREASE_PERCENT = 0x30,
+	// MPropertyFriendlyName "SlideDistanceScale"
+	MODIFIER_VALUE_MOVEMENT_SLIDE_DISTANCE_SCALE = 0x31,
 	// MPropertyFriendlyName "SlowResistance"
-	MODIFIER_VALUE_MOVEMENT_SLOW_RESISTANCE = 0x2f,
+	MODIFIER_VALUE_MOVEMENT_SLOW_RESISTANCE = 0x32,
 	// MPropertyFriendlyName "BonusAttackRange"
-	MODIFIER_VALUE_BONUS_ATTACK_RANGE = 0x30,
+	MODIFIER_VALUE_BONUS_ATTACK_RANGE = 0x33,
 	// MPropertyFriendlyName "BonusAttackRangePercent"
-	MODIFIER_VALUE_BONUS_ATTACK_RANGE_PERCENT = 0x31,
+	MODIFIER_VALUE_BONUS_ATTACK_RANGE_PERCENT = 0x34,
 	// MPropertyFriendlyName "BonusZoomPercent"
-	MODIFIER_VALUE_ZOOM_INCREASE_PERCENT = 0x32,
-	MODIFIER_VALUE_ZOOM_POSITION = 0x33,
+	MODIFIER_VALUE_ZOOM_INCREASE_PERCENT = 0x35,
+	MODIFIER_VALUE_ZOOM_POSITION = 0x36,
 	// MPropertyFriendlyName "WeaponRecoilReduction"
-	MODIFIER_VALUE_WEAPON_RECOIL_REDUCTION_PERCENT = 0x34,
+	MODIFIER_VALUE_WEAPON_RECOIL_REDUCTION_PERCENT = 0x37,
 	// MPropertyFriendlyName "BonusSprintSpeed"
-	MODIFIER_VALUE_SPRINT_SPEED_BONUS = 0x35,
+	MODIFIER_VALUE_SPRINT_SPEED_BONUS = 0x38,
 	// MPropertyFriendlyName "BonusSprintSpeedPercent"
-	MODIFIER_VALUE_SPRINT_SPEED_MAX_PERCENT = 0x36,
-	MODIFIER_VALUE_SPRINT_DURATION = 0x37,
-	MODIFIER_VALUE_SPRINT_ACCELERATION = 0x38,
-	MODIFIER_VALUE_DISPLAY_SPEED_CURRENT = 0x39,
-	MODIFIER_VALUE_DISPLAY_SPEED_MAX = 0x3a,
-	MODIFIER_VALUE_AVOID_SPELL = 0x3b,
+	MODIFIER_VALUE_SPRINT_SPEED_MAX_PERCENT = 0x39,
+	MODIFIER_VALUE_SPRINT_DURATION = 0x3a,
+	MODIFIER_VALUE_SPRINT_ACCELERATION = 0x3b,
+	MODIFIER_VALUE_DISPLAY_SPEED_CURRENT = 0x3c,
+	MODIFIER_VALUE_DISPLAY_SPEED_MAX = 0x3d,
+	MODIFIER_VALUE_AVOID_SPELL = 0x3e,
 	// MPropertyFriendlyName "BonusFireRate"
-	MODIFIER_VALUE_FIRE_RATE = 0x3c,
+	MODIFIER_VALUE_FIRE_RATE = 0x3f,
 	// MPropertyFriendlyName "FireRateSlow"
-	MODIFIER_VALUE_FIRE_RATE_SLOW = 0x3d,
+	MODIFIER_VALUE_FIRE_RATE_SLOW = 0x40,
 	// MPropertyFriendlyName "CycleTimeMultiplier"
-	MODIFIER_VALUE_CYCLE_TIME_PERCENTAGE = 0x3e,
-	MODIFIER_VALUE_SPREAD_SCALE = 0x3f,
-	MODIFIER_VALUE_CYCLE_TIME = 0x40,
-	MODIFIER_VALUE_AMMO_COST_REDUCTION = 0x41,
-	MODIFIER_VALUE_DAMAGE_TAKEN_REDUCTION_PERCENT = 0x42,
-	MODIFIER_VALUE_DAMAGE_TAKEN_INCREASE_PERCENT = 0x43,
-	MODIFIER_VALUE_BULLET_DAMAGE_TAKEN_INCREASE_PERCENT = 0x44,
-	MODIFIER_VALUE_ABILITY_DAMAGE_TAKEN_INCREASE_PERCENT = 0x45,
+	MODIFIER_VALUE_CYCLE_TIME_PERCENTAGE = 0x41,
+	MODIFIER_VALUE_SPREAD_SCALE = 0x42,
+	MODIFIER_VALUE_CYCLE_TIME = 0x43,
+	MODIFIER_VALUE_AMMO_COST_REDUCTION = 0x44,
+	MODIFIER_VALUE_DAMAGE_TAKEN_REDUCTION_PERCENT = 0x45,
+	MODIFIER_VALUE_DAMAGE_TAKEN_INCREASE_PERCENT = 0x46,
+	MODIFIER_VALUE_BULLET_DAMAGE_TAKEN_INCREASE_PERCENT = 0x47,
+	MODIFIER_VALUE_ABILITY_DAMAGE_TAKEN_INCREASE_PERCENT = 0x48,
 	// MPropertyFriendlyName "TechArmor"
-	MODIFIER_VALUE_TECH_ARMOR = 0x46,
+	MODIFIER_VALUE_TECH_ARMOR = 0x49,
 	// MPropertyFriendlyName "TechResist"
-	MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST = 0x47,
-	MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST_PERCENT = 0x48,
-	MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST_REDUCTION = 0x49,
+	MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST = 0x4a,
+	MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST_PERCENT = 0x4b,
+	MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST_REDUCTION = 0x4c,
 	// MPropertyFriendlyName "AbilityDamageReduction"
-	MODIFIER_VALUE_ABILITY_DAMAGE_REDUCTION = 0x4a,
-	MODIFIER_VALUE_ABILITY_DAMAGE_REDUCTION_PERCENT = 0x4b,
+	MODIFIER_VALUE_ABILITY_DAMAGE_REDUCTION = 0x4d,
+	MODIFIER_VALUE_ABILITY_DAMAGE_REDUCTION_PERCENT = 0x4e,
 	// MPropertyFriendlyName "BulletArmor"
-	MODIFIER_VALUE_BULLET_ARMOR = 0x4c,
+	MODIFIER_VALUE_BULLET_ARMOR = 0x4f,
 	// MPropertyFriendlyName "BulletResist"
-	MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST = 0x4d,
-	MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST_PERCENT = 0x4e,
-	MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST_REDUCTION = 0x4f,
+	MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST = 0x50,
+	MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST_PERCENT = 0x51,
+	MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST_REDUCTION = 0x52,
+	MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST_NON_HERO = 0x53,
+	MODIFIER_VALUE_CRIT_DAMAGE_RECEIVED_SCALE = 0x54,
 	// MPropertyFriendlyName "BulletDamageReduction"
-	MODIFIER_VALUE_BULLET_DAMAGE_REDUCTION = 0x50,
-	MODIFIER_VALUE_BULLET_DAMAGE_REDUCTION_PERCENT = 0x51,
+	MODIFIER_VALUE_BULLET_DAMAGE_REDUCTION = 0x55,
+	MODIFIER_VALUE_BULLET_DAMAGE_REDUCTION_PERCENT = 0x56,
 	// MPropertyFriendlyName "BaseWeaponDamageTakenPercent"
-	MODIFIER_VALUE_BASE_WEAPON_DAMAGE_TAKEN_PERCENT = 0x52,
+	MODIFIER_VALUE_BASE_WEAPON_DAMAGE_TAKEN_PERCENT = 0x57,
 	// MPropertyFriendlyName "BaseBulletDamageTakenPercent"
-	MODIFIER_VALUE_BASE_BULLET_DAMAGE_TAKEN_PERCENT = 0x53,
+	MODIFIER_VALUE_BASE_BULLET_DAMAGE_TAKEN_PERCENT = 0x58,
 	// MPropertyFriendlyName "BaseMeleeDamageTakenPercent"
-	MODIFIER_VALUE_BASE_MELEE_DAMAGE_TAKEN_PERCENT = 0x54,
+	MODIFIER_VALUE_BASE_MELEE_DAMAGE_TAKEN_PERCENT = 0x59,
 	// MPropertyFriendlyName "MeleeDamageReductionPercent"
-	MODIFIER_VALUE_MELEE_DAMAGE_REDUCTION_PERCENT = 0x55,
-	MODIFIER_VALUE_MELEE_DAMAGE_INCREASE_PERCENT = 0x56,
+	MODIFIER_VALUE_MELEE_DAMAGE_REDUCTION_PERCENT = 0x5a,
+	MODIFIER_VALUE_MELEE_DAMAGE_INCREASE_PERCENT = 0x5b,
 	// MPropertyFriendlyName "StatusResistancePercent"
-	MODIFIER_VALUE_STATUS_RESISTANCE = 0x57,
+	MODIFIER_VALUE_STATUS_RESISTANCE = 0x5c,
 	// MPropertyFriendlyName "CooldownReduction"
-	MODIFIER_VALUE_COOLDOWN_REDUCTION_PERCENTAGE = 0x58,
-	MODIFIER_VALUE_COOLDOWN_MAX_TIME = 0x59,
+	MODIFIER_VALUE_COOLDOWN_REDUCTION_PERCENTAGE = 0x5d,
+	MODIFIER_VALUE_COOLDOWN_MAX_TIME = 0x5e,
 	// MPropertyFriendlyName "CooldownBetweenChargeReduction"
-	MODIFIER_VALUE_COOLDOWN_BETWEEN_CHARGE_REDUCTION_PERCENTAGE = 0x5a,
+	MODIFIER_VALUE_COOLDOWN_BETWEEN_CHARGE_REDUCTION_PERCENTAGE = 0x5f,
 	// MPropertyFriendlyName "BonusAbilityCharges"
-	MODIFIER_VALUE_BONUS_ABILITY_CHARGES = 0x5b,
+	MODIFIER_VALUE_BONUS_ABILITY_CHARGES = 0x60,
 	// MPropertyFriendlyName "BonusAbilityDurationPercent"
-	MODIFIER_VALUE_BONUS_ABILITY_DURATION_PERCENTAGE = 0x5c,
+	MODIFIER_VALUE_BONUS_ABILITY_DURATION_PERCENTAGE = 0x61,
 	// MPropertyFriendlyName "BonusMeleeDamage"
-	MODIFIER_VALUE_MELEEATTACK_DAMAGE = 0x5d,
-	MODIFIER_VALUE_MELEEATTACK_DAMAGE_PERCENTAGE = 0x5e,
+	MODIFIER_VALUE_MELEEATTACK_DAMAGE = 0x62,
+	MODIFIER_VALUE_MELEEATTACK_DAMAGE_PERCENTAGE = 0x63,
 	// MPropertyFriendlyName "BonusMeleeAttackSpeed"
-	MODIFIER_VALUE_MELEEATTACK_SPEED = 0x5f,
+	MODIFIER_VALUE_MELEEATTACK_SPEED = 0x64,
+	// MPropertyFriendlyName "BonusMeleeTravelDistancePercent"
+	MODIFIER_VALUE_MELEE_TRAVEL_DISTANCE_PERCENTAGE = 0x65,
 	// MPropertyFriendlyName "BonusAccuracy"
-	MODIFIER_VALUE_FIREARM_ACCURACY_PERCENTAGE = 0x60,
-	MODIFIER_VALUE_TURN_SIDEMOVE_PERCENTAGE = 0x61,
-	MODIFIER_VALUE_CHARGE_SPEED = 0x62,
-	MODIFIER_VALUE_CAN_CANCEL = 0x63,
-	MODIFIER_VALUE_TELEPORT_COOLDOWN_REDUCTION_PERCENT = 0x64,
-	MODIFIER_VALUE_FALL_SPEED_MAX = 0x65,
-	MODIFIER_VALUE_AIR_SPEED_MAX = 0x66,
-	MODIFIER_VALUE_GRAVITY_SCALE = 0x67,
-	MODIFIER_VALUE_BULLET_EVASION = 0x68,
-	MODIFIER_VALUE_TECH_SHIELD_HEALTH = 0x69,
+	MODIFIER_VALUE_FIREARM_ACCURACY_PERCENTAGE = 0x66,
+	MODIFIER_VALUE_TURN_SIDEMOVE_PERCENTAGE = 0x67,
+	MODIFIER_VALUE_CHARGE_SPEED = 0x68,
+	MODIFIER_VALUE_CAN_CANCEL = 0x69,
+	MODIFIER_VALUE_TELEPORT_COOLDOWN_REDUCTION_PERCENT = 0x6a,
+	MODIFIER_VALUE_FALL_SPEED_MAX = 0x6b,
+	MODIFIER_VALUE_AIR_SPEED_MAX = 0x6c,
+	MODIFIER_VALUE_AIR_SPEED_VERTICAL_MOVE = 0x6d,
+	MODIFIER_VALUE_GRAVITY_SCALE = 0x6e,
+	MODIFIER_VALUE_BULLET_EVASION = 0x6f,
+	MODIFIER_VALUE_TECH_SHIELD_HEALTH = 0x70,
 	// MPropertyFriendlyName "TechShieldHealth"
-	MODIFIER_VALUE_TECH_SHIELD_HEALTH_MAX = 0x6a,
-	MODIFIER_VALUE_TECH_SHIELD_HEALTH_TEMP = 0x6b,
-	MODIFIER_VALUE_TECH_SHIELD_DAMAGE_PERCENT = 0x6c,
-	MODIFIER_VALUE_TECH_SHIELD_DAMAGE_REGEN_COOLDOWN = 0x6d,
-	MODIFIER_VALUE_TECH_SHIELD_BREAK_REGEN_COOLDOWN = 0x6e,
+	MODIFIER_VALUE_TECH_SHIELD_HEALTH_MAX = 0x71,
+	MODIFIER_VALUE_TECH_SHIELD_HEALTH_TEMP = 0x72,
+	MODIFIER_VALUE_TECH_SHIELD_DAMAGE_PERCENT = 0x73,
+	MODIFIER_VALUE_TECH_SHIELD_DAMAGE_REGEN_COOLDOWN = 0x74,
+	MODIFIER_VALUE_TECH_SHIELD_BREAK_REGEN_COOLDOWN = 0x75,
 	// MPropertyFriendlyName "BulletShieldHealth"
-	MODIFIER_VALUE_BULLET_SHIELD_HEALTH = 0x6f,
+	MODIFIER_VALUE_BULLET_SHIELD_HEALTH = 0x76,
 	// MPropertyFriendlyName "BulletShieldMaxHealth"
-	MODIFIER_VALUE_BULLET_SHIELD_HEALTH_MAX = 0x70,
-	MODIFIER_VALUE_BULLET_SHIELD_HEALTH_TEMP = 0x71,
-	MODIFIER_VALUE_BULLET_SHIELD_DAMAGE_PERCENT = 0x72,
-	MODIFIER_VALUE_BULLET_SHIELD_DAMAGE_REGEN_COOLDOWN = 0x73,
-	MODIFIER_VALUE_BULLET_SHIELD_BREAK_REGEN_COOLDOWN = 0x74,
+	MODIFIER_VALUE_BULLET_SHIELD_HEALTH_MAX = 0x77,
+	MODIFIER_VALUE_BULLET_SHIELD_HEALTH_TEMP = 0x78,
+	MODIFIER_VALUE_BULLET_SHIELD_DAMAGE_PERCENT = 0x79,
+	MODIFIER_VALUE_BULLET_SHIELD_DAMAGE_REGEN_COOLDOWN = 0x7a,
+	MODIFIER_VALUE_BULLET_SHIELD_BREAK_REGEN_COOLDOWN = 0x7b,
 	// MPropertyFriendlyName "BonusCritDamagePercent"
-	MODIFIER_VALUE_BONUS_CRIT_DAMAGE_PERCENT = 0x75,
+	MODIFIER_VALUE_BONUS_CRIT_DAMAGE_PERCENT = 0x7c,
 	// MPropertyFriendlyName "HighGroundBonusBaseDamagePercent"
-	MODIFIER_VALUE_HEIGHT_ADVANTAGE_BONUS_BASE_DAMAGE_PERCENT = 0x76,
+	MODIFIER_VALUE_HEIGHT_ADVANTAGE_BONUS_BASE_DAMAGE_PERCENT = 0x7d,
 	// MPropertyFriendlyName "CloseRangeBonusBaseDamage"
-	MODIFIER_VALUE_CLOSE_RANGE_BONUS_BASE_DAMAGE_PERCENT = 0x77,
-	MODIFIER_VALUE_BONUS_WEAPON_DAMAGE_CLOSE_RANGE_MAX_RANGE = 0x78,
+	MODIFIER_VALUE_CLOSE_RANGE_BONUS_BASE_DAMAGE_PERCENT = 0x7e,
+	MODIFIER_VALUE_BONUS_WEAPON_DAMAGE_CLOSE_RANGE_MAX_RANGE = 0x7f,
 	// MPropertyFriendlyName "LongRangeBonusWeaponPower"
-	MODIFIER_VALUE_LONG_RANGE_BONUS_BASE_DAMAGE_PERCENT = 0x79,
-	MODIFIER_VALUE_BONUS_WEAPON_DAMAGE_LONG_RANGE_MIN_RANGE = 0x7a,
+	MODIFIER_VALUE_LONG_RANGE_BONUS_BASE_DAMAGE_PERCENT = 0x80,
+	MODIFIER_VALUE_BONUS_WEAPON_DAMAGE_LONG_RANGE_MIN_RANGE = 0x81,
 	// MPropertyFriendlyName "TechRangeAdditive"
-	MODIFIER_VALUE_TECH_RANGE_ADDITIVE = 0x7b,
+	MODIFIER_VALUE_TECH_RANGE_ADDITIVE = 0x82,
 	// MPropertyFriendlyName "TechRangeMultiplier"
-	MODIFIER_VALUE_TECH_RANGE_PERCENT = 0x7c,
-	MODIFIER_VALUE_TECH_RANGE_CLAMP = 0x7d,
+	MODIFIER_VALUE_TECH_RANGE_PERCENT = 0x83,
+	MODIFIER_VALUE_TECH_RANGE_CLAMP = 0x84,
 	// MPropertyFriendlyName "TechRadiusAdditive"
-	MODIFIER_VALUE_TECH_RADIUS_ADDITIVE = 0x7e,
+	MODIFIER_VALUE_TECH_RADIUS_ADDITIVE = 0x85,
 	// MPropertyFriendlyName "TechRadiusMultiplier"
-	MODIFIER_VALUE_TECH_RADIUS_PERCENT = 0x7f,
-	MODIFIER_VALUE_TURN_ANGLE_PER_SECOND_MAX = 0x80,
-	MODIFIER_VALUE_BONUS_JUMP_VERTICAL_SPEED_PERCENT = 0x81,
-	MODIFIER_VALUE_AIR_JUMPS = 0x82,
+	MODIFIER_VALUE_TECH_RADIUS_PERCENT = 0x86,
+	MODIFIER_VALUE_TURN_ANGLE_PER_SECOND_MAX = 0x87,
+	MODIFIER_VALUE_BONUS_JUMP_VERTICAL_SPEED_PERCENT = 0x88,
+	MODIFIER_VALUE_AIR_JUMPS = 0x89,
 	// MPropertyFriendlyName "BonusZipLineSpeed"
-	MODIFIER_VALUE_ZIP_LINE_SPEED_ADDITIVE = 0x83,
+	MODIFIER_VALUE_ZIP_LINE_SPEED_ADDITIVE = 0x8a,
 	// MPropertyFriendlyName "ZipLineSpeedPercent"
-	MODIFIER_VALUE_ZIP_LINE_SPEED_PERCENTAGE = 0x84,
+	MODIFIER_VALUE_ZIP_LINE_SPEED_PERCENTAGE = 0x8b,
 	// MPropertyFriendlyName "GroundFrictionPercent"
-	MODIFIER_VALUE_GROUND_FRICTION_PERCENTAGE = 0x85,
+	MODIFIER_VALUE_GROUND_FRICTION_PERCENTAGE = 0x8c,
 	// MPropertyFriendlyName "GroundAccelerationPercent"
-	MODIFIER_VALUE_GROUND_ACCELERATION_PERCENTAGE = 0x86,
-	MODIFIER_VALUE_INVISIBILITY_LEVEL = 0x87,
-	MODIFIER_VALUE_CLOAK_FACTOR = 0x88,
-	MODIFIER_VALUE_PARTICLE_TINT_OVERRIDE = 0x89,
-	MODIFIER_VALUE_PARTICLE_DESAT_OVERRIDE = 0x8a,
-	MODIFIER_VALUE_DIMENSION_TYPE = 0x8b,
-	MODIFIER_VALUE_GAMEPLAY_TIME_SCALE_ADDITIVE = 0x8c,
-	MODIFIER_VALUE_GAMEPLAY_TIME_SCALE_PERCENT = 0x8d,
-	MODIFIER_VALUE_ANIMATION_TIME_SCALE_ADDITIVE = 0x8e,
-	MODIFIER_VALUE_ANIMATION_TIME_SCALE_PERCENT = 0x8f,
-	MODIFIER_VALUE_ANIMATION_FRAME_SKIP_RATE = 0x90,
-	MODIFIER_VALUE_MOVEMENT_TIME_SCALE_ADDITIVE = 0x91,
-	MODIFIER_VALUE_MOVEMENT_TIME_SCALE_PERCENT = 0x92,
-	MODIFIER_VALUE_PARTICLE_TIME_SCALE_ADDITIVE = 0x93,
-	MODIFIER_VALUE_PARTICLE_TIME_SCALE_PERCENT = 0x94,
+	MODIFIER_VALUE_GROUND_ACCELERATION_PERCENTAGE = 0x8d,
+	MODIFIER_VALUE_INVISIBILITY_LEVEL = 0x8e,
+	MODIFIER_VALUE_CLOAK_FACTOR = 0x8f,
+	MODIFIER_VALUE_PARTICLE_TINT_OVERRIDE = 0x90,
+	MODIFIER_VALUE_PARTICLE_DESAT_OVERRIDE = 0x91,
+	MODIFIER_VALUE_DIMENSION_TYPE = 0x92,
+	MODIFIER_VALUE_GAMEPLAY_TIME_SCALE_ADDITIVE = 0x93,
+	MODIFIER_VALUE_GAMEPLAY_TIME_SCALE_PERCENT = 0x94,
+	MODIFIER_VALUE_ANIMATION_TIME_SCALE_ADDITIVE = 0x95,
+	MODIFIER_VALUE_ANIMATION_TIME_SCALE_PERCENT = 0x96,
+	MODIFIER_VALUE_ANIMATION_FRAME_SKIP_RATE = 0x97,
+	MODIFIER_VALUE_MOVEMENT_TIME_SCALE_ADDITIVE = 0x98,
+	MODIFIER_VALUE_MOVEMENT_TIME_SCALE_PERCENT = 0x99,
+	MODIFIER_VALUE_PARTICLE_TIME_SCALE_ADDITIVE = 0x9a,
+	MODIFIER_VALUE_PARTICLE_TIME_SCALE_PERCENT = 0x9b,
 	// MPropertyFriendlyName "Stamina"
-	MODIFIER_VALUE_STAMINA = 0x95,
-	MODIFIER_VALUE_STAMINA_REGEN_PER_SECOND_ADDITIVE = 0x96,
-	MODIFIER_VALUE_STAMINA_REGEN_PER_SECOND_PERCENTAGE = 0x97,
+	MODIFIER_VALUE_STAMINA = 0x9c,
+	MODIFIER_VALUE_STAMINA_REGEN_PER_SECOND_ADDITIVE = 0x9d,
+	MODIFIER_VALUE_STAMINA_REGEN_PER_SECOND_PERCENTAGE = 0x9e,
 	// MPropertyFriendlyName "WeaponPower"
-	MODIFIER_VALUE_WEAPON_POWER = 0x98,
+	MODIFIER_VALUE_WEAPON_POWER = 0x9f,
 	// MPropertyFriendlyName "ArmorPower"
-	MODIFIER_VALUE_ARMOR_POWER = 0x99,
+	MODIFIER_VALUE_ARMOR_POWER = 0xa0,
 	// MPropertyFriendlyName "TechPower"
-	MODIFIER_VALUE_TECH_POWER = 0x9a,
+	MODIFIER_VALUE_TECH_POWER = 0xa1,
 	// MPropertyFriendlyName "WeaponPowerPercent"
-	MODIFIER_VALUE_WEAPON_POWER_PERCENT = 0x9b,
+	MODIFIER_VALUE_WEAPON_POWER_PERCENT = 0xa2,
 	// MPropertyFriendlyName "AirControlPercent"
-	MODIFIER_VALUE_AIR_CONTROL_PERCENT = 0x9c,
+	MODIFIER_VALUE_AIR_CONTROL_PERCENT = 0xa3,
 	// MPropertyFriendlyName "AirControlAccelPercent"
-	MODIFIER_VALUE_AIR_CONTROL_ACCEL_PERCENT = 0x9d,
+	MODIFIER_VALUE_AIR_CONTROL_ACCEL_PERCENT = 0xa4,
 	// MPropertyFriendlyName "AbilityProjectileSpeedPercent"
-	MODIFIER_VALUE_ABILITY_PROJECTILE_SPEED_PERCENT = 0x9e,
+	MODIFIER_VALUE_ABILITY_PROJECTILE_SPEED_PERCENT = 0xa5,
 	// MPropertyFriendlyName "BonusBulletSpeedPercent"
-	MODIFIER_VALUE_BONUS_BULLET_SPEED_PERCENT = 0x9f,
+	MODIFIER_VALUE_BONUS_BULLET_SPEED_PERCENT = 0xa6,
 	// MPropertyFriendlyName "BaseBulletSpeedOverride"
-	MODIFIER_VALUE_BASE_BULLET_SPEED_OVERRIDE = 0xa0,
-	MODIFIER_VALUE_BULLET_SHOOT_SOUND = 0xa1,
-	MODIFIER_VALUE_BULLET_SHOOT_SOUND_FRIENDLY = 0xa2,
-	MODIFIER_VALUE_BULLET_SHOOT_SOUND_ENEMY = 0xa3,
-	MODIFIER_VALUE_BULLET_SHOOT_SOUND_WHIZ = 0xa4,
-	MODIFIER_VALUE_BULLET_SHOOT_SOUND_WHIZ_LEFT_TO_RIGHT = 0xa5,
-	MODIFIER_VALUE_BULLET_SHOOT_SOUND_WHIZ_RIGHT_TO_LEFT = 0xa6,
-	MODIFIER_VALUE_TRACER_REPLACEMENT = 0xa7,
-	MODIFIER_VALUE_TRACER_ADDITIONAL = 0xa8,
+	MODIFIER_VALUE_BASE_BULLET_SPEED_OVERRIDE = 0xa7,
+	MODIFIER_VALUE_BULLET_SHOOT_SOUND = 0xa8,
+	MODIFIER_VALUE_BULLET_SHOOT_SOUND_FRIENDLY = 0xa9,
+	MODIFIER_VALUE_BULLET_SHOOT_SOUND_ENEMY = 0xaa,
+	MODIFIER_VALUE_BULLET_SHOOT_SOUND_WHIZ = 0xab,
+	MODIFIER_VALUE_BULLET_SHOOT_SOUND_WHIZ_LEFT_TO_RIGHT = 0xac,
+	MODIFIER_VALUE_BULLET_SHOOT_SOUND_WHIZ_RIGHT_TO_LEFT = 0xad,
+	MODIFIER_VALUE_TRACER_REPLACEMENT = 0xae,
+	MODIFIER_VALUE_TRACER_ADDITIONAL = 0xaf,
 	// MPropertySuppressEnumerator
-	MODIFIER_VALUE_CAMERA_TARGET_OVERRIDE = 0xa9,
-	MODIFIER_VALUE_SPECTATING_SPEED_OVERRIDE = 0xaa,
+	MODIFIER_VALUE_CAMERA_TARGET_OVERRIDE = 0xb0,
+	MODIFIER_VALUE_SPECTATING_SPEED_OVERRIDE = 0xb1,
 	// MPropertyFriendlyName "NonPlayerBonusWeaponPower"
-	MODIFIER_NON_PLAYER_BONUS_BASE_DAMAGE_PERCENT = 0xab,
-	MODIFIER_VALUE_AIR_DRAG = 0xac,
-	MODIFIER_VALUE_TECH_DAMAGE_TAKEN_HEALS_ATTACKER = 0xad,
-	MODIFIER_VALUE_BULLET_DAMAGE_TAKEN_HEALS_ATTACKER = 0xae,
+	MODIFIER_NON_PLAYER_BONUS_BASE_DAMAGE_PERCENT = 0xb2,
+	MODIFIER_VALUE_AIR_DRAG = 0xb3,
+	MODIFIER_VALUE_TECH_DAMAGE_TAKEN_HEALS_ATTACKER = 0xb4,
+	MODIFIER_VALUE_BULLET_DAMAGE_TAKEN_HEALS_ATTACKER = 0xb5,
 	// MPropertyFriendlyName "AbilityLifestealPercentHero"
-	MODIFIER_VALUE_TECH_LIFESTEAL = 0xaf,
+	MODIFIER_VALUE_TECH_LIFESTEAL = 0xb6,
 	// MPropertyFriendlyName "AbilityLifestealPercentNonHero"
-	MODIFIER_VALUE_TECH_LIFESTEAL_NONHERO = 0xb0,
+	MODIFIER_VALUE_TECH_LIFESTEAL_NONHERO = 0xb7,
 	// MPropertyFriendlyName "BulletLifestealPercent"
-	MODIFIER_VALUE_BULLET_LIFESTEAL = 0xb1,
-	MODIFIER_VALUE_OVERRIDE_BULLET_ATTACKER = 0xb2,
-	MODIFIER_VALUE_OVERRIDE_MELEE_HIT_SOUND = 0xb3,
-	MODIFIER_VALUE_OVERRIDE_MELEE_MISS_SOUND = 0xb4,
+	MODIFIER_VALUE_BULLET_LIFESTEAL = 0xb8,
+	MODIFIER_VALUE_OVERRIDE_BULLET_ATTACKER = 0xb9,
+	MODIFIER_VALUE_OVERRIDE_MELEE_HIT_SOUND = 0xba,
+	MODIFIER_VALUE_OVERRIDE_MELEE_MISS_SOUND = 0xbb,
 	// MPropertyFriendlyName "ImbuedBonusDamage"
-	MODIFIER_VALUE_IMBUED_BONUS_DAMAGE = 0xb5,
+	MODIFIER_VALUE_IMBUED_BONUS_DAMAGE = 0xbc,
 	// MPropertyFriendlyName "ImbuedBonusDuration"
-	MODIFIER_VALUE_IMBUED_BONUS_DURATION = 0xb6,
+	MODIFIER_VALUE_IMBUED_BONUS_DURATION = 0xbd,
 	// MPropertyFriendlyName "IntraBurstShotCycleTimeOverride"
-	MODIFIER_VALUE_INTRA_BURST_SHOT_CYCLE_TIME_OVERRIDE = 0xb7,
+	MODIFIER_VALUE_INTRA_BURST_SHOT_CYCLE_TIME_OVERRIDE = 0xbe,
 	// MPropertyFriendlyName "BonusBurstShotPercent"
-	MODIFIER_VALUE_BONUS_BURST_SHOT_PERCENT = 0xb8,
+	MODIFIER_VALUE_BONUS_BURST_SHOT_PERCENT = 0xbf,
 	// MPropertyFriendlyName "BonusBurstShotConstant"
-	MODIFIER_VALUE_BONUS_BURST_SHOT_CONSTANT = 0xb9,
+	MODIFIER_VALUE_BONUS_BURST_SHOT_CONSTANT = 0xc0,
 	// MPropertyFriendlyName "SpinUpRateOverride"
-	MODIFIER_VALUE_SPIN_UP_RATE_OVERRIDE = 0xba,
+	MODIFIER_VALUE_SPIN_UP_RATE_OVERRIDE = 0xc1,
 	// MPropertyFriendlyName "SpinUpDecayOverride"
-	MODIFIER_VALUE_SPIN_UP_DECAY_OVERRIDE = 0xbb,
+	MODIFIER_VALUE_SPIN_UP_DECAY_OVERRIDE = 0xc2,
 	// MPropertyFriendlyName "SpinUpMaxCycleTimeOverride"
-	MODIFIER_VALUE_SPIN_UP_MAX_CYCLE_TIME_OVERRIDE = 0xbc,
+	MODIFIER_VALUE_SPIN_UP_MAX_CYCLE_TIME_OVERRIDE = 0xc3,
 	// MPropertyFriendlyName "SpinUpMaxBurstFireCooldownOverride"
-	MODIFIER_VALUE_SPIN_UP_MAX_BURST_FIRE_COOLDOWN_OVERRIDE = 0xbd,
-	MODIFIER_VALUE_SPIN_UP_SOUND_OVERRIDE = 0xbe,
-	MODIFIER_VALUE_SPIN_DOWN_SOUND_OVERRIDE = 0xbf,
-	MODIFIER_VALUE_SPIN_LOOP_SOUND_OVERRIDE = 0xc0,
+	MODIFIER_VALUE_SPIN_UP_MAX_BURST_FIRE_COOLDOWN_OVERRIDE = 0xc4,
+	MODIFIER_VALUE_SPIN_UP_SOUND_OVERRIDE = 0xc5,
+	MODIFIER_VALUE_SPIN_DOWN_SOUND_OVERRIDE = 0xc6,
+	MODIFIER_VALUE_SPIN_LOOP_SOUND_OVERRIDE = 0xc7,
 	// MPropertyFriendlyName "BonusChannelTimePercentage"
-	MODIFIER_VALUE_BONUS_CHANNEL_TIME_PERCENTAGE = 0xc1,
-	MODIFIER_VALUE_ABILITY_RESOURCE_MAX_ADDITIVE = 0xc2,
-	MODIFIER_VALUE_ABILITY_RESOURCE_REGEN_PER_SECOND_ADDITIVE = 0xc3,
-	MODIFIER_VALUE_ABILITY_RESOURCE_REGEN_PER_SECOND_PERCENTAGE = 0xc4,
-	MODIFIER_VALUE_CAMERA_WOBBLE_INTENSITY = 0xc5,
-	MODIFIER_VALUE_CAMERA_WOBBLE_SPEED = 0xc6,
+	MODIFIER_VALUE_BONUS_CHANNEL_TIME_PERCENTAGE = 0xc8,
+	MODIFIER_VALUE_ABILITY_RESOURCE_MAX_ADDITIVE = 0xc9,
+	MODIFIER_VALUE_ABILITY_RESOURCE_REGEN_PER_SECOND_ADDITIVE = 0xca,
+	MODIFIER_VALUE_ABILITY_RESOURCE_REGEN_PER_SECOND_PERCENTAGE = 0xcb,
+	MODIFIER_VALUE_PENDING_INCOMING_DAMAGE = 0xcc,
+	MODIFIER_VALUE_CAMERA_WOBBLE_INTENSITY = 0xcd,
+	MODIFIER_VALUE_CAMERA_WOBBLE_SPEED = 0xce,
 	// MPropertySuppressEnumerator
-	MODIFIER_VALUE_COUNT = 0xc7,
+	MODIFIER_VALUE_COUNT = 0xcf,
 	// MPropertySuppressEnumerator
 	MODIFIER_VALUE_INVALID = 0xff,
 };
@@ -9049,14 +9415,28 @@ enum class FieldNetworkOption : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 3
+// Enumerator count: 5
+// Alignment: 4
+// Size: 0x4
+enum class ECitadelRandomRollTypes : std::uint32_t
+{
+	ECitadelRandomRoll_BulletCritChance = 0x0,
+	ECitadelRandomRoll_BulletCritDebuffChance = 0x1,
+	ECitadelRandomRoll_BreakableGoldPickup = 0x2,
+	ECitadelRandomRoll_BreakablePowerupPickup = 0x3,
+	ECitadelRandomRoll_LastEnum = 0x4,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
 // Alignment: 4
 // Size: 0x4
 enum class ECitadelStatCategory : std::uint32_t
 {
 	ECitadelStat_Invalid = 0xffffffff,
-	ECitadelStat_Courage = 0x0,
-	ECitadelStat_Spirit = 0x1,
+	ECitadelStat_Weapon = 0x0,
+	ECitadelStat_Vitality = 0x1,
+	ECitadelStat_Spirit = 0x2,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -9129,20 +9509,6 @@ enum class FootPinningTimingSource : std::uint32_t
 
 // Registered binary: client.dll (project 'client')
 // Enumerator count: 6
-// Alignment: 4
-// Size: 0x4
-enum class EShivDiveState : std::uint32_t
-{
-	EShivDiveState_None = 0x0,
-	EShivDiveState_Rising = 0x1,
-	EShivDiveState_Falling = 0x2,
-	EShivDiveState_PrePossessAnim = 0x3,
-	EShivDiveState_Possessing = 0x4,
-	EShivDiveState_PostPossessAnim = 0x5,
-};
-
-// Registered binary: client.dll (project 'client')
-// Enumerator count: 6
 // Alignment: 1
 // Size: 0x1
 enum class UnitFilterResult : std::uint8_t
@@ -9197,6 +9563,18 @@ enum class PFNoiseType_t : std::uint32_t
 	PF_NOISE_TYPE_SIMPLEX = 0x1,
 	PF_NOISE_TYPE_WORLEY = 0x2,
 	PF_NOISE_TYPE_CURL = 0x3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 1
+// Size: 0x1
+enum class EViscousBowlingBallState_t : std::uint8_t
+{
+	EViscousBowlingBallState_None = 0,
+	EViscousBowlingBallState_TransformToBall = 1,
+	EViscousBowlingBallState_Rolling = 2,
+	EViscousBowlingBallState_TransformFromBall = 3,
 };
 
 // Registered binary: particles.dll (project 'particleslib')
@@ -9399,7 +9777,7 @@ enum class RenderModelSubModelFieldType_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 6
+// Enumerator count: 5
 // Alignment: 4
 // Size: 0x4
 enum class EMeleeHold_AttackState : std::uint32_t
@@ -9408,8 +9786,7 @@ enum class EMeleeHold_AttackState : std::uint32_t
 	EAttackState_Charging = 0x1,
 	EAttackState_GroundDashing = 0x2,
 	EAttackState_AirDashing = 0x3,
-	EAttackState_HoldingCharge = 0x4,
-	EAttackState_Attacking = 0x5,
+	EAttackState_Attacking = 0x4,
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
@@ -9429,7 +9806,7 @@ enum class BoneTransformSpace_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 4
+// Enumerator count: 5
 // Alignment: 1
 // Size: 0x1
 enum class ELeapState_t : std::uint8_t
@@ -9438,6 +9815,7 @@ enum class ELeapState_t : std::uint8_t
 	ELeapState_Startup = 1,
 	ELeapState_BoostingUp = 2,
 	ELeapState_CrashingDown = 3,
+	ELeapState_Land = 4,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -9477,7 +9855,7 @@ enum class VPhysXBodyPart_t__VPhysXFlagEnum_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 7
+// Enumerator count: 8
 // Alignment: 4
 // Size: 0x4
 enum class EGCServerSignoutData : std::uint32_t
@@ -9489,6 +9867,7 @@ enum class EGCServerSignoutData : std::uint32_t
 	k_EServerSignoutData_PerfData = 0x6,
 	k_EServerSignoutData_PlayerChat = 0x7,
 	k_EServerSignoutData_BookRewards = 0x8,
+	k_EServerSignoutData_PenalizedPlayers = 0x9,
 };
 
 // Registered binary: client.dll (project 'entity2')
@@ -9692,6 +10071,7 @@ enum class StatusEffectProperty_t : std::uint32_t
 // Size: 0x4
 enum class EMeleeHold_AttackType : std::uint32_t
 {
+	// MPropertySuppressEnumerator
 	EAttackType_None = 0x0,
 	EAttackType_Light = 0x1,
 	EAttackType_Heavy = 0x2,
@@ -9789,7 +10169,7 @@ enum class ModelConfigAttachmentType_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 118
+// Enumerator count: 119
 // Alignment: 4
 // Size: 0x4
 enum class ENetworkDisconnectionReason : std::uint32_t
@@ -9912,10 +10292,11 @@ enum class ENetworkDisconnectionReason : std::uint32_t
 	NETWORK_DISCONNECT_KICKED_SUICIDE = 0x9f,
 	NETWORK_DISCONNECT_KICKED_NOSTEAMLOGIN = 0xa0,
 	NETWORK_DISCONNECT_KICKED_NOSTEAMTICKET = 0xa1,
+	NETWORK_DISCONNECT_KICKED_INPUTAUTOMATION = 0xa2,
 };
 
 // Registered binary: soundsystem.dll (project 'soundsystem')
-// Enumerator count: 9
+// Enumerator count: 10
 // Alignment: 4
 // Size: 0x4
 enum class ActionType_t : std::uint32_t
@@ -9938,6 +10319,8 @@ enum class ActionType_t : std::uint32_t
 	SOS_ACTION_COUNT_ENVELOPE = 0x7,
 	// MPropertyFriendlyName "Soundevent Count"
 	SOS_ACTION_SOUNDEVENT_COUNT = 0x8,
+	// MPropertyFriendlyName "Soundevent Min/Max Values"
+	SOS_ACTION_SOUNDEVENT_MIN_MAX_VALUES = 0x9,
 };
 
 // Registered binary: server.dll (project 'server')
@@ -9993,13 +10376,17 @@ enum class EClientUIEvent : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 2
+// Enumerator count: 6
 // Alignment: 4
 // Size: 0x4
 enum class ECitadelRegionMode : std::uint32_t
 {
 	k_ECitadelRegionMode_ROW = 0x0,
-	k_ECitadelRegionMode_China = 0x1,
+	k_ECitadelRegionMode_Europe = 0x1,
+	k_ECitadelRegionMode_SEAsia = 0x2,
+	k_ECitadelRegionMode_SAmerica = 0x3,
+	k_ECitadelRegionMode_Russia = 0x4,
+	k_ECitadelRegionMode_Oceania = 0x5,
 };
 
 // Registered binary: particles.dll (project 'particles')
@@ -10041,7 +10428,18 @@ enum class FootFallTagFoot_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 54
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class EViscousChargedGunState : std::uint32_t
+{
+	EViscousChargedGunState_Idle = 0x0,
+	EViscousChargedGunState_Charging = 0x1,
+	EViscousChargedGunState_Shoot = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 70
 // Alignment: 4
 // Size: 0x4
 enum class CitadelConcept_t : std::uint32_t
@@ -10051,109 +10449,141 @@ enum class CitadelConcept_t : std::uint32_t
 	// MPropertyDescription
 	TLK_CITADEL_CAST_EXECUTE = 0x0,
 	// MPropertyDescription
-	TLK_CITADEL_DEATH = 0x1,
+	TLK_CITADEL_CAST_ULTIMATE = 0x1,
 	// MPropertyDescription
-	TLK_CITADEL_KILL = 0x2,
+	TLK_CITADEL_DEATH = 0x2,
 	// MPropertyDescription
-	TLK_CITADEL_KILL_ASSIST = 0x3,
+	TLK_CITADEL_KILL = 0x3,
 	// MPropertyDescription
-	TLK_CITADEL_KILL_STREAK = 0x4,
+	TLK_CITADEL_KILL_ASSIST = 0x4,
 	// MPropertyDescription
-	TLK_CITADEL_DENY = 0x5,
+	TLK_CITADEL_KILL_STREAK = 0x5,
 	// MPropertyDescription
-	TLK_CITADEL_WAS_DENIED = 0x6,
+	TLK_CITADEL_DENY = 0x6,
 	// MPropertyDescription
-	TLK_CITADEL_DEFEAT = 0x7,
+	TLK_CITADEL_WAS_DENIED = 0x7,
 	// MPropertyDescription
-	TLK_CITADEL_VICTORY = 0x8,
+	TLK_CITADEL_DEFEAT = 0x8,
 	// MPropertyDescription
-	TLK_CITADEL_PAIN = 0x9,
+	TLK_CITADEL_VICTORY = 0x9,
 	// MPropertyDescription
-	TLK_CITADEL_CUSTOM = 0xa,
+	TLK_CITADEL_PAIN = 0xa,
 	// MPropertyDescription
-	TLK_CITADEL_AP_GAINED = 0xb,
+	TLK_CITADEL_CUSTOM = 0xb,
 	// MPropertyDescription
-	TLK_CITADEL_GOLD_GAINED = 0xc,
+	TLK_CITADEL_AP_GAINED = 0xc,
 	// MPropertyDescription
-	TLK_CITADEL_ZIPLINE = 0xd,
+	TLK_CITADEL_GOLD_GAINED = 0xd,
 	// MPropertyDescription
-	TLK_CITADEL_ENEMY_ESCAPED = 0xe,
+	TLK_CITADEL_ZIPLINE = 0xe,
 	// MPropertyDescription
-	TLK_CITADEL_MATCH_START = 0xf,
+	TLK_CITADEL_ENEMY_ESCAPED = 0xf,
+	// MPropertyDescription "took {damage_percent} over the last N seconds, and have {healthfrac} now"
+	TLK_CITADEL_SURVIVED = 0x10,
 	// MPropertyDescription
-	TLK_CITADEL_IDOL = 0x10,
+	TLK_CITADEL_MATCH_START = 0x11,
 	// MPropertyDescription
-	TLK_CITADEL_UPGRADE_ABILITY = 0x11,
+	TLK_CITADEL_CONVERSATION = 0x12,
 	// MPropertyDescription
-	TLK_CITADEL_BUY_UPGRADE = 0x12,
+	TLK_CITADEL_IDOL = 0x13,
 	// MPropertyDescription
-	TLK_CITADEL_SELL_UPGRADE = 0x13,
+	TLK_CITADEL_UPGRADE_ABILITY = 0x14,
 	// MPropertyDescription
-	TLK_SHOUT_AT_TARGET = 0x14,
+	TLK_CITADEL_BUY_UPGRADE = 0x15,
 	// MPropertyDescription
-	TLK_CITADEL_ABILITY_SELECTED = 0x15,
+	TLK_CITADEL_SELL_UPGRADE = 0x16,
 	// MPropertyDescription
-	TLK_CITADEL_HERO_SELECTED = 0x16,
+	TLK_CITADEL_ABILITY_SELECTED = 0x17,
 	// MPropertyDescription
-	TLK_CITADEL_PICKUP_ITEM = 0x17,
+	TLK_CITADEL_HERO_SELECTED = 0x18,
 	// MPropertyDescription
-	TLK_CITADEL_INTERRUPT_ABILITY = 0x18,
+	TLK_CITADEL_PICKUP_ITEM = 0x19,
 	// MPropertyDescription
-	TLK_CITADEL_OPEN_SHOP = 0x19,
+	TLK_CITADEL_INTERRUPT_ABILITY = 0x1a,
 	// MPropertyDescription
-	TLK_CITADEL_INTERACT_WITH_ABILITY = 0x1a,
+	TLK_CITADEL_OPEN_SHOP = 0x1b,
 	// MPropertyDescription
-	TLK_CITADEL_ULTIMATE_READY = 0x1b,
+	TLK_CITADEL_INTERACT_WITH_ABILITY = 0x1c,
 	// MPropertyDescription
-	TLK_CITADEL_GUIDED_BOT_MATCH = 0x1c,
+	TLK_CITADEL_ULTIMATE_READY = 0x1d,
 	// MPropertyDescription
-	TLK_CITADEL_NEUTRAL_IDLE = 0x1d,
+	TLK_CITADEL_NEUTRAL_IDLE = 0x1e,
 	// MPropertyDescription
-	TLK_CITADEL_NEUTRAL_AGGRO = 0x1e,
+	TLK_CITADEL_NEUTRAL_AGGRO = 0x1f,
 	// MPropertyDescription
-	TLK_CITADEL_ALLY_KILLED = 0x1f,
+	TLK_CITADEL_ALLY_KILLED = 0x20,
 	// MPropertyDescription
-	TLK_CITADEL_ENEMY_PICKED_UP_REJUVENATOR = 0x20,
+	TLK_CITADEL_ENEMY_PICKED_UP_REJUVENATOR = 0x21,
 	// MPropertyDescription
-	TLK_CITADEL_PARRY = 0x21,
+	TLK_CITADEL_PARRY = 0x22,
 	// MPropertyDescription "played at the end of a channeled ability"
-	TLK_CITADEL_CAST_FINISH = 0x22,
+	TLK_CITADEL_CAST_FINISH = 0x23,
 	// MPropertyDescription "played for the victim of a targeted ability"
-	TLK_CITADEL_CAST_TARGET_VICTIM = 0x23,
+	TLK_CITADEL_CAST_TARGET_VICTIM = 0x24,
 	// MPropertyDescription "played for the victim of a channeled ability"
-	TLK_CITADEL_CAST_FINISH_VICTIM = 0x24,
+	TLK_CITADEL_CAST_FINISH_VICTIM = 0x25,
 	// MPropertyDescription "an ability projectile hit an enemy"
-	TLK_CITADEL_PROJECTILE_HIT = 0x25,
+	TLK_CITADEL_PROJECTILE_HIT = 0x26,
 	// MPropertyDescription "the victim of the projectile"
-	TLK_CITADEL_HIT_BY_PROJECTILE = 0x26,
+	TLK_CITADEL_HIT_BY_PROJECTILE = 0x27,
 	// MPropertyDescription
-	TLK_CITADEL_DROP_ITEM = 0x27,
+	TLK_CITADEL_DROP_ITEM = 0x28,
 	// MPropertyDescription
-	TLK_CITADEL_BEGIN_REGEN = 0x28,
-	// MPropertyDescription
-	TLK_CITADEL_VAULT_SPAWN = 0x29,
-	// MPropertyDescription
-	TLK_CITADEL_MIDBOSS_SPAWN = 0x2a,
-	// MPropertyDescription
-	TLK_CITADEL_MIDBOSS_KILLED = 0x2b,
-	// MPropertyDescription
-	TLK_CITADEL_ENEMY_DETECTED = 0x2c,
-	// MPropertyDescription
-	TLK_CITADEL_HEALED = 0x2d,
+	TLK_CITADEL_HEALED = 0x29,
 	// MPropertyDescription "up to one player will play a line observing this"
-	TLK_CITADEL_OBSERVE_CAST = 0x2e,
+	TLK_CITADEL_OBSERVE_CAST = 0x2a,
 	// MPropertyDescription "up to one player will play a line observing this"
-	TLK_CITADEL_OBSERVE_CAST_FINISH = 0x2f,
+	TLK_CITADEL_OBSERVE_CAST_FINISH = 0x2b,
 	// MPropertyDescription "up to one player will play a line observing this"
-	TLK_CITADEL_OBSERVE_PROJECTILE_HIT = 0x30,
+	TLK_CITADEL_OBSERVE_PROJECTILE_HIT = 0x2c,
 	// MPropertyDescription
-	TLK_CITADEL_PING = 0x31,
+	TLK_CITADEL_PING = 0x2d,
 	// MPropertyDescription
-	TLK_CITADEL_MOVEMMENT_EFFORT = 0x32,
+	TLK_CITADEL_MOVEMENT_EFFORT = 0x2e,
 	// MPropertyDescription
-	TLK_CITADEL_REJUVINATOR = 0x33,
+	TLK_CITADEL_ANN_BEGIN_REGEN = 0x2f,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_MIDBOSS_SPAWN = 0x30,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_MIDBOSS_KILLED = 0x31,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_ENEMY_DETECTED = 0x32,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_REJUVINATOR = 0x33,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_DEFEAT = 0x34,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_VICTORY = 0x35,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_PICKUP_ITEM = 0x36,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_DROP_ITEM = 0x37,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_IDOL = 0x38,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_TEAM_LANE_BOSS_ATTACKED = 0x39,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_TEAM_BASE_BOSS_ATTACKED = 0x3a,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_ENEMY_LANE_BOSS_ATTACKED = 0x3b,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_ENEMY_BASE_BOSS_ATTACKED = 0x3c,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_TEAM_LANE_BOSS_DESTROYED = 0x3d,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_TEAM_BASE_BOSS_DESTROYED = 0x3e,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_ENEMY_LANE_BOSS_DESTROYED = 0x3f,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_ENEMY_BASE_BOSS_DESTROYED = 0x40,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_KILL = 0x41,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_KILL_STREAK = 0x42,
+	// MPropertyDescription
+	TLK_CITADEL_ANN_GUIDED_BOT_MATCH = 0x43,
 	// MPropertySuppressEnumerator
-	CITADEL_CONCEPT_COUNT = 0x34,
+	CITADEL_CONCEPT_COUNT = 0x44,
 };
 
 // Registered binary: client.dll (project 'client')
@@ -10222,7 +10652,7 @@ enum class EAbilityTargetingShape_t : std::uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
-// Enumerator count: 35
+// Enumerator count: 41
 // Alignment: 4
 // Size: 0x4
 enum class CitadelUserMessageIds : std::uint32_t
@@ -10251,7 +10681,6 @@ enum class CitadelUserMessageIds : std::uint32_t
 	k_EUserMsg_ModifierApplied = 0x145,
 	k_EUserMsg_CameraController = 0x146,
 	k_EUserMsg_AuraModifierApplied = 0x147,
-	k_EUserMsg_SpeechBubble = 0x148,
 	k_EUserMsg_ObstructedShotFired = 0x149,
 	k_EUserMsg_AbilityLateFailure = 0x14a,
 	k_EUserMsg_AbilityPing = 0x14b,
@@ -10262,6 +10691,13 @@ enum class CitadelUserMessageIds : std::uint32_t
 	k_EUserMsg_StaminaDrained = 0x151,
 	k_EUserMsg_AbilityNotify = 0x152,
 	k_EUserMsg_GetDamageStatsResponse = 0x153,
+	k_EUserMsg_ParticipantStartSoundEvent = 0x154,
+	k_EUserMsg_ParticipantStopSoundEvent = 0x155,
+	k_EUserMsg_ParticipantStopSoundEventHash = 0x156,
+	k_EUserMsg_ParticipantSetSoundEventParams = 0x157,
+	k_EUserMsg_ParticipantSetLibraryStackFields = 0x158,
+	k_EUserMsg_CurrencyChanged = 0x159,
+	k_EUserMsg_GameOver = 0x15a,
 };
 
 // Registered binary: particles.dll (project 'particles')
@@ -10355,6 +10791,7 @@ enum class PointWorldTextJustifyHorizontal_t : std::uint32_t
 
 struct CPerParticleFloatInput;
 struct ParticleAttributeIndex_t;
+struct CSmartPropAttributeChoiceSelectionMode;
 struct CAnimUpdateNodeRef;
 struct CParticleCollectionFloatInput;
 struct CParticleCollectionVecInput;
@@ -10378,8 +10815,8 @@ struct AimMatrixOpFixedSettings_t;
 struct HSequence;
 struct CSeqSeqDescFlag;
 struct CSeqTransition;
-struct CSmartPropAttributeChoiceSelectionMode;
 struct AimCameraOpFixedSettings_t;
+struct CNmBitFlags;
 struct GameTime_t;
 struct EngineLoopState_t;
 struct CSmartPropAttributeDirection;
@@ -10401,6 +10838,7 @@ struct CFeJiggleBone;
 struct TextureControls_t;
 struct CParticleModelInput;
 struct NmPercent_t;
+struct CVoiceContainerAnalysisBase;
 struct PulseRuntimeCellIndex_t;
 struct CFootCycleDefinition;
 struct CFootTrajectories;
@@ -10416,6 +10854,7 @@ struct PhysFeModelDesc_t;
 struct ParticleIndex_t;
 struct CSmartPropAttributeApplyColorMode;
 struct CPulse_OutflowConnection;
+struct CNmTarget;
 struct AnimNodeID;
 struct CTakeDamageInfo;
 struct CParamSpanUpdater;
@@ -10429,6 +10868,7 @@ struct PostProcessingLocalContrastParameters_t;
 struct FuseVariableIndex_t;
 struct CAI_Behavior;
 struct CAI_BaseNPC;
+struct CNmFloatRemapNode::RemapRange_t;
 struct PulseGraphInstanceID_t;
 struct CResponseCriteriaSet;
 struct CRR_Response;
@@ -10438,6 +10878,7 @@ struct FourQuaternions;
 struct CParticleVariableRef;
 struct SkeletonAnimCapture_t::FrameStamp_t;
 struct CSeqAutoLayerFlag;
+struct CSoundContainerReference;
 struct IKSolverSettings_t;
 struct IKTargetSettings_t;
 struct CRandomNumberGeneratorParameters;
@@ -10459,9 +10900,11 @@ struct CAnimEncodedFrames;
 struct CAnimSequenceParams;
 struct CitadelCameraOperationsSequence_t;
 struct CPulse_BlackboardReference;
-struct HUDElementExclusivity_t;
 struct ModifierTrackedParticle_t;
 struct PulseCursorID_t;
+struct CitadelStatsWeaponDisplay_t;
+struct CitadelStatsVitalityDisplay_t;
+struct CitadelStatsSpiritDisplay_t;
 struct ModifierRenderAttribute_t;
 struct AnimScriptHandle;
 struct CAnimNodePath;
@@ -10486,9 +10929,11 @@ struct GlitchSettings_t;
 struct DamageReceivedSounds_t;
 struct HealingReceivedSounds_t;
 struct DamageIndicatorSounds_t;
+struct LaneDesc_t;
 struct DOFDesc_t;
 struct RejuvinatorParams_t;
 struct IdolParams_t;
+struct TeleporterParams_t;
 struct CRemapFloat;
 struct CAnimStateMachineUpdater;
 struct WorldBuilderParams_t;
@@ -10524,6 +10969,8 @@ struct ModifierTrackedBodyGroup_t;
 struct CRegionSVM;
 struct CSeqMultiFetch;
 struct ParticlePreviewState_t;
+struct CNmParameterizedBlendNode::Parameterization_t;
+struct CVoiceContainerBase;
 struct CBaseFlex;
 struct CSmartPropAttributePathPositions;
 struct JiggleBoneSettingsList_t;
@@ -10574,7 +11021,6 @@ struct CitadelWeaponRecoilData_t;
 // Size: 0x8
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VoxelVisBlockOffset_t
@@ -10604,7 +11050,6 @@ public:
 // Size: 0x10
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParticleInput
@@ -10616,9 +11061,8 @@ public:
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
-// Size: 0x158
+// Size: 0x160
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MClassIsParticleFloat
@@ -10684,15 +11128,18 @@ public:
 	float m_flNotchedRangeMax; // 0x104	
 	float m_flNotchedOutputOutside; // 0x108	
 	float m_flNotchedOutputInside; // 0x10c	
-	ParticleFloatBiasType_t m_nBiasType; // 0x110	
-	float m_flBiasParameter; // 0x114	
-	CPiecewiseCurve m_Curve; // 0x118	
+	ParticleFloatRoundType_t m_nRoundType; // 0x110	
+	ParticleFloatBiasType_t m_nBiasType; // 0x114	
+	float m_flBiasParameter; // 0x118	
+private:
+	[[maybe_unused]] uint8_t __pad011c[0x4]; // 0x11c
+public:
+	CPiecewiseCurve m_Curve; // 0x120	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PulseGraphExecutionHistoryNodeDesc_t
@@ -10707,10 +11154,9 @@ public:
 // Size: 0x50
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MVDataRoot
+// MVDataBase
 // MVDataNodeType "1"
 // MVDataAnonymousNode
 class CSmartPropModifier
@@ -10725,7 +11171,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AggregateLODSetup_t
@@ -10739,7 +11184,6 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PulseRegisterMap_t
@@ -10749,10 +11193,24 @@ public:
 	KeyValues3 m_Outparams; // 0x10	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x10
+// Has VTable
+// Is Abstract
+// 
+// MGetKV3ClassDefaults
+class CNmGraphNode::CDefinition
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	int16_t m_nNodeIdx; // 0x8	
+};
+
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CProductQuantizer
@@ -10766,7 +11224,6 @@ public:
 // Alignment: 8
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimUpdateNodeRef
@@ -10782,15 +11239,10 @@ public:
 // Size: 0x10
 // Has VTable
 // Is Abstract
-// Construct allowed
-// 
-// MGetKV3ClassDefaults
-class CNmGraphNode::CDefinition
+class CNmPoseNode::CDefinition : public CNmGraphNode::CDefinition
 {
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	int16_t m_nNodeIdx; // 0x8	
+	// No schema binary for binding
 };
 
 // Registered binary: client.dll (project 'client')
@@ -10810,9 +11262,7 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem_lowlevel')
 // Alignment: 4
 // Size: 0x24
-// Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixDynamicsCompressorDesc_t
@@ -10840,9 +11290,8 @@ public:
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
-// Size: 0x158
+// Size: 0x160
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyCustomEditor "CollectionFloatInput()"
@@ -10853,10 +11302,9 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1b8
+// Size: 0x1c0
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParticleFunction
@@ -10869,83 +11317,82 @@ public:
 	CParticleCollectionFloatInput m_flOpStrength; // 0x8	
 	// MPropertyFriendlyName "operator end cap state"
 	// MPropertySortPriority "-100"
-	ParticleEndcapMode_t m_nOpEndCapState; // 0x160	
+	ParticleEndcapMode_t m_nOpEndCapState; // 0x168	
 	// MPropertyStartGroup "Operator Fade"
 	// MPropertyFriendlyName "operator start fadein"
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	float m_flOpStartFadeInTime; // 0x164	
+	float m_flOpStartFadeInTime; // 0x16c	
 	// MPropertyFriendlyName "operator end fadein"
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	float m_flOpEndFadeInTime; // 0x168	
+	float m_flOpEndFadeInTime; // 0x170	
 	// MPropertyFriendlyName "operator start fadeout"
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	float m_flOpStartFadeOutTime; // 0x16c	
+	float m_flOpStartFadeOutTime; // 0x174	
 	// MPropertyFriendlyName "operator end fadeout"
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	float m_flOpEndFadeOutTime; // 0x170	
+	float m_flOpEndFadeOutTime; // 0x178	
 	// MPropertyFriendlyName "operator fade oscillate"
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	float m_flOpFadeOscillatePeriod; // 0x174	
+	float m_flOpFadeOscillatePeriod; // 0x17c	
 	// MPropertyFriendlyName "normalize fade times to endcap"
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	bool m_bNormalizeToStopTime; // 0x178	
+	bool m_bNormalizeToStopTime; // 0x180	
 private:
-	[[maybe_unused]] uint8_t __pad0179[0x3]; // 0x179
+	[[maybe_unused]] uint8_t __pad0181[0x3]; // 0x181
 public:
 	// MPropertyStartGroup "Operator Fade Time Offset"
 	// MPropertyFriendlyName "operator fade time offset min"
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	float m_flOpTimeOffsetMin; // 0x17c	
+	float m_flOpTimeOffsetMin; // 0x184	
 	// MPropertyFriendlyName "operator fade time offset max"
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	float m_flOpTimeOffsetMax; // 0x180	
+	float m_flOpTimeOffsetMax; // 0x188	
 	// MPropertyFriendlyName "operator fade time offset seed"
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	int32_t m_nOpTimeOffsetSeed; // 0x184	
+	int32_t m_nOpTimeOffsetSeed; // 0x18c	
 	// MPropertyStartGroup "Operator Fade Timescale Modifiers"
 	// MPropertyFriendlyName "operator fade time scale seed"
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	int32_t m_nOpTimeScaleSeed; // 0x188	
+	int32_t m_nOpTimeScaleSeed; // 0x190	
 	// MPropertyFriendlyName "operator fade time scale min"
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	float m_flOpTimeScaleMin; // 0x18c	
+	float m_flOpTimeScaleMin; // 0x194	
 	// MPropertyFriendlyName "operator fade time scale max"
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	float m_flOpTimeScaleMax; // 0x190	
+	float m_flOpTimeScaleMax; // 0x198	
 private:
-	[[maybe_unused]] uint8_t __pad0194[0x2]; // 0x194
+	[[maybe_unused]] uint8_t __pad019c[0x2]; // 0x19c
 public:
 	// MPropertyStartGroup
 	// MPropertySuppressField
-	bool m_bDisableOperator; // 0x196	
+	bool m_bDisableOperator; // 0x19e	
 private:
-	[[maybe_unused]] uint8_t __pad0197[0x1]; // 0x197
+	[[maybe_unused]] uint8_t __pad019f[0x1]; // 0x19f
 public:
 	// MPropertyFriendlyName "operator help and notes"
 	// MParticleHelpField
 	// MParticleAdvancedField
 	// MPropertySortPriority "-100"
-	CUtlString m_Notes; // 0x198	
+	CUtlString m_Notes; // 0x1a0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1b8
+// Size: 0x1c0
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParticleFunctionOperator : public CParticleFunction
@@ -10967,7 +11414,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class FootStepTrigger
@@ -10978,7 +11424,20 @@ public:
 	StepPhase m_triggerPhase; // 0x1c	
 };
 
-// Registered binary: client.dll (project 'client')
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x30
+// Has VTable
+// Is Abstract
+class CNmTask
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'entity2')
 // Alignment: 8
 // Size: 0x4
 // Has Trivial Destructor
@@ -11026,7 +11485,6 @@ public:
 // Alignment: 16
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSphereRigid_t
@@ -11042,7 +11500,6 @@ public:
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ParticleControlPointDriver_t
@@ -11061,7 +11518,6 @@ public:
 // Size: 0x50
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMotionMetricEvaluator
@@ -11080,7 +11536,6 @@ public:
 // Size: 0x10
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CDrawCullingData
@@ -11094,7 +11549,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimUserDifference
@@ -11108,7 +11562,6 @@ public:
 // Alignment: 1
 // Size: 0x6
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqMultiFetchFlag
@@ -11124,10 +11577,9 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x10
+// Size: 0x18
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmEvent
@@ -11135,15 +11587,15 @@ class CNmEvent
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	float m_flStartTime; // 0x8	
-	float m_flDuration; // 0xc	
+	float m_flStartTimeSeconds; // 0x8	
+	float m_flDurationSeconds; // 0xc	
+	CGlobalSymbol m_syncID; // 0x10	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 1
 // Size: 0x2
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimParamHandle
@@ -11156,7 +11608,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct NewPlayerMetrics_t
@@ -11177,7 +11628,6 @@ public:
 // Registered binary: client.dll (project 'mathlib_extended')
 // Alignment: 8
 // Size: 0xb0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFuseSymbolTable
@@ -11206,7 +11656,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x620
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PhysFeModelDesc_t
@@ -11323,7 +11772,6 @@ public:
 // Size: 0x10
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SceneViewId_t
@@ -11335,33 +11783,31 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_PlaneCull : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point for point on plane"
-	int32_t m_nPlaneControlPoint; // 0x1b8	
+	int32_t m_nPlaneControlPoint; // 0x1c0	
 	// MPropertyFriendlyName "plane normal"
 	// MVectorIsCoordinate
-	Vector m_vecPlaneDirection; // 0x1bc	
+	Vector m_vecPlaneDirection; // 0x1c4	
 	// MPropertyFriendlyName "use local space"
-	bool m_bLocalSpace; // 0x1c8	
+	bool m_bLocalSpace; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01c9[0x3]; // 0x1c9
+	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
 public:
 	// MPropertyFriendlyName "cull plane offset"
-	float m_flPlaneOffset; // 0x1cc	
+	float m_flPlaneOffset; // 0x1d4	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CCycleBase
@@ -11373,7 +11819,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x58
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPhysSurfacePropertiesSoundNames
@@ -11407,7 +11852,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct DynamicMeshDeformParams_t
@@ -11423,7 +11867,6 @@ public:
 // Alignment: 8
 // Size: 0x68
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CDistanceRemainingMetricEvaluator : public CMotionMetricEvaluator
@@ -11456,7 +11899,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MVDataRoot
 // MVDataSingleton
@@ -11472,7 +11914,6 @@ public:
 // Alignment: 4
 // Size: 0x1c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnCapsule_t
@@ -11485,9 +11926,7 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem_lowlevel')
 // Alignment: 4
 // Size: 0x24
-// Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixDynamicsBand_t
@@ -11520,7 +11959,6 @@ public:
 // Size: 0x10
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Damping"
@@ -11539,7 +11977,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyEditClassAsString
@@ -11547,6 +11984,20 @@ class AnimTagID
 {
 public:
 	uint32_t m_id; // 0x0	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x8
+// Has VTable
+// Is Abstract
+// Has Trivial Destructor
+class IGapHost_ExecLog
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// No schema binary for binding
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
@@ -11564,7 +12015,6 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyElementNameFn
@@ -11583,24 +12033,22 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParticleFunctionPreEmission : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "Run Only Once"
-	bool m_bRunOnce; // 0x1b8	
+	bool m_bRunOnce; // 0x1c0	
 };
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
-// Size: 0x158
+// Size: 0x160
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyCustomEditor "PerParticleFloatInput()"
@@ -11628,7 +12076,6 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFutureFacingMetricEvaluator : public CMotionMetricEvaluator
@@ -11642,7 +12089,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqTransition
@@ -11669,7 +12115,6 @@ public:
 // Alignment: 4
 // Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimNodePath
@@ -11682,7 +12127,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParamSpanUpdater
@@ -11691,11 +12135,32 @@ public:
 	CUtlVector< ParamSpan_t > m_spans; // 0x0	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x10
+// Has VTable
+// Is Abstract
+class CNmValueNode::CDefinition : public CNmGraphNode::CDefinition
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x10
+// Has VTable
+// Is Abstract
+class CNmFloatValueNode::CDefinition : public CNmValueNode::CDefinition
+{
+public:
+	// No schema binary for binding
+};
+
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyEditClassAsString
@@ -11710,7 +12175,6 @@ public:
 // Size: 0x50
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSmartPropOperation : public CSmartPropModifier
@@ -11724,7 +12188,6 @@ public:
 // Has VTable
 // Is Abstract
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataRoot
@@ -11745,7 +12208,6 @@ public:
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnFace_t
@@ -11754,7 +12216,7 @@ public:
 	uint8_t m_nEdge; // 0x0	
 };
 
-// Registered binary: client.dll (project 'client')
+// Registered binary: client.dll (project 'entity2')
 // Alignment: 8
 // Size: 0x4
 // Has Trivial Destructor
@@ -11772,17 +12234,16 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParticleFunctionInitializer : public CParticleFunction
 {
 public:
 	// MPropertyFriendlyName "Associated emitter Index"
-	int32_t m_nAssociatedEmitterIndex; // 0x1b8	
+	int32_t m_nAssociatedEmitterIndex; // 0x1c0	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -11817,7 +12278,6 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
 // Size: 0x80
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CVSound
@@ -11846,6 +12306,42 @@ public:
 	CUtlBinaryBlock m_encodedHeader; // 0x58	
 };
 
+// Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
+// Alignment: 8
+// Size: 0xb8
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MVDataRoot
+// MVDataNodeType "1"
+// MFgdFromSchemaEditablePolymorphicThisClass
+// MVDataFileExtension
+// MPropertyFriendlyName "VSND Container"
+// MPropertyDescription "Voice Container Base"
+class CVoiceContainerBase
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x38]; // 0x0
+public:
+	// MPropertySuppressField
+	// -> m_nRate - 0x38
+	// -> m_nFormat - 0x3c
+	// -> m_nChannels - 0x40
+	// -> m_nLoopStart - 0x44
+	// -> m_nSampleCount - 0x48
+	// -> m_flDuration - 0x4c
+	// -> m_Sentences - 0x50
+	// -> m_nStreamingSize - 0x68
+	// -> m_nSeekTable - 0x70
+	// -> m_nLoopEnd - 0x88
+	// -> m_encodedHeader - 0x90
+	CVSound m_vSound; // 0x38	
+	
+	// Static fields:
+	static bool &Get_bAudioFinishedPlaying(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CVoiceContainerBase")->GetStaticFields()[0]->m_pInstance);};
+	static bool &Get_bAudioStillPlaying(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CVoiceContainerBase")->GetStaticFields()[1]->m_pInstance);};
+};
+
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
 // Size: 0x24
@@ -11863,9 +12359,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x4a0
+// Size: 0x4b8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapSDFDistanceToVectorAttribute : public CParticleFunctionOperator
@@ -11873,41 +12368,42 @@ class C_OP_RemapSDFDistanceToVectorAttribute : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "Output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nVectorFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nVectorFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "Input field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nVectorFieldInput; // 0x1bc	
+	ParticleAttributeIndex_t m_nVectorFieldInput; // 0x1c4	
 	// MPropertyFriendlyName "Minimum distance"
-	CParticleCollectionFloatInput m_flMinDistance; // 0x1c0	
+	CParticleCollectionFloatInput m_flMinDistance; // 0x1c8	
 	// MPropertyFriendlyName "Maximum distance"
-	CParticleCollectionFloatInput m_flMaxDistance; // 0x318	
+	CParticleCollectionFloatInput m_flMaxDistance; // 0x328	
 	// MPropertyFriendlyName "Value for dist<min"
-	Vector m_vValueBelowMin; // 0x470	
+	Vector m_vValueBelowMin; // 0x488	
 	// MPropertyFriendlyName "Value for dist=min"
-	Vector m_vValueAtMin; // 0x47c	
+	Vector m_vValueAtMin; // 0x494	
 	// MPropertyFriendlyName "Value for dist=max"
-	Vector m_vValueAtMax; // 0x488	
+	Vector m_vValueAtMax; // 0x4a0	
 	// MPropertyFriendlyName "Value for dist>max"
-	Vector m_vValueAboveMax; // 0x494	
+	Vector m_vValueAboveMax; // 0x4ac	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x10
+// Size: 0x138
 // Has VTable
-// Is Abstract
-class CNmPoseNode::CDefinition : public CNmGraphNode::CDefinition
+// 
+// MGetKV3ClassDefaults
+class CNmStateMachineNode::CDefinition : public CNmPoseNode::CDefinition
 {
 public:
-	// No schema binary for binding
+	CUtlLeanVectorFixedGrowable< CNmStateMachineNode::StateDefinition_t, 5 > m_stateDefinitions; // 0x10	
+	int16_t m_nDefaultStateIndex; // 0x130	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1b8
+// Size: 0x1c0
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParticleFunctionConstraint : public CParticleFunction
@@ -11919,7 +12415,6 @@ public:
 // Alignment: 2
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CNmStateMachineNode__TransitionDefinition_t
@@ -11935,7 +12430,6 @@ public:
 // Alignment: 16
 // Size: 0x80
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimAttachment
@@ -11980,45 +12474,44 @@ public:
 	float m_flArmingTime; // 0x34	
 	CUtlString m_sOverrideClassName; // 0x38	
 	bool m_bShouldHitThrower; // 0x40	
+	bool m_bLagCompensatePosition; // 0x41	
 private:
-	[[maybe_unused]] uint8_t __pad0041[0x3]; // 0x41
+	[[maybe_unused]] uint8_t __pad0042[0x2]; // 0x42
 public:
 	float m_flHitThrowerDelay; // 0x44	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomNamedModelElement : public CParticleFunctionInitializer
 {
 public:
-	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x1c0	
+	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x1c8	
 	// MPropertyFriendlyName "names"
-	CUtlVector< CUtlString > m_names; // 0x1c8	
+	CUtlVector< CUtlString > m_names; // 0x1d0	
 	// MPropertyFriendlyName "shuffle"
-	bool m_bShuffle; // 0x1e0	
+	bool m_bShuffle; // 0x1e8	
 	// MPropertyFriendlyName "linear"
-	bool m_bLinear; // 0x1e1	
+	bool m_bLinear; // 0x1e9	
 	// MPropertyFriendlyName "model from renderer"
-	bool m_bModelFromRenderer; // 0x1e2	
+	bool m_bModelFromRenderer; // 0x1ea	
 private:
-	[[maybe_unused]] uint8_t __pad01e3[0x1]; // 0x1e3
+	[[maybe_unused]] uint8_t __pad01eb[0x1]; // 0x1eb
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1e4	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1ec	
 };
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
-// Size: 0x158
+// Size: 0x160
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyCustomEditor "CollectionRendererFloatInput()"
@@ -12027,10 +12520,22 @@ class CParticleCollectionRendererFloatInput : public CParticleCollectionFloatInp
 public:
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 4
+// Size: 0x8
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct CNmFloatRemapNode__RemapRange_t
+{
+public:
+	float m_flBegin; // 0x0	
+	float m_flEnd; // 0x4	
+};
+
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0xa8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ModelSkeletonData_t
@@ -12062,7 +12567,6 @@ public:
 // Alignment: 8
 // Size: 0x68
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyCustomEditor "TransformInput()"
@@ -12091,7 +12595,6 @@ public:
 // Alignment: 4
 // Size: 0x48
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParticleVisibilityInputs
@@ -12160,7 +12663,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialGroup_t
@@ -12170,12 +12672,27 @@ public:
 	CUtlVector< CStrongHandle< InfoForResourceTypeIMaterial2 > > m_materials; // 0x8	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFloatClampNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	Range_t m_clampRange; // 0x14	
+};
+
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x58
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimUpdateNodeBase
@@ -12197,7 +12714,6 @@ public:
 // Alignment: 4
 // Size: 0x2c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct GlitchSettings_t
@@ -12244,36 +12760,34 @@ public:
 	
 	// Datamap fields:
 	// void m_pSink; // 0x8
-	// void m_ConceptHistories; // 0x10
+	// void m_conceptCooldowns; // 0x10
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x208
+// Size: 0x210
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParticleFunctionRenderer : public CParticleFunction
 {
 public:
 	// MPropertySortPriority "-1"
-	CParticleVisibilityInputs VisibilityInputs; // 0x1b8	
+	CParticleVisibilityInputs VisibilityInputs; // 0x1c0	
 	// MPropertyStartGroup "Rendering filter"
 	// MPropertyFriendlyName "I cannot be refracted through refracting objects like water"
 	// MPropertySortPriority "-1"
-	bool m_bCannotBeRefracted; // 0x200	
+	bool m_bCannotBeRefracted; // 0x208	
 	// MPropertyFriendlyName "Skip rendering on mobile"
 	// MPropertySortPriority "-1"
-	bool m_bSkipRenderingOnMobile; // 0x201	
+	bool m_bSkipRenderingOnMobile; // 0x209	
 };
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
-// Size: 0x658
+// Size: 0x678
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MClassIsParticleVec
@@ -12300,23 +12814,22 @@ public:
 	Vector m_vCPRelativePosition; // 0x90	
 	Vector m_vCPRelativeDir; // 0x9c	
 	CParticleFloatInput m_FloatComponentX; // 0xa8	
-	CParticleFloatInput m_FloatComponentY; // 0x200	
-	CParticleFloatInput m_FloatComponentZ; // 0x358	
-	CParticleFloatInput m_FloatInterp; // 0x4b0	
-	float m_flInterpInput0; // 0x608	
-	float m_flInterpInput1; // 0x60c	
-	Vector m_vInterpOutput0; // 0x610	
-	Vector m_vInterpOutput1; // 0x61c	
-	CColorGradient m_Gradient; // 0x628	
-	Vector m_vRandomMin; // 0x640	
-	Vector m_vRandomMax; // 0x64c	
+	CParticleFloatInput m_FloatComponentY; // 0x208	
+	CParticleFloatInput m_FloatComponentZ; // 0x368	
+	CParticleFloatInput m_FloatInterp; // 0x4c8	
+	float m_flInterpInput0; // 0x628	
+	float m_flInterpInput1; // 0x62c	
+	Vector m_vInterpOutput0; // 0x630	
+	Vector m_vInterpOutput1; // 0x63c	
+	CColorGradient m_Gradient; // 0x648	
+	Vector m_vRandomMin; // 0x660	
+	Vector m_vRandomMax; // 0x66c	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 4
 // Size: 0xf8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VPhysXConstraintParams_t
@@ -12373,7 +12886,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMorphRectData
@@ -12394,7 +12906,6 @@ public:
 // Size: 0x8
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CPulseCell_TestWaitWithCursorState__CursorState_t
@@ -12417,7 +12928,6 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CDspPresetModifierList
@@ -12447,35 +12957,33 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x328
+// Size: 0x338
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DecayMaintainCount : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "count to maintain"
-	int32_t m_nParticlesToMaintain; // 0x1b8	
+	int32_t m_nParticlesToMaintain; // 0x1c0	
 	// MPropertyFriendlyName "decay delay"
-	float m_flDecayDelay; // 0x1bc	
+	float m_flDecayDelay; // 0x1c4	
 	// MPropertyFriendlyName "snapshot control point for count"
-	int32_t m_nSnapshotControlPoint; // 0x1c0	
+	int32_t m_nSnapshotControlPoint; // 0x1c8	
 	// MPropertyFriendlyName "decay on lifespan"
-	bool m_bLifespanDecay; // 0x1c4	
+	bool m_bLifespanDecay; // 0x1cc	
 private:
-	[[maybe_unused]] uint8_t __pad01c5[0x3]; // 0x1c5
+	[[maybe_unused]] uint8_t __pad01cd[0x3]; // 0x1cd
 public:
 	// MPropertyFriendlyName "total count scale"
-	CParticleCollectionFloatInput m_flScale; // 0x1c8	
+	CParticleCollectionFloatInput m_flScale; // 0x1d0	
 	// MPropertyFriendlyName "kill newest instead of oldest"
-	bool m_bKillNewest; // 0x320	
+	bool m_bKillNewest; // 0x330	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SkeletonDemoDb_t
@@ -12488,24 +12996,26 @@ public:
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
-// Size: 0x50
-// Construct allowed
+// Size: 0x68
 // 
 // MGetKV3ClassDefaults
 class CRenderGroom
 {
 public:
 	CUtlVector< RenderHairStrandInfo_t > m_hairs; // 0x0	
-	CStrongHandleCopyable< InfoForResourceTypeIMaterial2 > m_hSimParamsMat; // 0x20	
-	int32_t m_nSegmentsPerHairStrand; // 0x28	
-	int32_t m_nGuideHairCount; // 0x2c	
-	int32_t m_nHairCount; // 0x30	
-	int32_t m_nGroomGroupID; // 0x34	
-	int32_t m_nAttachBoneIdx; // 0x38	
-	int32_t m_nAttachMeshIdx; // 0x3c	
-	int32_t m_nAttachMeshDrawCallIdx; // 0x40	
-	float m_flSumOfAllHairLengths; // 0x44	
-	bool m_bEnableSimulation; // 0x48	
+	CUtlVector< uint32 > m_hairPositionOffsets; // 0x18	
+private:
+	[[maybe_unused]] uint8_t __pad0030[0x10]; // 0x30
+public:
+	CStrongHandleCopyable< InfoForResourceTypeIMaterial2 > m_hSimParamsMat; // 0x40	
+	int32_t m_nSegmentsPerHairStrand; // 0x48	
+	int32_t m_nGuideHairCount; // 0x4c	
+	int32_t m_nHairCount; // 0x50	
+	int32_t m_nGroomGroupID; // 0x54	
+	int32_t m_nAttachBoneIdx; // 0x58	
+	int32_t m_nAttachMeshIdx; // 0x5c	
+	int32_t m_nAttachMeshDrawCallIdx; // 0x60	
+	bool m_bEnableSimulation; // 0x64	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -12523,7 +13033,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AmbientParticleSettings_t
@@ -12547,28 +13056,32 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointToCenter : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "control point number to set"
-	int32_t m_nCP1; // 0x1c0	
+	int32_t m_nCP1; // 0x1c8	
 	// MPropertyFriendlyName "center offset"
 	// MVectorIsCoordinate
-	Vector m_vecCP1Pos; // 0x1c4	
+	Vector m_vecCP1Pos; // 0x1cc	
+	// MPropertyFriendlyName "use average particle position"
+	// MVectorIsCoordinate
+	bool m_bUseAvgParticlePos; // 0x1d8	
+private:
+	[[maybe_unused]] uint8_t __pad01d9[0x3]; // 0x1d9
+public:
 	// MPropertyFriendlyName "set parent"
-	ParticleParentSetMode_t m_nSetParent; // 0x1d0	
+	ParticleParentSetMode_t m_nSetParent; // 0x1dc	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x68
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CUnaryUpdateNode : public CAnimUpdateNodeBase
@@ -12581,13 +13094,24 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CStanceScaleUpdateNode : public CUnaryUpdateNode
 {
 public:
 	CAnimParamHandle m_hParam; // 0x68	
+};
+
+// Registered binary: animationsystem.dll (project 'animgraphlib')
+// Alignment: 8
+// Size: 0x58
+// Has VTable
+// Is Abstract
+// 
+// MGetKV3ClassDefaults
+class CLeafUpdateNode : public CAnimUpdateNodeBase
+{
+public:
 };
 
 // Registered binary: client.dll (project 'client')
@@ -12624,7 +13148,6 @@ public:
 // Alignment: 4
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeKelagerBend2_t
@@ -12650,11 +13173,24 @@ private:
 public:
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x40
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmParameterizedBlendNode::CDefinition : public CNmPoseNode::CDefinition
+{
+public:
+	CUtlVectorFixedGrowable< int16, 5 > m_sourceNodeIndices; // 0x10	
+	int16_t m_nInputParameterValueNodeIdx; // 0x38	
+	bool m_bAllowLooping; // 0x3a	
+};
+
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMorphSetData
@@ -12672,12 +13208,22 @@ public:
 	CUtlVector< CFlexRule > m_FlexRules; // 0x80	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x10
+// Has VTable
+// Is Abstract
+class CNmBoolValueNode::CDefinition : public CNmValueNode::CDefinition
+{
+public:
+	// No schema binary for binding
+};
+
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x88
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBinaryUpdateNode : public CAnimUpdateNodeBase
@@ -12693,22 +13239,21 @@ public:
 
 // Registered binary: networksystem.dll (project 'networksystem')
 // Alignment: 8
-// Size: 0x2
+// Size: 0x4
 // Has Trivial Destructor
 struct ChangeAccessorFieldPathIndex_t
 {
 public:
-	int16_t m_Value; // 0x0	
+	int32_t m_Value; // 0x0	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0x80
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MVDataRoot
+// MVDataBase
 // MVDataNodeType "1"
 // MVDataAnonymousNode
 // MPropertyFriendlyName "Smart Prop Element"
@@ -12751,39 +13296,37 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InitialSequenceFromModel : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc	
 	// MPropertyFriendlyName "current anim time output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutputAnim; // 0x1c8	
+	ParticleAttributeIndex_t m_nFieldOutputAnim; // 0x1d0	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1cc	
+	float m_flInputMin; // 0x1d4	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1d0	
+	float m_flInputMax; // 0x1d8	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1d4	
+	float m_flOutputMin; // 0x1dc	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d8	
+	float m_flOutputMax; // 0x1e0	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1dc	
+	ParticleSetMethod_t m_nSetMethod; // 0x1e4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_VectorNoise : public CParticleFunctionOperator
@@ -12791,24 +13334,24 @@ class C_OP_VectorNoise : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "output minimum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vecOutputMin; // 0x1bc	
+	Vector m_vecOutputMin; // 0x1c4	
 	// MPropertyFriendlyName "output maximum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vecOutputMax; // 0x1c8	
+	Vector m_vecOutputMax; // 0x1d0	
 	// MPropertyFriendlyName "noise coordinate scale"
-	float m_fl4NoiseScale; // 0x1d4	
+	float m_fl4NoiseScale; // 0x1dc	
 	// MPropertyFriendlyName "additive"
-	bool m_bAdditive; // 0x1d8	
+	bool m_bAdditive; // 0x1e0	
 	// MPropertyFriendlyName "offset instead of accelerate position"
-	bool m_bOffset; // 0x1d9	
+	bool m_bOffset; // 0x1e1	
 private:
-	[[maybe_unused]] uint8_t __pad01da[0x2]; // 0x1da
+	[[maybe_unused]] uint8_t __pad01e2[0x2]; // 0x1e2
 public:
 	// MPropertyFriendlyName "Noise animation time scale"
-	float m_flNoiseAnimationTimeScale; // 0x1dc	
+	float m_flNoiseAnimationTimeScale; // 0x1e4	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
@@ -12845,7 +13388,6 @@ public:
 // Alignment: 8
 // Size: 0xa0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Group"
@@ -12867,7 +13409,6 @@ public:
 // Alignment: 4
 // Size: 0x9c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFeJiggleBone
@@ -12910,32 +13451,44 @@ public:
 	uint16_t m_nCollisionMask; // 0x98	
 };
 
+// Registered binary: resourcesystem.dll (project 'resourcesystem')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MResourceTypeForInfoType "vnmik"
+class InfoForResourceTypeCNmIKRig
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_Orient2DRelToCP : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "rotation offset"
-	float m_flRotOffset; // 0x1b8	
+	float m_flRotOffset; // 0x1c0	
 	// MPropertyFriendlyName "spin strength"
-	float m_flSpinStrength; // 0x1bc	
+	float m_flSpinStrength; // 0x1c4	
 	// MPropertyFriendlyName "control point"
-	int32_t m_nCP; // 0x1c0	
+	int32_t m_nCP; // 0x1c8	
 	// MPropertyFriendlyName "rotation field"
 	// MPropertyAttributeChoiceName "particlefield_rotation"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MParticleMaxVersion "8"
 // MParticleReplacementOp "C_OP_InheritFromParentParticlesV2"
@@ -12944,43 +13497,52 @@ class C_OP_InheritFromParentParticles : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "scale"
-	float m_flScale; // 0x1b8	
+	float m_flScale; // 0x1c0	
 	// MPropertyFriendlyName "inherited field"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "particle increment amount"
-	int32_t m_nIncrement; // 0x1c0	
+	int32_t m_nIncrement; // 0x1c8	
 	// MPropertyFriendlyName "random parent particle distribution"
-	bool m_bRandomDistribution; // 0x1c4	
+	bool m_bRandomDistribution; // 0x1cc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CGeneralSpin : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "spin rate degrees"
-	int32_t m_nSpinRateDegrees; // 0x1b8	
+	int32_t m_nSpinRateDegrees; // 0x1c0	
 	// MPropertyFriendlyName "spin rate min"
-	int32_t m_nSpinRateMinDegrees; // 0x1bc	
+	int32_t m_nSpinRateMinDegrees; // 0x1c4	
 private:
-	[[maybe_unused]] uint8_t __pad01c0[0x4]; // 0x1c0
+	[[maybe_unused]] uint8_t __pad01c8[0x4]; // 0x1c8
 public:
 	// MPropertyFriendlyName "spin stop time"
-	float m_fSpinRateStopTime; // 0x1c4	
+	float m_fSpinRateStopTime; // 0x1cc	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x10
+// Has VTable
+// Is Abstract
+class CNmIDValueNode::CDefinition : public CNmValueNode::CDefinition
+{
+public:
+	// No schema binary for binding
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Apply Modifiers"
@@ -13023,8 +13585,7 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x988
-// Construct allowed
+// Size: 0x9c0
 // 
 // MGetKV3ClassDefaults
 struct TextureControls_t
@@ -13033,45 +13594,44 @@ public:
 	// MPropertyFriendlyName "horizontal texture scale"
 	CParticleCollectionRendererFloatInput m_flFinalTextureScaleU; // 0x0	
 	// MPropertyFriendlyName "vertical texture scale"
-	CParticleCollectionRendererFloatInput m_flFinalTextureScaleV; // 0x158	
+	CParticleCollectionRendererFloatInput m_flFinalTextureScaleV; // 0x160	
 	// MPropertyFriendlyName "horizontal texture offset"
-	CParticleCollectionRendererFloatInput m_flFinalTextureOffsetU; // 0x2b0	
+	CParticleCollectionRendererFloatInput m_flFinalTextureOffsetU; // 0x2c0	
 	// MPropertyFriendlyName "vertical texture offset"
-	CParticleCollectionRendererFloatInput m_flFinalTextureOffsetV; // 0x408	
+	CParticleCollectionRendererFloatInput m_flFinalTextureOffsetV; // 0x420	
 	// MPropertyFriendlyName "texture rotation / animation rate scale"
-	CParticleCollectionRendererFloatInput m_flFinalTextureUVRotation; // 0x560	
+	CParticleCollectionRendererFloatInput m_flFinalTextureUVRotation; // 0x580	
 	// MPropertyFriendlyName "Infinite Zoom Scale"
-	CParticleCollectionRendererFloatInput m_flZoomScale; // 0x6b8	
+	CParticleCollectionRendererFloatInput m_flZoomScale; // 0x6e0	
 	// MPropertyFriendlyName "Distortion Amount"
-	CParticleCollectionRendererFloatInput m_flDistortion; // 0x810	
+	CParticleCollectionRendererFloatInput m_flDistortion; // 0x840	
 	// MPropertyFriendlyName "Randomize Initial Offset"
-	bool m_bRandomizeOffsets; // 0x968	
+	bool m_bRandomizeOffsets; // 0x9a0	
 	// MPropertyFriendlyName "Clamp UVs"
-	bool m_bClampUVs; // 0x969	
+	bool m_bClampUVs; // 0x9a1	
 private:
-	[[maybe_unused]] uint8_t __pad096a[0x2]; // 0x96a
+	[[maybe_unused]] uint8_t __pad09a2[0x2]; // 0x9a2
 public:
 	// MPropertyFriendlyName "per-particle scalar for blend"
-	SpriteCardPerParticleScale_t m_nPerParticleBlend; // 0x96c	
+	SpriteCardPerParticleScale_t m_nPerParticleBlend; // 0x9a4	
 	// MPropertyFriendlyName "per-particle scalar for scale"
-	SpriteCardPerParticleScale_t m_nPerParticleScale; // 0x970	
+	SpriteCardPerParticleScale_t m_nPerParticleScale; // 0x9a8	
 	// MPropertyFriendlyName "per-particle scalar for horizontal offset"
-	SpriteCardPerParticleScale_t m_nPerParticleOffsetU; // 0x974	
+	SpriteCardPerParticleScale_t m_nPerParticleOffsetU; // 0x9ac	
 	// MPropertyFriendlyName "per-particle scalar for vertical offset"
-	SpriteCardPerParticleScale_t m_nPerParticleOffsetV; // 0x978	
+	SpriteCardPerParticleScale_t m_nPerParticleOffsetV; // 0x9b0	
 	// MPropertyFriendlyName "per-particle scalar for rotation"
-	SpriteCardPerParticleScale_t m_nPerParticleRotation; // 0x97c	
+	SpriteCardPerParticleScale_t m_nPerParticleRotation; // 0x9b4	
 	// MPropertyFriendlyName "per-particle scalar for zoom"
-	SpriteCardPerParticleScale_t m_nPerParticleZoom; // 0x980	
+	SpriteCardPerParticleScale_t m_nPerParticleZoom; // 0x9b8	
 	// MPropertyFriendlyName "per-particle scalar for distortion"
-	SpriteCardPerParticleScale_t m_nPerParticleDistortion; // 0x984	
+	SpriteCardPerParticleScale_t m_nPerParticleDistortion; // 0x9bc	
 };
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyCustomEditor "ModelInput()"
@@ -13092,7 +13652,6 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmPassthroughNode::CDefinition : public CNmPoseNode::CDefinition
@@ -13104,7 +13663,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimDecoder
@@ -13119,7 +13677,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct NmPercent_t
@@ -13178,137 +13735,158 @@ public:
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0xe8
+// Size: 0xc8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MVDataRoot
-// MVDataNodeType "1"
-// MFgdFromSchemaEditablePolymorphicThisClass
-// MVDataFileExtension
-// MPropertyFriendlyName "VSND Container"
-// MPropertyDescription "Voice Container Base"
-class CVoiceContainerBase
+// MPropertyFriendlyName "TESTBED: FM Synth Container"
+// MPropertyDescription "Real time FM Synthesis"
+class CVoiceContainerRealtimeFMSineWave : public CVoiceContainerBase
 {
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
-	// MPropertySuppressField
-	// -> m_nRate - 0x20
-	// -> m_nFormat - 0x24
-	// -> m_nChannels - 0x28
-	// -> m_nLoopStart - 0x2c
-	// -> m_nSampleCount - 0x30
-	// -> m_flDuration - 0x34
-	// -> m_Sentences - 0x38
-	// -> m_nStreamingSize - 0x50
-	// -> m_nSeekTable - 0x58
-	// -> m_nLoopEnd - 0x70
-	// -> m_encodedHeader - 0x78
-	CVSound m_vSound; // 0x20	
-private:
-	[[maybe_unused]] uint8_t __pad00a0[0x30]; // 0xa0
+	// MPropertyFriendlyName "Frequency (Hz)"
+	// MPropertyDescription "The frequency of this sine tone."
+	float m_flCarrierFrequency; // 0xb8	
+	// MPropertyFriendlyName "Mod Frequency (Hz)"
+	// MPropertyDescription "The frequency of the sine tone modulating this sine tone."
+	float m_flModulatorFrequency; // 0xbc	
+	// MPropertyFriendlyName "Mod Amount (Hz)"
+	// MPropertyDescription "The amount the modulating sine tone modulates this sine tone."
+	float m_flModulatorAmount; // 0xc0	
+};
+
+// Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
+// Alignment: 8
+// Size: 0xc8
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Envelope VSND"
+// MPropertyDescription "Plays sound with envelope."
+class CVoiceContainerEnvelope : public CVoiceContainerBase
+{
 public:
+	// MPropertyFriendlyName "Vsnd File"
+	CStrongHandle< InfoForResourceTypeCVoiceContainerBase > m_sound; // 0xb8	
 	// MPropertyFriendlyName "Container Analyzers"
-	// MPropertySuppressExpr "true"
-	CUtlVector< CVoiceContainerAnalysisBase* > m_analysisContainers; // 0xd0	
-	
-	// Static fields:
-	static bool &Get_bAudioFinishedPlaying(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CVoiceContainerBase")->GetStaticFields()[0]->m_pInstance);};
-	static bool &Get_bAudioStillPlaying(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CVoiceContainerBase")->GetStaticFields()[1]->m_pInstance);};
+	CVoiceContainerAnalysisBase* m_analysisContainer; // 0xc0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapCPVelocityToVector : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point"
-	int32_t m_nControlPoint; // 0x1b8	
+	int32_t m_nControlPoint; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "scale factor"
-	float m_flScale; // 0x1c0	
+	float m_flScale; // 0x1c8	
 	// MPropertyFriendlyName "normalize"
-	bool m_bNormalize; // 0x1c4	
+	bool m_bNormalize; // 0x1cc	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmOrientationWarpNode::CDefinition : public CNmPoseNode::CDefinition
+{
+public:
+	int16_t m_nClipReferenceNodeIdx; // 0x10	
+	int16_t m_nTargetValueNodeIdx; // 0x12	
+	bool m_bIsOffsetNode; // 0x14	
+	bool m_bIsOffsetRelativeToCharacter; // 0x15	
+	CNmRootMotionData::SamplingMode_t m_samplingMode; // 0x16	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x258
+// Size: 0x260
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointPositionToTimeOfDayValue : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "time-of-day parameter"
-	char m_pszTimeOfDayParameter[128]; // 0x1c4	
+	char m_pszTimeOfDayParameter[128]; // 0x1cc	
 	// MPropertyFriendlyName "default value"
-	Vector m_vecDefaultValue; // 0x244	
+	Vector m_vecDefaultValue; // 0x24c	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x328
+// Size: 0x338
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetChildControlPoints : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "group ID to affect"
-	int32_t m_nChildGroupID; // 0x1b8	
+	int32_t m_nChildGroupID; // 0x1c0	
 	// MPropertyFriendlyName "first control point to set"
-	int32_t m_nFirstControlPoint; // 0x1bc	
+	int32_t m_nFirstControlPoint; // 0x1c4	
 	// MPropertyFriendlyName "# of control points to set"
-	int32_t m_nNumControlPoints; // 0x1c0	
+	int32_t m_nNumControlPoints; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "first particle to copy"
-	CParticleCollectionFloatInput m_nFirstSourcePoint; // 0x1c8	
+	CParticleCollectionFloatInput m_nFirstSourcePoint; // 0x1d0	
 	// MPropertyFriendlyName "start as last particle"
-	bool m_bReverse; // 0x320	
+	bool m_bReverse; // 0x330	
 	// MPropertyFriendlyName "set orientation"
-	bool m_bSetOrientation; // 0x321	
+	bool m_bSetOrientation; // 0x331	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InheritFromParentParticles : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "scale"
-	float m_flScale; // 0x1c0	
+	float m_flScale; // 0x1c8	
 	// MPropertyFriendlyName "inherited field"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc	
 	// MPropertyFriendlyName "particle increment amount"
-	int32_t m_nIncrement; // 0x1c8	
+	int32_t m_nIncrement; // 0x1d0	
 	// MPropertyFriendlyName "random parent particle distribution"
-	bool m_bRandomDistribution; // 0x1cc	
+	bool m_bRandomDistribution; // 0x1d4	
 private:
-	[[maybe_unused]] uint8_t __pad01cd[0x3]; // 0x1cd
+	[[maybe_unused]] uint8_t __pad01d5[0x3]; // 0x1d5
 public:
 	// MPropertyFriendlyName "random seed"
-	int32_t m_nRandomSeed; // 0x1d0	
+	int32_t m_nRandomSeed; // 0x1d8	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0xc0
+// Has VTable
+// Is Abstract
+class CNmBlendTaskBase : public CNmTask
+{
+private:
+	[[maybe_unused]] uint8_t __pad0030[0x60]; // 0x30
+public:
+	// No schema binary for binding
 };
 
 // Registered binary: server.dll (project 'server')
@@ -13328,9 +13906,8 @@ public:
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
-// Size: 0x658
+// Size: 0x678
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyCustomEditor "PerParticleVecInput()"
@@ -13343,7 +13920,6 @@ public:
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBoneMaskUpdateNode : public CBinaryUpdateNode
@@ -13367,7 +13943,6 @@ public:
 // Alignment: 2
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class ConfigIndex
@@ -13381,7 +13956,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulseCell_Base
@@ -13395,9 +13969,8 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 4
-// Size: 0x14
+// Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct DamageFlashSettings_t
@@ -13407,14 +13980,14 @@ public:
 	float m_flCoverage; // 0x4	
 	float m_flHardness; // 0x8	
 	float m_flBrightness; // 0xc	
-	Color m_Color; // 0x10	
+	float m_flBrightnessInLightSensitivityMode; // 0x10	
+	Color m_Color; // 0x14	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 16
 // Size: 0x50
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdRodConstraint_t
@@ -13443,27 +14016,26 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreateFromParentParticles : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "inherited velocity scale"
-	float m_flVelocityScale; // 0x1c0	
+	float m_flVelocityScale; // 0x1c8	
 	// MPropertyFriendlyName "particle increment amount"
-	float m_flIncrement; // 0x1c4	
+	float m_flIncrement; // 0x1cc	
 	// MPropertyFriendlyName "random parent particle distribution"
-	bool m_bRandomDistribution; // 0x1c8	
+	bool m_bRandomDistribution; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01c9[0x3]; // 0x1c9
+	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
 public:
 	// MPropertyFriendlyName "random seed"
-	int32_t m_nRandomSeed; // 0x1cc	
+	int32_t m_nRandomSeed; // 0x1d4	
 	// MPropertyFriendlyName "sub frame interpolation"
-	bool m_bSubFrame; // 0x1d0	
+	bool m_bSubFrame; // 0x1d8	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -13499,7 +14071,6 @@ public:
 // Registered binary: scenesystem.dll (project 'scenesystem')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSSDSMsg_EndFrame
@@ -13510,9 +14081,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x240
+// Size: 0x248
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderStatusEffect : public CParticleFunctionRenderer
@@ -13520,87 +14090,84 @@ class C_OP_RenderStatusEffect : public CParticleFunctionRenderer
 public:
 	// MPropertyFriendlyName "color warp texture (3d)"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureColorWarp; // 0x208	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureColorWarp; // 0x210	
 	// MPropertyFriendlyName "detail 2 texture"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureDetail2; // 0x210	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureDetail2; // 0x218	
 	// MPropertyFriendlyName "diffuse warp texture (3d)"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureDiffuseWarp; // 0x218	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureDiffuseWarp; // 0x220	
 	// MPropertyFriendlyName "fresnel color warp texture (3d)"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureFresnelColorWarp; // 0x220	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureFresnelColorWarp; // 0x228	
 	// MPropertyFriendlyName "fresnel warp texture"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureFresnelWarp; // 0x228	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureFresnelWarp; // 0x230	
 	// MPropertyFriendlyName "specular warp texture"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureSpecularWarp; // 0x230	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureSpecularWarp; // 0x238	
 	// MPropertyFriendlyName "environment map texture"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureEnvMap; // 0x238	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureEnvMap; // 0x240	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x490
+// Size: 0x4a8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InitFromCPSnapshot : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "snapshot control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "field to read"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nAttributeToRead; // 0x1c4	
+	ParticleAttributeIndex_t m_nAttributeToRead; // 0x1cc	
 	// MPropertyFriendlyName "field to write"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nAttributeToWrite; // 0x1c8	
+	ParticleAttributeIndex_t m_nAttributeToWrite; // 0x1d0	
 	// MPropertyFriendlyName "local space control point number"
-	int32_t m_nLocalSpaceCP; // 0x1cc	
+	int32_t m_nLocalSpaceCP; // 0x1d4	
 	// MPropertyFriendlyName "random order"
-	bool m_bRandom; // 0x1d0	
+	bool m_bRandom; // 0x1d8	
 	// MPropertyFriendlyName "reverse order"
-	bool m_bReverse; // 0x1d1	
+	bool m_bReverse; // 0x1d9	
 private:
-	[[maybe_unused]] uint8_t __pad01d2[0x6]; // 0x1d2
+	[[maybe_unused]] uint8_t __pad01da[0x6]; // 0x1da
 public:
 	// MPropertyFriendlyName "Snapshot increment amount"
-	CParticleCollectionFloatInput m_nSnapShotIncrement; // 0x1d8	
+	CParticleCollectionFloatInput m_nSnapShotIncrement; // 0x1e0	
 	// MPropertyFriendlyName "Manual Snapshot Index"
-	CPerParticleFloatInput m_nManualSnapshotIndex; // 0x330	
+	CPerParticleFloatInput m_nManualSnapshotIndex; // 0x340	
 	// MPropertyFriendlyName "random seed"
-	int32_t m_nRandomSeed; // 0x488	
+	int32_t m_nRandomSeed; // 0x4a0	
 	// MPropertyFriendlyName "local space angles"
-	bool m_bLocalSpaceAngles; // 0x48c	
+	bool m_bLocalSpaceAngles; // 0x4a4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_PositionOffsetToCP : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "creation control point number"
-	int32_t m_nControlPointNumberStart; // 0x1c0	
+	int32_t m_nControlPointNumberStart; // 0x1c8	
 	// MPropertyFriendlyName "offset control point number"
-	int32_t m_nControlPointNumberEnd; // 0x1c4	
+	int32_t m_nControlPointNumberEnd; // 0x1cc	
 	// MPropertyFriendlyName "offset in local space 0/1"
-	bool m_bLocalCoords; // 0x1c8	
+	bool m_bLocalCoords; // 0x1d0	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 4
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SkeletonBoneBounds_t
@@ -13628,7 +14195,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x40
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyAutoExpandSelf
@@ -13650,7 +14216,6 @@ public:
 // Size: 0x50
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataNodeTintColor
@@ -13675,7 +14240,6 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CDSPMixgroupModifier
@@ -13722,9 +14286,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x7f8
+// Size: 0x820
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_CylindricalDistanceToTransform : public CParticleFunctionOperator
@@ -13732,30 +14295,55 @@ class C_OP_CylindricalDistanceToTransform : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "cylinder inner radius"
-	CPerParticleFloatInput m_flInputMin; // 0x1c0	
+	CPerParticleFloatInput m_flInputMin; // 0x1c8	
 	// MPropertyFriendlyName "cylinder outer radius"
-	CPerParticleFloatInput m_flInputMax; // 0x318	
+	CPerParticleFloatInput m_flInputMax; // 0x328	
 	// MPropertyFriendlyName "cylinder inner output"
-	CPerParticleFloatInput m_flOutputMin; // 0x470	
+	CPerParticleFloatInput m_flOutputMin; // 0x488	
 	// MPropertyFriendlyName "cylinder outer output"
-	CPerParticleFloatInput m_flOutputMax; // 0x5c8	
+	CPerParticleFloatInput m_flOutputMax; // 0x5e8	
 	// MPropertyFriendlyName "cylindrical top transform"
-	CParticleTransformInput m_TransformStart; // 0x720	
+	CParticleTransformInput m_TransformStart; // 0x748	
 	// MPropertyFriendlyName "cylindrical bottom transform"
-	CParticleTransformInput m_TransformEnd; // 0x788	
+	CParticleTransformInput m_TransformEnd; // 0x7b0	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x7f0	
+	ParticleSetMethod_t m_nSetMethod; // 0x818	
 	// MPropertyFriendlyName "only active within specified distance"
-	bool m_bActiveRange; // 0x7f4	
+	bool m_bActiveRange; // 0x81c	
 	// MPropertyFriendlyName "output is additive"
-	bool m_bAdditive; // 0x7f5	
+	bool m_bAdditive; // 0x81d	
 	// MPropertyFriendlyName "apply radius to ends (capsule)"
-	bool m_bCapsule; // 0x7f6	
+	bool m_bCapsule; // 0x81e	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmStateCompletedConditionNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	int16_t m_nSourceStateNodeIdx; // 0x10	
+	int16_t m_nTransitionDurationOverrideNodeIdx; // 0x12	
+	float m_flTransitionDurationSeconds; // 0x14	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x8
+// 
+// MGetKV3ClassDefaults
+class CNmIKRig
+{
+public:
+	CStrongHandle< InfoForResourceTypeCNmSkeleton > m_skeleton; // 0x0	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
@@ -13763,7 +14351,6 @@ public:
 // Size: 0x28
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBoneConstraintBase
@@ -13789,7 +14376,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x118
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct NPCAttachmentDesc_t
@@ -13820,109 +14406,104 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_Cull : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "cull percentage"
-	float m_flCullPerc; // 0x1b8	
+	float m_flCullPerc; // 0x1c0	
 	// MPropertyFriendlyName "cull start time"
-	float m_flCullStart; // 0x1bc	
+	float m_flCullStart; // 0x1c4	
 	// MPropertyFriendlyName "cull end time"
-	float m_flCullEnd; // 0x1c0	
+	float m_flCullEnd; // 0x1c8	
 	// MPropertyFriendlyName "cull time exponent"
-	float m_flCullExp; // 0x1c4	
+	float m_flCullExp; // 0x1cc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_AgeNoise : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "absolute value"
-	bool m_bAbsVal; // 0x1c0	
+	bool m_bAbsVal; // 0x1c8	
 	// MPropertyFriendlyName "invert absolute value"
-	bool m_bAbsValInv; // 0x1c1	
+	bool m_bAbsValInv; // 0x1c9	
 private:
-	[[maybe_unused]] uint8_t __pad01c2[0x2]; // 0x1c2
+	[[maybe_unused]] uint8_t __pad01ca[0x2]; // 0x1ca
 public:
 	// MPropertyFriendlyName "time coordinate offset"
-	float m_flOffset; // 0x1c4	
+	float m_flOffset; // 0x1cc	
 	// MPropertyFriendlyName "start age minimum"
-	float m_flAgeMin; // 0x1c8	
+	float m_flAgeMin; // 0x1d0	
 	// MPropertyFriendlyName "start age maximum"
-	float m_flAgeMax; // 0x1cc	
+	float m_flAgeMax; // 0x1d4	
 	// MPropertyFriendlyName "time noise coordinate scale"
-	float m_flNoiseScale; // 0x1d0	
+	float m_flNoiseScale; // 0x1d8	
 	// MPropertyFriendlyName "spatial noise coordinate scale"
-	float m_flNoiseScaleLoc; // 0x1d4	
+	float m_flNoiseScaleLoc; // 0x1dc	
 	// MPropertyFriendlyName "spatial coordinate offset"
 	// MVectorIsCoordinate
-	Vector m_vecOffsetLoc; // 0x1d8	
+	Vector m_vecOffsetLoc; // 0x1e0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapControlPointOrientationToRotation : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point"
-	int32_t m_nCP; // 0x1b8	
+	int32_t m_nCP; // 0x1c0	
 	// MPropertyFriendlyName "rotation field"
 	// MPropertyAttributeChoiceName "particlefield_rotation"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "offset rotation"
-	float m_flOffsetRot; // 0x1c0	
+	float m_flOffsetRot; // 0x1c8	
 	// MPropertyFriendlyName "control point axis"
 	// MPropertyAttributeChoiceName "vector_component"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	int32_t m_nComponent; // 0x1c4	
+	int32_t m_nComponent; // 0x1cc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x720
+// Size: 0x748
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RopeSpringConstraint : public CParticleFunctionConstraint
 {
 public:
 	// MPropertyFriendlyName "slack"
-	CParticleCollectionFloatInput m_flRestLength; // 0x1b8	
+	CParticleCollectionFloatInput m_flRestLength; // 0x1c0	
 	// MPropertyFriendlyName "minimum segment length %"
-	CParticleCollectionFloatInput m_flMinDistance; // 0x310	
+	CParticleCollectionFloatInput m_flMinDistance; // 0x320	
 	// MPropertyFriendlyName "maximum segment length %"
-	CParticleCollectionFloatInput m_flMaxDistance; // 0x468	
+	CParticleCollectionFloatInput m_flMaxDistance; // 0x480	
 	// MPropertyFriendlyName "scale factor for spring correction"
-	float m_flAdjustmentScale; // 0x5c0	
+	float m_flAdjustmentScale; // 0x5e0	
 private:
-	[[maybe_unused]] uint8_t __pad05c4[0x4]; // 0x5c4
+	[[maybe_unused]] uint8_t __pad05e4[0x4]; // 0x5e4
 public:
 	// MPropertyFriendlyName "manual resting spacing"
-	CParticleCollectionFloatInput m_flInitialRestingLength; // 0x5c8	
+	CParticleCollectionFloatInput m_flInitialRestingLength; // 0x5e8	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 2
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class MotionIndex
@@ -13935,7 +14516,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimBoneDifference
@@ -13951,7 +14531,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x40
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootDefinition
@@ -13972,7 +14551,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootCycle : public CCycleBase
@@ -13983,7 +14561,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMotionDataSet
@@ -13996,7 +14573,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CVPhysXSurfacePropertiesList
@@ -14008,12 +14584,13 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x38
+// Size: 0x68
 // Has VTable
 class C_PortraitWorldUnit_GraphController : public CAnimGraphControllerBase
 {
 public:
 	CAnimGraphParamOptionalRef< char* > m_pszHeroUI; // 0x18	
+	CAnimGraphParamOptionalRef< char* > m_pszShopUI; // 0x40	
 	
 	// Static fields:
 	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("C_PortraitWorldUnit_GraphController")->GetStaticFields()[0]->m_pInstance);};
@@ -14024,7 +14601,6 @@ public:
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixFilterDesc_t
@@ -14040,24 +14616,22 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParticleFunctionEmitter : public CParticleFunction
 {
 public:
 	// MPropertyFriendlyName "Emitter Index"
-	int32_t m_nEmitterIndex; // 0x1b8	
+	int32_t m_nEmitterIndex; // 0x1c0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x490
+// Size: 0x4a8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_PlanarConstraint : public CParticleFunctionConstraint
@@ -14065,32 +14639,47 @@ class C_OP_PlanarConstraint : public CParticleFunctionConstraint
 public:
 	// MPropertyFriendlyName "plane point"
 	// MVectorIsCoordinate
-	Vector m_PointOnPlane; // 0x1b8	
+	Vector m_PointOnPlane; // 0x1c0	
 	// MPropertyFriendlyName "plane normal"
-	Vector m_PlaneNormal; // 0x1c4	
+	Vector m_PlaneNormal; // 0x1cc	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1d0	
+	int32_t m_nControlPointNumber; // 0x1d8	
 	// MPropertyFriendlyName "global origin"
-	bool m_bGlobalOrigin; // 0x1d4	
+	bool m_bGlobalOrigin; // 0x1dc	
 	// MPropertyFriendlyName "global normal"
-	bool m_bGlobalNormal; // 0x1d5	
+	bool m_bGlobalNormal; // 0x1dd	
 private:
-	[[maybe_unused]] uint8_t __pad01d6[0x2]; // 0x1d6
+	[[maybe_unused]] uint8_t __pad01de[0x2]; // 0x1de
 public:
 	// MPropertyFriendlyName "radius scale"
-	CPerParticleFloatInput m_flRadiusScale; // 0x1d8	
+	CPerParticleFloatInput m_flRadiusScale; // 0x1e0	
 	// MPropertyFriendlyName "falloff distance from control point"
-	CParticleCollectionFloatInput m_flMaximumDistanceToCP; // 0x330	
+	CParticleCollectionFloatInput m_flMaximumDistanceToCP; // 0x340	
 	// MPropertyFriendlyName "use old code"
-	bool m_bUseOldCode; // 0x488	
+	bool m_bUseOldCode; // 0x4a0	
 };
 
-// Registered binary: animationsystem.dll (project 'modellib')
+// Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x70
 // Has VTable
 // Is Abstract
-// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CSequenceUpdateNodeBase : public CLeafUpdateNode
+{
+private:
+	[[maybe_unused]] uint8_t __pad0058[0xc]; // 0x58
+public:
+	float m_playbackSpeed; // 0x64	
+	bool m_bLoop; // 0x68	
+};
+
+// Registered binary: animationsystem.dll (project 'modellib')
+// Alignment: 8
+// Size: 0x68
+// Has VTable
+// Is Abstract
 // 
 // MGetKV3ClassDefaults
 class CBaseConstraint : public CBoneConstraintBase
@@ -14101,8 +14690,8 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad003c[0x4]; // 0x3c
 public:
-	CUtlVector< CConstraintSlave > m_slaves; // 0x40	
-	CUtlVector< CConstraintTarget > m_targets; // 0x58	
+	CUtlLeanVector< CConstraintSlave > m_slaves; // 0x40	
+	CUtlVector< CConstraintTarget > m_targets; // 0x50	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -14111,7 +14700,6 @@ public:
 // Has VTable
 // Is Abstract
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CitadelCameraOperationDef_t
@@ -14221,7 +14809,6 @@ public:
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ManifestTestResource_t
@@ -14235,8 +14822,7 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x410
-// Construct allowed
+// Size: 0x428
 // 
 // MGetKV3ClassDefaults
 class CParticleMassCalculationParameters
@@ -14247,34 +14833,32 @@ public:
 	// MPropertyFriendlyName "Radius input"
 	CPerParticleFloatInput m_flRadius; // 0x8	
 	// MPropertyFriendlyName "Nominal radius value"
-	CPerParticleFloatInput m_flNominalRadius; // 0x160	
+	CPerParticleFloatInput m_flNominalRadius; // 0x168	
 	// MPropertyFriendlyName "Scale to apply to result"
-	CPerParticleFloatInput m_flScale; // 0x2b8	
+	CPerParticleFloatInput m_flScale; // 0x2c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x470
+// Size: 0x488
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SDFConstraint : public CParticleFunctionConstraint
 {
 public:
 	// MPropertyFriendlyName "min dist to sdf"
-	CParticleCollectionFloatInput m_flMinDist; // 0x1b8	
+	CParticleCollectionFloatInput m_flMinDist; // 0x1c0	
 	// MPropertyFriendlyName "max dist to sdf"
-	CParticleCollectionFloatInput m_flMaxDist; // 0x310	
+	CParticleCollectionFloatInput m_flMaxDist; // 0x320	
 	// MPropertyFriendlyName "Max # of iterations"
-	int32_t m_nMaxIterations; // 0x468	
+	int32_t m_nMaxIterations; // 0x480	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyEditClassAsString
@@ -14289,7 +14873,6 @@ public:
 // Size: 0x3
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CTransitionUpdateData
@@ -14304,33 +14887,50 @@ public:
 	}; // 8 bits
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFloatComparisonNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+	int16_t m_nComparandValueNodeIdx; // 0x12	
+	CNmFloatComparisonNode::Comparison_t m_comparison; // 0x14	
+private:
+	[[maybe_unused]] uint8_t __pad0015[0x3]; // 0x15
+public:
+	float m_flEpsilon; // 0x18	
+	float m_flComparisonValue; // 0x1c	
+};
+
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x1f0
+// Size: 0x200
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_OscillateScalarSimple : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "oscillation rate"
-	float m_Rate; // 0x1b8	
+	float m_Rate; // 0x1c0	
 	// MPropertyFriendlyName "oscillation frequency"
-	float m_Frequency; // 0x1bc	
+	float m_Frequency; // 0x1c4	
 	// MPropertyFriendlyName "oscillation field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nField; // 0x1c0	
+	ParticleAttributeIndex_t m_nField; // 0x1c8	
 	// MPropertyFriendlyName "oscillation multiplier"
-	float m_flOscMult; // 0x1c4	
+	float m_flOscMult; // 0x1cc	
 	// MPropertyFriendlyName "oscillation start phase"
-	float m_flOscAdd; // 0x1c8	
+	float m_flOscAdd; // 0x1d0	
 };
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
 // Size: 0x40
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyCustomEditor "ParticleVariableRef()"
@@ -14343,9 +14943,8 @@ public:
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
-// Size: 0x658
+// Size: 0x678
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyCustomEditor "CollectionVecInput()"
@@ -14356,42 +14955,40 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xdd0
+// Size: 0xe18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderLightBeam : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "Color Blend"
-	CParticleCollectionVecInput m_vColorBlend; // 0x208	
+	CParticleCollectionVecInput m_vColorBlend; // 0x210	
 	// MPropertyFriendlyName "Color Blend Type"
 	// MPropertySortPriority "700"
-	ParticleColorBlendType_t m_nColorBlendType; // 0x860	
+	ParticleColorBlendType_t m_nColorBlendType; // 0x888	
 private:
-	[[maybe_unused]] uint8_t __pad0864[0x4]; // 0x864
+	[[maybe_unused]] uint8_t __pad088c[0x4]; // 0x88c
 public:
 	// MPropertyFriendlyName "Lumens Per Meter"
-	CParticleCollectionFloatInput m_flBrightnessLumensPerMeter; // 0x868	
+	CParticleCollectionFloatInput m_flBrightnessLumensPerMeter; // 0x890	
 	// MPropertyFriendlyName "Shadows"
 	// MPropertySuppressExpr "mod == csgo"
-	bool m_bCastShadows; // 0x9c0	
+	bool m_bCastShadows; // 0x9f0	
 private:
-	[[maybe_unused]] uint8_t __pad09c1[0x7]; // 0x9c1
+	[[maybe_unused]] uint8_t __pad09f1[0x7]; // 0x9f1
 public:
 	// MPropertyFriendlyName "Skirt"
-	CParticleCollectionFloatInput m_flSkirt; // 0x9c8	
+	CParticleCollectionFloatInput m_flSkirt; // 0x9f8	
 	// MPropertyFriendlyName "Range"
-	CParticleCollectionFloatInput m_flRange; // 0xb20	
+	CParticleCollectionFloatInput m_flRange; // 0xb58	
 	// MPropertyFriendlyName "Thickness"
-	CParticleCollectionFloatInput m_flThickness; // 0xc78	
+	CParticleCollectionFloatInput m_flThickness; // 0xcb8	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FootPinningPoseOpFixedData_t
@@ -14410,7 +15007,6 @@ public:
 // Alignment: 8
 // Size: 0xc8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootPinningUpdateNode : public CUnaryUpdateNode
@@ -14436,15 +15032,23 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x58
+// Size: 0x90
 // Has VTable
-// Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-class CLeafUpdateNode : public CAnimUpdateNodeBase
+class CCycleControlClipUpdateNode : public CLeafUpdateNode
 {
+private:
+	[[maybe_unused]] uint8_t __pad0058[0x8]; // 0x58
 public:
+	CUtlVector< TagSpan_t > m_tags; // 0x60	
+private:
+	[[maybe_unused]] uint8_t __pad0078[0x4]; // 0x78
+public:
+	HSequence m_hSequence; // 0x7c	
+	float m_duration; // 0x80	
+	AnimValueSource m_valueSource; // 0x84	
+	CAnimParamHandle m_paramIndex; // 0x88	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -14452,7 +15056,6 @@ public:
 // Size: 0x20
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimMotorUpdaterBase
@@ -14468,7 +15071,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulseCell_BaseRequirement : public CPulseCell_Base
@@ -14497,7 +15099,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0xa8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnMesh_t
@@ -14526,113 +15127,110 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0xef0
+// Size: 0xf30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_SetVectorAttributeToVectorExpression : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "expression"
-	VectorExpressionType_t m_nExpression; // 0x1c0	
+	VectorExpressionType_t m_nExpression; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "input 1"
-	CPerParticleVecInput m_vInput1; // 0x1c8	
+	CPerParticleVecInput m_vInput1; // 0x1d0	
 	// MPropertyFriendlyName "input 2"
-	CPerParticleVecInput m_vInput2; // 0x820	
+	CPerParticleVecInput m_vInput2; // 0x848	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nOutputField; // 0xe78	
+	ParticleAttributeIndex_t m_nOutputField; // 0xec0	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0xe7c	
+	ParticleSetMethod_t m_nSetMethod; // 0xec4	
 	// MPropertyFriendlyName "normalize result"
-	bool m_bNormalizedOutput; // 0xe80	
+	bool m_bNormalizedOutput; // 0xec8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x350
+// Size: 0x360
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InitSkinnedPositionFromCPSnapshot : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "snapshot control point number"
-	int32_t m_nSnapshotControlPointNumber; // 0x1c0	
+	int32_t m_nSnapshotControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c4	
+	int32_t m_nControlPointNumber; // 0x1cc	
 	// MPropertyFriendlyName "random order"
 	// MPropertySuppressExpr "m_nIndexType != SNAPSHOT_INDEX_INCREMENT"
-	bool m_bRandom; // 0x1c8	
+	bool m_bRandom; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01c9[0x3]; // 0x1c9
+	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
 public:
 	// MPropertyFriendlyName "random seed"
 	// MPropertySuppressExpr "m_nIndexType != SNAPSHOT_INDEX_INCREMENT"
-	int32_t m_nRandomSeed; // 0x1cc	
+	int32_t m_nRandomSeed; // 0x1d4	
 	// MPropertyFriendlyName "prepare for rigid lock"
-	bool m_bRigid; // 0x1d0	
+	bool m_bRigid; // 0x1d8	
 	// MPropertyFriendlyName "set normal"
-	bool m_bSetNormal; // 0x1d1	
+	bool m_bSetNormal; // 0x1d9	
 	// MPropertyFriendlyName "normal velocity ignore delta time"
-	bool m_bIgnoreDt; // 0x1d2	
+	bool m_bIgnoreDt; // 0x1da	
 private:
-	[[maybe_unused]] uint8_t __pad01d3[0x1]; // 0x1d3
+	[[maybe_unused]] uint8_t __pad01db[0x1]; // 0x1db
 public:
 	// MPropertyFriendlyName "normal velocity min"
-	float m_flMinNormalVelocity; // 0x1d4	
+	float m_flMinNormalVelocity; // 0x1dc	
 	// MPropertyFriendlyName "normal velocity max"
-	float m_flMaxNormalVelocity; // 0x1d8	
+	float m_flMaxNormalVelocity; // 0x1e0	
 	// MPropertyFriendlyName "Snapshot Read Type"
-	SnapshotIndexType_t m_nIndexType; // 0x1dc	
+	SnapshotIndexType_t m_nIndexType; // 0x1e4	
 	// MPropertyFriendlyName "Snapshot Index"
 	// MPropertySuppressExpr "m_nIndexType != SNAPSHOT_INDEX_DIRECT"
-	CPerParticleFloatInput m_flReadIndex; // 0x1e0	
+	CPerParticleFloatInput m_flReadIndex; // 0x1e8	
 	// MPropertyFriendlyName "particle increment amount"
 	// MPropertySuppressExpr "m_nIndexType != SNAPSHOT_INDEX_INCREMENT"
-	float m_flIncrement; // 0x338	
+	float m_flIncrement; // 0x348	
 	// MPropertyFriendlyName "Full Loop Increment Amount"
 	// MPropertySuppressExpr "m_nIndexType != SNAPSHOT_INDEX_INCREMENT"
-	int32_t m_nFullLoopIncrement; // 0x33c	
+	int32_t m_nFullLoopIncrement; // 0x34c	
 	// MPropertyFriendlyName "Snapshot start point"
 	// MPropertySuppressExpr "m_nIndexType != SNAPSHOT_INDEX_INCREMENT"
-	int32_t m_nSnapShotStartPoint; // 0x340	
+	int32_t m_nSnapShotStartPoint; // 0x350	
 	// MPropertyFriendlyName "inherited bone velocity"
-	float m_flBoneVelocity; // 0x344	
+	float m_flBoneVelocity; // 0x354	
 	// MPropertyFriendlyName "max inherited bone velocity"
-	float m_flBoneVelocityMax; // 0x348	
+	float m_flBoneVelocityMax; // 0x358	
 	// MPropertyFriendlyName "Set Color"
-	bool m_bCopyColor; // 0x34c	
+	bool m_bCopyColor; // 0x35c	
 	// MPropertyFriendlyName "Set Alpha"
-	bool m_bCopyAlpha; // 0x34d	
+	bool m_bCopyAlpha; // 0x35d	
 	// MPropertyFriendlyName "Set Radius"
-	bool m_bSetRadius; // 0x34e	
+	bool m_bSetRadius; // 0x35e	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x478
+// Size: 0x490
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InitFloat : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "value"
-	CPerParticleFloatInput m_InputValue; // 0x1c0	
+	CPerParticleFloatInput m_InputValue; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nOutputField; // 0x318	
+	ParticleAttributeIndex_t m_nOutputField; // 0x328	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x31c	
+	ParticleSetMethod_t m_nSetMethod; // 0x32c	
 	// MPropertyFriendlyName "per-particle strength"
-	CPerParticleFloatInput m_InputStrength; // 0x320	
+	CPerParticleFloatInput m_InputStrength; // 0x330	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
@@ -14640,7 +15238,6 @@ public:
 // Size: 0x48
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfigElement
@@ -14655,7 +15252,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x138
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VPhysXAggregateData_t
@@ -14686,30 +15282,21 @@ public:
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-class CSequenceUpdateNode : public CLeafUpdateNode
+class CSequenceUpdateNode : public CSequenceUpdateNodeBase
 {
-private:
-	[[maybe_unused]] uint8_t __pad0058[0x8]; // 0x58
 public:
-	CParamSpanUpdater m_paramSpans; // 0x60	
-	CUtlVector< TagSpan_t > m_tags; // 0x78	
-private:
-	[[maybe_unused]] uint8_t __pad0090[0x4]; // 0x90
-public:
-	HSequence m_hSequence; // 0x94	
-	float m_playbackSpeed; // 0x98	
-	float m_duration; // 0x9c	
-	bool m_bLoop; // 0xa0	
+	HSequence m_hSequence; // 0x70	
+	float m_duration; // 0x74	
+	CParamSpanUpdater m_paramSpans; // 0x78	
+	CUtlVector< TagSpan_t > m_tags; // 0x90	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfigElement_Command : public CModelConfigElement
@@ -14724,7 +15311,6 @@ public:
 // Size: 0x70
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimParameterBase
@@ -14739,9 +15325,9 @@ public:
 	// MPropertyAttributeEditor "TextBlock()"
 	// MPropertySortPriority "-100"
 	CUtlString m_sComment; // 0x20	
-	// MPropertyHideField
+	// MPropertyReadOnly
 	CUtlString m_group; // 0x28	
-	// MPropertyHideField
+	// MPropertyReadOnly
 	AnimParamID m_id; // 0x30	
 private:
 	[[maybe_unused]] uint8_t __pad0034[0x14]; // 0x34
@@ -14772,8 +15358,7 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x660
-// Construct allowed
+// Size: 0x680
 // 
 // MGetKV3ClassDefaults
 struct VecInputMaterialVariable_t
@@ -14787,31 +15372,29 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x248
+// Size: 0x250
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_ModelCull : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "use only bounding box"
-	bool m_bBoundBox; // 0x1c4	
+	bool m_bBoundBox; // 0x1cc	
 	// MPropertyFriendlyName "cull outside instead of inside"
-	bool m_bCullOutside; // 0x1c5	
+	bool m_bCullOutside; // 0x1cd	
 	// MPropertyFriendlyName "use bones instead of hitboxes"
-	bool m_bUseBones; // 0x1c6	
+	bool m_bUseBones; // 0x1ce	
 	// MPropertyFriendlyName "hitbox set"
-	char m_HitboxSetName[128]; // 0x1c7	
+	char m_HitboxSetName[128]; // 0x1cf	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x40
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CCachedPose
@@ -14829,7 +15412,6 @@ public:
 // Alignment: 8
 // Size: 0x20
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimGraphSettingsGroup
@@ -14842,7 +15424,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfig
@@ -14856,7 +15437,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x60
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class FootLockPoseOpFixedSettings
@@ -14894,7 +15474,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFlexRule
@@ -14936,7 +15515,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSosGroupActionSetSoundeventParameterSchema : public CSosGroupActionSchema
@@ -14959,78 +15537,75 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x490
+// Size: 0x4b0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetFloat : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "value"
-	CPerParticleFloatInput m_InputValue; // 0x1b8	
+	CPerParticleFloatInput m_InputValue; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nOutputField; // 0x310	
+	ParticleAttributeIndex_t m_nOutputField; // 0x320	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x314	
+	ParticleSetMethod_t m_nSetMethod; // 0x324	
 	// MPropertyFriendlyName "interpolation"
-	CPerParticleFloatInput m_Lerp; // 0x318	
+	CPerParticleFloatInput m_Lerp; // 0x328	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x278
+// Size: 0x280
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DistanceBetweenCPsToCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "starting control point"
-	int32_t m_nStartCP; // 0x1c0	
+	int32_t m_nStartCP; // 0x1c8	
 	// MPropertyFriendlyName "ending control point"
-	int32_t m_nEndCP; // 0x1c4	
+	int32_t m_nEndCP; // 0x1cc	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutputCP; // 0x1c8	
+	int32_t m_nOutputCP; // 0x1d0	
 	// MPropertyFriendlyName "output control point field"
-	int32_t m_nOutputCPField; // 0x1cc	
+	int32_t m_nOutputCPField; // 0x1d4	
 	// MPropertyFriendlyName "only set distance once"
-	bool m_bSetOnce; // 0x1d0	
+	bool m_bSetOnce; // 0x1d8	
 private:
-	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
+	[[maybe_unused]] uint8_t __pad01d9[0x3]; // 0x1d9
 public:
 	// MPropertyFriendlyName "distance minimum"
-	float m_flInputMin; // 0x1d4	
+	float m_flInputMin; // 0x1dc	
 	// MPropertyFriendlyName "distance maximum"
-	float m_flInputMax; // 0x1d8	
+	float m_flInputMax; // 0x1e0	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1dc	
+	float m_flOutputMin; // 0x1e4	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1e0	
+	float m_flOutputMax; // 0x1e8	
 	// MPropertyFriendlyName "maximum trace length"
-	float m_flMaxTraceLength; // 0x1e4	
+	float m_flMaxTraceLength; // 0x1ec	
 	// MPropertyFriendlyName "LOS Failure Scale"
-	float m_flLOSScale; // 0x1e8	
+	float m_flLOSScale; // 0x1f0	
 	// MPropertyFriendlyName "ensure line of sight"
-	bool m_bLOS; // 0x1ec	
+	bool m_bLOS; // 0x1f4	
 	// MPropertyFriendlyName "LOS collision group"
-	char m_CollisionGroupName[128]; // 0x1ed	
+	char m_CollisionGroupName[128]; // 0x1f5	
 private:
-	[[maybe_unused]] uint8_t __pad026d[0x3]; // 0x26d
+	[[maybe_unused]] uint8_t __pad0275[0x3]; // 0x275
 public:
 	// MPropertyFriendlyName "Trace Set"
-	ParticleTraceSet_t m_nTraceSet; // 0x270	
+	ParticleTraceSet_t m_nTraceSet; // 0x278	
 	// MPropertyFriendlyName "set parent"
-	ParticleParentSetMode_t m_nSetParent; // 0x274	
+	ParticleParentSetMode_t m_nSetParent; // 0x27c	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulseCell_BaseFlow : public CPulseCell_Base
@@ -15047,7 +15622,7 @@ public:
 struct HeroBuildID_t
 {
 public:
-	int32_t m_Value; // 0x0	
+	uint32_t m_Value; // 0x0	
 	
 	// Static fields:
 	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("HeroBuildID_t")->GetStaticFields()[0]->m_pInstance);};
@@ -15055,9 +15630,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomAlpha : public CParticleFunctionInitializer
@@ -15065,64 +15639,62 @@ class C_INIT_RandomAlpha : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "alpha field"
 	// MPropertyAttributeChoiceName "particlefield_alpha"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
 	// MPropertyFriendlyName "alpha min"
 	// MPropertyAttributeRange "0 255"
-	int32_t m_nAlphaMin; // 0x1c4	
+	int32_t m_nAlphaMin; // 0x1cc	
 	// MPropertyFriendlyName "alpha max"
 	// MPropertyAttributeRange "0 255"
-	int32_t m_nAlphaMax; // 0x1c8	
+	int32_t m_nAlphaMax; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01cc[0x8]; // 0x1cc
+	[[maybe_unused]] uint8_t __pad01d4[0x8]; // 0x1d4
 public:
 	// MPropertyFriendlyName "alpha random exponent"
-	float m_flAlphaRandExponent; // 0x1d4	
+	float m_flAlphaRandExponent; // 0x1dc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x5e8
+// Size: 0x608
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ContinuousEmitter : public CParticleFunctionEmitter
 {
 public:
 	// MPropertyFriendlyName "emission duration"
-	CParticleCollectionFloatInput m_flEmissionDuration; // 0x1c0	
+	CParticleCollectionFloatInput m_flEmissionDuration; // 0x1c8	
 	// MPropertyFriendlyName "emission start time"
-	CParticleCollectionFloatInput m_flStartTime; // 0x318	
+	CParticleCollectionFloatInput m_flStartTime; // 0x328	
 	// MPropertyFriendlyName "emission rate"
-	CParticleCollectionFloatInput m_flEmitRate; // 0x470	
+	CParticleCollectionFloatInput m_flEmitRate; // 0x488	
 	// MPropertyFriendlyName "scale emission to used control points"
 	// MParticleMaxVersion "1"
-	float m_flEmissionScale; // 0x5c8	
+	float m_flEmissionScale; // 0x5e8	
 	// MPropertyFriendlyName "scale emission by parent particle count"
-	float m_flScalePerParentParticle; // 0x5cc	
+	float m_flScalePerParentParticle; // 0x5ec	
 	// MPropertyFriendlyName "emit particles for parent particle events"
-	bool m_bInitFromKilledParentParticles; // 0x5d0	
+	bool m_bInitFromKilledParentParticles; // 0x5f0	
 private:
-	[[maybe_unused]] uint8_t __pad05d1[0x3]; // 0x5d1
+	[[maybe_unused]] uint8_t __pad05f1[0x3]; // 0x5f1
 public:
 	// MPropertyFriendlyName "emission parent particle event type"
 	// MPropertySuppressExpr "m_bInitFromKilledParentParticles == false"
-	EventTypeSelection_t m_nEventType; // 0x5d4	
+	EventTypeSelection_t m_nEventType; // 0x5f4	
 	// MPropertyFriendlyName "control point with snapshot data"
-	int32_t m_nSnapshotControlPoint; // 0x5d8	
+	int32_t m_nSnapshotControlPoint; // 0x5f8	
 	// MPropertyFriendlyName "limit per update"
-	int32_t m_nLimitPerUpdate; // 0x5dc	
+	int32_t m_nLimitPerUpdate; // 0x5fc	
 	// MPropertyFriendlyName "force emit on first update"
-	bool m_bForceEmitOnFirstUpdate; // 0x5e0	
+	bool m_bForceEmitOnFirstUpdate; // 0x600	
 	// MPropertyFriendlyName "force emit on last update"
-	bool m_bForceEmitOnLastUpdate; // 0x5e1	
+	bool m_bForceEmitOnLastUpdate; // 0x601	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CStepsRemainingMetricEvaluator : public CMotionMetricEvaluator
@@ -15136,7 +15708,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct NmCompressionSettings_t__QuantizationRange_t
@@ -15150,7 +15721,6 @@ public:
 // Alignment: 8
 // Size: 0x100
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimParameterManagerUpdater
@@ -15170,7 +15740,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulseCell_BaseValue : public CPulseCell_Base
@@ -15181,7 +15750,6 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PulseNodeDynamicOutflows_t__DynamicOutflow_t
@@ -15196,7 +15764,6 @@ public:
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Random Scale"
@@ -15225,11 +15792,21 @@ private:
 public:
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x10
+// Has VTable
+// Is Abstract
+class CNmTargetValueNode::CDefinition : public CNmValueNode::CDefinition
+{
+public:
+	// No schema binary for binding
+};
+
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfigElement_RandomColor : public CModelConfigElement
@@ -15243,7 +15820,6 @@ public:
 // Size: 0x28
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMotionNode
@@ -15257,57 +15833,55 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x200
+// Size: 0x208
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_NoiseEmitter : public CParticleFunctionEmitter
 {
 public:
 	// MPropertyFriendlyName "emission duration"
-	float m_flEmissionDuration; // 0x1c0	
+	float m_flEmissionDuration; // 0x1c8	
 	// MPropertyFriendlyName "emission start time"
-	float m_flStartTime; // 0x1c4	
+	float m_flStartTime; // 0x1cc	
 	// MPropertyFriendlyName "scale emission to used control points"
 	// MParticleMaxVersion "1"
-	float m_flEmissionScale; // 0x1c8	
+	float m_flEmissionScale; // 0x1d0	
 	// MPropertyFriendlyName "emission count scale control point"
-	int32_t m_nScaleControlPoint; // 0x1cc	
+	int32_t m_nScaleControlPoint; // 0x1d4	
 	// MPropertyFriendlyName "emission count scale control point field"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nScaleControlPointField; // 0x1d0	
+	int32_t m_nScaleControlPointField; // 0x1d8	
 	// MPropertyFriendlyName "world noise scale control point"
-	int32_t m_nWorldNoisePoint; // 0x1d4	
+	int32_t m_nWorldNoisePoint; // 0x1dc	
 	// MPropertyFriendlyName "absolute value"
-	bool m_bAbsVal; // 0x1d8	
+	bool m_bAbsVal; // 0x1e0	
 	// MPropertyFriendlyName "invert absolute value"
-	bool m_bAbsValInv; // 0x1d9	
+	bool m_bAbsValInv; // 0x1e1	
 private:
-	[[maybe_unused]] uint8_t __pad01da[0x2]; // 0x1da
+	[[maybe_unused]] uint8_t __pad01e2[0x2]; // 0x1e2
 public:
 	// MPropertyFriendlyName "time coordinate offset"
-	float m_flOffset; // 0x1dc	
+	float m_flOffset; // 0x1e4	
 	// MPropertyFriendlyName "emission minimum"
-	float m_flOutputMin; // 0x1e0	
+	float m_flOutputMin; // 0x1e8	
 	// MPropertyFriendlyName "emission maximum"
-	float m_flOutputMax; // 0x1e4	
+	float m_flOutputMax; // 0x1ec	
 	// MPropertyFriendlyName "time noise coordinate scale"
-	float m_flNoiseScale; // 0x1e8	
+	float m_flNoiseScale; // 0x1f0	
 	// MPropertyFriendlyName "world spatial noise coordinate scale"
-	float m_flWorldNoiseScale; // 0x1ec	
+	float m_flWorldNoiseScale; // 0x1f4	
 	// MPropertyFriendlyName "spatial coordinate offset"
 	// MVectorIsCoordinate
-	Vector m_vecOffsetLoc; // 0x1f0	
+	Vector m_vecOffsetLoc; // 0x1f8	
 	// MPropertyFriendlyName "world time noise coordinate scale"
-	float m_flWorldTimeScale; // 0x1fc	
+	float m_flWorldTimeScale; // 0x204	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimTagBase
@@ -15337,7 +15911,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyEditClassAsString
@@ -15350,7 +15923,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimLocalHierarchy
@@ -15366,8 +15938,7 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x10
-// Construct allowed
+// Size: 0x18
 // 
 // MGetKV3ClassDefaults
 struct RnShapeDesc_t
@@ -15376,13 +15947,55 @@ public:
 	uint32_t m_nCollisionAttributeIndex; // 0x0	
 	uint32_t m_nSurfacePropertyIndex; // 0x4	
 	CUtlString m_UserFriendlyName; // 0x8	
+	bool m_bUserFriendlyNameSealed; // 0x10	
+	bool m_bUserFriendlyNameLong; // 0x11	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	uint32_t m_nToolMaterialHash; // 0x14	
+};
+
+// Registered binary: soundsystem.dll (project 'soundsystem')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CSosGroupActionSoundeventMinMaxValuesSchema : public CSosGroupActionSchema
+{
+public:
+	// MPropertyFriendlyName "Public field name to query."
+	CUtlString m_strQueryPublicFieldName; // 0x18	
+	// MPropertyFriendlyName "Public field 'delay' name."
+	CUtlString m_strDelayPublicFieldName; // 0x20	
+	// MPropertyFriendlyName "Exclude stopped sounds from evaluation"
+	bool m_bExcludeStoppedSounds; // 0x28	
+	// MPropertyFriendlyName "Exclude delayed sounds from evaluation"
+	bool m_bExcludeDelayedSounds; // 0x29	
+	// MPropertyFriendlyName "Exclude sounds from evaluation less than or equal to a min value threshold."
+	bool m_bExcludeSoundsBelowThreshold; // 0x2a	
+private:
+	[[maybe_unused]] uint8_t __pad002b[0x1]; // 0x2b
+public:
+	// MPropertyFriendlyName "The minimum threshold value to exclude sounds."
+	float m_flExcludeSoundsMinThresholdValue; // 0x2c	
+	// MPropertyFriendlyName "Exclude sounds from evaluation greater than or equal to a max value threshold."
+	bool m_bExcludSoundsAboveThreshold; // 0x30	
+private:
+	[[maybe_unused]] uint8_t __pad0031[0x3]; // 0x31
+public:
+	// MPropertyFriendlyName "The maximum threshold value to exclude sounds."
+	float m_flExcludeSoundsMaxThresholdValue; // 0x34	
+	// MPropertyFriendlyName "Min value property name"
+	CUtlString m_strMinValueName; // 0x38	
+	// MPropertyFriendlyName "Max value property name"
+	CUtlString m_strMaxValueName; // 0x40	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapSDFGradientToVectorAttribute : public CParticleFunctionOperator
@@ -15390,7 +16003,7 @@ class C_OP_RemapSDFGradientToVectorAttribute : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
@@ -15407,7 +16020,6 @@ public:
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfigElement_SetRenderColor : public CModelConfigElement
@@ -15419,7 +16031,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x90
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PhysSoftbodyDesc_t
@@ -15436,7 +16047,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CitadelAbilityHUDPanel_t
@@ -15451,7 +16061,6 @@ public:
 // Alignment: 8
 // Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Rotate Towards"
@@ -15497,7 +16106,6 @@ public:
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeCtrlSoftOffset_t
@@ -15514,7 +16122,6 @@ public:
 // Size: 0x48
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulseCell_BaseYieldingInflow : public CPulseCell_BaseFlow
@@ -15524,44 +16131,42 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x220
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapNamedModelElementOnceTimed : public CParticleFunctionOperator
 {
 public:
-	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x1b8	
+	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x1c0	
 	// MPropertyFriendlyName "input names"
-	CUtlVector< CUtlString > m_inNames; // 0x1c0	
+	CUtlVector< CUtlString > m_inNames; // 0x1c8	
 	// MPropertyFriendlyName "output names"
-	CUtlVector< CUtlString > m_outNames; // 0x1d8	
+	CUtlVector< CUtlString > m_outNames; // 0x1e0	
 	// MPropertyFriendlyName "fallback names when the input doesn't match"
-	CUtlVector< CUtlString > m_fallbackNames; // 0x1f0	
+	CUtlVector< CUtlString > m_fallbackNames; // 0x1f8	
 	// MPropertyFriendlyName "model from renderer"
-	bool m_bModelFromRenderer; // 0x208	
+	bool m_bModelFromRenderer; // 0x210	
 	// MPropertyFriendlyName "remap time proportional"
-	bool m_bProportional; // 0x209	
+	bool m_bProportional; // 0x211	
 private:
-	[[maybe_unused]] uint8_t __pad020a[0x2]; // 0x20a
+	[[maybe_unused]] uint8_t __pad0212[0x2]; // 0x212
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x20c	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x214	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x210	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x218	
 	// MPropertyFriendlyName "remap time"
-	float m_flRemapTime; // 0x214	
+	float m_flRemapTime; // 0x21c	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1f0
+// Size: 0x1f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapParticleCountToScalar : public CParticleFunctionInitializer
@@ -15569,33 +16174,33 @@ class C_INIT_RemapParticleCountToScalar : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
 	// MPropertyFriendlyName "input minimum"
-	int32_t m_nInputMin; // 0x1c4	
+	int32_t m_nInputMin; // 0x1cc	
 	// MPropertyFriendlyName "input maximum"
-	int32_t m_nInputMax; // 0x1c8	
+	int32_t m_nInputMax; // 0x1d0	
 	// MPropertyFriendlyName "input scale control point"
-	int32_t m_nScaleControlPoint; // 0x1cc	
+	int32_t m_nScaleControlPoint; // 0x1d4	
 	// MPropertyFriendlyName "input scale control point field"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nScaleControlPointField; // 0x1d0	
+	int32_t m_nScaleControlPointField; // 0x1d8	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1d4	
+	float m_flOutputMin; // 0x1dc	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d8	
+	float m_flOutputMax; // 0x1e0	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1dc	
+	ParticleSetMethod_t m_nSetMethod; // 0x1e4	
 	// MPropertyFriendlyName "only active within specified input range"
-	bool m_bActiveRange; // 0x1e0	
+	bool m_bActiveRange; // 0x1e8	
 	// MPropertyFriendlyName "invert input from total particle count"
-	bool m_bInvert; // 0x1e1	
+	bool m_bInvert; // 0x1e9	
 	// MPropertyFriendlyName "wrap input"
-	bool m_bWrap; // 0x1e2	
+	bool m_bWrap; // 0x1ea	
 private:
-	[[maybe_unused]] uint8_t __pad01e3[0x1]; // 0x1e3
+	[[maybe_unused]] uint8_t __pad01eb[0x1]; // 0x1eb
 public:
 	// MPropertyFriendlyName "remap bias"
-	float m_flRemapBias; // 0x1e4	
+	float m_flRemapBias; // 0x1ec	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -15619,7 +16224,6 @@ public:
 // Alignment: 8
 // Size: 0x140
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Model"
@@ -15641,29 +16245,27 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointToHand : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nCP1; // 0x1c0	
+	int32_t m_nCP1; // 0x1c8	
 	// MPropertyFriendlyName "hand"
-	int32_t m_nHand; // 0x1c4	
+	int32_t m_nHand; // 0x1cc	
 	// MPropertyFriendlyName "control point offset"
 	// MVectorIsCoordinate
-	Vector m_vecCP1Pos; // 0x1c8	
+	Vector m_vecCP1Pos; // 0x1d0	
 	// MPropertyFriendlyName "use hand orientation"
-	bool m_bOrientToHand; // 0x1d4	
+	bool m_bOrientToHand; // 0x1dc	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMorphBundleData
@@ -15678,7 +16280,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmBoneMask
@@ -15697,7 +16298,6 @@ public:
 // Size: 0x8
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAudioEmphasisSample
@@ -15709,36 +16309,33 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomYawFlip : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "flip percentage"
-	float m_flPercent; // 0x1c0	
+	float m_flPercent; // 0x1c8	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x18
+// Size: 0x20
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmFrameSnapEvent : public CNmEvent
 {
 public:
-	NmFrameSnapEventMode_t m_frameSnapMode; // 0x10	
+	NmFrameSnapEventMode_t m_frameSnapMode; // 0x18	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CJumpHelperUpdateNode : public CSequenceUpdateNode
@@ -15760,7 +16357,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SolveIKChainPoseOpFixedSettings_t
@@ -15783,9 +16379,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1420
+// Size: 0x1488
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderCables : public CParticleFunctionRenderer
@@ -15794,96 +16389,94 @@ public:
 	// MPropertyStartGroup "Renderer Modifiers"
 	// MPropertyFriendlyName "Radius Scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flRadiusScale; // 0x208	
+	CParticleCollectionFloatInput m_flRadiusScale; // 0x210	
 	// MPropertyFriendlyName "alpha scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flAlphaScale; // 0x360	
+	CParticleCollectionFloatInput m_flAlphaScale; // 0x370	
 	// MPropertyFriendlyName "color blend"
 	// MPropertySortPriority "700"
-	CParticleCollectionVecInput m_vecColorScale; // 0x4b8	
+	CParticleCollectionVecInput m_vecColorScale; // 0x4d0	
 	// MPropertyFriendlyName "color blend type"
 	// MPropertySortPriority "700"
-	ParticleColorBlendType_t m_nColorBlendType; // 0xb10	
+	ParticleColorBlendType_t m_nColorBlendType; // 0xb48	
 private:
-	[[maybe_unused]] uint8_t __pad0b14[0x4]; // 0xb14
+	[[maybe_unused]] uint8_t __pad0b4c[0x4]; // 0xb4c
 public:
 	// MPropertyStartGroup
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0xb18	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0xb50	
 	// MPropertyFriendlyName "texture repetition mode"
-	TextureRepetitionMode_t m_nTextureRepetitionMode; // 0xb20	
+	TextureRepetitionMode_t m_nTextureRepetitionMode; // 0xb58	
 private:
-	[[maybe_unused]] uint8_t __pad0b24[0x4]; // 0xb24
+	[[maybe_unused]] uint8_t __pad0b5c[0x4]; // 0xb5c
 public:
 	// MPropertyFriendlyName "texture repetitions"
-	CParticleCollectionFloatInput m_flTextureRepeatsPerSegment; // 0xb28	
+	CParticleCollectionFloatInput m_flTextureRepeatsPerSegment; // 0xb60	
 	// MPropertyFriendlyName "texture repetitions around cable"
-	CParticleCollectionFloatInput m_flTextureRepeatsCircumference; // 0xc80	
+	CParticleCollectionFloatInput m_flTextureRepeatsCircumference; // 0xcc0	
 	// MPropertyFriendlyName "color map offset along path"
-	CParticleCollectionFloatInput m_flColorMapOffsetV; // 0xdd8	
+	CParticleCollectionFloatInput m_flColorMapOffsetV; // 0xe20	
 	// MPropertyFriendlyName "color map offset around cable"
-	CParticleCollectionFloatInput m_flColorMapOffsetU; // 0xf30	
+	CParticleCollectionFloatInput m_flColorMapOffsetU; // 0xf80	
 	// MPropertyFriendlyName "normal map offset along path"
-	CParticleCollectionFloatInput m_flNormalMapOffsetV; // 0x1088	
+	CParticleCollectionFloatInput m_flNormalMapOffsetV; // 0x10e0	
 	// MPropertyFriendlyName "normal map offset around cable"
-	CParticleCollectionFloatInput m_flNormalMapOffsetU; // 0x11e0	
+	CParticleCollectionFloatInput m_flNormalMapOffsetU; // 0x1240	
 	// MPropertyFriendlyName "draw caps at each end of the cable"
-	bool m_bDrawCableCaps; // 0x1338	
+	bool m_bDrawCableCaps; // 0x13a0	
 private:
-	[[maybe_unused]] uint8_t __pad1339[0x3]; // 0x1339
+	[[maybe_unused]] uint8_t __pad13a1[0x3]; // 0x13a1
 public:
 	// MPropertyFriendlyName "cable end cap shape factor"
 	// MPropertyAttributeRange "0 2"
-	float m_flCapRoundness; // 0x133c	
+	float m_flCapRoundness; // 0x13a4	
 	// MPropertyFriendlyName "cable end cap offset amount"
 	// MPropertyAttributeRange "0 2"
-	float m_flCapOffsetAmount; // 0x1340	
+	float m_flCapOffsetAmount; // 0x13a8	
 	// MPropertyFriendlyName "tessellation scale factor"
-	float m_flTessScale; // 0x1344	
+	float m_flTessScale; // 0x13ac	
 	// MPropertyFriendlyName "minimum steps between particles"
-	int32_t m_nMinTesselation; // 0x1348	
+	int32_t m_nMinTesselation; // 0x13b0	
 	// MPropertyFriendlyName "maximum steps between particles"
-	int32_t m_nMaxTesselation; // 0x134c	
+	int32_t m_nMaxTesselation; // 0x13b4	
 	// MPropertyFriendlyName "roundness factor"
-	int32_t m_nRoundness; // 0x1350	
+	int32_t m_nRoundness; // 0x13b8	
 private:
-	[[maybe_unused]] uint8_t __pad1354[0x4]; // 0x1354
+	[[maybe_unused]] uint8_t __pad13bc[0x4]; // 0x13bc
 public:
 	// MPropertyFriendlyName "diffuse lighting origin"
 	// MParticleInputOptional
-	CParticleTransformInput m_LightingTransform; // 0x1358	
+	CParticleTransformInput m_LightingTransform; // 0x13c0	
 	// MPropertyFriendlyName "material float variables"
-	CUtlVector< FloatInputMaterialVariable_t > m_MaterialFloatVars; // 0x13c0	
+	CUtlVector< FloatInputMaterialVariable_t > m_MaterialFloatVars; // 0x1428	
 private:
-	[[maybe_unused]] uint8_t __pad13d8[0x18]; // 0x13d8
+	[[maybe_unused]] uint8_t __pad1440[0x18]; // 0x1440
 public:
 	// MPropertyFriendlyName "material vector variables"
-	CUtlVector< VecInputMaterialVariable_t > m_MaterialVecVars; // 0x13f0	
+	CUtlVector< VecInputMaterialVariable_t > m_MaterialVecVars; // 0x1458	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_Orient2DRelToCP : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point"
-	int32_t m_nCP; // 0x1c0	
+	int32_t m_nCP; // 0x1c8	
 	// MPropertyFriendlyName "rotation field"
 	// MPropertyAttributeChoiceName "particlefield_rotation"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc	
 	// MPropertyFriendlyName "rotation offset"
-	float m_flRotOffset; // 0x1c8	
+	float m_flRotOffset; // 0x1d0	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Material Attribute Tag"
@@ -15910,7 +16503,6 @@ public:
 // Size: 0x30
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimComponentUpdater
@@ -15938,16 +16530,16 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x10
-// Construct allowed
+// Size: 0x18
 // 
 // MGetKV3ClassDefaults
 struct LaneDesc_t
 {
 public:
 	CUtlString m_strLaneName; // 0x0	
-	Color m_Color; // 0x8	
-	Color m_MinimapColorOverride; // 0xc	
+	CUtlString m_strCSSClass; // 0x8	
+	Color m_Color; // 0x10	
+	Color m_MinimapColorOverride; // 0x14	
 };
 
 // Registered binary: soundsystem.dll (project 'soundsystem_lowlevel')
@@ -15955,7 +16547,6 @@ public:
 // Size: 0xc
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixEnvelopeDesc_t
@@ -16007,8 +16598,7 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x10c0
-// Construct allowed
+// Size: 0x1118
 // 
 // MGetKV3ClassDefaults
 class CReplicationParameters
@@ -16024,31 +16614,30 @@ public:
 	// MPropertyFriendlyName "Minimum random scale for radius"
 	CParticleCollectionFloatInput m_flMinRandomRadiusScale; // 0x8	
 	// MPropertyFriendlyName "Maximum random scale for radius"
-	CParticleCollectionFloatInput m_flMaxRandomRadiusScale; // 0x160	
+	CParticleCollectionFloatInput m_flMaxRandomRadiusScale; // 0x168	
 	// MPropertyFriendlyName "min random displacement for child particles"
-	CParticleCollectionVecInput m_vMinRandomDisplacement; // 0x2b8	
+	CParticleCollectionVecInput m_vMinRandomDisplacement; // 0x2c8	
 	// MPropertyFriendlyName "max random displacement for child particles"
-	CParticleCollectionVecInput m_vMaxRandomDisplacement; // 0x910	
+	CParticleCollectionVecInput m_vMaxRandomDisplacement; // 0x940	
 	// MPropertyFriendlyName "Modelling scale"
-	CParticleCollectionFloatInput m_flModellingScale; // 0xf68	
+	CParticleCollectionFloatInput m_flModellingScale; // 0xfb8	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x10
 // Has VTable
-// Is Abstract
-class CNmValueNode::CDefinition : public CNmGraphNode::CDefinition
+// 
+// MGetKV3ClassDefaults
+class CNmControlParameterFloatNode::CDefinition : public CNmFloatValueNode::CDefinition
 {
 public:
-	// No schema binary for binding
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFollowPathUpdateNode : public CUnaryUpdateNode
@@ -16106,7 +16695,6 @@ public:
 // Alignment: 16
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeNodeBase_t
@@ -16125,7 +16713,6 @@ public:
 // Alignment: 4
 // Size: 0x24
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PostProcessingVignetteParameters_t
@@ -16142,7 +16729,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ModelBoneFlexDriverControl_t
@@ -16158,7 +16744,6 @@ public:
 // Registered binary: client.dll (project 'mathlib_extended')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ConstantInfo_t
@@ -16188,7 +16773,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -16204,7 +16788,6 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Save Current Scale"
@@ -16233,9 +16816,9 @@ public:
 // Alignment: 8
 // Size: 0x80
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
+// MPulseEditorIsControlFlowNode
 class CPulseCell_WaitForCursorsWithTagBase : public CPulseCell_BaseYieldingInflow
 {
 public:
@@ -16249,72 +16832,69 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SequenceFromModel : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1b8	
+	int32_t m_nControlPointNumber; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "current anim time output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutputAnim; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldOutputAnim; // 0x1c8	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1c4	
+	float m_flInputMin; // 0x1cc	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1c8	
+	float m_flInputMax; // 0x1d0	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1cc	
+	float m_flOutputMin; // 0x1d4	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d0	
+	float m_flOutputMax; // 0x1d8	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1d4	
+	ParticleSetMethod_t m_nSetMethod; // 0x1dc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x268
+// Size: 0x270
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetCPOrientationToGroundNormal : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "interpolation rate"
-	float m_flInterpRate; // 0x1b8	
+	float m_flInterpRate; // 0x1c0	
 	// MPropertyFriendlyName "max trace length"
-	float m_flMaxTraceLength; // 0x1bc	
+	float m_flMaxTraceLength; // 0x1c4	
 	// MPropertyFriendlyName "CP movement tolerance"
-	float m_flTolerance; // 0x1c0	
+	float m_flTolerance; // 0x1c8	
 	// MPropertyFriendlyName "trace offset"
-	float m_flTraceOffset; // 0x1c4	
+	float m_flTraceOffset; // 0x1cc	
 	// MPropertyFriendlyName "collision group"
-	char m_CollisionGroupName[128]; // 0x1c8	
+	char m_CollisionGroupName[128]; // 0x1d0	
 	// MPropertyFriendlyName "Trace Set"
-	ParticleTraceSet_t m_nTraceSet; // 0x248	
+	ParticleTraceSet_t m_nTraceSet; // 0x250	
 	// MPropertyFriendlyName "CP to trace from"
-	int32_t m_nInputCP; // 0x24c	
+	int32_t m_nInputCP; // 0x254	
 	// MPropertyFriendlyName "CP to set"
-	int32_t m_nOutputCP; // 0x250	
+	int32_t m_nOutputCP; // 0x258	
 private:
-	[[maybe_unused]] uint8_t __pad0254[0xc]; // 0x254
+	[[maybe_unused]] uint8_t __pad025c[0xc]; // 0x25c
 public:
 	// MPropertyFriendlyName "include water"
-	bool m_bIncludeWater; // 0x260	
+	bool m_bIncludeWater; // 0x268	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_CycleScalar : public CParticleFunctionOperator
@@ -16322,30 +16902,51 @@ class C_OP_CycleScalar : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "destination scalar field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nDestField; // 0x1b8	
+	ParticleAttributeIndex_t m_nDestField; // 0x1c0	
 	// MPropertyFriendlyName "Value at start of cycle"
-	float m_flStartValue; // 0x1bc	
+	float m_flStartValue; // 0x1c4	
 	// MPropertyFriendlyName "Value at end of cycle"
-	float m_flEndValue; // 0x1c0	
+	float m_flEndValue; // 0x1c8	
 	// MPropertyFriendlyName "Cycle time"
-	float m_flCycleTime; // 0x1c4	
+	float m_flCycleTime; // 0x1cc	
 	// MPropertyFriendlyName "Do not repeat cycle"
-	bool m_bDoNotRepeatCycle; // 0x1c8	
+	bool m_bDoNotRepeatCycle; // 0x1d0	
 	// MPropertyFriendlyName "Synchronize particles"
-	bool m_bSynchronizeParticles; // 0x1c9	
+	bool m_bSynchronizeParticles; // 0x1d1	
 private:
-	[[maybe_unused]] uint8_t __pad01ca[0x2]; // 0x1ca
+	[[maybe_unused]] uint8_t __pad01d2[0x2]; // 0x1d2
 public:
 	// MPropertyFriendlyName "Scale Start/End Control Point"
-	int32_t m_nCPScale; // 0x1cc	
+	int32_t m_nCPScale; // 0x1d4	
 	// MPropertyFriendlyName "start scale control point field"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nCPFieldMin; // 0x1d0	
+	int32_t m_nCPFieldMin; // 0x1d8	
 	// MPropertyFriendlyName "end scale control point field"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nCPFieldMax; // 0x1d4	
+	int32_t m_nCPFieldMax; // 0x1dc	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1d8	
+	ParticleSetMethod_t m_nSetMethod; // 0x1e0	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x28
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFloatRemapNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	// -> m_flBegin - 0x14
+	// -> m_flEnd - 0x18
+	CNmFloatRemapNode::RemapRange_t m_inputRange; // 0x14	
+	// -> m_flBegin - 0x1c
+	// -> m_flEnd - 0x20
+	CNmFloatRemapNode::RemapRange_t m_outputRange; // 0x1c	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
@@ -16408,7 +17009,6 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CStopAtGoalUpdateNode : public CUnaryUpdateNode
@@ -16430,7 +17030,6 @@ public:
 // Alignment: 8
 // Size: 0x138
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSequenceGroupData
@@ -16460,7 +17059,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xe8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CitadelAbilityProperty_t
@@ -16477,10 +17075,12 @@ public:
 	// MPropertyDescription "Set this so we know how to display the ability property (prefix, postfix, and # decimal places)"
 	EStatsType m_eDisplayType; // 0x1c	
 	ModifierValueDisplayUnits_t m_eDisplayUnits; // 0x20	
+	// MPropertyDescription "When true, we don't show this ability property anywhere in the UI."
+	bool m_bIsHidden; // 0x24	
 	// MPropertyDescription "When true, we add a different class to show it's a negative attribute."
-	bool m_bIsNegativeAttribute; // 0x24	
+	bool m_bIsNegativeAttribute; // 0x25	
 private:
-	[[maybe_unused]] uint8_t __pad0025[0x3]; // 0x25
+	[[maybe_unused]] uint8_t __pad0026[0x2]; // 0x26
 public:
 	// MPropertyDescription "This property will be disabled if this value matches m_strValue"
 	CUtlString m_strDisableValue; // 0x28	
@@ -16522,28 +17122,38 @@ public:
 	AbilityPropertyUsageFlag_t m_UsageFlags; // 0xe0	
 };
 
+// Registered binary: server.dll (project 'server')
+// Alignment: 8
+// Size: 0x20
+class CUnreachableTargetList
+{
+public:
+	CUtlVector< UnreachableTarget_t > m_vecTargets; // 0x0	
+	
+	// Datamap fields:
+	// void m_pOuter; // 0x18
+};
+
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x210
+// Size: 0x218
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapParticleCountToNamedModelElementScalar : public C_INIT_RemapParticleCountToScalar
 {
 public:
-	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x1f0	
+	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x1f8	
 	// MPropertyFriendlyName "output min name"
-	CUtlString m_outputMinName; // 0x1f8	
+	CUtlString m_outputMinName; // 0x200	
 	// MPropertyFriendlyName "output max name"
-	CUtlString m_outputMaxName; // 0x200	
-	bool m_bModelFromRenderer; // 0x208	
+	CUtlString m_outputMaxName; // 0x208	
+	bool m_bModelFromRenderer; // 0x210	
 };
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ParticleNamedValueConfiguration_t
@@ -16564,7 +17174,6 @@ public:
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimSkeleton
@@ -16587,7 +17196,6 @@ public:
 // Size: 0x40
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimationGraphVisualizerPrimitiveBase
@@ -16604,7 +17212,6 @@ public:
 // Alignment: 8
 // Size: 0x78
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Body Group Tag"
@@ -16626,7 +17233,6 @@ public:
 // Alignment: 4
 // Size: 0x28
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeAxialEdgeBend_t
@@ -16641,41 +17247,39 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x240
+// Size: 0x248
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapTransformVisibilityToScalar : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1b8	
+	ParticleSetMethod_t m_nSetMethod; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0x1c0	
+	CParticleTransformInput m_TransformInput; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x228	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x230	
 	// MPropertyFriendlyName "CP visibility minimum"
-	float m_flInputMin; // 0x22c	
+	float m_flInputMin; // 0x234	
 	// MPropertyFriendlyName "CP visibility maximum"
-	float m_flInputMax; // 0x230	
+	float m_flInputMax; // 0x238	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x234	
+	float m_flOutputMin; // 0x23c	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x238	
+	float m_flOutputMax; // 0x240	
 	// MPropertyFriendlyName "visibility radius"
-	float m_flRadius; // 0x23c	
+	float m_flRadius; // 0x244	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 4
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ParamSpanSample_t
@@ -16689,7 +17293,6 @@ public:
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -16709,7 +17312,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ModifierTrackedSound_t
@@ -16722,7 +17324,6 @@ public:
 // Registered binary: client.dll (project 'mathlib_extended')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FunctionInfo_t
@@ -16782,9 +17383,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x320
+// Size: 0x330
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_LerpScalar : public CParticleFunctionOperator
@@ -16792,91 +17392,88 @@ class C_OP_LerpScalar : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "value to lerp to"
-	CPerParticleFloatInput m_flOutput; // 0x1c0	
+	CPerParticleFloatInput m_flOutput; // 0x1c8	
 	// MPropertyFriendlyName "start time"
-	float m_flStartTime; // 0x318	
+	float m_flStartTime; // 0x328	
 	// MPropertyFriendlyName "end time"
-	float m_flEndTime; // 0x31c	
+	float m_flEndTime; // 0x32c	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xa30
+// Size: 0xa60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetVariable : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "Variable"
-	// -> m_variableName - 0x1c0
-	// -> m_variableType - 0x1f8
-	CParticleVariableRef m_variableReference; // 0x1c0	
+	// -> m_variableName - 0x1c8
+	// -> m_variableType - 0x200
+	CParticleVariableRef m_variableReference; // 0x1c8	
 	// MPropertyFriendlyName "Value"
 	// MPropertySuppressExpr "m_variableReference.m_variableType != PVAL_TRANSFORM"
-	CParticleTransformInput m_transformInput; // 0x200	
+	CParticleTransformInput m_transformInput; // 0x208	
 	// MPropertyFriendlyName "Position Offset"
 	// MPropertySuppressExpr "m_variableReference.m_variableType != PVAL_TRANSFORM"
-	Vector m_positionOffset; // 0x268	
+	Vector m_positionOffset; // 0x270	
 	// MPropertyFriendlyName "Rotation Offset"
 	// MPropertySuppressExpr "m_variableReference.m_variableType != PVAL_TRANSFORM"
-	QAngle m_rotationOffset; // 0x274	
+	QAngle m_rotationOffset; // 0x27c	
 	// MPropertyFriendlyName "Value"
 	// MPropertySuppressExpr "m_variableReference.m_variableType != PVAL_VEC3"
-	CParticleCollectionVecInput m_vecInput; // 0x280	
+	CParticleCollectionVecInput m_vecInput; // 0x288	
 	// MPropertyFriendlyName "Value"
 	// MPropertySuppressExpr "m_variableReference.m_variableType != PVAL_FLOAT"
-	CParticleCollectionFloatInput m_floatInput; // 0x8d8	
+	CParticleCollectionFloatInput m_floatInput; // 0x900	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapCPtoCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "input control point number"
-	int32_t m_nInputControlPoint; // 0x1c0	
+	int32_t m_nInputControlPoint; // 0x1c8	
 	// MPropertyFriendlyName "output control point number"
-	int32_t m_nOutputControlPoint; // 0x1c4	
+	int32_t m_nOutputControlPoint; // 0x1cc	
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nInputField; // 0x1c8	
+	int32_t m_nInputField; // 0x1d0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nOutputField; // 0x1cc	
+	int32_t m_nOutputField; // 0x1d4	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1d0	
+	float m_flInputMin; // 0x1d8	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1d4	
+	float m_flInputMax; // 0x1dc	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1d8	
+	float m_flOutputMin; // 0x1e0	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1dc	
+	float m_flOutputMax; // 0x1e4	
 	// MPropertyFriendlyName "use the derivative"
-	bool m_bDerivative; // 0x1e0	
+	bool m_bDerivative; // 0x1e8	
 private:
-	[[maybe_unused]] uint8_t __pad01e1[0x3]; // 0x1e1
+	[[maybe_unused]] uint8_t __pad01e9[0x3]; // 0x1e9
 public:
 	// MPropertyFriendlyName "interpolation"
-	float m_flInterpRate; // 0x1e4	
+	float m_flInterpRate; // 0x1ec	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 4
 // Size: 0x1c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SkeletonAnimCapture_t__FrameStamp_t
@@ -16895,11 +17492,22 @@ public:
 	int32_t m_nTickCount; // 0x18	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x48
+// 
+// MGetKV3ClassDefaults
+struct CNmParameterizedBlendNode__Parameterization_t
+{
+public:
+	CUtlLeanVectorFixedGrowable< CNmParameterizedBlendNode::BlendRange_t, 5 > m_blendRanges; // 0x0	
+	Range_t m_parameterRange; // 0x40	
+};
+
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 1
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqAutoLayerFlag
@@ -16930,6 +17538,21 @@ public:
 	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("HeroID_t")->GetStaticFields()[0]->m_pInstance);};
 };
 
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
+// Size: 0x50
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Transform: Rigid Deformation"
+// MPropertyDescription "Apply the active deformer to the current transform as a rigid deformation and disable the deformer."
+// MVDataClassGroup
+// MVDataComponentRequiresAncestor
+class CSmartPropOperation_RigidDeformation : public CSmartPropTransformOperation
+{
+public:
+};
+
 // Registered binary: rendersystemdx11.dll (project 'rendersystemdx11')
 // Alignment: 8
 // Size: 0x38
@@ -16949,7 +17572,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ParamSpan_t
@@ -16967,20 +17589,38 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x10
+// Size: 0x20
 // Has VTable
-// Is Abstract
-class CNmBoolValueNode::CDefinition : public CNmValueNode::CDefinition
+// 
+// MGetKV3ClassDefaults
+class CNmTimeConditionNode::CDefinition : public CNmBoolValueNode::CDefinition
 {
 public:
-	// No schema binary for binding
+	int16_t m_sourceStateNodeIdx; // 0x10	
+	int16_t m_nInputValueNodeIdx; // 0x12	
+	float m_flComparand; // 0x14	
+	CNmTimeConditionNode::ComparisonType_t m_type; // 0x18	
+	CNmTimeConditionNode::Operator_t m_operator; // 0x19	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 4
+// Size: 0xc
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct CNmParameterizedBlendNode__BlendRange_t
+{
+public:
+	int16_t m_nInputIdx0; // 0x0	
+	int16_t m_nInputIdx1; // 0x2	
+	Range_t m_parameterValueRange; // 0x4	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "TestDomain"
@@ -17004,43 +17644,50 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x380
+// Size: 0x558
 // Has VTable
 class CAI_BaseNPCGraphController : public CAnimGraphControllerBase
 {
 public:
 	CAnimGraphParamRef< char* > m_sCurrScheduleName; // 0x18	
-	CAnimGraphParamRef< char* > m_sCurrTaskName; // 0x38	
-	CAnimGraphParamOptionalRef< char* > m_sTaskHandshakeType; // 0x58	
-	CAnimGraphParamRef< char* > m_sTaskHandshakeTypeShared; // 0x78	
-	CAnimGraphParamRef< bool > m_bTaskHandshakeRestart; // 0x98	
-	CAnimGraphParamOptionalRef< char* > m_sMovementHandshakeType; // 0xb0	
-	CAnimGraphParamRef< char* > m_sMovementHandshakeTypeShared; // 0xd0	
-	CAnimGraphParamRef< bool > m_bMovementHandshakeRestart; // 0xf0	
-	CAnimGraphParamOptionalRef< char* > m_sNavLinkType; // 0x108	
-	CAnimGraphParamRef< char* > m_sNavLinkTypeShared; // 0x128	
-	CAnimGraphParamOptionalRef< float32 > m_flPathDistanceToNavLink; // 0x148	
-	CAnimGraphParamOptionalRef< bool > m_bNavLinkIsOnPath; // 0x160	
-	CAnimGraphParamOptionalRef< Vector > m_vNavLinkTarget; // 0x178	
-	CAnimGraphParamOptionalRef< float32 > m_flEnemyDistance; // 0x190	
-	CAnimGraphParamOptionalRef< float32 > m_flEnemyDirection; // 0x1a8	
-	CAnimGraphParamOptionalRef< bool > m_bCanSeeEnemy; // 0x1c0	
-	CAnimGraphParamOptionalRef< bool > m_bHitTrigger; // 0x1d8	
-	CAnimGraphParamOptionalRef< Vector > m_vecHitDirection; // 0x1f0	
-	CAnimGraphParamOptionalRef< float32 > m_flHitHeading; // 0x208	
-	CAnimGraphParamOptionalRef< Vector > m_vecHitOffset; // 0x220	
-	CAnimGraphParamOptionalRef< float32 > m_flHitStrength; // 0x238	
-	CAnimGraphParamOptionalRef< char* > m_pszHitDamageType; // 0x250	
-	CAnimGraphParamOptionalRef< char* > m_pszDeathHitLocation; // 0x270	
-	CAnimGraphParamOptionalRef< int32 > m_nHitBone; // 0x290	
-	CAnimGraphParamOptionalRef< char* > m_pszNPCState; // 0x2a8	
-	CAnimGraphParamOptionalRef< bool > m_bStunned; // 0x2c8	
-	CAnimGraphParamOptionalRef< bool > m_bLookTargetChargedAutoclear; // 0x2e0	
-	CAnimGraphParamOptionalRef< char* > m_sBodyIdle; // 0x2f8	
-	CAnimGraphParamOptionalRef< char* > m_sFacingReason; // 0x318	
-	CAnimGraphTagOptionalRef m_sFacingModeUsePath; // 0x338	
-	CAnimGraphTagOptionalRef m_sAllowMovementOffPath; // 0x350	
-	CAnimGraphTagOptionalRef m_sKeepPathActiveStop; // 0x368	
+	CAnimGraphParamRef< char* > m_sCurrTaskName; // 0x40	
+	CAnimGraphParamOptionalRef< char* > m_sTaskHandshakeType; // 0x68	
+	CAnimGraphParamRef< char* > m_sTaskHandshakeTypeShared; // 0x90	
+	CAnimGraphParamRef< bool > m_bTaskHandshakeRestart; // 0xb8	
+	CAnimGraphParamOptionalRef< char* > m_sMovementHandshakeType; // 0xd8	
+	CAnimGraphParamRef< char* > m_sMovementHandshakeTypeShared; // 0x100	
+	CAnimGraphParamRef< bool > m_bMovementHandshakeRestart; // 0x128	
+	CAnimGraphParamOptionalRef< char* > m_sNavLinkType; // 0x148	
+	CAnimGraphParamRef< char* > m_sNavLinkTypeShared; // 0x170	
+	CAnimGraphParamOptionalRef< float32 > m_flPathDistanceToNavLink; // 0x198	
+	CAnimGraphParamOptionalRef< bool > m_bNavLinkIsOnPath; // 0x1b8	
+	CAnimGraphParamOptionalRef< Vector > m_vNavLinkTarget; // 0x1d8	
+	CAnimGraphParamOptionalRef< float32 > m_flEnemyDistance; // 0x1f8	
+	CAnimGraphParamOptionalRef< float32 > m_flEnemyDirection; // 0x218	
+	CAnimGraphParamOptionalRef< bool > m_bCanSeeEnemy; // 0x238	
+	CAnimGraphParamOptionalRef< bool > m_bEnemyFacingMe; // 0x258	
+	CAnimGraphParamOptionalRef< bool > m_bHitTrigger; // 0x278	
+	CAnimGraphParamOptionalRef< Vector > m_vecHitDirection; // 0x298	
+	CAnimGraphParamOptionalRef< float32 > m_flHitHeading; // 0x2b8	
+	CAnimGraphParamOptionalRef< Vector > m_vecHitOffset; // 0x2d8	
+	CAnimGraphParamOptionalRef< float32 > m_flHitStrength; // 0x2f8	
+	CAnimGraphParamOptionalRef< char* > m_pszHitDamageType; // 0x318	
+	CAnimGraphParamOptionalRef< char* > m_pszDeathHitLocation; // 0x340	
+	CAnimGraphParamOptionalRef< int32 > m_nHitBone; // 0x368	
+	CAnimGraphParamOptionalRef< char* > m_pszNPCState; // 0x388	
+	CAnimGraphParamOptionalRef< bool > m_bStunned; // 0x3b0	
+	CAnimGraphParamOptionalRef< bool > m_bLookTargetChargedAutoclear; // 0x3d0	
+	CAnimGraphParamOptionalRef< char* > m_sBodyIdle; // 0x3f0	
+	CAnimGraphParamOptionalRef< char* > m_sFlashlightMode; // 0x418	
+	CAnimGraphParamOptionalRef< char* > m_sFacingReason; // 0x440	
+	CAnimGraphTagOptionalRef m_sFacingModeUsePath; // 0x468	
+	CAnimGraphTagOptionalRef m_sAllowMovementOffPath; // 0x480	
+	CAnimGraphTagOptionalRef m_sKeepPathActiveStop; // 0x498	
+	CAnimGraphParamOptionalRef< bool > m_bMoveSolveNudgeActive; // 0x4b0	
+	CAnimGraphParamOptionalRef< float32 > m_flMoveSolveNudgeYaw; // 0x4d0	
+	CAnimGraphParamOptionalRef< char* > m_pszDoorOpenAction; // 0x4f0	
+	CAnimGraphParamOptionalRef< float32 > m_flDistanceToDoor; // 0x518	
+	CAnimGraphParamOptionalRef< bool > m_bDoorLeft; // 0x538	
 	
 	// Static fields:
 	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CAI_BaseNPCGraphController")->GetStaticFields()[0]->m_pInstance);};
@@ -17049,19 +17696,18 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapDensityGradientToVectorAttribute : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "Radius scale for particle influence"
-	float m_flRadiusScale; // 0x1b8	
+	float m_flRadiusScale; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -17081,55 +17727,58 @@ public:
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0x10
-// Construct allowed
+// Size: 0x18
 // 
 // MGetKV3ClassDefaults
-struct SoundWithProbability_t
+// MPropertyFriendlyName "Sound"
+// MPropertyDescription "Reference to a vsnd file or another container."
+class CSoundContainerReference
 {
 public:
-	// MPropertyFriendlyName "Vsnd Asset"
-	CStrongHandle< InfoForResourceTypeCVoiceContainerBase > m_hSound; // 0x0	
-	// MPropertyFriendlyName "Weight"
-	float m_fProbabilityWeight; // 0x8	
+	// MPropertyFriendlyName "Use Vsnd File"
+	bool m_bUseReference; // 0x0	
+	// MPropertySuppressExpr "m_bUseReference == 0"
+	// MPropertyFriendlyName "Vsnd File"
+	CStrongHandle< InfoForResourceTypeCVoiceContainerBase > m_sound; // 0x8	
+	// MPropertySuppressExpr "m_bUseReference == 1"
+	// MPropertyFriendlyName "Vsnd Container"
+	CVoiceContainerBase* m_pSound; // 0x10	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x338
+// Size: 0x348
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointToWaterSurface : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "source CP"
-	int32_t m_nSourceCP; // 0x1c0	
+	int32_t m_nSourceCP; // 0x1c8	
 	// MPropertyFriendlyName "CP to set to surface"
-	int32_t m_nDestCP; // 0x1c4	
+	int32_t m_nDestCP; // 0x1cc	
 	// MPropertyFriendlyName "CP to set to surface current flow velocity"
 	// MPropertySuppressExpr "mod != hlx"
-	int32_t m_nFlowCP; // 0x1c8	
+	int32_t m_nFlowCP; // 0x1d0	
 	// MPropertyFriendlyName "CP to set component of if water"
-	int32_t m_nActiveCP; // 0x1cc	
+	int32_t m_nActiveCP; // 0x1d4	
 	// MPropertyFriendlyName "CP component"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nActiveCPField; // 0x1d0	
+	int32_t m_nActiveCPField; // 0x1d8	
 private:
-	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
+	[[maybe_unused]] uint8_t __pad01dc[0x4]; // 0x1dc
 public:
 	// MPropertyFriendlyName "retest rate"
-	CParticleCollectionFloatInput m_flRetestRate; // 0x1d8	
+	CParticleCollectionFloatInput m_flRetestRate; // 0x1e0	
 	// MPropertyFriendlyName "adaptive retest on moving surface"
-	bool m_bAdaptiveThreshold; // 0x330	
+	bool m_bAdaptiveThreshold; // 0x340	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CCPPScriptComponentUpdater : public CAnimComponentUpdater
@@ -17143,7 +17792,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CDampedValueComponentUpdater : public CAnimComponentUpdater
@@ -17154,9 +17802,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x13d8
+// Size: 0x1440
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DistanceBetweenVecs : public CParticleFunctionOperator
@@ -17164,32 +17811,41 @@ class C_OP_DistanceBetweenVecs : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "first vector"
-	CPerParticleVecInput m_vecPoint1; // 0x1c0	
+	CPerParticleVecInput m_vecPoint1; // 0x1c8	
 	// MPropertyFriendlyName "second vector"
-	CPerParticleVecInput m_vecPoint2; // 0x818	
+	CPerParticleVecInput m_vecPoint2; // 0x840	
 	// MPropertyFriendlyName "distance minimum"
-	CPerParticleFloatInput m_flInputMin; // 0xe70	
+	CPerParticleFloatInput m_flInputMin; // 0xeb8	
 	// MPropertyFriendlyName "distance maximum"
-	CPerParticleFloatInput m_flInputMax; // 0xfc8	
+	CPerParticleFloatInput m_flInputMax; // 0x1018	
 	// MPropertyFriendlyName "output minimum"
-	CPerParticleFloatInput m_flOutputMin; // 0x1120	
+	CPerParticleFloatInput m_flOutputMin; // 0x1178	
 	// MPropertyFriendlyName "output maximum"
-	CPerParticleFloatInput m_flOutputMax; // 0x1278	
+	CPerParticleFloatInput m_flOutputMax; // 0x12d8	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x13d0	
+	ParticleSetMethod_t m_nSetMethod; // 0x1438	
 	// MPropertyFriendlyName "divide by deltatime (for comparing motion since last simulation)"
-	bool m_bDeltaTime; // 0x13d4	
+	bool m_bDeltaTime; // 0x143c	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x40
+// Has VTable
+class CNmCachedPoseReadTask : public CNmTask
+{
+public:
+	// No schema binary for binding
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x40
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqPoseSetting
@@ -17213,7 +17869,6 @@ public:
 // Size: 0x24
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RenderHairStrandInfo_t
@@ -17227,11 +17882,21 @@ public:
 	uint32_t m_nPackedSurfaceTangentOs; // 0x20	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x10
+// Has VTable
+// Is Abstract
+class CNmVectorValueNode::CDefinition : public CNmValueNode::CDefinition
+{
+public:
+	// No schema binary for binding
+};
+
 // Registered binary: schemasystem.dll (project 'resourcefile')
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CExampleSchemaVData_Monomorphic
@@ -17244,7 +17909,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x100
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataRoot
@@ -17272,7 +17936,6 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Scale"
@@ -17289,7 +17952,6 @@ public:
 // Alignment: 16
 // Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeTaperedCapsuleRigid_t
@@ -17304,33 +17966,31 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_GlobalScale : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "scale amount"
-	float m_flScale; // 0x1c0	
+	float m_flScale; // 0x1c8	
 	// MPropertyFriendlyName "scale control point number"
-	int32_t m_nScaleControlPointNumber; // 0x1c4	
+	int32_t m_nScaleControlPointNumber; // 0x1cc	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c8	
+	int32_t m_nControlPointNumber; // 0x1d0	
 	// MPropertyFriendlyName "scale radius"
-	bool m_bScaleRadius; // 0x1cc	
+	bool m_bScaleRadius; // 0x1d4	
 	// MPropertyFriendlyName "scale position"
-	bool m_bScalePosition; // 0x1cd	
+	bool m_bScalePosition; // 0x1d5	
 	// MPropertyFriendlyName "scale velocity"
-	bool m_bScaleVelocity; // 0x1ce	
+	bool m_bScaleVelocity; // 0x1d6	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0xb8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CChoiceUpdateNode : public CAnimUpdateNodeBase
@@ -17346,6 +18006,17 @@ public:
 	bool m_bCrossFade; // 0xb0	
 	bool m_bResetChosen; // 0xb1	
 	bool m_bDontResetSameSelection; // 0xb2	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmOrientationWarpEvent : public CNmEvent
+{
+public:
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -17367,7 +18038,6 @@ public:
 // Alignment: 8
 // Size: 0x40
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmLayerBlendNode::CDefinition : public CNmPoseNode::CDefinition
@@ -17378,14 +18048,13 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad0013[0x5]; // 0x13
 public:
-	CUtlLeanVectorFixedGrowable< CNmLayerBlendNode::LayerDefinition_t > m_layerDefinition; // 0x18	
+	CUtlLeanVectorFixedGrowable< CNmLayerBlendNode::LayerDefinition_t, 3 > m_layerDefinition; // 0x18	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0xd8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Save Direction Vector"
@@ -17406,7 +18075,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CRandomNumberGeneratorParameters
@@ -17422,7 +18090,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x70
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AnimationDecodeDebugDumpElement_t
@@ -17437,20 +18104,23 @@ public:
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
-// Alignment: 8
-// Size: 0x10
-// Has VTable
-// Is Abstract
-class CNmFloatValueNode::CDefinition : public CNmValueNode::CDefinition
+// Alignment: 4
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+class CNmBitFlags
 {
 public:
-	// No schema binary for binding
+	uint32_t m_flags; // 0x0	
+	
+	// Static fields:
+	static uint8_t &Get_MaxFlags(){return *reinterpret_cast<uint8_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNmBitFlags")->GetStaticFields()[0]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x180
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct GoldChangeSounds_t
@@ -17510,7 +18180,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AbilityUpgrade_t
@@ -17524,7 +18193,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSosGroupActionSoundeventClusterSchema : public CSosGroupActionSchema
@@ -17549,7 +18217,6 @@ public:
 // Registered binary: scenesystem.dll (project 'scenesystem')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSSDSMsg_LayerBase
@@ -17568,28 +18235,26 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x320
+// Size: 0x330
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ChooseRandomChildrenInGroup : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "group ID to affect"
-	int32_t m_nChildGroupID; // 0x1c0	
+	int32_t m_nChildGroupID; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "Number of Children to Use"
-	CParticleCollectionFloatInput m_flNumberOfChildren; // 0x1c8	
+	CParticleCollectionFloatInput m_flNumberOfChildren; // 0x1d0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x2e0
+// Size: 0x2e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapTransformToVector : public CParticleFunctionInitializer
@@ -17597,103 +18262,101 @@ class C_INIT_RemapTransformToVector : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
 	// MPropertyFriendlyName "input minimum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vInputMin; // 0x1c4	
+	Vector m_vInputMin; // 0x1cc	
 	// MPropertyFriendlyName "input maximum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vInputMax; // 0x1d0	
+	Vector m_vInputMax; // 0x1d8	
 	// MPropertyFriendlyName "output minimum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vOutputMin; // 0x1dc	
+	Vector m_vOutputMin; // 0x1e4	
 	// MPropertyFriendlyName "output maximum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vOutputMax; // 0x1e8	
+	Vector m_vOutputMax; // 0x1f0	
 private:
-	[[maybe_unused]] uint8_t __pad01f4[0x4]; // 0x1f4
+	[[maybe_unused]] uint8_t __pad01fc[0x4]; // 0x1fc
 public:
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0x1f8	
+	CParticleTransformInput m_TransformInput; // 0x200	
 	// MPropertyFriendlyName "local space transform"
 	// MParticleInputOptional
-	CParticleTransformInput m_LocalSpaceTransform; // 0x260	
+	CParticleTransformInput m_LocalSpaceTransform; // 0x268	
 	// MPropertyFriendlyName "emitter lifetime start time (seconds)"
-	float m_flStartTime; // 0x2c8	
+	float m_flStartTime; // 0x2d0	
 	// MPropertyFriendlyName "emitter lifetime end time (seconds)"
-	float m_flEndTime; // 0x2cc	
+	float m_flEndTime; // 0x2d4	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x2d0	
+	ParticleSetMethod_t m_nSetMethod; // 0x2d8	
 	// MPropertyFriendlyName "offset position"
-	bool m_bOffset; // 0x2d4	
+	bool m_bOffset; // 0x2dc	
 	// MPropertyFriendlyName "accelerate position"
-	bool m_bAccelerate; // 0x2d5	
+	bool m_bAccelerate; // 0x2dd	
 private:
-	[[maybe_unused]] uint8_t __pad02d6[0x2]; // 0x2d6
+	[[maybe_unused]] uint8_t __pad02de[0x2]; // 0x2de
 public:
 	// MPropertyFriendlyName "remap bias"
-	float m_flRemapBias; // 0x2d8	
+	float m_flRemapBias; // 0x2e0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x3d0
+// Size: 0x3e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_MovementPlaceOnGround : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "offset"
-	CPerParticleFloatInput m_flOffset; // 0x1b8	
+	CPerParticleFloatInput m_flOffset; // 0x1c0	
 	// MPropertyFriendlyName "max trace length"
-	float m_flMaxTraceLength; // 0x310	
+	float m_flMaxTraceLength; // 0x320	
 	// MPropertyFriendlyName "CP movement tolerance"
-	float m_flTolerance; // 0x314	
+	float m_flTolerance; // 0x324	
 	// MPropertyFriendlyName "trace offset"
-	float m_flTraceOffset; // 0x318	
+	float m_flTraceOffset; // 0x328	
 	// MPropertyFriendlyName "interpolation rate"
-	float m_flLerpRate; // 0x31c	
+	float m_flLerpRate; // 0x32c	
 	// MPropertyFriendlyName "collision group"
-	char m_CollisionGroupName[128]; // 0x320	
+	char m_CollisionGroupName[128]; // 0x330	
 	// MPropertyFriendlyName "Trace Set"
-	ParticleTraceSet_t m_nTraceSet; // 0x3a0	
+	ParticleTraceSet_t m_nTraceSet; // 0x3b0	
 	// MPropertyFriendlyName "reference CP 1"
-	int32_t m_nRefCP1; // 0x3a4	
+	int32_t m_nRefCP1; // 0x3b4	
 	// MPropertyFriendlyName "reference CP 2"
-	int32_t m_nRefCP2; // 0x3a8	
+	int32_t m_nRefCP2; // 0x3b8	
 	// MPropertyFriendlyName "interploation distance tolerance cp"
-	int32_t m_nLerpCP; // 0x3ac	
+	int32_t m_nLerpCP; // 0x3bc	
 private:
-	[[maybe_unused]] uint8_t __pad03b0[0x8]; // 0x3b0
+	[[maybe_unused]] uint8_t __pad03c0[0x8]; // 0x3c0
 public:
 	// MPropertyFriendlyName "No Collision Behavior"
-	ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x3b8	
+	ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x3c8	
 	// MPropertyFriendlyName "include default contents trace hulls"
-	bool m_bIncludeShotHull; // 0x3bc	
+	bool m_bIncludeShotHull; // 0x3cc	
 	// MPropertyFriendlyName "include water"
-	bool m_bIncludeWater; // 0x3bd	
+	bool m_bIncludeWater; // 0x3cd	
 private:
-	[[maybe_unused]] uint8_t __pad03be[0x2]; // 0x3be
+	[[maybe_unused]] uint8_t __pad03ce[0x2]; // 0x3ce
 public:
 	// MPropertyFriendlyName "set normal"
-	bool m_bSetNormal; // 0x3c0	
+	bool m_bSetNormal; // 0x3d0	
 	// MPropertyFriendlyName "treat offset as scalar of particle radius"
-	bool m_bScaleOffset; // 0x3c1	
+	bool m_bScaleOffset; // 0x3d1	
 private:
-	[[maybe_unused]] uint8_t __pad03c2[0x2]; // 0x3c2
+	[[maybe_unused]] uint8_t __pad03d2[0x2]; // 0x3d2
 public:
 	// MPropertyFriendlyName "preserve initial Z-offset relative to cp"
-	int32_t m_nPreserveOffsetCP; // 0x3c4	
+	int32_t m_nPreserveOffsetCP; // 0x3d4	
 	// MPropertyFriendlyName "CP Entity to Ignore for Collisions"
-	int32_t m_nIgnoreCP; // 0x3c8	
+	int32_t m_nIgnoreCP; // 0x3d8	
 };
 
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x130
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialResourceData_t
@@ -17720,7 +18383,6 @@ public:
 // Size: 0x70
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimationGraphVisualizerAxis : public CAnimationGraphVisualizerPrimitiveBase
@@ -17753,31 +18415,29 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x480
+// Size: 0x498
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ConstrainDistance : public CParticleFunctionConstraint
 {
 public:
 	// MPropertyFriendlyName "minimum distance"
-	CParticleCollectionFloatInput m_fMinDistance; // 0x1b8	
+	CParticleCollectionFloatInput m_fMinDistance; // 0x1c0	
 	// MPropertyFriendlyName "maximum distance"
-	CParticleCollectionFloatInput m_fMaxDistance; // 0x310	
+	CParticleCollectionFloatInput m_fMaxDistance; // 0x320	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x468	
+	int32_t m_nControlPointNumber; // 0x480	
 	// MPropertyFriendlyName "offset of center"
 	// MVectorIsCoordinate
-	Vector m_CenterOffset; // 0x46c	
+	Vector m_CenterOffset; // 0x484	
 	// MPropertyFriendlyName "global center point"
-	bool m_bGlobalCenter; // 0x478	
+	bool m_bGlobalCenter; // 0x490	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x40
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct BlendItem_t
@@ -17795,7 +18455,6 @@ public:
 // Alignment: 2
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeWeightedNode_t
@@ -17809,7 +18468,6 @@ public:
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataNodeType "1"
@@ -17834,7 +18492,6 @@ public:
 // Alignment: 8
 // Size: 0x28
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSosGroupActionLimitSchema : public CSosGroupActionSchema
@@ -17850,9 +18507,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_NormalOffset : public CParticleFunctionInitializer
@@ -17860,23 +18516,22 @@ class C_INIT_NormalOffset : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "offset min"
 	// MVectorIsCoordinate
-	Vector m_OffsetMin; // 0x1c0	
+	Vector m_OffsetMin; // 0x1c8	
 	// MPropertyFriendlyName "offset max"
 	// MVectorIsCoordinate
-	Vector m_OffsetMax; // 0x1cc	
+	Vector m_OffsetMax; // 0x1d4	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1d8	
+	int32_t m_nControlPointNumber; // 0x1e0	
 	// MPropertyFriendlyName "offset in local space 0/1"
-	bool m_bLocalCoords; // 0x1dc	
+	bool m_bLocalCoords; // 0x1e4	
 	// MPropertyFriendlyName "normalize output 0/1"
-	bool m_bNormalize; // 0x1dd	
+	bool m_bNormalize; // 0x1e5	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_Noise : public CParticleFunctionOperator
@@ -17884,20 +18539,20 @@ class C_OP_Noise : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1bc	
+	float m_flOutputMin; // 0x1c4	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1c0	
+	float m_flOutputMax; // 0x1c8	
 	// MPropertyFriendlyName "noise coordinate scale"
-	float m_fl4NoiseScale; // 0x1c4	
+	float m_fl4NoiseScale; // 0x1cc	
 	// MPropertyFriendlyName "additive"
-	bool m_bAdditive; // 0x1c8	
+	bool m_bAdditive; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01c9[0x3]; // 0x1c9
+	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
 public:
 	// MPropertyFriendlyName "Noise animation time scale"
-	float m_flNoiseAnimationTimeScale; // 0x1cc	
+	float m_flNoiseAnimationTimeScale; // 0x1d4	
 };
 
 // Registered binary: client.dll (project 'entity2')
@@ -17917,7 +18572,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CLookComponentUpdater : public CAnimComponentUpdater
@@ -17939,7 +18593,6 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CCycleControlUpdateNode : public CUnaryUpdateNode
@@ -17954,7 +18607,6 @@ public:
 // Size: 0x28
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataRoot
@@ -17982,7 +18634,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Direction Vector"
@@ -17999,7 +18650,6 @@ public:
 // Size: 0x50
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataNodeTintColor
@@ -18012,7 +18662,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnTriangle_t
@@ -18023,61 +18672,61 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x318
+// Size: 0x330
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_DistanceToNeighborCull : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "cull distance"
-	CPerParticleFloatInput m_flDistance; // 0x1c0	
+	CPerParticleFloatInput m_flDistance; // 0x1c8	
+	// MPropertyFriendlyName "include particle radius"
+	bool m_bIncludeRadii; // 0x328	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_MovementRigidAttachToCP : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1b8	
+	int32_t m_nControlPointNumber; // 0x1c0	
 	// MPropertyFriendlyName "scale control point number"
-	int32_t m_nScaleControlPoint; // 0x1bc	
+	int32_t m_nScaleControlPoint; // 0x1c4	
 	// MPropertyFriendlyName "scale control point field"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nScaleCPField; // 0x1c0	
+	int32_t m_nScaleCPField; // 0x1c8	
 	// MPropertyFriendlyName "cache attribute to read from"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1c4	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1cc	
 	// MPropertyFriendlyName "attribute to write to"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d0	
 	// MPropertyFriendlyName "local space"
-	bool m_bOffsetLocal; // 0x1cc	
+	bool m_bOffsetLocal; // 0x1d4	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x10
+// Size: 0x18
 // Has VTable
-// Is Abstract
-class CNmVectorValueNode::CDefinition : public CNmValueNode::CDefinition
+// 
+// MGetKV3ClassDefaults
+class CNmVectorNegateNode::CDefinition : public CNmVectorValueNode::CDefinition
 {
 public:
-	// No schema binary for binding
+	int16_t m_nInputValueNodeIdx; // 0x10	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 1
 // Size: 0xb
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqSeqDescFlag
@@ -18099,7 +18748,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AimCameraOpFixedSettings_t
@@ -18114,11 +18762,31 @@ public:
 	CUtlVector< int32 > m_propJoints; // 0x18	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x110
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmBlend2DNode::CDefinition : public CNmPoseNode::CDefinition
+{
+public:
+	CUtlVectorFixedGrowable< int16, 5 > m_sourceNodeIndices; // 0x10	
+	int16_t m_nInputParameterNodeIdx0; // 0x38	
+	int16_t m_nInputParameterNodeIdx1; // 0x3a	
+private:
+	[[maybe_unused]] uint8_t __pad003c[0x4]; // 0x3c
+public:
+	CUtlVectorFixedGrowable< Vector2D, 10 > m_values; // 0x40	
+	CUtlVectorFixedGrowable< uint8, 30 > m_indices; // 0xa8	
+	CUtlVectorFixedGrowable< uint8, 10 > m_hullIndices; // 0xe0	
+	bool m_bAllowLooping; // 0x108	
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x1a0
 // Has VTable
-// MNetworkAssumeNotNetworkable
 class CNetworkTransmitComponent
 {
 private:
@@ -18138,7 +18806,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x58
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyAutoExpandSelf
@@ -18164,11 +18831,23 @@ public:
 	CUtlVector< CUtlString > m_vecAbilityProperties; // 0x40	
 };
 
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x40
+// Has Trivial Destructor
+struct EventPostAdvanceTick_t : public EventSimulate_t
+{
+public:
+	int32_t m_nCurrentTick; // 0x30	
+	int32_t m_nCurrentTickThisFrame; // 0x34	
+	int32_t m_nTotalTicksThisFrame; // 0x38	
+	int32_t m_nTotalTicks; // 0x3c	
+};
+
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct BaseSceneObjectOverride_t
@@ -18193,42 +18872,40 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapScalarOnceTimed : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "remap time proportional"
-	bool m_bProportional; // 0x1b8	
+	bool m_bProportional; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01b9[0x3]; // 0x1b9
+	[[maybe_unused]] uint8_t __pad01c1[0x3]; // 0x1c1
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1c4	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1c4	
+	float m_flInputMin; // 0x1cc	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1c8	
+	float m_flInputMax; // 0x1d0	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1cc	
+	float m_flOutputMin; // 0x1d4	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d0	
+	float m_flOutputMax; // 0x1d8	
 	// MPropertyFriendlyName "remap time"
-	float m_flRemapTime; // 0x1d4	
+	float m_flRemapTime; // 0x1dc	
 };
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
-// Size: 0x158
+// Size: 0x160
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyCustomEditor "RemapFloatInput()"
@@ -18239,9 +18916,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x5d8
+// Size: 0x5f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_InstantaneousEmitter : public CParticleFunctionEmitter
@@ -18249,20 +18925,20 @@ class C_OP_InstantaneousEmitter : public CParticleFunctionEmitter
 public:
 	// MPropertyFriendlyName "num to emit"
 	// MPropertyAttributeRange "1 1000"
-	CParticleCollectionFloatInput m_nParticlesToEmit; // 0x1c0	
+	CParticleCollectionFloatInput m_nParticlesToEmit; // 0x1c8	
 	// MPropertyFriendlyName "emission start time"
-	CParticleCollectionFloatInput m_flStartTime; // 0x318	
+	CParticleCollectionFloatInput m_flStartTime; // 0x328	
 	// MPropertyFriendlyName "emission scale from parent particle events"
-	float m_flInitFromKilledParentParticles; // 0x470	
+	float m_flInitFromKilledParentParticles; // 0x488	
 	// MPropertyFriendlyName "emission parent particle event type"
 	// MPropertySuppressExpr "m_flInitFromKilledParentParticles == 0"
-	EventTypeSelection_t m_nEventType; // 0x474	
+	EventTypeSelection_t m_nEventType; // 0x48c	
 	// MPropertyFriendlyName "emission scale from parent particle count"
-	CParticleCollectionFloatInput m_flParentParticleScale; // 0x478	
+	CParticleCollectionFloatInput m_flParentParticleScale; // 0x490	
 	// MPropertyFriendlyName "maximum emission per frame"
-	int32_t m_nMaxEmittedPerFrame; // 0x5d0	
+	int32_t m_nMaxEmittedPerFrame; // 0x5f0	
 	// MPropertyFriendlyName "control point with snapshot data"
-	int32_t m_nSnapshotControlPoint; // 0x5d4	
+	int32_t m_nSnapshotControlPoint; // 0x5f4	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -18270,7 +18946,6 @@ public:
 // Size: 0x80
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CConcreteAnimParameter : public CAnimParameterBase
@@ -18298,7 +18973,6 @@ public:
 // Alignment: 8
 // Size: 0x10
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmReferencePoseNode::CDefinition : public CNmPoseNode::CDefinition
@@ -18325,7 +18999,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ModifierTrackedParticle_t
@@ -18345,7 +19018,6 @@ public:
 // Alignment: 8
 // Size: 0x3c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Create Sizer"
@@ -18408,7 +19080,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeAnimStrayRadius_t
@@ -18421,44 +19092,42 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x208
+// Size: 0x210
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapNamedModelElementToScalar : public CParticleFunctionInitializer
 {
 public:
-	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x1c0	
+	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x1c8	
 	// MPropertyFriendlyName "names"
-	CUtlVector< CUtlString > m_names; // 0x1c8	
+	CUtlVector< CUtlString > m_names; // 0x1d0	
 	// MPropertyFriendlyName "remap values for names"
-	CUtlVector< float32 > m_values; // 0x1e0	
+	CUtlVector< float32 > m_values; // 0x1e8	
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1f8	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x200	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1fc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x204	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x200	
+	ParticleSetMethod_t m_nSetMethod; // 0x208	
 	// MPropertyFriendlyName "model from renderer"
-	bool m_bModelFromRenderer; // 0x204	
+	bool m_bModelFromRenderer; // 0x20c	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RadiusDecay : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "minimum radius"
-	float m_flMinRadius; // 0x1b8	
+	float m_flMinRadius; // 0x1c0	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -18476,23 +19145,21 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x30
-// Construct allowed
+// Size: 0x38
 // 
 // MGetKV3ClassDefaults
 struct RnCapsuleDesc_t : public RnShapeDesc_t
 {
 public:
-	// -> m_vCenter[2] - 0x10
-	// -> m_flRadius - 0x28
-	RnCapsule_t m_Capsule; // 0x10	
+	// -> m_vCenter[2] - 0x18
+	// -> m_flRadius - 0x30
+	RnCapsule_t m_Capsule; // 0x18	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_LockToPointList : public CParticleFunctionOperator
@@ -18500,27 +19167,26 @@ class C_OP_LockToPointList : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "point list"
-	CUtlVector< PointDefinition_t > m_pointList; // 0x1c0	
+	CUtlVector< PointDefinition_t > m_pointList; // 0x1c8	
 	// MPropertyFriendlyName "space points along path"
-	bool m_bPlaceAlongPath; // 0x1d8	
+	bool m_bPlaceAlongPath; // 0x1e0	
 	// MPropertyFriendlyName "Treat path as a loop"
-	bool m_bClosedLoop; // 0x1d9	
+	bool m_bClosedLoop; // 0x1e1	
 private:
-	[[maybe_unused]] uint8_t __pad01da[0x2]; // 0x1da
+	[[maybe_unused]] uint8_t __pad01e2[0x2]; // 0x1e2
 public:
 	// MPropertyFriendlyName "Numer of points along path"
-	int32_t m_nNumPointsAlongPath; // 0x1dc	
+	int32_t m_nNumPointsAlongPath; // 0x1e4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ModelReference_t
@@ -18536,7 +19202,6 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimGraphDebugReplay
@@ -18566,7 +19231,6 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulseCell_Inflow_BaseEntrypoint : public CPulseCell_BaseFlow
@@ -18581,8 +19245,7 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x80
-// Construct allowed
+// Size: 0x60
 // 
 // MGetKV3ClassDefaults
 struct DamageReceivedSounds_t
@@ -18590,27 +19253,22 @@ struct DamageReceivedSounds_t
 public:
 	// MPropertyDescription "When a specific damage received can not be selected"
 	CSoundEventName m_strDamageReceiveDefault; // 0x0	
-	// MPropertyDescription "When low priority damage is received"
-	CSoundEventName m_strDamageReceiveBulletMinor; // 0x10	
-	// MPropertyDescription "When bullet damage is received"
-	CSoundEventName m_strDamageReceiveBullet; // 0x20	
+	// MPropertyDescription "When NPC damage is received"
+	CSoundEventName m_strDamageReceiveNPC; // 0x10	
 	// MPropertyDescription "When DOT damage is received"
-	CSoundEventName m_strDamageReceiveDOT; // 0x30	
-	// MPropertyDescription "When low priority melee damage is received"
-	CSoundEventName m_strDamageReceiveMeleeMinor; // 0x40	
+	CSoundEventName m_strDamageReceiveDOT; // 0x20	
+	// MPropertyDescription "When NPC melee damage is received"
+	CSoundEventName m_strDamageReceiveMeleeNPC; // 0x30	
 	// MPropertyDescription "When melee damage is received"
-	CSoundEventName m_strDamageReceiveMelee; // 0x50	
-	// MPropertyDescription "When crit damage is received"
-	CSoundEventName m_strDamageReceiveCrit; // 0x60	
+	CSoundEventName m_strDamageReceiveMelee; // 0x40	
 	// MPropertyDescription "When damage to player shield is received"
-	CSoundEventName m_strDamageReceiveShield; // 0x70	
+	CSoundEventName m_strDamageReceiveShield; // 0x50	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Random Rotation"
@@ -18627,9 +19285,8 @@ public:
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0x100
+// Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Container Switch"
@@ -18638,7 +19295,7 @@ class CVoiceContainerSwitch : public CVoiceContainerBase
 {
 public:
 	// MPropertyFriendlyName "Container List"
-	CUtlVector< CVoiceContainerBase* > m_soundsToPlay; // 0xe8	
+	CUtlVector< CSoundContainerReference > m_soundsToPlay; // 0xb8	
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
@@ -18659,7 +19316,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct LookAtBone_t
@@ -18667,6 +19323,17 @@ struct LookAtBone_t
 public:
 	int32_t m_index; // 0x0	
 	float m_weight; // 0x4	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x40
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmVelocityBlendNode::CDefinition : public CNmParameterizedBlendNode::CDefinition
+{
+public:
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
@@ -18682,26 +19349,37 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x20
+// Size: 0x28
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmTransitionEvent : public CNmEvent
 {
 public:
-	NmTransitionRule_t m_rule; // 0x10	
+	NmTransitionRule_t m_rule; // 0x18	
 private:
-	[[maybe_unused]] uint8_t __pad0011[0x7]; // 0x11
+	[[maybe_unused]] uint8_t __pad0019[0x7]; // 0x19
 public:
-	CGlobalSymbol m_ID; // 0x18	
+	CGlobalSymbol m_ID; // 0x20	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x28
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmParameterizedClipSelectorNode::CDefinition : public CNmPoseNode::CDefinition
+{
+public:
+	CUtlLeanVectorFixedGrowable< int16, 5 > m_optionNodeIndices; // 0x10	
+	int16_t m_parameterNodeIdx; // 0x20	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Internal Tag"
@@ -18714,7 +19392,6 @@ public:
 // Alignment: 8
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNavLinkAnimgraphVar
@@ -18731,42 +19408,40 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x498
+// Size: 0x4b0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetRandomControlPointPosition : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "set positions in world space"
-	bool m_bUseWorldLocation; // 0x1c0	
+	bool m_bUseWorldLocation; // 0x1c8	
 	// MPropertyFriendlyName "inherit CP orientation"
-	bool m_bOrient; // 0x1c1	
+	bool m_bOrient; // 0x1c9	
 private:
-	[[maybe_unused]] uint8_t __pad01c2[0x2]; // 0x1c2
+	[[maybe_unused]] uint8_t __pad01ca[0x2]; // 0x1ca
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nCP1; // 0x1c4	
+	int32_t m_nCP1; // 0x1cc	
 	// MPropertyFriendlyName "control point to offset positions from"
-	int32_t m_nHeadLocation; // 0x1c8	
+	int32_t m_nHeadLocation; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
+	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
 public:
 	// MPropertyFriendlyName "re-randomize rate (-1 for once only)"
-	CParticleCollectionFloatInput m_flReRandomRate; // 0x1d0	
+	CParticleCollectionFloatInput m_flReRandomRate; // 0x1d8	
 	// MPropertyFriendlyName "control point min"
-	Vector m_vecCPMinPos; // 0x328	
+	Vector m_vecCPMinPos; // 0x338	
 	// MPropertyFriendlyName "control point max"
-	Vector m_vecCPMaxPos; // 0x334	
+	Vector m_vecCPMaxPos; // 0x344	
 	// MPropertyFriendlyName "Interpolation"
-	CParticleCollectionFloatInput m_flInterpolation; // 0x340	
+	CParticleCollectionFloatInput m_flInterpolation; // 0x350	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 16
 // Size: 0x40
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SkeletonAnimCapture_t__Bone_t
@@ -18781,7 +19456,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CStaticPoseCache
@@ -18798,7 +19472,6 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -18816,7 +19489,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeWorldCollisionParams_t
@@ -18844,50 +19516,48 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x338
+// Size: 0x340
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderSound : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "duration scale"
-	float m_flDurationScale; // 0x208	
+	float m_flDurationScale; // 0x210	
 	// MPropertyFriendlyName "decibel level scale"
-	float m_flSndLvlScale; // 0x20c	
+	float m_flSndLvlScale; // 0x214	
 	// MPropertyFriendlyName "pitch scale"
-	float m_flPitchScale; // 0x210	
+	float m_flPitchScale; // 0x218	
 	// MPropertyFriendlyName "volume scale"
-	float m_flVolumeScale; // 0x214	
+	float m_flVolumeScale; // 0x21c	
 	// MPropertyFriendlyName "decibel level field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nSndLvlField; // 0x218	
+	ParticleAttributeIndex_t m_nSndLvlField; // 0x220	
 	// MPropertyFriendlyName "duration field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nDurationField; // 0x21c	
+	ParticleAttributeIndex_t m_nDurationField; // 0x224	
 	// MPropertyFriendlyName "pitch field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nPitchField; // 0x220	
+	ParticleAttributeIndex_t m_nPitchField; // 0x228	
 	// MPropertyFriendlyName "volume field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nVolumeField; // 0x224	
+	ParticleAttributeIndex_t m_nVolumeField; // 0x22c	
 	// MPropertyFriendlyName "sound channel"
 	// MPropertyAttributeChoiceName "sound_channel"
-	int32_t m_nChannel; // 0x228	
+	int32_t m_nChannel; // 0x230	
 	// MPropertyFriendlyName "sound control point number"
-	int32_t m_nCPReference; // 0x22c	
+	int32_t m_nCPReference; // 0x234	
 	// MPropertyFriendlyName "sound"
 	// MPropertyAttributeEditor "SoundPicker()"
-	char m_pszSoundName[256]; // 0x230	
+	char m_pszSoundName[256]; // 0x238	
 	// MPropertyFriendlyName "suppress stop event"
-	bool m_bSuppressStopSoundEvent; // 0x330	
+	bool m_bSuppressStopSoundEvent; // 0x338	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ParticlePreviewBodyGroup_t
@@ -18899,9 +19569,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x268
+// Size: 0x270
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RtEnvCull : public CParticleFunctionInitializer
@@ -18909,26 +19578,26 @@ class C_INIT_RtEnvCull : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "test direction"
 	// MVectorIsCoordinate
-	Vector m_vecTestDir; // 0x1c0	
+	Vector m_vecTestDir; // 0x1c8	
 	// MPropertyFriendlyName "cull normal"
 	// MVectorIsCoordinate
-	Vector m_vecTestNormal; // 0x1cc	
+	Vector m_vecTestNormal; // 0x1d4	
 	// MPropertyFriendlyName "use velocity for test direction"
-	bool m_bUseVelocity; // 0x1d8	
+	bool m_bUseVelocity; // 0x1e0	
 	// MPropertyFriendlyName "cull on miss"
-	bool m_bCullOnMiss; // 0x1d9	
+	bool m_bCullOnMiss; // 0x1e1	
 	// MPropertyFriendlyName "velocity test adjust lifespan"
-	bool m_bLifeAdjust; // 0x1da	
+	bool m_bLifeAdjust; // 0x1e2	
 	// MPropertyFriendlyName "ray trace environment name"
-	char m_RtEnvName[128]; // 0x1db	
+	char m_RtEnvName[128]; // 0x1e3	
 private:
-	[[maybe_unused]] uint8_t __pad025b[0x1]; // 0x25b
+	[[maybe_unused]] uint8_t __pad0263[0x1]; // 0x263
 public:
 	// MPropertyFriendlyName "ray trace environment cp"
-	int32_t m_nRTEnvCP; // 0x25c	
+	int32_t m_nRTEnvCP; // 0x264	
 	// MPropertyFriendlyName "rt env control point component"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nComponent; // 0x260	
+	int32_t m_nComponent; // 0x268	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
@@ -18947,9 +19616,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapScalarEndCap : public CParticleFunctionOperator
@@ -18957,68 +19625,66 @@ class C_OP_RemapScalarEndCap : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1c0	
+	float m_flInputMin; // 0x1c8	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1c4	
+	float m_flInputMax; // 0x1cc	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1c8	
+	float m_flOutputMin; // 0x1d0	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1cc	
+	float m_flOutputMax; // 0x1d4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x208
+// Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapCPtoVector : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "input control point number"
-	int32_t m_nCPInput; // 0x1b8	
+	int32_t m_nCPInput; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "local space CP"
-	int32_t m_nLocalSpaceCP; // 0x1c0	
+	int32_t m_nLocalSpaceCP; // 0x1c8	
 	// MPropertyFriendlyName "input minimum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vInputMin; // 0x1c4	
+	Vector m_vInputMin; // 0x1cc	
 	// MPropertyFriendlyName "input maximum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vInputMax; // 0x1d0	
+	Vector m_vInputMax; // 0x1d8	
 	// MPropertyFriendlyName "output minimum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vOutputMin; // 0x1dc	
+	Vector m_vOutputMin; // 0x1e4	
 	// MPropertyFriendlyName "output maximum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vOutputMax; // 0x1e8	
+	Vector m_vOutputMax; // 0x1f0	
 	// MPropertyFriendlyName "emitter lifetime start time (seconds)"
-	float m_flStartTime; // 0x1f4	
+	float m_flStartTime; // 0x1fc	
 	// MPropertyFriendlyName "emitter lifetime end time (seconds)"
-	float m_flEndTime; // 0x1f8	
+	float m_flEndTime; // 0x200	
 	// MPropertyFriendlyName "interpolation scale"
-	float m_flInterpRate; // 0x1fc	
+	float m_flInterpRate; // 0x204	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x200	
+	ParticleSetMethod_t m_nSetMethod; // 0x208	
 	// MPropertyFriendlyName "offset position"
-	bool m_bOffset; // 0x204	
+	bool m_bOffset; // 0x20c	
 	// MPropertyFriendlyName "accelerate position"
-	bool m_bAccelerate; // 0x205	
+	bool m_bAccelerate; // 0x20d	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPlayerInputAnimMotorUpdater : public CAnimMotorUpdaterBase
@@ -19038,7 +19704,6 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CPulseCell_Timeline__TimelineEvent_t
@@ -19056,7 +19721,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct HeroPurchaseBonus_t
@@ -19069,8 +19733,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0xb0
-// Construct allowed
+// Size: 0xc8
 // 
 // MGetKV3ClassDefaults
 // MSmartPropClassVersion
@@ -19080,7 +19743,7 @@ public:
 // MVDataPreviewWidget
 // MVDataGroupNodeClass
 // MVDataUsesComponentEditor
-// MPropertyFriendlyName "Smart Prop"
+// MPropertyFriendlyName "Smart Prop Root"
 // MPropertyDescription "Root of a smart prop, contains a list of elements to evaluate."
 class CSmartPropRoot
 {
@@ -19098,13 +19761,15 @@ public:
 	// MPropertyDescription "List of the root level elements making up the smart prop definition, each element may be an entire tree."
 	// MVDataPromoteField
 	CUtlVector< CSmartPropElement* > m_Children; // 0x78	
+	// MPropertyFriendlyName "Modifiers"
+	// MVDataPromoteField
+	CUtlVector< CSmartPropModifier* > m_Modifiers; // 0x90	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Path Positions"
@@ -19121,7 +19786,6 @@ public:
 // Size: 0x14
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeBandBendLimit_t
@@ -19134,9 +19798,8 @@ public:
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
-// Size: 0x658
+// Size: 0x678
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyCustomEditor "CollectionRendererVecInput()"
@@ -19148,7 +19811,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimFoot
@@ -19159,6 +19821,22 @@ public:
 	Vector m_vHeelOffset; // 0x14	
 	int32_t m_ankleBoneIndex; // 0x20	
 	int32_t m_toeBoneIndex; // 0x24	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x80
+// Has VTable
+class CCitadel_Destroyable_Building_GraphController : public CAnimGraphControllerBase
+{
+public:
+	CAnimGraphParamOptionalRef< bool > m_bHitTrigger; // 0x18	
+	CAnimGraphParamOptionalRef< char* > m_eState; // 0x38	
+	CAnimGraphParamOptionalRef< float32 > m_fHealth; // 0x60	
+	
+	// Static fields:
+	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CCitadel_Destroyable_Building_GraphController")->GetStaticFields()[0]->m_pInstance);};
+	static bool &Get_s_bSchemaTest(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CCitadel_Destroyable_Building_GraphController")->GetStaticFields()[1]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
@@ -19174,7 +19852,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialOverride_t : public BaseSceneObjectOverride_t
@@ -19190,23 +19867,21 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x310
+// Size: 0x320
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DecayClampCount : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "Maximum Count"
-	CParticleCollectionFloatInput m_nCount; // 0x1b8	
+	CParticleCollectionFloatInput m_nCount; // 0x1c0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SpinYaw : public CGeneralSpin
@@ -19216,23 +19891,21 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x318
+// Size: 0x328
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetSimulationRate : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "simulation timescale"
-	CParticleCollectionFloatInput m_flSimulationScale; // 0x1c0	
+	CParticleCollectionFloatInput m_flSimulationScale; // 0x1c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x818
+// Size: 0x840
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_ScaleVelocity : public CParticleFunctionInitializer
@@ -19240,14 +19913,13 @@ class C_INIT_ScaleVelocity : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "velocity scale"
 	// MVectorIsCoordinate
-	CParticleCollectionVecInput m_vecScale; // 0x1c0	
+	CParticleCollectionVecInput m_vecScale; // 0x1c8	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct StatWithCategory_t
@@ -19262,7 +19934,6 @@ public:
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParam_t
@@ -19274,7 +19945,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x80
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimDemoCaptureSettings
@@ -19331,22 +20001,20 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x18
+// Size: 0x20
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmIDEvent : public CNmEvent
 {
 public:
-	CGlobalSymbol m_ID; // 0x10	
+	CGlobalSymbol m_ID; // 0x18	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x78
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPathMetricEvaluator : public CMotionMetricEvaluator
@@ -19380,13 +20048,47 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSpeedScaleUpdateNode : public CUnaryUpdateNode
 {
 public:
 	CAnimParamHandle m_paramIndex; // 0x68	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x30
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmTargetWarpNode::CDefinition : public CNmPoseNode::CDefinition
+{
+public:
+	int16_t m_nClipReferenceNodeIdx; // 0x10	
+	int16_t m_nTargetValueNodeIdx; // 0x12	
+	CNmRootMotionData::SamplingMode_t m_samplingMode; // 0x14	
+	bool m_bAllowTargetUpdate; // 0x15	
+private:
+	[[maybe_unused]] uint8_t __pad0016[0x2]; // 0x16
+public:
+	float m_flSamplingPositionErrorThresholdSq; // 0x18	
+	float m_flMaxTangentLength; // 0x1c	
+	float m_flLerpFallbackDistanceThreshold; // 0x20	
+	float m_flTargetUpdateDistanceThreshold; // 0x24	
+	float m_flTargetUpdateAngleThresholdRadians; // 0x28	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmOrNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	CUtlLeanVectorFixedGrowable< int16, 4 > m_conditionNodeIndices; // 0x10	
 };
 
 // Registered binary: schemasystem.dll (project 'resourcefile')
@@ -19407,7 +20109,6 @@ public:
 // Alignment: 4
 // Size: 0x80
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixEQ8Desc_t
@@ -19418,28 +20119,26 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapVectortoCP : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutControlPointNumber; // 0x1b8	
+	int32_t m_nOutControlPointNumber; // 0x1c0	
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1c4	
 	// MPropertyFriendlyName "particle number to read"
-	int32_t m_nParticleNumber; // 0x1c0	
+	int32_t m_nParticleNumber; // 0x1c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapVisibilityScalar : public CParticleFunctionOperator
@@ -19447,50 +20146,48 @@ class C_OP_RemapVisibilityScalar : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "visibility minimum"
-	float m_flInputMin; // 0x1c0	
+	float m_flInputMin; // 0x1c8	
 	// MPropertyFriendlyName "visibility maximum"
-	float m_flInputMax; // 0x1c4	
+	float m_flInputMax; // 0x1cc	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1c8	
+	float m_flOutputMin; // 0x1d0	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1cc	
+	float m_flOutputMax; // 0x1d4	
 	// MPropertyFriendlyName "radius scale"
-	float m_flRadiusScale; // 0x1d0	
+	float m_flRadiusScale; // 0x1d8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x238
+// Size: 0x240
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapInitialTransformDirectionToRotation : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0x1c0	
+	CParticleTransformInput m_TransformInput; // 0x1c8	
 	// MPropertyFriendlyName "rotation field"
 	// MPropertyAttributeChoiceName "particlefield_rotation"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x228	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x230	
 	// MPropertyFriendlyName "offset rotation"
-	float m_flOffsetRot; // 0x22c	
+	float m_flOffsetRot; // 0x234	
 	// MPropertyFriendlyName "control point axis"
 	// MPropertyAttributeChoiceName "vector_component"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	int32_t m_nComponent; // 0x230	
+	int32_t m_nComponent; // 0x238	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfigElement_SetMaterialGroupOnAttachedModels : public CModelConfigElement
@@ -19503,7 +20200,6 @@ public:
 // Alignment: 16
 // Size: 0x160
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct TwoBoneIKSettings_t
@@ -19538,7 +20234,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xf8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyAutoExpandSelf
@@ -19555,7 +20250,6 @@ public:
 // Size: 0xa0
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CitadelCameraVertOffsetOperationDef_t : public CitadelCameraOperationDef_t
@@ -19580,9 +20274,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x608
+// Size: 0x628
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_OscillateVector : public CParticleFunctionOperator
@@ -19590,49 +20283,48 @@ class C_OP_OscillateVector : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "oscillation rate min"
 	// MVectorIsSometimesCoordinate "m_nField"
-	Vector m_RateMin; // 0x1b8	
+	Vector m_RateMin; // 0x1c0	
 	// MPropertyFriendlyName "oscillation rate max"
 	// MVectorIsSometimesCoordinate "m_nField"
-	Vector m_RateMax; // 0x1c4	
+	Vector m_RateMax; // 0x1cc	
 	// MPropertyFriendlyName "oscillation frequency min"
 	// MVectorIsSometimesCoordinate "m_nField"
-	Vector m_FrequencyMin; // 0x1d0	
+	Vector m_FrequencyMin; // 0x1d8	
 	// MPropertyFriendlyName "oscillation frequency max"
 	// MVectorIsSometimesCoordinate "m_nField"
-	Vector m_FrequencyMax; // 0x1dc	
+	Vector m_FrequencyMax; // 0x1e4	
 	// MPropertyFriendlyName "oscillation field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nField; // 0x1e8	
+	ParticleAttributeIndex_t m_nField; // 0x1f0	
 	// MPropertyFriendlyName "proportional 0/1"
-	bool m_bProportional; // 0x1ec	
+	bool m_bProportional; // 0x1f4	
 	// MPropertyFriendlyName "start/end proportional"
-	bool m_bProportionalOp; // 0x1ed	
+	bool m_bProportionalOp; // 0x1f5	
 	// MPropertyFriendlyName "offset instead of accelerate position"
-	bool m_bOffset; // 0x1ee	
+	bool m_bOffset; // 0x1f6	
 private:
-	[[maybe_unused]] uint8_t __pad01ef[0x1]; // 0x1ef
+	[[maybe_unused]] uint8_t __pad01f7[0x1]; // 0x1f7
 public:
 	// MPropertyFriendlyName "start time min"
-	float m_flStartTime_min; // 0x1f0	
+	float m_flStartTime_min; // 0x1f8	
 	// MPropertyFriendlyName "start time max"
-	float m_flStartTime_max; // 0x1f4	
+	float m_flStartTime_max; // 0x1fc	
 	// MPropertyFriendlyName "end time min"
-	float m_flEndTime_min; // 0x1f8	
+	float m_flEndTime_min; // 0x200	
 	// MPropertyFriendlyName "end time max"
-	float m_flEndTime_max; // 0x1fc	
+	float m_flEndTime_max; // 0x204	
 	// MPropertyFriendlyName "oscillation multiplier"
-	CPerParticleFloatInput m_flOscMult; // 0x200	
+	CPerParticleFloatInput m_flOscMult; // 0x208	
 	// MPropertyFriendlyName "oscillation start phase"
-	CPerParticleFloatInput m_flOscAdd; // 0x358	
+	CPerParticleFloatInput m_flOscAdd; // 0x368	
 	// MPropertyFriendlyName "rate scale"
-	CPerParticleFloatInput m_flRateScale; // 0x4b0	
+	CPerParticleFloatInput m_flRateScale; // 0x4c8	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CStateNodeStateData
@@ -19651,7 +20343,6 @@ public:
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -19690,7 +20381,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Grid Placement"
@@ -19706,7 +20396,6 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Filter: Variable Value"
@@ -19722,7 +20411,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeTwistConstraint_t
@@ -19736,23 +20424,34 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_EndCapTimedDecay : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "decay time"
-	float m_flDecayTime; // 0x1b8	
+	float m_flDecayTime; // 0x1c0	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmTargetWarpEvent : public CNmEvent
+{
+public:
+	NmTargetWarpRule_t m_rule; // 0x18	
+	NmTargetWarpAlgorithm_t m_algorithm; // 0x19	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 16
 // Size: 0x50
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FootFixedData_t
@@ -19773,14 +20472,14 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x3d0
+// Size: 0x5c0
 // Has VTable
 class CAI_CitadelNPC_GraphController : public CAI_BaseNPCGraphController
 {
 public:
-	CAnimGraphParamOptionalRef< int32 > m_nHitLayerTrigger; // 0x380	
-	CAnimGraphParamOptionalRef< char* > m_pszDamageState; // 0x398	
-	CAnimGraphParamOptionalRef< float32 > m_fHealth; // 0x3b8	
+	CAnimGraphParamOptionalRef< int32 > m_nHitLayerTrigger; // 0x558	
+	CAnimGraphParamOptionalRef< char* > m_pszDamageState; // 0x578	
+	CAnimGraphParamOptionalRef< float32 > m_fHealth; // 0x5a0	
 	
 	// Static fields:
 	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CAI_CitadelNPC_GraphController")->GetStaticFields()[0]->m_pInstance);};
@@ -19790,7 +20489,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeProxyVertexMap_t
@@ -19805,7 +20503,6 @@ public:
 // Size: 0x10
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixDiffusorDesc_t
@@ -19819,43 +20516,41 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x230
+// Size: 0x238
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderScreenShake : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "duration scale"
-	float m_flDurationScale; // 0x208	
+	float m_flDurationScale; // 0x210	
 	// MPropertyFriendlyName "radius scale"
-	float m_flRadiusScale; // 0x20c	
+	float m_flRadiusScale; // 0x214	
 	// MPropertyFriendlyName "frequence scale"
-	float m_flFrequencyScale; // 0x210	
+	float m_flFrequencyScale; // 0x218	
 	// MPropertyFriendlyName "amplitude scale"
-	float m_flAmplitudeScale; // 0x214	
+	float m_flAmplitudeScale; // 0x21c	
 	// MPropertyFriendlyName "radius field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nRadiusField; // 0x218	
+	ParticleAttributeIndex_t m_nRadiusField; // 0x220	
 	// MPropertyFriendlyName "duration field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nDurationField; // 0x21c	
+	ParticleAttributeIndex_t m_nDurationField; // 0x224	
 	// MPropertyFriendlyName "frequency field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFrequencyField; // 0x220	
+	ParticleAttributeIndex_t m_nFrequencyField; // 0x228	
 	// MPropertyFriendlyName "amplitude field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nAmplitudeField; // 0x224	
+	ParticleAttributeIndex_t m_nAmplitudeField; // 0x22c	
 	// MPropertyFriendlyName "control point of shake recipient (-1 = global)"
-	int32_t m_nFilterCP; // 0x228	
+	int32_t m_nFilterCP; // 0x230	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CDirectPlaybackUpdateNode : public CUnaryUpdateNode
@@ -19887,7 +20582,6 @@ public:
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PostProcessingLocalContrastParameters_t
@@ -19904,7 +20598,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -19933,9 +20626,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DifferencePreviousParticle : public CParticleFunctionOperator
@@ -19943,31 +20635,30 @@ class C_OP_DifferencePreviousParticle : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "difference minimum"
-	float m_flInputMin; // 0x1c0	
+	float m_flInputMin; // 0x1c8	
 	// MPropertyFriendlyName "difference maximum"
-	float m_flInputMax; // 0x1c4	
+	float m_flInputMax; // 0x1cc	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1c8	
+	float m_flOutputMin; // 0x1d0	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1cc	
+	float m_flOutputMax; // 0x1d4	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1d0	
+	ParticleSetMethod_t m_nSetMethod; // 0x1d8	
 	// MPropertyFriendlyName "only active within specified difference"
-	bool m_bActiveRange; // 0x1d4	
+	bool m_bActiveRange; // 0x1dc	
 	// MPropertyFriendlyName "also set ouput to previous particle"
-	bool m_bSetPreviousParticle; // 0x1d5	
+	bool m_bSetPreviousParticle; // 0x1dd	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x138
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootLockUpdateNode : public CUnaryUpdateNode
@@ -20000,9 +20691,8 @@ public:
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
-// Size: 0x70
+// Size: 0x68
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParentConstraint : public CBaseConstraint
@@ -20013,7 +20703,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 16
 // Size: 0xc0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SkeletonAnimCapture_t__Frame_t
@@ -20060,7 +20749,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "TestDomain"
@@ -20125,33 +20813,45 @@ public:
 	bool m_fIsRunning; // 0x8	
 };
 
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
+// 
+// MGetKV3ClassDefaults
+struct CitadelStatsVitalityDisplay_t
+{
+public:
+	// MPropertyDescription "What stats do we want to show in the top section?"
+	CUtlVector< EStatsType > m_vecDisplayStats; // 0x0	
+	// MPropertyDescription "What stats do we want to show in the other stats section?"
+	CUtlVector< EStatsType > m_vecOtherDisplayStats; // 0x18	
+};
+
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x240
+// Size: 0x248
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ModelCull : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1b8	
+	int32_t m_nControlPointNumber; // 0x1c0	
 	// MPropertyFriendlyName "use only bounding box"
-	bool m_bBoundBox; // 0x1bc	
+	bool m_bBoundBox; // 0x1c4	
 	// MPropertyFriendlyName "cull outside instead of inside"
-	bool m_bCullOutside; // 0x1bd	
+	bool m_bCullOutside; // 0x1c5	
 	// MPropertyFriendlyName "use bones instead of hitboxes"
-	bool m_bUseBones; // 0x1be	
+	bool m_bUseBones; // 0x1c6	
 	// MPropertyFriendlyName "hitbox set"
-	char m_HitboxSetName[128]; // 0x1bf	
+	char m_HitboxSetName[128]; // 0x1c7	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
 // Size: 0x40
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPathParameters
@@ -20180,35 +20880,33 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x248
+// Size: 0x250
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapInitialDirectionToTransformToVector : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0x1c0	
+	CParticleTransformInput m_TransformInput; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x228	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x230	
 	// MPropertyFriendlyName "scale factor"
-	float m_flScale; // 0x22c	
+	float m_flScale; // 0x234	
 	// MPropertyFriendlyName "offset rotation"
-	float m_flOffsetRot; // 0x230	
+	float m_flOffsetRot; // 0x238	
 	// MPropertyFriendlyName "offset axis"
 	// MVectorIsCoordinate
-	Vector m_vecOffsetAxis; // 0x234	
+	Vector m_vecOffsetAxis; // 0x23c	
 	// MPropertyFriendlyName "normalize"
-	bool m_bNormalize; // 0x240	
+	bool m_bNormalize; // 0x248	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSlowDownOnSlopesUpdateNode : public CUnaryUpdateNode
@@ -20220,7 +20918,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 16
 // Size: 0x90
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAttachment
@@ -20240,7 +20937,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "TestDomain"
@@ -20271,7 +20967,6 @@ public:
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct disallowed
 class CEmptyEntityInstance
 {
 private:
@@ -20306,9 +21001,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xee8
+// Size: 0xf30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_PositionOffset : public CParticleFunctionInitializer
@@ -20316,47 +21010,45 @@ class C_INIT_PositionOffset : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "offset min"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_OffsetMin; // 0x1c0	
+	CPerParticleVecInput m_OffsetMin; // 0x1c8	
 	// MPropertyFriendlyName "offset max"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_OffsetMax; // 0x818	
+	CPerParticleVecInput m_OffsetMax; // 0x840	
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0xe70	
+	CParticleTransformInput m_TransformInput; // 0xeb8	
 	// MPropertyFriendlyName "offset in local space 0/1"
-	bool m_bLocalCoords; // 0xed8	
+	bool m_bLocalCoords; // 0xf20	
 	// MPropertyFriendlyName "offset proportional to radius 0/1"
-	bool m_bProportional; // 0xed9	
+	bool m_bProportional; // 0xf21	
 private:
-	[[maybe_unused]] uint8_t __pad0eda[0x2]; // 0xeda
+	[[maybe_unused]] uint8_t __pad0f22[0x2]; // 0xf22
 public:
 	// MPropertyFriendlyName "Random number generator controls"
-	CRandomNumberGeneratorParameters m_randomnessParameters; // 0xedc	
+	CRandomNumberGeneratorParameters m_randomnessParameters; // 0xf24	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointFieldToWater : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "source CP"
-	int32_t m_nSourceCP; // 0x1c0	
+	int32_t m_nSourceCP; // 0x1c8	
 	// MPropertyFriendlyName "dest CP"
-	int32_t m_nDestCP; // 0x1c4	
+	int32_t m_nDestCP; // 0x1cc	
 	// MPropertyFriendlyName "dest control point component"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nCPField; // 0x1c8	
+	int32_t m_nCPField; // 0x1d0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x220
+// Size: 0x4f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ClientPhysics : public CParticleFunctionRenderer
@@ -20364,27 +21056,45 @@ class C_OP_ClientPhysics : public CParticleFunctionRenderer
 public:
 	// MPropertyFriendlyName "client physics type"
 	// MPropertyAttributeEditor "VDataChoice( scripts/misc.vdata!generic_physics_particle_spawner )"
-	CUtlString m_strPhysicsType; // 0x208	
+	CUtlString m_strPhysicsType; // 0x210	
+	// MPropertyFriendlyName "start all physics asleep"
+	bool m_bStartAsleep; // 0x218	
+private:
+	[[maybe_unused]] uint8_t __pad0219[0x7]; // 0x219
+public:
+	// MPropertyFriendlyName "Player Wake Radius"
+	CParticleCollectionFloatInput m_flPlayerWakeRadius; // 0x220	
+	// MPropertyFriendlyName "Vehicle Wake Radius"
+	CParticleCollectionFloatInput m_flVehicleWakeRadius; // 0x380	
+	// MPropertyFriendlyName "use high quality simulation"
+	bool m_bUseHighQualitySimulation; // 0x4e0	
+private:
+	[[maybe_unused]] uint8_t __pad04e1[0x3]; // 0x4e1
+public:
+	// MPropertyFriendlyName "max particle count"
+	int32_t m_nMaxParticleCount; // 0x4e4	
+	// MPropertyFriendlyName "prevent spawning in exclusion volumes"
+	// MPropertySuppressExpr "m_bKillParticles == true"
+	bool m_bRespectExclusionVolumes; // 0x4e8	
 	// MPropertyFriendlyName "kill physics particles"
-	bool m_bKillParticles; // 0x210	
+	bool m_bKillParticles; // 0x4e9	
 	// MPropertyFriendlyName "delete physics sim when stopped"
 	// MPropertySuppressExpr "m_bKillParticles == false"
-	bool m_bDeleteSim; // 0x211	
+	bool m_bDeleteSim; // 0x4ea	
 private:
-	[[maybe_unused]] uint8_t __pad0212[0x2]; // 0x212
+	[[maybe_unused]] uint8_t __pad04eb[0x1]; // 0x4eb
 public:
 	// MPropertyFriendlyName "control point (for finding nearest sim)"
 	// MPropertySuppressExpr "m_bKillParticles == true"
-	int32_t m_nControlPoint; // 0x214	
+	int32_t m_nControlPoint; // 0x4ec	
 	// MPropertyFriendlyName "tint blend (color vs prop group gradient)"
-	ParticleColorBlendType_t m_nColorBlendType; // 0x218	
+	ParticleColorBlendType_t m_nColorBlendType; // 0x4f0	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 4
 // Size: 0x1c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPhysSurfacePropertiesPhysics
@@ -20451,7 +21161,6 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Reset Scale"
@@ -20468,7 +21177,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Distribution Mode"
@@ -20484,7 +21192,6 @@ public:
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeNodeIntegrator_t
@@ -20498,24 +21205,23 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0xb8
-// Construct allowed
+// Size: 0xc0
 // 
 // MGetKV3ClassDefaults
 struct RnMeshDesc_t : public RnShapeDesc_t
 {
 public:
-	// -> m_vMin - 0x10
-	// -> m_vMax - 0x1c
-	// -> m_Nodes - 0x28
-	// -> m_Vertices - 0x40
-	// -> m_Triangles - 0x58
-	// -> m_Wings - 0x70
-	// -> m_Materials - 0x88
-	// -> m_vOrthographicAreas - 0xa0
-	// -> m_nFlags - 0xac
-	// -> m_nDebugFlags - 0xb0
-	RnMesh_t m_Mesh; // 0x10	
+	// -> m_vMin - 0x18
+	// -> m_vMax - 0x24
+	// -> m_Nodes - 0x30
+	// -> m_Vertices - 0x48
+	// -> m_Triangles - 0x60
+	// -> m_Wings - 0x78
+	// -> m_Materials - 0x90
+	// -> m_vOrthographicAreas - 0xa8
+	// -> m_nFlags - 0xb4
+	// -> m_nDebugFlags - 0xb8
+	RnMesh_t m_Mesh; // 0x18	
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
@@ -20534,72 +21240,68 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SDFLighting : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "Lighting dir"
-	Vector m_vLightingDir; // 0x1b8	
+	Vector m_vLightingDir; // 0x1c0	
 	// MPropertyFriendlyName "shadow color"
-	Vector m_vTint_0; // 0x1c4	
+	Vector m_vTint_0; // 0x1cc	
 	// MPropertyFriendlyName "lit color"
-	Vector m_vTint_1; // 0x1d0	
+	Vector m_vTint_1; // 0x1d8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_Diffusion : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "Radius scale for particle influence"
-	float m_flRadiusScale; // 0x1b8	
+	float m_flRadiusScale; // 0x1c0	
 	// MPropertyFriendlyName "Output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "Resolution to use for creating a voxel grid"
-	int32_t m_nVoxelGridResolution; // 0x1c0	
+	int32_t m_nVoxelGridResolution; // 0x1c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreateSpiralSphere : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "override CP (X/Y/Z *= radius/density/speed)"
-	int32_t m_nOverrideCP; // 0x1c4	
+	int32_t m_nOverrideCP; // 0x1cc	
 	// MPropertyFriendlyName "density"
-	int32_t m_nDensity; // 0x1c8	
+	int32_t m_nDensity; // 0x1d0	
 	// MPropertyFriendlyName "initial radius"
-	float m_flInitialRadius; // 0x1cc	
+	float m_flInitialRadius; // 0x1d4	
 	// MPropertyFriendlyName "min initial speed"
-	float m_flInitialSpeedMin; // 0x1d0	
+	float m_flInitialSpeedMin; // 0x1d8	
 	// MPropertyFriendlyName "max initial speed"
-	float m_flInitialSpeedMax; // 0x1d4	
+	float m_flInitialSpeedMax; // 0x1dc	
 	// MPropertyFriendlyName "use particle count as density scale"
-	bool m_bUseParticleCount; // 0x1d8	
+	bool m_bUseParticleCount; // 0x1e0	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x28
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Networking"
@@ -20614,11 +21316,12 @@ public:
 // Alignment: 16
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAimConstraint : public CBaseConstraint
 {
+private:
+	[[maybe_unused]] uint8_t __pad0068[0x8]; // 0x68
 public:
 	Quaternion m_qAimOffset; // 0x70	
 	uint32_t m_nUpType; // 0x80	
@@ -20629,7 +21332,6 @@ public:
 // Size: 0x18
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimActionUpdater
@@ -20644,7 +21346,6 @@ public:
 // Size: 0x310
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSmartPropOperation_Trace : public CSmartPropTransformOperation
@@ -20690,7 +21391,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Placement Shape"
@@ -20704,9 +21404,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1958
+// Size: 0x19d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InitialVelocityNoise : public CParticleFunctionInitializer
@@ -20714,36 +21413,35 @@ class C_INIT_InitialVelocityNoise : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "absolute value"
 	// MVectorIsCoordinate
-	Vector m_vecAbsVal; // 0x1c0	
+	Vector m_vecAbsVal; // 0x1c8	
 	// MPropertyFriendlyName "invert abs value"
 	// MVectorIsCoordinate
-	Vector m_vecAbsValInv; // 0x1cc	
+	Vector m_vecAbsValInv; // 0x1d4	
 	// MPropertyFriendlyName "spatial coordinate offset"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_vecOffsetLoc; // 0x1d8	
+	CPerParticleVecInput m_vecOffsetLoc; // 0x1e0	
 	// MPropertyFriendlyName "time coordinate offset"
-	CPerParticleFloatInput m_flOffset; // 0x830	
+	CPerParticleFloatInput m_flOffset; // 0x858	
 	// MPropertyFriendlyName "output minimum"
-	CPerParticleVecInput m_vecOutputMin; // 0x988	
+	CPerParticleVecInput m_vecOutputMin; // 0x9b8	
 	// MPropertyFriendlyName "output maximum"
-	CPerParticleVecInput m_vecOutputMax; // 0xfe0	
+	CPerParticleVecInput m_vecOutputMax; // 0x1030	
 	// MPropertyFriendlyName "time noise coordinate scale"
-	CPerParticleFloatInput m_flNoiseScale; // 0x1638	
+	CPerParticleFloatInput m_flNoiseScale; // 0x16a8	
 	// MPropertyFriendlyName "spatial noise coordinate scale"
-	CPerParticleFloatInput m_flNoiseScaleLoc; // 0x1790	
+	CPerParticleFloatInput m_flNoiseScaleLoc; // 0x1808	
 	// MPropertyFriendlyName "input local space velocity (optional)"
 	// MParticleInputOptional
-	CParticleTransformInput m_TransformInput; // 0x18e8	
+	CParticleTransformInput m_TransformInput; // 0x1968	
 	// MPropertyFriendlyName "ignore delta time"
-	bool m_bIgnoreDt; // 0x1950	
+	bool m_bIgnoreDt; // 0x19d0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParticleFunctionForce : public CParticleFunction
@@ -20755,7 +21453,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeFollowNode_t
@@ -20771,7 +21468,6 @@ public:
 // Size: 0x18
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CovMatrix3
@@ -20785,9 +21481,8 @@ public:
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0x210
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Random Smapler Container"
@@ -20795,15 +21490,15 @@ public:
 class CVoiceContainerRandomSampler : public CVoiceContainerBase
 {
 public:
-	float m_flAmplitude; // 0xe8	
-	float m_flAmplitudeJitter; // 0xec	
-	float m_flTimeJitter; // 0xf0	
-	float m_flMaxLength; // 0xf4	
-	int32_t m_nNumDelayVariations; // 0xf8	
+	float m_flAmplitude; // 0xb8	
+	float m_flAmplitudeJitter; // 0xbc	
+	float m_flTimeJitter; // 0xc0	
+	float m_flMaxLength; // 0xc4	
+	int32_t m_nNumDelayVariations; // 0xc8	
 private:
-	[[maybe_unused]] uint8_t __pad00fc[0x4]; // 0xfc
+	[[maybe_unused]] uint8_t __pad00cc[0x4]; // 0xcc
 public:
-	CUtlVector< CStrongHandle< InfoForResourceTypeCVoiceContainerBase > > m_grainResources; // 0x100	
+	CUtlVector< CStrongHandle< InfoForResourceTypeCVoiceContainerBase > > m_grainResources; // 0xd0	
 	
 	// Static fields:
 	static int32_t &Get_nInstancesFixed(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CVoiceContainerRandomSampler")->GetStaticFields()[0]->m_pInstance);};
@@ -20813,7 +21508,6 @@ public:
 // Alignment: 8
 // Size: 0x28
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SquadModeInfo_t
@@ -20826,10 +21520,9 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1b8
+// Size: 0x1c0
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSpinUpdateBase : public CParticleFunctionOperator
@@ -20839,34 +21532,32 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RestartAfterDuration : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "minimum restart time"
-	float m_flDurationMin; // 0x1b8	
+	float m_flDurationMin; // 0x1c0	
 	// MPropertyFriendlyName "maximum restart time"
-	float m_flDurationMax; // 0x1bc	
+	float m_flDurationMax; // 0x1c4	
 	// MPropertyFriendlyName "control point to scale duration"
-	int32_t m_nCP; // 0x1c0	
+	int32_t m_nCP; // 0x1c8	
 	// MPropertyFriendlyName "control point field X/Y/Z"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nCPField; // 0x1c4	
+	int32_t m_nCPField; // 0x1cc	
 	// MPropertyFriendlyName "child group ID"
-	int32_t m_nChildGroupID; // 0x1c8	
+	int32_t m_nChildGroupID; // 0x1d0	
 	// MPropertyFriendlyName "only restart children"
-	bool m_bOnlyChildren; // 0x1cc	
+	bool m_bOnlyChildren; // 0x1d4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ControlPointReference_t
@@ -20882,27 +21573,25 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x5c0
+// Size: 0x5e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ColorAdjustHSL : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "hue adjust"
-	CPerParticleFloatInput m_flHueAdjust; // 0x1b8	
+	CPerParticleFloatInput m_flHueAdjust; // 0x1c0	
 	// MPropertyFriendlyName "saturation adjust"
-	CPerParticleFloatInput m_flSaturationAdjust; // 0x310	
+	CPerParticleFloatInput m_flSaturationAdjust; // 0x320	
 	// MPropertyFriendlyName "lightness adjust"
-	CPerParticleFloatInput m_flLightnessAdjust; // 0x468	
+	CPerParticleFloatInput m_flLightnessAdjust; // 0x480	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x2b0
+// Size: 0x2b8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_PercentageBetweenTransformLerpCPs : public CParticleFunctionOperator
@@ -20910,39 +21599,38 @@ class C_OP_PercentageBetweenTransformLerpCPs : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "percentage minimum"
-	float m_flInputMin; // 0x1bc	
+	float m_flInputMin; // 0x1c4	
 	// MPropertyFriendlyName "percentage maximum"
-	float m_flInputMax; // 0x1c0	
+	float m_flInputMax; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "strarting transform"
-	CParticleTransformInput m_TransformStart; // 0x1c8	
+	CParticleTransformInput m_TransformStart; // 0x1d0	
 	// MPropertyFriendlyName "end transform"
-	CParticleTransformInput m_TransformEnd; // 0x230	
+	CParticleTransformInput m_TransformEnd; // 0x238	
 	// MPropertyFriendlyName "output starting control point number"
-	int32_t m_nOutputStartCP; // 0x298	
+	int32_t m_nOutputStartCP; // 0x2a0	
 	// MPropertyFriendlyName "output starting control point field 0-2 X/Y/Z"
-	int32_t m_nOutputStartField; // 0x29c	
+	int32_t m_nOutputStartField; // 0x2a4	
 	// MPropertyFriendlyName "output ending control point number"
-	int32_t m_nOutputEndCP; // 0x2a0	
+	int32_t m_nOutputEndCP; // 0x2a8	
 	// MPropertyFriendlyName "output ending control point field 0-2 X/Y/Z"
-	int32_t m_nOutputEndField; // 0x2a4	
+	int32_t m_nOutputEndField; // 0x2ac	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x2a8	
+	ParticleSetMethod_t m_nSetMethod; // 0x2b0	
 	// MPropertyFriendlyName "only active within input range"
-	bool m_bActiveRange; // 0x2ac	
+	bool m_bActiveRange; // 0x2b4	
 	// MPropertyFriendlyName "treat distance between points as radius"
-	bool m_bRadialCheck; // 0x2ad	
+	bool m_bRadialCheck; // 0x2b5	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyEditClassAsString
@@ -20987,7 +21675,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Integer"
@@ -21007,7 +21694,6 @@ public:
 // Alignment: 8
 // Size: 0x2c0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Place on Path"
@@ -21044,7 +21730,6 @@ public:
 // Size: 0x20
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnSoftbodyCapsule_t
@@ -21059,7 +21744,6 @@ public:
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CVoiceContainerStaticAdditiveSynth::CGainScalePerInstance
@@ -21088,7 +21772,6 @@ public:
 // Alignment: 8
 // Size: 0x80
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfigElement_RandomPick : public CModelConfigElement
@@ -21099,10 +21782,25 @@ public:
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmSpeedScaleBaseNode::CDefinition : public CNmPassthroughNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x18	
+private:
+	[[maybe_unused]] uint8_t __pad001a[0x2]; // 0x1a
+public:
+	float m_flDefaultInputValue; // 0x1c	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct NmSyncTrackTime_t
@@ -21115,7 +21813,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CCitadelTrackedAnimGraphModifierState_t
@@ -21126,25 +21823,9 @@ public:
 	CUtlString m_strRestoreValue; // 0x10	
 };
 
-// Registered binary: client.dll (project 'pulse_runtime_lib')
-// Alignment: 8
-// Size: 0x1
-// Has Trivial Constructor
-// Has Trivial Destructor
-// 
-// MPulseLibraryBindings
-// MPropertyDescription "Test functions for the derived test domain."
-class CPulseTestFuncs_DerivedDomain
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
-public:
-};
-
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x370
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ProjectileInfo_t
@@ -21217,7 +21898,6 @@ public:
 // Size: 0x10
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnPlane_t
@@ -21231,7 +21911,6 @@ public:
 // Alignment: 2
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeNodeWindBase_t
@@ -21249,7 +21928,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vanmgrpheconitemÄiù°¯"
+// MResourceTypeForInfoType "vanmgrpheconitem¿YmΩ˚"
 class InfoForResourceTypeIAnimGraphModelBinding
 {
 private:
@@ -21273,9 +21952,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x208
+// Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_Callback : public CParticleFunctionRenderer
@@ -21285,9 +21963,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1f0
+// Size: 0x1f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomSequence : public CParticleFunctionInitializer
@@ -21295,26 +21972,25 @@ class C_INIT_RandomSequence : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "sequence min"
 	// MPropertyAttributeEditor "SequencePicker( 1 )"
-	int32_t m_nSequenceMin; // 0x1c0	
+	int32_t m_nSequenceMin; // 0x1c8	
 	// MPropertyFriendlyName "sequence max"
 	// MPropertyAttributeEditor "SequencePicker( 1 )"
-	int32_t m_nSequenceMax; // 0x1c4	
+	int32_t m_nSequenceMax; // 0x1cc	
 	// MPropertyFriendlyName "shuffle"
-	bool m_bShuffle; // 0x1c8	
+	bool m_bShuffle; // 0x1d0	
 	// MPropertyFriendlyName "linear"
-	bool m_bLinear; // 0x1c9	
+	bool m_bLinear; // 0x1d1	
 private:
-	[[maybe_unused]] uint8_t __pad01ca[0x6]; // 0x1ca
+	[[maybe_unused]] uint8_t __pad01d2[0x6]; // 0x1d2
 public:
 	// MPropertyFriendlyName "weighted list"
-	CUtlVector< SequenceWeightedList_t > m_WeightedList; // 0x1d0	
+	CUtlVector< SequenceWeightedList_t > m_WeightedList; // 0x1d8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomSecondSequence : public CParticleFunctionInitializer
@@ -21322,18 +21998,17 @@ class C_INIT_RandomSecondSequence : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "sequence min"
 	// MPropertyAttributeEditor "SequencePicker( 2 )"
-	int32_t m_nSequenceMin; // 0x1c0	
+	int32_t m_nSequenceMin; // 0x1c8	
 	// MPropertyFriendlyName "sequence max"
 	// MPropertyAttributeEditor "SequencePicker( 2 )"
-	int32_t m_nSequenceMax; // 0x1c4	
+	int32_t m_nSequenceMax; // 0x1cc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CGeneralRandomRotation : public CParticleFunctionInitializer
@@ -21341,24 +22016,23 @@ class CGeneralRandomRotation : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "rotation field"
 	// MPropertyAttributeChoiceName "particlefield_rotation"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
 	// MPropertyFriendlyName "rotation initial"
-	float m_flDegrees; // 0x1c4	
+	float m_flDegrees; // 0x1cc	
 	// MPropertyFriendlyName "rotation offset from initial min"
-	float m_flDegreesMin; // 0x1c8	
+	float m_flDegreesMin; // 0x1d0	
 	// MPropertyFriendlyName "rotation offset from initial max"
-	float m_flDegreesMax; // 0x1cc	
+	float m_flDegreesMax; // 0x1d4	
 	// MPropertyFriendlyName "rotation offset exponent"
-	float m_flRotationRandExponent; // 0x1d0	
+	float m_flRotationRandExponent; // 0x1d8	
 	// MPropertyFriendlyName "randomly flip direction"
-	bool m_bRandomlyFlipDirection; // 0x1d4	
+	bool m_bRandomlyFlipDirection; // 0x1dc	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 16
 // Size: 0xa0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Quaternion Parameter"
@@ -21375,7 +22049,6 @@ public:
 // Alignment: 16
 // Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SkeletonAnimCapture_t__Camera_t
@@ -21388,7 +22061,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0xa8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimEncodeDifference
@@ -21407,7 +22079,6 @@ public:
 // Alignment: 8
 // Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -21454,7 +22125,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x78
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AggregateSceneObject_t
@@ -21476,7 +22146,6 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
 // Size: 0x60
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CVoiceContainerStaticAdditiveSynth::CTone
@@ -21492,9 +22161,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x298
+// Size: 0x3f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderSimpleModelCollection : public CParticleFunctionRenderer
@@ -21503,75 +22171,89 @@ public:
 	// MPropertyStartGroup "Orientation"
 	// MPropertyFriendlyName "center mesh"
 	// MPropertySortPriority "750"
-	bool m_bCenterOffset; // 0x208	
+	bool m_bCenterOffset; // 0x210	
 private:
-	[[maybe_unused]] uint8_t __pad0209[0x7]; // 0x209
+	[[maybe_unused]] uint8_t __pad0211[0x7]; // 0x211
 public:
 	// MPropertyStartGroup "Model"
 	// MPropertyFriendlyName "model"
-	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x210	
+	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x218	
 	// MPropertyFriendlyName "input model override"
-	CParticleModelInput m_modelInput; // 0x218	
-	// MPropertyFriendlyName "model LOD"
-	int32_t m_nLOD; // 0x278	
+	CParticleModelInput m_modelInput; // 0x220	
+	// MPropertyStartGroup "Rendering"
+	// MPropertyFriendlyName "size cull scale"
+	CParticleCollectionFloatInput m_fSizeCullScale; // 0x280	
 	// MPropertyFriendlyName "disable shadows"
-	bool m_bDisableShadows; // 0x27c	
+	bool m_bDisableShadows; // 0x3e0	
 	// MPropertyFriendlyName "disable motion blur"
-	bool m_bDisableMotionBlur; // 0x27d	
+	bool m_bDisableMotionBlur; // 0x3e1	
 	// MPropertyFriendlyName "accept decals"
-	bool m_bAcceptsDecals; // 0x27e	
+	bool m_bAcceptsDecals; // 0x3e2	
 private:
-	[[maybe_unused]] uint8_t __pad027f[0x1]; // 0x27f
+	[[maybe_unused]] uint8_t __pad03e3[0x1]; // 0x3e3
 public:
 	// MPropertyFriendlyName "angular velocity attribute (improves motion blur)"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nAngularVelocityField; // 0x280	
+	ParticleAttributeIndex_t m_nAngularVelocityField; // 0x3e4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomScalar : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "min"
-	float m_flMin; // 0x1c0	
+	float m_flMin; // 0x1c8	
 	// MPropertyFriendlyName "max"
-	float m_flMax; // 0x1c4	
+	float m_flMax; // 0x1cc	
 	// MPropertyFriendlyName "exponent"
-	float m_flExponent; // 0x1c8	
+	float m_flExponent; // 0x1d0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderFlattenGrass : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "flattening strength"
-	float m_flFlattenStrength; // 0x208	
+	float m_flFlattenStrength; // 0x210	
 	// MPropertyFriendlyName "strength field override"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nStrengthFieldOverride; // 0x20c	
+	ParticleAttributeIndex_t m_nStrengthFieldOverride; // 0x214	
 	// MPropertyFriendlyName "radius scale"
-	float m_flRadiusScale; // 0x210	
+	float m_flRadiusScale; // 0x218	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFloatEaseNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	float m_flEaseTime; // 0x10	
+	float m_flStartValue; // 0x14	
+	int16_t m_nInputValueNodeIdx; // 0x18	
+	NmEasingOperation_t m_easingOp; // 0x1a	
+	bool m_bUseStartValue; // 0x1b	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct IKDemoCaptureSettings_t
@@ -21603,7 +22285,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x80
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CitadelCameraOperationsSequence_t
@@ -21625,9 +22306,8 @@ public:
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0xf0
+// Size: 0xb8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Default Container"
@@ -21635,15 +22315,11 @@ public:
 class CVoiceContainerDefault : public CVoiceContainerBase
 {
 public:
-	// MPropertyFriendlyName "Vsnd"
-	// MPropertyDescription "Load the audio content into the kv3 content"
-	CStrongHandle< InfoForResourceTypeCVoiceContainerBase > m_vsndReference; // 0xe8	
 };
 
 // Registered binary: soundsystem.dll (project 'soundsystem')
 // Alignment: 8
 // Size: 0x8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSoundEventMetaData
@@ -21654,13 +22330,13 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x408
+// Size: 0x600
 // Has VTable
 class CNPC_MidBoss_GraphController : public CAI_CitadelNPC_GraphController
 {
 public:
-	CAnimGraphParamRef< char* > m_pszActivity; // 0x3d0	
-	CAnimGraphTagRef m_sAbilityDeployActive; // 0x3f0	
+	CAnimGraphParamRef< char* > m_pszActivity; // 0x5c0	
+	CAnimGraphTagRef m_sAbilityDeployActive; // 0x5e8	
 	
 	// Static fields:
 	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNPC_MidBoss_GraphController")->GetStaticFields()[0]->m_pInstance);};
@@ -21669,53 +22345,51 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x208
+// Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomColor : public CParticleFunctionInitializer
 {
 private:
-	[[maybe_unused]] uint8_t __pad01c0[0x1c]; // 0x1c0
+	[[maybe_unused]] uint8_t __pad01c8[0x1c]; // 0x1c8
 public:
 	// MPropertyFriendlyName "color1"
-	Color m_ColorMin; // 0x1dc	
+	Color m_ColorMin; // 0x1e4	
 	// MPropertyFriendlyName "color2"
-	Color m_ColorMax; // 0x1e0	
+	Color m_ColorMax; // 0x1e8	
 	// MPropertyFriendlyName "tint clamp min"
-	Color m_TintMin; // 0x1e4	
+	Color m_TintMin; // 0x1ec	
 	// MPropertyFriendlyName "tint clamp max"
-	Color m_TintMax; // 0x1e8	
+	Color m_TintMax; // 0x1f0	
 	// MPropertyFriendlyName "tint perc"
-	float m_flTintPerc; // 0x1ec	
+	float m_flTintPerc; // 0x1f4	
 	// MPropertyFriendlyName "tint update movement threshold"
-	float m_flUpdateThreshold; // 0x1f0	
+	float m_flUpdateThreshold; // 0x1f8	
 	// MPropertyFriendlyName "tint control point"
-	int32_t m_nTintCP; // 0x1f4	
+	int32_t m_nTintCP; // 0x1fc	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1f8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x200	
 	// MPropertyFriendlyName "tint blend mode"
-	ParticleColorBlendMode_t m_nTintBlendMode; // 0x1fc	
+	ParticleColorBlendMode_t m_nTintBlendMode; // 0x204	
 	// MPropertyFriendlyName "light amplification amount"
-	float m_flLightAmplification; // 0x200	
+	float m_flLightAmplification; // 0x208	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
-// Size: 0x90
+// Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMorphConstraint : public CBaseConstraint
 {
 public:
-	CUtlString m_sTargetMorph; // 0x70	
-	int32_t m_nSlaveChannel; // 0x78	
-	float m_flMin; // 0x7c	
-	float m_flMax; // 0x80	
+	CUtlString m_sTargetMorph; // 0x68	
+	int32_t m_nSlaveChannel; // 0x70	
+	float m_flMin; // 0x74	
+	float m_flMax; // 0x78	
 };
 
 // Registered binary: particles.dll (project 'particleslib')
@@ -21737,7 +22411,6 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0xf8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulse_BlackboardReference
@@ -21757,7 +22430,6 @@ public:
 // Size: 0x68
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct Dop26_t
@@ -21783,55 +22455,53 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x888
+// Size: 0x8b8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_MovementSkinnedPositionFromCPSnapshot : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "snapshot control point number"
-	int32_t m_nSnapshotControlPointNumber; // 0x1b8	
+	int32_t m_nSnapshotControlPointNumber; // 0x1c0	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1bc	
+	int32_t m_nControlPointNumber; // 0x1c4	
 	// MPropertyFriendlyName "random order"
-	bool m_bRandom; // 0x1c0	
+	bool m_bRandom; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c1[0x3]; // 0x1c1
+	[[maybe_unused]] uint8_t __pad01c9[0x3]; // 0x1c9
 public:
 	// MPropertyFriendlyName "random seed"
-	int32_t m_nRandomSeed; // 0x1c4	
+	int32_t m_nRandomSeed; // 0x1cc	
 	// MPropertyFriendlyName "set normal"
-	bool m_bSetNormal; // 0x1c8	
+	bool m_bSetNormal; // 0x1d0	
 	// MPropertyFriendlyName "set radius"
-	bool m_bSetRadius; // 0x1c9	
+	bool m_bSetRadius; // 0x1d1	
 private:
-	[[maybe_unused]] uint8_t __pad01ca[0x2]; // 0x1ca
+	[[maybe_unused]] uint8_t __pad01d2[0x2]; // 0x1d2
 public:
 	// MPropertyFriendlyName "Snapshot Read Type"
-	SnapshotIndexType_t m_nIndexType; // 0x1cc	
+	SnapshotIndexType_t m_nIndexType; // 0x1d4	
 	// MPropertyFriendlyName "Snapshot Index"
 	// MPropertySuppressExpr "m_nIndexType != SNAPSHOT_INDEX_DIRECT"
-	CPerParticleFloatInput m_flReadIndex; // 0x1d0	
+	CPerParticleFloatInput m_flReadIndex; // 0x1d8	
 	// MPropertyFriendlyName "particle increment amount"
 	// MPropertySuppressExpr "m_nIndexType != SNAPSHOT_INDEX_INCREMENT"
-	CParticleCollectionFloatInput m_flIncrement; // 0x328	
+	CParticleCollectionFloatInput m_flIncrement; // 0x338	
 	// MPropertyFriendlyName "Full Loop Increment Amount"
 	// MPropertySuppressExpr "m_nIndexType != SNAPSHOT_INDEX_INCREMENT"
-	CParticleCollectionFloatInput m_nFullLoopIncrement; // 0x480	
+	CParticleCollectionFloatInput m_nFullLoopIncrement; // 0x498	
 	// MPropertyFriendlyName "Snapshot start point"
 	// MPropertySuppressExpr "m_nIndexType != SNAPSHOT_INDEX_INCREMENT"
-	CParticleCollectionFloatInput m_nSnapShotStartPoint; // 0x5d8	
+	CParticleCollectionFloatInput m_nSnapShotStartPoint; // 0x5f8	
 	// MPropertyFriendlyName "Interpolation"
-	CPerParticleFloatInput m_flInterpolation; // 0x730	
+	CPerParticleFloatInput m_flInterpolation; // 0x758	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ReinitializeScalarEndCap : public CParticleFunctionOperator
@@ -21839,18 +22509,17 @@ class C_OP_ReinitializeScalarEndCap : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "minimum"
-	float m_flOutputMin; // 0x1bc	
+	float m_flOutputMin; // 0x1c4	
 	// MPropertyFriendlyName "maximum"
-	float m_flOutputMax; // 0x1c0	
+	float m_flOutputMax; // 0x1c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x2a8
+// Size: 0x2b0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_PercentageBetweenTransforms : public CParticleFunctionOperator
@@ -21858,56 +22527,55 @@ class C_OP_PercentageBetweenTransforms : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "percentage minimum"
-	float m_flInputMin; // 0x1bc	
+	float m_flInputMin; // 0x1c4	
 	// MPropertyFriendlyName "percentage maximum"
-	float m_flInputMax; // 0x1c0	
+	float m_flInputMax; // 0x1c8	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1c4	
+	float m_flOutputMin; // 0x1cc	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1c8	
+	float m_flOutputMax; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
+	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
 public:
 	// MPropertyFriendlyName "strarting transform"
-	CParticleTransformInput m_TransformStart; // 0x1d0	
+	CParticleTransformInput m_TransformStart; // 0x1d8	
 	// MPropertyFriendlyName "end transform"
-	CParticleTransformInput m_TransformEnd; // 0x238	
+	CParticleTransformInput m_TransformEnd; // 0x240	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x2a0	
+	ParticleSetMethod_t m_nSetMethod; // 0x2a8	
 	// MPropertyFriendlyName "only active within input range"
-	bool m_bActiveRange; // 0x2a4	
+	bool m_bActiveRange; // 0x2ac	
 	// MPropertyFriendlyName "treat distance between points as radius"
-	bool m_bRadialCheck; // 0x2a5	
+	bool m_bRadialCheck; // 0x2ad	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
 // Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RampScalarSpline : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "ramp rate min"
-	float m_RateMin; // 0x1b8	
+	float m_RateMin; // 0x1c0	
 	// MPropertyFriendlyName "ramp rate max"
-	float m_RateMax; // 0x1bc	
+	float m_RateMax; // 0x1c4	
 	// MPropertyFriendlyName "start time min"
-	float m_flStartTime_min; // 0x1c0	
+	float m_flStartTime_min; // 0x1c8	
 	// MPropertyFriendlyName "start time max"
-	float m_flStartTime_max; // 0x1c4	
+	float m_flStartTime_max; // 0x1cc	
 	// MPropertyFriendlyName "end time min"
-	float m_flEndTime_min; // 0x1c8	
+	float m_flEndTime_min; // 0x1d0	
 	// MPropertyFriendlyName "end time max"
-	float m_flEndTime_max; // 0x1cc	
+	float m_flEndTime_max; // 0x1d4	
 	// MPropertyFriendlyName "bias"
-	float m_flBias; // 0x1d0	
+	float m_flBias; // 0x1d8	
 private:
-	[[maybe_unused]] uint8_t __pad01d4[0x2c]; // 0x1d4
+	[[maybe_unused]] uint8_t __pad01dc[0x24]; // 0x1dc
 public:
 	// MPropertyFriendlyName "ramp field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -21922,7 +22590,6 @@ public:
 // Alignment: 8
 // Size: 0x28
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimGraphModelBinding
@@ -21935,36 +22602,44 @@ public:
 };
 
 // Registered binary: client.dll (project 'client')
-// Alignment: 4
-// Size: 0x8
-// Has Trivial Destructor
-// Construct allowed
+// Alignment: 8
+// Size: 0x30
 // 
 // MGetKV3ClassDefaults
-struct HUDElementExclusivity_t
+// MPropertyArrayElementNameKey "m_strContext"
+struct CitadelAbilityHUDElement_t
 {
 public:
-	EHUDElementExclusiveType_t m_eType; // 0x0	
-	int32_t m_nPriority; // 0x4	
+	ECitadelAbilityHUDElementType_t m_eType; // 0x0	
+	CUtlString m_strContext; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad0010[0x8]; // 0x10
+public:
+	// MPropertyDescription "Space separated set of classes to add to the panel (ex: "medium superCool noMiddle""
+	CUtlString m_strAdditionalClasses; // 0x18	
+	// MPropertyCustomFGDType "panorama_layout"
+	// MPropertySuppressExpr "m_eType != CITADEL_ABILITY_HUD_ELEMENT_TYPE_PROGRESS"
+	CUtlString m_Layout; // 0x20	
+	// MPropertySuppressExpr "m_eType != CITADEL_ABILITY_HUD_ELEMENT_TYPE_PROGRESS"
+	bool m_bReverseProgress; // 0x28	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x370
+// Size: 0x380
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderPostProcessing : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "Post Processing Strength"
-	CPerParticleFloatInput m_flPostProcessStrength; // 0x208	
+	CPerParticleFloatInput m_flPostProcessStrength; // 0x210	
 	// MPropertyFriendlyName "Post Processing File"
 	// MPropertyAttributeEditor "AssetBrowse( vpost, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCPostProcessingResource > m_hPostTexture; // 0x360	
+	CStrongHandle< InfoForResourceTypeCPostProcessingResource > m_hPostTexture; // 0x370	
 	// MPropertyFriendlyName "Post Processing Priority Group"
-	ParticlePostProcessPriorityGroup_t m_nPriority; // 0x368	
+	ParticlePostProcessPriorityGroup_t m_nPriority; // 0x378	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
@@ -22002,7 +22677,6 @@ public:
 // Size: 0x64
 // Has Trivial Constructor
 // Has Trivial Destructor
-// MClassHasEntityLimitedDataDesc
 struct dynpitchvol_base_t
 {
 public:
@@ -22035,45 +22709,43 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x478
+// Size: 0x490
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_QuantizeCPComponent : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "input"
-	CParticleCollectionFloatInput m_flInputValue; // 0x1c0	
+	CParticleCollectionFloatInput m_flInputValue; // 0x1c8	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nCPOutput; // 0x318	
+	int32_t m_nCPOutput; // 0x328	
 	// MPropertyFriendlyName "output component"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nOutVectorField; // 0x31c	
+	int32_t m_nOutVectorField; // 0x32c	
 	// MPropertyFriendlyName "interval to snap to"
-	CParticleCollectionFloatInput m_flQuantizeValue; // 0x320	
+	CParticleCollectionFloatInput m_flQuantizeValue; // 0x330	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
 // Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_FadeOut : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "fade out time min"
-	float m_flFadeOutTimeMin; // 0x1b8	
+	float m_flFadeOutTimeMin; // 0x1c0	
 	// MPropertyFriendlyName "fade out time max"
-	float m_flFadeOutTimeMax; // 0x1bc	
+	float m_flFadeOutTimeMax; // 0x1c4	
 	// MPropertyFriendlyName "fade out time exponent"
-	float m_flFadeOutTimeExp; // 0x1c0	
+	float m_flFadeOutTimeExp; // 0x1c8	
 	// MPropertyFriendlyName "fade bias"
-	float m_flFadeBias; // 0x1c4	
+	float m_flFadeBias; // 0x1cc	
 private:
-	[[maybe_unused]] uint8_t __pad01c8[0x38]; // 0x1c8
+	[[maybe_unused]] uint8_t __pad01d0[0x30]; // 0x1d0
 public:
 	// MPropertyFriendlyName "proportional 0/1"
 	bool m_bProportional; // 0x200	
@@ -22083,9 +22755,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x9d0
+// Size: 0xa08
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapSDFDistanceToScalarAttribute : public CParticleFunctionOperator
@@ -22093,28 +22764,27 @@ class C_OP_RemapSDFDistanceToScalarAttribute : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "Output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "Input field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nVectorFieldInput; // 0x1bc	
+	ParticleAttributeIndex_t m_nVectorFieldInput; // 0x1c4	
 	// MPropertyFriendlyName "Minimum distance"
-	CParticleCollectionFloatInput m_flMinDistance; // 0x1c0	
+	CParticleCollectionFloatInput m_flMinDistance; // 0x1c8	
 	// MPropertyFriendlyName "Maximum distance"
-	CParticleCollectionFloatInput m_flMaxDistance; // 0x318	
+	CParticleCollectionFloatInput m_flMaxDistance; // 0x328	
 	// MPropertyFriendlyName "Value for dist<min"
-	CParticleCollectionFloatInput m_flValueBelowMin; // 0x470	
+	CParticleCollectionFloatInput m_flValueBelowMin; // 0x488	
 	// MPropertyFriendlyName "Value for dist=min"
-	CParticleCollectionFloatInput m_flValueAtMin; // 0x5c8	
+	CParticleCollectionFloatInput m_flValueAtMin; // 0x5e8	
 	// MPropertyFriendlyName "Value for dist=max"
-	CParticleCollectionFloatInput m_flValueAtMax; // 0x720	
+	CParticleCollectionFloatInput m_flValueAtMax; // 0x748	
 	// MPropertyFriendlyName "Value for dist>max"
-	CParticleCollectionFloatInput m_flValueAboveMax; // 0x878	
+	CParticleCollectionFloatInput m_flValueAboveMax; // 0x8a8	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimParamHandleMap
@@ -22128,7 +22798,6 @@ public:
 // Size: 0x8
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class IModifierTrackedObject
@@ -22142,7 +22811,6 @@ public:
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -22195,7 +22863,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CCitadelTrackedBodygroupModifierState_t
@@ -22209,7 +22876,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x90
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeMorphLayerDepr_t
@@ -22242,34 +22908,32 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ConstrainDistanceToUserSpecifiedPath : public CParticleFunctionConstraint
 {
 public:
 	// MPropertyFriendlyName "minimum distance"
-	float m_fMinDistance; // 0x1b8	
+	float m_fMinDistance; // 0x1c0	
 	// MPropertyFriendlyName "maximum distance"
-	float m_flMaxDistance; // 0x1bc	
+	float m_flMaxDistance; // 0x1c4	
 	// MPropertyFriendlyName "Time scale"
-	float m_flTimeScale; // 0x1c0	
+	float m_flTimeScale; // 0x1c8	
 	// MPropertyFriendlyName "Treat path as a loop"
-	bool m_bLoopedPath; // 0x1c4	
+	bool m_bLoopedPath; // 0x1cc	
 private:
-	[[maybe_unused]] uint8_t __pad01c5[0x3]; // 0x1c5
+	[[maybe_unused]] uint8_t __pad01cd[0x3]; // 0x1cd
 public:
 	// MPropertyFriendlyName "path points"
-	CUtlVector< PointDefinitionWithTimeValues_t > m_pointList; // 0x1c8	
+	CUtlVector< PointDefinitionWithTimeValues_t > m_pointList; // 0x1d0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x208
+// Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapScalarToVector : public CParticleFunctionInitializer
@@ -22277,42 +22941,54 @@ class C_INIT_RemapScalarToVector : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1c8	
+	float m_flInputMin; // 0x1d0	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1cc	
+	float m_flInputMax; // 0x1d4	
 	// MPropertyFriendlyName "output minimum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vecOutputMin; // 0x1d0	
+	Vector m_vecOutputMin; // 0x1d8	
 	// MPropertyFriendlyName "output maximum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vecOutputMax; // 0x1dc	
+	Vector m_vecOutputMax; // 0x1e4	
 	// MPropertyFriendlyName "emitter lifetime start time (seconds)"
-	float m_flStartTime; // 0x1e8	
+	float m_flStartTime; // 0x1f0	
 	// MPropertyFriendlyName "emitter lifetime end time (seconds)"
-	float m_flEndTime; // 0x1ec	
+	float m_flEndTime; // 0x1f4	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1f0	
+	ParticleSetMethod_t m_nSetMethod; // 0x1f8	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1f4	
+	int32_t m_nControlPointNumber; // 0x1fc	
 	// MPropertyFriendlyName "use local system"
-	bool m_bLocalCoords; // 0x1f8	
+	bool m_bLocalCoords; // 0x200	
 private:
-	[[maybe_unused]] uint8_t __pad01f9[0x3]; // 0x1f9
+	[[maybe_unused]] uint8_t __pad0201[0x3]; // 0x201
 public:
 	// MPropertyFriendlyName "remap bias"
-	float m_flRemapBias; // 0x1fc	
+	float m_flRemapBias; // 0x204	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFloatAngleMathNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+	CNmFloatAngleMathNode::Operation_t m_operation; // 0x12	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PulseGraphExecutionHistoryEntry_t
@@ -22330,7 +23006,6 @@ public:
 // Size: 0x60
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class FourCovMatrices3
@@ -22360,7 +23035,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Vector 3D"
@@ -22374,7 +23048,6 @@ public:
 // Alignment: 16
 // Size: 0x40
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeFitMatrix_t
@@ -22392,7 +23065,6 @@ public:
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnVertex_t
@@ -22401,67 +23073,82 @@ public:
 	uint8_t m_nEdge; // 0x0	
 };
 
+// Registered binary: server.dll (project 'server')
+// Alignment: 8
+// Size: 0x670
+// Has VTable
+class CNPC_TrooperNeutral_GraphController : public CAI_CitadelNPC_GraphController
+{
+public:
+	CAnimGraphParamOptionalRef< bool > m_bShielded; // 0x5c0	
+	CAnimGraphParamOptionalRef< bool > m_bAlert; // 0x5e0	
+	CAnimGraphParamOptionalRef< char* > m_pszAttackLeanPosition; // 0x600	
+	CAnimGraphParamOptionalRef< char* > m_pszOrbDrop; // 0x628	
+	CAnimGraphParamOptionalRef< bool > m_bHeavyMelee; // 0x650	
+	
+	// Static fields:
+	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNPC_TrooperNeutral_GraphController")->GetStaticFields()[0]->m_pInstance);};
+	static bool &Get_s_bSchemaTest(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNPC_TrooperNeutral_GraphController")->GetStaticFields()[1]->m_pInstance);};
+};
+
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x5d8
+// Size: 0x5f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RepeatedTriggerChildGroup : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "group ID to affect"
-	int32_t m_nChildGroupID; // 0x1c0	
+	int32_t m_nChildGroupID; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "Within-Cluster Refire Time"
-	CParticleCollectionFloatInput m_flClusterRefireTime; // 0x1c8	
+	CParticleCollectionFloatInput m_flClusterRefireTime; // 0x1d0	
 	// MPropertyFriendlyName "Within-Cluster Fire Count Before Cooldown"
-	CParticleCollectionFloatInput m_flClusterSize; // 0x320	
+	CParticleCollectionFloatInput m_flClusterSize; // 0x330	
 	// MPropertyFriendlyName "Cluster Cooldown Time"
-	CParticleCollectionFloatInput m_flClusterCooldown; // 0x478	
+	CParticleCollectionFloatInput m_flClusterCooldown; // 0x490	
 	// MPropertyFriendlyName "limit active children to parent particle count"
-	bool m_bLimitChildCount; // 0x5d0	
+	bool m_bLimitChildCount; // 0x5f0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x220
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapNamedModelElementEndCap : public CParticleFunctionOperator
 {
 public:
-	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x1b8	
+	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x1c0	
 	// MPropertyFriendlyName "input names"
-	CUtlVector< CUtlString > m_inNames; // 0x1c0	
+	CUtlVector< CUtlString > m_inNames; // 0x1c8	
 	// MPropertyFriendlyName "output names"
-	CUtlVector< CUtlString > m_outNames; // 0x1d8	
+	CUtlVector< CUtlString > m_outNames; // 0x1e0	
 	// MPropertyFriendlyName "fallback names when the input doesn't match"
-	CUtlVector< CUtlString > m_fallbackNames; // 0x1f0	
+	CUtlVector< CUtlString > m_fallbackNames; // 0x1f8	
 	// MPropertyFriendlyName "model from renderer"
-	bool m_bModelFromRenderer; // 0x208	
+	bool m_bModelFromRenderer; // 0x210	
 private:
-	[[maybe_unused]] uint8_t __pad0209[0x3]; // 0x209
+	[[maybe_unused]] uint8_t __pad0211[0x3]; // 0x211
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x20c	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x214	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x210	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x218	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct TraceSettings_t
@@ -22473,31 +23160,49 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x70
+// Size: 0xf0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MPropertyFriendlyName "Tint Color Random"
-// MPropertyDescription "Set the color tint to a random selection from within the defined gradient."
+// MPropertyFriendlyName "Tint Color Gradient"
+// MPropertyDescription "Set the color tint to a selection from within the defined gradient."
 // MVDataClassGroup
 class CSmartPropOperation_RandomColorTintColor : public CSmartPropOperation
 {
 public:
-	// MPropertyDescription "Specifies how the selected color should be applied."
-	ApplyColorMode_t m_Mode; // 0x50	
+	// MPropertyFriendlyName "Selection Mode"
+	// MPropertyDescription "Specifies how the color is to be selected from the authored set of choices"
+	CSmartPropAttributeChoiceSelectionMode m_SelectionMode; // 0x50	
+	// MPropertyFriendlyName "Color Position"
+	// MPropertyDescription "[ 0, 1 ] Value specifying the location on the gradient to pick the color from."
+	// MPropertySuppressExpr "( m_SelectionMode != SPECIFIC )"
+	CSmartPropAttributeFloat m_ColorPosition; // 0x90	
+	// MPropertyFriendlyName "Application Mode"
+	// MPropertyDescription "Specifies how the selected color should be applied to the current color."
+	ApplyColorMode_t m_Mode; // 0xd0	
 private:
-	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
+	[[maybe_unused]] uint8_t __pad00d4[0x4]; // 0xd4
 public:
 	// MPropertyDescription "Defines a color gradient from which a random color will be piked."
-	CColorGradient m_Gradient; // 0x58	
+	CColorGradient m_Gradient; // 0xd8	
+};
+
+// Registered binary: server.dll (project 'server')
+// Alignment: 8
+// Size: 0x18
+// Has Trivial Constructor
+// Has Trivial Destructor
+struct AutoRoomDoorwayPairs_t
+{
+public:
+	Vector vP1; // 0x0	
+	Vector vP2; // 0xc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x8a0
+// Size: 0x8c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderDeferredLight : public CParticleFunctionRenderer
@@ -22505,61 +23210,76 @@ class C_OP_RenderDeferredLight : public CParticleFunctionRenderer
 public:
 	// MPropertyFriendlyName "projected texture use alpha test window"
 	// MPropertySuppressExpr "!m_bUseTexture"
-	bool m_bUseAlphaTestWindow; // 0x208	
+	bool m_bUseAlphaTestWindow; // 0x210	
 	// MPropertyFriendlyName "projected texture light"
-	bool m_bUseTexture; // 0x209	
+	bool m_bUseTexture; // 0x211	
 private:
-	[[maybe_unused]] uint8_t __pad020a[0x2]; // 0x20a
+	[[maybe_unused]] uint8_t __pad0212[0x2]; // 0x212
 public:
 	// MPropertyStartGroup "+Renderer Modifiers"
 	// MPropertyFriendlyName "radius scale"
 	// MPropertySortPriority "700"
-	float m_flRadiusScale; // 0x20c	
+	float m_flRadiusScale; // 0x214	
 	// MPropertyFriendlyName "alpha scale"
 	// MPropertySortPriority "700"
-	float m_flAlphaScale; // 0x210	
+	float m_flAlphaScale; // 0x218	
 	// MPropertyFriendlyName "per-particle alpha scale attribute"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "700"
-	ParticleAttributeIndex_t m_nAlpha2Field; // 0x214	
+	ParticleAttributeIndex_t m_nAlpha2Field; // 0x21c	
 	// MPropertyFriendlyName "color blend"
 	// MPropertySortPriority "700"
-	CParticleCollectionVecInput m_vecColorScale; // 0x218	
+	CParticleCollectionVecInput m_vecColorScale; // 0x220	
 	// MPropertyFriendlyName "color blend type"
 	// MPropertySortPriority "700"
-	ParticleColorBlendType_t m_nColorBlendType; // 0x870	
+	ParticleColorBlendType_t m_nColorBlendType; // 0x898	
 	// MPropertyStartGroup
 	// MPropertyFriendlyName "spotlight distance"
-	float m_flLightDistance; // 0x874	
+	float m_flLightDistance; // 0x89c	
 	// MPropertyFriendlyName "light start falloff"
-	float m_flStartFalloff; // 0x878	
+	float m_flStartFalloff; // 0x8a0	
 	// MPropertyFriendlyName "spotlight distance falloff"
-	float m_flDistanceFalloff; // 0x87c	
+	float m_flDistanceFalloff; // 0x8a4	
 	// MPropertyFriendlyName "spotlight FoV"
-	float m_flSpotFoV; // 0x880	
+	float m_flSpotFoV; // 0x8a8	
 	// MPropertyFriendlyName "projected texture alpha test point scale field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySuppressExpr "!m_bUseTexture"
-	ParticleAttributeIndex_t m_nAlphaTestPointField; // 0x884	
+	ParticleAttributeIndex_t m_nAlphaTestPointField; // 0x8ac	
 	// MPropertyFriendlyName "projected texture alpha test range scale field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySuppressExpr "!m_bUseTexture"
-	ParticleAttributeIndex_t m_nAlphaTestRangeField; // 0x888	
+	ParticleAttributeIndex_t m_nAlphaTestRangeField; // 0x8b0	
 	// MPropertyFriendlyName "projected texture alpha test sharpness scale field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySuppressExpr "!m_bUseTexture"
-	ParticleAttributeIndex_t m_nAlphaTestSharpnessField; // 0x88c	
+	ParticleAttributeIndex_t m_nAlphaTestSharpnessField; // 0x8b4	
 	// MPropertyFriendlyName "texture"
 	// MPropertySuppressExpr "!m_bUseTexture"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_hTexture; // 0x890	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hTexture; // 0x8b8	
 	// MPropertyFriendlyName "HSV Shift Control Point"
-	int32_t m_nHSVShiftControlPoint; // 0x898	
+	int32_t m_nHSVShiftControlPoint; // 0x8c0	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmCachedFloatNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	NmCachedValueMode_t m_mode; // 0x14	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CurrencySound_t
@@ -22571,7 +23291,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x1d8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ModifierScriptValue_t
@@ -22591,7 +23310,6 @@ public:
 // Alignment: 8
 // Size: 0x190
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Set Orientation"
@@ -22614,59 +23332,73 @@ public:
 	CSmartPropAttributeBool m_bPrioritizeUp; // 0x150	
 };
 
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
+// Size: 0x80
+// 
+// MGetKV3ClassDefaults
+class CSmartPropMaterialReplacement
+{
+public:
+	// MPropertyAttributeEditor "SmartPropAttributeEditor(MaterialInSmartProp)"
+	// MPropertyFriendlyName "Original Material"
+	// MPropertyDescription "Original material to replace. This is the material specified in the model, including any material group asignment within the model. Does not consider any existing material overrides specified within the smart prop."
+	CSmartPropAttributeMaterialName m_OriginalMaterial; // 0x0	
+	// MPropertyFriendlyName "New Material"
+	// MPropertyDescription "New material to replace the original material with."
+	CSmartPropAttributeMaterialName m_ReplacementMaterial; // 0x40	
+};
+
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointToHMD : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nCP1; // 0x1c0	
+	int32_t m_nCP1; // 0x1c8	
 	// MPropertyFriendlyName "control point offset"
 	// MVectorIsCoordinate
-	Vector m_vecCP1Pos; // 0x1c4	
+	Vector m_vecCP1Pos; // 0x1cc	
 	// MPropertyFriendlyName "use hmd orientation"
-	bool m_bOrientToHMD; // 0x1d0	
+	bool m_bOrientToHMD; // 0x1d8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x200
+// Size: 0x208
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ForceBasedOnDistanceToPlane : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "min distance from plane"
-	float m_flMinDist; // 0x1c8	
+	float m_flMinDist; // 0x1d0	
 	// MPropertyFriendlyName "force at min distance"
 	// MVectorIsCoordinate
-	Vector m_vecForceAtMinDist; // 0x1cc	
+	Vector m_vecForceAtMinDist; // 0x1d4	
 	// MPropertyFriendlyName "max distance from plane"
-	float m_flMaxDist; // 0x1d8	
+	float m_flMaxDist; // 0x1e0	
 	// MPropertyFriendlyName "force at max distance"
 	// MVectorIsCoordinate
-	Vector m_vecForceAtMaxDist; // 0x1dc	
+	Vector m_vecForceAtMaxDist; // 0x1e4	
 	// MPropertyFriendlyName "plane normal"
 	// MVectorIsCoordinate
-	Vector m_vecPlaneNormal; // 0x1e8	
+	Vector m_vecPlaneNormal; // 0x1f0	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1f4	
+	int32_t m_nControlPointNumber; // 0x1fc	
 	// MPropertyFriendlyName "exponent"
-	float m_flExponent; // 0x1f8	
+	float m_flExponent; // 0x200	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_LerpEndCapScalar : public CParticleFunctionOperator
@@ -22674,17 +23406,16 @@ class C_OP_LerpEndCapScalar : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "value to lerp to"
-	float m_flOutput; // 0x1bc	
+	float m_flOutput; // 0x1c4	
 	// MPropertyFriendlyName "lerp time"
-	float m_flLerpTime; // 0x1c0	
+	float m_flLerpTime; // 0x1c8	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 16
 // Size: 0x60
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CConstraintTarget
@@ -22705,6 +23436,18 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
+// Size: 0x18
+// 
+// MGetKV3ClassDefaults
+struct CitadelStatsSpiritDisplay_t
+{
+public:
+	// MPropertyDescription "What stats do we want to display for Spirit?"
+	CUtlVector< EStatsType > m_vecDisplayStats; // 0x0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
 // Size: 0x2
 // Has Trivial Destructor
 // 
@@ -22720,9 +23463,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomLifeTime : public CParticleFunctionInitializer
@@ -22730,58 +23472,56 @@ class C_INIT_RandomLifeTime : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "lifetime min"
 	// MPropertyAttributeRange "0 20"
-	float m_fLifetimeMin; // 0x1c0	
+	float m_fLifetimeMin; // 0x1c8	
 	// MPropertyFriendlyName "lifetime max"
 	// MPropertyAttributeRange "0 20"
-	float m_fLifetimeMax; // 0x1c4	
+	float m_fLifetimeMax; // 0x1cc	
 	// MPropertyFriendlyName "lifetime random exponent"
-	float m_fLifetimeRandExponent; // 0x1c8	
+	float m_fLifetimeRandExponent; // 0x1d0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xa10
+// Size: 0xa40
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_SetHitboxToModel : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "force to be inside model"
-	int32_t m_nForceInModel; // 0x1c4	
+	int32_t m_nForceInModel; // 0x1cc	
 	// MPropertyFriendlyName "even distribution"
-	bool m_bEvenDistribution; // 0x1c8	
+	bool m_bEvenDistribution; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01c9[0x3]; // 0x1c9
+	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
 public:
 	// MPropertyFriendlyName "desired hitbox"
-	int32_t m_nDesiredHitbox; // 0x1cc	
+	int32_t m_nDesiredHitbox; // 0x1d4	
 	// MPropertyFriendlyName "model hitbox scale"
-	CParticleCollectionVecInput m_vecHitBoxScale; // 0x1d0	
+	CParticleCollectionVecInput m_vecHitBoxScale; // 0x1d8	
 	// MPropertyFriendlyName "direction bias"
 	// MVectorIsCoordinate
-	Vector m_vecDirectionBias; // 0x828	
+	Vector m_vecDirectionBias; // 0x850	
 	// MPropertyFriendlyName "maintain existing hitbox"
-	bool m_bMaintainHitbox; // 0x834	
+	bool m_bMaintainHitbox; // 0x85c	
 	// MPropertyFriendlyName "use bones instead of hitboxes"
-	bool m_bUseBones; // 0x835	
+	bool m_bUseBones; // 0x85d	
 	// MPropertyFriendlyName "hitbox set"
-	char m_HitboxSetName[128]; // 0x836	
+	char m_HitboxSetName[128]; // 0x85e	
 private:
-	[[maybe_unused]] uint8_t __pad08b6[0x2]; // 0x8b6
+	[[maybe_unused]] uint8_t __pad08de[0x2]; // 0x8de
 public:
 	// MPropertyFriendlyName "hitbox shell thickness"
-	CParticleCollectionFloatInput m_flShellSize; // 0x8b8	
+	CParticleCollectionFloatInput m_flShellSize; // 0x8e0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapNamedModelSequenceOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
@@ -22789,10 +23529,34 @@ class C_OP_RemapNamedModelSequenceOnceTimed : public C_OP_RemapNamedModelElement
 public:
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmVectorInfoNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+	CNmVectorInfoNode::Info_t m_desiredInfo; // 0x12	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmCurrentSyncEventIndexNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nSourceStateNodeIdx; // 0x10	
+};
+
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulse_PublicOutput
@@ -22807,7 +23571,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "TestDomain"
@@ -22821,9 +23584,8 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x228
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Select Single Child"
@@ -22833,31 +23595,34 @@ class CSmartPropElement_PickOne : public CSmartPropElement_Group
 public:
 	// MPropertyDescription "Specifies how the initial selection of a choice should be handled."
 	CSmartPropAttributeChoiceSelectionMode m_SelectionMode; // 0xa0	
+	// MPropertyFriendlyName "Specific Child"
+	// MPropertyDescription "Specifies the index of the child to pick."
+	// MPropertySuppressExpr "( m_SelectionMode != SPECIFIC )"
+	CSmartPropAttributeInt m_SpecificChildIndex; // 0xe0	
 	// MPropertyDescription "Should a control to select the specific choice be shown when this prop is placed in Hammer."
-	CSmartPropAttributeBool m_bConfigurable; // 0xe0	
+	CSmartPropAttributeBool m_bConfigurable; // 0x120	
 	// MPropertyGroupName "Handle Settings"
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Specifies an offset in the local space of the element to apply to the configuration handle."
-	CSmartPropAttributeVector m_vHandleOffset; // 0x120	
+	CSmartPropAttributeVector m_vHandleOffset; // 0x160	
 	// MPropertyGroupName "Handle Settings"
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Color to use to display the configuration handle."
-	CSmartPropAttributeColor m_HandleColor; // 0x160	
+	CSmartPropAttributeColor m_HandleColor; // 0x1a0	
 	// MPropertyGroupName "Handle Settings"
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Size of the configuration handle."
-	CSmartPropAttributeInt m_HandleSize; // 0x1a0	
+	CSmartPropAttributeInt m_HandleSize; // 0x1e0	
 	// MPropertyGroupName "Handle Settings"
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Shape of the configuration handle to display."
-	ConfigurationHandleShape_t m_HandleShape; // 0x1e0	
+	ConfigurationHandleShape_t m_HandleShape; // 0x220	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0xe8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Place Multiple"
@@ -22875,9 +23640,8 @@ public:
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0x110
+// Size: 0xe0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "LoopTrigger"
@@ -22885,18 +23649,18 @@ public:
 class CVoiceContainerLoopTrigger : public CVoiceContainerBase
 {
 public:
-	CUtlVector< CVoiceContainerBase* > m_pSound; // 0xe8	
-	float m_flRetriggerTimeMin; // 0x100	
-	float m_flRetriggerTimeMax; // 0x104	
-	float m_flFadeTime; // 0x108	
-	bool m_bCrossFade; // 0x10c	
+	// MPropertyFriendlyName "Vsnd Reference"
+	CSoundContainerReference m_sound; // 0xb8	
+	float m_flRetriggerTimeMin; // 0xd0	
+	float m_flRetriggerTimeMax; // 0xd4	
+	float m_flFadeTime; // 0xd8	
+	bool m_bCrossFade; // 0xdc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_OffsetVectorToVector : public CParticleFunctionInitializer
@@ -22904,25 +23668,24 @@ class C_INIT_OffsetVectorToVector : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc	
 	// MPropertyFriendlyName "output offset minimum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vecOutputMin; // 0x1c8	
+	Vector m_vecOutputMin; // 0x1d0	
 	// MPropertyFriendlyName "output offset maximum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vecOutputMax; // 0x1d4	
+	Vector m_vecOutputMax; // 0x1dc	
 	// MPropertyFriendlyName "Random number generator controls"
-	CRandomNumberGeneratorParameters m_randomnessParameters; // 0x1e0	
+	CRandomNumberGeneratorParameters m_randomnessParameters; // 0x1e8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xe90
+// Size: 0xed8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_PositionWarp : public CParticleFunctionInitializer
@@ -22930,27 +23693,27 @@ class C_INIT_PositionWarp : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "warp min"
 	// MVectorIsCoordinate
-	CParticleCollectionVecInput m_vecWarpMin; // 0x1c0	
+	CParticleCollectionVecInput m_vecWarpMin; // 0x1c8	
 	// MPropertyFriendlyName "warp max"
 	// MVectorIsCoordinate
-	CParticleCollectionVecInput m_vecWarpMax; // 0x818	
+	CParticleCollectionVecInput m_vecWarpMax; // 0x840	
 	// MPropertyFriendlyName "warp scale control point number"
-	int32_t m_nScaleControlPointNumber; // 0xe70	
+	int32_t m_nScaleControlPointNumber; // 0xeb8	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0xe74	
+	int32_t m_nControlPointNumber; // 0xebc	
 	// MPropertyFriendlyName "radius scale component"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nRadiusComponent; // 0xe78	
+	int32_t m_nRadiusComponent; // 0xec0	
 	// MPropertyFriendlyName "warp transition time (treats min/max as start/end sizes)"
-	float m_flWarpTime; // 0xe7c	
+	float m_flWarpTime; // 0xec4	
 	// MPropertyFriendlyName "warp transition start time"
-	float m_flWarpStartTime; // 0xe80	
+	float m_flWarpStartTime; // 0xec8	
 	// MPropertyFriendlyName "previous position sacale"
-	float m_flPrevPosScale; // 0xe84	
+	float m_flPrevPosScale; // 0xecc	
 	// MPropertyFriendlyName "reverse warp (0/1)"
-	bool m_bInvertWarp; // 0xe88	
+	bool m_bInvertWarp; // 0xed0	
 	// MPropertyFriendlyName "use particle count instead of time"
-	bool m_bUseCount; // 0xe89	
+	bool m_bUseCount; // 0xed1	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -22967,7 +23730,6 @@ public:
 // Alignment: 8
 // Size: 0x168
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -22988,7 +23750,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PermEntityLumpData_t
@@ -23003,9 +23764,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x210
+// Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MParticleMaxVersion "7"
 // MParticleReplacementOp "C_INIT_CreateSequentialPathV2"
@@ -23014,51 +23774,50 @@ class C_INIT_CreateSequentialPath : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "maximum distance"
-	float m_fMaxDistance; // 0x1c0	
+	float m_fMaxDistance; // 0x1c8	
 	// MPropertyFriendlyName "particles to map from start to end"
-	float m_flNumToAssign; // 0x1c4	
+	float m_flNumToAssign; // 0x1cc	
 	// MPropertyFriendlyName "restart behavior (0 = bounce, 1 = loop )"
-	bool m_bLoop; // 0x1c8	
+	bool m_bLoop; // 0x1d0	
 	// MPropertyFriendlyName "use sequential CP pairs between start and end point"
-	bool m_bCPPairs; // 0x1c9	
+	bool m_bCPPairs; // 0x1d1	
 	// MPropertyFriendlyName "save offset"
-	bool m_bSaveOffset; // 0x1ca	
+	bool m_bSaveOffset; // 0x1d2	
 private:
-	[[maybe_unused]] uint8_t __pad01cb[0x5]; // 0x1cb
+	[[maybe_unused]] uint8_t __pad01d3[0xd]; // 0x1d3
 public:
-	CPathParameters m_PathParams; // 0x1d0	
+	CPathParameters m_PathParams; // 0x1e0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x250
+// Size: 0x258
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapTransformVisibilityToVector : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1b8	
+	ParticleSetMethod_t m_nSetMethod; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0x1c0	
+	CParticleTransformInput m_TransformInput; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x228	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x230	
 	// MPropertyFriendlyName "CP visibility minimum"
-	float m_flInputMin; // 0x22c	
+	float m_flInputMin; // 0x234	
 	// MPropertyFriendlyName "CP visibility maximum"
-	float m_flInputMax; // 0x230	
+	float m_flInputMax; // 0x238	
 	// MPropertyFriendlyName "output minimum"
-	Vector m_vecOutputMin; // 0x234	
+	Vector m_vecOutputMin; // 0x23c	
 	// MPropertyFriendlyName "output maximum"
-	Vector m_vecOutputMax; // 0x240	
+	Vector m_vecOutputMax; // 0x248	
 	// MPropertyFriendlyName "visibility radius"
-	float m_flRadius; // 0x24c	
+	float m_flRadius; // 0x254	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
@@ -23079,7 +23838,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ModifierRenderAttribute_t
@@ -23093,7 +23851,6 @@ public:
 // Alignment: 4
 // Size: 0x28
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixDelayDesc_t
@@ -23113,54 +23870,51 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x478
+// Size: 0x490
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ConnectParentParticleToNearest : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point to set"
-	int32_t m_nFirstControlPoint; // 0x1b8	
+	int32_t m_nFirstControlPoint; // 0x1c0	
 	// MPropertyFriendlyName "Second Control point to set"
-	int32_t m_nSecondControlPoint; // 0x1bc	
+	int32_t m_nSecondControlPoint; // 0x1c4	
 	// MPropertyFriendlyName "Take radius into account for distance"
-	bool m_bUseRadius; // 0x1c0	
+	bool m_bUseRadius; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c1[0x7]; // 0x1c1
+	[[maybe_unused]] uint8_t __pad01c9[0x7]; // 0x1c9
 public:
 	// MPropertyFriendlyName "Radius scale for distance calc"
 	// MPropertySuppressExpr "!m_bUseRadius"
-	CParticleCollectionFloatInput m_flRadiusScale; // 0x1c8	
+	CParticleCollectionFloatInput m_flRadiusScale; // 0x1d0	
 	// MPropertyFriendlyName "Parent radius scale for distance calc"
 	// MPropertySuppressExpr "!m_bUseRadius"
-	CParticleCollectionFloatInput m_flParentRadiusScale; // 0x320	
+	CParticleCollectionFloatInput m_flParentRadiusScale; // 0x330	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x320
+// Size: 0x330
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_StopAfterCPDuration : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "duration at which to stop"
-	CParticleCollectionFloatInput m_flDuration; // 0x1c0	
+	CParticleCollectionFloatInput m_flDuration; // 0x1c8	
 	// MPropertyFriendlyName "destroy all particles immediately"
-	bool m_bDestroyImmediately; // 0x318	
+	bool m_bDestroyImmediately; // 0x328	
 	// MPropertyFriendlyName "play end cap effect"
-	bool m_bPlayEndCap; // 0x319	
+	bool m_bPlayEndCap; // 0x329	
 };
 
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 4
 // Size: 0x70
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PostProcessingBloomParameters_t
@@ -23182,7 +23936,6 @@ public:
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBoneConstraintDotToMorph : public CBoneConstraintBase
@@ -23192,38 +23945,6 @@ public:
 	CUtlString m_sTargetBoneName; // 0x30	
 	CUtlString m_sMorphChannelName; // 0x38	
 	float m_flRemap[4]; // 0x40	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x48
-// Construct allowed
-// 
-// MGetKV3ClassDefaults
-// MPropertyArrayElementNameKey "m_strContext"
-struct CitadelAbilityHUDElement_t
-{
-public:
-	ECitadelAbilityHUDElementType_t m_eType; // 0x0	
-	CUtlString m_strContext; // 0x8	
-private:
-	[[maybe_unused]] uint8_t __pad0010[0x8]; // 0x10
-public:
-	// MPropertyDescription "Space separated set of classes to add to the panel (ex: "medium superCool noMiddle""
-	CUtlString m_strAdditionalClasses; // 0x18	
-	// -> m_eType - 0x20
-	// -> m_nPriority - 0x24
-	HUDElementExclusivity_t m_eElementExclusivity; // 0x20	
-	// MPropertyCustomFGDType "panorama_layout"
-	// MPropertySuppressExpr "m_eType != CITADEL_ABILITY_HUD_ELEMENT_TYPE_PROGRESS"
-	CUtlString m_Layout; // 0x28	
-	// MPropertySuppressExpr "m_eType != CITADEL_ABILITY_HUD_ELEMENT_TYPE_PROGRESS"
-	bool m_bReverseProgress; // 0x30	
-private:
-	[[maybe_unused]] uint8_t __pad0031[0x7]; // 0x31
-public:
-	// MPropertySuppressExpr "m_eType != CITADEL_ABILITY_HUD_ELEMENT_TYPE_ICON"
-	CPanoramaImageName m_strIcon; // 0x38	
 };
 
 // Registered binary: client.dll (project 'entity2')
@@ -23269,9 +23990,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_LerpEndCapVector : public CParticleFunctionOperator
@@ -23279,43 +23999,56 @@ class C_OP_LerpEndCapVector : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "value to lerp to"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vecOutput; // 0x1bc	
+	Vector m_vecOutput; // 0x1c4	
 	// MPropertyFriendlyName "lerp time"
-	float m_flLerpTime; // 0x1c8	
+	float m_flLerpTime; // 0x1d0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
 // Size: 0x200
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RampScalarLinearSimple : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "ramp rate"
-	float m_Rate; // 0x1b8	
+	float m_Rate; // 0x1c0	
 	// MPropertyFriendlyName "start time"
-	float m_flStartTime; // 0x1bc	
+	float m_flStartTime; // 0x1c4	
 	// MPropertyFriendlyName "end time"
-	float m_flEndTime; // 0x1c0	
+	float m_flEndTime; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x2c]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x24]; // 0x1cc
 public:
 	// MPropertyFriendlyName "ramp field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	ParticleAttributeIndex_t m_nField; // 0x1f0	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmTransitionEventConditionNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	CGlobalSymbol m_requireRuleID; // 0x10	
+	CNmBitFlags m_eventConditionRules; // 0x18	
+	int16_t m_nSourceStateNodeIdx; // 0x1c	
+	NmTransitionRuleCondition_t m_ruleCondition; // 0x1e	
+};
+
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSlopeComponentUpdater : public CAnimComponentUpdater
@@ -23367,7 +24100,6 @@ public:
 // Alignment: 8
 // Size: 0x198
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Distance"
@@ -23399,7 +24131,6 @@ public:
 // Alignment: 8
 // Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Vector Between Points"
@@ -23434,7 +24165,6 @@ public:
 // Alignment: 16
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnNode_t
@@ -23448,30 +24178,28 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x250
+// Size: 0x258
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InitialVelocityFromHitbox : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "velocity minimum"
-	float m_flVelocityMin; // 0x1c0	
+	float m_flVelocityMin; // 0x1c8	
 	// MPropertyFriendlyName "velocity maximum"
-	float m_flVelocityMax; // 0x1c4	
+	float m_flVelocityMax; // 0x1cc	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c8	
+	int32_t m_nControlPointNumber; // 0x1d0	
 	// MPropertyFriendlyName "hitbox set"
-	char m_HitboxSetName[128]; // 0x1cc	
+	char m_HitboxSetName[128]; // 0x1d4	
 	// MPropertyFriendlyName "use bones instead of hitboxes"
-	bool m_bUseBones; // 0x24c	
+	bool m_bUseBones; // 0x254	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x90
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqCmdSeqDesc
@@ -23499,7 +24227,6 @@ public:
 // Size: 0x28
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPathAnimMotorUpdaterBase : public CAnimMotorUpdaterBase
@@ -23570,7 +24297,6 @@ public:
 // Size: 0x10
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeEdgeDesc_t
@@ -23585,7 +24311,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixOscDesc_t
@@ -23601,11 +24326,26 @@ public:
 	float m_flPhase; // 0x8	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x78
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFloatSelectorNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	CUtlVectorFixedGrowable< int16, 5 > m_conditionNodeIndices; // 0x10	
+	CUtlVectorFixedGrowable< float32, 5 > m_values; // 0x38	
+	float m_flDefaultValue; // 0x68	
+	float m_flEaseTime; // 0x6c	
+	NmEasingOperation_t m_easingOp; // 0x70	
+};
+
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x28
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPathAnimMotorUpdater : public CPathAnimMotorUpdaterBase
@@ -23617,7 +24357,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Tint Mode"
@@ -23644,9 +24383,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1f0
+// Size: 0x1f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapScalar : public CParticleFunctionInitializer
@@ -23654,65 +24392,63 @@ class C_INIT_RemapScalar : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1c8	
+	float m_flInputMin; // 0x1d0	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1cc	
+	float m_flInputMax; // 0x1d4	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1d0	
+	float m_flOutputMin; // 0x1d8	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d4	
+	float m_flOutputMax; // 0x1dc	
 	// MPropertyFriendlyName "emitter lifetime start time (seconds)"
-	float m_flStartTime; // 0x1d8	
+	float m_flStartTime; // 0x1e0	
 	// MPropertyFriendlyName "emitter lifetime end time (seconds)"
-	float m_flEndTime; // 0x1dc	
+	float m_flEndTime; // 0x1e4	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1e0	
+	ParticleSetMethod_t m_nSetMethod; // 0x1e8	
 	// MPropertyFriendlyName "only active within specified input range"
-	bool m_bActiveRange; // 0x1e4	
+	bool m_bActiveRange; // 0x1ec	
 private:
-	[[maybe_unused]] uint8_t __pad01e5[0x3]; // 0x1e5
+	[[maybe_unused]] uint8_t __pad01ed[0x3]; // 0x1ed
 public:
 	// MPropertyFriendlyName "remap bias"
-	float m_flRemapBias; // 0x1e8	
+	float m_flRemapBias; // 0x1f0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xfd8
+// Size: 0x1028
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointFieldFromVectorExpression : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "expression"
-	VectorFloatExpressionType_t m_nExpression; // 0x1c0	
+	VectorFloatExpressionType_t m_nExpression; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "input 1"
-	CParticleCollectionVecInput m_vecInput1; // 0x1c8	
+	CParticleCollectionVecInput m_vecInput1; // 0x1d0	
 	// MPropertyFriendlyName "input 2"
-	CParticleCollectionVecInput m_vecInput2; // 0x820	
+	CParticleCollectionVecInput m_vecInput2; // 0x848	
 	// MPropertyFriendlyName "output"
-	CParticleRemapFloatInput m_flOutputRemap; // 0xe78	
+	CParticleRemapFloatInput m_flOutputRemap; // 0xec0	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutputCP; // 0xfd0	
+	int32_t m_nOutputCP; // 0x1020	
 	// MPropertyFriendlyName "output component"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nOutVectorField; // 0xfd4	
+	int32_t m_nOutVectorField; // 0x1024	
 };
 
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParamInt_t : public MaterialParam_t
@@ -23725,7 +24461,6 @@ public:
 // Alignment: 8
 // Size: 0x78
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CWayPointHelperUpdateNode : public CUnaryUpdateNode
@@ -23744,7 +24479,6 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulse_DomainValue
@@ -23783,32 +24517,30 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapDistanceToLineSegmentBase : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point 0"
-	int32_t m_nCP0; // 0x1b8	
+	int32_t m_nCP0; // 0x1c0	
 	// MPropertyFriendlyName "control point 1"
-	int32_t m_nCP1; // 0x1bc	
+	int32_t m_nCP1; // 0x1c4	
 	// MPropertyFriendlyName "min distance value"
-	float m_flMinInputValue; // 0x1c0	
+	float m_flMinInputValue; // 0x1c8	
 	// MPropertyFriendlyName "max distance value"
-	float m_flMaxInputValue; // 0x1c4	
+	float m_flMaxInputValue; // 0x1cc	
 	// MPropertyFriendlyName "use distance to an infinite line instead of a finite line segment"
-	bool m_bInfiniteLine; // 0x1c8	
+	bool m_bInfiniteLine; // 0x1d0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x338
+// Size: 0x348
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RotateVector : public CParticleFunctionOperator
@@ -23816,30 +24548,29 @@ class C_OP_RotateVector : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "rotation axis min"
 	// MVectorIsCoordinate
-	Vector m_vecRotAxisMin; // 0x1bc	
+	Vector m_vecRotAxisMin; // 0x1c4	
 	// MPropertyFriendlyName "rotation axis max"
 	// MVectorIsCoordinate
-	Vector m_vecRotAxisMax; // 0x1c8	
+	Vector m_vecRotAxisMax; // 0x1d0	
 	// MPropertyFriendlyName "rotation rate min"
-	float m_flRotRateMin; // 0x1d4	
+	float m_flRotRateMin; // 0x1dc	
 	// MPropertyFriendlyName "rotation rate max"
-	float m_flRotRateMax; // 0x1d8	
+	float m_flRotRateMax; // 0x1e0	
 	// MPropertyFriendlyName "normalize output"
-	bool m_bNormalize; // 0x1dc	
+	bool m_bNormalize; // 0x1e4	
 private:
-	[[maybe_unused]] uint8_t __pad01dd[0x3]; // 0x1dd
+	[[maybe_unused]] uint8_t __pad01e5[0x3]; // 0x1e5
 public:
 	// MPropertyFriendlyName "per particle scale"
-	CPerParticleFloatInput m_flScale; // 0x1e0	
+	CPerParticleFloatInput m_flScale; // 0x1e8	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x58
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PermModelInfo_t
@@ -23861,7 +24592,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyEditClassAsString
@@ -23891,7 +24621,6 @@ public:
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeCtrlOffset_t
@@ -23906,7 +24635,6 @@ public:
 // Alignment: 4
 // Size: 0x1c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeTri_t
@@ -23933,7 +24661,6 @@ public:
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
 // Alignment: 8
 // Size: 0x8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct TestResource_t
@@ -23945,9 +24672,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x248
+// Size: 0x250
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InitFromParentKilled : public CParticleFunctionInitializer
@@ -23955,16 +24681,15 @@ class C_INIT_InitFromParentKilled : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "field to init"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nAttributeToCopy; // 0x1c0	
+	ParticleAttributeIndex_t m_nAttributeToCopy; // 0x1c8	
 	// MPropertyFriendlyName "event type"
-	EventTypeSelection_t m_nEventType; // 0x1c4	
+	EventTypeSelection_t m_nEventType; // 0x1cc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MParticleMinVersion "9"
 // MGetKV3ClassDefaults
@@ -23972,26 +24697,42 @@ class C_OP_InheritFromParentParticlesV2 : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "scale"
-	float m_flScale; // 0x1b8	
+	float m_flScale; // 0x1c0	
 	// MPropertyFriendlyName "inherited field"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "particle increment amount"
-	int32_t m_nIncrement; // 0x1c0	
+	int32_t m_nIncrement; // 0x1c8	
 	// MPropertyFriendlyName "random parent particle distribution"
-	bool m_bRandomDistribution; // 0x1c4	
+	bool m_bRandomDistribution; // 0x1cc	
 private:
-	[[maybe_unused]] uint8_t __pad01c5[0x3]; // 0x1c5
+	[[maybe_unused]] uint8_t __pad01cd[0x3]; // 0x1cd
 public:
 	// MPropertyFriendlyName "behavior if parent particle dies"
-	MissingParentInheritBehavior_t m_nMissingParentBehavior; // 0x1c8	
+	MissingParentInheritBehavior_t m_nMissingParentBehavior; // 0x1d0	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmIDEventNode::CDefinition : public CNmIDValueNode::CDefinition
+{
+public:
+	int16_t m_nSourceStateNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	CNmBitFlags m_eventConditionRules; // 0x14	
+	CGlobalSymbol m_defaultValue; // 0x18	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0xe8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CLeanMatrixUpdateNode : public CLeafUpdateNode
@@ -24021,7 +24762,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBlendCurve
@@ -24060,7 +24800,6 @@ public:
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -24088,7 +24827,6 @@ public:
 // Registered binary: scenesystem.dll (project 'scenesystem')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSSDSMsg_ViewRender
@@ -24100,10 +24838,9 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x2718
+// Size: 0x27e8
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBaseRendererSource2 : public CParticleFunctionRenderer
@@ -24112,252 +24849,251 @@ public:
 	// MPropertyStartGroup "+Renderer Modifiers"
 	// MPropertyFriendlyName "radius scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionRendererFloatInput m_flRadiusScale; // 0x208	
+	CParticleCollectionRendererFloatInput m_flRadiusScale; // 0x210	
 	// MPropertyFriendlyName "alpha scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionRendererFloatInput m_flAlphaScale; // 0x360	
+	CParticleCollectionRendererFloatInput m_flAlphaScale; // 0x370	
 	// MPropertyFriendlyName "rotation roll scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionRendererFloatInput m_flRollScale; // 0x4b8	
+	CParticleCollectionRendererFloatInput m_flRollScale; // 0x4d0	
 	// MPropertyFriendlyName "per-particle alpha scale attribute"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "700"
-	ParticleAttributeIndex_t m_nAlpha2Field; // 0x610	
+	ParticleAttributeIndex_t m_nAlpha2Field; // 0x630	
 private:
-	[[maybe_unused]] uint8_t __pad0614[0x4]; // 0x614
+	[[maybe_unused]] uint8_t __pad0634[0x4]; // 0x634
 public:
 	// MPropertyFriendlyName "color blend"
 	// MPropertySortPriority "700"
-	CParticleCollectionRendererVecInput m_vecColorScale; // 0x618	
+	CParticleCollectionRendererVecInput m_vecColorScale; // 0x638	
 	// MPropertyFriendlyName "color blend type"
 	// MPropertySortPriority "700"
-	ParticleColorBlendType_t m_nColorBlendType; // 0xc70	
+	ParticleColorBlendType_t m_nColorBlendType; // 0xcb0	
 	// MPropertyStartGroup "+Material"
 	// MPropertyFriendlyName "Shader"
 	// MPropertySortPriority "600"
-	SpriteCardShaderType_t m_nShaderType; // 0xc74	
+	SpriteCardShaderType_t m_nShaderType; // 0xcb4	
 	// MPropertyFriendlyName "Custom Shader"
 	// MPropertySuppressExpr "m_nShaderType != SPRITECARD_SHADER_CUSTOM"
 	// MPropertySortPriority "600"
-	CUtlString m_strShaderOverride; // 0xc78	
+	CUtlString m_strShaderOverride; // 0xcb8	
 	// MPropertyFriendlyName "X offset of center point"
 	// MPropertySortPriority "600"
-	CParticleCollectionRendererFloatInput m_flCenterXOffset; // 0xc80	
+	CParticleCollectionRendererFloatInput m_flCenterXOffset; // 0xcc0	
 	// MPropertyFriendlyName "Y offset of center point"
 	// MPropertySortPriority "600"
-	CParticleCollectionRendererFloatInput m_flCenterYOffset; // 0xdd8	
+	CParticleCollectionRendererFloatInput m_flCenterYOffset; // 0xe20	
 	// MPropertyFriendlyName "Bump Strength"
 	// MPropertySortPriority "600"
-	float m_flBumpStrength; // 0xf30	
+	float m_flBumpStrength; // 0xf80	
 	// MPropertyFriendlyName "Sheet Crop Behavior"
 	// MPropertySortPriority "600"
-	ParticleSequenceCropOverride_t m_nCropTextureOverride; // 0xf34	
+	ParticleSequenceCropOverride_t m_nCropTextureOverride; // 0xf84	
 	// MPropertyFriendlyName "Textures"
 	// MParticleRequireDefaultArrayEntry
 	// MPropertyAutoExpandSelf
 	// MPropertySortPriority "600"
-	CUtlVector< TextureGroup_t > m_vecTexturesInput; // 0xf38	
+	CUtlVector< TextureGroup_t > m_vecTexturesInput; // 0xf88	
 	// MPropertyStartGroup "Animation"
 	// MPropertyFriendlyName "animation rate"
 	// MPropertyAttributeRange "0 5"
 	// MPropertySortPriority "500"
-	float m_flAnimationRate; // 0xf50	
+	float m_flAnimationRate; // 0xfa0	
 	// MPropertyFriendlyName "animation type"
 	// MPropertySortPriority "500"
-	AnimationType_t m_nAnimationType; // 0xf54	
+	AnimationType_t m_nAnimationType; // 0xfa4	
 	// MPropertyFriendlyName "set animation value in FPS"
 	// MPropertySortPriority "500"
-	bool m_bAnimateInFPS; // 0xf58	
+	bool m_bAnimateInFPS; // 0xfa8	
 private:
-	[[maybe_unused]] uint8_t __pad0f59[0x7]; // 0xf59
+	[[maybe_unused]] uint8_t __pad0fa9[0x7]; // 0xfa9
 public:
 	// MPropertyStartGroup "Lighting and Shadows"
 	// MPropertyFriendlyName "self illum amount"
 	// MPropertyAttributeRange "0 2"
 	// MPropertySortPriority "400"
-	CParticleCollectionRendererFloatInput m_flSelfIllumAmount; // 0xf60	
+	CParticleCollectionRendererFloatInput m_flSelfIllumAmount; // 0xfb0	
 	// MPropertyFriendlyName "diffuse lighting amount"
 	// MPropertyAttributeRange "0 1"
 	// MPropertySortPriority "400"
-	CParticleCollectionRendererFloatInput m_flDiffuseAmount; // 0x10b8	
+	CParticleCollectionRendererFloatInput m_flDiffuseAmount; // 0x1110	
 	// MPropertyFriendlyName "diffuse max contribution clamp"
 	// MPropertyAttributeRange "0 1"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "mod != hlx"
-	CParticleCollectionRendererFloatInput m_flDiffuseClamp; // 0x1210	
+	CParticleCollectionRendererFloatInput m_flDiffuseClamp; // 0x1270	
 	// MPropertyFriendlyName "diffuse lighting origin Control Point"
 	// MPropertySortPriority "400"
-	int32_t m_nLightingControlPoint; // 0x1368	
+	int32_t m_nLightingControlPoint; // 0x13d0	
 	// MPropertyFriendlyName "self illum per-particle"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "m_nOrientationType == PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL || m_nOrientationType == PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL"
-	ParticleAttributeIndex_t m_nSelfIllumPerParticle; // 0x136c	
+	ParticleAttributeIndex_t m_nSelfIllumPerParticle; // 0x13d4	
 	// MPropertyStartGroup "+Color and alpha adjustments"
 	// MPropertyFriendlyName "output blend mode"
 	// MPropertySortPriority "300"
-	ParticleOutputBlendMode_t m_nOutputBlendMode; // 0x1370	
+	ParticleOutputBlendMode_t m_nOutputBlendMode; // 0x13d8	
 	// MPropertyFriendlyName "Gamma-correct vertex colors"
 	// MPropertySortPriority "300"
-	bool m_bGammaCorrectVertexColors; // 0x1374	
+	bool m_bGammaCorrectVertexColors; // 0x13dc	
 	// MPropertyFriendlyName "Saturate color pre alphablend"
 	// MPropertySortPriority "300"
 	// MPropertySuppressExpr "mod!=dota"
-	bool m_bSaturateColorPreAlphaBlend; // 0x1375	
+	bool m_bSaturateColorPreAlphaBlend; // 0x13dd	
 private:
-	[[maybe_unused]] uint8_t __pad1376[0x2]; // 0x1376
+	[[maybe_unused]] uint8_t __pad13de[0x2]; // 0x13de
 public:
 	// MPropertyFriendlyName "add self amount over alphablend"
 	// MPropertySortPriority "300"
-	CParticleCollectionRendererFloatInput m_flAddSelfAmount; // 0x1378	
+	CParticleCollectionRendererFloatInput m_flAddSelfAmount; // 0x13e0	
 	// MPropertyFriendlyName "desaturation amount"
 	// MPropertyAttributeRange "0 1"
 	// MPropertySortPriority "300"
-	CParticleCollectionRendererFloatInput m_flDesaturation; // 0x14d0	
+	CParticleCollectionRendererFloatInput m_flDesaturation; // 0x1540	
 	// MPropertyFriendlyName "overbright factor"
 	// MPropertySortPriority "300"
-	CParticleCollectionRendererFloatInput m_flOverbrightFactor; // 0x1628	
+	CParticleCollectionRendererFloatInput m_flOverbrightFactor; // 0x16a0	
 	// MPropertyFriendlyName "HSV Shift Control Point"
 	// MPropertySortPriority "300"
-	int32_t m_nHSVShiftControlPoint; // 0x1780	
+	int32_t m_nHSVShiftControlPoint; // 0x1800	
 	// MPropertyFriendlyName "Apply fog to particle"
 	// MPropertySortPriority "300"
-	ParticleFogType_t m_nFogType; // 0x1784	
+	ParticleFogType_t m_nFogType; // 0x1804	
 	// MPropertyFriendlyName "Fog Scale"
 	// MPropertySortPriority "300"
 	// MPropertySuppressExpr "mod != hlx"
-	CParticleCollectionRendererFloatInput m_flFogAmount; // 0x1788	
+	CParticleCollectionRendererFloatInput m_flFogAmount; // 0x1808	
 	// MPropertyFriendlyName "Apply fog of war to color"
 	// MPropertySortPriority "300"
 	// MPropertySuppressExpr "mod != dota"
-	bool m_bTintByFOW; // 0x18e0	
+	bool m_bTintByFOW; // 0x1968	
 	// MPropertyFriendlyName "Apply global light to color"
 	// MPropertySortPriority "300"
 	// MPropertySuppressExpr "mod != dota"
-	bool m_bTintByGlobalLight; // 0x18e1	
+	bool m_bTintByGlobalLight; // 0x1969	
 private:
-	[[maybe_unused]] uint8_t __pad18e2[0x2]; // 0x18e2
+	[[maybe_unused]] uint8_t __pad196a[0x2]; // 0x196a
 public:
 	// MPropertyStartGroup "Color and alpha adjustments/Alpha Reference"
 	// MPropertyFriendlyName "alpha reference"
 	// MPropertySortPriority "300"
-	SpriteCardPerParticleScale_t m_nPerParticleAlphaReference; // 0x18e4	
+	SpriteCardPerParticleScale_t m_nPerParticleAlphaReference; // 0x196c	
 	// MPropertyFriendlyName "alpha reference window size"
 	// MPropertySortPriority "300"
-	SpriteCardPerParticleScale_t m_nPerParticleAlphaRefWindow; // 0x18e8	
+	SpriteCardPerParticleScale_t m_nPerParticleAlphaRefWindow; // 0x1970	
 	// MPropertyFriendlyName "alpha reference type"
 	// MPropertySortPriority "300"
-	ParticleAlphaReferenceType_t m_nAlphaReferenceType; // 0x18ec	
+	ParticleAlphaReferenceType_t m_nAlphaReferenceType; // 0x1974	
 	// MPropertyFriendlyName "alpha reference softness"
 	// MPropertyAttributeRange "0 1"
 	// MPropertySortPriority "300"
-	CParticleCollectionRendererFloatInput m_flAlphaReferenceSoftness; // 0x18f0	
+	CParticleCollectionRendererFloatInput m_flAlphaReferenceSoftness; // 0x1978	
 	// MPropertyFriendlyName "source alpha value to map to alpha of zero"
 	// MPropertyAttributeRange "0 1"
 	// MPropertySortPriority "300"
-	CParticleCollectionRendererFloatInput m_flSourceAlphaValueToMapToZero; // 0x1a48	
+	CParticleCollectionRendererFloatInput m_flSourceAlphaValueToMapToZero; // 0x1ad8	
 	// MPropertyFriendlyName "source alpha value to map to alpha of 1"
 	// MPropertyAttributeRange "0 1"
 	// MPropertySortPriority "300"
-	CParticleCollectionRendererFloatInput m_flSourceAlphaValueToMapToOne; // 0x1ba0	
+	CParticleCollectionRendererFloatInput m_flSourceAlphaValueToMapToOne; // 0x1c38	
 	// MPropertyStartGroup "Refraction"
 	// MPropertyFriendlyName "refract background"
 	// MPropertySortPriority "200"
-	bool m_bRefract; // 0x1cf8	
+	bool m_bRefract; // 0x1d98	
 	// MPropertyFriendlyName "refract draws opaque - alpha scales refraction"
 	// MPropertySortPriority "200"
 	// MPropertySuppressExpr "!m_bRefract"
-	bool m_bRefractSolid; // 0x1cf9	
+	bool m_bRefractSolid; // 0x1d99	
 private:
-	[[maybe_unused]] uint8_t __pad1cfa[0x6]; // 0x1cfa
+	[[maybe_unused]] uint8_t __pad1d9a[0x6]; // 0x1d9a
 public:
 	// MPropertyFriendlyName "refract amount"
 	// MPropertyAttributeRange "-2 2"
 	// MPropertySortPriority "200"
 	// MPropertySuppressExpr "!m_bRefract"
-	CParticleCollectionRendererFloatInput m_flRefractAmount; // 0x1d00	
+	CParticleCollectionRendererFloatInput m_flRefractAmount; // 0x1da0	
 	// MPropertyFriendlyName "refract blur radius"
 	// MPropertySortPriority "200"
 	// MPropertySuppressExpr "!m_bRefract"
-	int32_t m_nRefractBlurRadius; // 0x1e58	
+	int32_t m_nRefractBlurRadius; // 0x1f00	
 	// MPropertyFriendlyName "refract blur type"
 	// MPropertySortPriority "200"
 	// MPropertySuppressExpr "!m_bRefract"
-	BlurFilterType_t m_nRefractBlurType; // 0x1e5c	
+	BlurFilterType_t m_nRefractBlurType; // 0x1f04	
 	// MPropertyStartGroup
 	// MPropertyFriendlyName "Only Render in effects bloom pass"
 	// MPropertySortPriority "1100"
-	bool m_bOnlyRenderInEffectsBloomPass; // 0x1e60	
+	bool m_bOnlyRenderInEffectsBloomPass; // 0x1f08	
 	// MPropertyFriendlyName "Only Render in effects water pass"
 	// MPropertySortPriority "1050"
 	// MPropertySuppressExpr "mod != csgo"
-	bool m_bOnlyRenderInEffectsWaterPass; // 0x1e61	
+	bool m_bOnlyRenderInEffectsWaterPass; // 0x1f09	
 	// MPropertyFriendlyName "Use Mixed Resolution Rendering"
 	// MPropertySortPriority "1200"
-	bool m_bUseMixedResolutionRendering; // 0x1e62	
+	bool m_bUseMixedResolutionRendering; // 0x1f0a	
 	// MPropertyFriendlyName "Only Render in effects game overlay pass"
 	// MPropertySortPriority "1210"
 	// MPropertySuppressExpr "mod != csgo"
-	bool m_bOnlyRenderInEffecsGameOverlay; // 0x1e63	
+	bool m_bOnlyRenderInEffecsGameOverlay; // 0x1f0b	
 	// MPropertyStartGroup "Stencil"
 	// MPropertyFriendlyName "stencil test ID"
 	// MPropertySortPriority "0"
-	char m_stencilTestID[128]; // 0x1e64	
+	char m_stencilTestID[128]; // 0x1f0c	
 	// MPropertyFriendlyName "only write where stencil is NOT stencil test ID"
 	// MPropertySortPriority "0"
-	bool m_bStencilTestExclude; // 0x1ee4	
+	bool m_bStencilTestExclude; // 0x1f8c	
 	// MPropertyFriendlyName "stencil write ID"
 	// MPropertySortPriority "0"
-	char m_stencilWriteID[128]; // 0x1ee5	
+	char m_stencilWriteID[128]; // 0x1f8d	
 	// MPropertyFriendlyName "write stencil on z-buffer test success"
 	// MPropertySortPriority "0"
-	bool m_bWriteStencilOnDepthPass; // 0x1f65	
+	bool m_bWriteStencilOnDepthPass; // 0x200d	
 	// MPropertyFriendlyName "write stencil on z-buffer test failure"
 	// MPropertySortPriority "0"
-	bool m_bWriteStencilOnDepthFail; // 0x1f66	
+	bool m_bWriteStencilOnDepthFail; // 0x200e	
 	// MPropertyStartGroup "Depth buffer control and effects"
 	// MPropertyFriendlyName "reverse z-buffer test"
 	// MPropertySortPriority "900"
-	bool m_bReverseZBuffering; // 0x1f67	
+	bool m_bReverseZBuffering; // 0x200f	
 	// MPropertyFriendlyName "disable z-buffer test"
 	// MPropertySortPriority "900"
-	bool m_bDisableZBuffering; // 0x1f68	
+	bool m_bDisableZBuffering; // 0x2010	
 private:
-	[[maybe_unused]] uint8_t __pad1f69[0x3]; // 0x1f69
+	[[maybe_unused]] uint8_t __pad2011[0x3]; // 0x2011
 public:
 	// MPropertyFriendlyName "Depth feathering mode"
 	// MPropertySortPriority "900"
-	ParticleDepthFeatheringMode_t m_nFeatheringMode; // 0x1f6c	
+	ParticleDepthFeatheringMode_t m_nFeatheringMode; // 0x2014	
 	// MPropertyFriendlyName "particle feathering closest distance to surface"
 	// MPropertySortPriority "900"
-	CParticleCollectionRendererFloatInput m_flFeatheringMinDist; // 0x1f70	
+	CParticleCollectionRendererFloatInput m_flFeatheringMinDist; // 0x2018	
 	// MPropertyFriendlyName "particle feathering farthest distance to surface"
 	// MPropertySortPriority "900"
-	CParticleCollectionRendererFloatInput m_flFeatheringMaxDist; // 0x20c8	
+	CParticleCollectionRendererFloatInput m_flFeatheringMaxDist; // 0x2178	
 	// MPropertyFriendlyName "particle feathering filter"
 	// MPropertySortPriority "900"
-	CParticleCollectionRendererFloatInput m_flFeatheringFilter; // 0x2220	
+	CParticleCollectionRendererFloatInput m_flFeatheringFilter; // 0x22d8	
 	// MPropertyFriendlyName "depth comparison bias"
 	// MPropertySortPriority "900"
-	CParticleCollectionRendererFloatInput m_flDepthBias; // 0x2378	
+	CParticleCollectionRendererFloatInput m_flDepthBias; // 0x2438	
 	// MPropertyFriendlyName "Sort Method"
 	// MPropertySortPriority "900"
-	ParticleSortingChoiceList_t m_nSortMethod; // 0x24d0	
+	ParticleSortingChoiceList_t m_nSortMethod; // 0x2598	
 	// MPropertyStartGroup "Animation"
 	// MPropertyFriendlyName "blend sequence animation frames"
 	// MPropertySortPriority "500"
-	bool m_bBlendFramesSeq0; // 0x24d4	
+	bool m_bBlendFramesSeq0; // 0x259c	
 	// MPropertyFriendlyName "use max-luminance blending for sequence"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bBlendFramesSeq0"
-	bool m_bMaxLuminanceBlendingSequence0; // 0x24d5	
+	bool m_bMaxLuminanceBlendingSequence0; // 0x259d	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x278
+// Size: 0x280
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_LifespanFromVelocity : public CParticleFunctionInitializer
@@ -24365,58 +25101,56 @@ class C_INIT_LifespanFromVelocity : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "bias distance"
 	// MVectorIsCoordinate
-	Vector m_vecComponentScale; // 0x1c0	
+	Vector m_vecComponentScale; // 0x1c8	
 	// MPropertyFriendlyName "trace offset"
-	float m_flTraceOffset; // 0x1cc	
+	float m_flTraceOffset; // 0x1d4	
 	// MPropertyFriendlyName "maximum trace length"
-	float m_flMaxTraceLength; // 0x1d0	
+	float m_flMaxTraceLength; // 0x1d8	
 	// MPropertyFriendlyName "trace recycle tolerance"
-	float m_flTraceTolerance; // 0x1d4	
+	float m_flTraceTolerance; // 0x1dc	
 	// MPropertyFriendlyName "maximum points to cache"
-	int32_t m_nMaxPlanes; // 0x1d8	
+	int32_t m_nMaxPlanes; // 0x1e0	
 private:
-	[[maybe_unused]] uint8_t __pad01dc[0x4]; // 0x1dc
+	[[maybe_unused]] uint8_t __pad01e4[0x4]; // 0x1e4
 public:
 	// MPropertyFriendlyName "trace collision group"
-	char m_CollisionGroupName[128]; // 0x1e0	
+	char m_CollisionGroupName[128]; // 0x1e8	
 	// MPropertyFriendlyName "Trace Set"
-	ParticleTraceSet_t m_nTraceSet; // 0x260	
+	ParticleTraceSet_t m_nTraceSet; // 0x268	
 private:
-	[[maybe_unused]] uint8_t __pad0264[0xc]; // 0x264
+	[[maybe_unused]] uint8_t __pad026c[0xc]; // 0x26c
 public:
 	// MPropertyFriendlyName "collide with water"
-	bool m_bIncludeWater; // 0x270	
+	bool m_bIncludeWater; // 0x278	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_UpdateLightSource : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "color tint"
-	Color m_vColorTint; // 0x1b8	
+	Color m_vColorTint; // 0x1c0	
 	// MPropertyFriendlyName "amount to multiply light brightness by"
-	float m_flBrightnessScale; // 0x1bc	
+	float m_flBrightnessScale; // 0x1c4	
 	// MPropertyFriendlyName "amount to multiply particle system radius by to get light radius"
-	float m_flRadiusScale; // 0x1c0	
+	float m_flRadiusScale; // 0x1c8	
 	// MPropertyFriendlyName "minimum radius for created lights"
-	float m_flMinimumLightingRadius; // 0x1c4	
+	float m_flMinimumLightingRadius; // 0x1cc	
 	// MPropertyFriendlyName "maximum radius for created lights"
-	float m_flMaximumLightingRadius; // 0x1c8	
+	float m_flMaximumLightingRadius; // 0x1d0	
 	// MPropertyFriendlyName "amount of damping of changes"
-	float m_flPositionDampingConstant; // 0x1cc	
+	float m_flPositionDampingConstant; // 0x1d4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_InheritFromPeerSystem : public CParticleFunctionOperator
@@ -24424,21 +25158,20 @@ class C_OP_InheritFromPeerSystem : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "read field"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "written field"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1c4	
 	// MPropertyFriendlyName "particle neighbor increment amount"
-	int32_t m_nIncrement; // 0x1c0	
+	int32_t m_nIncrement; // 0x1c8	
 	// MPropertyFriendlyName "group id"
-	int32_t m_nGroupID; // 0x1c4	
+	int32_t m_nGroupID; // 0x1cc	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CZeroPoseUpdateNode : public CLeafUpdateNode
@@ -24450,7 +25183,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeFitWeight_t
@@ -24463,31 +25195,29 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xe80
+// Size: 0xec8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointToVectorExpression : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "expression"
-	VectorExpressionType_t m_nExpression; // 0x1c0	
+	VectorExpressionType_t m_nExpression; // 0x1c8	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutputCP; // 0x1c4	
+	int32_t m_nOutputCP; // 0x1cc	
 	// MPropertyFriendlyName "input 1"
-	CParticleCollectionVecInput m_vInput1; // 0x1c8	
+	CParticleCollectionVecInput m_vInput1; // 0x1d0	
 	// MPropertyFriendlyName "input 2"
-	CParticleCollectionVecInput m_vInput2; // 0x820	
+	CParticleCollectionVecInput m_vInput2; // 0x848	
 	// MPropertyFriendlyName "normalize result"
-	bool m_bNormalizedOutput; // 0xe78	
+	bool m_bNormalizedOutput; // 0xec0	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x68
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootCycleMetricEvaluator : public CMotionMetricEvaluator
@@ -24500,7 +25230,6 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootPositionMetricEvaluator : public CMotionMetricEvaluator
@@ -24515,7 +25244,6 @@ public:
 // Size: 0x8
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFlexOp
@@ -24530,7 +25258,6 @@ public:
 // Size: 0x30
 // Has VTable
 // Has Trivial Destructor
-// MNetworkAssumeNotNetworkable
 struct sndopvarlatchdata_t
 {
 private:
@@ -24557,9 +25284,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xd80
+// Size: 0xdc8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_BasicMovement : public CParticleFunctionOperator
@@ -24567,27 +25293,26 @@ class C_OP_BasicMovement : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "gravity"
 	// MVectorIsCoordinate
-	CParticleCollectionVecInput m_Gravity; // 0x1b8	
+	CParticleCollectionVecInput m_Gravity; // 0x1c0	
 	// MPropertyFriendlyName "drag"
 	// MPropertyAttributeRange "-1 1"
-	CParticleCollectionFloatInput m_fDrag; // 0x810	
+	CParticleCollectionFloatInput m_fDrag; // 0x838	
 	// MPropertyFriendlyName "Mass controls"
-	// -> m_nMassMode - 0x968
-	// -> m_flRadius - 0x970
-	// -> m_flNominalRadius - 0xac8
-	// -> m_flScale - 0xc20
-	CParticleMassCalculationParameters m_massControls; // 0x968	
+	// -> m_nMassMode - 0x998
+	// -> m_flRadius - 0x9a0
+	// -> m_flNominalRadius - 0xb00
+	// -> m_flScale - 0xc60
+	CParticleMassCalculationParameters m_massControls; // 0x998	
 	// MPropertyFriendlyName "max constraint passes"
-	int32_t m_nMaxConstraintPasses; // 0xd78	
+	int32_t m_nMaxConstraintPasses; // 0xdc0	
 	// MPropertyFriendlyName "use new code"
-	bool m_bUseNewCode; // 0xd7c	
+	bool m_bUseNewCode; // 0xdc4	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
-// Size: 0x70
+// Size: 0x68
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPointConstraint : public CBaseConstraint
@@ -24598,7 +25323,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class MotionBlendItem
@@ -24611,7 +25335,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CVectorQuantizer
@@ -24626,7 +25349,6 @@ public:
 // Alignment: 1
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FireUserEntityIO_t
@@ -24642,7 +25364,6 @@ public:
 // Alignment: 16
 // Size: 0x40
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeBoxRigid_t
@@ -24656,51 +25377,63 @@ public:
 	uint16_t nFlags; // 0x32	
 };
 
+// Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
+// Alignment: 8
+// Size: 0xd0
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Container Set"
+// MPropertyDescription "An array of containers that are played all at once."
+class CVoiceContainerSet : public CVoiceContainerBase
+{
+public:
+	// MPropertyFriendlyName "Container List"
+	CUtlVector< CVoiceContainerSetElement > m_soundsToPlay; // 0xb8	
+};
+
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x468
+// Size: 0x480
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_CollideWithParentParticles : public CParticleFunctionConstraint
 {
 public:
 	// MPropertyFriendlyName "parent particle radius scale"
-	CPerParticleFloatInput m_flParentRadiusScale; // 0x1b8	
+	CPerParticleFloatInput m_flParentRadiusScale; // 0x1c0	
 	// MPropertyFriendlyName "particle radius scale"
-	CPerParticleFloatInput m_flRadiusScale; // 0x310	
+	CPerParticleFloatInput m_flRadiusScale; // 0x320	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_SequenceFromCP : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "kill unused"
-	bool m_bKillUnused; // 0x1c0	
+	bool m_bKillUnused; // 0x1c8	
 	// MPropertyFriendlyName "offset propotional to radius"
-	bool m_bRadiusScale; // 0x1c1	
+	bool m_bRadiusScale; // 0x1c9	
 private:
-	[[maybe_unused]] uint8_t __pad01c2[0x2]; // 0x1c2
+	[[maybe_unused]] uint8_t __pad01ca[0x2]; // 0x1ca
 public:
 	// MPropertyFriendlyName "control point"
-	int32_t m_nCP; // 0x1c4	
+	int32_t m_nCP; // 0x1cc	
 	// MPropertyFriendlyName "per particle spatial offset"
 	// MVectorIsCoordinate
-	Vector m_vecOffset; // 0x1c8	
+	Vector m_vecOffset; // 0x1d0	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Int Parameter"
@@ -24719,11 +25452,11 @@ public:
 // Alignment: 8
 // Size: 0x10
 // Has VTable
-// Is Abstract
-class CNmTargetValueNode::CDefinition : public CNmValueNode::CDefinition
+// 
+// MGetKV3ClassDefaults
+class CNmControlParameterTargetNode::CDefinition : public CNmTargetValueNode::CDefinition
 {
 public:
-	// No schema binary for binding
 };
 
 // Registered binary: client.dll (project 'client')
@@ -24776,7 +25509,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSosGroupActionSoundeventPrioritySchema : public CSosGroupActionSchema
@@ -24794,8 +25526,7 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xb18
-// Construct allowed
+// Size: 0xb58
 // 
 // MGetKV3ClassDefaults
 struct TextureGroup_t
@@ -24832,14 +25563,13 @@ public:
 	CParticleCollectionRendererFloatInput m_flTextureBlend; // 0x38	
 	// MPropertyFriendlyName "Texture Controls"
 	// MPropertySuppressExpr "( m_nTextureType == SPRITECARD_TEXTURE_NORMALMAP || m_nTextureType == SPRITECARD_TEXTURE_ANIMMOTIONVEC || m_nTextureType == SPRITECARD_TEXTURE_6POINT_XYZ_A || m_nTextureType == SPRITECARD_TEXTURE_6POINT_NEGXYZ_E )"
-	TextureControls_t m_TextureControls; // 0x190	
+	TextureControls_t m_TextureControls; // 0x198	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomNamedModelMeshGroup : public C_INIT_RandomNamedModelElement
@@ -24849,38 +25579,36 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xb58
+// Size: 0xb90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderMaterialProxy : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "Control Point for Model"
-	int32_t m_nMaterialControlPoint; // 0x208	
+	int32_t m_nMaterialControlPoint; // 0x210	
 	// MPropertyFriendlyName "proxy type"
-	MaterialProxyType_t m_nProxyType; // 0x20c	
+	MaterialProxyType_t m_nProxyType; // 0x214	
 	// MPropertyFriendlyName "material variables"
 	// MPropertyAutoExpandSelf
-	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x210	
+	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x218	
 	// MPropertyFriendlyName "material override"
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hOverrideMaterial; // 0x228	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hOverrideMaterial; // 0x230	
 	// MPropertyFriendlyName "material override enable"
-	CParticleCollectionFloatInput m_flMaterialOverrideEnabled; // 0x230	
+	CParticleCollectionFloatInput m_flMaterialOverrideEnabled; // 0x238	
 	// MPropertyFriendlyName "model tint"
-	CParticleCollectionVecInput m_vecColorScale; // 0x388	
+	CParticleCollectionVecInput m_vecColorScale; // 0x398	
 	// MPropertyFriendlyName "model alpha"
-	CPerParticleFloatInput m_flAlpha; // 0x9e0	
+	CPerParticleFloatInput m_flAlpha; // 0xa10	
 	// MPropertyFriendlyName "model tint blend type"
-	ParticleColorBlendType_t m_nColorBlendType; // 0xb38	
+	ParticleColorBlendType_t m_nColorBlendType; // 0xb70	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBonePositionMetricEvaluator : public CMotionMetricEvaluator
@@ -24893,7 +25621,6 @@ public:
 // Alignment: 4
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPhysSurfacePropertiesAudio
@@ -24919,20 +25646,20 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x10
+// Size: 0x18
 // Has VTable
-// Is Abstract
-class CNmIDValueNode::CDefinition : public CNmValueNode::CDefinition
+// 
+// MGetKV3ClassDefaults
+class CNmVirtualParameterIDNode::CDefinition : public CNmIDValueNode::CDefinition
 {
 public:
-	// No schema binary for binding
+	int16_t m_nChildNodeIdx; // 0x10	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xa0
 // Has VTable
-// MNetworkAssumeNotNetworkable
 class CScriptUniformRandomStream
 {
 private:
@@ -24953,7 +25680,6 @@ public:
 // Size: 0x20
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ModifierScriptedEventHandler_t
@@ -24983,7 +25709,6 @@ public:
 // Alignment: 16
 // Size: 0x70
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdNodeBase_t
@@ -25007,10 +25732,9 @@ public:
 // Size: 0x48
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MVDataRoot
+// MVDataBase
 // MVDataNodeType "1"
 // MVDataAnonymousNode
 class CSmartPropSelectionCriteria
@@ -25027,7 +25751,6 @@ public:
 // Size: 0x20
 // Has VTable
 // Has Trivial Destructor
-// MClassHasEntityLimitedDataDesc
 class SimpleConstraintSoundProfile
 {
 private:
@@ -25058,31 +25781,29 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x328
+// Size: 0x338
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ExternalGameImpulseForce : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "force scale"
-	CPerParticleFloatInput m_flForceScale; // 0x1c8	
+	CPerParticleFloatInput m_flForceScale; // 0x1d0	
 	// MPropertyFriendlyName "rope shake"
-	bool m_bRopes; // 0x320	
+	bool m_bRopes; // 0x330	
 	// MPropertyFriendlyName "limit rope impulses to Z"
-	bool m_bRopesZOnly; // 0x321	
+	bool m_bRopesZOnly; // 0x331	
 	// MPropertyFriendlyName "explosions"
-	bool m_bExplosions; // 0x322	
+	bool m_bExplosions; // 0x332	
 	// MPropertyFriendlyName "particle systems"
-	bool m_bParticles; // 0x323	
+	bool m_bParticles; // 0x333	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapNamedModelBodyPartOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
@@ -25093,7 +25814,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 16
 // Size: 0x40
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PermModelExtPart_t
@@ -25112,7 +25832,6 @@ public:
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CCurrentRotationVelocityMetricEvaluator : public CMotionMetricEvaluator
@@ -25138,7 +25857,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CCitadelModifierResponseRules_t
@@ -25153,7 +25871,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x40
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimEventDefinition
@@ -25187,7 +25904,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "String"
@@ -25200,7 +25916,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimFrameBlockAnim
@@ -25215,20 +25930,18 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-class CNmVirtualParameterIDNode::CDefinition : public CNmIDValueNode::CDefinition
+class CNmConstIDNode::CDefinition : public CNmIDValueNode::CDefinition
 {
 public:
-	int16_t m_nChildNodeIdx; // 0x10	
+	CGlobalSymbol m_value; // 0x10	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Coordinate Space"
@@ -25244,7 +25957,6 @@ public:
 // Alignment: 16
 // Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeBuildSphereRigid_t : public FeSphereRigid_t
@@ -25271,7 +25983,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0xd8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimEncodedFrames
@@ -25289,6 +26000,23 @@ public:
 	// -> m_bHasMorphBitArray - 0xa8
 	// -> m_bHasUserBitArray - 0xc0
 	CAnimEncodeDifference m_usageDifferences; // 0x30	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmSyncEventIndexConditionNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	int16_t m_nSourceStateNodeIdx; // 0x10	
+	CNmSyncEventIndexConditionNode::TriggerMode_t m_triggerMode; // 0x12	
+private:
+	[[maybe_unused]] uint8_t __pad0013[0x1]; // 0x13
+public:
+	int32_t m_syncEventIdx; // 0x14	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -25351,7 +26079,6 @@ public:
 // Alignment: 4
 // Size: 0x48
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct OldFeEdge_t
@@ -25375,7 +26102,6 @@ public:
 // Alignment: 8
 // Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CStanceOverrideUpdateNode : public CUnaryUpdateNode
@@ -25394,7 +26120,6 @@ public:
 // Alignment: 8
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulse_OutputConnection
@@ -25422,7 +26147,6 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulse_Constant
@@ -25435,7 +26159,6 @@ public:
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0x80
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ColorChoice_t
@@ -25464,9 +26187,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_OscillateVectorSimple : public CParticleFunctionOperator
@@ -25474,45 +26196,43 @@ class C_OP_OscillateVectorSimple : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "oscillation rate"
 	// MVectorIsSometimesCoordinate "m_nField"
-	Vector m_Rate; // 0x1b8	
+	Vector m_Rate; // 0x1c0	
 	// MPropertyFriendlyName "oscillation frequency"
-	Vector m_Frequency; // 0x1c4	
+	Vector m_Frequency; // 0x1cc	
 	// MPropertyFriendlyName "oscillation field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nField; // 0x1d0	
+	ParticleAttributeIndex_t m_nField; // 0x1d8	
 	// MPropertyFriendlyName "oscillation multiplier"
-	float m_flOscMult; // 0x1d4	
+	float m_flOscMult; // 0x1dc	
 	// MPropertyFriendlyName "oscillation start phase"
-	float m_flOscAdd; // 0x1d8	
+	float m_flOscAdd; // 0x1e0	
 	// MPropertyFriendlyName "offset instead of accelerate position"
-	bool m_bOffset; // 0x1dc	
+	bool m_bOffset; // 0x1e4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_MaxVelocity : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "maximum velocity"
-	float m_flMaxVelocity; // 0x1b8	
+	float m_flMaxVelocity; // 0x1c0	
 	// MPropertyFriendlyName "minimum velocity"
-	float m_flMinVelocity; // 0x1bc	
+	float m_flMinVelocity; // 0x1c4	
 	// MPropertyFriendlyName "override max velocity from this CP"
-	int32_t m_nOverrideCP; // 0x1c0	
+	int32_t m_nOverrideCP; // 0x1c8	
 	// MPropertyFriendlyName "override CP field"
-	int32_t m_nOverrideCPField; // 0x1c4	
+	int32_t m_nOverrideCPField; // 0x1cc	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 4
 // Size: 0x1c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CStateNodeTransitionData
@@ -25533,7 +26253,6 @@ public:
 // Alignment: 8
 // Size: 0x140
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMotionMatchingUpdateNode : public CLeafUpdateNode
@@ -25586,9 +26305,18 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
+// Size: 0x40
+// Has VTable
+class CNmSampleTask : public CNmTask
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CNmSyncTrack__Event_t
@@ -25603,7 +26331,6 @@ public:
 // Alignment: 8
 // Size: 0x40
 // Has VTable
-// MConstructibleClassBase
 class CAI_Component
 {
 private:
@@ -25629,48 +26356,46 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xe10
+// Size: 0xe58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapAverageHitboxSpeedtoCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "input control point"
-	int32_t m_nInControlPointNumber; // 0x1c0	
+	int32_t m_nInControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutControlPointNumber; // 0x1c4	
+	int32_t m_nOutControlPointNumber; // 0x1cc	
 	// MPropertyFriendlyName "Output component"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nField; // 0x1c8	
+	int32_t m_nField; // 0x1d0	
 	// MPropertyFriendlyName "hitbox data"
-	ParticleHitboxDataSelection_t m_nHitboxDataType; // 0x1cc	
+	ParticleHitboxDataSelection_t m_nHitboxDataType; // 0x1d4	
 	// MPropertyFriendlyName "input minimum"
-	CParticleCollectionFloatInput m_flInputMin; // 0x1d0	
+	CParticleCollectionFloatInput m_flInputMin; // 0x1d8	
 	// MPropertyFriendlyName "input maximum"
-	CParticleCollectionFloatInput m_flInputMax; // 0x328	
+	CParticleCollectionFloatInput m_flInputMax; // 0x338	
 	// MPropertyFriendlyName "output minimum"
-	CParticleCollectionFloatInput m_flOutputMin; // 0x480	
+	CParticleCollectionFloatInput m_flOutputMin; // 0x498	
 	// MPropertyFriendlyName "output maximum"
-	CParticleCollectionFloatInput m_flOutputMax; // 0x5d8	
+	CParticleCollectionFloatInput m_flOutputMax; // 0x5f8	
 	// MPropertyFriendlyName "intersection height CP"
 	// MPropertySuppressExpr "m_nHitboxDataType != PARTICLE_HITBOX_AVERAGE_SPEED"
-	int32_t m_nHeightControlPointNumber; // 0x730	
+	int32_t m_nHeightControlPointNumber; // 0x758	
 private:
-	[[maybe_unused]] uint8_t __pad0734[0x4]; // 0x734
+	[[maybe_unused]] uint8_t __pad075c[0x4]; // 0x75c
 public:
 	// MPropertyFriendlyName "comparison velocity"
 	// MPropertySuppressExpr "m_nHitboxDataType != PARTICLE_HITBOX_AVERAGE_SPEED"
-	CParticleCollectionVecInput m_vecComparisonVelocity; // 0x738	
+	CParticleCollectionVecInput m_vecComparisonVelocity; // 0x760	
 	// MPropertyFriendlyName "hitbox set"
-	char m_HitboxSetName[128]; // 0xd90	
+	char m_HitboxSetName[128]; // 0xdd8	
 };
 
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
 // Size: 0x60
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ParticleNamedValueSource_t
@@ -25698,13 +26423,31 @@ public:
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParamBuffer_t : public MaterialParam_t
 {
 public:
 	CUtlBinaryBlock m_value; // 0x8	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFloatMathNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdxA; // 0x10	
+	int16_t m_nInputValueNodeIdxB; // 0x12	
+	bool m_bReturnAbsoluteResult; // 0x14	
+	CNmFloatMathNode::Operator_t m_operator; // 0x15	
+private:
+	[[maybe_unused]] uint8_t __pad0016[0x2]; // 0x16
+public:
+	float m_flValueB; // 0x18	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -25722,7 +26465,6 @@ public:
 // Alignment: 16
 // Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdAnimStrayRadius_t
@@ -25737,7 +26479,6 @@ public:
 // Alignment: 4
 // Size: 0x2c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MVDataRoot
 // MGetKV3ClassDefaults
@@ -25785,7 +26526,6 @@ public:
 // Registered binary: scenesystem.dll (project 'scenesystem')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSSDSMsg_ViewTargetList
@@ -25798,26 +26538,34 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_VelocityMatchingForce : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "direction matching strength"
-	float m_flDirScale; // 0x1b8	
+	float m_flDirScale; // 0x1c0	
 	// MPropertyFriendlyName "speed matching strength"
-	float m_flSpdScale; // 0x1bc	
+	float m_flSpdScale; // 0x1c4	
+	// MPropertyFriendlyName "neighbor distance"
+	float m_flNeighborDistance; // 0x1c8	
+	// MPropertyFriendlyName "facing strength falloff"
+	float m_flFacingStrength; // 0x1cc	
+	// MPropertyFriendlyName "use AABB"
+	// MPropertySuppressExpr "m_flNeighborDistance > 0"
+	bool m_bUseAABB; // 0x1d0	
+private:
+	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
+public:
 	// MPropertyFriendlyName "control point to broadcast speed and direction to"
-	int32_t m_nCPBroadcast; // 0x1c0	
+	int32_t m_nCPBroadcast; // 0x1d4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
 // Size: 0x8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RenderProjectedMaterial_t
@@ -25830,7 +26578,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimUser
@@ -25843,7 +26590,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyArrayElementNameKey "m_eAbilitySectionType"
@@ -25857,7 +26603,7 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0xd8
+// Size: 0xe0
 // Has VTable
 class CTakeDamageInfo
 {
@@ -25902,11 +26648,15 @@ public:
 	CHandle< C_BaseEntity > m_hOriginator; // 0xa4	
 	int32_t m_iBatchCount; // 0xa8	
 	float m_flEffectiveness; // 0xac	
-	HSCRIPT m_hScriptInstance; // 0xb0	
+	float m_timeDamage; // 0xb0	
 private:
-	[[maybe_unused]] uint8_t __pad00b8[0x14]; // 0xb8
+	[[maybe_unused]] uint8_t __pad00b4[0x4]; // 0xb4
 public:
-	bool m_bInTakeDamageFlow; // 0xcc	
+	HSCRIPT m_hScriptInstance; // 0xb8	
+private:
+	[[maybe_unused]] uint8_t __pad00c0[0x14]; // 0xc0
+public:
+	bool m_bInTakeDamageFlow; // 0xd4	
 	
 	// Static fields:
 	static CTakeDamageInfo &Get_EmptyInfo(){return *reinterpret_cast<CTakeDamageInfo*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CTakeDamageInfo")->GetStaticFields()[0]->m_pInstance);};
@@ -25916,7 +26666,6 @@ public:
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSpringIntegrator_t
@@ -25931,98 +26680,94 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x658
+// Size: 0x678
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderBlobs : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "cube width"
-	CParticleCollectionRendererFloatInput m_cubeWidth; // 0x208	
+	CParticleCollectionRendererFloatInput m_cubeWidth; // 0x210	
 	// MPropertyFriendlyName "cutoff radius"
-	CParticleCollectionRendererFloatInput m_cutoffRadius; // 0x360	
+	CParticleCollectionRendererFloatInput m_cutoffRadius; // 0x370	
 	// MPropertyFriendlyName "render radius"
-	CParticleCollectionRendererFloatInput m_renderRadius; // 0x4b8	
+	CParticleCollectionRendererFloatInput m_renderRadius; // 0x4d0	
 	// MPropertyFriendlyName "(optional) vertex buffer size (k)"
 	// MPropertyAttributeRange "0 1024"
-	uint32_t m_nVertexCountKb; // 0x610	
+	uint32_t m_nVertexCountKb; // 0x630	
 	// MPropertyFriendlyName "(optional) index buffer size (k)"
 	// MPropertyAttributeRange "0 1024"
-	uint32_t m_nIndexCountKb; // 0x614	
+	uint32_t m_nIndexCountKb; // 0x634	
 	// MPropertyFriendlyName "scale CP (cube width/cutoff/render = x/y/z)"
-	int32_t m_nScaleCP; // 0x618	
+	int32_t m_nScaleCP; // 0x638	
 private:
-	[[maybe_unused]] uint8_t __pad061c[0x4]; // 0x61c
+	[[maybe_unused]] uint8_t __pad063c[0x4]; // 0x63c
 public:
 	// MPropertyFriendlyName "material variables"
 	// MPropertyAutoExpandSelf
 	// MPropertySortPriority "600"
-	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x620	
+	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x640	
 private:
-	[[maybe_unused]] uint8_t __pad0638[0x18]; // 0x638
+	[[maybe_unused]] uint8_t __pad0658[0x18]; // 0x658
 public:
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0x650	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0x670	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x9d8
+// Size: 0xa10
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreateOnGrid : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "X Dimension Count"
-	CParticleCollectionFloatInput m_nXCount; // 0x1c0	
+	CParticleCollectionFloatInput m_nXCount; // 0x1c8	
 	// MPropertyFriendlyName "Y Dimension Count"
-	CParticleCollectionFloatInput m_nYCount; // 0x318	
+	CParticleCollectionFloatInput m_nYCount; // 0x328	
 	// MPropertyFriendlyName "Z Dimension Count"
-	CParticleCollectionFloatInput m_nZCount; // 0x470	
+	CParticleCollectionFloatInput m_nZCount; // 0x488	
 	// MPropertyFriendlyName "X Dimension Spacing"
-	CParticleCollectionFloatInput m_nXSpacing; // 0x5c8	
+	CParticleCollectionFloatInput m_nXSpacing; // 0x5e8	
 	// MPropertyFriendlyName "Y Dimension Spacing"
-	CParticleCollectionFloatInput m_nYSpacing; // 0x720	
+	CParticleCollectionFloatInput m_nYSpacing; // 0x748	
 	// MPropertyFriendlyName "Z Dimension Spacing"
-	CParticleCollectionFloatInput m_nZSpacing; // 0x878	
+	CParticleCollectionFloatInput m_nZSpacing; // 0x8a8	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x9d0	
+	int32_t m_nControlPointNumber; // 0xa08	
 	// MPropertyFriendlyName "use local space"
-	bool m_bLocalSpace; // 0x9d4	
+	bool m_bLocalSpace; // 0xa0c	
 	// MPropertyFriendlyName "center around control point"
-	bool m_bCenter; // 0x9d5	
+	bool m_bCenter; // 0xa0d	
 	// MPropertyFriendlyName "hollow"
-	bool m_bHollow; // 0x9d6	
+	bool m_bHollow; // 0xa0e	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x238
+// Size: 0x240
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapTransformOrientationToRotations : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0x1c0	
+	CParticleTransformInput m_TransformInput; // 0x1c8	
 	// MPropertyFriendlyName "offset pitch/yaw/roll"
-	Vector m_vecRotation; // 0x228	
+	Vector m_vecRotation; // 0x230	
 	// MPropertyFriendlyName "Use Quaternians Internally"
-	bool m_bUseQuat; // 0x234	
+	bool m_bUseQuat; // 0x23c	
 	// MPropertyFriendlyName "Write normal instead of rotation"
-	bool m_bWriteNormal; // 0x235	
+	bool m_bWriteNormal; // 0x23d	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfigElement_UserPick : public CModelConfigElement
@@ -26031,10 +26776,27 @@ public:
 	CUtlVector< CUtlString > m_Choices; // 0x48	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x60
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmIDToFloatNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	float m_defaultValue; // 0x14	
+	CUtlLeanVectorFixedGrowable< CGlobalSymbol, 5 > m_IDs; // 0x18	
+	CUtlLeanVectorFixedGrowable< float32, 5 > m_values; // 0x48	
+};
+
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x60
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RenderSkeletonBone_t
@@ -26052,7 +26814,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AnimationDecodeDebugDump_t
@@ -26066,7 +26827,6 @@ public:
 // Alignment: 8
 // Size: 0xc8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -26092,7 +26852,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Vector 4D"
@@ -26106,7 +26865,6 @@ public:
 // Alignment: 4
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeCollisionPlane_t
@@ -26122,12 +26880,13 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x3f0
+// Size: 0x600
 // Has VTable
 class CNPC_Boss_Tier3_GraphController : public CAI_CitadelNPC_GraphController
 {
 public:
-	CAnimGraphParamRef< char* > m_pszActivity; // 0x3d0	
+	CAnimGraphParamRef< char* > m_pszActivity; // 0x5c0	
+	CAnimGraphTagOptionalRef m_sDeathExplode; // 0x5e8	
 	
 	// Static fields:
 	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNPC_Boss_Tier3_GraphController")->GetStaticFields()[0]->m_pInstance);};
@@ -26145,86 +26904,85 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x6c0
+// Size: 0x6d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ControlpointLight : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "initial color bias"
-	float m_flScale; // 0x1b8	
+	float m_flScale; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x484]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x48c]; // 0x1c4
 public:
 	// MPropertyFriendlyName "light 1 control point"
-	int32_t m_nControlPoint1; // 0x640	
+	int32_t m_nControlPoint1; // 0x650	
 	// MPropertyFriendlyName "light 2 control point"
-	int32_t m_nControlPoint2; // 0x644	
+	int32_t m_nControlPoint2; // 0x654	
 	// MPropertyFriendlyName "light 3 control point"
-	int32_t m_nControlPoint3; // 0x648	
+	int32_t m_nControlPoint3; // 0x658	
 	// MPropertyFriendlyName "light 4 control point"
-	int32_t m_nControlPoint4; // 0x64c	
+	int32_t m_nControlPoint4; // 0x65c	
 	// MPropertyFriendlyName "light 1 control point offset"
-	Vector m_vecCPOffset1; // 0x650	
+	Vector m_vecCPOffset1; // 0x660	
 	// MPropertyFriendlyName "light 2 control point offset"
-	Vector m_vecCPOffset2; // 0x65c	
+	Vector m_vecCPOffset2; // 0x66c	
 	// MPropertyFriendlyName "light 3 control point offset"
-	Vector m_vecCPOffset3; // 0x668	
+	Vector m_vecCPOffset3; // 0x678	
 	// MPropertyFriendlyName "light 4 control point offset"
-	Vector m_vecCPOffset4; // 0x674	
+	Vector m_vecCPOffset4; // 0x684	
 	// MPropertyFriendlyName "light 1 50% distance"
-	float m_LightFiftyDist1; // 0x680	
+	float m_LightFiftyDist1; // 0x690	
 	// MPropertyFriendlyName "light 1 0% distance"
-	float m_LightZeroDist1; // 0x684	
+	float m_LightZeroDist1; // 0x694	
 	// MPropertyFriendlyName "light 2 50% distance"
-	float m_LightFiftyDist2; // 0x688	
+	float m_LightFiftyDist2; // 0x698	
 	// MPropertyFriendlyName "light 2 0% distance"
-	float m_LightZeroDist2; // 0x68c	
+	float m_LightZeroDist2; // 0x69c	
 	// MPropertyFriendlyName "light 3 50% distance"
-	float m_LightFiftyDist3; // 0x690	
+	float m_LightFiftyDist3; // 0x6a0	
 	// MPropertyFriendlyName "light 3 0% distance"
-	float m_LightZeroDist3; // 0x694	
+	float m_LightZeroDist3; // 0x6a4	
 	// MPropertyFriendlyName "light 4 50% distance"
-	float m_LightFiftyDist4; // 0x698	
+	float m_LightFiftyDist4; // 0x6a8	
 	// MPropertyFriendlyName "light 4 0% distance"
-	float m_LightZeroDist4; // 0x69c	
+	float m_LightZeroDist4; // 0x6ac	
 	// MPropertyFriendlyName "light 1 color"
-	Color m_LightColor1; // 0x6a0	
+	Color m_LightColor1; // 0x6b0	
 	// MPropertyFriendlyName "light 2 color"
-	Color m_LightColor2; // 0x6a4	
+	Color m_LightColor2; // 0x6b4	
 	// MPropertyFriendlyName "light 3 color"
-	Color m_LightColor3; // 0x6a8	
+	Color m_LightColor3; // 0x6b8	
 	// MPropertyFriendlyName "light 4 color"
-	Color m_LightColor4; // 0x6ac	
+	Color m_LightColor4; // 0x6bc	
 	// MPropertyFriendlyName "light 1 type 0=point 1=spot"
-	bool m_bLightType1; // 0x6b0	
+	bool m_bLightType1; // 0x6c0	
 	// MPropertyFriendlyName "light 2 type 0=point 1=spot"
-	bool m_bLightType2; // 0x6b1	
+	bool m_bLightType2; // 0x6c1	
 	// MPropertyFriendlyName "light 3 type 0=point 1=spot"
-	bool m_bLightType3; // 0x6b2	
+	bool m_bLightType3; // 0x6c2	
 	// MPropertyFriendlyName "light 4 type 0=point 1=spot"
-	bool m_bLightType4; // 0x6b3	
+	bool m_bLightType4; // 0x6c3	
 	// MPropertyFriendlyName "light 1 dynamic light"
-	bool m_bLightDynamic1; // 0x6b4	
+	bool m_bLightDynamic1; // 0x6c4	
 	// MPropertyFriendlyName "light 2 dynamic light"
-	bool m_bLightDynamic2; // 0x6b5	
+	bool m_bLightDynamic2; // 0x6c5	
 	// MPropertyFriendlyName "light 3 dynamic light"
-	bool m_bLightDynamic3; // 0x6b6	
+	bool m_bLightDynamic3; // 0x6c6	
 	// MPropertyFriendlyName "light 4 dynamic light"
-	bool m_bLightDynamic4; // 0x6b7	
+	bool m_bLightDynamic4; // 0x6c7	
 	// MPropertyFriendlyName "compute normals from control points"
-	bool m_bUseNormal; // 0x6b8	
+	bool m_bUseNormal; // 0x6c8	
 	// MPropertyFriendlyName "half-lambert normals"
-	bool m_bUseHLambert; // 0x6b9	
+	bool m_bUseHLambert; // 0x6c9	
 private:
-	[[maybe_unused]] uint8_t __pad06ba[0x4]; // 0x6ba
+	[[maybe_unused]] uint8_t __pad06ca[0x4]; // 0x6ca
 public:
 	// MPropertyFriendlyName "clamp minimum light value to initial color"
-	bool m_bClampLowerRange; // 0x6be	
+	bool m_bClampLowerRange; // 0x6ce	
 	// MPropertyFriendlyName "clamp maximum light value to initial color"
-	bool m_bClampUpperRange; // 0x6bf	
+	bool m_bClampUpperRange; // 0x6cf	
 };
 
 // Registered binary: particles.dll (project 'particleslib')
@@ -26242,7 +27000,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimCycle : public CCycleBase
@@ -26254,7 +27011,6 @@ public:
 // Alignment: 8
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CNmSyncTrack__EventMarker_t
@@ -26268,7 +27024,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimGraphSettingsManager
@@ -26283,7 +27038,6 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CRagdollUpdateNode : public CUnaryUpdateNode
@@ -26374,7 +27128,6 @@ public:
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataComponentValidGrandParents
@@ -26389,9 +27142,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x318
+// Size: 0x328
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_PointVectorAtNextParticle : public CParticleFunctionOperator
@@ -26399,18 +27151,34 @@ class C_OP_PointVectorAtNextParticle : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "Interpolation"
-	CPerParticleFloatInput m_flInterpolation; // 0x1c0	
+	CPerParticleFloatInput m_flInterpolation; // 0x1c8	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFootEventConditionNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	int16_t m_nSourceStateNodeIdx; // 0x10	
+	NmFootPhaseCondition_t m_phaseCondition; // 0x12	
+private:
+	[[maybe_unused]] uint8_t __pad0013[0x1]; // 0x13
+public:
+	CNmBitFlags m_eventConditionRules; // 0x14	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct HeroAnimGraphDefaultValueOverride_t
@@ -26423,7 +27191,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x50
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct HeroLevel_t
@@ -26440,27 +27207,25 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointToPlayer : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nCP1; // 0x1c0	
+	int32_t m_nCP1; // 0x1c8	
 	// MPropertyFriendlyName "control point offset"
 	// MVectorIsCoordinate
-	Vector m_vecCP1Pos; // 0x1c4	
+	Vector m_vecCP1Pos; // 0x1cc	
 	// MPropertyFriendlyName "use eye orientation"
-	bool m_bOrientToEyes; // 0x1d0	
+	bool m_bOrientToEyes; // 0x1d8	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class WeightList
@@ -26481,9 +27246,8 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x440
+// Size: 0x520
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AttackData_t
@@ -26511,12 +27275,10 @@ public:
 	float m_flCooldownOnHit; // 0x20	
 	// MPropertyDescription "Half width of the cone at the player"
 	float m_flTraceConeHalfWidth; // 0x24	
-	// MPropertyDescription "The time we want the attack to deal damage.  Speed scales are set in the graph to adjust animation timing to accomplish this"
-	float m_flAttackEventTime; // 0x28	
 	// MPropertyDescription "Trigger a big screen shake when this attack hits"
-	bool m_bApplyScreenShake; // 0x2c	
+	bool m_bApplyScreenShake; // 0x28	
 private:
-	[[maybe_unused]] uint8_t __pad002d[0x3]; // 0x2d
+	[[maybe_unused]] uint8_t __pad0029[0x7]; // 0x29
 public:
 	// MPropertyDescription "The curve defining move speed bonus/penalty.  This is how we apply the post-movement controller movement slow."
 	CPiecewiseCurve m_SpeedBonusCurve; // 0x30	
@@ -26542,16 +27304,17 @@ public:
 	// MPropertyStartGroup "Visuals"
 	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_MeleeActivateParticle; // 0x120	
 	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_MeleeSwingParticle; // 0x200	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_MeleeImpactParticle; // 0x2e0	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_MeleeAttackParticle; // 0x2e0	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_MeleeImpactParticle; // 0x3c0	
 	// MPropertyStartGroup "Camera"
-	// -> m_strToken - 0x3c0
-	// -> m_bIsEmpty - 0x3c4
-	// -> m_vecDistanceOperations - 0x3c8
-	// -> m_vecFOVOperations - 0x3e0
-	// -> m_vecTargetPosOperations - 0x3f8
-	// -> m_vecVertOffsetOperations - 0x410
-	// -> m_vecHorizOffsetOperations - 0x428
-	CitadelCameraOperationsSequence_t m_cameraSequenceAttackStart; // 0x3c0	
+	// -> m_strToken - 0x4a0
+	// -> m_bIsEmpty - 0x4a4
+	// -> m_vecDistanceOperations - 0x4a8
+	// -> m_vecFOVOperations - 0x4c0
+	// -> m_vecTargetPosOperations - 0x4d8
+	// -> m_vecVertOffsetOperations - 0x4f0
+	// -> m_vecHorizOffsetOperations - 0x508
+	CitadelCameraOperationsSequence_t m_cameraSequenceAttackStart; // 0x4a0	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -26559,7 +27322,6 @@ public:
 // Size: 0xa0
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CitadelCameraTargetPosOperationDef_t : public CitadelCameraOperationDef_t
@@ -26573,7 +27335,6 @@ public:
 // Alignment: 8
 // Size: 0x490
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Trace To Line"
@@ -26605,7 +27366,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0xd0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnBodyDesc_t
@@ -26651,7 +27411,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x88
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFeMorphLayer
@@ -26671,100 +27430,95 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x228
+// Size: 0x230
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapQAnglesToRotation : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0x1c0	
+	CParticleTransformInput m_TransformInput; // 0x1c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x828
+// Size: 0x850
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InitFromVectorFieldSnapshot : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "snapshot control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "local space control point number"
-	int32_t m_nLocalSpaceCP; // 0x1c4	
+	int32_t m_nLocalSpaceCP; // 0x1cc	
 	// MPropertyFriendlyName "weight update control point"
-	int32_t m_nWeightUpdateCP; // 0x1c8	
+	int32_t m_nWeightUpdateCP; // 0x1d0	
 	// MPropertyFriendlyName "use vertical velocity for weighting"
-	bool m_bUseVerticalVelocity; // 0x1cc	
+	bool m_bUseVerticalVelocity; // 0x1d4	
 private:
-	[[maybe_unused]] uint8_t __pad01cd[0x3]; // 0x1cd
+	[[maybe_unused]] uint8_t __pad01d5[0x3]; // 0x1d5
 public:
 	// MPropertyFriendlyName "Component Scale"
-	CPerParticleVecInput m_vecScale; // 0x1d0	
+	CPerParticleVecInput m_vecScale; // 0x1d8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_FadeAndKillForTracers : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "start fade in time"
-	float m_flStartFadeInTime; // 0x1b8	
+	float m_flStartFadeInTime; // 0x1c0	
 	// MPropertyFriendlyName "end fade in time"
-	float m_flEndFadeInTime; // 0x1bc	
+	float m_flEndFadeInTime; // 0x1c4	
 	// MPropertyFriendlyName "start fade out time"
-	float m_flStartFadeOutTime; // 0x1c0	
+	float m_flStartFadeOutTime; // 0x1c8	
 	// MPropertyFriendlyName "end fade out time"
-	float m_flEndFadeOutTime; // 0x1c4	
+	float m_flEndFadeOutTime; // 0x1cc	
 	// MPropertyFriendlyName "start alpha"
-	float m_flStartAlpha; // 0x1c8	
+	float m_flStartAlpha; // 0x1d0	
 	// MPropertyFriendlyName "end alpha"
-	float m_flEndAlpha; // 0x1cc	
+	float m_flEndAlpha; // 0x1d4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_IntraParticleForce : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "min attraction distance"
-	float m_flAttractionMinDistance; // 0x1c8	
+	float m_flAttractionMinDistance; // 0x1d0	
 	// MPropertyFriendlyName "max attraction distance"
-	float m_flAttractionMaxDistance; // 0x1cc	
+	float m_flAttractionMaxDistance; // 0x1d4	
 	// MPropertyFriendlyName "max attraction force"
-	float m_flAttractionMaxStrength; // 0x1d0	
+	float m_flAttractionMaxStrength; // 0x1d8	
 	// MPropertyFriendlyName "min repulsion distance"
-	float m_flRepulsionMinDistance; // 0x1d4	
+	float m_flRepulsionMinDistance; // 0x1dc	
 	// MPropertyFriendlyName "max repulsion distance"
-	float m_flRepulsionMaxDistance; // 0x1d8	
+	float m_flRepulsionMaxDistance; // 0x1e0	
 	// MPropertyFriendlyName "max repulsion force"
-	float m_flRepulsionMaxStrength; // 0x1dc	
+	float m_flRepulsionMaxStrength; // 0x1e4	
 	// MPropertyFriendlyName "use aabbtree"
-	bool m_bUseAABB; // 0x1e0	
+	bool m_bUseAABB; // 0x1e8	
 	// MPropertyFriendlyName "thread pairwise collision"
-	bool m_bThreadIt; // 0x1e1	
+	bool m_bThreadIt; // 0x1e9	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x208
+// Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapNamedModelSequenceToScalar : public C_INIT_RemapNamedModelElementToScalar
@@ -26774,71 +27528,68 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_ChaoticAttractor : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "pickover A parameter"
-	float m_flAParm; // 0x1c0	
+	float m_flAParm; // 0x1c8	
 	// MPropertyFriendlyName "pickover B parameter"
-	float m_flBParm; // 0x1c4	
+	float m_flBParm; // 0x1cc	
 	// MPropertyFriendlyName "pickover C parameter"
-	float m_flCParm; // 0x1c8	
+	float m_flCParm; // 0x1d0	
 	// MPropertyFriendlyName "pickover D parameter"
-	float m_flDParm; // 0x1cc	
+	float m_flDParm; // 0x1d4	
 	// MPropertyFriendlyName "scale"
-	float m_flScale; // 0x1d0	
+	float m_flScale; // 0x1d8	
 	// MPropertyFriendlyName "speed min"
-	float m_flSpeedMin; // 0x1d4	
+	float m_flSpeedMin; // 0x1dc	
 	// MPropertyFriendlyName "speed max"
-	float m_flSpeedMax; // 0x1d8	
+	float m_flSpeedMax; // 0x1e0	
 	// MPropertyFriendlyName "relative control point number"
-	int32_t m_nBaseCP; // 0x1dc	
+	int32_t m_nBaseCP; // 0x1e4	
 	// MPropertyFriendlyName "uniform speed"
-	bool m_bUniformSpeed; // 0x1e0	
+	bool m_bUniformSpeed; // 0x1e8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x200
+// Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RampScalarLinear : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "ramp rate min"
-	float m_RateMin; // 0x1b8	
+	float m_RateMin; // 0x1c0	
 	// MPropertyFriendlyName "ramp rate max"
-	float m_RateMax; // 0x1bc	
+	float m_RateMax; // 0x1c4	
 	// MPropertyFriendlyName "start time min"
-	float m_flStartTime_min; // 0x1c0	
+	float m_flStartTime_min; // 0x1c8	
 	// MPropertyFriendlyName "start time max"
-	float m_flStartTime_max; // 0x1c4	
+	float m_flStartTime_max; // 0x1cc	
 	// MPropertyFriendlyName "end time min"
-	float m_flEndTime_min; // 0x1c8	
+	float m_flEndTime_min; // 0x1d0	
 	// MPropertyFriendlyName "end time max"
-	float m_flEndTime_max; // 0x1cc	
+	float m_flEndTime_max; // 0x1d4	
 private:
-	[[maybe_unused]] uint8_t __pad01d0[0x20]; // 0x1d0
+	[[maybe_unused]] uint8_t __pad01d8[0x28]; // 0x1d8
 public:
 	// MPropertyFriendlyName "ramp field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nField; // 0x1f0	
+	ParticleAttributeIndex_t m_nField; // 0x200	
 	// MPropertyFriendlyName "start/end proportional"
-	bool m_bProportionalOp; // 0x1f4	
+	bool m_bProportionalOp; // 0x204	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyEditClassAsString
@@ -26871,7 +27622,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0xa0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ClutterSceneObject_t
@@ -26897,7 +27647,6 @@ public:
 // Alignment: 2
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPoseHandle
@@ -26922,9 +27671,8 @@ public:
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0x100
+// Size: 0xf0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Blender"
@@ -26932,9 +27680,9 @@ public:
 class CVoiceContainerBlender : public CVoiceContainerBase
 {
 public:
-	CStrongHandle< InfoForResourceTypeCVoiceContainerBase > m_firstSound; // 0xe8	
-	CStrongHandle< InfoForResourceTypeCVoiceContainerBase > m_secondSound; // 0xf0	
-	float m_flBlendFactor; // 0xf8	
+	CSoundContainerReference m_firstSound; // 0xb8	
+	CSoundContainerReference m_secondSound; // 0xd0	
+	float m_flBlendFactor; // 0xe8	
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
@@ -26951,11 +27699,23 @@ private:
 public:
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x28
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmParameterizedSelectorNode::CDefinition : public CNmPoseNode::CDefinition
+{
+public:
+	CUtlLeanVectorFixedGrowable< int16, 5 > m_optionNodeIndices; // 0x10	
+	int16_t m_parameterNodeIdx; // 0x20	
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CTrackedObject_MODIFIER_TRACKED_PARTICLE : public IModifierTrackedObject
@@ -26972,7 +27732,6 @@ public:
 // Registered binary: vphysics2.dll (project 'vphysics2')
 // Alignment: 8
 // Size: 0xd8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct vphysics_save_cphysicsbody_t : public RnBodyDesc_t
@@ -26983,57 +27742,55 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x10a0
+// Size: 0x1100
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_LightningSnapshotGenerator : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "snapshot control point number"
-	int32_t m_nCPSnapshot; // 0x1c0	
+	int32_t m_nCPSnapshot; // 0x1c8	
 	// MPropertyFriendlyName "start control point number"
-	int32_t m_nCPStartPnt; // 0x1c4	
+	int32_t m_nCPStartPnt; // 0x1cc	
 	// MPropertyFriendlyName "end control point number"
-	int32_t m_nCPEndPnt; // 0x1c8	
+	int32_t m_nCPEndPnt; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
+	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
 public:
 	// MPropertyFriendlyName "Recursion Depth"
-	CParticleCollectionFloatInput m_flSegments; // 0x1d0	
+	CParticleCollectionFloatInput m_flSegments; // 0x1d8	
 	// MPropertyFriendlyName "Offset"
-	CParticleCollectionFloatInput m_flOffset; // 0x328	
+	CParticleCollectionFloatInput m_flOffset; // 0x338	
 	// MPropertyFriendlyName "Offset Decay"
-	CParticleCollectionFloatInput m_flOffsetDecay; // 0x480	
+	CParticleCollectionFloatInput m_flOffsetDecay; // 0x498	
 	// MPropertyFriendlyName "Recalculation Rate"
-	CParticleCollectionFloatInput m_flRecalcRate; // 0x5d8	
+	CParticleCollectionFloatInput m_flRecalcRate; // 0x5f8	
 	// MPropertyFriendlyName "UV Scale"
-	CParticleCollectionFloatInput m_flUVScale; // 0x730	
+	CParticleCollectionFloatInput m_flUVScale; // 0x758	
 	// MPropertyFriendlyName "UV Offset"
-	CParticleCollectionFloatInput m_flUVOffset; // 0x888	
+	CParticleCollectionFloatInput m_flUVOffset; // 0x8b8	
 	// MPropertyFriendlyName "Branch Split Rate"
-	CParticleCollectionFloatInput m_flSplitRate; // 0x9e0	
+	CParticleCollectionFloatInput m_flSplitRate; // 0xa18	
 	// MPropertyFriendlyName "Branch Twist"
-	CParticleCollectionFloatInput m_flBranchTwist; // 0xb38	
+	CParticleCollectionFloatInput m_flBranchTwist; // 0xb78	
 	// MPropertyFriendlyName "Branch Behavior"
-	ParticleLightnintBranchBehavior_t m_nBranchBehavior; // 0xc90	
+	ParticleLightnintBranchBehavior_t m_nBranchBehavior; // 0xcd8	
 private:
-	[[maybe_unused]] uint8_t __pad0c94[0x4]; // 0xc94
+	[[maybe_unused]] uint8_t __pad0cdc[0x4]; // 0xcdc
 public:
 	// MPropertyFriendlyName "Start Radius"
-	CParticleCollectionFloatInput m_flRadiusStart; // 0xc98	
+	CParticleCollectionFloatInput m_flRadiusStart; // 0xce0	
 	// MPropertyFriendlyName "End Radius"
-	CParticleCollectionFloatInput m_flRadiusEnd; // 0xdf0	
+	CParticleCollectionFloatInput m_flRadiusEnd; // 0xe40	
 	// MPropertyFriendlyName "Dedicated Particle Pool Count"
-	CParticleCollectionFloatInput m_flDedicatedPool; // 0xf48	
+	CParticleCollectionFloatInput m_flDedicatedPool; // 0xfa0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xe78
+// Size: 0xec0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DistanceToTransform : public CParticleFunctionOperator
@@ -27041,44 +27798,44 @@ class C_OP_DistanceToTransform : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "distance minimum"
-	CPerParticleFloatInput m_flInputMin; // 0x1c0	
+	CPerParticleFloatInput m_flInputMin; // 0x1c8	
 	// MPropertyFriendlyName "distance maximum"
-	CPerParticleFloatInput m_flInputMax; // 0x318	
+	CPerParticleFloatInput m_flInputMax; // 0x328	
 	// MPropertyFriendlyName "output minimum"
-	CPerParticleFloatInput m_flOutputMin; // 0x470	
+	CPerParticleFloatInput m_flOutputMin; // 0x488	
 	// MPropertyFriendlyName "output maximum"
-	CPerParticleFloatInput m_flOutputMax; // 0x5c8	
+	CPerParticleFloatInput m_flOutputMax; // 0x5e8	
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformStart; // 0x720	
+	CParticleTransformInput m_TransformStart; // 0x748	
 	// MPropertyFriendlyName "ensure line of sight"
-	bool m_bLOS; // 0x788	
+	bool m_bLOS; // 0x7b0	
 	// MPropertyFriendlyName "LOS collision group"
-	char m_CollisionGroupName[128]; // 0x789	
+	char m_CollisionGroupName[128]; // 0x7b1	
 private:
-	[[maybe_unused]] uint8_t __pad0809[0x3]; // 0x809
+	[[maybe_unused]] uint8_t __pad0831[0x3]; // 0x831
 public:
 	// MPropertyFriendlyName "Trace Set"
-	ParticleTraceSet_t m_nTraceSet; // 0x80c	
+	ParticleTraceSet_t m_nTraceSet; // 0x834	
 	// MPropertyFriendlyName "maximum trace length"
-	float m_flMaxTraceLength; // 0x810	
+	float m_flMaxTraceLength; // 0x838	
 	// MPropertyFriendlyName "LOS Failure Scalar"
-	float m_flLOSScale; // 0x814	
+	float m_flLOSScale; // 0x83c	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x818	
+	ParticleSetMethod_t m_nSetMethod; // 0x840	
 	// MPropertyFriendlyName "only active within specified distance"
-	bool m_bActiveRange; // 0x81c	
+	bool m_bActiveRange; // 0x844	
 	// MPropertyFriendlyName "output is additive"
-	bool m_bAdditive; // 0x81d	
+	bool m_bAdditive; // 0x845	
 private:
-	[[maybe_unused]] uint8_t __pad081e[0x2]; // 0x81e
+	[[maybe_unused]] uint8_t __pad0846[0x2]; // 0x846
 public:
 	// MPropertyFriendlyName "component scale"
-	CPerParticleVecInput m_vecComponentScale; // 0x820	
+	CPerParticleVecInput m_vecComponentScale; // 0x848	
 };
 
 // Registered binary: client.dll (project 'mathlib_extended')
@@ -27097,7 +27854,6 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Ragdoll Tag"
@@ -27127,7 +27883,6 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
 // Size: 0x68
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CVoiceContainerStaticAdditiveSynth::CHarmonic
@@ -27157,9 +27912,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapVelocityToVector : public CParticleFunctionOperator
@@ -27167,77 +27921,74 @@ class C_OP_RemapVelocityToVector : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "scale factor"
-	float m_flScale; // 0x1bc	
+	float m_flScale; // 0x1c4	
 	// MPropertyFriendlyName "normalize"
-	bool m_bNormalize; // 0x1c0	
+	bool m_bNormalize; // 0x1c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xad0
+// Size: 0xb08
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DragRelativeToPlane : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "dampening"
-	CParticleCollectionFloatInput m_flDragAtPlane; // 0x1b8	
+	CParticleCollectionFloatInput m_flDragAtPlane; // 0x1c0	
 	// MPropertyFriendlyName "falloff"
-	CParticleCollectionFloatInput m_flFalloff; // 0x310	
+	CParticleCollectionFloatInput m_flFalloff; // 0x320	
 	// MPropertyFriendlyName "dampen on only one side of plane"
-	bool m_bDirectional; // 0x468	
+	bool m_bDirectional; // 0x480	
 private:
-	[[maybe_unused]] uint8_t __pad0469[0x7]; // 0x469
+	[[maybe_unused]] uint8_t __pad0481[0x7]; // 0x481
 public:
 	// MPropertyFriendlyName "plane normal"
 	// MVectorIsCoordinate
-	CParticleCollectionVecInput m_vecPlaneNormal; // 0x470	
+	CParticleCollectionVecInput m_vecPlaneNormal; // 0x488	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0xac8	
+	int32_t m_nControlPointNumber; // 0xb00	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x230
+// Size: 0x238
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderTreeShake : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "peak strength"
-	float m_flPeakStrength; // 0x208	
+	float m_flPeakStrength; // 0x210	
 	// MPropertyFriendlyName "peak strength field override"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nPeakStrengthFieldOverride; // 0x20c	
+	ParticleAttributeIndex_t m_nPeakStrengthFieldOverride; // 0x214	
 	// MPropertyFriendlyName "radius"
-	float m_flRadius; // 0x210	
+	float m_flRadius; // 0x218	
 	// MPropertyFriendlyName "strength field override"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nRadiusFieldOverride; // 0x214	
+	ParticleAttributeIndex_t m_nRadiusFieldOverride; // 0x21c	
 	// MPropertyFriendlyName "shake duration after end"
-	float m_flShakeDuration; // 0x218	
+	float m_flShakeDuration; // 0x220	
 	// MPropertyFriendlyName "amount of time taken to smooth between different shake parameters"
-	float m_flTransitionTime; // 0x21c	
+	float m_flTransitionTime; // 0x224	
 	// MPropertyFriendlyName "Twist amount (-1..1)"
-	float m_flTwistAmount; // 0x220	
+	float m_flTwistAmount; // 0x228	
 	// MPropertyFriendlyName "Radial Amount (-1..1)"
-	float m_flRadialAmount; // 0x224	
+	float m_flRadialAmount; // 0x22c	
 	// MPropertyFriendlyName "Control Point Orientation Amount (-1..1)"
-	float m_flControlPointOrientationAmount; // 0x228	
+	float m_flControlPointOrientationAmount; // 0x230	
 	// MPropertyFriendlyName "Control Point for Orientation Amount"
-	int32_t m_nControlPointForLinearDirection; // 0x22c	
+	int32_t m_nControlPointForLinearDirection; // 0x234	
 };
 
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParamFloat_t : public MaterialParam_t
@@ -27249,7 +28000,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x2c8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PermModelData_t
@@ -27301,7 +28051,6 @@ public:
 // Alignment: 16
 // Size: 0x40
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class FootFixedSettings
@@ -27328,7 +28077,6 @@ public:
 // Alignment: 1
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CSolveIKTargetHandle_t
@@ -27342,7 +28090,6 @@ public:
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBlendUpdateNode : public CAnimUpdateNodeBase
@@ -27374,7 +28121,6 @@ public:
 // Size: 0x60
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimationGraphVisualizerSphere : public CAnimationGraphVisualizerPrimitiveBase
@@ -27389,7 +28135,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CPulseCell_Test_MultiOutflow_WithParams_Yielding__CursorState_t
@@ -27400,8 +28145,7 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x2a8
-// Construct allowed
+// Size: 0x558
 // 
 // MGetKV3ClassDefaults
 struct IdolParams_t
@@ -27411,13 +28155,21 @@ public:
 	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_ParachuteModel; // 0xe0	
 	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_CrateModel; // 0x1c0	
 	CUtlString m_strLoopingSequenceName; // 0x2a0	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_IdolReturnLocationParticle; // 0x2a8	
+	float m_flIdolReturnLocationParticleScale; // 0x388	
+private:
+	[[maybe_unused]] uint8_t __pad038c[0x4]; // 0x38c
+public:
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_IdolSpawnLocationParticle; // 0x390	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_IdolDroppingParticle; // 0x470	
+	float m_flIdolDropHeight; // 0x550	
+	float m_flIdolDropDuration; // 0x554	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct DOFDesc_t
@@ -27461,7 +28213,6 @@ public:
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Envelope Analyzer"
@@ -27504,7 +28255,6 @@ public:
 // Alignment: 16
 // Size: 0x90
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FollowAttachmentSettings_t
@@ -27521,7 +28271,6 @@ public:
 // Size: 0x2c
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct JiggleBoneSettings_t
@@ -27540,7 +28289,6 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimStateMachineUpdater
@@ -27558,21 +28306,28 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x10
+// Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-class CNmControlParameterFloatNode::CDefinition : public CNmFloatValueNode::CDefinition
+class CNmBoneMaskSelectorNode::CDefinition : public CNmBoneMaskValueNode::CDefinition
 {
 public:
+	int16_t m_defaultMaskNodeIdx; // 0x10	
+	int16_t m_parameterValueNodeIdx; // 0x12	
+	bool m_switchDynamically; // 0x14	
+private:
+	[[maybe_unused]] uint8_t __pad0015[0x3]; // 0x15
+public:
+	CUtlVectorFixedGrowable< int16, 7 > m_maskNodeIndices; // 0x18	
+	CUtlVectorFixedGrowable< CGlobalSymbol, 7 > m_parameterValues; // 0x40	
+	float m_flBlendTimeSeconds; // 0x90	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 4
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqCmdLayer
@@ -27596,7 +28351,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimScriptComponentUpdater : public CAnimComponentUpdater
@@ -27609,7 +28363,6 @@ public:
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Restore State"
@@ -27628,55 +28381,52 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_OrientTo2dDirection : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "rotation offset"
-	float m_flRotOffset; // 0x1b8	
+	float m_flRotOffset; // 0x1c0	
 	// MPropertyFriendlyName "spin strength"
-	float m_flSpinStrength; // 0x1bc	
+	float m_flSpinStrength; // 0x1c4	
 	// MPropertyFriendlyName "rotation field"
 	// MPropertyAttributeChoiceName "particlefield_rotation"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x5d8
+// Size: 0x5f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointFieldToScalarExpression : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "expression"
-	ScalarExpressionType_t m_nExpression; // 0x1c0	
+	ScalarExpressionType_t m_nExpression; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "input 1"
-	CParticleCollectionFloatInput m_flInput1; // 0x1c8	
+	CParticleCollectionFloatInput m_flInput1; // 0x1d0	
 	// MPropertyFriendlyName "input 2"
-	CParticleCollectionFloatInput m_flInput2; // 0x320	
+	CParticleCollectionFloatInput m_flInput2; // 0x330	
 	// MPropertyFriendlyName "output"
-	CParticleRemapFloatInput m_flOutputRemap; // 0x478	
+	CParticleRemapFloatInput m_flOutputRemap; // 0x490	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutputCP; // 0x5d0	
+	int32_t m_nOutputCP; // 0x5f0	
 	// MPropertyFriendlyName "output component"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nOutVectorField; // 0x5d4	
+	int32_t m_nOutVectorField; // 0x5f4	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x50
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CommandToolCommand_t
@@ -27733,52 +28483,49 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xe70
+// Size: 0xeb8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_BoxConstraint : public CParticleFunctionConstraint
 {
 public:
 	// MPropertyFriendlyName "min coords"
-	CParticleCollectionVecInput m_vecMin; // 0x1b8	
+	CParticleCollectionVecInput m_vecMin; // 0x1c0	
 	// MPropertyFriendlyName "max coords"
-	CParticleCollectionVecInput m_vecMax; // 0x810	
+	CParticleCollectionVecInput m_vecMax; // 0x838	
 	// MPropertyFriendlyName "control point"
-	int32_t m_nCP; // 0xe68	
+	int32_t m_nCP; // 0xeb0	
 	// MPropertyFriendlyName "use local space"
-	bool m_bLocalSpace; // 0xe6c	
+	bool m_bLocalSpace; // 0xeb4	
 	// MPropertyFriendlyName "Take radius into account"
-	bool m_bAccountForRadius; // 0xe6d	
+	bool m_bAccountForRadius; // 0xeb5	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SnapshotRigidSkinToBones : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "rotate normals"
-	bool m_bTransformNormals; // 0x1b8	
+	bool m_bTransformNormals; // 0x1c0	
 	// MPropertyFriendlyName "scale radii"
-	bool m_bTransformRadii; // 0x1b9	
+	bool m_bTransformRadii; // 0x1c1	
 private:
-	[[maybe_unused]] uint8_t __pad01ba[0x2]; // 0x1ba
+	[[maybe_unused]] uint8_t __pad01c2[0x2]; // 0x1c2
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1bc	
+	int32_t m_nControlPointNumber; // 0x1c4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_MovementMaintainOffset : public CParticleFunctionOperator
@@ -27786,11 +28533,11 @@ class C_OP_MovementMaintainOffset : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "desired offset"
 	// MVectorIsCoordinate
-	Vector m_vecOffset; // 0x1b8	
+	Vector m_vecOffset; // 0x1c0	
 	// MPropertyFriendlyName "local space CP"
-	int32_t m_nCP; // 0x1c4	
+	int32_t m_nCP; // 0x1cc	
 	// MPropertyFriendlyName "scale by radius"
-	bool m_bRadiusScale; // 0x1c8	
+	bool m_bRadiusScale; // 0x1d0	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -27809,7 +28556,6 @@ public:
 // Alignment: 8
 // Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Create Locator"
@@ -27844,7 +28590,6 @@ public:
 // Alignment: 2
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeRigidColliderIndices_t
@@ -27858,48 +28603,45 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x978
+// Size: 0x9a8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetVec : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "value"
-	CPerParticleVecInput m_InputValue; // 0x1b8	
+	CPerParticleVecInput m_InputValue; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nOutputField; // 0x810	
+	ParticleAttributeIndex_t m_nOutputField; // 0x838	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x814	
+	ParticleSetMethod_t m_nSetMethod; // 0x83c	
 	// MPropertyFriendlyName "interpolation"
-	CPerParticleFloatInput m_Lerp; // 0x818	
+	CPerParticleFloatInput m_Lerp; // 0x840	
 	// MPropertyFriendlyName "normalize result"
-	bool m_bNormalizedOutput; // 0x970	
+	bool m_bNormalizedOutput; // 0x9a0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointFromObjectScale : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "input control point number"
-	int32_t m_nCPInput; // 0x1c0	
+	int32_t m_nCPInput; // 0x1c8	
 	// MPropertyFriendlyName "output control point number"
-	int32_t m_nCPOutput; // 0x1c4	
+	int32_t m_nCPOutput; // 0x1cc	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 4
 // Size: 0x1c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqAutoLayer
@@ -27925,7 +28667,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyAutoExpandSelf
@@ -27942,12 +28683,12 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x3e8
+// Size: 0x5d8
 // Has VTable
 class CNPC_Trooper_GraphController : public CAI_CitadelNPC_GraphController
 {
 public:
-	CAnimGraphTagRef m_sUsingMelee; // 0x3d0	
+	CAnimGraphTagRef m_sUsingMelee; // 0x5c0	
 	
 	// Static fields:
 	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNPC_Trooper_GraphController")->GetStaticFields()[0]->m_pInstance);};
@@ -27957,7 +28698,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct BakedLightingInfo_t
@@ -27977,11 +28717,27 @@ public:
 	CUtlVector< CStrongHandle< InfoForResourceTypeCTextureBase > > m_lightMaps; // 0x18	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x58
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmIDEventConditionNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	int16_t m_nSourceStateNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	CNmBitFlags m_eventConditionRules; // 0x14	
+	CUtlVectorFixedGrowable< CGlobalSymbol, 5 > m_eventIDs; // 0x18	
+};
+
 // Registered binary: schemasystem.dll (project 'resourcefile')
 // Alignment: 8
 // Size: 0x10
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CExampleSchemaVData_PolymorphicBase
@@ -27995,7 +28751,6 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulse_Variable
@@ -28017,7 +28772,6 @@ public:
 // Alignment: 16
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class FourVectors2D
@@ -28057,9 +28811,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapNamedModelMeshGroupOnceTimed : public C_OP_RemapNamedModelElementOnceTimed
@@ -28069,29 +28822,27 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_FadeIn : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "fade in time min"
-	float m_flFadeInTimeMin; // 0x1b8	
+	float m_flFadeInTimeMin; // 0x1c0	
 	// MPropertyFriendlyName "fade in time max"
-	float m_flFadeInTimeMax; // 0x1bc	
+	float m_flFadeInTimeMax; // 0x1c4	
 	// MPropertyFriendlyName "fade in time exponent"
-	float m_flFadeInTimeExp; // 0x1c0	
+	float m_flFadeInTimeExp; // 0x1c8	
 	// MPropertyFriendlyName "proportional 0/1"
-	bool m_bProportional; // 0x1c4	
+	bool m_bProportional; // 0x1cc	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
-// Size: 0x70
+// Size: 0x68
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class COrientConstraint : public CBaseConstraint
@@ -28118,7 +28869,6 @@ public:
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeRodConstraint_t
@@ -28131,11 +28881,23 @@ public:
 	float flRelaxationFactor; // 0x10	
 };
 
+// Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
+// Alignment: 8
+// Size: 0x20
+// 
+// MGetKV3ClassDefaults
+class CVoiceContainerSetElement
+{
+public:
+	CSoundContainerReference m_sound; // 0x0	
+	// MPropertyFriendlyName "Volume (in Decibels)"
+	float m_flVolumeDB; // 0x18	
+};
+
 // Registered binary: soundsystem.dll (project 'soundsystem')
 // Alignment: 8
 // Size: 0x40
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSosGroupActionMemberCountEnvelopeSchema : public CSosGroupActionSchema
@@ -28163,7 +28925,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SequenceWeightedList_t
@@ -28178,37 +28939,35 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x5f0
+// Size: 0x610
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetAttributeToScalarExpression : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "expression"
-	ScalarExpressionType_t m_nExpression; // 0x1b8	
+	ScalarExpressionType_t m_nExpression; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "input 1"
-	CPerParticleFloatInput m_flInput1; // 0x1c0	
+	CPerParticleFloatInput m_flInput1; // 0x1c8	
 	// MPropertyFriendlyName "input 2"
-	CPerParticleFloatInput m_flInput2; // 0x318	
+	CPerParticleFloatInput m_flInput2; // 0x328	
 	// MPropertyFriendlyName "output"
-	CParticleRemapFloatInput m_flOutputRemap; // 0x470	
+	CParticleRemapFloatInput m_flOutputRemap; // 0x488	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nOutputField; // 0x5c8	
+	ParticleAttributeIndex_t m_nOutputField; // 0x5e8	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x5cc	
+	ParticleSetMethod_t m_nSetMethod; // 0x5ec	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FollowTargetOpFixedSettings_t
@@ -28227,7 +28986,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x50
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CRenderSkeleton
@@ -28241,9 +28999,7 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem_lowlevel')
 // Alignment: 4
 // Size: 0x20
-// Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixConvolutionDesc_t
@@ -28276,7 +29032,6 @@ public:
 // Size: 0x10
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSosGroupBranchPattern
@@ -28298,63 +29053,60 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1f8
+// Size: 0x200
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_AddVectorToVector : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "component scale factor"
-	Vector m_vecScale; // 0x1c0	
+	Vector m_vecScale; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d4	
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1d0	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1d8	
 	// MPropertyFriendlyName "random offset min"
-	Vector m_vOffsetMin; // 0x1d4	
+	Vector m_vOffsetMin; // 0x1dc	
 	// MPropertyFriendlyName "random offset max"
-	Vector m_vOffsetMax; // 0x1e0	
+	Vector m_vOffsetMax; // 0x1e8	
 	// MPropertyFriendlyName "Random number generator controls"
-	CRandomNumberGeneratorParameters m_randomnessParameters; // 0x1ec	
+	CRandomNumberGeneratorParameters m_randomnessParameters; // 0x1f4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapAverageScalarValuetoCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutControlPointNumber; // 0x1c0	
+	int32_t m_nOutControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nOutVectorField; // 0x1c4	
+	int32_t m_nOutVectorField; // 0x1cc	
 	// MPropertyFriendlyName "scalar field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nField; // 0x1c8	
+	ParticleAttributeIndex_t m_nField; // 0x1d0	
 	// MPropertyFriendlyName "input volume minimum"
-	float m_flInputMin; // 0x1cc	
+	float m_flInputMin; // 0x1d4	
 	// MPropertyFriendlyName "input volume maximum"
-	float m_flInputMax; // 0x1d0	
+	float m_flInputMax; // 0x1d8	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1d4	
+	float m_flOutputMin; // 0x1dc	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d8	
+	float m_flOutputMax; // 0x1e0	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CNmGraphDefinition__ExternalGraphSlot_t
@@ -28367,25 +29119,23 @@ public:
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CNmStateMachineNode__StateDefinition_t
 {
 public:
 	int16_t m_nStateNodeIdx; // 0x0	
-	int16_t m_entryConditionNodeIdx; // 0x2	
+	int16_t m_nEntryConditionNodeIdx; // 0x2	
 private:
 	[[maybe_unused]] uint8_t __pad0004[0x4]; // 0x4
 public:
-	CUtlLeanVectorFixedGrowable< CNmStateMachineNode::TransitionDefinition_t > m_transitionDefinition; // 0x8	
+	CUtlLeanVectorFixedGrowable< CNmStateMachineNode::TransitionDefinition_t, 5 > m_transitionDefinitions; // 0x8	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfigElement_SetBodygroupOnAttachedModels : public CModelConfigElement
@@ -28397,15 +29147,27 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x18
+// Size: 0x10
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct CNmStateEventConditionNode__Condition_t
+{
+public:
+	CGlobalSymbol m_eventID; // 0x0	
+	NmStateEventTypeCondition_t m_eventTypeCondition; // 0x8	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmFootEvent : public CNmEvent
 {
 public:
-	NmFootPhase_t m_phase; // 0x10	
+	NmFootPhase_t m_phase; // 0x18	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
@@ -28425,34 +29187,32 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x5d0
+// Size: 0x5f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetUserEvent : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "input value"
-	CPerParticleFloatInput m_flInput; // 0x1b8	
+	CPerParticleFloatInput m_flInput; // 0x1c0	
 	// MPropertyFriendlyName "rising edge value"
-	CPerParticleFloatInput m_flRisingEdge; // 0x310	
+	CPerParticleFloatInput m_flRisingEdge; // 0x320	
 	// MPropertyFriendlyName "rising edge event type"
-	EventTypeSelection_t m_nRisingEventType; // 0x468	
+	EventTypeSelection_t m_nRisingEventType; // 0x480	
 private:
-	[[maybe_unused]] uint8_t __pad046c[0x4]; // 0x46c
+	[[maybe_unused]] uint8_t __pad0484[0x4]; // 0x484
 public:
 	// MPropertyFriendlyName "falling edge value"
-	CPerParticleFloatInput m_flFallingEdge; // 0x470	
+	CPerParticleFloatInput m_flFallingEdge; // 0x488	
 	// MPropertyFriendlyName "falling edge event type"
-	EventTypeSelection_t m_nFallingEventType; // 0x5c8	
+	EventTypeSelection_t m_nFallingEventType; // 0x5e8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x42f0
+// Size: 0x4458
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderSprites : public CBaseRendererSource2
@@ -28461,140 +29221,139 @@ public:
 	// MPropertyStartGroup "Animation"
 	// MPropertyFriendlyName "sequence id override"
 	// MPropertySortPriority "500"
-	CParticleCollectionRendererFloatInput m_nSequenceOverride; // 0x2718	
+	CParticleCollectionRendererFloatInput m_nSequenceOverride; // 0x27e8	
 	// MPropertyStartGroup "Orientation"
 	// MPropertyFriendlyName "orientation type"
 	// MPropertySortPriority "750"
-	ParticleOrientationChoiceList_t m_nOrientationType; // 0x2870	
+	ParticleOrientationChoiceList_t m_nOrientationType; // 0x2948	
 	// MPropertyFriendlyName "orientation control point"
 	// MPropertySortPriority "750"
 	// MPropertySuppressExpr "m_nOrientationType != PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL && m_nOrientationType != PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL"
-	int32_t m_nOrientationControlPoint; // 0x2874	
+	int32_t m_nOrientationControlPoint; // 0x294c	
 	// MPropertyFriendlyName "enable yaw for particles aligned to normals"
 	// MPropertySortPriority "750"
 	// MPropertySuppressExpr "m_nOrientationType != PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL && m_nOrientationType != PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL"
-	bool m_bUseYawWithNormalAligned; // 0x2878	
+	bool m_bUseYawWithNormalAligned; // 0x2950	
 private:
-	[[maybe_unused]] uint8_t __pad2879[0x7]; // 0x2879
+	[[maybe_unused]] uint8_t __pad2951[0x7]; // 0x2951
 public:
 	// MPropertyStartGroup "Fading and culling"
 	// MPropertyFriendlyName "minimum visual screen size"
 	// MPropertySortPriority "1000"
-	CParticleCollectionRendererFloatInput m_flMinSize; // 0x2880	
+	CParticleCollectionRendererFloatInput m_flMinSize; // 0x2958	
 	// MPropertyFriendlyName "maximum visual screen size"
 	// MPropertySortPriority "1000"
-	CParticleCollectionRendererFloatInput m_flMaxSize; // 0x29d8	
+	CParticleCollectionRendererFloatInput m_flMaxSize; // 0x2ab8	
 	// MPropertyFriendlyName "Factor to map size adjustment to alpha"
 	// MPropertySortPriority "1000"
-	CParticleCollectionRendererFloatInput m_flAlphaAdjustWithSizeAdjust; // 0x2b30	
+	CParticleCollectionRendererFloatInput m_flAlphaAdjustWithSizeAdjust; // 0x2c18	
 	// MPropertyFriendlyName "screen size to start fading"
 	// MPropertySortPriority "1000"
-	CParticleCollectionRendererFloatInput m_flStartFadeSize; // 0x2c88	
+	CParticleCollectionRendererFloatInput m_flStartFadeSize; // 0x2d78	
 	// MPropertyFriendlyName "screen size to fade away"
 	// MPropertySortPriority "1000"
-	CParticleCollectionRendererFloatInput m_flEndFadeSize; // 0x2de0	
+	CParticleCollectionRendererFloatInput m_flEndFadeSize; // 0x2ed8	
 	// MPropertyFriendlyName "start fade dot product of normal vs view"
 	// MPropertySortPriority "1000"
-	float m_flStartFadeDot; // 0x2f38	
+	float m_flStartFadeDot; // 0x3038	
 	// MPropertyFriendlyName "end fade dot product of normal vs view"
 	// MPropertySortPriority "1000"
-	float m_flEndFadeDot; // 0x2f3c	
+	float m_flEndFadeDot; // 0x303c	
 	// MPropertyStartGroup "Distance to alpha coding"
 	// MPropertyFriendlyName "distance alpha"
 	// MPropertySortPriority "0"
-	bool m_bDistanceAlpha; // 0x2f40	
+	bool m_bDistanceAlpha; // 0x3040	
 	// MPropertyFriendlyName "use soft edges for distance alpha"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bDistanceAlpha"
-	bool m_bSoftEdges; // 0x2f41	
+	bool m_bSoftEdges; // 0x3041	
 private:
-	[[maybe_unused]] uint8_t __pad2f42[0x2]; // 0x2f42
+	[[maybe_unused]] uint8_t __pad3042[0x2]; // 0x3042
 public:
 	// MPropertyFriendlyName "start value for soft edges for distance alpha"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bDistanceAlpha"
-	float m_flEdgeSoftnessStart; // 0x2f44	
+	float m_flEdgeSoftnessStart; // 0x3044	
 	// MPropertyFriendlyName "end value for soft edges for distance alpha"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bDistanceAlpha"
-	float m_flEdgeSoftnessEnd; // 0x2f48	
+	float m_flEdgeSoftnessEnd; // 0x3048	
 	// MPropertyStartGroup "Outlining"
 	// MPropertyFriendlyName "enable particle outlining"
 	// MPropertySortPriority "0"
-	bool m_bOutline; // 0x2f4c	
+	bool m_bOutline; // 0x304c	
 	// MPropertyFriendlyName "outline color"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	Color m_OutlineColor; // 0x2f4d	
+	Color m_OutlineColor; // 0x304d	
 private:
-	[[maybe_unused]] uint8_t __pad2f51[0x3]; // 0x2f51
+	[[maybe_unused]] uint8_t __pad3051[0x3]; // 0x3051
 public:
 	// MPropertyFriendlyName "outline alpha"
 	// MPropertyAttributeRange "0 255"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	int32_t m_nOutlineAlpha; // 0x2f54	
+	int32_t m_nOutlineAlpha; // 0x3054	
 	// MPropertyFriendlyName "outline start 0"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	float m_flOutlineStart0; // 0x2f58	
+	float m_flOutlineStart0; // 0x3058	
 	// MPropertyFriendlyName "outline start 1"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	float m_flOutlineStart1; // 0x2f5c	
+	float m_flOutlineStart1; // 0x305c	
 	// MPropertyFriendlyName "outline end 0"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	float m_flOutlineEnd0; // 0x2f60	
+	float m_flOutlineEnd0; // 0x3060	
 	// MPropertyFriendlyName "outline end 1"
 	// MPropertySortPriority "0"
 	// MPropertySuppressExpr "!m_bOutline"
-	float m_flOutlineEnd1; // 0x2f64	
+	float m_flOutlineEnd1; // 0x3064	
 	// MPropertyStartGroup "Lighting and Shadows"
 	// MPropertyFriendlyName "lighting mode"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "mod != hlx"
-	ParticleLightingQuality_t m_nLightingMode; // 0x2f68	
+	ParticleLightingQuality_t m_nLightingMode; // 0x3068	
 private:
-	[[maybe_unused]] uint8_t __pad2f6c[0x4]; // 0x2f6c
+	[[maybe_unused]] uint8_t __pad306c[0x4]; // 0x306c
 public:
 	// MPropertyFriendlyName "vertex lighting tessellation (0-5)"
 	// MPropertyAttributeRange "0 5"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "mod != hlx || m_nLightingMode != PARTICLE_LIGHTING_PER_VERTEX"
-	CParticleCollectionRendererFloatInput m_flLightingTessellation; // 0x2f70	
+	CParticleCollectionRendererFloatInput m_flLightingTessellation; // 0x3070	
 	// MPropertyFriendlyName "lighting directionality"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "mod != hlx"
-	CParticleCollectionRendererFloatInput m_flLightingDirectionality; // 0x30c8	
+	CParticleCollectionRendererFloatInput m_flLightingDirectionality; // 0x31d0	
 	// MPropertyFriendlyName "Particle Shadows"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "mod != csgo"
-	bool m_bParticleShadows; // 0x3220	
+	bool m_bParticleShadows; // 0x3330	
 private:
-	[[maybe_unused]] uint8_t __pad3221[0x3]; // 0x3221
+	[[maybe_unused]] uint8_t __pad3331[0x3]; // 0x3331
 public:
 	// MPropertyFriendlyName "Shadow Density"
 	// MPropertySortPriority "400"
 	// MPropertySuppressExpr "!m_bParticleShadows"
-	float m_flShadowDensity; // 0x3224	
+	float m_flShadowDensity; // 0x3334	
 	// MPropertyStartGroup "Replication"
 	// MPropertyFriendlyName "Replication settings"
-	// -> m_nReplicationMode - 0x3228
-	// -> m_bScaleChildParticleRadii - 0x322c
-	// -> m_flMinRandomRadiusScale - 0x3230
-	// -> m_flMaxRandomRadiusScale - 0x3388
-	// -> m_vMinRandomDisplacement - 0x34e0
-	// -> m_vMaxRandomDisplacement - 0x3b38
-	// -> m_flModellingScale - 0x4190
-	CReplicationParameters m_replicationParameters; // 0x3228	
+	// -> m_nReplicationMode - 0x3338
+	// -> m_bScaleChildParticleRadii - 0x333c
+	// -> m_flMinRandomRadiusScale - 0x3340
+	// -> m_flMaxRandomRadiusScale - 0x34a0
+	// -> m_vMinRandomDisplacement - 0x3600
+	// -> m_vMaxRandomDisplacement - 0x3c78
+	// -> m_flModellingScale - 0x42f0
+	CReplicationParameters m_replicationParameters; // 0x3338	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapSpeed : public CParticleFunctionOperator
@@ -28602,26 +29361,25 @@ class C_OP_RemapSpeed : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1bc	
+	float m_flInputMin; // 0x1c4	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1c0	
+	float m_flInputMax; // 0x1c8	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1c4	
+	float m_flOutputMin; // 0x1cc	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1c8	
+	float m_flOutputMax; // 0x1d0	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1cc	
+	ParticleSetMethod_t m_nSetMethod; // 0x1d4	
 	// MPropertyFriendlyName "ignore delta time"
-	bool m_bIgnoreDelta; // 0x1d0	
+	bool m_bIgnoreDelta; // 0x1d8	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CHandshakeAnimTagBase : public CAnimTagBase
@@ -28635,7 +29393,6 @@ public:
 // Alignment: 8
 // Size: 0xf0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBlend2DUpdateNode : public CAnimUpdateNodeBase
@@ -28666,31 +29423,9 @@ public:
 	bool m_bAnimEventsAndTagsOnMostWeightedOnly; // 0xeb	
 };
 
-// Registered binary: server.dll (project 'server')
-// Alignment: 8
-// Size: 0x1f0
-struct ConceptHistory_t
-{
-public:
-	float timeSpoken; // 0x0	
-	// -> m_Type - 0x8
-	// -> m_szResponseName[192] - 0x9
-	// -> m_szMatchingRule[128] - 0xc9
-	// -> m_Params - 0x150
-	// -> m_fMatchScore - 0x170
-	// -> m_szSpeakerContext - 0x178
-	// -> m_szWorldContext - 0x180
-	// -> m_Followup - 0x188
-	// -> m_recipientFilter - 0x1ba
-	// -> m_pchCriteriaNames - 0x1c0
-	// -> m_pchCriteriaValues - 0x1d8
-	CRR_Response m_response; // 0x8	
-};
-
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParamTexture_t : public MaterialParam_t
@@ -28702,7 +29437,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 16
 // Size: 0x110
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AnimationSnapshotBase_t
@@ -28735,21 +29469,19 @@ public:
 // Alignment: 16
 // Size: 0xa0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CTiltTwistConstraint : public CBaseConstraint
 {
 public:
-	int32_t m_nTargetAxis; // 0x70	
-	int32_t m_nSlaveAxis; // 0x74	
+	int32_t m_nTargetAxis; // 0x68	
+	int32_t m_nSlaveAxis; // 0x6c	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct BonusUpgrade_t
@@ -28775,7 +29507,6 @@ public:
 // Alignment: 8
 // Size: 0x178
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulseGraphDef
@@ -28799,11 +29530,35 @@ public:
 	CUtlVector< CPulse_OutputConnection* > m_OutputConnections; // 0x110	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x30
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmClipSelectorNode::CDefinition : public CNmPoseNode::CDefinition
+{
+public:
+	CUtlLeanVectorFixedGrowable< int16, 5 > m_optionNodeIndices; // 0x10	
+	CUtlLeanVectorFixedGrowable< int16, 5 > m_conditionNodeIndices; // 0x20	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmRootMotionEvent : public CNmEvent
+{
+public:
+	float m_flBlendTimeSeconds; // 0x18	
+};
+
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfigElement_SetBodygroup : public CModelConfigElement
@@ -28817,7 +29572,6 @@ public:
 // Alignment: 8
 // Size: 0xe8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfigElement_AttachedModel : public CModelConfigElement
@@ -28866,7 +29620,6 @@ public:
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Filter: Surface Angles"
@@ -28883,9 +29636,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapSpeedToScalar : public CParticleFunctionInitializer
@@ -28893,53 +29645,51 @@ class C_INIT_RemapSpeedToScalar : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
 	// MPropertyFriendlyName "control point number (ignored if per particle)"
-	int32_t m_nControlPointNumber; // 0x1c4	
+	int32_t m_nControlPointNumber; // 0x1cc	
 	// MPropertyFriendlyName "emitter lifetime start time (seconds)"
-	float m_flStartTime; // 0x1c8	
+	float m_flStartTime; // 0x1d0	
 	// MPropertyFriendlyName "emitter lifetime end time (seconds)"
-	float m_flEndTime; // 0x1cc	
+	float m_flEndTime; // 0x1d4	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1d0	
+	float m_flInputMin; // 0x1d8	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1d4	
+	float m_flInputMax; // 0x1dc	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1d8	
+	float m_flOutputMin; // 0x1e0	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1dc	
+	float m_flOutputMax; // 0x1e4	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1e0	
+	ParticleSetMethod_t m_nSetMethod; // 0x1e8	
 	// MPropertyFriendlyName "per particle"
-	bool m_bPerParticle; // 0x1e4	
+	bool m_bPerParticle; // 0x1ec	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x328
+// Size: 0x338
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_DistanceCull : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point"
-	int32_t m_nControlPoint; // 0x1c0	
+	int32_t m_nControlPoint; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "cull distance"
-	CParticleCollectionFloatInput m_flDistance; // 0x1c8	
+	CParticleCollectionFloatInput m_flDistance; // 0x1d0	
 	// MPropertyFriendlyName "cull inside instead of outside"
-	bool m_bCullInside; // 0x320	
+	bool m_bCullInside; // 0x330	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 16
 // Size: 0x110
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFollowAttachmentUpdateNode : public CUnaryUpdateNode
@@ -28969,7 +29719,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct NPCAttachmentSpawnKV_t
@@ -28981,9 +29730,8 @@ public:
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0xe8
+// Size: 0xb8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Null Container"
@@ -28996,7 +29744,6 @@ public:
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ParticleChildrenInfo_t
@@ -29019,68 +29766,64 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x978
+// Size: 0x9a8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_MovementLoopInsideSphere : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point"
-	int32_t m_nCP; // 0x1b8	
+	int32_t m_nCP; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "distance maximum"
-	CParticleCollectionFloatInput m_flDistance; // 0x1c0	
+	CParticleCollectionFloatInput m_flDistance; // 0x1c8	
 	// MPropertyFriendlyName "component scale"
-	CParticleCollectionVecInput m_vecScale; // 0x318	
+	CParticleCollectionVecInput m_vecScale; // 0x328	
 	// MPropertyFriendlyName "distance squared output attribute"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nDistSqrAttr; // 0x970	
+	ParticleAttributeIndex_t m_nDistSqrAttr; // 0x9a0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetCPOrientationToDirection : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "input control point"
-	int32_t m_nInputControlPoint; // 0x1b8	
+	int32_t m_nInputControlPoint; // 0x1c0	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutputControlPoint; // 0x1bc	
+	int32_t m_nOutputControlPoint; // 0x1c4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_HSVShiftToCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "Target color control point number"
-	int32_t m_nColorCP; // 0x1c0	
+	int32_t m_nColorCP; // 0x1c8	
 	// MPropertyFriendlyName "Color Gem Enable control point number"
-	int32_t m_nColorGemEnableCP; // 0x1c4	
+	int32_t m_nColorGemEnableCP; // 0x1cc	
 	// MPropertyFriendlyName "output control point number"
-	int32_t m_nOutputCP; // 0x1c8	
+	int32_t m_nOutputCP; // 0x1d0	
 	// MPropertyFriendlyName "Default HSV Color"
-	Color m_DefaultHSVColor; // 0x1cc	
+	Color m_DefaultHSVColor; // 0x1d4	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyArrayElementNameKey "m_sName"
@@ -29097,7 +29840,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ModifierTrackedBodyGroup_t
@@ -29123,53 +29865,50 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_GlobalLight : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "initial color bias"
-	float m_flScale; // 0x1b8	
+	float m_flScale; // 0x1c0	
 	// MPropertyFriendlyName "clamp minimum light value to initial color"
-	bool m_bClampLowerRange; // 0x1bc	
+	bool m_bClampLowerRange; // 0x1c4	
 	// MPropertyFriendlyName "clamp maximum light value to initial color"
-	bool m_bClampUpperRange; // 0x1bd	
+	bool m_bClampUpperRange; // 0x1c5	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x2c8
+// Size: 0x2d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointsToModelParticles : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "hitbox set"
-	char m_HitboxSetName[128]; // 0x1b8	
+	char m_HitboxSetName[128]; // 0x1c0	
 	// MPropertyFriendlyName "attachment to follow"
-	char m_AttachmentName[128]; // 0x238	
+	char m_AttachmentName[128]; // 0x240	
 	// MPropertyFriendlyName "First control point to set"
-	int32_t m_nFirstControlPoint; // 0x2b8	
+	int32_t m_nFirstControlPoint; // 0x2c0	
 	// MPropertyFriendlyName "# of control points to set"
-	int32_t m_nNumControlPoints; // 0x2bc	
+	int32_t m_nNumControlPoints; // 0x2c4	
 	// MPropertyFriendlyName "first particle to copy"
-	int32_t m_nFirstSourcePoint; // 0x2c0	
+	int32_t m_nFirstSourcePoint; // 0x2c8	
 	// MPropertyFriendlyName "use skinning instead of hitboxes"
-	bool m_bSkin; // 0x2c4	
+	bool m_bSkin; // 0x2cc	
 	// MPropertyFriendlyName "follow attachment"
-	bool m_bAttachment; // 0x2c5	
+	bool m_bAttachment; // 0x2cd	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CTimeRemainingMetricEvaluator : public CMotionMetricEvaluator
@@ -29185,6 +29924,18 @@ private:
 	[[maybe_unused]] uint8_t __pad0059[0x3]; // 0x59
 public:
 	float m_flMinTimeRemaining; // 0x5c	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmAndNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	CUtlLeanVectorFixedGrowable< int16, 4 > m_conditionNodeIndices; // 0x10	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
@@ -29204,15 +29955,14 @@ public:
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
-// Size: 0xa0
+// Size: 0x8
 // Has VTable
-// 
-// MPulseInternal_IsCursor
-class CPulseExecCursor
+// Is Abstract
+// Has Trivial Destructor
+class IGapHost_Cursor : public IGapHost_ExecLog
 {
-private:
-	[[maybe_unused]] uint8_t __pad0000[0xa0]; // 0x0
 public:
+	// No schema binary for binding
 };
 
 // Registered binary: client.dll (project 'client')
@@ -29272,9 +30022,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapScalar : public CParticleFunctionOperator
@@ -29282,60 +30031,58 @@ class C_OP_RemapScalar : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "input field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1c0	
+	float m_flInputMin; // 0x1c8	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1c4	
+	float m_flInputMax; // 0x1cc	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1c8	
+	float m_flOutputMin; // 0x1d0	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1cc	
+	float m_flOutputMax; // 0x1d4	
 	// MPropertyFriendlyName "use old code"
-	bool m_bOldCode; // 0x1d0	
+	bool m_bOldCode; // 0x1d8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetPerChildControlPointFromAttribute : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "group ID to affect"
-	int32_t m_nChildGroupID; // 0x1b8	
+	int32_t m_nChildGroupID; // 0x1c0	
 	// MPropertyFriendlyName "control point to set"
-	int32_t m_nFirstControlPoint; // 0x1bc	
+	int32_t m_nFirstControlPoint; // 0x1c4	
 	// MPropertyFriendlyName "# of children to set"
-	int32_t m_nNumControlPoints; // 0x1c0	
+	int32_t m_nNumControlPoints; // 0x1c8	
 	// MPropertyFriendlyName "particle increment amount"
-	int32_t m_nParticleIncrement; // 0x1c4	
+	int32_t m_nParticleIncrement; // 0x1cc	
 	// MPropertyFriendlyName "first particle to copy"
-	int32_t m_nFirstSourcePoint; // 0x1c8	
+	int32_t m_nFirstSourcePoint; // 0x1d0	
 	// MPropertyFriendlyName "set number of children based on particle count"
-	bool m_bNumBasedOnParticleCount; // 0x1cc	
+	bool m_bNumBasedOnParticleCount; // 0x1d4	
 private:
-	[[maybe_unused]] uint8_t __pad01cd[0x3]; // 0x1cd
+	[[maybe_unused]] uint8_t __pad01d5[0x3]; // 0x1d5
 public:
 	// MPropertyFriendlyName "field to read"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nAttributeToRead; // 0x1d0	
+	ParticleAttributeIndex_t m_nAttributeToRead; // 0x1d8	
 	// MPropertyFriendlyName "control point field for scalars"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nCPField; // 0x1d4	
+	int32_t m_nCPField; // 0x1dc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x210
+// Size: 0x218
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapParticleCountToNamedModelMeshGroupScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
@@ -29347,7 +30094,6 @@ public:
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct NmSyncTrackTimeRange_t
@@ -29391,7 +30137,6 @@ public:
 // Alignment: 8
 // Size: 0x260
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Create Rotator"
@@ -29410,7 +30155,7 @@ public:
 	// MPropertyDescription "Radius at which the rotator handle should be displayed."
 	CSmartPropAttributeFloat m_flDisplayRadius; // 0xd8	
 	// MPropertyDescription "Should the rotation be applied to the current transform."
-	CSmartPropAttributeBool m_bApplyToCurrentTrasnform; // 0x118	
+	CSmartPropAttributeBool m_bApplyToCurrentTransform; // 0x118	
 	// MPropertyDescription "Specifies the number of degrees the rotation should snap to. If set to 0, then the rotation snapping will be controlled by the rotation snapping in Hammer."
 	CSmartPropAttributeFloat m_flSnappingIncrement; // 0x158	
 	// MPropertyFriendlyName "Enforce Limits"
@@ -29432,7 +30177,6 @@ public:
 // Registered binary: server.dll (project 'navlib')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MVDataRoot
 // MGetKV3ClassDefaults
@@ -29447,81 +30191,77 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetParentControlPointsToChildCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "group ID to affect"
-	int32_t m_nChildGroupID; // 0x1c0	
+	int32_t m_nChildGroupID; // 0x1c8	
 	// MPropertyFriendlyName "control point to set"
-	int32_t m_nChildControlPoint; // 0x1c4	
+	int32_t m_nChildControlPoint; // 0x1cc	
 	// MPropertyFriendlyName "# of children to set"
-	int32_t m_nNumControlPoints; // 0x1c8	
+	int32_t m_nNumControlPoints; // 0x1d0	
 	// MPropertyFriendlyName "first parent control point to set from"
-	int32_t m_nFirstSourcePoint; // 0x1cc	
+	int32_t m_nFirstSourcePoint; // 0x1d4	
 	// MPropertyFriendlyName "set orientation"
-	bool m_bSetOrientation; // 0x1d0	
+	bool m_bSetOrientation; // 0x1d8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SDFForce : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "force scale"
-	float m_flForceScale; // 0x1c8	
+	float m_flForceScale; // 0x1d0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x988
+// Size: 0x9b8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_VectorFieldSnapshot : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "snapshot control point number"
-	int32_t m_nControlPointNumber; // 0x1b8	
+	int32_t m_nControlPointNumber; // 0x1c0	
 	// MPropertyFriendlyName "extra velocity field to write"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nAttributeToWrite; // 0x1bc	
+	ParticleAttributeIndex_t m_nAttributeToWrite; // 0x1c4	
 	// MPropertyFriendlyName "local space control point number"
-	int32_t m_nLocalSpaceCP; // 0x1c0	
+	int32_t m_nLocalSpaceCP; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "Interpolation"
-	CPerParticleFloatInput m_flInterpolation; // 0x1c8	
+	CPerParticleFloatInput m_flInterpolation; // 0x1d0	
 	// MPropertyFriendlyName "Component Scale"
-	CPerParticleVecInput m_vecScale; // 0x320	
+	CPerParticleVecInput m_vecScale; // 0x330	
 	// MPropertyFriendlyName "Boundary Dampening"
-	float m_flBoundaryDampening; // 0x978	
+	float m_flBoundaryDampening; // 0x9a8	
 	// MPropertyFriendlyName "Set Velocity"
-	bool m_bSetVelocity; // 0x97c	
+	bool m_bSetVelocity; // 0x9ac	
 	// MPropertyFriendlyName "Lock to Surface"
-	bool m_bLockToSurface; // 0x97d	
+	bool m_bLockToSurface; // 0x9ad	
 private:
-	[[maybe_unused]] uint8_t __pad097e[0x2]; // 0x97e
+	[[maybe_unused]] uint8_t __pad09ae[0x2]; // 0x9ae
 public:
 	// MPropertyFriendlyName "Vector Field Grid Spacing Override"
-	float m_flGridSpacing; // 0x980	
+	float m_flGridSpacing; // 0x9b0	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimActivity
@@ -29536,7 +30276,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x130
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmGraphDefinition
@@ -29552,13 +30291,17 @@ public:
 	CUtlVector< int16 > m_virtualParameterNodeIndices; // 0x50	
 	CUtlVector< CNmGraphDefinition::ChildGraphSlot_t > m_childGraphSlots; // 0x68	
 	CUtlVector< CNmGraphDefinition::ExternalGraphSlot_t > m_externalGraphSlots; // 0x80	
+private:
+	[[maybe_unused]] uint8_t __pad0098[0x70]; // 0x98
+public:
+	CUtlVector< CUtlString > m_nodePaths; // 0x108	
+	V_uuid_t m_runtimeVersionID; // 0x120	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSolveIKChainUpdateNode : public CUnaryUpdateNode
@@ -29573,7 +30316,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x90
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct HeroStatsDisplay_t
@@ -29598,7 +30340,6 @@ public:
 // Size: 0x18
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMeshletDescriptor
@@ -29625,9 +30366,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x478
+// Size: 0x490
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ReadFromNeighboringParticle : public CParticleFunctionOperator
@@ -29635,73 +30375,85 @@ class C_OP_ReadFromNeighboringParticle : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "read field"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1c0	
 	// MPropertyFriendlyName "written field"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "particle increment amount"
-	int32_t m_nIncrement; // 0x1c0	
+	int32_t m_nIncrement; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "maximum distance"
-	CPerParticleFloatInput m_DistanceCheck; // 0x1c8	
+	CPerParticleFloatInput m_DistanceCheck; // 0x1d0	
 	// MPropertyFriendlyName "Interpolation"
-	CPerParticleFloatInput m_flInterpolation; // 0x320	
+	CPerParticleFloatInput m_flInterpolation; // 0x330	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_LagCompensation : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "desired velocity CP"
-	int32_t m_nDesiredVelocityCP; // 0x1b8	
+	int32_t m_nDesiredVelocityCP; // 0x1c0	
 	// MPropertyFriendlyName "latency CP"
-	int32_t m_nLatencyCP; // 0x1bc	
+	int32_t m_nLatencyCP; // 0x1c4	
 	// MPropertyFriendlyName "latency CP field"
-	int32_t m_nLatencyCPField; // 0x1c0	
+	int32_t m_nLatencyCPField; // 0x1c8	
 	// MPropertyFriendlyName "desired velocity CP field override(for speed only)"
-	int32_t m_nDesiredVelocityCPField; // 0x1c4	
+	int32_t m_nDesiredVelocityCPField; // 0x1cc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x478
+// Size: 0x490
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_MovementMoveAlongSkinnedCPSnapshot : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1b8	
+	int32_t m_nControlPointNumber; // 0x1c0	
 	// MPropertyFriendlyName "snapshot control point number"
-	int32_t m_nSnapshotControlPointNumber; // 0x1bc	
+	int32_t m_nSnapshotControlPointNumber; // 0x1c4	
 	// MPropertyFriendlyName "set normal"
-	bool m_bSetNormal; // 0x1c0	
+	bool m_bSetNormal; // 0x1c8	
 	// MPropertyFriendlyName "set radius"
-	bool m_bSetRadius; // 0x1c1	
+	bool m_bSetRadius; // 0x1c9	
 private:
-	[[maybe_unused]] uint8_t __pad01c2[0x6]; // 0x1c2
+	[[maybe_unused]] uint8_t __pad01ca[0x6]; // 0x1ca
 public:
 	// MPropertyFriendlyName "Interpolation"
-	CPerParticleFloatInput m_flInterpolation; // 0x1c8	
+	CPerParticleFloatInput m_flInterpolation; // 0x1d0	
 	// MPropertyFriendlyName "Snapshot Index T Value"
-	CPerParticleFloatInput m_flTValue; // 0x320	
+	CPerParticleFloatInput m_flTValue; // 0x330	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmVectorCreateNode::CDefinition : public CNmVectorValueNode::CDefinition
+{
+public:
+	int16_t m_inputVectorValueNodeIdx; // 0x10	
+	int16_t m_inputValueXNodeIdx; // 0x12	
+	int16_t m_inputValueYNodeIdx; // 0x14	
+	int16_t m_inputValueZNodeIdx; // 0x16	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 2
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CNmLayerBlendNode__LayerDefinition_t
@@ -29717,11 +30469,21 @@ public:
 	NmPoseBlendMode_t m_blendMode; // 0xb	
 };
 
+// Registered binary: animationsystem.dll (project 'animgraphlib')
+// Alignment: 8
+// Size: 0x38
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CPairedSequenceComponentUpdater : public CAnimComponentUpdater
+{
+public:
+};
+
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -29737,7 +30499,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FullSellPriceAbilityUpgrades_t
@@ -29751,7 +30512,6 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Filter: Expression"
@@ -29768,7 +30528,6 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Save State"
@@ -29794,27 +30553,25 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetToCP : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1b8	
+	int32_t m_nControlPointNumber; // 0x1c0	
 	// MPropertyFriendlyName "offset"
-	Vector m_vecOffset; // 0x1bc	
+	Vector m_vecOffset; // 0x1c4	
 	// MPropertyFriendlyName "offset in local space"
-	bool m_bOffsetLocal; // 0x1c8	
+	bool m_bOffsetLocal; // 0x1d0	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimSequenceParams
@@ -29828,7 +30585,6 @@ public:
 // Alignment: 8
 // Size: 0xb0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CDemoSettingsComponentUpdater : public CAnimComponentUpdater
@@ -29841,7 +30597,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "TestDomain"
@@ -29857,7 +30612,6 @@ public:
 // Alignment: 8
 // Size: 0x28
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataRoot
@@ -29873,9 +30627,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_NormalizeVector : public CParticleFunctionOperator
@@ -29883,50 +30636,48 @@ class C_OP_NormalizeVector : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "scale factor"
-	float m_flScale; // 0x1bc	
+	float m_flScale; // 0x1c4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x340
+// Size: 0x350
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointOrientation : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "set orientation in world space"
-	bool m_bUseWorldLocation; // 0x1c0	
+	bool m_bUseWorldLocation; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c1[0x1]; // 0x1c1
+	[[maybe_unused]] uint8_t __pad01c9[0x1]; // 0x1c9
 public:
 	// MPropertyFriendlyName "randomize"
-	bool m_bRandomize; // 0x1c2	
+	bool m_bRandomize; // 0x1ca	
 	// MPropertyFriendlyName "only set orientation once"
-	bool m_bSetOnce; // 0x1c3	
+	bool m_bSetOnce; // 0x1cb	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nCP; // 0x1c4	
+	int32_t m_nCP; // 0x1cc	
 	// MPropertyFriendlyName "control point to offset orientation from"
-	int32_t m_nHeadLocation; // 0x1c8	
+	int32_t m_nHeadLocation; // 0x1d0	
 	// MPropertyFriendlyName "pitch yaw roll"
-	QAngle m_vecRotation; // 0x1cc	
+	QAngle m_vecRotation; // 0x1d4	
 	// MPropertyFriendlyName "pitch yaw roll max"
-	QAngle m_vecRotationB; // 0x1d8	
+	QAngle m_vecRotationB; // 0x1e0	
 private:
-	[[maybe_unused]] uint8_t __pad01e4[0x4]; // 0x1e4
+	[[maybe_unused]] uint8_t __pad01ec[0x4]; // 0x1ec
 public:
 	// MPropertyFriendlyName "interpolation"
-	CParticleCollectionFloatInput m_flInterpolation; // 0x1e8	
+	CParticleCollectionFloatInput m_flInterpolation; // 0x1f0	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ModifierTrackedGraphParameter_t
@@ -29942,7 +30693,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "econitemÄiù°¯"
+// MResourceTypeForInfoType "econitem¿YmΩ˚"
 class InfoForResourceTypeCCSGOEconItem
 {
 private:
@@ -29952,83 +30703,80 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x278
+// Size: 0x280
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InitialRepulsionVelocity : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "collision group"
-	char m_CollisionGroupName[128]; // 0x1c0	
+	char m_CollisionGroupName[128]; // 0x1c8	
 	// MPropertyFriendlyName "Trace Set"
-	ParticleTraceSet_t m_nTraceSet; // 0x240	
+	ParticleTraceSet_t m_nTraceSet; // 0x248	
 	// MPropertyFriendlyName "minimum velocity"
 	// MVectorIsCoordinate
-	Vector m_vecOutputMin; // 0x244	
+	Vector m_vecOutputMin; // 0x24c	
 	// MPropertyFriendlyName "maximum velocity"
 	// MVectorIsCoordinate
-	Vector m_vecOutputMax; // 0x250	
+	Vector m_vecOutputMax; // 0x258	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x25c	
+	int32_t m_nControlPointNumber; // 0x264	
 	// MPropertyFriendlyName "per particle world collision tests"
-	bool m_bPerParticle; // 0x260	
+	bool m_bPerParticle; // 0x268	
 	// MPropertyFriendlyName "offset instead of accelerate"
-	bool m_bTranslate; // 0x261	
+	bool m_bTranslate; // 0x269	
 	// MPropertyFriendlyName "offset proportional to radius 0/1"
-	bool m_bProportional; // 0x262	
+	bool m_bProportional; // 0x26a	
 private:
-	[[maybe_unused]] uint8_t __pad0263[0x1]; // 0x263
+	[[maybe_unused]] uint8_t __pad026b[0x1]; // 0x26b
 public:
 	// MPropertyFriendlyName "trace length"
-	float m_flTraceLength; // 0x264	
+	float m_flTraceLength; // 0x26c	
 	// MPropertyFriendlyName "use radius for per particle trace length"
-	bool m_bPerParticleTR; // 0x268	
+	bool m_bPerParticleTR; // 0x270	
 	// MPropertyFriendlyName "inherit from parent"
-	bool m_bInherit; // 0x269	
+	bool m_bInherit; // 0x271	
 private:
-	[[maybe_unused]] uint8_t __pad026a[0x2]; // 0x26a
+	[[maybe_unused]] uint8_t __pad0272[0x2]; // 0x272
 public:
 	// MPropertyFriendlyName "control points to broadcast to children (n + 1)"
-	int32_t m_nChildCP; // 0x26c	
+	int32_t m_nChildCP; // 0x274	
 	// MPropertyFriendlyName "child group ID to affect"
-	int32_t m_nChildGroupID; // 0x270	
+	int32_t m_nChildGroupID; // 0x278	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xfd0
+// Size: 0x1020
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetFloatAttributeToVectorExpression : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "expression"
-	VectorFloatExpressionType_t m_nExpression; // 0x1b8	
+	VectorFloatExpressionType_t m_nExpression; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "input 1"
-	CPerParticleVecInput m_vInput1; // 0x1c0	
+	CPerParticleVecInput m_vInput1; // 0x1c8	
 	// MPropertyFriendlyName "input 2"
-	CPerParticleVecInput m_vInput2; // 0x818	
+	CPerParticleVecInput m_vInput2; // 0x840	
 	// MPropertyFriendlyName "output"
-	CParticleRemapFloatInput m_flOutputRemap; // 0xe70	
+	CParticleRemapFloatInput m_flOutputRemap; // 0xeb8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nOutputField; // 0xfc8	
+	ParticleAttributeIndex_t m_nOutputField; // 0x1018	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0xfcc	
+	ParticleSetMethod_t m_nSetMethod; // 0x101c	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Task Handshake Tag"
@@ -30047,11 +30795,22 @@ public:
 	// No schema binary for binding
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmCurrentSyncEventIDNode::CDefinition : public CNmIDValueNode::CDefinition
+{
+public:
+	int16_t m_nSourceStateNodeIdx; // 0x10	
+};
+
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x78
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -30093,7 +30852,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Trace Miss Behavior"
@@ -30109,7 +30867,6 @@ public:
 // Alignment: 16
 // Size: 0x40
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeBuildTaperedCapsuleRigid_t : public FeTaperedCapsuleRigid_t
@@ -30121,9 +30878,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapControlPointDirectionToVector : public CParticleFunctionOperator
@@ -30131,34 +30887,32 @@ class C_OP_RemapControlPointDirectionToVector : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "scale factor"
-	float m_flScale; // 0x1bc	
+	float m_flScale; // 0x1c4	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x320
+// Size: 0x330
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_QuantizeFloat : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "interval to snap to"
-	CPerParticleFloatInput m_InputValue; // 0x1c0	
+	CPerParticleFloatInput m_InputValue; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nOutputField; // 0x318	
+	ParticleAttributeIndex_t m_nOutputField; // 0x328	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x48
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CStateUpdateData
@@ -30184,7 +30938,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0xc0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPhysSurfaceProperties
@@ -30244,7 +30997,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x80
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMotionSearchNode
@@ -30264,7 +31016,6 @@ public:
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -30288,7 +31039,6 @@ public:
 // Size: 0x28
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixVocoderDesc_t
@@ -30310,7 +31060,6 @@ public:
 // Alignment: 8
 // Size: 0x1a0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimScriptManager
@@ -30326,7 +31075,6 @@ public:
 // Size: 0x70
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimationGraphVisualizerLine : public CAnimationGraphVisualizerPrimitiveBase
@@ -30341,7 +31089,6 @@ public:
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootTrajectory
@@ -30372,25 +31119,20 @@ public:
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
-// Size: 0xb8
+// Size: 0x8
 // Has VTable
-// 
-// MPulseLibraryBindings
-// MPulseInternal_IsCursor
-class CPulseTurtleGraphicsCursor : public CPulseExecCursor
+// Is Abstract
+// Has Trivial Destructor
+class IGapHost_YieldingCursor : public IGapHost_Cursor
 {
 public:
-	Color m_Color; // 0xa0	
-	Vector2D m_vPos; // 0xa4	
-	float m_flHeadingDeg; // 0xac	
-	bool m_bPenUp; // 0xb0	
+	// No schema binary for binding
 };
 
 // Registered binary: soundsystem.dll (project 'soundsystem_lowlevel')
 // Alignment: 4
 // Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixModDelayDesc_t
@@ -30412,26 +31154,24 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetCPtoVector : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "input control point number"
-	int32_t m_nCPInput; // 0x1b8	
+	int32_t m_nCPInput; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x9d8
+// Size: 0xa08
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_MovementRotateParticleAroundAxis : public CParticleFunctionOperator
@@ -30439,74 +31179,72 @@ class C_OP_MovementRotateParticleAroundAxis : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "rotation axis"
 	// MVectorIsCoordinate
-	CParticleCollectionVecInput m_vecRotAxis; // 0x1b8	
+	CParticleCollectionVecInput m_vecRotAxis; // 0x1c0	
 	// MPropertyFriendlyName "rotation rate"
-	CParticleCollectionFloatInput m_flRotRate; // 0x810	
+	CParticleCollectionFloatInput m_flRotRate; // 0x838	
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0x968	
+	CParticleTransformInput m_TransformInput; // 0x998	
 	// MPropertyFriendlyName "use local space"
-	bool m_bLocalSpace; // 0x9d0	
+	bool m_bLocalSpace; // 0xa00	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1288
+// Size: 0x12e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreateOnModel : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "input model"
-	CParticleModelInput m_modelInput; // 0x1c0	
+	CParticleModelInput m_modelInput; // 0x1c8	
 	// MPropertyFriendlyName "input transform for transforming local space bias vector"
 	// MParticleInputOptional
-	CParticleTransformInput m_transformInput; // 0x220	
+	CParticleTransformInput m_transformInput; // 0x228	
 	// MPropertyFriendlyName "force to be inside model"
-	int32_t m_nForceInModel; // 0x288	
+	int32_t m_nForceInModel; // 0x290	
 	// MPropertyFriendlyName "bias box distribution by volume"
-	bool m_bScaleToVolume; // 0x28c	
+	bool m_bScaleToVolume; // 0x294	
 	// MPropertyFriendlyName "even distribution within boxes"
-	bool m_bEvenDistribution; // 0x28d	
+	bool m_bEvenDistribution; // 0x295	
 private:
-	[[maybe_unused]] uint8_t __pad028e[0x2]; // 0x28e
+	[[maybe_unused]] uint8_t __pad0296[0x2]; // 0x296
 public:
 	// MPropertyFriendlyName "desired hitbox"
-	CParticleCollectionFloatInput m_nDesiredHitbox; // 0x290	
+	CParticleCollectionFloatInput m_nDesiredHitbox; // 0x298	
 	// MPropertyFriendlyName "Control Point Providing Hitbox index"
-	int32_t m_nHitboxValueFromControlPointIndex; // 0x3e8	
+	int32_t m_nHitboxValueFromControlPointIndex; // 0x3f8	
 private:
-	[[maybe_unused]] uint8_t __pad03ec[0x4]; // 0x3ec
+	[[maybe_unused]] uint8_t __pad03fc[0x4]; // 0x3fc
 public:
 	// MPropertyFriendlyName "hitbox scale"
-	CParticleCollectionVecInput m_vecHitBoxScale; // 0x3f0	
+	CParticleCollectionVecInput m_vecHitBoxScale; // 0x400	
 	// MPropertyFriendlyName "inherited velocity scale"
-	float m_flBoneVelocity; // 0xa48	
+	float m_flBoneVelocity; // 0xa78	
 	// MPropertyFriendlyName "maximum inherited velocity"
-	float m_flMaxBoneVelocity; // 0xa4c	
+	float m_flMaxBoneVelocity; // 0xa7c	
 	// MPropertyFriendlyName "direction bias"
 	// MVectorIsCoordinate
-	CParticleCollectionVecInput m_vecDirectionBias; // 0xa50	
+	CParticleCollectionVecInput m_vecDirectionBias; // 0xa80	
 	// MPropertyFriendlyName "hitbox set"
-	char m_HitboxSetName[128]; // 0x10a8	
+	char m_HitboxSetName[128]; // 0x10f8	
 	// MPropertyFriendlyName "bias in local space"
-	bool m_bLocalCoords; // 0x1128	
+	bool m_bLocalCoords; // 0x1178	
 	// MPropertyFriendlyName "use bones instead of hitboxes"
-	bool m_bUseBones; // 0x1129	
+	bool m_bUseBones; // 0x1179	
 	// MPropertyFriendlyName "Use renderable meshes instead of hitboxes"
-	bool m_bUseMesh; // 0x112a	
+	bool m_bUseMesh; // 0x117a	
 private:
-	[[maybe_unused]] uint8_t __pad112b[0x5]; // 0x112b
+	[[maybe_unused]] uint8_t __pad117b[0x5]; // 0x117b
 public:
 	// MPropertyFriendlyName "hitbox shell thickness"
-	CParticleCollectionFloatInput m_flShellSize; // 0x1130	
+	CParticleCollectionFloatInput m_flShellSize; // 0x1180	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 16
 // Size: 0x70
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CHitBox
@@ -30546,7 +31284,6 @@ public:
 // Alignment: 8
 // Size: 0x148
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataComponentValidGrandParents
@@ -30572,7 +31309,6 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
 // Size: 0x68
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAudioMorphData
@@ -30590,20 +31326,19 @@ public:
 // Alignment: 16
 // Size: 0x200
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RampScalarSplineSimple : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "ramp rate"
-	float m_Rate; // 0x1b8	
+	float m_Rate; // 0x1c0	
 	// MPropertyFriendlyName "start time"
-	float m_flStartTime; // 0x1bc	
+	float m_flStartTime; // 0x1c4	
 	// MPropertyFriendlyName "end time"
-	float m_flEndTime; // 0x1c0	
+	float m_flEndTime; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x2c]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x24]; // 0x1cc
 public:
 	// MPropertyFriendlyName "ramp field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
@@ -30614,32 +31349,30 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x328
+// Size: 0x338
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointPositionToRandomActiveCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nCP1; // 0x1c0	
+	int32_t m_nCP1; // 0x1c8	
 	// MPropertyFriendlyName "min active CP"
-	int32_t m_nHeadLocationMin; // 0x1c4	
+	int32_t m_nHeadLocationMin; // 0x1cc	
 	// MPropertyFriendlyName "max active CP"
-	int32_t m_nHeadLocationMax; // 0x1c8	
+	int32_t m_nHeadLocationMax; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
+	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
 public:
 	// MPropertyFriendlyName "reset rate"
-	CParticleCollectionFloatInput m_flResetRate; // 0x1d0	
+	CParticleCollectionFloatInput m_flResetRate; // 0x1d8	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqIKLock
@@ -30656,7 +31389,6 @@ public:
 // Size: 0xa0
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CitadelCameraFOVOperationDef_t : public CitadelCameraOperationDef_t
@@ -30671,20 +31403,18 @@ public:
 // Size: 0xa8
 // Has VTable
 // 
-// MPulseLibraryBindings
 // MPulseInternal_IsCursor
-class CTestDomainDerived_Cursor : public CPulseExecCursor
+class CPulseExecCursor : public IGapHost_YieldingCursor
 {
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x98]; // 0x8
 public:
-	int32_t m_nCursorValueA; // 0xa0	
-	int32_t m_nCursorValueB; // 0xa4	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -30705,7 +31435,6 @@ public:
 // Alignment: 4
 // Size: 0x4c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeQuad_t
@@ -30714,6 +31443,40 @@ public:
 	uint16_t nNode[4]; // 0x0	
 	float flSlack; // 0x8	
 	Vector4D vShape[4]; // 0xc	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x30
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmRootMotionOverrideNode::CDefinition : public CNmPassthroughNode::CDefinition
+{
+public:
+	int16_t m_desiredMovingVelocityNodeIdx; // 0x18	
+	int16_t m_desiredFacingDirectionNodeIdx; // 0x1a	
+	int16_t m_linearVelocityLimitNodeIdx; // 0x1c	
+	int16_t m_angularVelocityLimitNodeIdx; // 0x1e	
+	float m_maxLinearVelocity; // 0x20	
+	float m_maxAngularVelocityRadians; // 0x24	
+	CNmBitFlags m_overrideFlags; // 0x28	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xc0
+// Has VTable
+// 
+// MPulseLibraryBindings
+// MPulseInternal_IsCursor
+class CPulseTurtleGraphicsCursor : public CPulseExecCursor
+{
+public:
+	Color m_Color; // 0xa8	
+	Vector2D m_vPos; // 0xac	
+	float m_flHeadingDeg; // 0xb4	
+	bool m_bPenUp; // 0xb8	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
@@ -30735,7 +31498,6 @@ public:
 // Alignment: 8
 // Size: 0x150
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Reset Rotation"
@@ -30758,10 +31520,10 @@ public:
 // Alignment: 8
 // Size: 0x108
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Model"
+// MPropertyDescription "Model Asset Variable"
 class CSmartPropVariable_Model : public CSmartPropVariable
 {
 public:
@@ -30786,7 +31548,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSosGroupMatchPattern : public CSosGroupBranchPattern
@@ -30820,27 +31581,25 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_VelocityFromNormal : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "random speed min"
-	float m_fSpeedMin; // 0x1c0	
+	float m_fSpeedMin; // 0x1c8	
 	// MPropertyFriendlyName "random speed max"
-	float m_fSpeedMax; // 0x1c4	
+	float m_fSpeedMax; // 0x1cc	
 	// MPropertyFriendlyName "ignore delta time"
-	bool m_bIgnoreDt; // 0x1c8	
+	bool m_bIgnoreDt; // 0x1d0	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 4
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSkillDamage
@@ -30858,7 +31617,6 @@ public:
 // Alignment: 8
 // Size: 0x20
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct BreakablePowerupDropDefinition_t
@@ -30875,7 +31633,6 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x88
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulse_InvokeBinding
@@ -30890,105 +31647,112 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointsToParticle : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "group ID to affect"
-	int32_t m_nChildGroupID; // 0x1b8	
+	int32_t m_nChildGroupID; // 0x1c0	
 	// MPropertyFriendlyName "first control point to set"
-	int32_t m_nFirstControlPoint; // 0x1bc	
+	int32_t m_nFirstControlPoint; // 0x1c4	
 	// MPropertyFriendlyName "# of control points to set"
-	int32_t m_nNumControlPoints; // 0x1c0	
+	int32_t m_nNumControlPoints; // 0x1c8	
 	// MPropertyFriendlyName "first particle to copy"
-	int32_t m_nFirstSourcePoint; // 0x1c4	
+	int32_t m_nFirstSourcePoint; // 0x1cc	
 	// MPropertyFriendlyName "set orientation"
-	bool m_bSetOrientation; // 0x1c8	
+	bool m_bSetOrientation; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01c9[0x3]; // 0x1c9
+	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
 public:
 	// MPropertyFriendlyName "orientation style"
-	ParticleOrientationSetMode_t m_nOrientationMode; // 0x1cc	
+	ParticleOrientationSetMode_t m_nOrientationMode; // 0x1d4	
 	// MPropertyFriendlyName "set parent"
-	ParticleParentSetMode_t m_nSetParent; // 0x1d0	
+	ParticleParentSetMode_t m_nSetParent; // 0x1d8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x230
+// Size: 0x238
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapTransformOrientationToRotations : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0x1b8	
+	CParticleTransformInput m_TransformInput; // 0x1c0	
 	// MPropertyFriendlyName "offset pitch/yaw/roll"
-	Vector m_vecRotation; // 0x220	
+	Vector m_vecRotation; // 0x228	
 	// MPropertyFriendlyName "Use Quaternians Internally"
-	bool m_bUseQuat; // 0x22c	
+	bool m_bUseQuat; // 0x234	
 	// MPropertyFriendlyName "Write normal instead of rotation"
-	bool m_bWriteNormal; // 0x22d	
+	bool m_bWriteNormal; // 0x235	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1040
+// Size: 0x1098
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_PinParticleToCP : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1b8	
+	int32_t m_nControlPointNumber; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "offset"
-	CParticleCollectionVecInput m_vecOffset; // 0x1c0	
+	CParticleCollectionVecInput m_vecOffset; // 0x1c8	
 	// MPropertyFriendlyName "offset in local space"
-	bool m_bOffsetLocal; // 0x818	
+	bool m_bOffsetLocal; // 0x840	
 private:
-	[[maybe_unused]] uint8_t __pad0819[0x3]; // 0x819
+	[[maybe_unused]] uint8_t __pad0841[0x3]; // 0x841
 public:
 	// MPropertyFriendlyName "particle to use"
-	ParticleSelection_t m_nParticleSelection; // 0x81c	
+	ParticleSelection_t m_nParticleSelection; // 0x844	
 	// MPropertyFriendlyName "particle number/offset"
-	CParticleCollectionFloatInput m_nParticleNumber; // 0x820	
+	CParticleCollectionFloatInput m_nParticleNumber; // 0x848	
 	// MPropertyFriendlyName "pin break type"
-	ParticlePinDistance_t m_nPinBreakType; // 0x978	
+	ParticlePinDistance_t m_nPinBreakType; // 0x9a8	
 private:
-	[[maybe_unused]] uint8_t __pad097c[0x4]; // 0x97c
+	[[maybe_unused]] uint8_t __pad09ac[0x4]; // 0x9ac
 public:
 	// MPropertyFriendlyName "break length %"
-	CParticleCollectionFloatInput m_flBreakDistance; // 0x980	
+	CParticleCollectionFloatInput m_flBreakDistance; // 0x9b0	
 	// MPropertyFriendlyName "break speed"
-	CParticleCollectionFloatInput m_flBreakSpeed; // 0xad8	
+	CParticleCollectionFloatInput m_flBreakSpeed; // 0xb10	
 	// MPropertyFriendlyName "break age"
-	CParticleCollectionFloatInput m_flAge; // 0xc30	
+	CParticleCollectionFloatInput m_flAge; // 0xc70	
 	// MPropertyFriendlyName "break comparison control point 1"
-	int32_t m_nBreakControlPointNumber; // 0xd88	
+	int32_t m_nBreakControlPointNumber; // 0xdd0	
 	// MPropertyFriendlyName "break comparison control point 2"
-	int32_t m_nBreakControlPointNumber2; // 0xd8c	
+	int32_t m_nBreakControlPointNumber2; // 0xdd4	
 	// MPropertyFriendlyName "break value"
-	CParticleCollectionFloatInput m_flBreakValue; // 0xd90	
+	CParticleCollectionFloatInput m_flBreakValue; // 0xdd8	
 	// MPropertyFriendlyName "Interpolation"
-	CPerParticleFloatInput m_flInterpolation; // 0xee8	
+	CPerParticleFloatInput m_flInterpolation; // 0xf38	
+};
+
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
+// Size: 0xa0
+// Has VTable
+// Is Abstract
+class CSmartPropElement_Deformer : public CSmartPropElement_Group
+{
+public:
+	// No schema binary for binding
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Rotate"
@@ -31016,7 +31780,6 @@ public:
 // Registered binary: scenesystem.dll (project 'scenesystem')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSSDSEndFrameViewInfo
@@ -31028,23 +31791,21 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_NormalLock : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1b8	
+	int32_t m_nControlPointNumber; // 0x1c0	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x10
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmExternalGraphNode::CDefinition : public CNmPoseNode::CDefinition
@@ -31055,7 +31816,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x48
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmGraphDataSet
@@ -31070,7 +31830,6 @@ public:
 // Alignment: 8
 // Size: 0xa0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMoverUpdateNode : public CUnaryUpdateNode
@@ -31095,6 +31854,26 @@ public:
 	bool m_bLimitOnly; // 0x98	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x40
+// Has VTable
+class CNmCachedPoseWriteTask : public CNmTask
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0xc0
+// Has VTable
+class CNmModelSpaceBlendTask : public CNmBlendTaskBase
+{
+public:
+	// No schema binary for binding
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x40
@@ -31113,7 +31892,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -31143,85 +31921,81 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderTonemapController : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "tonemap level scale"
-	float m_flTonemapLevel; // 0x208	
+	float m_flTonemapLevel; // 0x210	
 	// MPropertyFriendlyName "tonemap weight scale"
-	float m_flTonemapWeight; // 0x20c	
+	float m_flTonemapWeight; // 0x214	
 	// MPropertyFriendlyName "tonemap level"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nTonemapLevelField; // 0x210	
+	ParticleAttributeIndex_t m_nTonemapLevelField; // 0x218	
 	// MPropertyFriendlyName "tonemap weight"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nTonemapWeightField; // 0x214	
+	ParticleAttributeIndex_t m_nTonemapWeightField; // 0x21c	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x208
+// Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_TurbulenceForce : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "noise scale 0"
-	float m_flNoiseCoordScale0; // 0x1c8	
+	float m_flNoiseCoordScale0; // 0x1d0	
 	// MPropertyFriendlyName "noise scale 1"
-	float m_flNoiseCoordScale1; // 0x1cc	
+	float m_flNoiseCoordScale1; // 0x1d4	
 	// MPropertyFriendlyName "noise scale 2"
-	float m_flNoiseCoordScale2; // 0x1d0	
+	float m_flNoiseCoordScale2; // 0x1d8	
 	// MPropertyFriendlyName "noise scale 3"
-	float m_flNoiseCoordScale3; // 0x1d4	
+	float m_flNoiseCoordScale3; // 0x1dc	
 	// MPropertyFriendlyName "noise amount 0"
 	// MVectorIsCoordinate
-	Vector m_vecNoiseAmount0; // 0x1d8	
+	Vector m_vecNoiseAmount0; // 0x1e0	
 	// MPropertyFriendlyName "noise amount 1"
 	// MVectorIsCoordinate
-	Vector m_vecNoiseAmount1; // 0x1e4	
+	Vector m_vecNoiseAmount1; // 0x1ec	
 	// MPropertyFriendlyName "noise amount 2"
 	// MVectorIsCoordinate
-	Vector m_vecNoiseAmount2; // 0x1f0	
+	Vector m_vecNoiseAmount2; // 0x1f8	
 	// MPropertyFriendlyName "noise amount 3"
 	// MVectorIsCoordinate
-	Vector m_vecNoiseAmount3; // 0x1fc	
+	Vector m_vecNoiseAmount3; // 0x204	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x328
+// Size: 0x338
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetGravityToCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "control point to sample gravity"
-	int32_t m_nCPInput; // 0x1c0	
+	int32_t m_nCPInput; // 0x1c8	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nCPOutput; // 0x1c4	
+	int32_t m_nCPOutput; // 0x1cc	
 	// MPropertyFriendlyName "gravity scale"
-	CParticleCollectionFloatInput m_flScale; // 0x1c8	
+	CParticleCollectionFloatInput m_flScale; // 0x1d0	
 	// MPropertyFriendlyName "set orientation"
-	bool m_bSetOrientation; // 0x320	
+	bool m_bSetOrientation; // 0x330	
 	// MPropertyFriendlyName "set gravity orientation to Z Down (instead of X)"
 	// MPropertySuppressExpr "!m_bSetOrientation"
-	bool m_bSetZDown; // 0x321	
+	bool m_bSetZDown; // 0x331	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x48
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyArrayElementNameKey "m_strContext"
@@ -31265,7 +32039,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0xf8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnHull_t
@@ -31298,7 +32071,6 @@ public:
 // Size: 0x8
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class IParticleSystemDefinition
@@ -31310,22 +32082,20 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x210
+// Size: 0x218
 // Has VTable
-// Construct allowed
 // 
 // MObsoleteParticleFunction
 // MGetKV3ClassDefaults
 class C_OP_RenderPoints : public CParticleFunctionRenderer
 {
 public:
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0x208	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0x210	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x100
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataRoot
@@ -31349,7 +32119,6 @@ public:
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -31375,56 +32144,53 @@ public:
 	EngineLoopState_t m_LoopState; // 0x0	
 	float m_flRealTime; // 0x28	
 	float m_flFrameTime; // 0x2c	
-	double m_flWhenScheduleSendTickPacket; // 0x30	
+	bool m_bScheduleSendTickPacket; // 0x30	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x880
+// Size: 0x8b0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_MoveBetweenPoints : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "minimum speed"
-	CPerParticleFloatInput m_flSpeedMin; // 0x1c0	
+	CPerParticleFloatInput m_flSpeedMin; // 0x1c8	
 	// MPropertyFriendlyName "maximum speed"
-	CPerParticleFloatInput m_flSpeedMax; // 0x318	
+	CPerParticleFloatInput m_flSpeedMax; // 0x328	
 	// MPropertyFriendlyName "end spread"
-	CPerParticleFloatInput m_flEndSpread; // 0x470	
+	CPerParticleFloatInput m_flEndSpread; // 0x488	
 	// MPropertyFriendlyName "start offset"
-	CPerParticleFloatInput m_flStartOffset; // 0x5c8	
+	CPerParticleFloatInput m_flStartOffset; // 0x5e8	
 	// MPropertyFriendlyName "end offset"
-	CPerParticleFloatInput m_flEndOffset; // 0x720	
+	CPerParticleFloatInput m_flEndOffset; // 0x748	
 	// MPropertyFriendlyName "end control point"
-	int32_t m_nEndControlPointNumber; // 0x878	
+	int32_t m_nEndControlPointNumber; // 0x8a8	
 	// MPropertyFriendlyName "bias lifetime by trail length"
-	bool m_bTrailBias; // 0x87c	
+	bool m_bTrailBias; // 0x8ac	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x468
+// Size: 0x480
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_CollideWithSelf : public CParticleFunctionConstraint
 {
 public:
 	// MPropertyFriendlyName "particle radius scale"
-	CPerParticleFloatInput m_flRadiusScale; // 0x1b8	
+	CPerParticleFloatInput m_flRadiusScale; // 0x1c0	
 	// MPropertyFriendlyName "minimum speed for check"
-	CPerParticleFloatInput m_flMinimumSpeed; // 0x310	
+	CPerParticleFloatInput m_flMinimumSpeed; // 0x320	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CRagdollComponentUpdater : public CAnimComponentUpdater
@@ -31444,7 +32210,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMotionNodeBlend1D : public CMotionNode
@@ -31456,12 +32221,12 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x90
+// Size: 0x98
 class C_CommandContext
 {
 public:
 	bool needsprocessing; // 0x0	
-	int32_t command_number; // 0x88	
+	int32_t command_number; // 0x90	
 };
 
 // Registered binary: server.dll (project 'server')
@@ -31477,82 +32242,78 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_SetRigidAttachment : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "attribute to read from"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1c4	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1cc	
 	// MPropertyFriendlyName "attribute to cache to"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d0	
 	// MPropertyFriendlyName "local space"
-	bool m_bLocalSpace; // 0x1cc	
+	bool m_bLocalSpace; // 0x1d4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DensityForce : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "Radius scale for particle influence"
-	float m_flRadiusScale; // 0x1c8	
+	float m_flRadiusScale; // 0x1d0	
 	// MPropertyFriendlyName "Scale of force"
-	float m_flForceScale; // 0x1cc	
+	float m_flForceScale; // 0x1d4	
 	// MPropertyFriendlyName "Target density"
-	float m_flTargetDensity; // 0x1d0	
+	float m_flTargetDensity; // 0x1d8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1de0
+// Size: 0x1e78
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_CurlNoiseForce : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "noise type"
-	ParticleDirectionNoiseType_t m_nNoiseType; // 0x1c8	
+	ParticleDirectionNoiseType_t m_nNoiseType; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
+	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
 public:
 	// MPropertyFriendlyName "noise frequency"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_vecNoiseFreq; // 0x1d0	
+	CPerParticleVecInput m_vecNoiseFreq; // 0x1d8	
 	// MPropertyFriendlyName "noise amplitude"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_vecNoiseScale; // 0x828	
+	CPerParticleVecInput m_vecNoiseScale; // 0x850	
 	// MPropertyFriendlyName "offset"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_vecOffset; // 0xe80	
+	CPerParticleVecInput m_vecOffset; // 0xec8	
 	// MPropertyFriendlyName "offset rate"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_vecOffsetRate; // 0x14d8	
+	CPerParticleVecInput m_vecOffsetRate; // 0x1540	
 	// MPropertyFriendlyName "worley seed"
-	CPerParticleFloatInput m_flWorleySeed; // 0x1b30	
+	CPerParticleFloatInput m_flWorleySeed; // 0x1bb8	
 	// MPropertyFriendlyName "worley jitter"
-	CPerParticleFloatInput m_flWorleyJitter; // 0x1c88	
+	CPerParticleFloatInput m_flWorleyJitter; // 0x1d18	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x10
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmControlParameterVectorNode::CDefinition : public CNmVectorValueNode::CDefinition
@@ -31564,7 +32325,6 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPathHelperUpdateNode : public CUnaryUpdateNode
@@ -31574,10 +32334,19 @@ public:
 	float m_flStoppingSpeedScale; // 0x6c	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0xc0
+// Has VTable
+class CNmOverlayBlendTask : public CNmBlendTaskBase
+{
+public:
+	// No schema binary for binding
+};
+
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqPoseParamDesc
@@ -31605,7 +32374,6 @@ public:
 // Size: 0x10
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixPitchShiftDesc_t
@@ -31620,7 +32388,6 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
 // Size: 0xa0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAudioSentence
@@ -31640,9 +32407,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1f0
+// Size: 0x1f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapDistanceToLineSegmentToVector : public C_OP_RemapDistanceToLineSegmentBase
@@ -31650,18 +32416,17 @@ class C_OP_RemapDistanceToLineSegmentToVector : public C_OP_RemapDistanceToLineS
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d8	
 	// MPropertyFriendlyName "output value at min distance"
-	Vector m_vMinOutputValue; // 0x1d4	
+	Vector m_vMinOutputValue; // 0x1dc	
 	// MPropertyFriendlyName "output value at max distance"
-	Vector m_vMaxOutputValue; // 0x1e0	
+	Vector m_vMaxOutputValue; // 0x1e8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x728
+// Size: 0x750
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapParticleCountToScalar : public CParticleFunctionOperator
@@ -31669,32 +32434,31 @@ class C_OP_RemapParticleCountToScalar : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "input minimum"
-	CParticleCollectionFloatInput m_nInputMin; // 0x1c0	
+	CParticleCollectionFloatInput m_nInputMin; // 0x1c8	
 	// MPropertyFriendlyName "input maximum"
-	CParticleCollectionFloatInput m_nInputMax; // 0x318	
+	CParticleCollectionFloatInput m_nInputMax; // 0x328	
 	// MPropertyFriendlyName "output minimum"
-	CParticleCollectionFloatInput m_flOutputMin; // 0x470	
+	CParticleCollectionFloatInput m_flOutputMin; // 0x488	
 	// MPropertyFriendlyName "output maximum"
-	CParticleCollectionFloatInput m_flOutputMax; // 0x5c8	
+	CParticleCollectionFloatInput m_flOutputMax; // 0x5e8	
 	// MPropertyFriendlyName
-	bool m_bActiveRange; // 0x720	
+	bool m_bActiveRange; // 0x748	
 private:
-	[[maybe_unused]] uint8_t __pad0721[0x3]; // 0x721
+	[[maybe_unused]] uint8_t __pad0749[0x3]; // 0x749
 public:
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x724	
+	ParticleSetMethod_t m_nSetMethod; // 0x74c	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
-// Size: 0x18
+// Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CRenderBufferBinding
@@ -31704,11 +32468,26 @@ public:
 	uint32_t m_nBindOffsetBytes; // 0x10	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmCachedIDNode::CDefinition : public CNmIDValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	NmCachedValueMode_t m_mode; // 0x14	
+};
+
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Particle Tag"
@@ -31786,7 +32565,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CStaticPoseCacheBuilder : public CStaticPoseCache
@@ -31797,7 +32575,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 16
 // Size: 0x50
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmRootMotionData
@@ -31817,7 +32594,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "TestDomain"
@@ -31854,7 +32630,6 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x78
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulseGraphExecutionHistory
@@ -31869,9 +32644,8 @@ public:
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0x118
+// Size: 0xe8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Additive Synth Container"
@@ -31879,74 +32653,71 @@ public:
 class CVoiceContainerStaticAdditiveSynth : public CVoiceContainerBase
 {
 public:
-	CUtlVector< CVoiceContainerStaticAdditiveSynth::CTone > m_tones; // 0xe8	
+	CUtlVector< CVoiceContainerStaticAdditiveSynth::CTone > m_tones; // 0xb8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_AlphaDecay : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "minimum alpha"
-	float m_flMinAlpha; // 0x1b8	
+	float m_flMinAlpha; // 0x1c0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1de8
+// Size: 0x1e80
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ExternalWindForce : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "sample position"
-	CPerParticleVecInput m_vecSamplePosition; // 0x1c8	
+	CPerParticleVecInput m_vecSamplePosition; // 0x1d0	
 	// MPropertyFriendlyName "force scale"
-	CPerParticleVecInput m_vecScale; // 0x820	
+	CPerParticleVecInput m_vecScale; // 0x848	
 	// MPropertyFriendlyName "sample wind"
-	bool m_bSampleWind; // 0xe78	
+	bool m_bSampleWind; // 0xec0	
 	// MPropertyFriendlyName "sample water current"
-	bool m_bSampleWater; // 0xe79	
+	bool m_bSampleWater; // 0xec1	
 	// MPropertyFriendlyName "dampen gravity/buoyancy near water plane"
 	// MPropertySuppressExpr "!m_bSampleWater"
-	bool m_bDampenNearWaterPlane; // 0xe7a	
+	bool m_bDampenNearWaterPlane; // 0xec2	
 	// MPropertyFriendlyName "sample local gravity"
-	bool m_bSampleGravity; // 0xe7b	
+	bool m_bSampleGravity; // 0xec3	
 private:
-	[[maybe_unused]] uint8_t __pad0e7c[0x4]; // 0xe7c
+	[[maybe_unused]] uint8_t __pad0ec4[0x4]; // 0xec4
 public:
 	// MPropertyFriendlyName "gravity force"
 	// MPropertySuppressExpr "m_bSampleGravity"
-	CPerParticleVecInput m_vecGravityForce; // 0xe80	
+	CPerParticleVecInput m_vecGravityForce; // 0xec8	
 	// MPropertyFriendlyName "use Movement Basic for Local Gravity & Buoyancy Scale"
 	// MPropertySuppressExpr "!m_bSampleGravity"
-	bool m_bUseBasicMovementGravity; // 0x14d8	
+	bool m_bUseBasicMovementGravity; // 0x1540	
 private:
-	[[maybe_unused]] uint8_t __pad14d9[0x7]; // 0x14d9
+	[[maybe_unused]] uint8_t __pad1541[0x7]; // 0x1541
 public:
 	// MPropertyFriendlyName "local gravity scale"
 	// MPropertySuppressExpr "!m_bSampleGravity"
-	CPerParticleFloatInput m_flLocalGravityScale; // 0x14e0	
+	CPerParticleFloatInput m_flLocalGravityScale; // 0x1548	
 	// MPropertyFriendlyName "local gravity buoyancy scale"
 	// MPropertySuppressExpr "!m_bSampleGravity"
-	CPerParticleFloatInput m_flLocalBuoyancyScale; // 0x1638	
+	CPerParticleFloatInput m_flLocalBuoyancyScale; // 0x16a8	
 	// MPropertyFriendlyName "buoyancy force"
 	// MPropertySuppressExpr "!m_bSampleWater || m_bSampleGravity"
-	CPerParticleVecInput m_vecBuoyancyForce; // 0x1790	
+	CPerParticleVecInput m_vecBuoyancyForce; // 0x1808	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 16
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimReplayFrame
@@ -31980,7 +32751,6 @@ public:
 // Alignment: 8
 // Size: 0x3a0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Layout Grid"
@@ -32033,7 +32803,6 @@ public:
 // Alignment: 8
 // Size: 0xd8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Cross Product"
@@ -32053,28 +32822,26 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderText : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "outline color"
-	Color m_OutlineColor; // 0x208	
+	Color m_OutlineColor; // 0x210	
 private:
-	[[maybe_unused]] uint8_t __pad020c[0x4]; // 0x20c
+	[[maybe_unused]] uint8_t __pad0214[0x4]; // 0x214
 public:
 	// MPropertyFriendlyName "default text"
-	CUtlString m_DefaultText; // 0x210	
+	CUtlString m_DefaultText; // 0x218	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x260
+// Size: 0x268
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RtEnvCull : public CParticleFunctionOperator
@@ -32082,31 +32849,30 @@ class C_OP_RtEnvCull : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "test direction"
 	// MVectorIsCoordinate
-	Vector m_vecTestDir; // 0x1b8	
+	Vector m_vecTestDir; // 0x1c0	
 	// MPropertyFriendlyName "cull normal"
 	// MVectorIsCoordinate
-	Vector m_vecTestNormal; // 0x1c4	
+	Vector m_vecTestNormal; // 0x1cc	
 	// MPropertyFriendlyName "cull on miss"
-	bool m_bCullOnMiss; // 0x1d0	
+	bool m_bCullOnMiss; // 0x1d8	
 	// MPropertyFriendlyName "stick instead of cull"
-	bool m_bStickInsteadOfCull; // 0x1d1	
+	bool m_bStickInsteadOfCull; // 0x1d9	
 	// MPropertyFriendlyName "ray trace environment name"
-	char m_RtEnvName[128]; // 0x1d2	
+	char m_RtEnvName[128]; // 0x1da	
 private:
-	[[maybe_unused]] uint8_t __pad0252[0x2]; // 0x252
+	[[maybe_unused]] uint8_t __pad025a[0x2]; // 0x25a
 public:
 	// MPropertyFriendlyName "ray trace environment cp"
-	int32_t m_nRTEnvCP; // 0x254	
+	int32_t m_nRTEnvCP; // 0x25c	
 	// MPropertyFriendlyName "rt env control point component"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nComponent; // 0x258	
+	int32_t m_nComponent; // 0x260	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmVirtualParameterBoneMaskNode::CDefinition : public CNmBoneMaskValueNode::CDefinition
@@ -32119,7 +32885,6 @@ public:
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBlockSelectionMetricEvaluator : public CMotionMetricEvaluator
@@ -32131,7 +32896,6 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMotionGraph
@@ -32209,7 +32973,6 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Filter: Probability"
@@ -32226,7 +32989,6 @@ public:
 // Alignment: 8
 // Size: 0x410
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Trace To Point"
@@ -32253,7 +33015,6 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem')
 // Alignment: 8
 // Size: 0xe0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyElementNameFn
@@ -32301,24 +33062,22 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InheritVelocity : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "velocity scale"
-	float m_flVelocityScale; // 0x1c4	
+	float m_flVelocityScale; // 0x1cc	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootMotion
@@ -32333,7 +33092,6 @@ public:
 // Alignment: 8
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CDampedValueUpdateItem
@@ -32349,7 +33107,6 @@ public:
 // Size: 0x4
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnHalfEdge_t
@@ -32380,33 +33137,31 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_TwistAroundAxis : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "amount of force"
-	float m_fForceAmount; // 0x1c8	
+	float m_fForceAmount; // 0x1d0	
 	// MPropertyFriendlyName "twist axis"
 	// MVectorIsCoordinate
-	Vector m_TwistAxis; // 0x1cc	
+	Vector m_TwistAxis; // 0x1d4	
 	// MPropertyFriendlyName "object local space axis 0/1"
-	bool m_bLocalSpace; // 0x1d8	
+	bool m_bLocalSpace; // 0x1e0	
 private:
-	[[maybe_unused]] uint8_t __pad01d9[0x3]; // 0x1d9
+	[[maybe_unused]] uint8_t __pad01e1[0x3]; // 0x1e1
 public:
 	// MPropertyFriendlyName "control point"
-	int32_t m_nControlPointNumber; // 0x1dc	
+	int32_t m_nControlPointNumber; // 0x1e4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x470
+// Size: 0x488
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ClampScalar : public CParticleFunctionOperator
@@ -32414,20 +33169,19 @@ class C_OP_ClampScalar : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "output minimum"
-	CPerParticleFloatInput m_flOutputMin; // 0x1c0	
+	CPerParticleFloatInput m_flOutputMin; // 0x1c8	
 	// MPropertyFriendlyName "output maximum"
-	CPerParticleFloatInput m_flOutputMax; // 0x318	
+	CPerParticleFloatInput m_flOutputMax; // 0x328	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PulseNodeDynamicOutflows_t
@@ -32451,32 +33205,30 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x340
+// Size: 0x350
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_LerpToOtherAttribute : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "Interpolation"
-	CPerParticleFloatInput m_flInterpolation; // 0x1b8	
+	CPerParticleFloatInput m_flInterpolation; // 0x1c0	
 	// MPropertyFriendlyName "input attribute from"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nFieldInputFrom; // 0x310	
+	ParticleAttributeIndex_t m_nFieldInputFrom; // 0x320	
 	// MPropertyFriendlyName "input attribute to"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x314	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x324	
 	// MPropertyFriendlyName "output attribute"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x318	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x328	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xe70
+// Size: 0xeb8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ClampVector : public CParticleFunctionOperator
@@ -32484,22 +33236,21 @@ class C_OP_ClampVector : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "output minimum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	CPerParticleVecInput m_vecOutputMin; // 0x1c0	
+	CPerParticleVecInput m_vecOutputMin; // 0x1c8	
 	// MPropertyFriendlyName "output maximum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	CPerParticleVecInput m_vecOutputMax; // 0x818	
+	CPerParticleVecInput m_vecOutputMax; // 0x840	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x90
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimDataChannelDesc
@@ -32520,7 +33271,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "TestDomain"
@@ -32534,14 +33284,12 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x1
+// Size: 0x4
 // Has Trivial Destructor
 struct EventClientProcessNetworking_t
 {
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
 public:
-	// No schema binary for binding
+	int32_t m_nTickCount; // 0x0	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -32557,6 +33305,21 @@ public:
 	
 	// Static fields:
 	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("SceneEventId_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: soundsystem.dll (project 'soundsystem')
+// Alignment: 8
+// Size: 0xc8
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "TESTBED: Nested Voice Containers"
+// MPropertyDescription "Adds to voices to a tree span."
+class CTestBlendContainer : public CVoiceContainerBase
+{
+public:
+	CStrongHandle< InfoForResourceTypeCVoiceContainerBase > m_firstSound; // 0xb8	
+	CStrongHandle< InfoForResourceTypeCVoiceContainerBase > m_secondSound; // 0xc0	
 };
 
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
@@ -32575,45 +33338,53 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x490
+// Size: 0x4b0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetFloatCollection : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "value"
-	CParticleCollectionFloatInput m_InputValue; // 0x1b8	
+	CParticleCollectionFloatInput m_InputValue; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nOutputField; // 0x310	
+	ParticleAttributeIndex_t m_nOutputField; // 0x320	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x314	
+	ParticleSetMethod_t m_nSetMethod; // 0x324	
 	// MPropertyFriendlyName "interpolation"
-	CParticleCollectionFloatInput m_Lerp; // 0x318	
+	CParticleCollectionFloatInput m_Lerp; // 0x328	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x5d0
+// Size: 0x5f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SelectivelyEnableChildren : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "group ID to affect"
-	CParticleCollectionFloatInput m_nChildGroupID; // 0x1c0	
+	CParticleCollectionFloatInput m_nChildGroupID; // 0x1c8	
 	// MPropertyFriendlyName "first child to enable"
-	CParticleCollectionFloatInput m_nFirstChild; // 0x318	
+	CParticleCollectionFloatInput m_nFirstChild; // 0x328	
 	// MPropertyFriendlyName "# of children to enable"
-	CParticleCollectionFloatInput m_nNumChildrenToEnable; // 0x470	
+	CParticleCollectionFloatInput m_nNumChildrenToEnable; // 0x488	
 	// MPropertyFriendlyName "play endcap when children are removed"
-	bool m_bPlayEndcapOnStop; // 0x5c8	
+	bool m_bPlayEndcapOnStop; // 0x5e8	
 	// MPropertyFriendlyName "destroy particles immediately when child is removed"
-	bool m_bDestroyImmediately; // 0x5c9	
+	bool m_bDestroyImmediately; // 0x5e9	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0xc0
+// Has VTable
+class CNmAdditiveBlendTask : public CNmBlendTaskBase
+{
+public:
+	// No schema binary for binding
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
@@ -32631,36 +33402,47 @@ public:
 	int32_t m_nInstanceValueX; // 0x120	
 };
 
+// Registered binary: server.dll (project 'server')
+// Alignment: 8
+// Size: 0x10
+// Has Trivial Destructor
+// 
+// MGetKV3ClassDefaults
+struct TaskThinkTime_t
+{
+public:
+	CUtlSymbolLarge iTaskId; // 0x0	
+	double flThinkTime; // 0x8	
+};
+
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapInitialVisibilityScalar : public CParticleFunctionInitializer
 {
 private:
-	[[maybe_unused]] uint8_t __pad01c0[0x4]; // 0x1c0
+	[[maybe_unused]] uint8_t __pad01c8[0x4]; // 0x1c8
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc	
 	// MPropertyFriendlyName "visibility minimum"
-	float m_flInputMin; // 0x1c8	
+	float m_flInputMin; // 0x1d0	
 	// MPropertyFriendlyName "visibility maximum"
-	float m_flInputMax; // 0x1cc	
+	float m_flInputMax; // 0x1d4	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1d0	
+	float m_flOutputMin; // 0x1d8	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d4	
+	float m_flOutputMax; // 0x1dc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
 // Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MParticleMaxVersion "7"
 // MParticleReplacementOp "C_OP_LockToSavedSequentialPathV2"
@@ -32668,16 +33450,16 @@ public:
 class C_OP_LockToSavedSequentialPath : public CParticleFunctionOperator
 {
 private:
-	[[maybe_unused]] uint8_t __pad01b8[0x4]; // 0x1b8
+	[[maybe_unused]] uint8_t __pad01c0[0x4]; // 0x1c0
 public:
 	// MPropertyFriendlyName "start fade time"
-	float m_flFadeStart; // 0x1bc	
+	float m_flFadeStart; // 0x1c4	
 	// MPropertyFriendlyName "end fade time"
-	float m_flFadeEnd; // 0x1c0	
+	float m_flFadeEnd; // 0x1c8	
 	// MPropertyFriendlyName "Use sequential CP pairs between start and end point"
-	bool m_bCPPairs; // 0x1c4	
+	bool m_bCPPairs; // 0x1cc	
 private:
-	[[maybe_unused]] uint8_t __pad01c5[0xb]; // 0x1c5
+	[[maybe_unused]] uint8_t __pad01cd[0x3]; // 0x1cd
 public:
 	CPathParameters m_PathParams; // 0x1d0	
 };
@@ -32685,7 +33467,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfigList
@@ -32702,7 +33483,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x50
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmGraphVariation
@@ -32715,66 +33495,10 @@ public:
 	CNmGraphDataSet m_dataSet; // 0x8	
 };
 
-// Registered binary: assetpreview.dll (project 'smartprops')
-// Alignment: 8
-// Size: 0x4a0
-// Has VTable
-// Construct allowed
-// 
-// MGetKV3ClassDefaults
-// MPropertyFriendlyName "Layout Circle (Test)"
-// MPropertyDescription "An element which places multiple instances of its child elements within a radius."
-// MVDataExperimentalNodeSet
-class CSmartPropElement_Layout2DCircle_experimental : public CSmartPropElement_Group
-{
-public:
-	// MPropertyDescription "Specifies how the positions are computed based on the radius."
-	CSmartPropAttributeRadiusPlacementMode m_PlacementMode; // 0xa0	
-	// MPropertyDescription "Specifies the method to be used to distribute."
-	CSmartPropAttributeDistributionMode m_DistributionMode; // 0xe0	
-	// MPropertySuppressExpr "m_DistributionMode == RANDOM"
-	// MPropertyDescription "0 to 1 value indicating the amout of random offset that should be applied to the reguluarly spaced positions"
-	CSmartPropAttributeFloat m_flRandomness; // 0x120	
-	// MPropertySuppressExpr "m_PlacementMode == SPHERE"
-	// MPropertyDescription "Vector up direction of the plane of the circle. This in the local space of the current element."
-	CSmartPropAttributeVector m_vPlaneUpDirection; // 0x160	
-	// MPropertyDescription "Minimum number of instances of this object and its children to be placed."
-	CSmartPropAttributeInt m_nCountMin; // 0x1a0	
-	// MPropertyDescription "Maximum number of instances of this object and its children to be placed."
-	CSmartPropAttributeInt m_nCountMax; // 0x1e0	
-	// MPropertyDescription "Inner radius from the placement position where the model can appear."
-	CSmartPropAttributeFloat m_flPositionRadiusInner; // 0x220	
-	// MPropertyDescription "Outer radius from the placement position where the model can appear."
-	CSmartPropAttributeFloat m_flPositionRadiusOuter; // 0x260	
-	// MPropertyDescription "Align the initial orientation of each placed object based on it position on the sphere or circle."
-	CSmartPropAttributeBool m_bAlignOrientation; // 0x2a0	
-	// MPropertyReadonlyExpr
-	// MPropertyDescription "Vector in the local space of the child element to be aligned with sphere or circle"
-	CSmartPropAttributeVector m_vAlignDirection; // 0x2e0	
-	// MPropertyDescription "Trace outwards from center to prevent children from penetrating solid scene geometry."
-	CSmartPropAttributeBool m_bTraceEnabled; // 0x320	
-	// MPropertySuppressExpr "m_bTraceEnabled == false && m_PlacementMode == SPHERE"
-	// MPropertyDescription "Distance along the PlaneUpDirection to offset the trace. (YM: Eliminate in favor of requiring xform on Node? Or keep it and make it a range? )"
-	CSmartPropAttributeFloat m_flTraceHeightBias; // 0x360	
-	// MPropertySuppressExpr "m_bTraceEnabled == false && m_PlacementMode == SPHERE"
-	// MPropertyDescription "Jitter Spread the trace origin to make it look more natural."
-	CSmartPropAttributeFloat m_flTraceOriginRadius; // 0x3a0	
-	// MPropertySuppressExpr "m_bTraceEnabled == false"
-	// MPropertyDescription "Apply a retro bias to accumulated, so that they fall away."
-	CSmartPropAttributeBool m_bTraceAccumRetroFalloff; // 0x3e0	
-	// MPropertySuppressExpr "m_bTraceAllowAccumulate == false && m_PlacementMode == SPHERE"
-	// MPropertyDescription "Back off accumulated hits by at least this distance."
-	CSmartPropAttributeFloat m_flTraceAccumulateRetroBiasMin; // 0x420	
-	// MPropertySuppressExpr "m_bTraceAllowAccumulate == false && m_PlacementMode == SPHERE"
-	// MPropertyDescription "Back off accumulated hits by at most this distance."
-	CSmartPropAttributeFloat m_flTraceAccumulateRetroBiasMax; // 0x460	
-};
-
 // Registered binary: soundsystem.dll (project 'soundsystem')
 // Alignment: 8
 // Size: 0x20
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSosGroupActionTimeBlockLimitSchema : public CSosGroupActionSchema
@@ -32827,9 +33551,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x230
+// Size: 0x238
 // Has VTable
-// Construct allowed
 // 
 // MObsoleteParticleFunction
 // MGetKV3ClassDefaults
@@ -32837,54 +33560,76 @@ class C_OP_RenderLights : public C_OP_RenderPoints
 {
 public:
 	// MPropertyFriendlyName "animation rate"
-	float m_flAnimationRate; // 0x210	
+	float m_flAnimationRate; // 0x218	
 	// MPropertyFriendlyName "animation type"
-	AnimationType_t m_nAnimationType; // 0x214	
+	AnimationType_t m_nAnimationType; // 0x21c	
 	// MPropertyFriendlyName "set animation value in FPS"
-	bool m_bAnimateInFPS; // 0x218	
+	bool m_bAnimateInFPS; // 0x220	
 private:
-	[[maybe_unused]] uint8_t __pad0219[0x3]; // 0x219
+	[[maybe_unused]] uint8_t __pad0221[0x3]; // 0x221
 public:
 	// MPropertyFriendlyName "minimum visual size"
-	float m_flMinSize; // 0x21c	
+	float m_flMinSize; // 0x224	
 	// MPropertyFriendlyName "maximum visual size"
-	float m_flMaxSize; // 0x220	
+	float m_flMaxSize; // 0x228	
 	// MPropertyFriendlyName "size at which to start fading"
-	float m_flStartFadeSize; // 0x224	
+	float m_flStartFadeSize; // 0x22c	
 	// MPropertyFriendlyName "size at which to fade away"
-	float m_flEndFadeSize; // 0x228	
+	float m_flEndFadeSize; // 0x230	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapDensityToVector : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "Radius scale for particle influence"
-	float m_flRadiusScale; // 0x1b8	
+	float m_flRadiusScale; // 0x1c0	
 	// MPropertyFriendlyName "Output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "Density value to map to min value"
-	float m_flDensityMin; // 0x1c0	
+	float m_flDensityMin; // 0x1c8	
 	// MPropertyFriendlyName "Density value to map to max value"
-	float m_flDensityMax; // 0x1c4	
+	float m_flDensityMax; // 0x1cc	
 	// MPropertyFriendlyName "Output minimum"
-	Vector m_vecOutputMin; // 0x1c8	
+	Vector m_vecOutputMin; // 0x1d0	
 	// MPropertyFriendlyName "Output maximum"
-	Vector m_vecOutputMax; // 0x1d4	
+	Vector m_vecOutputMax; // 0x1dc	
 	// MPropertyFriendlyName "Use parent density instead of ours"
-	bool m_bUseParentDensity; // 0x1e0	
+	bool m_bUseParentDensity; // 0x1e8	
 private:
-	[[maybe_unused]] uint8_t __pad01e1[0x3]; // 0x1e1
+	[[maybe_unused]] uint8_t __pad01e9[0x3]; // 0x1e9
 public:
 	// MPropertyFriendlyName "Resolution to use for creating a voxel grid"
-	int32_t m_nVoxelGridResolution; // 0x1e4	
+	int32_t m_nVoxelGridResolution; // 0x1ec	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmVelocityBasedSpeedScaleNode::CDefinition : public CNmSpeedScaleBaseNode::CDefinition
+{
+public:
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFixedWeightBoneMaskNode::CDefinition : public CNmBoneMaskValueNode::CDefinition
+{
+public:
+	float m_flBoneWeight; // 0x10	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -32905,9 +33650,7 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem_lowlevel')
 // Alignment: 4
 // Size: 0x90
-// Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixDynamics3BandDesc_t
@@ -32953,9 +33696,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapNamedModelSequenceEndCap : public C_OP_RemapNamedModelElementEndCap
@@ -32963,11 +33705,22 @@ class C_OP_RemapNamedModelSequenceEndCap : public C_OP_RemapNamedModelElementEnd
 public:
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmConstVectorNode::CDefinition : public CNmVectorValueNode::CDefinition
+{
+public:
+	Vector m_value; // 0x10	
+};
+
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CModelConfigElement_SetMaterialGroup : public CModelConfigElement
@@ -32980,7 +33733,6 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Movement Handshake Tag"
@@ -32992,7 +33744,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x50
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqScaleSet
@@ -33024,7 +33775,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Fit on Line Scale Mode"
@@ -33048,9 +33798,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomRotationSpeed : public CGeneralRandomRotation
@@ -33060,51 +33809,65 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x328
+// Size: 0x338
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_EnableChildrenFromParentParticleCount : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "group ID to affect"
-	int32_t m_nChildGroupID; // 0x1c0	
+	int32_t m_nChildGroupID; // 0x1c8	
 	// MPropertyFriendlyName "first child to enable"
-	int32_t m_nFirstChild; // 0x1c4	
+	int32_t m_nFirstChild; // 0x1cc	
 	// MPropertyFriendlyName "max # of children to enable (-1 for max particle count)"
-	CParticleCollectionFloatInput m_nNumChildrenToEnable; // 0x1c8	
+	CParticleCollectionFloatInput m_nNumChildrenToEnable; // 0x1d0	
 	// MPropertyFriendlyName "remove children when particle count lowers"
-	bool m_bDisableChildren; // 0x320	
+	bool m_bDisableChildren; // 0x330	
 	// MPropertyFriendlyName "play endcap when children are removed"
 	// MPropertySuppressExpr "!m_bDisableChildren"
-	bool m_bPlayEndcapOnStop; // 0x321	
+	bool m_bPlayEndcapOnStop; // 0x331	
 	// MPropertyFriendlyName "destroy particles immediately when child is removed"
 	// MPropertySuppressExpr "!m_bDisableChildren"
-	bool m_bDestroyImmediately; // 0x322	
+	bool m_bDestroyImmediately; // 0x332	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x820
+// Size: 0x4d8
 // Has VTable
-// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class C_OP_RenderClientPhysicsImpulse : public CParticleFunctionRenderer
+{
+public:
+	// MPropertyFriendlyName "radius"
+	CPerParticleFloatInput m_flRadius; // 0x210	
+	// MPropertyFriendlyName "magnitude"
+	CPerParticleFloatInput m_flMagnitude; // 0x370	
+	// MPropertyFriendlyName "filter explosion to single simulation id"
+	int32_t m_nSimIdFilter; // 0x4d0	
+};
+
+// Registered binary: particles.dll (project 'particles')
+// Alignment: 8
+// Size: 0x848
+// Has VTable
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InitVecCollection : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "value"
-	CParticleCollectionVecInput m_InputValue; // 0x1c0	
+	CParticleCollectionVecInput m_InputValue; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nOutputField; // 0x818	
+	ParticleAttributeIndex_t m_nOutputField; // 0x840	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootTrajectories
@@ -33129,10 +33892,23 @@ public:
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xb0
+// Has VTable
+// 
+// MPulseLibraryBindings
+// MPulseInternal_IsCursor
+class CTestDomainDerived_Cursor : public CPulseExecCursor
+{
+public:
+	int32_t m_nCursorValueA; // 0xa8	
+	int32_t m_nCursorValueB; // 0xac	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CPulseCell_BaseLerp__CursorState_t
@@ -33145,7 +33921,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct HeroAbilityResourceDef_t
@@ -33159,10 +33934,36 @@ public:
 	CUtlString m_strCantCastOutOfResourceToken; // 0x10	
 };
 
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x60
+// 
+// MGetKV3ClassDefaults
+struct CitadelStatsWeaponDisplay_t
+{
+public:
+	// MPropertyDescription "The loc string of the heroes weapon name"
+	CUtlString m_strWeaponNameLocString; // 0x0	
+	// MPropertyDescription "The loc string of the heroes weapon description"
+	CUtlString m_strWeaponDescLocString; // 0x8	
+	// MPropertyDescription "The location of the weapon image"
+	CPanoramaImageName m_strWeaponImage; // 0x10	
+	// MPropertyDescription "The loc string of the heroes secondary weapon description (optional)"
+	CUtlString m_strSecondaryWeaponDescLocString; // 0x20	
+	// MPropertyDescription "The type of attributes does this weapon have?"
+	ECitadelWeaponAttributes m_eWeaponAttributes; // 0x28	
+private:
+	[[maybe_unused]] uint8_t __pad002a[0x6]; // 0x2a
+public:
+	// MPropertyDescription "What stats do we want to show in the top section?"
+	CUtlVector< EStatsType > m_vecDisplayStats; // 0x30	
+	// MPropertyDescription "What stats do we want to show in the other stats section?"
+	CUtlVector< EStatsType > m_vecOtherDisplayStats; // 0x48	
+};
+
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x88
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SceneObject_t
@@ -33195,7 +33996,6 @@ public:
 // Size: 0xc
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixSubgraphSwitchDesc_t
@@ -33209,10 +34009,27 @@ public:
 	float m_flInterpolationTime; // 0x8	
 };
 
+// Registered binary: server.dll (project 'server')
+// Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct UnreachableTarget_t
+{
+public:
+	UnreachableTargetType_t nTargetType; // 0x0	
+	CHandle< CBaseEntity > hTargetEnt; // 0x4	
+	Vector vecTargetWorldPos; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
+public:
+	CGlobalSymbol sTargetSymbol; // 0x18	
+	GameTime_t fExpireTime; // 0x20	
+	Vector vecTargetLocationWhenUnreachable; // 0x24	
+};
+
 // Registered binary: scenesystem.dll (project 'scenesystem')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSSDSMsg_ViewTarget
@@ -33232,76 +34049,73 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_CalculateVectorAttribute : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "start value"
-	Vector m_vStartValue; // 0x1b8	
+	Vector m_vStartValue; // 0x1c0	
 	// MPropertyFriendlyName "input field 1"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldInput1; // 0x1c4	
+	ParticleAttributeIndex_t m_nFieldInput1; // 0x1cc	
 	// MPropertyFriendlyName "input scale 1"
-	float m_flInputScale1; // 0x1c8	
+	float m_flInputScale1; // 0x1d0	
 	// MPropertyFriendlyName "input field 2"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldInput2; // 0x1cc	
+	ParticleAttributeIndex_t m_nFieldInput2; // 0x1d4	
 	// MPropertyFriendlyName "input scale 2"
-	float m_flInputScale2; // 0x1d0	
+	float m_flInputScale2; // 0x1d8	
 	// MPropertyFriendlyName "control point input 1"
-	// -> m_controlPointNameString - 0x1d4
-	// -> m_vOffsetFromControlPoint - 0x1d8
-	// -> m_bOffsetInLocalSpace - 0x1e4
-	ControlPointReference_t m_nControlPointInput1; // 0x1d4	
+	// -> m_controlPointNameString - 0x1dc
+	// -> m_vOffsetFromControlPoint - 0x1e0
+	// -> m_bOffsetInLocalSpace - 0x1ec
+	ControlPointReference_t m_nControlPointInput1; // 0x1dc	
 	// MPropertyFriendlyName "control point scale 1"
-	float m_flControlPointScale1; // 0x1e8	
+	float m_flControlPointScale1; // 0x1f0	
 	// MPropertyFriendlyName "control point input 2"
-	// -> m_controlPointNameString - 0x1ec
-	// -> m_vOffsetFromControlPoint - 0x1f0
-	// -> m_bOffsetInLocalSpace - 0x1fc
-	ControlPointReference_t m_nControlPointInput2; // 0x1ec	
+	// -> m_controlPointNameString - 0x1f4
+	// -> m_vOffsetFromControlPoint - 0x1f8
+	// -> m_bOffsetInLocalSpace - 0x204
+	ControlPointReference_t m_nControlPointInput2; // 0x1f4	
 	// MPropertyFriendlyName "control point scale 2"
-	float m_flControlPointScale2; // 0x200	
+	float m_flControlPointScale2; // 0x208	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x204	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x20c	
 	// MPropertyFriendlyName "final per component scale"
-	Vector m_vFinalOutputScale; // 0x208	
+	Vector m_vFinalOutputScale; // 0x210	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x328
+// Size: 0x338
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetCPOrientationToPointAtCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "CP to point towards"
-	int32_t m_nInputCP; // 0x1c0	
+	int32_t m_nInputCP; // 0x1c8	
 	// MPropertyFriendlyName "CP to set"
-	int32_t m_nOutputCP; // 0x1c4	
+	int32_t m_nOutputCP; // 0x1cc	
 	// MPropertyFriendlyName "Interpolation"
-	CParticleCollectionFloatInput m_flInterpolation; // 0x1c8	
+	CParticleCollectionFloatInput m_flInterpolation; // 0x1d0	
 	// MPropertyFriendlyName "2D Orient"
-	bool m_b2DOrientation; // 0x320	
+	bool m_b2DOrientation; // 0x330	
 	// MPropertyFriendlyName "Avoid Vertical Axis Singularity"
-	bool m_bAvoidSingularity; // 0x321	
+	bool m_bAvoidSingularity; // 0x331	
 	// MPropertyFriendlyName "Point Away"
-	bool m_bPointAway; // 0x322	
+	bool m_bPointAway; // 0x332	
 };
 
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 4
 // Size: 0x3c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PostProcessingTonemapParameters_t
@@ -33328,33 +34142,38 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmTransitionNode::CDefinition : public CNmPoseNode::CDefinition
 {
 public:
-	int16_t m_targetCNmStateNodeIdx; // 0x10	
-	int16_t m_durationOverrideNodeIdx; // 0x12	
+	int16_t m_nTargetStateNodeIdx; // 0x10	
+	int16_t m_nDurationOverrideNodeIdx; // 0x12	
 	int16_t m_syncEventOffsetOverrideNodeIdx; // 0x14	
 	int16_t m_startBoneMaskNodeIdx; // 0x16	
 	float m_flDuration; // 0x18	
 	NmPercent_t m_boneMaskBlendInTimePercentage; // 0x1c	
 	float m_syncEventOffset; // 0x20	
-	CNmTransitionNode::TransitionOptions_t m_transitionOptions; // 0x24	
-private:
-	[[maybe_unused]] uint8_t __pad0025[0x1]; // 0x25
+	CNmBitFlags m_transitionOptions; // 0x24	
+	int16_t m_targetSyncIDNodeIdx; // 0x28	
+	NmEasingOperation_t m_blendWeightEasing; // 0x2a	
+	NmRootMotionBlendMode_t m_rootMotionBlend; // 0x2b	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x30
+// Has VTable
+class CNmReferencePoseTask : public CNmTask
+{
 public:
-	int16_t m_targetSyncIDNodeIdx; // 0x26	
-	NmEasingOperation_t m_blendWeightEasing; // 0x28	
-	NmRootMotionBlendMode_t m_rootMotionBlend; // 0x29	
+	// No schema binary for binding
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class MotionDBIndex
@@ -33367,7 +34186,6 @@ public:
 // Alignment: 8
 // Size: 0x20
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CToggleComponentActionUpdater : public CAnimActionUpdater
@@ -33381,7 +34199,6 @@ public:
 // Alignment: 8
 // Size: 0x10
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmControlParameterIDNode::CDefinition : public CNmIDValueNode::CDefinition
@@ -33393,12 +34210,11 @@ public:
 // Alignment: 8
 // Size: 0xa0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
 // MPulseCellMethodBindings
-// MPulseCellOutflowHookInfo "m_MethodName "
+// MPulseCellOutflowHookInfo
 // MPulseCellWithCustomDocNode
 class CPulseCell_Step_CallExternalMethod : public CPulseCell_BaseYieldingInflow
 {
@@ -33413,10 +34229,34 @@ public:
 	CPulse_ResumePoint m_OnFinished; // 0x70	
 };
 
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xa8
+// 
+// MGetKV3ClassDefaults
+struct CitadelStatsDisplay_t
+{
+public:
+	// MPropertyDescription "What information do we want to display for Weapon?"
+	// -> m_strWeaponNameLocString - 0x0
+	// -> m_strWeaponDescLocString - 0x8
+	// -> m_strWeaponImage - 0x10
+	// -> m_strSecondaryWeaponDescLocString - 0x20
+	// -> m_eWeaponAttributes - 0x28
+	// -> m_vecDisplayStats - 0x30
+	// -> m_vecOtherDisplayStats - 0x48
+	CitadelStatsWeaponDisplay_t m_eWeaponStatsDisplay; // 0x0	
+	// MPropertyDescription "What information do we want to display for Vitality?"
+	// -> m_vecDisplayStats - 0x60
+	// -> m_vecOtherDisplayStats - 0x78
+	CitadelStatsVitalityDisplay_t m_eVitalityStatsDisplay; // 0x60	
+	// MPropertyDescription "What information do we want to display for Spirit?"
+	CitadelStatsSpiritDisplay_t m_eSpiritStatsDisplay; // 0x90	
+};
+
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x40
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulse_CallInfo
@@ -33437,7 +34277,6 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Set Variable"
@@ -33454,7 +34293,6 @@ public:
 // Alignment: 4
 // Size: 0x2c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixAutoFilterDesc_t
@@ -33470,30 +34308,10 @@ public:
 	VMixLFOShape_t m_nLFOShape; // 0x28	
 };
 
-// Registered binary: server.dll (project 'server')
-// Alignment: 8
-// Size: 0xa
-// Has Trivial Destructor
-struct HullFlags_t
-{
-public:
-	bool m_bHull_Human; // 0x0	
-	bool m_bHull_SmallCentered; // 0x1	
-	bool m_bHull_WideHuman; // 0x2	
-	bool m_bHull_Tiny; // 0x3	
-	bool m_bHull_Medium; // 0x4	
-	bool m_bHull_TinyCentered; // 0x5	
-	bool m_bHull_Large; // 0x6	
-	bool m_bHull_LargeCentered; // 0x7	
-	bool m_bHull_MediumTall; // 0x8	
-	bool m_bHull_Small; // 0x9	
-};
-
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1b8
+// Size: 0x1c0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_EndCapDecay : public CParticleFunctionOperator
@@ -33504,7 +34322,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x70
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqMultiFetch
@@ -33533,23 +34350,25 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x138
+// Size: 0x80
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-class CNmStateMachineNode::CDefinition : public CNmPoseNode::CDefinition
+class CNmStateEventConditionNode::CDefinition : public CNmBoolValueNode::CDefinition
 {
 public:
-	CUtlLeanVectorFixedGrowable< CNmStateMachineNode::StateDefinition_t > m_stateDefinition; // 0x10	
-	int16_t m_nDefaultStateIndex; // 0x130	
+	int16_t m_nSourceStateNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	CNmBitFlags m_eventConditionRules; // 0x14	
+	CUtlVectorFixedGrowable< CNmStateEventConditionNode::Condition_t, 5 > m_conditions; // 0x18	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBoneConstraintPoseSpaceMorph : public CBoneConstraintBase
@@ -33566,7 +34385,6 @@ public:
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyAutoExpandSelf
@@ -33577,6 +34395,25 @@ public:
 	float m_flBurstSlope; // 0x8	
 	float m_flBurstExponent; // 0xc	
 	float m_flBurstConstant; // 0x10	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xa
+// Has Trivial Destructor
+struct HullFlags_t
+{
+public:
+	bool m_bHull_Human; // 0x0	
+	bool m_bHull_SmallCentered; // 0x1	
+	bool m_bHull_WideHuman; // 0x2	
+	bool m_bHull_Tiny; // 0x3	
+	bool m_bHull_Medium; // 0x4	
+	bool m_bHull_TinyCentered; // 0x5	
+	bool m_bHull_Large; // 0x6	
+	bool m_bHull_LargeCentered; // 0x7	
+	bool m_bHull_MediumTall; // 0x8	
+	bool m_bHull_Small; // 0x9	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -33598,7 +34435,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "TestDomain"
@@ -33612,7 +34448,6 @@ public:
 // Registered binary: scenesystem.dll (project 'scenesystem')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSSDSMsg_PreLayer : public CSSDSMsg_LayerBase
@@ -33622,38 +34457,37 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1f0
+// Size: 0x1f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapCPtoScalar : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "input control point number"
-	int32_t m_nCPInput; // 0x1c0	
+	int32_t m_nCPInput; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc	
 	// MPropertyFriendlyName "input field 0-2 X/Y/Z"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nField; // 0x1c8	
+	int32_t m_nField; // 0x1d0	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1cc	
+	float m_flInputMin; // 0x1d4	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1d0	
+	float m_flInputMax; // 0x1d8	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1d4	
+	float m_flOutputMin; // 0x1dc	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d8	
+	float m_flOutputMax; // 0x1e0	
 	// MPropertyFriendlyName "emitter lifetime start time (seconds)"
-	float m_flStartTime; // 0x1dc	
+	float m_flStartTime; // 0x1e4	
 	// MPropertyFriendlyName "emitter lifetime end time (seconds)"
-	float m_flEndTime; // 0x1e0	
+	float m_flEndTime; // 0x1e8	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1e4	
+	ParticleSetMethod_t m_nSetMethod; // 0x1ec	
 	// MPropertyFriendlyName "remap bias"
-	float m_flRemapBias; // 0x1e8	
+	float m_flRemapBias; // 0x1f0	
 };
 
 // Registered binary: host.dll (project 'host')
@@ -33669,11 +34503,23 @@ public:
 	bool m_bIsValid; // 0x8	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x30
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmSelectorNode::CDefinition : public CNmPoseNode::CDefinition
+{
+public:
+	CUtlLeanVectorFixedGrowable< int16, 5 > m_optionNodeIndices; // 0x10	
+	CUtlLeanVectorFixedGrowable< int16, 5 > m_conditionNodeIndices; // 0x20	
+};
+
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0xb0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSelectorUpdateNode : public CAnimUpdateNodeBase
@@ -33699,9 +34545,8 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0xb0
+// Size: 0xb8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAimCameraUpdateNode : public CUnaryUpdateNode
@@ -33712,26 +34557,27 @@ public:
 	CAnimParamHandle m_hParameterSpineRotationWeight; // 0x6c	
 	CAnimParamHandle m_hParameterPelvisOffset; // 0x6e	
 	CAnimParamHandle m_hParameterUseIK; // 0x70	
-	CAnimParamHandle m_hParameterWeaponDepenetrationDistance; // 0x72	
-	CAnimParamHandle m_hParameterCameraClearanceDistance; // 0x74	
+	CAnimParamHandle m_hParameterCameraOnly; // 0x72	
+	CAnimParamHandle m_hParameterWeaponDepenetrationDistance; // 0x74	
+	CAnimParamHandle m_hParameterWeaponDepenetrationDelta; // 0x76	
+	CAnimParamHandle m_hParameterCameraClearanceDistance; // 0x78	
 private:
-	[[maybe_unused]] uint8_t __pad0076[0x2]; // 0x76
+	[[maybe_unused]] uint8_t __pad007a[0x6]; // 0x7a
 public:
-	// -> m_nChainIndex - 0x78
-	// -> m_nCameraJointIndex - 0x7c
-	// -> m_nPelvisJointIndex - 0x80
-	// -> m_nClavicleLeftJointIndex - 0x84
-	// -> m_nClavicleRightJointIndex - 0x88
-	// -> m_nDepenetrationJointIndex - 0x8c
-	// -> m_propJoints - 0x90
-	AimCameraOpFixedSettings_t m_opFixedSettings; // 0x78	
+	// -> m_nChainIndex - 0x80
+	// -> m_nCameraJointIndex - 0x84
+	// -> m_nPelvisJointIndex - 0x88
+	// -> m_nClavicleLeftJointIndex - 0x8c
+	// -> m_nClavicleRightJointIndex - 0x90
+	// -> m_nDepenetrationJointIndex - 0x94
+	// -> m_propJoints - 0x98
+	AimCameraOpFixedSettings_t m_opFixedSettings; // 0x80	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootStepTriggerUpdateNode : public CUnaryUpdateNode
@@ -33748,7 +34594,6 @@ public:
 // Alignment: 8
 // Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Save Current Position"
@@ -33768,7 +34613,6 @@ public:
 // Size: 0x4
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnSoftbodyParticle_t
@@ -33781,7 +34625,6 @@ public:
 // Alignment: 8
 // Size: 0x80
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSingleFrameUpdateNode : public CLeafUpdateNode
@@ -33800,7 +34643,6 @@ public:
 // Size: 0xa0
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CitadelCameraDistanceOperationDef_t : public CitadelCameraOperationDef_t
@@ -33826,36 +34668,34 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x600
+// Size: 0x620
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_SetAttributeToScalarExpression : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "expression"
-	ScalarExpressionType_t m_nExpression; // 0x1c0	
+	ScalarExpressionType_t m_nExpression; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "input 1"
-	CPerParticleFloatInput m_flInput1; // 0x1c8	
+	CPerParticleFloatInput m_flInput1; // 0x1d0	
 	// MPropertyFriendlyName "input 2"
-	CPerParticleFloatInput m_flInput2; // 0x320	
+	CPerParticleFloatInput m_flInput2; // 0x330	
 	// MPropertyFriendlyName "output"
-	CParticleRemapFloatInput m_flOutputRemap; // 0x478	
+	CParticleRemapFloatInput m_flOutputRemap; // 0x490	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nOutputField; // 0x5d0	
+	ParticleAttributeIndex_t m_nOutputField; // 0x5f0	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x5d4	
+	ParticleSetMethod_t m_nSetMethod; // 0x5f4	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x40
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqSynthAnimDesc
@@ -33875,7 +34715,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CDirectPlaybackTagData
@@ -33889,7 +34728,6 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CTrackedObject_MODIFIER_TRACKED_BODYGROUP : public IModifierTrackedObject
@@ -33915,7 +34753,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CPulseCell_LimitCount__InstanceState_t
@@ -33927,7 +34764,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x140
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct WorldNode_t
@@ -33952,7 +34788,6 @@ public:
 // Alignment: 4
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AggregateMeshInfo_t
@@ -33976,7 +34811,6 @@ public:
 // Alignment: 16
 // Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdRodConstraintAnim_t
@@ -33989,9 +34823,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x210
+// Size: 0x218
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapParticleCountToNamedModelBodyPartScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
@@ -34003,7 +34836,6 @@ public:
 // Alignment: 8
 // Size: 0x138
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "TestDomain"
@@ -34088,20 +34920,16 @@ public:
 // Alignment: 8
 // Size: 0x40
 // Has Trivial Destructor
-struct EventPostAdvanceTick_t : public EventSimulate_t
+struct EventClientPostAdvanceTick_t : public EventPostAdvanceTick_t
 {
 public:
-	int32_t m_nCurrentTick; // 0x30	
-	int32_t m_nCurrentTickThisFrame; // 0x34	
-	int32_t m_nTotalTicksThisFrame; // 0x38	
-	int32_t m_nTotalTicks; // 0x3c	
+	// No schema binary for binding
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 16
 // Size: 0x50
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeBuildBoxRigid_t : public FeBoxRigid_t
@@ -34126,57 +34954,54 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapSpeedtoCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "input control point"
-	int32_t m_nInControlPointNumber; // 0x1c0	
+	int32_t m_nInControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutControlPointNumber; // 0x1c4	
+	int32_t m_nOutControlPointNumber; // 0x1cc	
 	// MPropertyFriendlyName "Output field 0-2 X/Y/Z"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nField; // 0x1c8	
+	int32_t m_nField; // 0x1d0	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1cc	
+	float m_flInputMin; // 0x1d4	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1d0	
+	float m_flInputMax; // 0x1d8	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1d4	
+	float m_flOutputMin; // 0x1dc	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d8	
+	float m_flOutputMax; // 0x1e0	
 	// MPropertyFriendlyName "use delta of velocity instead of constant speed"
-	bool m_bUseDeltaV; // 0x1dc	
+	bool m_bUseDeltaV; // 0x1e4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x980
+// Size: 0x9b0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_PerParticleForce : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "force scale"
-	CPerParticleFloatInput m_flForceScale; // 0x1c8	
+	CPerParticleFloatInput m_flForceScale; // 0x1d0	
 	// MPropertyFriendlyName "force to apply"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_vForce; // 0x320	
+	CPerParticleVecInput m_vForce; // 0x330	
 	// MPropertyFriendlyName "local space control point"
-	int32_t m_nCP; // 0x978	
+	int32_t m_nCP; // 0x9a8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_WindForce : public CParticleFunctionForce
@@ -34184,29 +35009,27 @@ class C_OP_WindForce : public CParticleFunctionForce
 public:
 	// MPropertyFriendlyName "force to apply"
 	// MVectorIsCoordinate
-	Vector m_vForce; // 0x1c8	
+	Vector m_vForce; // 0x1d0	
 };
 
 // Registered binary: client.dll (project 'client')
-// Alignment: 4
-// Size: 0xc
-// Has Trivial Destructor
-// Construct allowed
+// Alignment: 8
+// Size: 0x1e0
 // 
 // MGetKV3ClassDefaults
-struct RejuvinatorParams_t
+struct TeleporterParams_t
 {
 public:
-	float m_flRejuvinatorExpirationWarningTiming; // 0x0	
-	float m_flRejuvinatorBuffDuration; // 0x4	
-	float m_flRejuvinatorFallSpeed; // 0x8	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_StartEffect; // 0x0	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_EndEffect; // 0xe0	
+	CSoundEventName m_strEnterSound; // 0x1c0	
+	CSoundEventName m_strStartSound; // 0x1d0	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x78
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -34249,7 +35072,6 @@ public:
 // Size: 0x8
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnSoftbodySpring_t
@@ -34263,7 +35085,6 @@ public:
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeNodeReverseOffset_t
@@ -34276,89 +35097,85 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x108
-// Construct allowed
+// Size: 0x110
 // 
 // MGetKV3ClassDefaults
 struct RnHullDesc_t : public RnShapeDesc_t
 {
 public:
-	RnHull_t m_Hull; // 0x10	
+	RnHull_t m_Hull; // 0x18	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xa08
+// Size: 0xa38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_PositionLock : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0x1b8	
+	CParticleTransformInput m_TransformInput; // 0x1c0	
 	// MPropertyFriendlyName "start fadeout min"
-	float m_flStartTime_min; // 0x220	
+	float m_flStartTime_min; // 0x228	
 	// MPropertyFriendlyName "start fadeout max"
-	float m_flStartTime_max; // 0x224	
+	float m_flStartTime_max; // 0x22c	
 	// MPropertyFriendlyName "start fadeout exponent"
-	float m_flStartTime_exp; // 0x228	
+	float m_flStartTime_exp; // 0x230	
 	// MPropertyFriendlyName "end fadeout min"
-	float m_flEndTime_min; // 0x22c	
+	float m_flEndTime_min; // 0x234	
 	// MPropertyFriendlyName "end fadeout max"
-	float m_flEndTime_max; // 0x230	
+	float m_flEndTime_max; // 0x238	
 	// MPropertyFriendlyName "end fadeout exponent"
-	float m_flEndTime_exp; // 0x234	
+	float m_flEndTime_exp; // 0x23c	
 	// MPropertyFriendlyName "distance fade range"
-	float m_flRange; // 0x238	
+	float m_flRange; // 0x240	
 private:
-	[[maybe_unused]] uint8_t __pad023c[0x4]; // 0x23c
+	[[maybe_unused]] uint8_t __pad0244[0x4]; // 0x244
 public:
 	// MPropertyFriendlyName "distance fade bias"
-	CParticleCollectionFloatInput m_flRangeBias; // 0x240	
+	CParticleCollectionFloatInput m_flRangeBias; // 0x248	
 	// MPropertyFriendlyName "instant jump threshold"
-	float m_flJumpThreshold; // 0x398	
+	float m_flJumpThreshold; // 0x3a8	
 	// MPropertyFriendlyName "previous position scale"
-	float m_flPrevPosScale; // 0x39c	
+	float m_flPrevPosScale; // 0x3ac	
 	// MPropertyFriendlyName "lock rotation"
-	bool m_bLockRot; // 0x3a0	
+	bool m_bLockRot; // 0x3b0	
 private:
-	[[maybe_unused]] uint8_t __pad03a1[0x7]; // 0x3a1
+	[[maybe_unused]] uint8_t __pad03b1[0x7]; // 0x3b1
 public:
 	// MPropertyFriendlyName "component scale"
-	CParticleCollectionVecInput m_vecScale; // 0x3a8	
+	CParticleCollectionVecInput m_vecScale; // 0x3b8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0xa00	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0xa30	
 	// MPropertyFriendlyName "output field prev"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutputPrev; // 0xa04	
+	ParticleAttributeIndex_t m_nFieldOutputPrev; // 0xa34	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DampenToCP : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1b8	
+	int32_t m_nControlPointNumber; // 0x1c0	
 	// MPropertyFriendlyName "falloff range"
-	float m_flRange; // 0x1bc	
+	float m_flRange; // 0x1c4	
 	// MPropertyFriendlyName "dampen scale"
-	float m_flScale; // 0x1c0	
+	float m_flScale; // 0x1c8	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Symbol Parameter"
@@ -34373,7 +35190,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Angles"
@@ -34385,9 +35201,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_Spin : public CGeneralSpin
@@ -34397,45 +35212,43 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapCPtoScalar : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "input control point number"
-	int32_t m_nCPInput; // 0x1b8	
+	int32_t m_nCPInput; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "input field 0-2 X/Y/Z"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nField; // 0x1c0	
+	int32_t m_nField; // 0x1c8	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1c4	
+	float m_flInputMin; // 0x1cc	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1c8	
+	float m_flInputMax; // 0x1d0	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1cc	
+	float m_flOutputMin; // 0x1d4	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d0	
+	float m_flOutputMax; // 0x1d8	
 	// MPropertyFriendlyName "emitter lifetime start time (seconds)"
-	float m_flStartTime; // 0x1d4	
+	float m_flStartTime; // 0x1dc	
 	// MPropertyFriendlyName "emitter lifetime end time (seconds)"
-	float m_flEndTime; // 0x1d8	
+	float m_flEndTime; // 0x1e0	
 	// MPropertyFriendlyName "interpolation scale"
-	float m_flInterpRate; // 0x1dc	
+	float m_flInterpRate; // 0x1e4	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1e0	
+	ParticleSetMethod_t m_nSetMethod; // 0x1e8	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0x1c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeStiffHingeBuild_t
@@ -34449,82 +35262,84 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x11f8
+// Size: 0x13b8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderOmni2Light : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "Type"
-	ParticleOmni2LightTypeChoiceList_t m_nLightType; // 0x208	
+	ParticleOmni2LightTypeChoiceList_t m_nLightType; // 0x210	
 private:
-	[[maybe_unused]] uint8_t __pad020c[0x4]; // 0x20c
+	[[maybe_unused]] uint8_t __pad0214[0x4]; // 0x214
 public:
 	// MPropertyFriendlyName "Color Blend"
-	CParticleCollectionVecInput m_vColorBlend; // 0x210	
+	CParticleCollectionVecInput m_vColorBlend; // 0x218	
 	// MPropertyFriendlyName "Color Blend Type"
 	// MPropertySortPriority "700"
-	ParticleColorBlendType_t m_nColorBlendType; // 0x868	
-	ParticleLightUnitChoiceList_t m_nBrightnessUnit; // 0x86c	
+	ParticleColorBlendType_t m_nColorBlendType; // 0x890	
+	ParticleLightUnitChoiceList_t m_nBrightnessUnit; // 0x894	
 	// MPropertyFriendlyName "Lumens"
 	// MPropertySuppressExpr "m_nBrightnessUnit != PARTICLE_LIGHT_UNIT_LUMENS"
-	CPerParticleFloatInput m_flBrightnessLumens; // 0x870	
+	CPerParticleFloatInput m_flBrightnessLumens; // 0x898	
 	// MPropertyFriendlyName "Candelas"
 	// MPropertySuppressExpr "m_nBrightnessUnit != PARTICLE_LIGHT_UNIT_CANDELAS"
-	CPerParticleFloatInput m_flBrightnessCandelas; // 0x9c8	
+	CPerParticleFloatInput m_flBrightnessCandelas; // 0x9f8	
 	// MPropertyFriendlyName "Shadows"
 	// MPropertySuppressExpr "mod == csgo"
-	bool m_bCastShadows; // 0xb20	
+	bool m_bCastShadows; // 0xb58	
+	// MPropertyFriendlyName "Fog"
+	bool m_bFog; // 0xb59	
 private:
-	[[maybe_unused]] uint8_t __pad0b21[0x7]; // 0xb21
+	[[maybe_unused]] uint8_t __pad0b5a[0x6]; // 0xb5a
 public:
+	// MPropertyFriendlyName "Fog Scale"
+	// MPropertySuppressExpr "!m_bFog"
+	CPerParticleFloatInput m_flFogScale; // 0xb60	
 	// MPropertyFriendlyName "Light Radius"
-	CPerParticleFloatInput m_flLuminaireRadius; // 0xb28	
+	CPerParticleFloatInput m_flLuminaireRadius; // 0xcc0	
 	// MPropertyFriendlyName "Skirt"
-	CPerParticleFloatInput m_flSkirt; // 0xc80	
+	CPerParticleFloatInput m_flSkirt; // 0xe20	
 	// MPropertyFriendlyName "Range"
-	CPerParticleFloatInput m_flRange; // 0xdd8	
+	CPerParticleFloatInput m_flRange; // 0xf80	
 	// MPropertyFriendlyName "Inner Cone Angle"
-	CPerParticleFloatInput m_flInnerConeAngle; // 0xf30	
+	CPerParticleFloatInput m_flInnerConeAngle; // 0x10e0	
 	// MPropertyFriendlyName "Outer Cone Angle"
-	CPerParticleFloatInput m_flOuterConeAngle; // 0x1088	
+	CPerParticleFloatInput m_flOuterConeAngle; // 0x1240	
 	// MPropertyFriendlyName "Cookie"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_hLightCookie; // 0x11e0	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hLightCookie; // 0x13a0	
 	// MPropertyFriendlyName "Cookie is Spherically Mapped"
-	bool m_bSphericalCookie; // 0x11e8	
+	bool m_bSphericalCookie; // 0x13a8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x328
+// Size: 0x338
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreateFromCPs : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point increment amount"
-	int32_t m_nIncrement; // 0x1c0	
+	int32_t m_nIncrement; // 0x1c8	
 	// MPropertyFriendlyName "starting control point"
-	int32_t m_nMinCP; // 0x1c4	
+	int32_t m_nMinCP; // 0x1cc	
 	// MPropertyFriendlyName "ending control point"
 	// MParticleMinVersion "2"
-	int32_t m_nMaxCP; // 0x1c8	
+	int32_t m_nMaxCP; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
+	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
 public:
 	// MPropertyFriendlyName "dynamic control point count"
-	CParticleCollectionFloatInput m_nDynamicCPCount; // 0x1d0	
+	CParticleCollectionFloatInput m_nDynamicCPCount; // 0x1d8	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 4
 // Size: 0x28
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ItemSlotInfo_t
@@ -34538,7 +35353,6 @@ public:
 // Alignment: 8
 // Size: 0xd8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "TestDomain"
@@ -34557,7 +35371,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Boolean"
@@ -34569,9 +35382,8 @@ public:
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
-// Size: 0x28
+// Size: 0x30
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ExtraVertexStreamOverride_t : public BaseSceneObjectOverride_t
@@ -34588,7 +35400,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct EntityIOConnectionData_t
@@ -34608,78 +35419,76 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xe30
+// Size: 0xe78
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderProjected : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "project on characters"
-	bool m_bProjectCharacter; // 0x208	
+	bool m_bProjectCharacter; // 0x210	
 	// MPropertyFriendlyName "project on world"
-	bool m_bProjectWorld; // 0x209	
+	bool m_bProjectWorld; // 0x211	
 	// MPropertyFriendlyName "project on water"
-	bool m_bProjectWater; // 0x20a	
+	bool m_bProjectWater; // 0x212	
 	// MPropertyFriendlyName "flip horizontal"
-	bool m_bFlipHorizontal; // 0x20b	
+	bool m_bFlipHorizontal; // 0x213	
 	// MPropertyFriendlyName "enable projected depth controls"
-	bool m_bEnableProjectedDepthControls; // 0x20c	
+	bool m_bEnableProjectedDepthControls; // 0x214	
 private:
-	[[maybe_unused]] uint8_t __pad020d[0x3]; // 0x20d
+	[[maybe_unused]] uint8_t __pad0215[0x3]; // 0x215
 public:
 	// MPropertyFriendlyName "min projection depth"
 	// MPropertySuppressExpr "!m_bEnableProjectedDepthControls"
-	float m_flMinProjectionDepth; // 0x210	
+	float m_flMinProjectionDepth; // 0x218	
 	// MPropertyFriendlyName "max projection depth"
 	// MPropertySuppressExpr "!m_bEnableProjectedDepthControls"
-	float m_flMaxProjectionDepth; // 0x214	
+	float m_flMaxProjectionDepth; // 0x21c	
 	// MPropertyFriendlyName "materials"
 	// MParticleRequireDefaultArrayEntry
 	// MPropertyAutoExpandSelf
-	CUtlVector< RenderProjectedMaterial_t > m_vecProjectedMaterials; // 0x218	
+	CUtlVector< RenderProjectedMaterial_t > m_vecProjectedMaterials; // 0x220	
 	// MPropertyFriendlyName "material selection"
-	CPerParticleFloatInput m_flMaterialSelection; // 0x230	
+	CPerParticleFloatInput m_flMaterialSelection; // 0x238	
 	// MPropertyFriendlyName "sheet animation time scale"
-	float m_flAnimationTimeScale; // 0x388	
+	float m_flAnimationTimeScale; // 0x398	
 	// MPropertyFriendlyName "orient to normal"
-	bool m_bOrientToNormal; // 0x38c	
+	bool m_bOrientToNormal; // 0x39c	
 private:
-	[[maybe_unused]] uint8_t __pad038d[0x3]; // 0x38d
+	[[maybe_unused]] uint8_t __pad039d[0x3]; // 0x39d
 public:
 	// MPropertyFriendlyName "material variables"
 	// MPropertyAutoExpandSelf
-	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x390	
+	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x3a0	
 	// MPropertyStartGroup "+Renderer Modifiers"
 	// MPropertyFriendlyName "Radius Scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flRadiusScale; // 0x3a8	
+	CParticleCollectionFloatInput m_flRadiusScale; // 0x3b8	
 	// MPropertyFriendlyName "alpha scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flAlphaScale; // 0x500	
+	CParticleCollectionFloatInput m_flAlphaScale; // 0x518	
 	// MPropertyFriendlyName "rotation roll scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flRollScale; // 0x658	
+	CParticleCollectionFloatInput m_flRollScale; // 0x678	
 	// MPropertyFriendlyName "per-particle alpha scale attribute"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "700"
-	ParticleAttributeIndex_t m_nAlpha2Field; // 0x7b0	
+	ParticleAttributeIndex_t m_nAlpha2Field; // 0x7d8	
 private:
-	[[maybe_unused]] uint8_t __pad07b4[0x4]; // 0x7b4
+	[[maybe_unused]] uint8_t __pad07dc[0x4]; // 0x7dc
 public:
 	// MPropertyFriendlyName "color blend"
 	// MPropertySortPriority "700"
-	CParticleCollectionVecInput m_vecColorScale; // 0x7b8	
+	CParticleCollectionVecInput m_vecColorScale; // 0x7e0	
 	// MPropertyFriendlyName "color blend type"
 	// MPropertySortPriority "700"
-	ParticleColorBlendType_t m_nColorBlendType; // 0xe10	
+	ParticleColorBlendType_t m_nColorBlendType; // 0xe58	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0xc0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SkeletonAnimCapture_t
@@ -34703,7 +35512,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CStateActionUpdater
@@ -34713,11 +35521,25 @@ public:
 	StateActionBehavior m_eBehavior; // 0x8	
 };
 
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x20
+// 
+// MGetKV3ClassDefaults
+struct RejuvinatorParams_t
+{
+public:
+	float m_flRejuvinatorExpirationWarningTiming; // 0x0	
+	float m_flRejuvinatorBuffDuration; // 0x4	
+	float m_flRejuvinatorDropHeight; // 0x8	
+	float m_flRejuvinatorDropDuration; // 0xc	
+	CSoundEventName m_strRejuvPickupSound; // 0x10	
+};
+
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Choice"
@@ -34738,7 +35560,6 @@ public:
 // Alignment: 4
 // Size: 0x6c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CGameScriptedMoveData
@@ -34771,9 +35592,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapDistanceToLineSegmentToScalar : public C_OP_RemapDistanceToLineSegmentBase
@@ -34781,17 +35601,32 @@ class C_OP_RemapDistanceToLineSegmentToScalar : public C_OP_RemapDistanceToLineS
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d8	
 	// MPropertyFriendlyName "output value at min distance"
-	float m_flMinOutputValue; // 0x1d4	
+	float m_flMinOutputValue; // 0x1dc	
 	// MPropertyFriendlyName "output value at max distance"
-	float m_flMaxOutputValue; // 0x1d8	
+	float m_flMaxOutputValue; // 0x1e0	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmCachedBoolNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	NmCachedValueMode_t m_mode; // 0x14	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x120
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqS1SeqDesc
@@ -34831,7 +35666,6 @@ public:
 // Alignment: 16
 // Size: 0xe0
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AimMatrixOpFixedSettings_t
@@ -34893,7 +35727,6 @@ public:
 // Size: 0x20
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MantleType_t
@@ -34929,9 +35762,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1f0
+// Size: 0x1f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreationNoise : public CParticleFunctionInitializer
@@ -34939,36 +35771,35 @@ class C_INIT_CreationNoise : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
 	// MPropertyFriendlyName "absolute value"
-	bool m_bAbsVal; // 0x1c4	
+	bool m_bAbsVal; // 0x1cc	
 	// MPropertyFriendlyName "invert absolute value"
-	bool m_bAbsValInv; // 0x1c5	
+	bool m_bAbsValInv; // 0x1cd	
 private:
-	[[maybe_unused]] uint8_t __pad01c6[0x2]; // 0x1c6
+	[[maybe_unused]] uint8_t __pad01ce[0x2]; // 0x1ce
 public:
 	// MPropertyFriendlyName "time coordinate offset"
-	float m_flOffset; // 0x1c8	
+	float m_flOffset; // 0x1d0	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1cc	
+	float m_flOutputMin; // 0x1d4	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d0	
+	float m_flOutputMax; // 0x1d8	
 	// MPropertyFriendlyName "time noise coordinate scale"
-	float m_flNoiseScale; // 0x1d4	
+	float m_flNoiseScale; // 0x1dc	
 	// MPropertyFriendlyName "spatial noise coordinate scale"
-	float m_flNoiseScaleLoc; // 0x1d8	
+	float m_flNoiseScaleLoc; // 0x1e0	
 	// MPropertyFriendlyName "spatial coordinate offset"
 	// MVectorIsCoordinate
-	Vector m_vecOffsetLoc; // 0x1dc	
+	Vector m_vecOffsetLoc; // 0x1e4	
 	// MPropertyFriendlyName "world time noise coordinate scale"
-	float m_flWorldTimeScale; // 0x1e8	
+	float m_flWorldTimeScale; // 0x1f0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1b8
+// Size: 0x1c0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SpinUpdate : public CSpinUpdateBase
@@ -34979,7 +35810,6 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PulseGraphExecutionHistoryCursorDesc_t
@@ -35025,51 +35855,49 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x208
+// Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointPositions : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "set positions in world space"
-	bool m_bUseWorldLocation; // 0x1c0	
+	bool m_bUseWorldLocation; // 0x1c8	
 	// MPropertyFriendlyName "inherit CP orientation"
-	bool m_bOrient; // 0x1c1	
+	bool m_bOrient; // 0x1c9	
 	// MPropertyFriendlyName "only set position once"
-	bool m_bSetOnce; // 0x1c2	
+	bool m_bSetOnce; // 0x1ca	
 private:
-	[[maybe_unused]] uint8_t __pad01c3[0x1]; // 0x1c3
+	[[maybe_unused]] uint8_t __pad01cb[0x1]; // 0x1cb
 public:
 	// MPropertyFriendlyName "first control point number"
-	int32_t m_nCP1; // 0x1c4	
+	int32_t m_nCP1; // 0x1cc	
 	// MPropertyFriendlyName "second control point number"
-	int32_t m_nCP2; // 0x1c8	
+	int32_t m_nCP2; // 0x1d0	
 	// MPropertyFriendlyName "third control point number"
-	int32_t m_nCP3; // 0x1cc	
+	int32_t m_nCP3; // 0x1d4	
 	// MPropertyFriendlyName "fourth control point number"
-	int32_t m_nCP4; // 0x1d0	
+	int32_t m_nCP4; // 0x1d8	
 	// MPropertyFriendlyName "first control point location"
 	// MVectorIsCoordinate
-	Vector m_vecCP1Pos; // 0x1d4	
+	Vector m_vecCP1Pos; // 0x1dc	
 	// MPropertyFriendlyName "second control point location"
 	// MVectorIsCoordinate
-	Vector m_vecCP2Pos; // 0x1e0	
+	Vector m_vecCP2Pos; // 0x1e8	
 	// MPropertyFriendlyName "third control point location"
 	// MVectorIsCoordinate
-	Vector m_vecCP3Pos; // 0x1ec	
+	Vector m_vecCP3Pos; // 0x1f4	
 	// MPropertyFriendlyName "fourth control point location"
 	// MVectorIsCoordinate
-	Vector m_vecCP4Pos; // 0x1f8	
+	Vector m_vecCP4Pos; // 0x200	
 	// MPropertyFriendlyName "control point to offset positions from"
-	int32_t m_nHeadLocation; // 0x204	
+	int32_t m_nHeadLocation; // 0x20c	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
 // Size: 0x68
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ParticlePreviewState_t
@@ -35099,10 +35927,19 @@ public:
 	Vector m_vecPreviewGravity; // 0x58	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0xc0
+// Has VTable
+class CNmBlendTask : public CNmBlendTaskBase
+{
+public:
+	// No schema binary for binding
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AdditionalAbilities_t
@@ -35117,7 +35954,6 @@ public:
 // Size: 0xa0
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CitadelCameraHorizOffsetOperationDef_t : public CitadelCameraOperationDef_t
@@ -35131,7 +35967,6 @@ public:
 // Alignment: 8
 // Size: 0x110
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Material Group"
@@ -35151,7 +35986,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeCtrlOsOffset_t
@@ -35177,58 +36011,55 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x488
+// Size: 0x4a0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_VelocityRadialRandom : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "random speed min"
-	CPerParticleFloatInput m_fSpeedMin; // 0x1c8	
+	CPerParticleFloatInput m_fSpeedMin; // 0x1d0	
 	// MPropertyFriendlyName "random speed max"
-	CPerParticleFloatInput m_fSpeedMax; // 0x320	
+	CPerParticleFloatInput m_fSpeedMax; // 0x330	
 	// MPropertyFriendlyName "local space scale"
-	Vector m_vecLocalCoordinateSystemSpeedScale; // 0x478	
+	Vector m_vecLocalCoordinateSystemSpeedScale; // 0x490	
 private:
-	[[maybe_unused]] uint8_t __pad0484[0x1]; // 0x484
+	[[maybe_unused]] uint8_t __pad049c[0x1]; // 0x49c
 public:
 	// MPropertyFriendlyName "ignore delta time"
-	bool m_bIgnoreDelta; // 0x485	
+	bool m_bIgnoreDelta; // 0x49d	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DistanceCull : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point"
-	int32_t m_nControlPoint; // 0x1b8	
+	int32_t m_nControlPoint; // 0x1c0	
 	// MPropertyFriendlyName "control point offset"
 	// MVectorIsCoordinate
-	Vector m_vecPointOffset; // 0x1bc	
+	Vector m_vecPointOffset; // 0x1c4	
 	// MPropertyFriendlyName "cull distance"
-	float m_flDistance; // 0x1c8	
+	float m_flDistance; // 0x1d0	
 	// MPropertyFriendlyName "cull inside instead of outside"
-	bool m_bCullInside; // 0x1cc	
+	bool m_bCullInside; // 0x1d4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x930
+// Size: 0x960
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_DistanceToCPInit : public CParticleFunctionInitializer
@@ -35236,53 +36067,52 @@ class C_INIT_DistanceToCPInit : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "distance minimum"
-	CPerParticleFloatInput m_flInputMin; // 0x1c8	
+	CPerParticleFloatInput m_flInputMin; // 0x1d0	
 	// MPropertyFriendlyName "distance maximum"
-	CPerParticleFloatInput m_flInputMax; // 0x320	
+	CPerParticleFloatInput m_flInputMax; // 0x330	
 	// MPropertyFriendlyName "output minimum"
-	CPerParticleFloatInput m_flOutputMin; // 0x478	
+	CPerParticleFloatInput m_flOutputMin; // 0x490	
 	// MPropertyFriendlyName "output maximum"
-	CPerParticleFloatInput m_flOutputMax; // 0x5d0	
+	CPerParticleFloatInput m_flOutputMax; // 0x5f0	
 	// MPropertyFriendlyName "control point"
-	int32_t m_nStartCP; // 0x728	
+	int32_t m_nStartCP; // 0x750	
 	// MPropertyFriendlyName "ensure line of sight"
-	bool m_bLOS; // 0x72c	
+	bool m_bLOS; // 0x754	
 	// MPropertyFriendlyName "LOS collision group"
-	char m_CollisionGroupName[128]; // 0x72d	
+	char m_CollisionGroupName[128]; // 0x755	
 private:
-	[[maybe_unused]] uint8_t __pad07ad[0x3]; // 0x7ad
+	[[maybe_unused]] uint8_t __pad07d5[0x3]; // 0x7d5
 public:
 	// MPropertyFriendlyName "Trace Set"
-	ParticleTraceSet_t m_nTraceSet; // 0x7b0	
+	ParticleTraceSet_t m_nTraceSet; // 0x7d8	
 private:
-	[[maybe_unused]] uint8_t __pad07b4[0x4]; // 0x7b4
+	[[maybe_unused]] uint8_t __pad07dc[0x4]; // 0x7dc
 public:
 	// MPropertyFriendlyName "Maximum Trace Length"
-	CPerParticleFloatInput m_flMaxTraceLength; // 0x7b8	
+	CPerParticleFloatInput m_flMaxTraceLength; // 0x7e0	
 	// MPropertyFriendlyName "LOS Failure Scalar"
-	float m_flLOSScale; // 0x910	
+	float m_flLOSScale; // 0x940	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x914	
+	ParticleSetMethod_t m_nSetMethod; // 0x944	
 	// MPropertyFriendlyName "only active within specified distance"
-	bool m_bActiveRange; // 0x918	
+	bool m_bActiveRange; // 0x948	
 private:
-	[[maybe_unused]] uint8_t __pad0919[0x3]; // 0x919
+	[[maybe_unused]] uint8_t __pad0949[0x3]; // 0x949
 public:
 	// MPropertyFriendlyName "distance component scale"
-	Vector m_vecDistanceScale; // 0x91c	
+	Vector m_vecDistanceScale; // 0x94c	
 	// MPropertyFriendlyName "remap bias"
-	float m_flRemapBias; // 0x928	
+	float m_flRemapBias; // 0x958	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMorphData
@@ -35296,7 +36126,6 @@ public:
 // Alignment: 16
 // Size: 0x170
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAimMatrixUpdateNode : public CUnaryUpdateNode
@@ -35322,7 +36151,6 @@ public:
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CDirectionalBlendUpdateNode : public CLeafUpdateNode
@@ -35350,7 +36178,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct HeroScalingStat_t
@@ -35364,7 +36191,6 @@ public:
 // Alignment: 16
 // Size: 0x50
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdSpringIntegrator_t
@@ -35382,7 +36208,6 @@ public:
 // Size: 0x8
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixPannerDesc_t
@@ -35407,7 +36232,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ModelBoneFlexDriver_t
@@ -35425,7 +36249,6 @@ public:
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Bool Parameter"
@@ -35465,7 +36288,6 @@ public:
 // Alignment: 8
 // Size: 0xc8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -35491,23 +36313,20 @@ public:
 // Alignment: 8
 // Size: 0xf8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MPropertyFriendlyName "FM Synth Container"
-// MPropertyDescription "Real time FM Synthesis"
-class CVoiceContainerRealtimeFMSineWave : public CVoiceContainerBase
+// MPropertyFriendlyName "Selector"
+// MPropertyDescription "Plays a selected vsnd on playback."
+class CVoiceContainerSelector : public CVoiceContainerBase
 {
 public:
-	// MPropertyFriendlyName "Frequency (Hz)"
-	// MPropertyDescription "The frequency of this sine tone."
-	float m_flCarrierFrequency; // 0xe8	
-	// MPropertyFriendlyName "Mod Frequency (Hz)"
-	// MPropertyDescription "The frequency of the sine tone modulating this sine tone."
-	float m_flModulatorFrequency; // 0xec	
-	// MPropertyFriendlyName "Mod Amount (Hz)"
-	// MPropertyDescription "The amount the modulating sine tone modulates this sine tone."
-	float m_flModulatorAmount; // 0xf0	
+	// MPropertyFriendlyName "Playback Mode"
+	PlayBackMode_t m_mode; // 0xb8	
+private:
+	[[maybe_unused]] uint8_t __pad00bc[0x4]; // 0xbc
+public:
+	// MPropertyFriendlyName "Sounds To play"
+	CUtlVector< SoundWithProbability_t > m_soundsToPlay; // 0xc0	
 };
 
 // Registered binary: server.dll (project 'server')
@@ -35547,27 +36366,25 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x828
+// Size: 0x850
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_LocalAccelerationForce : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "local space control point"
-	int32_t m_nCP; // 0x1c8	
+	int32_t m_nCP; // 0x1d0	
 	// MPropertyFriendlyName "scale control point"
-	int32_t m_nScaleCP; // 0x1cc	
+	int32_t m_nScaleCP; // 0x1d4	
 	// MPropertyFriendlyName "local space acceleration"
-	CParticleCollectionVecInput m_vecAccel; // 0x1d0	
+	CParticleCollectionVecInput m_vecAccel; // 0x1d8	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmVirtualParameterBoolNode::CDefinition : public CNmBoolValueNode::CDefinition
@@ -35593,13 +36410,12 @@ public:
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0xb0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmSyncTrack
 {
 public:
-	CUtlLeanVectorFixedGrowable< CNmSyncTrack::Event_t > m_syncEvents; // 0x0	
+	CUtlLeanVectorFixedGrowable< CNmSyncTrack::Event_t, 10 > m_syncEvents; // 0x0	
 	int32_t m_nStartEventOffset; // 0xa8	
 	
 	// Static fields:
@@ -35610,7 +36426,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct TagSpan_t
@@ -35623,28 +36438,46 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
+// Size: 0x88
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmBlend1DNode::CDefinition : public CNmParameterizedBlendNode::CDefinition
+{
+public:
+	// -> m_blendRanges - 0x40
+	// -> m_parameterRange - 0x80
+	CNmParameterizedBlendNode::Parameterization_t m_parameterization; // 0x40	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CNmStateNode__TimedEvent_t
 {
 public:
 	CGlobalSymbol m_ID; // 0x0	
-	float m_timeValue; // 0x8	
+	float m_flTimeValueSeconds; // 0x8	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
-// Alignment: 8
-// Size: 0x10
-// Has VTable
-// Construct allowed
+// Alignment: 16
+// Size: 0x30
+// Has Trivial Destructor
 // 
 // MGetKV3ClassDefaults
-class CNmControlParameterTargetNode::CDefinition : public CNmTargetValueNode::CDefinition
+class CNmTarget
 {
 public:
+	CTransform m_transform; // 0x0	
+	CGlobalSymbol m_boneID; // 0x20	
+	bool m_bIsBoneTarget; // 0x28	
+	bool m_bIsUsingBoneSpaceOffsets; // 0x29	
+	bool m_bHasOffsets; // 0x2a	
+	bool m_bIsSet; // 0x2b	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -35687,7 +36520,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vgcxdata"
+// MResourceTypeForInfoType "vgcxdata‡bmΩ˚"
 class InfoForResourceTypeCGcExportableExternalData
 {
 private:
@@ -35697,52 +36530,49 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x220
+// Size: 0x228
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapTransformToVelocity : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0x1b8	
+	CParticleTransformInput m_TransformInput; // 0x1c0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xad0
+// Size: 0xb08
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_LerpToInitialPosition : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1b8	
+	int32_t m_nControlPointNumber; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "Interpolation"
-	CPerParticleFloatInput m_flInterpolation; // 0x1c0	
+	CPerParticleFloatInput m_flInterpolation; // 0x1c8	
 	// MPropertyFriendlyName "position cache attribute"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nCacheField; // 0x318	
+	ParticleAttributeIndex_t m_nCacheField; // 0x328	
 private:
-	[[maybe_unused]] uint8_t __pad031c[0x4]; // 0x31c
+	[[maybe_unused]] uint8_t __pad032c[0x4]; // 0x32c
 public:
 	// MPropertyFriendlyName "scale"
-	CParticleCollectionFloatInput m_flScale; // 0x320	
+	CParticleCollectionFloatInput m_flScale; // 0x330	
 	// MPropertyFriendlyName "component scale"
-	CParticleCollectionVecInput m_vecScale; // 0x478	
+	CParticleCollectionVecInput m_vecScale; // 0x490	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x208
+// Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapNamedModelBodyPartToScalar : public C_INIT_RemapNamedModelElementToScalar
@@ -35754,7 +36584,6 @@ public:
 // Alignment: 8
 // Size: 0x78
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "FootstepLanded Tag"
@@ -35782,7 +36611,6 @@ public:
 // Alignment: 8
 // Size: 0xd8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Enum Parameter"
@@ -35808,7 +36636,6 @@ public:
 // Size: 0x80
 // Has VTable
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimationGraphVisualizerPie : public CAnimationGraphVisualizerPrimitiveBase
@@ -35824,14 +36651,13 @@ public:
 // Alignment: 8
 // Size: 0x28
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmAnimationPoseNode::CDefinition : public CNmPoseNode::CDefinition
 {
 public:
 	int16_t m_nPoseTimeValueNodeIdx; // 0x10	
-	int16_t m_nDataSlotIndex; // 0x12	
+	int16_t m_nDataSlotIdx; // 0x12	
 	Range_t m_inputTimeRemapRange; // 0x14	
 	float m_flUserSpecifiedTime; // 0x1c	
 	bool m_bUseFramesAsInput; // 0x20	
@@ -35840,7 +36666,6 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x50
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulseRuntimeMethodArg
@@ -35855,7 +36680,6 @@ public:
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Set Position"
@@ -35872,26 +36696,24 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RampCPLinearRandom : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutControlPointNumber; // 0x1c0	
+	int32_t m_nOutControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "ramp rate min"
-	Vector m_vecRateMin; // 0x1c4	
+	Vector m_vecRateMin; // 0x1cc	
 	// MPropertyFriendlyName "ramp rate max"
-	Vector m_vecRateMax; // 0x1d0	
+	Vector m_vecRateMax; // 0x1d8	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 16
 // Size: 0x120
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AnimationSnapshot_t : public AnimationSnapshotBase_t
@@ -35907,7 +36729,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0xa0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VPhysXCollisionAttributes_t
@@ -35927,7 +36748,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CActionComponentUpdater : public CAnimComponentUpdater
@@ -35940,7 +36760,6 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmVirtualParameterVectorNode::CDefinition : public CNmVectorValueNode::CDefinition
@@ -35952,7 +36771,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimFrameSegment
@@ -35971,7 +36789,6 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Cloth Settings Tag"
@@ -36000,7 +36817,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CPulseCell_Outflow_CycleOrdered__InstanceState_t
@@ -36025,7 +36841,6 @@ public:
 // Registered binary: client.dll (project 'mathlib_extended')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VariableInfo_t
@@ -36041,65 +36856,92 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_OscillateScalar : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "oscillation rate min"
-	float m_RateMin; // 0x1b8	
+	float m_RateMin; // 0x1c0	
 	// MPropertyFriendlyName "oscillation rate max"
-	float m_RateMax; // 0x1bc	
+	float m_RateMax; // 0x1c4	
 	// MPropertyFriendlyName "oscillation frequency min"
-	float m_FrequencyMin; // 0x1c0	
+	float m_FrequencyMin; // 0x1c8	
 	// MPropertyFriendlyName "oscillation frequency max"
-	float m_FrequencyMax; // 0x1c4	
+	float m_FrequencyMax; // 0x1cc	
 	// MPropertyFriendlyName "oscillation field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nField; // 0x1c8	
+	ParticleAttributeIndex_t m_nField; // 0x1d0	
 	// MPropertyFriendlyName "proportional 0/1"
-	bool m_bProportional; // 0x1cc	
+	bool m_bProportional; // 0x1d4	
 	// MPropertyFriendlyName "start/end proportional"
-	bool m_bProportionalOp; // 0x1cd	
+	bool m_bProportionalOp; // 0x1d5	
 private:
-	[[maybe_unused]] uint8_t __pad01ce[0x2]; // 0x1ce
+	[[maybe_unused]] uint8_t __pad01d6[0x2]; // 0x1d6
 public:
 	// MPropertyFriendlyName "start time min"
-	float m_flStartTime_min; // 0x1d0	
+	float m_flStartTime_min; // 0x1d8	
 	// MPropertyFriendlyName "start time max"
-	float m_flStartTime_max; // 0x1d4	
+	float m_flStartTime_max; // 0x1dc	
 	// MPropertyFriendlyName "end time min"
-	float m_flEndTime_min; // 0x1d8	
+	float m_flEndTime_min; // 0x1e0	
 	// MPropertyFriendlyName "end time max"
-	float m_flEndTime_max; // 0x1dc	
+	float m_flEndTime_max; // 0x1e4	
 	// MPropertyFriendlyName "oscillation multiplier"
-	float m_flOscMult; // 0x1e0	
+	float m_flOscMult; // 0x1e8	
 	// MPropertyFriendlyName "oscillation start phase"
-	float m_flOscAdd; // 0x1e4	
+	float m_flOscAdd; // 0x1ec	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ShapeMatchingConstraint : public CParticleFunctionConstraint
 {
 public:
 	// MPropertyFriendlyName "shape restoration time"
-	float m_flShapeRestorationTime; // 0x1b8	
+	float m_flShapeRestorationTime; // 0x1c0	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFloatRangeComparisonNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	Range_t m_range; // 0x10	
+	int16_t m_nInputValueNodeIdx; // 0x18	
+	bool m_bIsInclusiveCheck; // 0x1a	
+};
+
+// Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
+// Alignment: 8
+// Size: 0x28
+// 
+// MGetKV3ClassDefaults
+struct SoundWithProbability_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// MPropertyFriendlyName "Vsnd"
+	CSoundContainerReference m_sound; // 0x8	
+	// MPropertyFriendlyName "Weight"
+	float m_fProbabilityWeight; // 0x20	
 };
 
 // Registered binary: soundsystem.dll (project 'soundsystem_lowlevel')
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixShaperDesc_t
@@ -36130,18 +36972,6 @@ public:
 	bool m_bAllowMultipleScenes; // 0x88	
 };
 
-// Registered binary: server.dll (project 'server')
-// Alignment: 8
-// Size: 0x14
-// Has Trivial Destructor
-struct UnreachableEnt_t
-{
-public:
-	CHandle< CBaseEntity > hUnreachableEnt; // 0x0	
-	GameTime_t fExpireTime; // 0x4	
-	Vector vLocationWhenUnreachable; // 0x8	
-};
-
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
 // Alignment: 8
 // Size: 0x1
@@ -36161,7 +36991,6 @@ public:
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSoundInfoHeader
@@ -36173,29 +37002,27 @@ public:
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0xf0
+// Size: 0xc0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MPropertyFriendlyName "Decaying Sine Wave Container"
+// MPropertyFriendlyName "TESTBED: Decaying Sine Wave Container"
 // MPropertyDescription "Only text params, renders in real time"
 class CVoiceContainerDecayingSineWave : public CVoiceContainerBase
 {
 public:
 	// MPropertyFriendlyName "Frequency (Hz)"
 	// MPropertyDescription "The frequency of this sine tone."
-	float m_flFrequency; // 0xe8	
+	float m_flFrequency; // 0xb8	
 	// MPropertyFriendlyName "Decay Time (Seconds)"
 	// MPropertyDescription "The frequency of this sine tone."
-	float m_flDecayTime; // 0xec	
+	float m_flDecayTime; // 0xbc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
 // Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MParticleMinVersion "8"
 // MGetKV3ClassDefaults
@@ -36203,22 +37030,21 @@ class C_OP_LockToSavedSequentialPathV2 : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "start fade time"
-	float m_flFadeStart; // 0x1b8	
+	float m_flFadeStart; // 0x1c0	
 	// MPropertyFriendlyName "end fade time"
-	float m_flFadeEnd; // 0x1bc	
+	float m_flFadeEnd; // 0x1c4	
 	// MPropertyFriendlyName "Use sequential CP pairs between start and end point"
-	bool m_bCPPairs; // 0x1c0	
+	bool m_bCPPairs; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c1[0xf]; // 0x1c1
+	[[maybe_unused]] uint8_t __pad01c9[0x7]; // 0x1c9
 public:
 	CPathParameters m_PathParams; // 0x1d0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_PointList : public CParticleFunctionInitializer
@@ -36226,50 +37052,89 @@ class C_INIT_PointList : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "point list"
-	CUtlVector< PointDefinition_t > m_pointList; // 0x1c8	
+	CUtlVector< PointDefinition_t > m_pointList; // 0x1d0	
 	// MPropertyFriendlyName "space points along path"
-	bool m_bPlaceAlongPath; // 0x1e0	
+	bool m_bPlaceAlongPath; // 0x1e8	
 	// MPropertyFriendlyName "Treat path as a loop"
-	bool m_bClosedLoop; // 0x1e1	
+	bool m_bClosedLoop; // 0x1e9	
 private:
-	[[maybe_unused]] uint8_t __pad01e2[0x2]; // 0x1e2
+	[[maybe_unused]] uint8_t __pad01ea[0x2]; // 0x1ea
 public:
 	// MPropertyFriendlyName "Numer of points along path"
-	int32_t m_nNumPointsAlongPath; // 0x1e4	
+	int32_t m_nNumPointsAlongPath; // 0x1ec	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x58
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFloatCurveNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x6]; // 0x12
+public:
+	CPiecewiseCurve m_curve; // 0x18	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x90
+// Size: 0x80
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-class CCycleControlClipUpdateNode : public CLeafUpdateNode
+class CPairedSequenceUpdateNode : public CSequenceUpdateNodeBase
 {
-private:
-	[[maybe_unused]] uint8_t __pad0058[0x8]; // 0x58
 public:
-	CUtlVector< TagSpan_t > m_tags; // 0x60	
-private:
-	[[maybe_unused]] uint8_t __pad0078[0x4]; // 0x78
+	CGlobalSymbol m_sPairedSequenceRole; // 0x70	
+};
+
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
+// Size: 0x260
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Bend Deformer"
+// MPropertyDescription "Creates a bend deformer that is applied to child elements. The deformation bends the local space x-axis around the local space z-axis. The Angles property can be used to rotate the local axis to change the direction of deformation."
+class CSmartPropElement_BendDeformer : public CSmartPropElement_Deformer
+{
 public:
-	HSequence m_hSequence; // 0x7c	
-	float m_duration; // 0x80	
-	AnimValueSource m_valueSource; // 0x84	
-	CAnimParamHandle m_paramIndex; // 0x88	
+	// MPropertyFriendlyName "Deformation Enabled"
+	// MPropertyDescription "Should the deformation be applied. If disabled the children will still be placed, but will not be deformed. Esentially making the element behave as a group."
+	CSmartPropAttributeBool m_bDeformationEnabled; // 0xa0	
+	// MPropertyFriendlyName "Origin"
+	// MPropertyDescription "A local offset to apply to the base volume of the deformer that will not apply to its children."
+	CSmartPropAttributeVector m_vOrigin; // 0xe0	
+	// MPropertyFriendlyName "Angles"
+	// MPropertyDescription "A local rotation to apply to apply the base volume of the deformer that will not apply to its children. This can be used to alter the direction of the deformation."
+	CSmartPropAttributeAngles m_vAngles; // 0x120	
+	// MPropertyFriendlyName "Dimensions"
+	// MPropertyDescription "Size of the base volume to be deformed."
+	CSmartPropAttributeVector m_vSize; // 0x160	
+	// MPropertyFriendlyName "Bend Angle"
+	// MPropertyDescription "Bend amount to apply, specified in degrees. Bend occurs along the local x-axis and bends around the local z-axis"
+	CSmartPropAttributeFloat m_flBendAngle; // 0x1a0	
+	// MPropertyFriendlyName "Bend Point"
+	// MPropertyDescription "[ 0, 1 ] Value specifying the location along the local x-axis the bend will occur around"
+	CSmartPropAttributeFloat m_flBendPoint; // 0x1e0	
+	// MPropertyFriendlyName "Bend Radius"
+	// MPropertyDescription "Radius of the bend. If 0 the radius will be computed automatically to preserve the length of the inner edge of the x-axis. If a non-zero value is specified then the inner edge will maintain this radius, but its length will change."
+	CSmartPropAttributeFloat m_flBendRadius; // 0x220	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x500
+// Size: 0x518
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_AttractToControlPoint : public CParticleFunctionForce
@@ -36277,30 +37142,29 @@ class C_OP_AttractToControlPoint : public CParticleFunctionForce
 public:
 	// MPropertyFriendlyName "component scale"
 	// MVectorIsCoordinate
-	Vector m_vecComponentScale; // 0x1c8	
+	Vector m_vecComponentScale; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
+	[[maybe_unused]] uint8_t __pad01dc[0x4]; // 0x1dc
 public:
 	// MPropertyFriendlyName "amount of force (or Max Force)"
-	CPerParticleFloatInput m_fForceAmount; // 0x1d8	
+	CPerParticleFloatInput m_fForceAmount; // 0x1e0	
 	// MPropertyFriendlyName "falloff power"
-	float m_fFalloffPower; // 0x330	
+	float m_fFalloffPower; // 0x340	
 private:
-	[[maybe_unused]] uint8_t __pad0334[0x4]; // 0x334
+	[[maybe_unused]] uint8_t __pad0344[0x4]; // 0x344
 public:
 	// MPropertyFriendlyName "input position transform"
-	CParticleTransformInput m_TransformInput; // 0x338	
+	CParticleTransformInput m_TransformInput; // 0x348	
 	// MPropertyFriendlyName "Min Pullforce"
-	CPerParticleFloatInput m_fForceAmountMin; // 0x3a0	
+	CPerParticleFloatInput m_fForceAmountMin; // 0x3b0	
 	// MPropertyFriendlyName "Apply Min Pullforce"
-	bool m_bApplyMinForce; // 0x4f8	
+	bool m_bApplyMinForce; // 0x510	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x798
+// Size: 0x7c0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreateInEpitrochoid : public CParticleFunctionInitializer
@@ -36308,34 +37172,33 @@ class C_INIT_CreateInEpitrochoid : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "first dimension 0-2 (-1 disables)"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nComponent1; // 0x1c0	
+	int32_t m_nComponent1; // 0x1c8	
 	// MPropertyFriendlyName "second dimension 0-2 (-1 disables)"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nComponent2; // 0x1c4	
+	int32_t m_nComponent2; // 0x1cc	
 	// MPropertyFriendlyName "input transform"
-	CParticleTransformInput m_TransformInput; // 0x1c8	
+	CParticleTransformInput m_TransformInput; // 0x1d0	
 	// MPropertyFriendlyName "particle density"
-	CPerParticleFloatInput m_flParticleDensity; // 0x230	
+	CPerParticleFloatInput m_flParticleDensity; // 0x238	
 	// MPropertyFriendlyName "point offset"
-	CPerParticleFloatInput m_flOffset; // 0x388	
+	CPerParticleFloatInput m_flOffset; // 0x398	
 	// MPropertyFriendlyName "radius 1"
-	CPerParticleFloatInput m_flRadius1; // 0x4e0	
+	CPerParticleFloatInput m_flRadius1; // 0x4f8	
 	// MPropertyFriendlyName "radius 2"
-	CPerParticleFloatInput m_flRadius2; // 0x638	
+	CPerParticleFloatInput m_flRadius2; // 0x658	
 	// MPropertyFriendlyName "use particle count instead of creation time"
-	bool m_bUseCount; // 0x790	
+	bool m_bUseCount; // 0x7b8	
 	// MPropertyFriendlyName "local space"
-	bool m_bUseLocalCoords; // 0x791	
+	bool m_bUseLocalCoords; // 0x7b9	
 	// MPropertyFriendlyName "offset from existing position"
-	bool m_bOffsetExistingPos; // 0x792	
+	bool m_bOffsetExistingPos; // 0x7ba	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x29e0
+// Size: 0x2ac0
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBaseTrailRenderer : public CBaseRendererSource2
@@ -36344,34 +37207,33 @@ public:
 	// MPropertyStartGroup "Orientation"
 	// MPropertyFriendlyName "orientation type"
 	// MPropertySortPriority "750"
-	ParticleOrientationChoiceList_t m_nOrientationType; // 0x2718	
+	ParticleOrientationChoiceList_t m_nOrientationType; // 0x27e8	
 	// MPropertyFriendlyName "orientation control point"
 	// MPropertySortPriority "750"
 	// MPropertySuppressExpr "m_nOrientationType != PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL && m_nOrientationType != PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL"
-	int32_t m_nOrientationControlPoint; // 0x271c	
+	int32_t m_nOrientationControlPoint; // 0x27ec	
 	// MPropertyStartGroup "Screenspace Fading and culling"
 	// MPropertyFriendlyName "minimum visual screen-size"
 	// MPropertySortPriority "900"
-	float m_flMinSize; // 0x2720	
+	float m_flMinSize; // 0x27f0	
 	// MPropertyFriendlyName "maximum visual screen-size"
 	// MPropertySortPriority "900"
-	float m_flMaxSize; // 0x2724	
+	float m_flMaxSize; // 0x27f4	
 	// MPropertyFriendlyName "start fade screen-size"
 	// MPropertySortPriority "900"
-	CParticleCollectionRendererFloatInput m_flStartFadeSize; // 0x2728	
+	CParticleCollectionRendererFloatInput m_flStartFadeSize; // 0x27f8	
 	// MPropertyFriendlyName "end fade and cull screen-size"
 	// MPropertySortPriority "900"
-	CParticleCollectionRendererFloatInput m_flEndFadeSize; // 0x2880	
+	CParticleCollectionRendererFloatInput m_flEndFadeSize; // 0x2958	
 	// MPropertyStartGroup "Trail UV Controls"
 	// MPropertyFriendlyName "Clamp Non-Sheet texture V coords"
 	// MPropertySortPriority "800"
-	bool m_bClampV; // 0x29d8	
+	bool m_bClampV; // 0x2ab8	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x60
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyArrayElementNameKey "m_sName"
@@ -36416,15 +37278,14 @@ public:
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
-// Size: 0x98
+// Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBoneConstraintPoseSpaceBone : public CBaseConstraint
 {
 public:
-	CUtlVector< CBoneConstraintPoseSpaceBone::Input_t > m_inputList; // 0x70	
+	CUtlVector< CBoneConstraintPoseSpaceBone::Input_t > m_inputList; // 0x68	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -36462,9 +37323,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x210
+// Size: 0x218
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapParticleCountToNamedModelSequenceScalar : public C_INIT_RemapParticleCountToNamedModelElementScalar
@@ -36472,33 +37332,43 @@ class C_INIT_RemapParticleCountToNamedModelSequenceScalar : public C_INIT_RemapP
 public:
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmBoneMaskNode::CDefinition : public CNmBoneMaskValueNode::CDefinition
+{
+public:
+	CGlobalSymbol m_boneMaskID; // 0x10	
+};
+
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xd70
+// Size: 0xdb8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SpringToVectorConstraint : public CParticleFunctionConstraint
 {
 public:
 	// MPropertyFriendlyName "slack"
-	CPerParticleFloatInput m_flRestLength; // 0x1b8	
+	CPerParticleFloatInput m_flRestLength; // 0x1c0	
 	// MPropertyFriendlyName "minimum segment length %"
-	CPerParticleFloatInput m_flMinDistance; // 0x310	
+	CPerParticleFloatInput m_flMinDistance; // 0x320	
 	// MPropertyFriendlyName "maximum segment length %"
-	CPerParticleFloatInput m_flMaxDistance; // 0x468	
+	CPerParticleFloatInput m_flMaxDistance; // 0x480	
 	// MPropertyFriendlyName "resting spacing"
-	CPerParticleFloatInput m_flRestingLength; // 0x5c0	
+	CPerParticleFloatInput m_flRestingLength; // 0x5e0	
 	// MPropertyFriendlyName "anchor vector"
-	CPerParticleVecInput m_vecAnchorVector; // 0x718	
+	CPerParticleVecInput m_vecAnchorVector; // 0x740	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CChoreoUpdateNode : public CUnaryUpdateNode
@@ -36509,7 +37379,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x78
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmSkeleton
@@ -36531,7 +37400,6 @@ public:
 // Alignment: 2
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeTreeChildren_t
@@ -36544,7 +37412,6 @@ public:
 // Alignment: 4
 // Size: 0x50
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixBoxverbDesc_t
@@ -36574,34 +37441,32 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_FadeAndKill : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "start fade in time"
-	float m_flStartFadeInTime; // 0x1b8	
+	float m_flStartFadeInTime; // 0x1c0	
 	// MPropertyFriendlyName "end fade in time"
-	float m_flEndFadeInTime; // 0x1bc	
+	float m_flEndFadeInTime; // 0x1c4	
 	// MPropertyFriendlyName "start fade out time"
-	float m_flStartFadeOutTime; // 0x1c0	
+	float m_flStartFadeOutTime; // 0x1c8	
 	// MPropertyFriendlyName "end fade out time"
-	float m_flEndFadeOutTime; // 0x1c4	
+	float m_flEndFadeOutTime; // 0x1cc	
 	// MPropertyFriendlyName "start alpha"
-	float m_flStartAlpha; // 0x1c8	
+	float m_flStartAlpha; // 0x1d0	
 	// MPropertyFriendlyName "end alpha"
-	float m_flEndAlpha; // 0x1cc	
+	float m_flEndAlpha; // 0x1d4	
 	// MPropertyFriendlyName "force preserving particle order"
-	bool m_bForcePreserveParticleOrder; // 0x1d0	
+	bool m_bForcePreserveParticleOrder; // 0x1d8	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
-// Size: 0x78
-// Construct allowed
+// Size: 0x60
 // 
 // MGetKV3ClassDefaults
 class CSceneObjectData
@@ -36609,10 +37474,10 @@ class CSceneObjectData
 public:
 	Vector m_vMinBounds; // 0x0	
 	Vector m_vMaxBounds; // 0xc	
-	CUtlVector< CMaterialDrawDescriptor > m_drawCalls; // 0x18	
-	CUtlVector< AABB_t > m_drawBounds; // 0x30	
-	CUtlVector< CMeshletDescriptor > m_meshlets; // 0x48	
-	Vector4D m_vTintColor; // 0x60	
+	CUtlLeanVector< CMaterialDrawDescriptor > m_drawCalls; // 0x18	
+	CUtlLeanVector< AABB_t > m_drawBounds; // 0x28	
+	CUtlLeanVector< CMeshletDescriptor > m_meshlets; // 0x38	
+	Vector4D m_vTintColor; // 0x48	
 };
 
 // Registered binary: server.dll (project 'navlib')
@@ -36627,9 +37492,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomRadius : public CParticleFunctionInitializer
@@ -36637,59 +37501,56 @@ class C_INIT_RandomRadius : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "radius min"
 	// MPropertyAttributeRange "biased 0 500"
-	float m_flRadiusMin; // 0x1c0	
+	float m_flRadiusMin; // 0x1c8	
 	// MPropertyFriendlyName "radius max"
 	// MPropertyAttributeRange "biased 0 500"
-	float m_flRadiusMax; // 0x1c4	
+	float m_flRadiusMax; // 0x1cc	
 	// MPropertyFriendlyName "radius random exponent"
 	// MPropertyAttributeRange "-2 2"
-	float m_flRadiusRandExponent; // 0x1c8	
+	float m_flRadiusRandExponent; // 0x1d0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomVectorComponent : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "min"
-	float m_flMin; // 0x1c0	
+	float m_flMin; // 0x1c8	
 	// MPropertyFriendlyName "max"
-	float m_flMax; // 0x1c4	
+	float m_flMax; // 0x1cc	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d0	
 	// MPropertyFriendlyName "component 0/1/2 X/Y/Z"
 	// MPropertyAttributeChoiceName "vector_component"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	int32_t m_nComponent; // 0x1cc	
+	int32_t m_nComponent; // 0x1d4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointOrientationToCPVelocity : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "control point input for velocity"
-	int32_t m_nCPInput; // 0x1c0	
+	int32_t m_nCPInput; // 0x1c8	
 	// MPropertyFriendlyName "control point output for orientation"
-	int32_t m_nCPOutput; // 0x1c4	
+	int32_t m_nCPOutput; // 0x1cc	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x340
+// Size: 0x350
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_PositionWarpScalar : public CParticleFunctionInitializer
@@ -36697,18 +37558,18 @@ class C_INIT_PositionWarpScalar : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "warp min"
 	// MVectorIsCoordinate
-	Vector m_vecWarpMin; // 0x1c0	
+	Vector m_vecWarpMin; // 0x1c8	
 	// MPropertyFriendlyName "warp max"
 	// MVectorIsCoordinate
-	Vector m_vecWarpMax; // 0x1cc	
+	Vector m_vecWarpMax; // 0x1d4	
 	// MPropertyFriendlyName "warp amount"
-	CPerParticleFloatInput m_InputValue; // 0x1d8	
+	CPerParticleFloatInput m_InputValue; // 0x1e0	
 	// MPropertyFriendlyName "previous position scale"
-	float m_flPrevPosScale; // 0x330	
+	float m_flPrevPosScale; // 0x340	
 	// MPropertyFriendlyName "warp scale control point number"
-	int32_t m_nScaleControlPointNumber; // 0x334	
+	int32_t m_nScaleControlPointNumber; // 0x344	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x338	
+	int32_t m_nControlPointNumber; // 0x348	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -36716,7 +37577,6 @@ public:
 // Size: 0x10
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct StanceInfo_t
@@ -36730,7 +37590,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMotionNodeSequence : public CMotionNode
@@ -36745,7 +37604,6 @@ public:
 // Alignment: 4
 // Size: 0x3c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootCycleDefinition
@@ -36766,7 +37624,6 @@ public:
 // Alignment: 1
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimDesc_Flag
@@ -36784,61 +37641,58 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1138
+// Size: 0x1190
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_VelocityRandom : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "random speed min"
-	CPerParticleFloatInput m_fSpeedMin; // 0x1c8	
+	CPerParticleFloatInput m_fSpeedMin; // 0x1d0	
 	// MPropertyFriendlyName "random speed max"
-	CPerParticleFloatInput m_fSpeedMax; // 0x320	
+	CPerParticleFloatInput m_fSpeedMax; // 0x330	
 	// MPropertyFriendlyName "speed in local coordinate system min"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_LocalCoordinateSystemSpeedMin; // 0x478	
+	CPerParticleVecInput m_LocalCoordinateSystemSpeedMin; // 0x490	
 	// MPropertyFriendlyName "speed in local coordinate system max"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_LocalCoordinateSystemSpeedMax; // 0xad0	
+	CPerParticleVecInput m_LocalCoordinateSystemSpeedMax; // 0xb08	
 	// MPropertyFriendlyName "Ignore delta time (RenderTrails)"
-	bool m_bIgnoreDT; // 0x1128	
+	bool m_bIgnoreDT; // 0x1180	
 private:
-	[[maybe_unused]] uint8_t __pad1129[0x3]; // 0x1129
+	[[maybe_unused]] uint8_t __pad1181[0x3]; // 0x1181
 public:
 	// MPropertyFriendlyName "Random number generator controls"
-	CRandomNumberGeneratorParameters m_randomnessParameters; // 0x112c	
+	CRandomNumberGeneratorParameters m_randomnessParameters; // 0x1184	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomAlphaWindowThreshold : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "min"
-	float m_flMin; // 0x1c0	
+	float m_flMin; // 0x1c8	
 	// MPropertyFriendlyName "max"
-	float m_flMax; // 0x1c4	
+	float m_flMax; // 0x1cc	
 	// MPropertyFriendlyName "exponent"
-	float m_flExponent; // 0x1c8	
+	float m_flExponent; // 0x1d0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapNamedModelBodyPartEndCap : public C_OP_RemapNamedModelElementEndCap
@@ -36850,13 +37704,22 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBoneVelocityMetricEvaluator : public CMotionMetricEvaluator
 {
 public:
 	int32_t m_nBoneIndex; // 0x50	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x30
+// Has VTable
+class CNmZeroPoseTask : public CNmTask
+{
+public:
+	// No schema binary for binding
 };
 
 // Registered binary: client.dll (project 'client')
@@ -36908,7 +37771,6 @@ public:
 // Registered binary: client.dll (project 'mathlib_extended')
 // Alignment: 8
 // Size: 0x50
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFuseProgram
@@ -36923,7 +37785,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFeVertexMapBuildArray
@@ -36936,7 +37797,6 @@ public:
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSoftParent_t
@@ -36948,9 +37808,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapNamedModelMeshGroupEndCap : public C_OP_RemapNamedModelElementEndCap
@@ -36960,25 +37819,23 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x230
+// Size: 0x238
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_NormalAlignToCP : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "input"
-	CParticleTransformInput m_transformInput; // 0x1c0	
+	CParticleTransformInput m_transformInput; // 0x1c8	
 	// MPropertyFriendlyName "control point axis"
-	ParticleControlPointAxis_t m_nControlPointAxis; // 0x228	
+	ParticleControlPointAxis_t m_nControlPointAxis; // 0x230	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "FootFall Tag"
@@ -37005,10 +37862,30 @@ public:
 	bool m_bRenderOnly; // 0x34	
 };
 
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
+// Size: 0xa8
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Material Override"
+// MPropertyDescription "Specifies a table of material replacements to apply to all following models. Mapping goes from the material specified by the model (including material group selection) to the replacement material. Previous material overrides are not considered when determining the base material."
+// MVDataClassGroup
+class CSmartPropOperation_MaterialOverride : public CSmartPropOperation
+{
+public:
+	// MPropertyFriendlyName "Clear Active Overrides"
+	// MPropertyDescription "If enabled, clear any previous material overrides, so that only the material replacements specified in this table will be active."
+	CSmartPropAttributeBool m_bClearCurrentOverrides; // 0x50	
+	// MPropertyAutoExpandSelf
+	// MPropertyFriendlyName "Material Replacements"
+	// MPropertyDescription "Table specifying pairs of existing materials and the material to replace them with."
+	CUtlVector< CSmartPropMaterialReplacement > m_MaterialReplacements; // 0x90	
+};
+
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 16
 // Size: 0xd0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFeNamedJiggleBone
@@ -37022,9 +37899,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomNamedModelBodyPart : public C_INIT_RandomNamedModelElement
@@ -37034,59 +37910,56 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapBoundingVolumetoCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutControlPointNumber; // 0x1c0	
+	int32_t m_nOutControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "input volume minimum in cubic units"
-	float m_flInputMin; // 0x1c4	
+	float m_flInputMin; // 0x1cc	
 	// MPropertyFriendlyName "input volume maximum in cubic units"
-	float m_flInputMax; // 0x1c8	
+	float m_flInputMax; // 0x1d0	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1cc	
+	float m_flOutputMin; // 0x1d4	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d0	
+	float m_flOutputMax; // 0x1d8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SnapshotSkinToBones : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "rotate normals"
-	bool m_bTransformNormals; // 0x1b8	
+	bool m_bTransformNormals; // 0x1c0	
 	// MPropertyFriendlyName "scale radii"
-	bool m_bTransformRadii; // 0x1b9	
+	bool m_bTransformRadii; // 0x1c1	
 private:
-	[[maybe_unused]] uint8_t __pad01ba[0x2]; // 0x1ba
+	[[maybe_unused]] uint8_t __pad01c2[0x2]; // 0x1c2
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1bc	
+	int32_t m_nControlPointNumber; // 0x1c4	
 	// MPropertyFriendlyName "lifetime fade start"
-	float m_flLifeTimeFadeStart; // 0x1c0	
+	float m_flLifeTimeFadeStart; // 0x1c8	
 	// MPropertyFriendlyName "lifetime fade end"
-	float m_flLifeTimeFadeEnd; // 0x1c4	
+	float m_flLifeTimeFadeEnd; // 0x1cc	
 	// MPropertyFriendlyName "instant jump threshold"
-	float m_flJumpThreshold; // 0x1c8	
+	float m_flJumpThreshold; // 0x1d0	
 	// MPropertyFriendlyName "previous position scale"
-	float m_flPrevPosScale; // 0x1cc	
+	float m_flPrevPosScale; // 0x1d4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialVariable_t
@@ -37118,7 +37991,6 @@ public:
 // Alignment: 8
 // Size: 0x188
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataComponentValidGrandParents
@@ -37143,25 +38015,21 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x440
+// Size: 0x688
 // Has VTable
-class CNPC_TrooperNeutral_GraphController : public CAI_CitadelNPC_GraphController
+class CNPC_TrooperNeutralNodeMover_GraphController : public CNPC_TrooperNeutral_GraphController
 {
 public:
-	CAnimGraphParamOptionalRef< bool > m_bShielded; // 0x3d0	
-	CAnimGraphParamOptionalRef< bool > m_bAlert; // 0x3e8	
-	CAnimGraphParamOptionalRef< char* > m_pszAttackLeanPosition; // 0x400	
-	CAnimGraphParamOptionalRef< char* > m_pszOrbDrop; // 0x420	
+	CAnimGraphTagRef m_sHidingInNode; // 0x670	
 	
 	// Static fields:
-	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNPC_TrooperNeutral_GraphController")->GetStaticFields()[0]->m_pInstance);};
-	static bool &Get_s_bSchemaTest(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNPC_TrooperNeutral_GraphController")->GetStaticFields()[1]->m_pInstance);};
+	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNPC_TrooperNeutralNodeMover_GraphController")->GetStaticFields()[0]->m_pInstance);};
+	static bool &Get_s_bSchemaTest(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNPC_TrooperNeutralNodeMover_GraphController")->GetStaticFields()[1]->m_pInstance);};
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct JiggleBoneSettingsList_t
@@ -37173,7 +38041,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x1e0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct DeploymentInfo_t
@@ -37200,7 +38067,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Color"
@@ -37212,9 +38078,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x2b88
+// Size: 0x2c70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderRopes : public CBaseRendererSource2
@@ -37223,142 +38088,139 @@ public:
 	// MPropertyStartGroup "Screenspace Fading and culling"
 	// MPropertyFriendlyName "enable fading and clamping"
 	// MPropertySortPriority "1000"
-	bool m_bEnableFadingAndClamping; // 0x2718	
+	bool m_bEnableFadingAndClamping; // 0x27e8	
 private:
-	[[maybe_unused]] uint8_t __pad2719[0x3]; // 0x2719
+	[[maybe_unused]] uint8_t __pad27e9[0x3]; // 0x27e9
 public:
 	// MPropertyFriendlyName "minimum visual screen-size"
 	// MPropertySuppressExpr "!m_bEnableFadingAndClamping"
-	float m_flMinSize; // 0x271c	
+	float m_flMinSize; // 0x27ec	
 	// MPropertyFriendlyName "maximum visual screen-size"
 	// MPropertySuppressExpr "!m_bEnableFadingAndClamping"
-	float m_flMaxSize; // 0x2720	
+	float m_flMaxSize; // 0x27f0	
 	// MPropertyFriendlyName "start fade screen-size"
 	// MPropertySuppressExpr "!m_bEnableFadingAndClamping"
-	float m_flStartFadeSize; // 0x2724	
+	float m_flStartFadeSize; // 0x27f4	
 	// MPropertyFriendlyName "end fade and cull screen-size"
 	// MPropertySuppressExpr "!m_bEnableFadingAndClamping"
-	float m_flEndFadeSize; // 0x2728	
+	float m_flEndFadeSize; // 0x27f8	
 	// MPropertyFriendlyName "start fade dot product of normal vs view"
 	// MPropertySortPriority "1000"
-	float m_flStartFadeDot; // 0x272c	
+	float m_flStartFadeDot; // 0x27fc	
 	// MPropertyFriendlyName "end fade dot product of normal vs view"
 	// MPropertySortPriority "1000"
-	float m_flEndFadeDot; // 0x2730	
+	float m_flEndFadeDot; // 0x2800	
 	// MPropertyStartGroup "Rope Tesselation"
 	// MPropertyFriendlyName "amount to taper the width of the trail end by"
-	float m_flRadiusTaper; // 0x2734	
+	float m_flRadiusTaper; // 0x2804	
 	// MPropertyFriendlyName "minium number of quads per render segment"
 	// MPropertySortPriority "850"
-	int32_t m_nMinTesselation; // 0x2738	
+	int32_t m_nMinTesselation; // 0x2808	
 	// MPropertyFriendlyName "maximum number of quads per render segment"
-	int32_t m_nMaxTesselation; // 0x273c	
+	int32_t m_nMaxTesselation; // 0x280c	
 	// MPropertyFriendlyName "tesselation resolution scale factor"
-	float m_flTessScale; // 0x2740	
+	float m_flTessScale; // 0x2810	
 private:
-	[[maybe_unused]] uint8_t __pad2744[0x4]; // 0x2744
+	[[maybe_unused]] uint8_t __pad2814[0x4]; // 0x2814
 public:
 	// MPropertyStartGroup "+Rope Global UV Controls"
 	// MPropertyFriendlyName "global texture V World Size"
 	// MPropertySortPriority "800"
-	CParticleCollectionRendererFloatInput m_flTextureVWorldSize; // 0x2748	
+	CParticleCollectionRendererFloatInput m_flTextureVWorldSize; // 0x2818	
 	// MPropertyFriendlyName "global texture V Scroll Rate"
-	CParticleCollectionRendererFloatInput m_flTextureVScrollRate; // 0x28a0	
+	CParticleCollectionRendererFloatInput m_flTextureVScrollRate; // 0x2978	
 	// MPropertyFriendlyName "global texture V Offset"
-	CParticleCollectionRendererFloatInput m_flTextureVOffset; // 0x29f8	
+	CParticleCollectionRendererFloatInput m_flTextureVOffset; // 0x2ad8	
 	// MPropertyFriendlyName "global texture V Params CP"
-	int32_t m_nTextureVParamsCP; // 0x2b50	
+	int32_t m_nTextureVParamsCP; // 0x2c38	
 	// MPropertyFriendlyName "Clamp Non-Sheet texture V coords"
-	bool m_bClampV; // 0x2b54	
+	bool m_bClampV; // 0x2c3c	
 private:
-	[[maybe_unused]] uint8_t __pad2b55[0x3]; // 0x2b55
+	[[maybe_unused]] uint8_t __pad2c3d[0x3]; // 0x2c3d
 public:
 	// MPropertyStartGroup "Rope Global UV Controls/CP Scaling"
 	// MPropertyFriendlyName "scale CP start"
-	int32_t m_nScaleCP1; // 0x2b58	
+	int32_t m_nScaleCP1; // 0x2c40	
 	// MPropertyFriendlyName "scale CP end"
-	int32_t m_nScaleCP2; // 0x2b5c	
+	int32_t m_nScaleCP2; // 0x2c44	
 	// MPropertyFriendlyName "scale V world size by CP distance"
-	float m_flScaleVSizeByControlPointDistance; // 0x2b60	
+	float m_flScaleVSizeByControlPointDistance; // 0x2c48	
 	// MPropertyFriendlyName "scale V scroll rate by CP distance"
-	float m_flScaleVScrollByControlPointDistance; // 0x2b64	
+	float m_flScaleVScrollByControlPointDistance; // 0x2c4c	
 	// MPropertyFriendlyName "scale V offset by CP distance"
-	float m_flScaleVOffsetByControlPointDistance; // 0x2b68	
+	float m_flScaleVOffsetByControlPointDistance; // 0x2c50	
 private:
-	[[maybe_unused]] uint8_t __pad2b6c[0x1]; // 0x2b6c
+	[[maybe_unused]] uint8_t __pad2c54[0x1]; // 0x2c54
 public:
 	// MPropertyStartGroup "Rope Global UV Controls"
 	// MPropertyFriendlyName "Use scalar attribute for texture coordinate"
-	bool m_bUseScalarForTextureCoordinate; // 0x2b6d	
+	bool m_bUseScalarForTextureCoordinate; // 0x2c55	
 private:
-	[[maybe_unused]] uint8_t __pad2b6e[0x2]; // 0x2b6e
+	[[maybe_unused]] uint8_t __pad2c56[0x2]; // 0x2c56
 public:
 	// MPropertyFriendlyName "scalar to use for texture coordinate"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySuppressExpr "!m_bUseScalarForTextureCoordinate"
-	ParticleAttributeIndex_t m_nScalarFieldForTextureCoordinate; // 0x2b70	
+	ParticleAttributeIndex_t m_nScalarFieldForTextureCoordinate; // 0x2c58	
 	// MPropertyFriendlyName "scale value to map attribute to texture coordinate"
 	// MPropertySuppressExpr "!m_bUseScalarForTextureCoordinate"
-	float m_flScalarAttributeTextureCoordScale; // 0x2b74	
+	float m_flScalarAttributeTextureCoordScale; // 0x2c5c	
 	// MPropertyStartGroup "Rope Order Controls"
 	// MPropertyFriendlyName "reverse point order"
 	// MPropertySortPriority "800"
-	bool m_bReverseOrder; // 0x2b78	
+	bool m_bReverseOrder; // 0x2c60	
 	// MPropertyFriendlyName "Closed loop"
-	bool m_bClosedLoop; // 0x2b79	
+	bool m_bClosedLoop; // 0x2c61	
 private:
-	[[maybe_unused]] uint8_t __pad2b7a[0x2]; // 0x2b7a
+	[[maybe_unused]] uint8_t __pad2c62[0x2]; // 0x2c62
 public:
 	// MPropertyStartGroup "Orientation"
 	// MPropertyFriendlyName "orientation_type"
 	// MPropertySortPriority "750"
-	ParticleOrientationChoiceList_t m_nOrientationType; // 0x2b7c	
+	ParticleOrientationChoiceList_t m_nOrientationType; // 0x2c64	
 	// MPropertyFriendlyName "attribute to use for normal"
 	// MPropertyAttributeChoiceName "particlefield_vector"
 	// MPropertySortPriority "750"
 	// MPropertySuppressExpr "m_nOrientationType != PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL && m_nOrientationType != PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL"
-	ParticleAttributeIndex_t m_nVectorFieldForOrientation; // 0x2b80	
+	ParticleAttributeIndex_t m_nVectorFieldForOrientation; // 0x2c68	
 	// MPropertyStartGroup "Material"
 	// MPropertyFriendlyName "draw as opaque"
-	bool m_bDrawAsOpaque; // 0x2b84	
+	bool m_bDrawAsOpaque; // 0x2c6c	
 	// MPropertyStartGroup "Orientation"
 	// MPropertyFriendlyName "generate normals for cylinder"
-	bool m_bGenerateNormals; // 0x2b85	
+	bool m_bGenerateNormals; // 0x2c6d	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_SequenceLifeTime : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "frames per second"
-	float m_flFramerate; // 0x1c0	
+	float m_flFramerate; // 0x1c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RadiusFromCPObject : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point"
-	int32_t m_nControlPoint; // 0x1c0	
+	int32_t m_nControlPoint; // 0x1c8	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Sequence Finished Tag"
@@ -37372,11 +38234,22 @@ public:
 	CUtlString m_sequenceName; // 0x58	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmNotNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+};
+
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 16
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimationGraphVisualizerText : public CAnimationGraphVisualizerPrimitiveBase
@@ -37394,7 +38267,6 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CDampedPathAnimMotorUpdater : public CPathAnimMotorUpdaterBase
@@ -37414,7 +38286,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 16
 // Size: 0xc0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct LookAtOpFixedSettings_t
@@ -37449,7 +38320,6 @@ public:
 // Alignment: 4
 // Size: 0xc
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnWing_t
@@ -37461,7 +38331,6 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataRoot
@@ -37478,7 +38347,6 @@ public:
 // Alignment: 8
 // Size: 0x28
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSosGroupActionSoundeventCountSchema : public CSosGroupActionSchema
@@ -37506,9 +38374,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x240
+// Size: 0x248
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderAsModels : public CParticleFunctionRenderer
@@ -37516,125 +38383,121 @@ class C_OP_RenderAsModels : public CParticleFunctionRenderer
 public:
 	// MPropertyFriendlyName "models"
 	// MParticleRequireDefaultArrayEntry
-	CUtlVector< ModelReference_t > m_ModelList; // 0x208	
+	CUtlVector< ModelReference_t > m_ModelList; // 0x210	
 private:
-	[[maybe_unused]] uint8_t __pad0220[0x4]; // 0x220
+	[[maybe_unused]] uint8_t __pad0228[0x4]; // 0x228
 public:
 	// MPropertyFriendlyName "scale factor for radius"
-	float m_flModelScale; // 0x224	
+	float m_flModelScale; // 0x22c	
 	// MPropertyFriendlyName "scale model to match particle size"
-	bool m_bFitToModelSize; // 0x228	
+	bool m_bFitToModelSize; // 0x230	
 	// MPropertyFriendlyName "non-uniform scaling"
-	bool m_bNonUniformScaling; // 0x229	
+	bool m_bNonUniformScaling; // 0x231	
 private:
-	[[maybe_unused]] uint8_t __pad022a[0x2]; // 0x22a
+	[[maybe_unused]] uint8_t __pad0232[0x2]; // 0x232
 public:
 	// MPropertyFriendlyName "X axis scaling scalar field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nXAxisScalingAttribute; // 0x22c	
+	ParticleAttributeIndex_t m_nXAxisScalingAttribute; // 0x234	
 	// MPropertyFriendlyName "Y axis scaling scalar field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nYAxisScalingAttribute; // 0x230	
+	ParticleAttributeIndex_t m_nYAxisScalingAttribute; // 0x238	
 	// MPropertyFriendlyName "Z axis scaling scalar field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nZAxisScalingAttribute; // 0x234	
+	ParticleAttributeIndex_t m_nZAxisScalingAttribute; // 0x23c	
 	// MPropertyFriendlyName "model size cull bloat"
 	// MPropertyAttributeChoiceName "particlefield_size_cull_bloat"
-	int32_t m_nSizeCullBloat; // 0x238	
+	int32_t m_nSizeCullBloat; // 0x240	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x200
+// Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_InterpolateRadius : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "start time"
-	float m_flStartTime; // 0x1b8	
+	float m_flStartTime; // 0x1c0	
 	// MPropertyFriendlyName "end time"
-	float m_flEndTime; // 0x1bc	
+	float m_flEndTime; // 0x1c4	
 	// MPropertyFriendlyName "radius start scale"
-	float m_flStartScale; // 0x1c0	
+	float m_flStartScale; // 0x1c8	
 	// MPropertyFriendlyName "radius end scale"
-	float m_flEndScale; // 0x1c4	
+	float m_flEndScale; // 0x1cc	
 	// MPropertyFriendlyName "ease in and out"
-	bool m_bEaseInAndOut; // 0x1c8	
+	bool m_bEaseInAndOut; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01c9[0x3]; // 0x1c9
+	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
 public:
 	// MPropertyFriendlyName "scale bias"
-	float m_flBias; // 0x1cc	
+	float m_flBias; // 0x1d4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x310
+// Size: 0x320
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_EndCapTimedFreeze : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "freeze time"
-	CParticleCollectionFloatInput m_flFreezeTime; // 0x1b8	
+	CParticleCollectionFloatInput m_flFreezeTime; // 0x1c0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x518
+// Size: 0x530
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_PositionPlaceOnGround : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "offset"
-	CPerParticleFloatInput m_flOffset; // 0x1c0	
+	CPerParticleFloatInput m_flOffset; // 0x1c8	
 	// MPropertyFriendlyName "max trace length"
-	CPerParticleFloatInput m_flMaxTraceLength; // 0x318	
+	CPerParticleFloatInput m_flMaxTraceLength; // 0x328	
 	// MPropertyFriendlyName "collision group"
-	char m_CollisionGroupName[128]; // 0x470	
+	char m_CollisionGroupName[128]; // 0x488	
 	// MPropertyFriendlyName "Trace Set"
-	ParticleTraceSet_t m_nTraceSet; // 0x4f0	
+	ParticleTraceSet_t m_nTraceSet; // 0x508	
 private:
-	[[maybe_unused]] uint8_t __pad04f4[0xc]; // 0x4f4
+	[[maybe_unused]] uint8_t __pad050c[0xc]; // 0x50c
 public:
 	// MPropertyFriendlyName "No Collision Behavior"
-	ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x500	
+	ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x518	
 	// MPropertyFriendlyName "include water"
 	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
-	bool m_bIncludeWater; // 0x504	
+	bool m_bIncludeWater; // 0x51c	
 	// MPropertyFriendlyName "set normal"
-	bool m_bSetNormal; // 0x505	
+	bool m_bSetNormal; // 0x51d	
 	// MPropertyFriendlyName "set Previous XYZ only"
-	bool m_bSetPXYZOnly; // 0x506	
+	bool m_bSetPXYZOnly; // 0x51e	
 	// MPropertyFriendlyName "Trace along particle normal"
-	bool m_bTraceAlongNormal; // 0x507	
+	bool m_bTraceAlongNormal; // 0x51f	
 	// MPropertyFriendlyName "Offset only if trace hit"
-	bool m_bOffsetonColOnly; // 0x508	
+	bool m_bOffsetonColOnly; // 0x520	
 private:
-	[[maybe_unused]] uint8_t __pad0509[0x3]; // 0x509
+	[[maybe_unused]] uint8_t __pad0521[0x3]; // 0x521
 public:
 	// MPropertyFriendlyName "offset final position by this fraction of the particle radius"
-	float m_flOffsetByRadiusFactor; // 0x50c	
+	float m_flOffsetByRadiusFactor; // 0x524	
 	// MPropertyFriendlyName "preserve initial Z-offset relative to cp"
-	int32_t m_nPreserveOffsetCP; // 0x510	
+	int32_t m_nPreserveOffsetCP; // 0x528	
 	// MPropertyFriendlyName "CP Entity to Ignore for Collisions"
 	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
-	int32_t m_nIgnoreCP; // 0x514	
+	int32_t m_nIgnoreCP; // 0x52c	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmChildGraphNode::CDefinition : public CNmPoseNode::CDefinition
@@ -37645,9 +38508,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x3c28
+// Size: 0x3d68
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderTrails : public CBaseTrailRenderer
@@ -37656,73 +38518,72 @@ public:
 	// MPropertyStartGroup "Screenspace Fading and culling"
 	// MPropertyFriendlyName "enable fading and clamping"
 	// MPropertySortPriority "1000"
-	bool m_bEnableFadingAndClamping; // 0x29e0	
+	bool m_bEnableFadingAndClamping; // 0x2ac0	
 private:
-	[[maybe_unused]] uint8_t __pad29e1[0x3]; // 0x29e1
+	[[maybe_unused]] uint8_t __pad2ac1[0x3]; // 0x2ac1
 public:
 	// MPropertyFriendlyName "start fade dot product of normal vs view"
 	// MPropertySortPriority "1000"
-	float m_flStartFadeDot; // 0x29e4	
+	float m_flStartFadeDot; // 0x2ac4	
 	// MPropertyFriendlyName "end fade dot product of normal vs view"
 	// MPropertySortPriority "1000"
-	float m_flEndFadeDot; // 0x29e8	
+	float m_flEndFadeDot; // 0x2ac8	
 	// MPropertyStartGroup "+Trail Length"
 	// MPropertyFriendlyName "Anchor point source"
 	// MPropertyAttributeChoiceName "particlefield_vector"
 	// MPropertySortPriority "800"
-	ParticleAttributeIndex_t m_nPrevPntSource; // 0x29ec	
+	ParticleAttributeIndex_t m_nPrevPntSource; // 0x2acc	
 	// MPropertyFriendlyName "max length"
 	// MPropertySortPriority "800"
-	float m_flMaxLength; // 0x29f0	
+	float m_flMaxLength; // 0x2ad0	
 	// MPropertyFriendlyName "min length"
 	// MPropertySortPriority "800"
-	float m_flMinLength; // 0x29f4	
+	float m_flMinLength; // 0x2ad4	
 	// MPropertyFriendlyName "ignore delta time"
 	// MPropertySortPriority "800"
-	bool m_bIgnoreDT; // 0x29f8	
+	bool m_bIgnoreDT; // 0x2ad8	
 private:
-	[[maybe_unused]] uint8_t __pad29f9[0x3]; // 0x29f9
+	[[maybe_unused]] uint8_t __pad2ad9[0x3]; // 0x2ad9
 public:
 	// MPropertyFriendlyName "constrain radius to no more than this times the length"
 	// MPropertySortPriority "800"
-	float m_flConstrainRadiusToLengthRatio; // 0x29fc	
+	float m_flConstrainRadiusToLengthRatio; // 0x2adc	
 	// MPropertyFriendlyName "amount to scale trail length by"
-	float m_flLengthScale; // 0x2a00	
+	float m_flLengthScale; // 0x2ae0	
 	// MPropertyFriendlyName "how long before a trail grows to its full length"
-	float m_flLengthFadeInTime; // 0x2a04	
+	float m_flLengthFadeInTime; // 0x2ae4	
 	// MPropertyStartGroup "Trail Head & Tail"
 	// MPropertyFriendlyName "head taper scale"
 	// MPropertySortPriority "800"
-	CPerParticleFloatInput m_flRadiusHeadTaper; // 0x2a08	
+	CPerParticleFloatInput m_flRadiusHeadTaper; // 0x2ae8	
 	// MPropertyFriendlyName "head color scale"
-	CParticleCollectionVecInput m_vecHeadColorScale; // 0x2b60	
+	CParticleCollectionVecInput m_vecHeadColorScale; // 0x2c48	
 	// MPropertyFriendlyName "head alpha scale"
-	CPerParticleFloatInput m_flHeadAlphaScale; // 0x31b8	
+	CPerParticleFloatInput m_flHeadAlphaScale; // 0x32c0	
 	// MPropertyFriendlyName "tail taper scale"
-	CPerParticleFloatInput m_flRadiusTaper; // 0x3310	
+	CPerParticleFloatInput m_flRadiusTaper; // 0x3420	
 	// MPropertyFriendlyName "tail color scale"
-	CParticleCollectionVecInput m_vecTailColorScale; // 0x3468	
+	CParticleCollectionVecInput m_vecTailColorScale; // 0x3580	
 	// MPropertyFriendlyName "tail alpha scale"
-	CPerParticleFloatInput m_flTailAlphaScale; // 0x3ac0	
+	CPerParticleFloatInput m_flTailAlphaScale; // 0x3bf8	
 	// MPropertyStartGroup "Trail UV Controls"
 	// MPropertyFriendlyName "texture UV horizontal Scale field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "800"
-	ParticleAttributeIndex_t m_nHorizCropField; // 0x3c18	
+	ParticleAttributeIndex_t m_nHorizCropField; // 0x3d58	
 	// MPropertyFriendlyName "texture UV vertical Scale field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nVertCropField; // 0x3c1c	
+	ParticleAttributeIndex_t m_nVertCropField; // 0x3d5c	
 	// MPropertyFriendlyName "Trail forward shift (fraction)"
-	float m_flForwardShift; // 0x3c20	
+	float m_flForwardShift; // 0x3d60	
 	// MPropertyFriendlyName "Flip U or V texcoords if pitch or yaw go over PI"
-	bool m_bFlipUVBasedOnPitchYaw; // 0x3c24	
+	bool m_bFlipUVBasedOnPitchYaw; // 0x3d64	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x208
+// Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MObsoleteParticleFunction
 // MGetKV3ClassDefaults
@@ -37733,24 +38594,23 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_TimeVaryingForce : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "time to start transition"
-	float m_flStartLerpTime; // 0x1c8	
+	float m_flStartLerpTime; // 0x1d0	
 	// MPropertyFriendlyName "starting force"
 	// MVectorIsCoordinate
-	Vector m_StartingForce; // 0x1cc	
+	Vector m_StartingForce; // 0x1d4	
 	// MPropertyFriendlyName "time to end transition"
-	float m_flEndLerpTime; // 0x1d8	
+	float m_flEndLerpTime; // 0x1e0	
 	// MPropertyFriendlyName "ending force"
 	// MVectorIsCoordinate
-	Vector m_EndingForce; // 0x1dc	
+	Vector m_EndingForce; // 0x1e4	
 };
 
 // Registered binary: client.dll (project 'pulse_runtime_lib')
@@ -37773,7 +38633,6 @@ public:
 // Size: 0x1c
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixPlateverbDesc_t
@@ -37790,77 +38649,80 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapDirectionToCPToVector : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point"
-	int32_t m_nCP; // 0x1b8	
+	int32_t m_nCP; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "scale factor"
-	float m_flScale; // 0x1c0	
+	float m_flScale; // 0x1c8	
 	// MPropertyFriendlyName "offset rotation"
-	float m_flOffsetRot; // 0x1c4	
+	float m_flOffsetRot; // 0x1cc	
 	// MPropertyFriendlyName "offset axis"
 	// MVectorIsCoordinate
-	Vector m_vecOffsetAxis; // 0x1c8	
+	Vector m_vecOffsetAxis; // 0x1d0	
 	// MPropertyFriendlyName "normalize"
-	bool m_bNormalize; // 0x1d4	
+	bool m_bNormalize; // 0x1dc	
 private:
-	[[maybe_unused]] uint8_t __pad01d5[0x3]; // 0x1d5
+	[[maybe_unused]] uint8_t __pad01dd[0x3]; // 0x1dd
 public:
 	// MPropertyFriendlyName "strength field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldStrength; // 0x1d8	
+	ParticleAttributeIndex_t m_nFieldStrength; // 0x1e0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapModelVolumetoCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "output BBox Type"
-	BBoxVolumeType_t m_nBBoxType; // 0x1c0	
+	BBoxVolumeType_t m_nBBoxType; // 0x1c8	
 	// MPropertyFriendlyName "input control point"
-	int32_t m_nInControlPointNumber; // 0x1c4	
+	int32_t m_nInControlPointNumber; // 0x1cc	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutControlPointNumber; // 0x1c8	
+	int32_t m_nOutControlPointNumber; // 0x1d0	
 	// MPropertyFriendlyName "output max control point"
 	// MPropertySuppressExpr "m_nBBoxType != BBOX_MINS_MAXS"
-	int32_t m_nOutControlPointMaxNumber; // 0x1cc	
+	int32_t m_nOutControlPointMaxNumber; // 0x1d4	
 	// MPropertyFriendlyName "output CP component"
 	// MPropertyAttributeChoiceName "vector_component"
 	// MPropertySuppressExpr "m_nBBoxType != BBOX_VOLUME"
-	int32_t m_nField; // 0x1d0	
+	int32_t m_nField; // 0x1d8	
 	// MPropertyFriendlyName "input volume minimum in cubic units"
 	// MPropertySuppressExpr "m_nBBoxType != BBOX_VOLUME"
-	float m_flInputMin; // 0x1d4	
+	float m_flInputMin; // 0x1dc	
 	// MPropertyFriendlyName "input volume maximum in cubic units"
 	// MPropertySuppressExpr "m_nBBoxType != BBOX_VOLUME"
-	float m_flInputMax; // 0x1d8	
+	float m_flInputMax; // 0x1e0	
 	// MPropertyFriendlyName "output minimum"
 	// MPropertySuppressExpr "m_nBBoxType != BBOX_VOLUME"
-	float m_flOutputMin; // 0x1dc	
+	float m_flOutputMin; // 0x1e4	
 	// MPropertyFriendlyName "output maximum"
 	// MPropertySuppressExpr "m_nBBoxType != BBOX_VOLUME"
-	float m_flOutputMax; // 0x1e0	
+	float m_flOutputMax; // 0x1e8	
+	// MPropertyFriendlyName "check full bbox only"
+	// MPropertySuppressExpr "m_nBBoxType != BBOX_VOLUME"
+	bool m_bBBoxOnly; // 0x1ec	
+	// MPropertyFriendlyName "cube root of volume"
+	// MPropertySuppressExpr "m_nBBoxType != BBOX_VOLUME"
+	bool m_bCubeRoot; // 0x1ed	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0xb8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMotionSearchDB
@@ -37881,7 +38743,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x78
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VPhysics2ShapeDef_t
@@ -37898,7 +38759,6 @@ public:
 // Alignment: 8
 // Size: 0x78
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -37914,7 +38774,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct WeakPointParams_t
@@ -37935,7 +38794,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x80
-// Construct allowed
 // 
 // MVDataRoot
 // MGetKV3ClassDefaults
@@ -38056,26 +38914,24 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x340
+// Size: 0x350
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_QuantizeFloat : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "value"
-	CPerParticleFloatInput m_InputValue; // 0x1b8	
+	CPerParticleFloatInput m_InputValue; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nOutputField; // 0x310	
+	ParticleAttributeIndex_t m_nOutputField; // 0x320	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1b8
+// Size: 0x1c0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_WorldCollideConstraint : public CParticleFunctionConstraint
@@ -38086,7 +38942,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x48
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct WorldBuilderParams_t
@@ -38104,64 +38959,61 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x730
+// Size: 0x758
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapDotProductToCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "first input control point"
-	int32_t m_nInputCP1; // 0x1c0	
+	int32_t m_nInputCP1; // 0x1c8	
 	// MPropertyFriendlyName "second input control point"
-	int32_t m_nInputCP2; // 0x1c4	
+	int32_t m_nInputCP2; // 0x1cc	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutputCP; // 0x1c8	
+	int32_t m_nOutputCP; // 0x1d0	
 	// MPropertyFriendlyName "output component"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nOutVectorField; // 0x1cc	
+	int32_t m_nOutVectorField; // 0x1d4	
 	// MPropertyFriendlyName "input minimum (-1 to 1)"
-	CParticleCollectionFloatInput m_flInputMin; // 0x1d0	
+	CParticleCollectionFloatInput m_flInputMin; // 0x1d8	
 	// MPropertyFriendlyName "input maximum (-1 to 1)"
-	CParticleCollectionFloatInput m_flInputMax; // 0x328	
+	CParticleCollectionFloatInput m_flInputMax; // 0x338	
 	// MPropertyFriendlyName "output minimum"
-	CParticleCollectionFloatInput m_flOutputMin; // 0x480	
+	CParticleCollectionFloatInput m_flOutputMin; // 0x498	
 	// MPropertyFriendlyName "output maximum"
-	CParticleCollectionFloatInput m_flOutputMax; // 0x5d8	
+	CParticleCollectionFloatInput m_flOutputMax; // 0x5f8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ColorInterpolate : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "color fade"
-	Color m_ColorFade; // 0x1b8	
+	Color m_ColorFade; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0xc]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0xc]; // 0x1c4
 public:
 	// MPropertyFriendlyName "fade start time"
-	float m_flFadeStartTime; // 0x1c8	
+	float m_flFadeStartTime; // 0x1d0	
 	// MPropertyFriendlyName "fade end time"
-	float m_flFadeEndTime; // 0x1cc	
+	float m_flFadeEndTime; // 0x1d4	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d8	
 	// MPropertyFriendlyName "ease in and out"
-	bool m_bEaseInOut; // 0x1d4	
+	bool m_bEaseInOut; // 0x1dc	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootAdjustmentUpdateNode : public CUnaryUpdateNode
@@ -38189,7 +39041,6 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmClipNode::CDefinition : public CNmPoseNode::CDefinition
@@ -38202,10 +39053,25 @@ public:
 	int16_t m_nDataSlotIdx; // 0x16	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmCachedTargetNode::CDefinition : public CNmTargetValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	NmCachedValueMode_t m_mode; // 0x14	
+};
+
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimMorphDifference
@@ -38256,38 +39122,37 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x470
+// Size: 0x480
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_MoveToHitbox : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "model input"
-	CParticleModelInput m_modelInput; // 0x1b8	
+	CParticleModelInput m_modelInput; // 0x1c0	
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_transformInput; // 0x218	
+	CParticleTransformInput m_transformInput; // 0x220	
 private:
-	[[maybe_unused]] uint8_t __pad0280[0x4]; // 0x280
+	[[maybe_unused]] uint8_t __pad0288[0x4]; // 0x288
 public:
 	// MPropertyFriendlyName "lifetime lerp start"
-	float m_flLifeTimeLerpStart; // 0x284	
+	float m_flLifeTimeLerpStart; // 0x28c	
 	// MPropertyFriendlyName "lifetime lerp end"
-	float m_flLifeTimeLerpEnd; // 0x288	
+	float m_flLifeTimeLerpEnd; // 0x290	
 	// MPropertyFriendlyName "previous position scale"
-	float m_flPrevPosScale; // 0x28c	
+	float m_flPrevPosScale; // 0x294	
 	// MPropertyFriendlyName "hitbox set"
-	char m_HitboxSetName[128]; // 0x290	
+	char m_HitboxSetName[128]; // 0x298	
 	// MPropertyFriendlyName "use bones instead of hitboxes"
-	bool m_bUseBones; // 0x310	
+	bool m_bUseBones; // 0x318	
 private:
-	[[maybe_unused]] uint8_t __pad0311[0x3]; // 0x311
+	[[maybe_unused]] uint8_t __pad0319[0x3]; // 0x319
 public:
 	// MPropertyFriendlyName "lerp type"
-	HitboxLerpType_t m_nLerpType; // 0x314	
+	HitboxLerpType_t m_nLerpType; // 0x31c	
 	// MPropertyFriendlyName "Constant Interpolation"
-	CPerParticleFloatInput m_flInterpolation; // 0x318	
+	CPerParticleFloatInput m_flInterpolation; // 0x320	
 };
 
 // Registered binary: particles.dll (project 'particles')
@@ -38307,7 +39172,6 @@ public:
 // Alignment: 2
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CNmGraphDefinition__ChildGraphSlot_t
@@ -38321,7 +39185,6 @@ public:
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFutureVelocityMetricEvaluator : public CMotionMetricEvaluator
@@ -38333,11 +39196,23 @@ public:
 	VelocityMetricMode m_eMode; // 0x5c	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmTargetPointNode::CDefinition : public CNmVectorValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+	bool m_bIsWorldSpaceTarget; // 0x12	
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x28
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CTrackedObject_MODIFIER_TRACKED_GRAPH_PARAMETER : public IModifierTrackedObject
@@ -38363,7 +39238,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeEffectDesc_t
@@ -38378,7 +39252,6 @@ public:
 // Registered binary: particles.dll (project 'particleslib')
 // Alignment: 8
 // Size: 0x28
-// MNetworkNoBase
 class CParticleProperty
 {
 private:
@@ -38389,9 +39262,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xe70
+// Size: 0xeb8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DirectionBetweenVecsToVec : public CParticleFunctionOperator
@@ -38399,39 +39271,37 @@ class C_OP_DirectionBetweenVecsToVec : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "first vector"
-	CPerParticleVecInput m_vecPoint1; // 0x1c0	
+	CPerParticleVecInput m_vecPoint1; // 0x1c8	
 	// MPropertyFriendlyName "second vector"
-	CPerParticleVecInput m_vecPoint2; // 0x818	
+	CPerParticleVecInput m_vecPoint2; // 0x840	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x328
+// Size: 0x338
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_CPVelocityForce : public CParticleFunctionForce
 {
 public:
 	// MPropertyFriendlyName "control point"
-	int32_t m_nControlPointNumber; // 0x1c8	
+	int32_t m_nControlPointNumber; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
+	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
 public:
 	// MPropertyFriendlyName "velocity scale"
-	CPerParticleFloatInput m_flScale; // 0x1d0	
+	CPerParticleFloatInput m_flScale; // 0x1d8	
 };
 
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParamVector_t : public MaterialParam_t
@@ -38444,7 +39314,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CLODComponentUpdater : public CAnimComponentUpdater
@@ -38455,30 +39324,32 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x38
+// Size: 0x40
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmLegacyEvent : public CNmEvent
 {
 private:
-	[[maybe_unused]] uint8_t __pad0010[0x18]; // 0x10
+	[[maybe_unused]] uint8_t __pad0018[0x10]; // 0x18
 public:
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0xb8
+// Size: 0x128
 // Has VTable
 class CCitadelPlayerPawn_GraphController : public CAnimGraphControllerBase
 {
 public:
 	CAnimGraphParamRef< char* > m_pszSprintState; // 0x18	
-	CAnimGraphParamRef< char* > m_pszFullBodySequence; // 0x38	
-	CAnimGraphParamRef< char* > m_pszFlinchType; // 0x58	
-	CAnimGraphParamOptionalRef< char* > m_pszMaxSpeedState; // 0x78	
-	CAnimGraphParamOptionalRef< char* > m_pszDeathSequence; // 0x98	
+	CAnimGraphParamRef< char* > m_pszFullBodySequence; // 0x40	
+	CAnimGraphParamRef< char* > m_pszFlinchType; // 0x68	
+	CAnimGraphParamOptionalRef< char* > m_pszMaxSpeedState; // 0x90	
+	CAnimGraphParamOptionalRef< char* > m_pszDeathSequence; // 0xb8	
+	CAnimGraphTagRef m_sAnimClippedMovement; // 0xe0	
+	CAnimGraphTagRef m_sDisableGravity; // 0xf8	
+	CAnimGraphTagRef m_sDirectAirControl; // 0x110	
 	
 	// Static fields:
 	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CCitadelPlayerPawn_GraphController")->GetStaticFields()[0]->m_pInstance);};
@@ -38489,7 +39360,6 @@ public:
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -38505,7 +39375,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x60
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct DamageIndicatorSounds_t
@@ -38521,56 +39390,53 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x888
+// Size: 0x8b0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetSingleControlPointPosition : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "only set position once"
-	bool m_bSetOnce; // 0x1c0	
+	bool m_bSetOnce; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c1[0x3]; // 0x1c1
+	[[maybe_unused]] uint8_t __pad01c9[0x3]; // 0x1c9
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nCP1; // 0x1c4	
+	int32_t m_nCP1; // 0x1cc	
 	// MPropertyFriendlyName "control point location"
-	CParticleCollectionVecInput m_vecCP1Pos; // 0x1c8	
+	CParticleCollectionVecInput m_vecCP1Pos; // 0x1d0	
 	// MPropertyFriendlyName "transform to offset positions from"
 	// MParticleInputOptional
-	CParticleTransformInput m_transformInput; // 0x820	
+	CParticleTransformInput m_transformInput; // 0x848	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x370
+// Size: 0x380
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderVRHapticEvent : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "haptic hand"
-	ParticleVRHandChoiceList_t m_nHand; // 0x208	
+	ParticleVRHandChoiceList_t m_nHand; // 0x210	
 	// MPropertyFriendlyName "hand control point number"
-	int32_t m_nOutputHandCP; // 0x20c	
+	int32_t m_nOutputHandCP; // 0x214	
 	// MPropertyFriendlyName "cp field"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nOutputField; // 0x210	
+	int32_t m_nOutputField; // 0x218	
 private:
-	[[maybe_unused]] uint8_t __pad0214[0x4]; // 0x214
+	[[maybe_unused]] uint8_t __pad021c[0x4]; // 0x21c
 public:
 	// MPropertyFriendlyName "amplitude"
-	CPerParticleFloatInput m_flAmplitude; // 0x218	
+	CPerParticleFloatInput m_flAmplitude; // 0x220	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x108
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMotionGraphGroup
@@ -38591,7 +39457,6 @@ public:
 // Size: 0x44
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct HitReactFixedSettings_t
@@ -38620,7 +39485,6 @@ public:
 // Alignment: 8
 // Size: 0x68
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CRootUpdateNode : public CUnaryUpdateNode
@@ -38632,7 +39496,6 @@ public:
 // Alignment: 4
 // Size: 0x2c
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimMovement
@@ -38650,7 +39513,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 16
 // Size: 0x60
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CConstraintSlave
@@ -38670,7 +39532,6 @@ public:
 // Alignment: 8
 // Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Save Current Surface Normal"
@@ -38683,6 +39544,22 @@ public:
 	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x50	
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Vector3 )"
 	CUtlString m_VariableName; // 0x90	
+};
+
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
+// Size: 0x58
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Save Current Color"
+// MPropertyDescription "Save the current color tint value to a specified variable"
+// MVDataClassGroup
+class CSmartPropOperation_SaveColor : public CSmartPropOperation
+{
+public:
+	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Color )"
+	CUtlString m_VariableName; // 0x50	
 };
 
 // Registered binary: server.dll (project 'server')
@@ -38720,9 +39597,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x238
+// Size: 0x240
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderStatusEffectCitadel : public CParticleFunctionRenderer
@@ -38730,28 +39606,27 @@ class C_OP_RenderStatusEffectCitadel : public CParticleFunctionRenderer
 public:
 	// MPropertyFriendlyName "color warp texture (3d)"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureColorWarp; // 0x208	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureColorWarp; // 0x210	
 	// MPropertyFriendlyName "normal texture"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureNormal; // 0x210	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureNormal; // 0x218	
 	// MPropertyFriendlyName "metalness texture"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureMetalness; // 0x218	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureMetalness; // 0x220	
 	// MPropertyFriendlyName "roughness texture"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureRoughness; // 0x220	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureRoughness; // 0x228	
 	// MPropertyFriendlyName "self illum texture"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureSelfIllum; // 0x228	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureSelfIllum; // 0x230	
 	// MPropertyFriendlyName "detail texture"
 	// MPropertyAttributeEditor "AssetBrowse( vtex, *showassetpreview )"
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureDetail; // 0x230	
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_pTextureDetail; // 0x238	
 };
 
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x60
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSeqBoneMaskList
@@ -38770,7 +39645,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PermModelDataAnimatedMaterialAttribute_t
@@ -38783,7 +39657,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x58
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ScriptInfo_t
@@ -38798,23 +39671,21 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_VelocityDecay : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "minimum velocity"
-	float m_flMinVelocity; // 0x1b8	
+	float m_flMinVelocity; // 0x1c0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_LerpVector : public CParticleFunctionOperator
@@ -38822,23 +39693,22 @@ class C_OP_LerpVector : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "value to lerp to"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vecOutput; // 0x1bc	
+	Vector m_vecOutput; // 0x1c4	
 	// MPropertyFriendlyName "start time"
-	float m_flStartTime; // 0x1c8	
+	float m_flStartTime; // 0x1d0	
 	// MPropertyFriendlyName "end time"
-	float m_flEndTime; // 0x1cc	
+	float m_flEndTime; // 0x1d4	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1d0	
+	ParticleSetMethod_t m_nSetMethod; // 0x1d8	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 4
 // Size: 0x8
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VPhysXRange_t
@@ -38848,11 +39718,22 @@ public:
 	float m_flMax; // 0x4	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmIsTargetSetNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+};
+
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CJiggleBoneUpdateNode : public CUnaryUpdateNode
@@ -38900,6 +39781,19 @@ public:
 	KeyValues3 m_KV3; // 0x170	
 };
 
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+struct EventServerEndAsyncPostTickWork_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No schema binary for binding
+};
+
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x4
@@ -38919,7 +39813,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Float"
@@ -38939,7 +39832,6 @@ public:
 // Alignment: 8
 // Size: 0x80
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Filter: Surface Properties"
@@ -38959,7 +39851,6 @@ public:
 // Size: 0xc
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAudioPhonemeTag
@@ -39000,7 +39891,6 @@ public:
 // Size: 0x4
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CollisionGroupContext_t
@@ -39009,11 +39899,24 @@ public:
 	int32_t m_nCollisionGroupNumber; // 0x0	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmBoneMaskBlendNode::CDefinition : public CNmBoneMaskValueNode::CDefinition
+{
+public:
+	int16_t m_nSourceMaskNodeIdx; // 0x10	
+	int16_t m_nTargetMaskNodeIdx; // 0x12	
+	int16_t m_nBlendWeightValueNodeIdx; // 0x14	
+};
+
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimData
@@ -39035,7 +39938,6 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -39052,13 +39954,12 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CPulseCell_Outflow_CycleShuffled__InstanceState_t
 {
 public:
-	CUtlVectorFixedGrowable< uint8 > m_Shuffle; // 0x0	
+	CUtlVectorFixedGrowable< uint8, 8 > m_Shuffle; // 0x0	
 	int32_t m_nNextShuffle; // 0x20	
 };
 
@@ -39066,7 +39967,6 @@ public:
 // Alignment: 8
 // Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Normalize Vector"
@@ -39086,7 +39986,6 @@ public:
 // Size: 0xc
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeFitInfluence_t
@@ -39100,7 +39999,6 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SosEditItemInfo_t
@@ -39144,37 +40042,35 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0xee0
+// Size: 0xf30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetVectorAttributeToVectorExpression : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "expression"
-	VectorExpressionType_t m_nExpression; // 0x1b8	
+	VectorExpressionType_t m_nExpression; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "input 1"
-	CPerParticleVecInput m_vInput1; // 0x1c0	
+	CPerParticleVecInput m_vInput1; // 0x1c8	
 	// MPropertyFriendlyName "input 2"
-	CPerParticleVecInput m_vInput2; // 0x818	
+	CPerParticleVecInput m_vInput2; // 0x840	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nOutputField; // 0xe70	
+	ParticleAttributeIndex_t m_nOutputField; // 0xeb8	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0xe74	
+	ParticleSetMethod_t m_nSetMethod; // 0xebc	
 	// MPropertyFriendlyName "normalize result"
-	bool m_bNormalizedOutput; // 0xe78	
+	bool m_bNormalizedOutput; // 0xec0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x2900
+// Size: 0x29b8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderModels : public CParticleFunctionRenderer
@@ -39182,215 +40078,214 @@ class C_OP_RenderModels : public CParticleFunctionRenderer
 public:
 	// MPropertyFriendlyName "Only Render in effects bloom pass"
 	// MPropertySortPriority "1100"
-	bool m_bOnlyRenderInEffectsBloomPass; // 0x208	
+	bool m_bOnlyRenderInEffectsBloomPass; // 0x210	
 	// MPropertyFriendlyName "Only Render in effects water pass"
 	// MPropertySortPriority "1050"
 	// MPropertySuppressExpr "mod != csgo"
-	bool m_bOnlyRenderInEffectsWaterPass; // 0x209	
+	bool m_bOnlyRenderInEffectsWaterPass; // 0x211	
 	// MPropertyFriendlyName "Use Mixed Resolution Rendering"
 	// MPropertySortPriority "1200"
-	bool m_bUseMixedResolutionRendering; // 0x20a	
+	bool m_bUseMixedResolutionRendering; // 0x212	
 	// MPropertyFriendlyName "Only Render in effects game overlay pass"
 	// MPropertySortPriority "1210"
 	// MPropertySuppressExpr "mod != csgo"
-	bool m_bOnlyRenderInEffecsGameOverlay; // 0x20b	
+	bool m_bOnlyRenderInEffecsGameOverlay; // 0x213	
 private:
-	[[maybe_unused]] uint8_t __pad020c[0x4]; // 0x20c
+	[[maybe_unused]] uint8_t __pad0214[0x4]; // 0x214
 public:
 	// MPropertyFriendlyName "models"
 	// MParticleRequireDefaultArrayEntry
 	// MPropertyAutoExpandSelf
 	// MPropertySortPriority "775"
-	CUtlVector< ModelReference_t > m_ModelList; // 0x210	
+	CUtlVector< ModelReference_t > m_ModelList; // 0x218	
 	// MPropertyFriendlyName "bodygroup field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nBodyGroupField; // 0x228	
+	ParticleAttributeIndex_t m_nBodyGroupField; // 0x230	
 	// MPropertyFriendlyName "submodel field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nSubModelField; // 0x22c	
+	ParticleAttributeIndex_t m_nSubModelField; // 0x234	
 	// MPropertyStartGroup "Orientation"
 	// MPropertyFriendlyName "ignore normal"
 	// MPropertySortPriority "750"
-	bool m_bIgnoreNormal; // 0x230	
+	bool m_bIgnoreNormal; // 0x238	
 	// MPropertyFriendlyName "orient model z to normal"
 	// MPropertySortPriority "750"
 	// MPropertySuppressExpr "m_bIgnoreNormal"
-	bool m_bOrientZ; // 0x231	
+	bool m_bOrientZ; // 0x239	
 	// MPropertyFriendlyName "center mesh"
 	// MPropertySortPriority "750"
-	bool m_bCenterOffset; // 0x232	
+	bool m_bCenterOffset; // 0x23a	
 private:
-	[[maybe_unused]] uint8_t __pad0233[0x5]; // 0x233
+	[[maybe_unused]] uint8_t __pad023b[0x5]; // 0x23b
 public:
 	// MPropertyFriendlyName "model local offset"
 	// MPropertySortPriority "750"
-	CPerParticleVecInput m_vecLocalOffset; // 0x238	
+	CPerParticleVecInput m_vecLocalOffset; // 0x240	
 	// MPropertyFriendlyName "model local rotation (pitch/yaw/roll)"
 	// MPropertySortPriority "750"
-	CPerParticleVecInput m_vecLocalRotation; // 0x890	
+	CPerParticleVecInput m_vecLocalRotation; // 0x8b8	
 	// MPropertyStartGroup "Model Scale"
 	// MPropertyFriendlyName "ignore radius"
 	// MPropertySortPriority "700"
-	bool m_bIgnoreRadius; // 0xee8	
+	bool m_bIgnoreRadius; // 0xf30	
 private:
-	[[maybe_unused]] uint8_t __pad0ee9[0x3]; // 0xee9
+	[[maybe_unused]] uint8_t __pad0f31[0x3]; // 0xf31
 public:
 	// MPropertyFriendlyName "model scale CP"
 	// MPropertySortPriority "700"
-	int32_t m_nModelScaleCP; // 0xeec	
+	int32_t m_nModelScaleCP; // 0xf34	
 	// MPropertyFriendlyName "model component scale"
 	// MPropertySortPriority "700"
-	CPerParticleVecInput m_vecComponentScale; // 0xef0	
+	CPerParticleVecInput m_vecComponentScale; // 0xf38	
 	// MPropertyFriendlyName "apply scales in local model space"
 	// MPropertySortPriority "700"
-	bool m_bLocalScale; // 0x1548	
+	bool m_bLocalScale; // 0x15b0	
 private:
-	[[maybe_unused]] uint8_t __pad1549[0x3]; // 0x1549
+	[[maybe_unused]] uint8_t __pad15b1[0x3]; // 0x15b1
 public:
 	// MPropertyFriendlyName "model size cull bloat"
 	// MPropertyAttributeChoiceName "particlefield_size_cull_bloat"
-	int32_t m_nSizeCullBloat; // 0x154c	
+	int32_t m_nSizeCullBloat; // 0x15b4	
 	// MPropertyStartGroup "Animation"
 	// MPropertyFriendlyName "animated"
 	// MPropertySortPriority "500"
-	bool m_bAnimated; // 0x1550	
+	bool m_bAnimated; // 0x15b8	
 private:
-	[[maybe_unused]] uint8_t __pad1551[0x7]; // 0x1551
+	[[maybe_unused]] uint8_t __pad15b9[0x7]; // 0x15b9
 public:
 	// MPropertyFriendlyName "animation rate"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	CPerParticleFloatInput m_flAnimationRate; // 0x1558	
+	CPerParticleFloatInput m_flAnimationRate; // 0x15c0	
 	// MPropertyFriendlyName "scale animation rate"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bScaleAnimationRate; // 0x16b0	
+	bool m_bScaleAnimationRate; // 0x1720	
 	// MPropertyFriendlyName "force looping animations"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bForceLoopingAnimation; // 0x16b1	
+	bool m_bForceLoopingAnimation; // 0x1721	
 	// MPropertyFriendlyName "reset animation frame on stop"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bResetAnimOnStop; // 0x16b2	
+	bool m_bResetAnimOnStop; // 0x1722	
 	// MPropertyFriendlyName "set animation frame manually"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!m_bAnimated"
-	bool m_bManualAnimFrame; // 0x16b3	
+	bool m_bManualAnimFrame; // 0x1723	
 	// MPropertyFriendlyName "animation rate scale field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!(m_bAnimated && m_bScaleAnimationRate)"
-	ParticleAttributeIndex_t m_nAnimationScaleField; // 0x16b4	
+	ParticleAttributeIndex_t m_nAnimationScaleField; // 0x1724	
 	// MPropertyStartGroup "Animation"
 	// MPropertyFriendlyName "animation sequence field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "500"
-	ParticleAttributeIndex_t m_nAnimationField; // 0x16b8	
+	ParticleAttributeIndex_t m_nAnimationField; // 0x1728	
 	// MPropertyFriendlyName "manual animation frame field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "500"
 	// MPropertySuppressExpr "!(m_bAnimated && m_bManualAnimFrame)"
-	ParticleAttributeIndex_t m_nManualFrameField; // 0x16bc	
+	ParticleAttributeIndex_t m_nManualFrameField; // 0x172c	
 	// MPropertyFriendlyName "activity override"
 	// MPropertySuppressExpr "mod != dota"
 	// MPropertySortPriority "500"
-	char m_ActivityName[256]; // 0x16c0	
+	char m_ActivityName[256]; // 0x1730	
 	// MPropertyFriendlyName "sequence override"
 	// MPropertySuppressExpr "mod == dota"
 	// MPropertySortPriority "500"
-	char m_SequenceName[256]; // 0x17c0	
+	char m_SequenceName[256]; // 0x1830	
 	// MPropertyFriendlyName "Enable Cloth Simulation"
-	bool m_bEnableClothSimulation; // 0x18c0	
+	bool m_bEnableClothSimulation; // 0x1930	
 	// MPropertyFriendlyName "With Cloth Effect"
 	// MPropertySortPriority "500"
-	char m_ClothEffectName[64]; // 0x18c1	
+	char m_ClothEffectName[64]; // 0x1931	
 private:
-	[[maybe_unused]] uint8_t __pad1901[0x7]; // 0x1901
+	[[maybe_unused]] uint8_t __pad1971[0x7]; // 0x1971
 public:
 	// MPropertyStartGroup "Material"
 	// MPropertyFriendlyName "material override"
 	// MPropertySortPriority "600"
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hOverrideMaterial; // 0x1908	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hOverrideMaterial; // 0x1978	
 	// MPropertyFriendlyName "override translucent materials"
 	// MPropertySortPriority "600"
-	bool m_bOverrideTranslucentMaterials; // 0x1910	
+	bool m_bOverrideTranslucentMaterials; // 0x1980	
 private:
-	[[maybe_unused]] uint8_t __pad1911[0x7]; // 0x1911
+	[[maybe_unused]] uint8_t __pad1981[0x7]; // 0x1981
 public:
 	// MPropertyFriendlyName "skin number"
 	// MPropertySortPriority "600"
-	CPerParticleFloatInput m_nSkin; // 0x1918	
+	CPerParticleFloatInput m_nSkin; // 0x1988	
 	// MPropertyFriendlyName "material variables"
 	// MPropertyAutoExpandSelf
 	// MPropertySortPriority "600"
-	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x1a70	
+	CUtlVector< MaterialVariable_t > m_MaterialVars; // 0x1ae8	
 	// MPropertyStartGroup "Model Overrides"
 	// MPropertyFriendlyName "model list selection override"
-	CPerParticleFloatInput m_flManualModelSelection; // 0x1a88	
+	CPerParticleFloatInput m_flManualModelSelection; // 0x1b00	
 	// MPropertyFriendlyName "input model"
 	// MParticleInputOptional
-	CParticleModelInput m_modelInput; // 0x1be0	
+	CParticleModelInput m_modelInput; // 0x1c60	
 	// MPropertyFriendlyName "model LOD"
-	int32_t m_nLOD; // 0x1c40	
+	int32_t m_nLOD; // 0x1cc0	
 	// MPropertyFriendlyName "model override economy loadout slot type"
-	char m_EconSlotName[256]; // 0x1c44	
+	char m_EconSlotName[256]; // 0x1cc4	
 	// MPropertyFriendlyName "model override original model only (ignore shapeshift/hex/etc)"
-	bool m_bOriginalModel; // 0x1d44	
+	bool m_bOriginalModel; // 0x1dc4	
 	// MPropertyFriendlyName "suppress tinting of the model"
-	bool m_bSuppressTint; // 0x1d45	
+	bool m_bSuppressTint; // 0x1dc5	
 private:
-	[[maybe_unused]] uint8_t __pad1d46[0x2]; // 0x1d46
+	[[maybe_unused]] uint8_t __pad1dc6[0x2]; // 0x1dc6
 public:
 	// MPropertyFriendlyName "SubModel Field Type"
-	RenderModelSubModelFieldType_t m_nSubModelFieldType; // 0x1d48	
+	RenderModelSubModelFieldType_t m_nSubModelFieldType; // 0x1dc8	
 	// MPropertyFriendlyName "disable shadows"
-	bool m_bDisableShadows; // 0x1d4c	
+	bool m_bDisableShadows; // 0x1dcc	
 	// MPropertyFriendlyName "disable depth prepass"
-	bool m_bDisableDepthPrepass; // 0x1d4d	
+	bool m_bDisableDepthPrepass; // 0x1dcd	
 	// MPropertyFriendlyName "accept decals"
-	bool m_bAcceptsDecals; // 0x1d4e	
+	bool m_bAcceptsDecals; // 0x1dce	
 	// MPropertyFriendlyName "forcedrawinterlevedwithsiblings"
-	bool m_bForceDrawInterlevedWithSiblings; // 0x1d4f	
+	bool m_bForceDrawInterlevedWithSiblings; // 0x1dcf	
 	// MPropertyFriendlyName "do not draw in particle pass"
-	bool m_bDoNotDrawInParticlePass; // 0x1d50	
+	bool m_bDoNotDrawInParticlePass; // 0x1dd0	
 	// MPropertyFriendlyName "allow approximate transforms (cpu optimizaiton)"
-	bool m_bAllowApproximateTransforms; // 0x1d51	
+	bool m_bAllowApproximateTransforms; // 0x1dd1	
 	// MPropertyFriendlyName "render attribute"
-	char m_szRenderAttribute[260]; // 0x1d52	
+	char m_szRenderAttribute[260]; // 0x1dd2	
 private:
-	[[maybe_unused]] uint8_t __pad1e56[0x2]; // 0x1e56
+	[[maybe_unused]] uint8_t __pad1ed6[0x2]; // 0x1ed6
 public:
 	// MPropertyStartGroup "+Renderer Modifiers"
 	// MPropertyFriendlyName "Radius Scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flRadiusScale; // 0x1e58	
+	CParticleCollectionFloatInput m_flRadiusScale; // 0x1ed8	
 	// MPropertyFriendlyName "alpha scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flAlphaScale; // 0x1fb0	
+	CParticleCollectionFloatInput m_flAlphaScale; // 0x2038	
 	// MPropertyFriendlyName "rotation roll scale"
 	// MPropertySortPriority "700"
-	CParticleCollectionFloatInput m_flRollScale; // 0x2108	
+	CParticleCollectionFloatInput m_flRollScale; // 0x2198	
 	// MPropertyFriendlyName "per-particle alpha scale attribute"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
 	// MPropertySortPriority "700"
-	ParticleAttributeIndex_t m_nAlpha2Field; // 0x2260	
+	ParticleAttributeIndex_t m_nAlpha2Field; // 0x22f8	
 private:
-	[[maybe_unused]] uint8_t __pad2264[0x4]; // 0x2264
+	[[maybe_unused]] uint8_t __pad22fc[0x4]; // 0x22fc
 public:
 	// MPropertyFriendlyName "color blend"
 	// MPropertySortPriority "700"
-	CParticleCollectionVecInput m_vecColorScale; // 0x2268	
+	CParticleCollectionVecInput m_vecColorScale; // 0x2300	
 	// MPropertyFriendlyName "color blend type"
 	// MPropertySortPriority "700"
-	ParticleColorBlendType_t m_nColorBlendType; // 0x28c0	
+	ParticleColorBlendType_t m_nColorBlendType; // 0x2978	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CInputStreamUpdateNode : public CLeafUpdateNode
@@ -39423,7 +40318,6 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x58
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulse_RegisterInfo
@@ -39440,7 +40334,6 @@ public:
 // Alignment: 16
 // Size: 0x130
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdQuad_t
@@ -39454,9 +40347,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomYaw : public CGeneralRandomRotation
@@ -39466,9 +40358,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x4d0
+// Size: 0x4e0
 // Has VTable
-// Construct allowed
 // 
 // MParticleMinVersion "8"
 // MGetKV3ClassDefaults
@@ -39476,50 +40367,48 @@ class C_INIT_CreateSequentialPathV2 : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "maximum distance"
-	CPerParticleFloatInput m_fMaxDistance; // 0x1c0	
+	CPerParticleFloatInput m_fMaxDistance; // 0x1c8	
 	// MPropertyFriendlyName "particles to map from start to end"
-	CParticleCollectionFloatInput m_flNumToAssign; // 0x318	
+	CParticleCollectionFloatInput m_flNumToAssign; // 0x328	
 	// MPropertyFriendlyName "restart behavior (0 = bounce, 1 = loop )"
-	bool m_bLoop; // 0x470	
+	bool m_bLoop; // 0x488	
 	// MPropertyFriendlyName "use sequential CP pairs between start and end point"
-	bool m_bCPPairs; // 0x471	
+	bool m_bCPPairs; // 0x489	
 	// MPropertyFriendlyName "save offset"
-	bool m_bSaveOffset; // 0x472	
+	bool m_bSaveOffset; // 0x48a	
 private:
-	[[maybe_unused]] uint8_t __pad0473[0xd]; // 0x473
+	[[maybe_unused]] uint8_t __pad048b[0x5]; // 0x48b
 public:
-	CPathParameters m_PathParams; // 0x480	
+	CPathParameters m_PathParams; // 0x490	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x828
+// Size: 0x850
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InitVec : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "value"
-	CPerParticleVecInput m_InputValue; // 0x1c0	
+	CPerParticleVecInput m_InputValue; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nOutputField; // 0x818	
+	ParticleAttributeIndex_t m_nOutputField; // 0x840	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x81c	
+	ParticleSetMethod_t m_nSetMethod; // 0x844	
 	// MPropertyFriendlyName "normalize result"
-	bool m_bNormalizedOutput; // 0x820	
+	bool m_bNormalizedOutput; // 0x848	
 	// MPropertyFriendlyName "set previous position"
 	// MPropertySuppressExpr "m_nOutputField != PARTICLE_ATTRIBUTE_XYZ"
-	bool m_bWritePreviousPosition; // 0x821	
+	bool m_bWritePreviousPosition; // 0x849	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x20
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CEmitTagActionUpdater : public CAnimActionUpdater
@@ -39529,11 +40418,26 @@ public:
 	bool m_bIsZeroDuration; // 0x1c	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmCachedVectorNode::CDefinition : public CNmVectorValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	NmCachedValueMode_t m_mode; // 0x14	
+};
+
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAddUpdateNode : public CBinaryUpdateNode
@@ -39550,17 +40454,16 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
-// Size: 0x38
+// Size: 0x78
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimTagManagerUpdater
 {
 private:
-	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
+	[[maybe_unused]] uint8_t __pad0000[0x38]; // 0x0
 public:
-	CUtlVector< CSmartPtr< CAnimTagBase > > m_tags; // 0x18	
+	CUtlVector< CSmartPtr< CAnimTagBase > > m_tags; // 0x38	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -39621,7 +40524,6 @@ public:
 // Alignment: 8
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct IncompatibleFilter_t
@@ -39636,7 +40538,6 @@ public:
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Translate"
@@ -39653,9 +40554,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomVector : public CParticleFunctionInitializer
@@ -39663,46 +40563,45 @@ class C_INIT_RandomVector : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "min"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vecMin; // 0x1c0	
+	Vector m_vecMin; // 0x1c8	
 	// MPropertyFriendlyName "max"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vecMax; // 0x1cc	
+	Vector m_vecMax; // 0x1d4	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1d8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1e0	
 	// MPropertyFriendlyName "Random number generator controls"
-	CRandomNumberGeneratorParameters m_randomnessParameters; // 0x1dc	
+	CRandomNumberGeneratorParameters m_randomnessParameters; // 0x1e4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x830
+// Size: 0x858
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointToCPVelocity : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "control point input"
-	int32_t m_nCPInput; // 0x1c0	
+	int32_t m_nCPInput; // 0x1c8	
 	// MPropertyFriendlyName "control point number to set velocity"
-	int32_t m_nCPOutputVel; // 0x1c4	
+	int32_t m_nCPOutputVel; // 0x1cc	
 	// MPropertyFriendlyName "normalize output"
-	bool m_bNormalize; // 0x1c8	
+	bool m_bNormalize; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01c9[0x3]; // 0x1c9
+	[[maybe_unused]] uint8_t __pad01d1[0x3]; // 0x1d1
 public:
 	// MPropertyFriendlyName "control point number to set magnitude"
-	int32_t m_nCPOutputMag; // 0x1cc	
+	int32_t m_nCPOutputMag; // 0x1d4	
 	// MPropertyFriendlyName "control point field for magnitude"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nCPField; // 0x1d0	
+	int32_t m_nCPField; // 0x1d8	
 private:
-	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
+	[[maybe_unused]] uint8_t __pad01dc[0x4]; // 0x1dc
 public:
 	// MPropertyFriendlyName "comparison velocity"
-	CParticleCollectionVecInput m_vecComparisonVelocity; // 0x1d8	
+	CParticleCollectionVecInput m_vecComparisonVelocity; // 0x1e0	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
@@ -39710,7 +40609,6 @@ public:
 // Size: 0x8
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class SampleCode
@@ -39723,7 +40621,6 @@ public:
 // Alignment: 8
 // Size: 0x20
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CExpressionActionUpdater : public CAnimActionUpdater
@@ -39741,7 +40638,7 @@ public:
 // Alignment: 8
 // Size: 0x40
 // Has Trivial Destructor
-struct EventClientPostAdvanceTick_t : public EventPostAdvanceTick_t
+struct EventServerBeginAsyncPostTickWork_t : public EventPostAdvanceTick_t
 {
 public:
 	// No schema binary for binding
@@ -39750,7 +40647,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyArrayElementNameKey "m_strImportantProperty"
@@ -39775,7 +40671,7 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0xc0
+// Size: 0xb8
 // Has VTable
 class CShatterGlassShard
 {
@@ -39811,122 +40707,115 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad0071[0x3]; // 0x71
 public:
-	int32_t m_nParentPanelsNthShard; // 0x74	
-	int32_t m_nSubShardGeneration; // 0x78	
-	Vector2D m_vecAverageVertPosition; // 0x7c	
-	bool m_bAverageVertPositionIsValid; // 0x84	
+	int32_t m_nSubShardGeneration; // 0x74	
+	Vector2D m_vecAverageVertPosition; // 0x78	
+	bool m_bAverageVertPositionIsValid; // 0x80	
 private:
-	[[maybe_unused]] uint8_t __pad0085[0x3]; // 0x85
+	[[maybe_unused]] uint8_t __pad0081[0x3]; // 0x81
 public:
-	Vector2D m_vecPanelSpaceStressPositionA; // 0x88	
-	Vector2D m_vecPanelSpaceStressPositionB; // 0x90	
-	bool m_bStressPositionAIsValid; // 0x98	
-	bool m_bStressPositionBIsValid; // 0x99	
-	bool m_bFlaggedForRemoval; // 0x9a	
+	Vector2D m_vecPanelSpaceStressPositionA; // 0x84	
+	Vector2D m_vecPanelSpaceStressPositionB; // 0x8c	
+	bool m_bStressPositionAIsValid; // 0x94	
+	bool m_bStressPositionBIsValid; // 0x95	
+	bool m_bFlaggedForRemoval; // 0x96	
 private:
-	[[maybe_unused]] uint8_t __pad009b[0x1]; // 0x9b
+	[[maybe_unused]] uint8_t __pad0097[0x1]; // 0x97
 public:
-	GameTime_t m_flPhysicsEntitySpawnedAtTime; // 0x9c	
-	bool m_bShatterRateLimited; // 0xa0	
-private:
-	[[maybe_unused]] uint8_t __pad00a1[0x3]; // 0xa1
-public:
-	CHandle< CBaseEntity > m_hEntityHittingMe; // 0xa4	
-	CUtlVector< uint32 > m_vecNeighbors; // 0xa8	
+	GameTime_t m_flPhysicsEntitySpawnedAtTime; // 0x98	
+	CHandle< CBaseEntity > m_hEntityHittingMe; // 0x9c	
+	CUtlVector< uint32 > m_vecNeighbors; // 0xa0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x940
+// Size: 0x970
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_WorldTraceConstraint : public CParticleFunctionConstraint
 {
 public:
 	// MPropertyFriendlyName "control point for fast collision tests"
-	int32_t m_nCP; // 0x1b8	
+	int32_t m_nCP; // 0x1c0	
 	// MPropertyFriendlyName "control point offset for fast collisions"
 	// MVectorIsCoordinate
-	Vector m_vecCpOffset; // 0x1bc	
+	Vector m_vecCpOffset; // 0x1c4	
 	// MPropertyFriendlyName "collision mode"
-	ParticleCollisionMode_t m_nCollisionMode; // 0x1c8	
+	ParticleCollisionMode_t m_nCollisionMode; // 0x1d0	
 	// MPropertyFriendlyName "minimum detail collision mode"
-	ParticleCollisionMode_t m_nCollisionModeMin; // 0x1cc	
+	ParticleCollisionMode_t m_nCollisionModeMin; // 0x1d4	
 	// MPropertyStartGroup "Collision Options"
 	// MPropertyFriendlyName "Trace Set"
-	ParticleTraceSet_t m_nTraceSet; // 0x1d0	
+	ParticleTraceSet_t m_nTraceSet; // 0x1d8	
 	// MPropertyFriendlyName "collision group"
-	char m_CollisionGroupName[128]; // 0x1d4	
+	char m_CollisionGroupName[128]; // 0x1dc	
 	// MPropertyFriendlyName "World Only"
-	bool m_bWorldOnly; // 0x254	
+	bool m_bWorldOnly; // 0x25c	
 	// MPropertyFriendlyName "brush only"
-	bool m_bBrushOnly; // 0x255	
+	bool m_bBrushOnly; // 0x25d	
 	// MPropertyFriendlyName "include water"
 	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
-	bool m_bIncludeWater; // 0x256	
+	bool m_bIncludeWater; // 0x25e	
 private:
-	[[maybe_unused]] uint8_t __pad0257[0x1]; // 0x257
+	[[maybe_unused]] uint8_t __pad025f[0x1]; // 0x25f
 public:
 	// MPropertyFriendlyName "CP Entity to Ignore for Collisions"
 	// MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
-	int32_t m_nIgnoreCP; // 0x258	
+	int32_t m_nIgnoreCP; // 0x260	
 	// MPropertyFriendlyName "control point movement distance tolerance"
 	// MPropertySuppressExpr "m_nCollisionMode == COLLISION_MODE_PER_PARTICLE_TRACE"
-	float m_flCpMovementTolerance; // 0x25c	
+	float m_flCpMovementTolerance; // 0x264	
 	// MPropertyFriendlyName "plane cache retest rate"
 	// MPropertySuppressExpr "m_nCollisionMode != COLLISION_MODE_PER_FRAME_PLANESET"
-	float m_flRetestRate; // 0x260	
+	float m_flRetestRate; // 0x268	
 	// MPropertyFriendlyName "trace accuracy tolerance"
 	// MPropertySuppressExpr "m_nCollisionMode != COLLISION_MODE_USE_NEAREST_TRACE"
-	float m_flTraceTolerance; // 0x264	
+	float m_flTraceTolerance; // 0x26c	
 	// MPropertyFriendlyName "Confirm Collision Speed Threshold"
 	// MPropertySuppressExpr "m_nCollisionMode == COLLISION_MODE_PER_PARTICLE_TRACE"
-	float m_flCollisionConfirmationSpeed; // 0x268	
+	float m_flCollisionConfirmationSpeed; // 0x270	
 	// MPropertyFriendlyName "Max Confirmation Traces Per Fame"
 	// MPropertySuppressExpr "m_nCollisionMode == COLLISION_MODE_PER_PARTICLE_TRACE"
-	float m_nMaxTracesPerFrame; // 0x26c	
+	float m_nMaxTracesPerFrame; // 0x274	
 	// MPropertyStartGroup "Impact Options"
 	// MPropertyFriendlyName "radius scale"
-	CPerParticleFloatInput m_flRadiusScale; // 0x270	
+	CPerParticleFloatInput m_flRadiusScale; // 0x278	
 	// MPropertyFriendlyName "amount of bounce"
-	CPerParticleFloatInput m_flBounceAmount; // 0x3c8	
+	CPerParticleFloatInput m_flBounceAmount; // 0x3d8	
 	// MPropertyFriendlyName "amount of slide"
-	CPerParticleFloatInput m_flSlideAmount; // 0x520	
+	CPerParticleFloatInput m_flSlideAmount; // 0x538	
 	// MPropertyFriendlyName "Random Direction scale"
-	CPerParticleFloatInput m_flRandomDirScale; // 0x678	
+	CPerParticleFloatInput m_flRandomDirScale; // 0x698	
 	// MPropertyFriendlyName "Add Decay to Bounce"
-	bool m_bDecayBounce; // 0x7d0	
+	bool m_bDecayBounce; // 0x7f8	
 	// MPropertyFriendlyName "kill particle on collision"
-	bool m_bKillonContact; // 0x7d1	
+	bool m_bKillonContact; // 0x7f9	
 private:
-	[[maybe_unused]] uint8_t __pad07d2[0x2]; // 0x7d2
+	[[maybe_unused]] uint8_t __pad07fa[0x2]; // 0x7fa
 public:
 	// MPropertyFriendlyName "minimum speed to kill on collision"
-	float m_flMinSpeed; // 0x7d4	
+	float m_flMinSpeed; // 0x7fc	
 	// MPropertyFriendlyName "Set Normal"
-	bool m_bSetNormal; // 0x7d8	
+	bool m_bSetNormal; // 0x800	
 private:
-	[[maybe_unused]] uint8_t __pad07d9[0x3]; // 0x7d9
+	[[maybe_unused]] uint8_t __pad0801[0x3]; // 0x801
 public:
 	// MPropertyFriendlyName "Stick On Collision Cache Field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nStickOnCollisionField; // 0x7dc	
+	ParticleAttributeIndex_t m_nStickOnCollisionField; // 0x804	
 	// MPropertyFriendlyName "Speed to stop when sticking"
-	CPerParticleFloatInput m_flStopSpeed; // 0x7e0	
+	CPerParticleFloatInput m_flStopSpeed; // 0x808	
 	// MPropertyFriendlyName "Entity Hitbox Cache Field (Requires Stick on Collision)"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nEntityStickDataField; // 0x938	
+	ParticleAttributeIndex_t m_nEntityStickDataField; // 0x968	
 	// MPropertyFriendlyName "Entity Normal Cache Field (Requires Stick on Collision)"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nEntityStickNormalField; // 0x93c	
+	ParticleAttributeIndex_t m_nEntityStickNormalField; // 0x96c	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct BoneDemoCaptureSettings_t
@@ -39949,10 +40838,21 @@ public:
 	float m_flErrorQuantizationScaleMax; // 0x1c	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmConstFloatNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	float m_flValue; // 0x10	
+};
+
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0xa0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VPhysXBodyPart_t
@@ -39992,7 +40892,6 @@ public:
 // Alignment: 8
 // Size: 0x320
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Place In Radius"
@@ -40029,7 +40928,6 @@ public:
 // Alignment: 4
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixUtilityDesc_t
@@ -40055,14 +40953,14 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x440
+// Size: 0x648
 // Has VTable
 class CNPC_Boss_Tier1_GraphController : public CNPC_Trooper_GraphController
 {
 public:
-	CAnimGraphParamRef< char* > m_pszActivity; // 0x3e8	
-	CAnimGraphParamRef< char* > m_pszLaneSide; // 0x408	
-	CAnimGraphParamRef< bool > m_bShieldMode; // 0x428	
+	CAnimGraphParamRef< char* > m_pszActivity; // 0x5d8	
+	CAnimGraphParamRef< char* > m_pszLaneSide; // 0x600	
+	CAnimGraphParamRef< bool > m_bShieldMode; // 0x628	
 	
 	// Static fields:
 	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNPC_Boss_Tier1_GraphController")->GetStaticFields()[0]->m_pInstance);};
@@ -40099,9 +40997,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreateFromPlaneCache : public CParticleFunctionInitializer
@@ -40109,21 +41006,20 @@ class C_INIT_CreateFromPlaneCache : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "local offset min"
 	// MVectorIsCoordinate
-	Vector m_vecOffsetMin; // 0x1c0	
+	Vector m_vecOffsetMin; // 0x1c8	
 	// MPropertyFriendlyName "local offset max"
 	// MVectorIsCoordinate
-	Vector m_vecOffsetMax; // 0x1cc	
+	Vector m_vecOffsetMax; // 0x1d4	
 private:
-	[[maybe_unused]] uint8_t __pad01d8[0x1]; // 0x1d8
+	[[maybe_unused]] uint8_t __pad01e0[0x1]; // 0x1e0
 public:
 	// MPropertyFriendlyName "set normal"
-	bool m_bUseNormal; // 0x1d9	
+	bool m_bUseNormal; // 0x1e1	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
 // Size: 0x88
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ParticleControlPointConfiguration_t
@@ -40138,7 +41034,6 @@ public:
 // Alignment: 4
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMotionGraphConfig
@@ -40157,7 +41052,6 @@ public:
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMovementComponentUpdater : public CAnimComponentUpdater
@@ -40178,7 +41072,7 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0xa0
+// Size: 0xc0
 class CDecalInfo
 {
 public:
@@ -40195,9 +41089,9 @@ public:
 	CDecalInfo* m_pNext; // 0x28	
 	CDecalInfo* m_pPrev; // 0x30	
 private:
-	[[maybe_unused]] uint8_t __pad0038[0x60]; // 0x38
+	[[maybe_unused]] uint8_t __pad0038[0x80]; // 0x38
 public:
-	int32_t m_nDecalMaterialIndex; // 0x98	
+	int32_t m_nDecalMaterialIndex; // 0xb8	
 	
 	// Datamap fields:
 	// void m_decalEvent; // 0x38
@@ -40208,7 +41102,6 @@ public:
 // Alignment: 4
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixEffectChainDesc_t
@@ -40221,25 +41114,23 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ConstrainLineLength : public CParticleFunctionConstraint
 {
 public:
 	// MPropertyFriendlyName "minimum length"
-	float m_flMinDistance; // 0x1b8	
+	float m_flMinDistance; // 0x1c0	
 	// MPropertyFriendlyName "maximum length"
-	float m_flMaxDistance; // 0x1bc	
+	float m_flMaxDistance; // 0x1c4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 4
 // Size: 0x14
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PointDefinition_t
@@ -40260,7 +41151,6 @@ public:
 // Alignment: 8
 // Size: 0xc8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CHitReactUpdateNode : public CUnaryUpdateNode
@@ -40298,7 +41188,6 @@ public:
 // Alignment: 8
 // Size: 0x20
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CTrackedObject_MODIFIER_TRACKED_RENDER_ATTRIBUTE : public IModifierTrackedObject
@@ -40313,7 +41202,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Fit on Line Pick Mode"
@@ -40327,57 +41215,55 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1f8
+// Size: 0x200
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DriveCPFromGlobalSoundFloat : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOutputControlPoint; // 0x1c0	
+	int32_t m_nOutputControlPoint; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nOutputField; // 0x1c4	
+	int32_t m_nOutputField; // 0x1cc	
 	// MPropertyFriendlyName "input minimum"
-	float m_flInputMin; // 0x1c8	
+	float m_flInputMin; // 0x1d0	
 	// MPropertyFriendlyName "input maximum"
-	float m_flInputMax; // 0x1cc	
+	float m_flInputMax; // 0x1d4	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1d0	
+	float m_flOutputMin; // 0x1d8	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d4	
+	float m_flOutputMax; // 0x1dc	
 	// MPropertyFriendlyName "sound stack name"
-	CUtlString m_StackName; // 0x1d8	
+	CUtlString m_StackName; // 0x1e0	
 	// MPropertyFriendlyName "sound operator name"
-	CUtlString m_OperatorName; // 0x1e0	
+	CUtlString m_OperatorName; // 0x1e8	
 	// MPropertyFriendlyName "sound field name"
-	CUtlString m_FieldName; // 0x1e8	
+	CUtlString m_FieldName; // 0x1f0	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x100
+// Size: 0x108
 struct SummaryTakeDamageInfo_t
 {
 public:
 	int32_t nSummarisedCount; // 0x0	
 	CTakeDamageInfo info; // 0x8	
-	// -> m_pOriginatingInfo - 0xe0
-	// -> m_nHealthLost - 0xe8
-	// -> m_nDamageTaken - 0xec
-	// -> m_nTotalledHealthLost - 0xf0
-	// -> m_nTotalledDamageTaken - 0xf4
-	CTakeDamageResult result; // 0xe0	
-	CHandle< C_BaseEntity > hTarget; // 0xf8	
+	// -> m_pOriginatingInfo - 0xe8
+	// -> m_nHealthLost - 0xf0
+	// -> m_nDamageTaken - 0xf4
+	// -> m_nTotalledHealthLost - 0xf8
+	// -> m_nTotalledDamageTaken - 0xfc
+	CTakeDamageResult result; // 0xe8	
+	CHandle< C_BaseEntity > hTarget; // 0x100	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0xd0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Random Offset"
@@ -40396,7 +41282,6 @@ public:
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// MClassHasEntityLimitedDataDesc
 class ConstraintSoundInfo
 {
 private:
@@ -40434,22 +41319,20 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ForceControlPointStub : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "control point"
-	int32_t m_ControlPoint; // 0x1c0	
+	int32_t m_ControlPoint; // 0x1c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x160
-// Construct allowed
+// Size: 0x168
 // 
 // MGetKV3ClassDefaults
 struct FloatInputMaterialVariable_t
@@ -40465,13 +41348,24 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmVirtualParameterFloatNode::CDefinition : public CNmFloatValueNode::CDefinition
 {
 public:
 	int16_t m_nChildNodeIdx; // 0x10	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFloatAbsNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -40491,7 +41385,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CRegionSVM
@@ -40503,30 +41396,48 @@ public:
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0x128
+// Size: 0x190
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MPropertyFriendlyName "Selector"
-// MPropertyDescription "Plays a selected vsnd on playback."
-class CVoiceContainerSelector : public CVoiceContainerBase
+// MPropertyFriendlyName "Wind Generator Container"
+// MPropertyDescription "This is a synth meant to generate whoosh noises."
+class CVoiceContainerShapedNoise : public CVoiceContainerBase
 {
 public:
-	// MPropertyFriendlyName "Playback Mode"
-	PlayBackMode_t m_mode; // 0xe8	
+	bool m_bUseCurveForFrequency; // 0xb8	
 private:
-	[[maybe_unused]] uint8_t __pad00ec[0x4]; // 0xec
+	[[maybe_unused]] uint8_t __pad00b9[0x3]; // 0xb9
 public:
-	// MPropertyFriendlyName "Sounds To play"
-	CUtlVector< SoundWithProbability_t > m_soundsToPlay; // 0xf0	
+	// MPropertySuppressExpr "m_bUseCurveForFrequency == 1"
+	float m_flFrequency; // 0xbc	
+	// MPropertySuppressExpr "m_bUseCurveForFrequency == 0"
+	// MPropertyFriendlyName "Frequency Sweep"
+	CPiecewiseCurve m_frequencySweep; // 0xc0	
+	bool m_bUseCurveForResonance; // 0x100	
+private:
+	[[maybe_unused]] uint8_t __pad0101[0x3]; // 0x101
+public:
+	// MPropertySuppressExpr "m_bUseCurveForResonance == 1"
+	float m_flResonance; // 0x104	
+	// MPropertySuppressExpr "m_bUseCurveForResonance == 0"
+	// MPropertyFriendlyName "Resonance Sweep"
+	CPiecewiseCurve m_resonanceSweep; // 0x108	
+	bool m_bUseCurveForAmplitude; // 0x148	
+private:
+	[[maybe_unused]] uint8_t __pad0149[0x3]; // 0x149
+public:
+	// MPropertySuppressExpr "m_bUseCurveForAmplitude == 1"
+	float m_flGainInDecibels; // 0x14c	
+	// MPropertySuppressExpr "m_bUseCurveForAmplitude == 0"
+	// MPropertyFriendlyName "Gain Sweep (in Decibels)"
+	CPiecewiseCurve m_gainSweep; // 0x150	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x2b8
+// Size: 0x2c0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_PercentageBetweenTransformsVector : public CParticleFunctionOperator
@@ -40534,109 +41445,106 @@ class C_OP_PercentageBetweenTransformsVector : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "percentage minimum"
-	float m_flInputMin; // 0x1bc	
+	float m_flInputMin; // 0x1c4	
 	// MPropertyFriendlyName "percentage maximum"
-	float m_flInputMax; // 0x1c0	
+	float m_flInputMax; // 0x1c8	
 	// MPropertyFriendlyName "output minimum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vecOutputMin; // 0x1c4	
+	Vector m_vecOutputMin; // 0x1cc	
 	// MPropertyFriendlyName "output maximum"
 	// MVectorIsSometimesCoordinate "m_nFieldOutput"
-	Vector m_vecOutputMax; // 0x1d0	
+	Vector m_vecOutputMax; // 0x1d8	
 private:
-	[[maybe_unused]] uint8_t __pad01dc[0x4]; // 0x1dc
+	[[maybe_unused]] uint8_t __pad01e4[0x4]; // 0x1e4
 public:
 	// MPropertyFriendlyName "strarting transform"
-	CParticleTransformInput m_TransformStart; // 0x1e0	
+	CParticleTransformInput m_TransformStart; // 0x1e8	
 	// MPropertyFriendlyName "end transform"
-	CParticleTransformInput m_TransformEnd; // 0x248	
+	CParticleTransformInput m_TransformEnd; // 0x250	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x2b0	
+	ParticleSetMethod_t m_nSetMethod; // 0x2b8	
 	// MPropertyFriendlyName "only active within input range"
-	bool m_bActiveRange; // 0x2b4	
+	bool m_bActiveRange; // 0x2bc	
 	// MPropertyFriendlyName "treat distance between points as radius"
-	bool m_bRadialCheck; // 0x2b5	
+	bool m_bRadialCheck; // 0x2bd	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xad8
+// Size: 0xb08
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_LockToBone : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "model input"
-	CParticleModelInput m_modelInput; // 0x1b8	
+	CParticleModelInput m_modelInput; // 0x1c0	
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_transformInput; // 0x218	
+	CParticleTransformInput m_transformInput; // 0x220	
 	// MPropertyFriendlyName "lifetime fade start"
-	float m_flLifeTimeFadeStart; // 0x280	
+	float m_flLifeTimeFadeStart; // 0x288	
 	// MPropertyFriendlyName "lifetime fade end"
-	float m_flLifeTimeFadeEnd; // 0x284	
+	float m_flLifeTimeFadeEnd; // 0x28c	
 	// MPropertyFriendlyName "instant jump threshold"
-	float m_flJumpThreshold; // 0x288	
+	float m_flJumpThreshold; // 0x290	
 	// MPropertyFriendlyName "previous position scale"
-	float m_flPrevPosScale; // 0x28c	
+	float m_flPrevPosScale; // 0x294	
 	// MPropertyFriendlyName "hitbox set"
-	char m_HitboxSetName[128]; // 0x290	
+	char m_HitboxSetName[128]; // 0x298	
 	// MPropertyFriendlyName "rigid lock"
-	bool m_bRigid; // 0x310	
+	bool m_bRigid; // 0x318	
 	// MPropertyFriendlyName "use bones instead of hitboxes"
-	bool m_bUseBones; // 0x311	
+	bool m_bUseBones; // 0x319	
 private:
-	[[maybe_unused]] uint8_t __pad0312[0x2]; // 0x312
+	[[maybe_unused]] uint8_t __pad031a[0x2]; // 0x31a
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x314	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x31c	
 	// MPropertyFriendlyName "output field prev"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutputPrev; // 0x318	
+	ParticleAttributeIndex_t m_nFieldOutputPrev; // 0x320	
 	// MPropertyStartGroup "Set Rotations to Bones"
 	// MPropertyFriendlyName "lock rotations to bone orientation"
-	ParticleRotationLockType_t m_nRotationSetType; // 0x31c	
+	ParticleRotationLockType_t m_nRotationSetType; // 0x324	
 	// MPropertyFriendlyName "rigid set rotation from bones"
-	bool m_bRigidRotationLock; // 0x320	
+	bool m_bRigidRotationLock; // 0x328	
 private:
-	[[maybe_unused]] uint8_t __pad0321[0x7]; // 0x321
+	[[maybe_unused]] uint8_t __pad0329[0x7]; // 0x329
 public:
 	// MPropertyFriendlyName "rigid rotation offset pitch/yaw/roll"
-	CPerParticleVecInput m_vecRotation; // 0x328	
+	CPerParticleVecInput m_vecRotation; // 0x330	
 	// MPropertyFriendlyName "rigid rotation interpolation"
-	CPerParticleFloatInput m_flRotLerp; // 0x980	
+	CPerParticleFloatInput m_flRotLerp; // 0x9a8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x328
+// Size: 0x338
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_PlaneCull : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point of plane"
-	int32_t m_nControlPoint; // 0x1c0	
+	int32_t m_nControlPoint; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "cull offset"
-	CParticleCollectionFloatInput m_flDistance; // 0x1c8	
+	CParticleCollectionFloatInput m_flDistance; // 0x1d0	
 	// MPropertyFriendlyName "flip cull normal"
-	bool m_bCullInside; // 0x320	
+	bool m_bCullInside; // 0x330	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
 // Size: 0x3f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CParticleSystemDefinition : public IParticleSystemDefinition
@@ -40826,7 +41734,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSetParameterActionUpdater : public CAnimActionUpdater
@@ -40840,7 +41747,6 @@ public:
 // Alignment: 8
 // Size: 0x100
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimUpdateSharedData
@@ -40876,7 +41782,6 @@ public:
 // Alignment: 8
 // Size: 0x10
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CTrackedObject_MODIFIER_TRACKED_SOUND : public IModifierTrackedObject
@@ -40889,7 +41794,6 @@ public:
 // Alignment: 8
 // Size: 0x2e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Fit on Line"
@@ -40925,19 +41829,18 @@ public:
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0xf8
+// Size: 0xc8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MPropertyFriendlyName "Amped Decaying Sine Wave Container"
+// MPropertyFriendlyName "TESTBED: Amped Decaying Sine Wave Container"
 // MPropertyDescription "Bytecode instruction"
 class CVoiceContainerAmpedDecayingSineWave : public CVoiceContainerDecayingSineWave
 {
 public:
 	// MPropertyFriendlyName "Attenuation Amount (dB)"
 	// MPropertyDescription "The amount of attenuation ."
-	float m_flGainAmount; // 0xf0	
+	float m_flGainAmount; // 0xc0	
 };
 
 // Registered binary: server.dll (project 'server')
@@ -40960,21 +41863,42 @@ public:
 
 // Registered binary: server.dll (project 'server')
 // Alignment: 8
-// Size: 0x480
+// Size: 0x6b0
 // Has VTable
 class CNPC_Boss_Tier2_GraphController : public CAI_CitadelNPC_GraphController
 {
 public:
-	CAnimGraphParamRef< char* > m_pszActivity; // 0x3d0	
-	CAnimGraphParamRef< char* > m_pszStompAttack; // 0x3f0	
-	CAnimGraphParamRef< char* > m_pszStaggerDirection; // 0x410	
-	CAnimGraphParamRef< char* > m_pszElectricBeamPosition; // 0x430	
-	CAnimGraphTagRef m_sStaggered; // 0x450	
-	CAnimGraphTagRef m_sStomp; // 0x468	
+	CAnimGraphParamRef< char* > m_pszActivity; // 0x5c0	
+	CAnimGraphParamRef< char* > m_pszStompAttack; // 0x5e8	
+	CAnimGraphParamRef< char* > m_pszStaggerDirection; // 0x610	
+	CAnimGraphParamRef< char* > m_pszElectricBeamPosition; // 0x638	
+	CAnimGraphTagRef m_sStaggered; // 0x660	
+	CAnimGraphTagRef m_sStomp; // 0x678	
+	bool m_bHasStompStarted; // 0x690	
+private:
+	[[maybe_unused]] uint8_t __pad0691[0x7]; // 0x691
+public:
+	CAnimGraphTagRef m_sApplyStompDamage; // 0x698	
 	
 	// Static fields:
 	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNPC_Boss_Tier2_GraphController")->GetStaticFields()[0]->m_pInstance);};
 	static bool &Get_s_bSchemaTest(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNPC_Boss_Tier2_GraphController")->GetStaticFields()[1]->m_pInstance);};
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFootstepEventIDNode::CDefinition : public CNmIDValueNode::CDefinition
+{
+public:
+	int16_t m_nSourceStateNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	CNmBitFlags m_eventConditionRules; // 0x14	
 };
 
 // Registered binary: server.dll (project 'server')
@@ -40998,11 +41922,20 @@ public:
 	GameTime_t m_flEndTime; // 0x30	
 };
 
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x58
+// Has VTable
+class CPulseCell_Unknown : public CPulseCell_Base
+{
+public:
+	KeyValues3 m_UnknownKeys; // 0x48	
+};
+
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 4
 // Size: 0x20
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ClutterTile_t
@@ -41016,7 +41949,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeVertexMapBuild_t
@@ -41034,7 +41966,6 @@ public:
 // Alignment: 4
 // Size: 0x18
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PointDefinitionWithTimeValues_t : public PointDefinition_t
@@ -41044,10 +41975,26 @@ public:
 	float m_flTimeDuration; // 0x14	
 };
 
-// Registered binary: animationsystem.dll (project 'animationsystem')
+// Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
-// Size: 0x1b0
-// Construct allowed
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmIDEventPercentageThroughNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	int16_t m_nSourceStateNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	CNmBitFlags m_eventConditionRules; // 0x14	
+	CGlobalSymbol m_eventID; // 0x18	
+};
+
+// Registered binary: animationsystem.dll (project 'animationsystem')
+// Alignment: 16
+// Size: 0x1d0
 // 
 // MGetKV3ClassDefaults
 class CAnimDesc
@@ -41075,45 +42022,44 @@ public:
 	// -> m_usageDifferences - 0x50
 	CAnimEncodedFrames m_Data; // 0x20	
 	CUtlVector< CAnimMovement > m_movementArray; // 0xf8	
-	CUtlVector< CAnimEventDefinition > m_eventArray; // 0x110	
-	CUtlVector< CAnimActivity > m_activityArray; // 0x128	
-	CUtlVector< CAnimLocalHierarchy > m_hierarchyArray; // 0x140	
-	float framestalltime; // 0x158	
-	Vector m_vecRootMin; // 0x15c	
-	Vector m_vecRootMax; // 0x168	
+	CTransform m_xInitialOffset; // 0x110	
+	CUtlVector< CAnimEventDefinition > m_eventArray; // 0x130	
+	CUtlVector< CAnimActivity > m_activityArray; // 0x148	
+	CUtlVector< CAnimLocalHierarchy > m_hierarchyArray; // 0x160	
+	float framestalltime; // 0x178	
+	Vector m_vecRootMin; // 0x17c	
+	Vector m_vecRootMax; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad0174[0x4]; // 0x174
+	[[maybe_unused]] uint8_t __pad0194[0x4]; // 0x194
 public:
-	CUtlVector< Vector > m_vecBoneWorldMin; // 0x178	
-	CUtlVector< Vector > m_vecBoneWorldMax; // 0x190	
-	// -> m_flFadeInTime - 0x1a8
-	// -> m_flFadeOutTime - 0x1ac
-	CAnimSequenceParams m_sequenceParams; // 0x1a8	
+	CUtlVector< Vector > m_vecBoneWorldMin; // 0x198	
+	CUtlVector< Vector > m_vecBoneWorldMax; // 0x1b0	
+	// -> m_flFadeInTime - 0x1c8
+	// -> m_flFadeOutTime - 0x1cc
+	CAnimSequenceParams m_sequenceParams; // 0x1c8	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 16
-// Size: 0xa0
+// Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CTwistConstraint : public CBaseConstraint
 {
 public:
-	bool m_bInverse; // 0x70	
+	bool m_bInverse; // 0x68	
 private:
-	[[maybe_unused]] uint8_t __pad0071[0xf]; // 0x71
+	[[maybe_unused]] uint8_t __pad0069[0x7]; // 0x69
 public:
-	Quaternion m_qParentBindRotation; // 0x80	
-	Quaternion m_qChildBindRotation; // 0x90	
+	Quaternion m_qParentBindRotation; // 0x70	
+	Quaternion m_qChildBindRotation; // 0x80	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 4
 // Size: 0xa4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFeIndexedJiggleBone
@@ -41126,19 +42072,18 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x320
+// Size: 0x330
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_InitFloatCollection : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "value"
-	CParticleCollectionFloatInput m_InputValue; // 0x1c0	
+	CParticleCollectionFloatInput m_InputValue; // 0x1c8	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nOutputField; // 0x318	
+	ParticleAttributeIndex_t m_nOutputField; // 0x328	
 };
 
 // Registered binary: particles.dll (project 'particleslib')
@@ -41199,12 +42144,22 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomRotation : public CGeneralRandomRotation
+{
+public:
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmSpeedScaleNode::CDefinition : public CNmSpeedScaleBaseNode::CDefinition
 {
 public:
 };
@@ -41213,7 +42168,6 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Float Parameter"
@@ -41235,7 +42189,6 @@ public:
 // Size: 0x10
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnBlendVertex_t
@@ -41277,7 +42230,6 @@ public:
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct MaterialParamString_t : public MaterialParam_t
@@ -41290,7 +42242,6 @@ public:
 // Alignment: 8
 // Size: 0x80
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CVirtualAnimParameter : public CAnimParameterBase
@@ -41300,10 +42251,26 @@ public:
 	AnimParamType_t m_eParamType; // 0x78	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmTargetInfoNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	CNmTargetInfoNode::Info_t m_infoType; // 0x14	
+	bool m_bIsWorldSpaceTarget; // 0x18	
+};
+
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CHitBoxSetList
@@ -41315,7 +42282,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x70
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct InfoOverlayData_t
@@ -41341,7 +42307,6 @@ public:
 // Size: 0x30
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CastSphereSATParams_t
@@ -41360,26 +42325,24 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_FadeInSimple : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "proportional fade in time"
-	float m_flFadeInTime; // 0x1b8	
+	float m_flFadeInTime; // 0x1c0	
 	// MPropertyFriendlyName "alpha field"
 	// MPropertyAttributeChoiceName "particlefield_alpha"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xe80
+// Size: 0xec8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreateWithinBox : public CParticleFunctionInitializer
@@ -41387,26 +42350,25 @@ class C_INIT_CreateWithinBox : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "min"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_vecMin; // 0x1c0	
+	CPerParticleVecInput m_vecMin; // 0x1c8	
 	// MPropertyFriendlyName "max"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_vecMax; // 0x818	
+	CPerParticleVecInput m_vecMax; // 0x840	
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0xe70	
+	int32_t m_nControlPointNumber; // 0xeb8	
 	// MPropertyFriendlyName "use local space"
-	bool m_bLocalSpace; // 0xe74	
+	bool m_bLocalSpace; // 0xebc	
 private:
-	[[maybe_unused]] uint8_t __pad0e75[0x3]; // 0xe75
+	[[maybe_unused]] uint8_t __pad0ebd[0x3]; // 0xebd
 public:
 	// MPropertyFriendlyName "Random number generator controls"
-	CRandomNumberGeneratorParameters m_randomnessParameters; // 0xe78	
+	CRandomNumberGeneratorParameters m_randomnessParameters; // 0xec0	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x60
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CBindPoseUpdateNode : public CLeafUpdateNode
@@ -41419,7 +42381,6 @@ public:
 // Size: 0x10
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixFreeverbDesc_t
@@ -41447,9 +42408,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e8
+// Size: 0x1f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomNamedModelSequence : public C_INIT_RandomNamedModelElement
@@ -41459,9 +42419,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x210
+// Size: 0x218
 // Has VTable
-// Construct allowed
 // 
 // MObsoleteParticleFunction
 // MGetKV3ClassDefaults
@@ -41469,21 +42428,37 @@ class C_OP_RenderScreenVelocityRotate : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "rotate rate(dps)"
-	float m_flRotateRateDegrees; // 0x208	
+	float m_flRotateRateDegrees; // 0x210	
 	// MPropertyFriendlyName "forward angle"
-	float m_flForwardDegrees; // 0x20c	
+	float m_flForwardDegrees; // 0x214	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CCurrentVelocityMetricEvaluator : public CMotionMetricEvaluator
 {
 public:
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFootstepEventPercentageThroughNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nSourceStateNodeIdx; // 0x10	
+	NmFootPhaseCondition_t m_phaseCondition; // 0x12	
+private:
+	[[maybe_unused]] uint8_t __pad0013[0x1]; // 0x13
+public:
+	CNmBitFlags m_eventConditionRules; // 0x14	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -41505,7 +42480,6 @@ public:
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataComponentValidGrandParents
@@ -41523,7 +42497,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0xa0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CVoxelVisibility
@@ -41549,7 +42522,6 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct SelectedEditItemInfo_t
@@ -41560,9 +42532,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x3c8
+// Size: 0x3d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomModelSequence : public CParticleFunctionInitializer
@@ -41570,19 +42541,18 @@ class C_INIT_RandomModelSequence : public CParticleFunctionInitializer
 public:
 	// MPropertyFriendlyName "activity"
 	// MPropertySuppressExpr "mod != dota"
-	char m_ActivityName[256]; // 0x1c0	
+	char m_ActivityName[256]; // 0x1c8	
 	// MPropertyFriendlyName "sequence"
 	// MPropertySuppressExpr "mod == dota"
-	char m_SequenceName[256]; // 0x2c0	
+	char m_SequenceName[256]; // 0x2c8	
 	// MPropertyFriendlyName "model"
-	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x3c0	
+	CStrongHandle< InfoForResourceTypeCModel > m_hModel; // 0x3c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x13e0
+// Size: 0x1448
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ChladniWave : public CParticleFunctionOperator
@@ -41590,34 +42560,33 @@ class C_OP_ChladniWave : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "wave minimum"
-	CPerParticleFloatInput m_flInputMin; // 0x1c0	
+	CPerParticleFloatInput m_flInputMin; // 0x1c8	
 	// MPropertyFriendlyName "wave maximum"
-	CPerParticleFloatInput m_flInputMax; // 0x318	
+	CPerParticleFloatInput m_flInputMax; // 0x328	
 	// MPropertyFriendlyName "output minimum"
-	CPerParticleFloatInput m_flOutputMin; // 0x470	
+	CPerParticleFloatInput m_flOutputMin; // 0x488	
 	// MPropertyFriendlyName "output maximum"
-	CPerParticleFloatInput m_flOutputMax; // 0x5c8	
+	CPerParticleFloatInput m_flOutputMax; // 0x5e8	
 	// MPropertyFriendlyName "wave length"
-	CPerParticleVecInput m_vecWaveLength; // 0x720	
+	CPerParticleVecInput m_vecWaveLength; // 0x748	
 	// MPropertyFriendlyName "harmonics"
-	CPerParticleVecInput m_vecHarmonics; // 0xd78	
+	CPerParticleVecInput m_vecHarmonics; // 0xdc0	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x13d0	
+	ParticleSetMethod_t m_nSetMethod; // 0x1438	
 	// MPropertyFriendlyName "local space control point"
-	int32_t m_nLocalSpaceControlPoint; // 0x13d4	
+	int32_t m_nLocalSpaceControlPoint; // 0x143c	
 	// MPropertyFriendlyName "3D"
-	bool m_b3D; // 0x13d8	
+	bool m_b3D; // 0x1440	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 16
 // Size: 0x50
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ChainToSolveData_t
@@ -41644,7 +42613,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyAutoExpandSelf
@@ -41660,7 +42628,6 @@ public:
 // Registered binary: scenesystem.dll (project 'scenesystem')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSSDSMsg_PostLayer : public CSSDSMsg_LayerBase
@@ -41668,10 +42635,27 @@ class CSSDSMsg_PostLayer : public CSSDSMsg_LayerBase
 public:
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 16
+// Size: 0x40
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmTargetOffsetNode::CDefinition : public CNmTargetValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+	bool m_bIsBoneSpaceOffset; // 0x12	
+private:
+	[[maybe_unused]] uint8_t __pad0013[0xd]; // 0x13
+public:
+	Quaternion m_rotationOffset; // 0x20	
+	Vector m_translationOffset; // 0x30	
+};
+
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x48
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimBone
@@ -41690,7 +42674,6 @@ public:
 // Alignment: 4
 // Size: 0x100
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VPhysXConstraint2_t
@@ -41705,7 +42688,6 @@ public:
 // Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
 // Size: 0x58
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulse_Chunk
@@ -41719,7 +42701,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct HealingReceivedSounds_t
@@ -41750,33 +42731,31 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_LockPoints : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "min column/particle index to affect"
-	int32_t m_nMinCol; // 0x1b8	
+	int32_t m_nMinCol; // 0x1c0	
 	// MPropertyFriendlyName "max column/particle index to affect"
-	int32_t m_nMaxCol; // 0x1bc	
+	int32_t m_nMaxCol; // 0x1c4	
 	// MPropertyFriendlyName "min row/particle index to affect"
-	int32_t m_nMinRow; // 0x1c0	
+	int32_t m_nMinRow; // 0x1c8	
 	// MPropertyFriendlyName "max row/particle index to affect"
-	int32_t m_nMaxRow; // 0x1c4	
+	int32_t m_nMaxRow; // 0x1cc	
 	// MPropertyFriendlyName "control point to lock to"
-	int32_t m_nControlPoint; // 0x1c8	
+	int32_t m_nControlPoint; // 0x1d0	
 	// MPropertyFriendlyName "amount of current position to preserve"
-	float m_flBlendValue; // 0x1cc	
+	float m_flBlendValue; // 0x1d4	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CEditableMotionGraph : public CMotionGraph
@@ -41787,7 +42766,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x78
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimKeyData
@@ -41819,7 +42797,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct AmmoTypeInfo_t
@@ -41840,7 +42817,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0xa8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct World_t
@@ -41870,9 +42846,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x630
+// Size: 0x650
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderGpuImplicit : public CParticleFunctionRenderer
@@ -41880,98 +42855,95 @@ class C_OP_RenderGpuImplicit : public CParticleFunctionRenderer
 public:
 	// MPropertySortPriority "-1"
 	// MPropertyDescription "Honors the per-particle radius (multiplied by radius scale) but is more expensive to render.  Some particles with large radii can make things much costlier"
-	bool m_bUsePerParticleRadius; // 0x208	
+	bool m_bUsePerParticleRadius; // 0x210	
 private:
-	[[maybe_unused]] uint8_t __pad0209[0x3]; // 0x209
+	[[maybe_unused]] uint8_t __pad0211[0x3]; // 0x211
 public:
 	// MPropertyFriendlyName "(optional) vertex buffer size (k)"
 	// MPropertyAttributeRange "0 1024"
-	uint32_t m_nVertexCountKb; // 0x20c	
+	uint32_t m_nVertexCountKb; // 0x214	
 	// MPropertyFriendlyName "(optional) index buffer size (k)"
 	// MPropertyAttributeRange "0 2048"
-	uint32_t m_nIndexCountKb; // 0x210	
+	uint32_t m_nIndexCountKb; // 0x218	
 private:
-	[[maybe_unused]] uint8_t __pad0214[0x4]; // 0x214
+	[[maybe_unused]] uint8_t __pad021c[0x4]; // 0x21c
 public:
-	CParticleCollectionRendererFloatInput m_fGridSize; // 0x218	
-	CParticleCollectionRendererFloatInput m_fRadiusScale; // 0x370	
+	CParticleCollectionRendererFloatInput m_fGridSize; // 0x220	
+	CParticleCollectionRendererFloatInput m_fRadiusScale; // 0x380	
 	// MPropertyAttributeRange ".1 .95"
-	CParticleCollectionRendererFloatInput m_fIsosurfaceThreshold; // 0x4c8	
+	CParticleCollectionRendererFloatInput m_fIsosurfaceThreshold; // 0x4e0	
 	// MPropertyFriendlyName "scale CP (grid size/particle radius/threshold = x/y/z)"
-	int32_t m_nScaleCP; // 0x620	
+	int32_t m_nScaleCP; // 0x640	
 private:
-	[[maybe_unused]] uint8_t __pad0624[0x4]; // 0x624
+	[[maybe_unused]] uint8_t __pad0644[0x4]; // 0x644
 public:
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0x628	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0x648	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x5e0
+// Size: 0x600
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetFromCPSnapshot : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "snapshot control point number"
-	int32_t m_nControlPointNumber; // 0x1b8	
+	int32_t m_nControlPointNumber; // 0x1c0	
 	// MPropertyFriendlyName "field to read"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nAttributeToRead; // 0x1bc	
+	ParticleAttributeIndex_t m_nAttributeToRead; // 0x1c4	
 	// MPropertyFriendlyName "field to write"
 	// MPropertyAttributeChoiceName "particlefield"
-	ParticleAttributeIndex_t m_nAttributeToWrite; // 0x1c0	
+	ParticleAttributeIndex_t m_nAttributeToWrite; // 0x1c8	
 	// MPropertyFriendlyName "local space control point number"
-	int32_t m_nLocalSpaceCP; // 0x1c4	
+	int32_t m_nLocalSpaceCP; // 0x1cc	
 	// MPropertyFriendlyName "random order"
-	bool m_bRandom; // 0x1c8	
+	bool m_bRandom; // 0x1d0	
 	// MPropertyFriendlyName "reverse order"
-	bool m_bReverse; // 0x1c9	
+	bool m_bReverse; // 0x1d1	
 private:
-	[[maybe_unused]] uint8_t __pad01ca[0x2]; // 0x1ca
+	[[maybe_unused]] uint8_t __pad01d2[0x2]; // 0x1d2
 public:
 	// MPropertyFriendlyName "random seed"
-	int32_t m_nRandomSeed; // 0x1cc	
+	int32_t m_nRandomSeed; // 0x1d4	
 	// MPropertyFriendlyName "Snapshot start point"
-	CParticleCollectionFloatInput m_nSnapShotStartPoint; // 0x1d0	
+	CParticleCollectionFloatInput m_nSnapShotStartPoint; // 0x1d8	
 	// MPropertyFriendlyName "Snapshot increment amount"
-	CParticleCollectionFloatInput m_nSnapShotIncrement; // 0x328	
+	CParticleCollectionFloatInput m_nSnapShotIncrement; // 0x338	
 	// MPropertyFriendlyName "Interpolation"
-	CPerParticleFloatInput m_flInterpolation; // 0x480	
+	CPerParticleFloatInput m_flInterpolation; // 0x498	
 	// MPropertyFriendlyName "Sub-Sample Between Input Points"
-	bool m_bSubSample; // 0x5d8	
+	bool m_bSubSample; // 0x5f8	
 	// MPropertyFriendlyName "Position also sets Previous Position"
-	bool m_bPrev; // 0x5d9	
+	bool m_bPrev; // 0x5f9	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xe70
+// Size: 0xeb8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapCrossProductOfTwoVectorsToVector : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "input vector 1"
-	CPerParticleVecInput m_InputVec1; // 0x1b8	
+	CPerParticleVecInput m_InputVec1; // 0x1c0	
 	// MPropertyFriendlyName "input vector 2"
-	CPerParticleVecInput m_InputVec2; // 0x810	
+	CPerParticleVecInput m_InputVec2; // 0x838	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0xe68	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0xeb0	
 	// MPropertyFriendlyName "normalize output"
-	bool m_bNormalize; // 0xe6c	
+	bool m_bNormalize; // 0xeb4	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x90
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Vector Parameter"
@@ -41988,7 +42960,6 @@ public:
 // Alignment: 8
 // Size: 0x10
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmControlParameterBoolNode::CDefinition : public CNmBoolValueNode::CDefinition
@@ -42012,7 +42983,6 @@ public:
 // Alignment: 8
 // Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Project Vector"
@@ -42091,92 +43061,90 @@ public:
 	float m_flDistAdvancedToCurWaypoint; // 0xc8	
 	Vector m_vGoalDirection; // 0xcc	
 	CHandle< CBaseEntity > m_hGoalDirectionTarget; // 0xd8	
+	float m_flGoalDirectionToleranceDot; // 0xdc	
 private:
-	[[maybe_unused]] uint8_t __pad00dc[0xc]; // 0xdc
+	[[maybe_unused]] uint8_t __pad00e0[0x8]; // 0xe0
 public:
 	uint32_t m_nConstrainedToMovableMeshId; // 0xe8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x210
+// Size: 0x218
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_StatusEffectCitadel : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "$SFXColorWarpAmount"
-	float m_flSFXColorWarpAmount; // 0x1c0	
+	float m_flSFXColorWarpAmount; // 0x1c8	
 	// MPropertyFriendlyName "$SFXNormalAmount"
-	float m_flSFXNormalAmount; // 0x1c4	
+	float m_flSFXNormalAmount; // 0x1cc	
 	// MPropertyFriendlyName "$SFXMetalnessAmount"
-	float m_flSFXMetalnessAmount; // 0x1c8	
+	float m_flSFXMetalnessAmount; // 0x1d0	
 	// MPropertyFriendlyName "$SFXRoughnessAmount"
-	float m_flSFXRoughnessAmount; // 0x1cc	
+	float m_flSFXRoughnessAmount; // 0x1d4	
 	// MPropertyFriendlyName "$SFXSelfIllumAmount"
-	float m_flSFXSelfIllumAmount; // 0x1d0	
+	float m_flSFXSelfIllumAmount; // 0x1d8	
 	// MPropertyFriendlyName "$SFXTextureScale"
-	float m_flSFXSScale; // 0x1d4	
+	float m_flSFXSScale; // 0x1dc	
 	// MPropertyFriendlyName "$SFXTextureScrollX"
-	float m_flSFXSScrollX; // 0x1d8	
+	float m_flSFXSScrollX; // 0x1e0	
 	// MPropertyFriendlyName "$SFXTextureScrollY"
-	float m_flSFXSScrollY; // 0x1dc	
+	float m_flSFXSScrollY; // 0x1e4	
 	// MPropertyFriendlyName "$SFXTextureScrollZ"
-	float m_flSFXSScrollZ; // 0x1e0	
+	float m_flSFXSScrollZ; // 0x1e8	
 	// MPropertyFriendlyName "$SFXTextureOffsetX"
-	float m_flSFXSOffsetX; // 0x1e4	
+	float m_flSFXSOffsetX; // 0x1ec	
 	// MPropertyFriendlyName "$SFXTextureOffsetY"
-	float m_flSFXSOffsetY; // 0x1e8	
+	float m_flSFXSOffsetY; // 0x1f0	
 	// MPropertyFriendlyName "$SFXTextureOffsetZ"
-	float m_flSFXSOffsetZ; // 0x1ec	
+	float m_flSFXSOffsetZ; // 0x1f4	
 	// MPropertyFriendlyName "D_DETAIL"
-	DetailCombo_t m_nDetailCombo; // 0x1f0	
+	DetailCombo_t m_nDetailCombo; // 0x1f8	
 	// MPropertyFriendlyName "$SFXDetailAmount"
-	float m_flSFXSDetailAmount; // 0x1f4	
+	float m_flSFXSDetailAmount; // 0x1fc	
 	// MPropertyFriendlyName "$SFXDetailTextureScale"
-	float m_flSFXSDetailScale; // 0x1f8	
+	float m_flSFXSDetailScale; // 0x200	
 	// MPropertyFriendlyName "$SFXDetailTextureScrollX"
-	float m_flSFXSDetailScrollX; // 0x1fc	
+	float m_flSFXSDetailScrollX; // 0x204	
 	// MPropertyFriendlyName "$SFXDetailTextureScrollY"
-	float m_flSFXSDetailScrollY; // 0x200	
+	float m_flSFXSDetailScrollY; // 0x208	
 	// MPropertyFriendlyName "$SFXDetailTextureScrollZ"
-	float m_flSFXSDetailScrollZ; // 0x204	
+	float m_flSFXSDetailScrollZ; // 0x20c	
 	// MPropertyFriendlyName "$SFXUseModelUVs"
-	float m_flSFXSUseModelUVs; // 0x208	
+	float m_flSFXSUseModelUVs; // 0x210	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x5d8
+// Size: 0x5f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreateParticleImpulse : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "radius"
-	CPerParticleFloatInput m_InputRadius; // 0x1c0	
+	CPerParticleFloatInput m_InputRadius; // 0x1c8	
 	// MPropertyFriendlyName "magnitude"
-	CPerParticleFloatInput m_InputMagnitude; // 0x318	
+	CPerParticleFloatInput m_InputMagnitude; // 0x328	
 	// MPropertyFriendlyName "force falloff function"
-	ParticleFalloffFunction_t m_nFalloffFunction; // 0x470	
+	ParticleFalloffFunction_t m_nFalloffFunction; // 0x488	
 private:
-	[[maybe_unused]] uint8_t __pad0474[0x4]; // 0x474
+	[[maybe_unused]] uint8_t __pad048c[0x4]; // 0x48c
 public:
 	// MPropertyFriendlyName "exponential falloff exponent"
-	CPerParticleFloatInput m_InputFalloffExp; // 0x478	
+	CPerParticleFloatInput m_InputFalloffExp; // 0x490	
 	// MPropertyFriendlyName "impulse type"
-	ParticleImpulseType_t m_nImpulseType; // 0x5d0	
+	ParticleImpulseType_t m_nImpulseType; // 0x5f0	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0xf8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CStateMachineUpdateNode : public CAnimUpdateNodeBase
@@ -42200,7 +43168,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CHitBoxSet
@@ -42219,7 +43186,6 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CExampleSchemaVData_PolymorphicDerivedB : public CExampleSchemaVData_PolymorphicBase
@@ -42231,7 +43197,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x20
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyAutoExpandSelf
@@ -42248,7 +43213,6 @@ public:
 // Alignment: 16
 // Size: 0x80
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSimdTri_t
@@ -42265,83 +43229,80 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x220
+// Size: 0x228
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_StatusEffect : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "D_DETAIL_2"
-	Detail2Combo_t m_nDetail2Combo; // 0x1c0	
+	Detail2Combo_t m_nDetail2Combo; // 0x1c8	
 	// MPropertyFriendlyName "$DETAIL2ROTATION"
-	float m_flDetail2Rotation; // 0x1c4	
+	float m_flDetail2Rotation; // 0x1cc	
 	// MPropertyFriendlyName "$DETAIL2SCALE"
-	float m_flDetail2Scale; // 0x1c8	
+	float m_flDetail2Scale; // 0x1d0	
 	// MPropertyFriendlyName "$DETAIL2BLENDFACTOR"
-	float m_flDetail2BlendFactor; // 0x1cc	
+	float m_flDetail2BlendFactor; // 0x1d4	
 	// MPropertyFriendlyName "$COLORWARPINTENSITY"
-	float m_flColorWarpIntensity; // 0x1d0	
+	float m_flColorWarpIntensity; // 0x1d8	
 	// MPropertyFriendlyName "$DIFFUSEWARPBLENDTOFULL"
-	float m_flDiffuseWarpBlendToFull; // 0x1d4	
+	float m_flDiffuseWarpBlendToFull; // 0x1dc	
 	// MPropertyFriendlyName "$ENVMAPINTENSITY"
-	float m_flEnvMapIntensity; // 0x1d8	
+	float m_flEnvMapIntensity; // 0x1e0	
 	// MPropertyFriendlyName "$AMBIENTSCALE"
-	float m_flAmbientScale; // 0x1dc	
+	float m_flAmbientScale; // 0x1e4	
 	// MPropertyFriendlyName "$SPECULARCOLOR"
-	Color m_specularColor; // 0x1e0	
+	Color m_specularColor; // 0x1e8	
 	// MPropertyFriendlyName "$SPECULARSCALE"
-	float m_flSpecularScale; // 0x1e4	
+	float m_flSpecularScale; // 0x1ec	
 	// MPropertyFriendlyName "$SPECULAREXPONENT"
-	float m_flSpecularExponent; // 0x1e8	
+	float m_flSpecularExponent; // 0x1f0	
 	// MPropertyFriendlyName "$SPECULAREXPONENTBLENDTOFULL"
-	float m_flSpecularExponentBlendToFull; // 0x1ec	
+	float m_flSpecularExponentBlendToFull; // 0x1f4	
 	// MPropertyFriendlyName "$SPECULARBLENDTOFULL"
-	float m_flSpecularBlendToFull; // 0x1f0	
+	float m_flSpecularBlendToFull; // 0x1f8	
 	// MPropertyFriendlyName "$RIMLIGHTCOLOR"
-	Color m_rimLightColor; // 0x1f4	
+	Color m_rimLightColor; // 0x1fc	
 	// MPropertyFriendlyName "$RIMLIGHTSCALE"
-	float m_flRimLightScale; // 0x1f8	
+	float m_flRimLightScale; // 0x200	
 	// MPropertyFriendlyName "$REFLECTIONSTINTBYBASEBLENDTONONE"
-	float m_flReflectionsTintByBaseBlendToNone; // 0x1fc	
+	float m_flReflectionsTintByBaseBlendToNone; // 0x204	
 	// MPropertyFriendlyName "$METALNESSBLENDTOFULL"
-	float m_flMetalnessBlendToFull; // 0x200	
+	float m_flMetalnessBlendToFull; // 0x208	
 	// MPropertyFriendlyName "$SELFILLUMBLENDTOFULL"
-	float m_flSelfIllumBlendToFull; // 0x204	
+	float m_flSelfIllumBlendToFull; // 0x20c	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x828
+// Size: 0x850
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapExternalWindToCP : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "control point to sample wind"
-	int32_t m_nCP; // 0x1c0	
+	int32_t m_nCP; // 0x1c8	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nCPOutput; // 0x1c4	
+	int32_t m_nCPOutput; // 0x1cc	
 	// MPropertyFriendlyName "wind scale"
-	CParticleCollectionVecInput m_vecScale; // 0x1c8	
+	CParticleCollectionVecInput m_vecScale; // 0x1d0	
 	// MPropertyFriendlyName "set magnitude instead of vector"
-	bool m_bSetMagnitude; // 0x820	
+	bool m_bSetMagnitude; // 0x848	
 private:
-	[[maybe_unused]] uint8_t __pad0821[0x3]; // 0x821
+	[[maybe_unused]] uint8_t __pad0849[0x3]; // 0x849
 public:
 	// MPropertyFriendlyName "magnitude output component"
 	// MPropertyAttributeChoiceName "vector_component"
 	// MPropertySuppressExpr "!m_bSetMagnitude"
-	int32_t m_nOutVectorField; // 0x824	
+	int32_t m_nOutVectorField; // 0x84c	
 };
 
 // Registered binary: materialsystem2.dll (project 'materialsystem2')
 // Alignment: 8
 // Size: 0x118
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PostProcessingResource_t
@@ -42393,7 +43354,6 @@ public:
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x30
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct HeroStatsUI_t
@@ -42415,7 +43375,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Grid Origin"
@@ -42429,9 +43388,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x978
+// Size: 0x9a8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointRotation : public CParticleFunctionPreEmission
@@ -42439,20 +43397,33 @@ class C_OP_SetControlPointRotation : public CParticleFunctionPreEmission
 public:
 	// MPropertyFriendlyName "rotation axis"
 	// MVectorIsCoordinate
-	CParticleCollectionVecInput m_vecRotAxis; // 0x1c0	
+	CParticleCollectionVecInput m_vecRotAxis; // 0x1c8	
 	// MPropertyFriendlyName "rotation rate"
-	CParticleCollectionFloatInput m_flRotRate; // 0x818	
+	CParticleCollectionFloatInput m_flRotRate; // 0x840	
 	// MPropertyFriendlyName "control point"
-	int32_t m_nCP; // 0x970	
+	int32_t m_nCP; // 0x9a0	
 	// MPropertyFriendlyName "local space control point"
-	int32_t m_nLocalCP; // 0x974	
+	int32_t m_nLocalCP; // 0x9a4	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmFloatSwitchNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nSwitchValueNodeIdx; // 0x10	
+	int16_t m_nTrueValueNodeIdx; // 0x12	
+	int16_t m_nFalseValueNodeIdx; // 0x14	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0xb0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmStateNode::CDefinition : public CNmPoseNode::CDefinition
@@ -42462,11 +43433,11 @@ public:
 private:
 	[[maybe_unused]] uint8_t __pad0012[0x6]; // 0x12
 public:
-	CUtlLeanVectorFixedGrowable< CGlobalSymbol > m_entryEvents; // 0x18	
-	CUtlLeanVectorFixedGrowable< CGlobalSymbol > m_executeEvents; // 0x38	
-	CUtlLeanVectorFixedGrowable< CGlobalSymbol > m_exitEvents; // 0x58	
-	CUtlLeanVectorFixedGrowable< CNmStateNode::TimedEvent_t > m_timedRemainingEvents; // 0x78	
-	CUtlLeanVectorFixedGrowable< CNmStateNode::TimedEvent_t > m_timedElapsedEvents; // 0x90	
+	CUtlLeanVectorFixedGrowable< CGlobalSymbol, 3 > m_entryEvents; // 0x18	
+	CUtlLeanVectorFixedGrowable< CGlobalSymbol, 3 > m_executeEvents; // 0x38	
+	CUtlLeanVectorFixedGrowable< CGlobalSymbol, 3 > m_exitEvents; // 0x58	
+	CUtlLeanVectorFixedGrowable< CNmStateNode::TimedEvent_t, 1 > m_timedRemainingEvents; // 0x78	
+	CUtlLeanVectorFixedGrowable< CNmStateNode::TimedEvent_t, 1 > m_timedElapsedEvents; // 0x90	
 	int16_t m_nLayerWeightNodeIdx; // 0xa8	
 	int16_t m_nLayerRootMotionWeightNodeIdx; // 0xaa	
 	int16_t m_nLayerBoneMaskNodeIdx; // 0xac	
@@ -42526,7 +43497,6 @@ public:
 // Alignment: 8
 // Size: 0xc8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MVDataComponentValidGrandParents
@@ -42544,7 +43514,6 @@ public:
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x50
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct NodeData_t
@@ -42566,7 +43535,6 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Status Tag"
@@ -42577,8 +43545,7 @@ public:
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
-// Size: 0xe8
-// Construct allowed
+// Size: 0xd0
 // 
 // MGetKV3ClassDefaults
 class CMaterialDrawDescriptor
@@ -42588,28 +43555,28 @@ public:
 	Vector m_vTintColor; // 0x4	
 	float m_flAlpha; // 0x10	
 private:
-	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
+	[[maybe_unused]] uint8_t __pad0014[0x8]; // 0x14
 public:
-	uint32_t m_nFirstMeshlet; // 0x18	
-	uint16_t m_nNumMeshlets; // 0x1c	
+	uint32_t m_nFirstMeshlet; // 0x1c	
+	uint16_t m_nNumMeshlets; // 0x20	
 private:
-	[[maybe_unused]] uint8_t __pad001e[0x2]; // 0x1e
+	[[maybe_unused]] uint8_t __pad0022[0x2]; // 0x22
 public:
-	RenderPrimitiveType_t m_nPrimitiveType; // 0x20	
-	int32_t m_nBaseVertex; // 0x24	
-	int32_t m_nVertexCount; // 0x28	
-	int32_t m_nStartIndex; // 0x2c	
-	int32_t m_nIndexCount; // 0x30	
+	RenderPrimitiveType_t m_nPrimitiveType; // 0x24	
+	int32_t m_nBaseVertex; // 0x28	
+	int32_t m_nVertexCount; // 0x2c	
+	int32_t m_nStartIndex; // 0x30	
+	int32_t m_nIndexCount; // 0x34	
 private:
-	[[maybe_unused]] uint8_t __pad0034[0x84]; // 0x34
+	[[maybe_unused]] uint8_t __pad0038[0x60]; // 0x38
 public:
-	// -> m_hBuffer - 0xb8
-	// -> m_nBindOffsetBytes - 0xc8
-	CRenderBufferBinding m_indexBuffer; // 0xb8	
+	// -> m_hBuffer - 0x98
+	// -> m_nBindOffsetBytes - 0xa8
+	CRenderBufferBinding m_indexBuffer; // 0x98	
 private:
-	[[maybe_unused]] uint8_t __pad00d0[0x8]; // 0xd0
+	[[maybe_unused]] uint8_t __pad00b8[0x8]; // 0xb8
 public:
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_material; // 0xd8	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_material; // 0xc0	
 };
 
 // Registered binary: server.dll (project 'server')
@@ -42628,8 +43595,7 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x790
-// Construct allowed
+// Size: 0xc58
 // 
 // MVDataRoot
 // MVDataSingleton
@@ -42656,75 +43622,89 @@ public:
 	CUtlOrderedMap< ECurrencyType, CurrencySound_t > m_CurrencyTypeSounds; // 0x58	
 	CUtlOrderedMap< EUISound, CSoundEventName > m_UISounds; // 0x80	
 	// -> m_strDamageReceiveDefault - 0xa8
-	// -> m_strDamageReceiveBulletMinor - 0xb8
-	// -> m_strDamageReceiveBullet - 0xc8
-	// -> m_strDamageReceiveDOT - 0xd8
-	// -> m_strDamageReceiveMeleeMinor - 0xe8
-	// -> m_strDamageReceiveMelee - 0xf8
-	// -> m_strDamageReceiveCrit - 0x108
-	// -> m_strDamageReceiveShield - 0x118
+	// -> m_strDamageReceiveNPC - 0xb8
+	// -> m_strDamageReceiveDOT - 0xc8
+	// -> m_strDamageReceiveMeleeNPC - 0xd8
+	// -> m_strDamageReceiveMelee - 0xe8
+	// -> m_strDamageReceiveShield - 0xf8
 	DamageReceivedSounds_t m_DamageReceivedSounds; // 0xa8	
-	// -> m_strHealingInBaseLoop - 0x128
-	// -> m_strHealingInBaseToppedOff - 0x138
-	// -> m_strDirectHealing - 0x148
-	HealingReceivedSounds_t m_HealingReceivedSounds; // 0x128	
-	// -> m_strDamageDefault - 0x158
-	// -> m_strDamageCrit - 0x168
-	// -> m_strDamageLethal - 0x178
-	// -> m_strDamageInvulnerable - 0x188
-	// -> m_strDamageDOT - 0x198
-	// -> m_strDamageHealthTransfer - 0x1a8
-	DamageIndicatorSounds_t m_DamageIndicatorSounds; // 0x158	
-	CSoundEventName m_strExitCombatSound; // 0x1b8	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_ShoppingEffect; // 0x1c8	
-	// -> m_strLaneName - 0x2a8
-	// -> m_Color - 0x2b0
-	// -> m_MinimapColorOverride - 0x2b4
-	LaneDesc_t m_LaneInfo[6]; // 0x2a8	
-	Color m_MinimapTeamRebelsColor; // 0x308	
-	Color m_MinimapTeamCombineColor; // 0x30c	
-	// -> m_strSkillTierName - 0x310
-	// -> m_NetWorth - 0x318
-	// -> m_DamageTaken - 0x31c
-	// -> m_BossDamage - 0x320
-	// -> m_PlayerDamage - 0x324
-	// -> m_LastHits - 0x328
-	// -> m_OrbsSecured - 0x32c
-	// -> m_OrbsDenied - 0x330
-	// -> m_AbilitiesUpgraded - 0x334
-	// -> m_ModsPurchased - 0x338
-	NewPlayerMetrics_t m_NewPlayerMetrics[4]; // 0x310	
-	int32_t m_nItemPricePerTier[5]; // 0x3d0	
+	// -> m_strHealingInBaseLoop - 0x108
+	// -> m_strHealingInBaseToppedOff - 0x118
+	// -> m_strDirectHealing - 0x128
+	HealingReceivedSounds_t m_HealingReceivedSounds; // 0x108	
+	// -> m_strDamageDefault - 0x138
+	// -> m_strDamageCrit - 0x148
+	// -> m_strDamageLethal - 0x158
+	// -> m_strDamageInvulnerable - 0x168
+	// -> m_strDamageDOT - 0x178
+	// -> m_strDamageHealthTransfer - 0x188
+	DamageIndicatorSounds_t m_DamageIndicatorSounds; // 0x138	
+	CSoundEventName m_strExitCombatSound; // 0x198	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_ShoppingEffect; // 0x1a8	
+	// -> m_strLaneName - 0x288
+	// -> m_strCSSClass - 0x290
+	// -> m_Color - 0x298
+	// -> m_MinimapColorOverride - 0x29c
+	LaneDesc_t m_LaneInfo[6]; // 0x288	
+	// -> m_strLaneName - 0x318
+	// -> m_strCSSClass - 0x320
+	// -> m_Color - 0x328
+	// -> m_MinimapColorOverride - 0x32c
+	LaneDesc_t m_NoLaneZip; // 0x318	
+	Color m_MinimapTeamRebelsColor; // 0x330	
+	Color m_MinimapTeamCombineColor; // 0x334	
+	// -> m_strSkillTierName - 0x338
+	// -> m_NetWorth - 0x340
+	// -> m_DamageTaken - 0x344
+	// -> m_BossDamage - 0x348
+	// -> m_PlayerDamage - 0x34c
+	// -> m_LastHits - 0x350
+	// -> m_OrbsSecured - 0x354
+	// -> m_OrbsDenied - 0x358
+	// -> m_AbilitiesUpgraded - 0x35c
+	// -> m_ModsPurchased - 0x360
+	NewPlayerMetrics_t m_NewPlayerMetrics[4]; // 0x338	
+	int32_t m_nItemPricePerTier[5]; // 0x3f8	
 private:
-	[[maybe_unused]] uint8_t __pad03e4[0x4]; // 0x3e4
+	[[maybe_unused]] uint8_t __pad040c[0x4]; // 0x40c
 public:
-	CUtlVector< CSubclassName< 4 > > m_HeroTestingTargetDummyUpgrades; // 0x3e8	
+	CUtlVector< CSubclassName< 4 > > m_HeroTestingTargetDummyUpgrades; // 0x410	
 private:
-	[[maybe_unused]] uint8_t __pad0400[0x58]; // 0x400
+	[[maybe_unused]] uint8_t __pad0428[0x58]; // 0x428
 public:
-	// -> m_flDofNearBlurry - 0x458
-	// -> m_flDofNearCrisp - 0x45c
-	// -> m_flDofFarCrisp - 0x460
-	// -> m_flDofFarBlurry - 0x464
-	DOFDesc_t m_DefaultDOF; // 0x458	
-	// -> m_flRejuvinatorExpirationWarningTiming - 0x468
-	// -> m_flRejuvinatorBuffDuration - 0x46c
-	// -> m_flRejuvinatorFallSpeed - 0x470
-	RejuvinatorParams_t m_RejuvParams; // 0x468	
-private:
-	[[maybe_unused]] uint8_t __pad0474[0x4]; // 0x474
-public:
-	// -> m_IdolModel - 0x478
-	// -> m_ParachuteModel - 0x558
-	// -> m_CrateModel - 0x638
-	// -> m_strLoopingSequenceName - 0x718
-	IdolParams_t m_IdolParams; // 0x478	
-	CUtlOrderedMap< EStatsType, CUtlString > m_mapStatTypeImages; // 0x720	
+	// -> m_flDofNearBlurry - 0x480
+	// -> m_flDofNearCrisp - 0x484
+	// -> m_flDofFarCrisp - 0x488
+	// -> m_flDofFarBlurry - 0x48c
+	DOFDesc_t m_DefaultDOF; // 0x480	
+	// -> m_flRejuvinatorExpirationWarningTiming - 0x490
+	// -> m_flRejuvinatorBuffDuration - 0x494
+	// -> m_flRejuvinatorDropHeight - 0x498
+	// -> m_flRejuvinatorDropDuration - 0x49c
+	// -> m_strRejuvPickupSound - 0x4a0
+	RejuvinatorParams_t m_RejuvParams; // 0x490	
+	// -> m_IdolModel - 0x4b0
+	// -> m_ParachuteModel - 0x590
+	// -> m_CrateModel - 0x670
+	// -> m_strLoopingSequenceName - 0x750
+	// -> m_IdolReturnLocationParticle - 0x758
+	// -> m_flIdolReturnLocationParticleScale - 0x838
+	// -> m_IdolSpawnLocationParticle - 0x840
+	// -> m_IdolDroppingParticle - 0x920
+	// -> m_flIdolDropHeight - 0xa00
+	// -> m_flIdolDropDuration - 0xa04
+	IdolParams_t m_IdolParams; // 0x4b0	
+	// -> m_StartEffect - 0xa08
+	// -> m_EndEffect - 0xae8
+	// -> m_strEnterSound - 0xbc8
+	// -> m_strStartSound - 0xbd8
+	TeleporterParams_t m_TeleporterParams; // 0xa08	
+	CUtlOrderedMap< EStatsType, CUtlString > m_mapStatTypeImages; // 0xbe8	
 	// MPropertyDescription "Remap camera angle delta to aim spring strength"
-	CRemapFloat m_AimSpringStrength; // 0x748	
+	CRemapFloat m_AimSpringStrength; // 0xc10	
 	// MPropertyDescription "Remap camera angle delta to ability targeting spring strength"
-	CRemapFloat m_TargetingSpringStrength; // 0x758	
-	CUtlOrderedMap< EAbilityResourceType, HeroAbilityResourceDef_t > m_mapResourceTypes; // 0x768	
+	CRemapFloat m_TargetingSpringStrength; // 0xc20	
+	CUtlOrderedMap< EAbilityResourceType, HeroAbilityResourceDef_t > m_mapResourceTypes; // 0xc30	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -42732,7 +43712,6 @@ public:
 // Size: 0x1
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct NPCStatusEffectMap_t
@@ -42756,7 +43735,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Vector 2D"
@@ -42786,7 +43764,6 @@ public:
 // Alignment: 8
 // Size: 0x78
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -42795,6 +43772,7 @@ public:
 // MPropertyFriendlyName "Wait"
 // MPropertyDescription "Causes each execution cursor to pause at this node for a fixed period of time. Each cursor will wake up and resume execution when the time expires, unless aborted or early-woken."
 // MPulseEditorHeaderIcon "tools/images/pulse_editor/inflow_wait.png"
+// MPulseEditorIsControlFlowNode
 class CPulseCell_Inflow_Wait : public CPulseCell_BaseYieldingInflow
 {
 public:
@@ -42817,9 +43795,8 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0xa8
+// Size: 0x128
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Tint Color Choice"
@@ -42828,17 +43805,24 @@ public:
 class CSmartPropOperation_SetTintColor : public CSmartPropOperation
 {
 public:
-	// MPropertyDescription "Specifies how the selected color should be applied."
-	CSmartPropAttributeApplyColorMode m_Mode; // 0x50	
+	// MPropertyFriendlyName "Selection Mode"
+	// MPropertyDescription "Specifies how the color is to be selected from the authored set of choices"
+	CSmartPropAttributeChoiceSelectionMode m_SelectionMode; // 0x50	
+	// MPropertyFriendlyName "Color Selection"
+	// MPropertyDescription "Specifies the index of the color to pick"
+	// MPropertySuppressExpr "( m_SelectionMode != SPECIFIC )"
+	CSmartPropAttributeInt m_ColorSelection; // 0x90	
+	// MPropertyFriendlyName "Application Mode"
+	// MPropertyDescription "Specifies how the selected color should be applied to the current color."
+	CSmartPropAttributeApplyColorMode m_Mode; // 0xd0	
 	// MPropertyDescription "List of possible colors which may be selected"
-	CUtlVector< ColorChoice_t > m_ColorChoices; // 0x90	
+	CUtlVector< ColorChoice_t > m_ColorChoices; // 0x110	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapParticleCountOnScalarEndCap : public CParticleFunctionOperator
@@ -42846,29 +43830,28 @@ class C_OP_RemapParticleCountOnScalarEndCap : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 	// MPropertyFriendlyName "input minimum"
-	int32_t m_nInputMin; // 0x1bc	
+	int32_t m_nInputMin; // 0x1c4	
 	// MPropertyFriendlyName "input maximum"
-	int32_t m_nInputMax; // 0x1c0	
+	int32_t m_nInputMax; // 0x1c8	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1c4	
+	float m_flOutputMin; // 0x1cc	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1c8	
+	float m_flOutputMax; // 0x1d0	
 	// MPropertyFriendlyName "count back from last particle"
-	bool m_bBackwards; // 0x1cc	
+	bool m_bBackwards; // 0x1d4	
 private:
-	[[maybe_unused]] uint8_t __pad01cd[0x3]; // 0x1cd
+	[[maybe_unused]] uint8_t __pad01d5[0x3]; // 0x1d5
 public:
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1d0	
+	ParticleSetMethod_t m_nSetMethod; // 0x1d8	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x68
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CMotionGraphUpdateNode : public CLeafUpdateNode
@@ -42881,7 +43864,6 @@ public:
 // Alignment: 16
 // Size: 0x150
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CLookAtUpdateNode : public CUnaryUpdateNode
@@ -42914,7 +43896,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFlexController
@@ -42930,7 +43911,6 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CExampleSchemaVData_PolymorphicDerivedA : public CExampleSchemaVData_PolymorphicBase
@@ -42958,7 +43938,6 @@ public:
 // Alignment: 8
 // Size: 0x40
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct EntityKeyValueData_t
@@ -42988,15 +43967,14 @@ struct ChoreoEntityFacing_t
 {
 public:
 	SceneEventId_t m_nSceneEventId; // 0x0	
-	Vector m_vFacingDir; // 0x4	
+	Vector m_vFacingTarget; // 0x4	
 	float m_flImportance; // 0x10	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RandomForce : public CParticleFunctionForce
@@ -43004,16 +43982,15 @@ class C_OP_RandomForce : public CParticleFunctionForce
 public:
 	// MPropertyFriendlyName "min force"
 	// MVectorIsCoordinate
-	Vector m_MinForce; // 0x1c8	
+	Vector m_MinForce; // 0x1d0	
 	// MPropertyFriendlyName "max force"
 	// MVectorIsCoordinate
-	Vector m_MaxForce; // 0x1d4	
+	Vector m_MaxForce; // 0x1dc	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x58
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFootStride
@@ -43032,11 +44009,22 @@ public:
 	CFootTrajectories m_trajectories; // 0x40	
 };
 
+// Registered binary: animationsystem.dll (project 'animgraphlib')
+// Alignment: 8
+// Size: 0x20
+// 
+// MGetKV3ClassDefaults
+class CSequenceTagSpans
+{
+public:
+	CGlobalSymbol m_sSequenceName; // 0x0	
+	CUtlVector< TagSpan_t > m_tags; // 0x8	
+};
+
 // Registered binary: animationsystem.dll (project 'animationsystem')
 // Alignment: 8
 // Size: 0x130
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CAnimationGroup
@@ -43072,7 +44060,6 @@ public:
 // Alignment: 8
 // Size: 0x98
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSubtractUpdateNode : public CBinaryUpdateNode
@@ -43105,7 +44092,6 @@ public:
 // Alignment: 4
 // Size: 0x10
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeTaperedCapsuleStretch_t
@@ -43120,48 +44106,58 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x3c8
+// Size: 0x3d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetControlPointToImpactPoint : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "control point to set"
-	int32_t m_nCPOut; // 0x1c0	
+	int32_t m_nCPOut; // 0x1c8	
 	// MPropertyFriendlyName "control point to trace from"
-	int32_t m_nCPIn; // 0x1c4	
+	int32_t m_nCPIn; // 0x1cc	
 	// MPropertyFriendlyName "trace update rate"
-	float m_flUpdateRate; // 0x1c8	
+	float m_flUpdateRate; // 0x1d0	
 private:
-	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
+	[[maybe_unused]] uint8_t __pad01d4[0x4]; // 0x1d4
 public:
 	// MPropertyFriendlyName "max trace length"
-	CParticleCollectionFloatInput m_flTraceLength; // 0x1d0	
+	CParticleCollectionFloatInput m_flTraceLength; // 0x1d8	
 	// MPropertyFriendlyName "offset start point amount"
-	float m_flStartOffset; // 0x328	
+	float m_flStartOffset; // 0x338	
 	// MPropertyFriendlyName "offset end point amount"
-	float m_flOffset; // 0x32c	
+	float m_flOffset; // 0x33c	
 	// MPropertyFriendlyName "trace direction override"
 	// MVectorIsCoordinate
-	Vector m_vecTraceDir; // 0x330	
+	Vector m_vecTraceDir; // 0x340	
 	// MPropertyFriendlyName "trace collision group"
-	char m_CollisionGroupName[128]; // 0x33c	
+	char m_CollisionGroupName[128]; // 0x34c	
 	// MPropertyFriendlyName "Trace Set"
-	ParticleTraceSet_t m_nTraceSet; // 0x3bc	
+	ParticleTraceSet_t m_nTraceSet; // 0x3cc	
 	// MPropertyFriendlyName "set to trace endpoint if no collision"
-	bool m_bSetToEndpoint; // 0x3c0	
+	bool m_bSetToEndpoint; // 0x3d0	
 	// MPropertyFriendlyName "trace to closest surface along all cardinal directions"
-	bool m_bTraceToClosestSurface; // 0x3c1	
+	bool m_bTraceToClosestSurface; // 0x3d1	
 	// MPropertyFriendlyName "include water"
-	bool m_bIncludeWater; // 0x3c2	
+	bool m_bIncludeWater; // 0x3d2	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmConstBoolNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	bool m_bValue; // 0x10	
 };
 
 // Registered binary: worldrenderer.dll (project 'worldrenderer')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct WorldNodeOnDiskBufferData_t
@@ -43175,57 +44171,51 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x1d8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RandomTrailLength : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "length min"
-	float m_flMinLength; // 0x1c0	
+	float m_flMinLength; // 0x1c8	
 	// MPropertyFriendlyName "length max"
-	float m_flMaxLength; // 0x1c4	
+	float m_flMaxLength; // 0x1cc	
 	// MPropertyFriendlyName "length random exponent"
-	float m_flLengthRandExponent; // 0x1c8	
+	float m_flLengthRandExponent; // 0x1d0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x310
+// Size: 0x320
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DecayOffscreen : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "Offscreen Time Before Decay"
-	CParticleCollectionFloatInput m_flOffscreenTime; // 0x1b8	
+	CParticleCollectionFloatInput m_flOffscreenTime; // 0x1c0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
 // Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ConstrainDistanceToPath : public CParticleFunctionConstraint
 {
 public:
 	// MPropertyFriendlyName "minimum distance"
-	float m_fMinDistance; // 0x1b8	
+	float m_fMinDistance; // 0x1c0	
 	// MPropertyFriendlyName "maximum distance"
-	float m_flMaxDistance0; // 0x1bc	
+	float m_flMaxDistance0; // 0x1c4	
 	// MPropertyFriendlyName "maximum distance middle"
-	float m_flMaxDistanceMid; // 0x1c0	
+	float m_flMaxDistanceMid; // 0x1c8	
 	// MPropertyFriendlyName "maximum distance end"
-	float m_flMaxDistance1; // 0x1c4	
-private:
-	[[maybe_unused]] uint8_t __pad01c8[0x8]; // 0x1c8
-public:
+	float m_flMaxDistance1; // 0x1cc	
 	CPathParameters m_PathParameters; // 0x1d0	
 	// MPropertyFriendlyName "travel time"
 	float m_flTravelTime; // 0x210	
@@ -43239,78 +44229,76 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x888
+// Size: 0x8b0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_VelocityFromCP : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "velocity"
-	CParticleCollectionVecInput m_velocityInput; // 0x1c0	
+	CParticleCollectionVecInput m_velocityInput; // 0x1c8	
 	// MPropertyFriendlyName "local space"
 	// MParticleInputOptional
-	CParticleTransformInput m_transformInput; // 0x818	
+	CParticleTransformInput m_transformInput; // 0x840	
 	// MPropertyFriendlyName "velocity scale"
-	float m_flVelocityScale; // 0x880	
+	float m_flVelocityScale; // 0x8a8	
 	// MPropertyFriendlyName "direction only"
-	bool m_bDirectionOnly; // 0x884	
+	bool m_bDirectionOnly; // 0x8ac	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1ab8
+// Size: 0x1b40
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreateWithinSphereTransform : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "distance min"
-	CPerParticleFloatInput m_fRadiusMin; // 0x1c0	
+	CPerParticleFloatInput m_fRadiusMin; // 0x1c8	
 	// MPropertyFriendlyName "distance max"
-	CPerParticleFloatInput m_fRadiusMax; // 0x318	
+	CPerParticleFloatInput m_fRadiusMax; // 0x328	
 	// MPropertyFriendlyName "distance bias"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_vecDistanceBias; // 0x470	
+	CPerParticleVecInput m_vecDistanceBias; // 0x488	
 	// MPropertyFriendlyName "distance bias absolute value"
 	// MVectorIsCoordinate
-	Vector m_vecDistanceBiasAbs; // 0xac8	
+	Vector m_vecDistanceBiasAbs; // 0xb00	
 private:
-	[[maybe_unused]] uint8_t __pad0ad4[0x4]; // 0xad4
+	[[maybe_unused]] uint8_t __pad0b0c[0x4]; // 0xb0c
 public:
 	// MPropertyFriendlyName "input position transform"
-	CParticleTransformInput m_TransformInput; // 0xad8	
+	CParticleTransformInput m_TransformInput; // 0xb10	
 	// MPropertyFriendlyName "speed min"
-	CPerParticleFloatInput m_fSpeedMin; // 0xb40	
+	CPerParticleFloatInput m_fSpeedMin; // 0xb78	
 	// MPropertyFriendlyName "speed max"
-	CPerParticleFloatInput m_fSpeedMax; // 0xc98	
+	CPerParticleFloatInput m_fSpeedMax; // 0xcd8	
 	// MPropertyFriendlyName "speed random exponent"
-	float m_fSpeedRandExp; // 0xdf0	
+	float m_fSpeedRandExp; // 0xe38	
 	// MPropertyFriendlyName "bias in local system"
-	bool m_bLocalCoords; // 0xdf4	
+	bool m_bLocalCoords; // 0xe3c	
 private:
-	[[maybe_unused]] uint8_t __pad0df5[0x3]; // 0xdf5
+	[[maybe_unused]] uint8_t __pad0e3d[0x3]; // 0xe3d
 public:
 	// MPropertyFriendlyName "randomly distribution growth time"
-	float m_flEndCPGrowthTime; // 0xdf8	
+	float m_flEndCPGrowthTime; // 0xe40	
 private:
-	[[maybe_unused]] uint8_t __pad0dfc[0x4]; // 0xdfc
+	[[maybe_unused]] uint8_t __pad0e44[0x4]; // 0xe44
 public:
 	// MPropertyFriendlyName "speed in local coordinate system min"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_LocalCoordinateSystemSpeedMin; // 0xe00	
+	CPerParticleVecInput m_LocalCoordinateSystemSpeedMin; // 0xe48	
 	// MPropertyFriendlyName "speed in local coordinate system max"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_LocalCoordinateSystemSpeedMax; // 0x1458	
+	CPerParticleVecInput m_LocalCoordinateSystemSpeedMax; // 0x14c0	
 	// MPropertyFriendlyName "Output vector"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1ab0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b38	
 	// MPropertyFriendlyName "Velocity vector"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldVelocity; // 0x1ab4	
+	ParticleAttributeIndex_t m_nFieldVelocity; // 0x1b3c	
 };
 
 // Registered binary: client.dll (project 'entity2')
@@ -43334,34 +44322,32 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_PlayEndCapWhenFinished : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "play when emission ends"
-	bool m_bFireOnEmissionEnd; // 0x1c0	
+	bool m_bFireOnEmissionEnd; // 0x1c8	
 	// MPropertyFriendlyName "wait for children to finish"
-	bool m_bIncludeChildren; // 0x1c1	
+	bool m_bIncludeChildren; // 0x1c9	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
 // Size: 0x230
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreateAlongPath : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "maximum distance"
-	float m_fMaxDistance; // 0x1c0	
+	float m_fMaxDistance; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0xc]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	CPathParameters m_PathParams; // 0x1d0	
 	// MPropertyFriendlyName "randomly select sequential CP pairs between start and end points"
@@ -43380,7 +44366,6 @@ public:
 // Alignment: 8
 // Size: 0x18
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmVirtualParameterTargetNode::CDefinition : public CNmTargetValueNode::CDefinition
@@ -43393,7 +44378,6 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Audio Tag"
@@ -43423,9 +44407,8 @@ public:
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
-// Size: 0x1f8
+// Size: 0x1c0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CRenderMesh
@@ -43433,24 +44416,24 @@ class CRenderMesh
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
-	CUtlVectorFixedGrowable< CSceneObjectData > m_sceneObjects; // 0x10	
-	CUtlVector< CBaseConstraint* > m_constraints; // 0xa0	
-	// -> m_bones - 0xb8
-	// -> m_boneParents - 0xe8
-	// -> m_nBoneWeightCount - 0x100
-	CRenderSkeleton m_skeleton; // 0xb8	
+	CUtlLeanVectorFixedGrowable< CSceneObjectData, 1 > m_sceneObjects; // 0x10	
+	CUtlLeanVector< CBaseConstraint* > m_constraints; // 0x78	
+	// -> m_bones - 0x88
+	// -> m_boneParents - 0xb8
+	// -> m_nBoneWeightCount - 0xd0
+	CRenderSkeleton m_skeleton; // 0x88	
 private:
-	[[maybe_unused]] uint8_t __pad0108[0xd8]; // 0x108
+	[[maybe_unused]] uint8_t __pad00d8[0xd0]; // 0xd8
 public:
-	// -> m_flTensionCompressScale - 0x1e0
-	// -> m_flTensionStretchScale - 0x1e4
-	// -> m_bRecomputeSmoothNormalsAfterAnimation - 0x1e8
-	// -> m_bComputeDynamicMeshTensionAfterAnimation - 0x1e9
-	DynamicMeshDeformParams_t m_meshDeformParams; // 0x1e0	
+	// -> m_flTensionCompressScale - 0x1a8
+	// -> m_flTensionStretchScale - 0x1ac
+	// -> m_bRecomputeSmoothNormalsAfterAnimation - 0x1b0
+	// -> m_bComputeDynamicMeshTensionAfterAnimation - 0x1b1
+	DynamicMeshDeformParams_t m_meshDeformParams; // 0x1a8	
 private:
-	[[maybe_unused]] uint8_t __pad01ec[0x4]; // 0x1ec
+	[[maybe_unused]] uint8_t __pad01b4[0x4]; // 0x1b4
 public:
-	CRenderGroom* m_pGroomData; // 0x1f0	
+	CRenderGroom* m_pGroomData; // 0x1b8	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -43502,9 +44485,8 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x888
+// Size: 0x8b0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_DistanceBetweenTransforms : public CParticleFunctionOperator
@@ -43512,44 +44494,43 @@ class C_OP_DistanceBetweenTransforms : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x4]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
 public:
 	// MPropertyFriendlyName "strarting transform"
-	CParticleTransformInput m_TransformStart; // 0x1c0	
+	CParticleTransformInput m_TransformStart; // 0x1c8	
 	// MPropertyFriendlyName "end transform"
-	CParticleTransformInput m_TransformEnd; // 0x228	
+	CParticleTransformInput m_TransformEnd; // 0x230	
 	// MPropertyFriendlyName "distance minimum"
-	CPerParticleFloatInput m_flInputMin; // 0x290	
+	CPerParticleFloatInput m_flInputMin; // 0x298	
 	// MPropertyFriendlyName "distance maximum"
-	CPerParticleFloatInput m_flInputMax; // 0x3e8	
+	CPerParticleFloatInput m_flInputMax; // 0x3f8	
 	// MPropertyFriendlyName "output minimum"
-	CPerParticleFloatInput m_flOutputMin; // 0x540	
+	CPerParticleFloatInput m_flOutputMin; // 0x558	
 	// MPropertyFriendlyName "output maximum"
-	CPerParticleFloatInput m_flOutputMax; // 0x698	
+	CPerParticleFloatInput m_flOutputMax; // 0x6b8	
 	// MPropertyFriendlyName "maximum trace length"
-	float m_flMaxTraceLength; // 0x7f0	
+	float m_flMaxTraceLength; // 0x818	
 	// MPropertyFriendlyName "LOS Failure Scalar"
-	float m_flLOSScale; // 0x7f4	
+	float m_flLOSScale; // 0x81c	
 	// MPropertyFriendlyName "LOS collision group"
-	char m_CollisionGroupName[128]; // 0x7f8	
+	char m_CollisionGroupName[128]; // 0x820	
 	// MPropertyFriendlyName "Trace Set"
-	ParticleTraceSet_t m_nTraceSet; // 0x878	
+	ParticleTraceSet_t m_nTraceSet; // 0x8a0	
 	// MPropertyFriendlyName "ensure line of sight"
-	bool m_bLOS; // 0x87c	
+	bool m_bLOS; // 0x8a4	
 private:
-	[[maybe_unused]] uint8_t __pad087d[0x3]; // 0x87d
+	[[maybe_unused]] uint8_t __pad08a5[0x3]; // 0x8a5
 public:
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x880	
+	ParticleSetMethod_t m_nSetMethod; // 0x8a8	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 16
 // Size: 0x40
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct NmCompressionSettings_t
@@ -43569,7 +44550,6 @@ public:
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CTurnHelperUpdateNode : public CUnaryUpdateNode
@@ -43588,6 +44568,18 @@ public:
 	bool m_bUseManualTurnOffset; // 0x80	
 };
 
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmCurrentSyncEventPercentageThroughNode::CDefinition : public CNmFloatValueNode::CDefinition
+{
+public:
+	int16_t m_nSourceStateNodeIdx; // 0x10	
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x8
@@ -43604,7 +44596,6 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct PGDInstruction_t
@@ -43631,7 +44622,6 @@ public:
 // Alignment: 8
 // Size: 0x20
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSosGroupActionTimeLimitSchema : public CSosGroupActionSchema
@@ -43643,265 +44633,275 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x230
+// Size: 0x238
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapTransformOrientationToYaw : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "transform input"
-	CParticleTransformInput m_TransformInput; // 0x1b8	
+	CParticleTransformInput m_TransformInput; // 0x1c0	
 	// MPropertyFriendlyName "rotation field"
 	// MPropertyAttributeChoiceName "particlefield_rotation"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x220	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x228	
 	// MPropertyFriendlyName "rotation offset"
-	float m_flRotOffset; // 0x224	
+	float m_flRotOffset; // 0x22c	
 	// MPropertyFriendlyName "spin strength"
-	float m_flSpinStrength; // 0x228	
+	float m_flSpinStrength; // 0x230	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1f8
+// Size: 0x200
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ColorInterpolateRandom : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "color fade min"
-	Color m_ColorFadeMin; // 0x1b8	
+	Color m_ColorFadeMin; // 0x1c0	
 private:
-	[[maybe_unused]] uint8_t __pad01bc[0x18]; // 0x1bc
+	[[maybe_unused]] uint8_t __pad01c4[0x18]; // 0x1c4
 public:
 	// MPropertyFriendlyName "color fade max"
-	Color m_ColorFadeMax; // 0x1d4	
+	Color m_ColorFadeMax; // 0x1dc	
 private:
-	[[maybe_unused]] uint8_t __pad01d8[0xc]; // 0x1d8
+	[[maybe_unused]] uint8_t __pad01e0[0xc]; // 0x1e0
 public:
 	// MPropertyFriendlyName "fade start time"
-	float m_flFadeStartTime; // 0x1e4	
+	float m_flFadeStartTime; // 0x1ec	
 	// MPropertyFriendlyName "fade end time"
-	float m_flFadeEndTime; // 0x1e8	
+	float m_flFadeEndTime; // 0x1f0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1ec	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1f4	
 	// MPropertyFriendlyName "ease in and out"
-	bool m_bEaseInOut; // 0x1f0	
+	bool m_bEaseInOut; // 0x1f8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x5e0
+// Size: 0x600
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_MaintainEmitter : public CParticleFunctionEmitter
 {
 public:
 	// MPropertyFriendlyName "count to maintain"
-	CParticleCollectionFloatInput m_nParticlesToMaintain; // 0x1c0	
+	CParticleCollectionFloatInput m_nParticlesToMaintain; // 0x1c8	
 	// MPropertyFriendlyName "emission start time"
-	float m_flStartTime; // 0x318	
+	float m_flStartTime; // 0x328	
 private:
-	[[maybe_unused]] uint8_t __pad031c[0x4]; // 0x31c
+	[[maybe_unused]] uint8_t __pad032c[0x4]; // 0x32c
 public:
 	// MPropertyFriendlyName "emission duration"
-	CParticleCollectionFloatInput m_flEmissionDuration; // 0x320	
+	CParticleCollectionFloatInput m_flEmissionDuration; // 0x330	
 	// MPropertyFriendlyName "emission rate"
-	float m_flEmissionRate; // 0x478	
+	float m_flEmissionRate; // 0x490	
 	// MPropertyFriendlyName "control point with snapshot data"
-	int32_t m_nSnapshotControlPoint; // 0x47c	
+	int32_t m_nSnapshotControlPoint; // 0x494	
 	// MPropertyFriendlyName "group emission times for new particles"
-	bool m_bEmitInstantaneously; // 0x480	
+	bool m_bEmitInstantaneously; // 0x498	
 	// MPropertyFriendlyName "perform final emit on stop"
-	bool m_bFinalEmitOnStop; // 0x481	
+	bool m_bFinalEmitOnStop; // 0x499	
 private:
-	[[maybe_unused]] uint8_t __pad0482[0x6]; // 0x482
+	[[maybe_unused]] uint8_t __pad049a[0x6]; // 0x49a
 public:
 	// MPropertyFriendlyName "total count scale"
-	CParticleCollectionFloatInput m_flScale; // 0x488	
+	CParticleCollectionFloatInput m_flScale; // 0x4a0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1388
+// Size: 0x13f0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RenderStandardLight : public CParticleFunctionRenderer
 {
 public:
 	// MPropertyFriendlyName "light type"
-	ParticleLightTypeChoiceList_t m_nLightType; // 0x208	
+	ParticleLightTypeChoiceList_t m_nLightType; // 0x210	
 private:
-	[[maybe_unused]] uint8_t __pad020c[0x4]; // 0x20c
+	[[maybe_unused]] uint8_t __pad0214[0x4]; // 0x214
 public:
 	// MPropertyFriendlyName "color blend"
-	CParticleCollectionVecInput m_vecColorScale; // 0x210	
+	CParticleCollectionVecInput m_vecColorScale; // 0x218	
 	// MPropertyFriendlyName "color blend type"
-	ParticleColorBlendType_t m_nColorBlendType; // 0x868	
+	ParticleColorBlendType_t m_nColorBlendType; // 0x890	
 private:
-	[[maybe_unused]] uint8_t __pad086c[0x4]; // 0x86c
+	[[maybe_unused]] uint8_t __pad0894[0x4]; // 0x894
 public:
 	// MPropertyFriendlyName "intensity"
-	CParticleCollectionFloatInput m_flIntensity; // 0x870	
+	CParticleCollectionFloatInput m_flIntensity; // 0x898	
 	// MPropertyFriendlyName "cast shadows"
 	// MPropertySuppressExpr "m_nLightType == PARTICLE_LIGHT_TYPE_FX"
-	bool m_bCastShadows; // 0x9c8	
+	bool m_bCastShadows; // 0x9f8	
 private:
-	[[maybe_unused]] uint8_t __pad09c9[0x7]; // 0x9c9
+	[[maybe_unused]] uint8_t __pad09f9[0x7]; // 0x9f9
 public:
 	// MPropertyFriendlyName "inner cone angle"
 	// MPropertySuppressExpr "m_nLightType != PARTICLE_LIGHT_TYPE_SPOT"
-	CParticleCollectionFloatInput m_flTheta; // 0x9d0	
+	CParticleCollectionFloatInput m_flTheta; // 0xa00	
 	// MPropertyFriendlyName "outer cone angle"
 	// MPropertySuppressExpr "m_nLightType != PARTICLE_LIGHT_TYPE_SPOT"
-	CParticleCollectionFloatInput m_flPhi; // 0xb28	
+	CParticleCollectionFloatInput m_flPhi; // 0xb60	
 	// MPropertyFriendlyName "light radius multiplier"
-	CParticleCollectionFloatInput m_flRadiusMultiplier; // 0xc80	
+	CParticleCollectionFloatInput m_flRadiusMultiplier; // 0xcc0	
 	// MPropertyFriendlyName "attenuation type"
-	StandardLightingAttenuationStyle_t m_nAttenuationStyle; // 0xdd8	
+	StandardLightingAttenuationStyle_t m_nAttenuationStyle; // 0xe20	
 private:
-	[[maybe_unused]] uint8_t __pad0ddc[0x4]; // 0xddc
+	[[maybe_unused]] uint8_t __pad0e24[0x4]; // 0xe24
 public:
 	// MPropertyFriendlyName "falloff linearity"
 	// MPropertySuppressExpr "m_nAttenuationStyle == LIGHT_STYLE_NEW || ( m_nAttenuationStyle == LIGHT_STYLE_OLD && m_nLightType == PARTICLE_LIGHT_TYPE_FX )"
-	CParticleCollectionFloatInput m_flFalloffLinearity; // 0xde0	
+	CParticleCollectionFloatInput m_flFalloffLinearity; // 0xe28	
 	// MPropertyFriendlyName "falloff fifty percent"
 	// MPropertySuppressExpr "m_nAttenuationStyle == LIGHT_STYLE_OLD"
-	CParticleCollectionFloatInput m_flFiftyPercentFalloff; // 0xf38	
+	CParticleCollectionFloatInput m_flFiftyPercentFalloff; // 0xf88	
 	// MPropertyFriendlyName "falloff zero percent"
 	// MPropertySuppressExpr "m_nAttenuationStyle == LIGHT_STYLE_OLD"
-	CParticleCollectionFloatInput m_flZeroPercentFalloff; // 0x1090	
+	CParticleCollectionFloatInput m_flZeroPercentFalloff; // 0x10e8	
 	// MPropertyFriendlyName "render diffuse"
 	// MPropertySuppressExpr "m_nLightType == PARTICLE_LIGHT_TYPE_FX"
-	bool m_bRenderDiffuse; // 0x11e8	
+	bool m_bRenderDiffuse; // 0x1248	
 	// MPropertyFriendlyName "render specular"
 	// MPropertySuppressExpr "m_nLightType == PARTICLE_LIGHT_TYPE_FX"
-	bool m_bRenderSpecular; // 0x11e9	
+	bool m_bRenderSpecular; // 0x1249	
 private:
-	[[maybe_unused]] uint8_t __pad11ea[0x6]; // 0x11ea
+	[[maybe_unused]] uint8_t __pad124a[0x6]; // 0x124a
 public:
 	// MPropertyFriendlyName "light cookie string"
-	CUtlString m_lightCookie; // 0x11f0	
+	CUtlString m_lightCookie; // 0x1250	
 	// MPropertyFriendlyName "light priority"
-	int32_t m_nPriority; // 0x11f8	
+	int32_t m_nPriority; // 0x1258	
 	// MPropertyFriendlyName "fog lighting mode"
 	// MPropertySuppressExpr "m_nLightType == PARTICLE_LIGHT_TYPE_FX"
-	ParticleLightFogLightingMode_t m_nFogLightingMode; // 0x11fc	
+	ParticleLightFogLightingMode_t m_nFogLightingMode; // 0x125c	
 	// MPropertyFriendlyName "fog contribution"
 	// MPropertySuppressExpr "m_nLightType == PARTICLE_LIGHT_TYPE_FX"
-	CParticleCollectionRendererFloatInput m_flFogContribution; // 0x1200	
+	CParticleCollectionRendererFloatInput m_flFogContribution; // 0x1260	
 	// MPropertyFriendlyName "capsule behavior"
-	ParticleLightBehaviorChoiceList_t m_nCapsuleLightBehavior; // 0x1358	
+	ParticleLightBehaviorChoiceList_t m_nCapsuleLightBehavior; // 0x13c0	
 	// MPropertyStartGroup "Capsule Light Controls"
 	// MPropertyFriendlyName "capsule length"
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_ROPE || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_TRAILS"
-	float m_flCapsuleLength; // 0x135c	
+	float m_flCapsuleLength; // 0x13c4	
 	// MPropertyFriendlyName "reverse point order"
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_TRAILS"
-	bool m_bReverseOrder; // 0x1360	
+	bool m_bReverseOrder; // 0x13c8	
 	// MPropertyFriendlyName "Closed loop"
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_TRAILS"
-	bool m_bClosedLoop; // 0x1361	
+	bool m_bClosedLoop; // 0x13c9	
 private:
-	[[maybe_unused]] uint8_t __pad1362[0x2]; // 0x1362
+	[[maybe_unused]] uint8_t __pad13ca[0x2]; // 0x13ca
 public:
 	// MPropertyFriendlyName "Anchor point source"
 	// MPropertyAttributeChoiceName "particlefield_vector"
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_ROPE"
-	ParticleAttributeIndex_t m_nPrevPntSource; // 0x1364	
+	ParticleAttributeIndex_t m_nPrevPntSource; // 0x13cc	
 	// MPropertyFriendlyName "max length"
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_ROPE"
-	float m_flMaxLength; // 0x1368	
+	float m_flMaxLength; // 0x13d0	
 	// MPropertyFriendlyName "min length"
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_ROPE"
-	float m_flMinLength; // 0x136c	
+	float m_flMinLength; // 0x13d4	
 	// MPropertyFriendlyName "ignore delta time"
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_ROPE"
-	bool m_bIgnoreDT; // 0x1370	
+	bool m_bIgnoreDT; // 0x13d8	
 private:
-	[[maybe_unused]] uint8_t __pad1371[0x3]; // 0x1371
+	[[maybe_unused]] uint8_t __pad13d9[0x3]; // 0x13d9
 public:
 	// MPropertyFriendlyName "constrain radius to no more than this times the length"
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_ROPE"
-	float m_flConstrainRadiusToLengthRatio; // 0x1374	
+	float m_flConstrainRadiusToLengthRatio; // 0x13dc	
 	// MPropertyFriendlyName "amount to scale trail length by"
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_ROPE"
-	float m_flLengthScale; // 0x1378	
+	float m_flLengthScale; // 0x13e0	
 	// MPropertyFriendlyName "how long before a trail grows to its full length"
 	// MPropertySuppressExpr "m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION || m_nCapsuleLightBehavior == PARTICLE_LIGHT_BEHAVIOR_ROPE"
-	float m_flLengthFadeInTime; // 0x137c	
-};
-
-// Registered binary: particles.dll (project 'particles')
-// Alignment: 8
-// Size: 0x1e0
-// Has VTable
-// Construct allowed
-// 
-// MGetKV3ClassDefaults
-class C_OP_ParentVortices : public CParticleFunctionForce
-{
-public:
-	// MPropertyFriendlyName "amount of force"
-	float m_flForceScale; // 0x1c8	
-	// MPropertyFriendlyName "twist axis"
-	// MVectorIsCoordinate
-	Vector m_vecTwistAxis; // 0x1cc	
-	// MPropertyFriendlyName "flip twist axis with yaw"
-	bool m_bFlipBasedOnYaw; // 0x1d8	
+	float m_flLengthFadeInTime; // 0x13e4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
 // Size: 0x1e8
 // Has VTable
-// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class C_OP_ParentVortices : public CParticleFunctionForce
+{
+public:
+	// MPropertyFriendlyName "amount of force"
+	float m_flForceScale; // 0x1d0	
+	// MPropertyFriendlyName "twist axis"
+	// MVectorIsCoordinate
+	Vector m_vecTwistAxis; // 0x1d4	
+	// MPropertyFriendlyName "flip twist axis with yaw"
+	bool m_bFlipBasedOnYaw; // 0x1e0	
+};
+
+// Registered binary: particles.dll (project 'particles')
+// Alignment: 8
+// Size: 0x1f0
+// Has VTable
 // 
 // MGetKV3ClassDefaults
 class C_OP_CPOffsetToPercentageBetweenCPs : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "percentage minimum"
-	float m_flInputMin; // 0x1b8	
+	float m_flInputMin; // 0x1c0	
 	// MPropertyFriendlyName "percentage maximum"
-	float m_flInputMax; // 0x1bc	
+	float m_flInputMax; // 0x1c4	
 	// MPropertyFriendlyName "percentage bias"
-	float m_flInputBias; // 0x1c0	
+	float m_flInputBias; // 0x1c8	
 	// MPropertyFriendlyName "starting control point"
-	int32_t m_nStartCP; // 0x1c4	
+	int32_t m_nStartCP; // 0x1cc	
 	// MPropertyFriendlyName "ending control point"
-	int32_t m_nEndCP; // 0x1c8	
+	int32_t m_nEndCP; // 0x1d0	
 	// MPropertyFriendlyName "offset control point"
-	int32_t m_nOffsetCP; // 0x1cc	
+	int32_t m_nOffsetCP; // 0x1d4	
 	// MPropertyFriendlyName "output control point"
-	int32_t m_nOuputCP; // 0x1d0	
+	int32_t m_nOuputCP; // 0x1d8	
 	// MPropertyFriendlyName "input control point"
-	int32_t m_nInputCP; // 0x1d4	
+	int32_t m_nInputCP; // 0x1dc	
 	// MPropertyFriendlyName "treat distance between points as radius"
-	bool m_bRadialCheck; // 0x1d8	
+	bool m_bRadialCheck; // 0x1e0	
 	// MPropertyFriendlyName "treat offset as scale of total distance"
-	bool m_bScaleOffset; // 0x1d9	
+	bool m_bScaleOffset; // 0x1e1	
 private:
-	[[maybe_unused]] uint8_t __pad01da[0x2]; // 0x1da
+	[[maybe_unused]] uint8_t __pad01e2[0x2]; // 0x1e2
 public:
 	// MPropertyFriendlyName "offset amount"
 	// MVectorIsCoordinate
-	Vector m_vecOffset; // 0x1dc	
+	Vector m_vecOffset; // 0x1e4	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x40
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmIDComparisonNode::CDefinition : public CNmBoolValueNode::CDefinition
+{
+public:
+	int16_t m_nInputValueNodeIdx; // 0x10	
+	CNmIDComparisonNode::Comparison_t m_comparison; // 0x12	
+private:
+	[[maybe_unused]] uint8_t __pad0013[0x5]; // 0x13
+public:
+	CUtlLeanVectorFixedGrowable< CGlobalSymbol, 4 > m_comparisionIDs; // 0x18	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFollowTargetUpdateNode : public CUnaryUpdateNode
@@ -43951,7 +44951,6 @@ public:
 // Alignment: 8
 // Size: 0xd8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Dot Product"
@@ -43973,10 +44972,9 @@ public:
 // Alignment: 8
 // Size: 0x168
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MPropertyFriendlyName "Smart Prop"
+// MPropertyFriendlyName "Smart Prop Reference"
 // MPropertyDescription "Evaluates a specified smart prop as a child of the current element."
 // MVDataOutlinerAssetNameExpr
 class CSmartPropElement_SmartProp : public CSmartPropElement
@@ -43991,7 +44989,6 @@ public:
 // Registered binary: soundsystem.dll (project 'soundsystem')
 // Alignment: 8
 // Size: 0x18
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSosSoundEventGroupListSchema
@@ -44019,7 +45016,6 @@ public:
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 16
 // Size: 0x1b0
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmClip
@@ -44049,7 +45045,6 @@ public:
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 8
 // Size: 0x8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CFlexDesc
@@ -44088,26 +45083,25 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ControlPointToRadialScreenSpace : public CParticleFunctionPreEmission
 {
 public:
 	// MPropertyFriendlyName "source Control Point in World"
-	int32_t m_nCPIn; // 0x1c0	
+	int32_t m_nCPIn; // 0x1c8	
 	// MPropertyFriendlyName "Source Control Point offset"
 	// MVectorIsCoordinate
-	Vector m_vecCP1Pos; // 0x1c4	
+	Vector m_vecCP1Pos; // 0x1cc	
 	// MPropertyFriendlyName "Set control point number"
-	int32_t m_nCPOut; // 0x1d0	
+	int32_t m_nCPOut; // 0x1d8	
 	// MPropertyFriendlyName "Output field 0-2 X/Y/Z"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nCPOutField; // 0x1d4	
+	int32_t m_nCPOutField; // 0x1dc	
 	// MPropertyFriendlyName "Ss Pos and Dot OUT CP"
-	int32_t m_nCPSSPosOut; // 0x1d8	
+	int32_t m_nCPSSPosOut; // 0x1e0	
 };
 
 // Registered binary: server.dll (project 'server')
@@ -44129,7 +45123,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcompmat–où°¯"
+// MResourceTypeForInfoType "vcompmat"
 class InfoForResourceTypeCCompositeMaterialKit
 {
 private:
@@ -44153,75 +45147,73 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1e0
+// Size: 0x1e8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapDotProductToScalar : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "first input control point"
-	int32_t m_nInputCP1; // 0x1b8	
+	int32_t m_nInputCP1; // 0x1c0	
 	// MPropertyFriendlyName "second input control point"
-	int32_t m_nInputCP2; // 0x1bc	
+	int32_t m_nInputCP2; // 0x1c4	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8	
 	// MPropertyFriendlyName "input minimum (-1 to 1)"
-	float m_flInputMin; // 0x1c4	
+	float m_flInputMin; // 0x1cc	
 	// MPropertyFriendlyName "input maximum (-1 to 1)"
-	float m_flInputMax; // 0x1c8	
+	float m_flInputMax; // 0x1d0	
 	// MPropertyFriendlyName "output minimum"
-	float m_flOutputMin; // 0x1cc	
+	float m_flOutputMin; // 0x1d4	
 	// MPropertyFriendlyName "output maximum"
-	float m_flOutputMax; // 0x1d0	
+	float m_flOutputMax; // 0x1d8	
 	// MPropertyFriendlyName "use particle velocity for first input"
-	bool m_bUseParticleVelocity; // 0x1d4	
+	bool m_bUseParticleVelocity; // 0x1dc	
 private:
-	[[maybe_unused]] uint8_t __pad01d5[0x3]; // 0x1d5
+	[[maybe_unused]] uint8_t __pad01dd[0x3]; // 0x1dd
 public:
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x1d8	
+	ParticleSetMethod_t m_nSetMethod; // 0x1e0	
 	// MPropertyFriendlyName "only active within specified input range"
-	bool m_bActiveRange; // 0x1dc	
+	bool m_bActiveRange; // 0x1e4	
 	// MPropertyFriendlyName "use particle normal for first input"
-	bool m_bUseParticleNormal; // 0x1dd	
+	bool m_bUseParticleNormal; // 0x1e5	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x488
+// Size: 0x4a0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_SetPerChildControlPoint : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "group ID to affect"
-	int32_t m_nChildGroupID; // 0x1b8	
+	int32_t m_nChildGroupID; // 0x1c0	
 	// MPropertyFriendlyName "control point to set"
-	int32_t m_nFirstControlPoint; // 0x1bc	
+	int32_t m_nFirstControlPoint; // 0x1c4	
 	// MPropertyFriendlyName "# of children to set"
-	int32_t m_nNumControlPoints; // 0x1c0	
+	int32_t m_nNumControlPoints; // 0x1c8	
 private:
-	[[maybe_unused]] uint8_t __pad01c4[0x4]; // 0x1c4
+	[[maybe_unused]] uint8_t __pad01cc[0x4]; // 0x1cc
 public:
 	// MPropertyFriendlyName "particle increment amount"
-	CParticleCollectionFloatInput m_nParticleIncrement; // 0x1c8	
+	CParticleCollectionFloatInput m_nParticleIncrement; // 0x1d0	
 	// MPropertyFriendlyName "first particle to copy"
-	CParticleCollectionFloatInput m_nFirstSourcePoint; // 0x320	
+	CParticleCollectionFloatInput m_nFirstSourcePoint; // 0x330	
 	// MPropertyFriendlyName "set orientation from velocity"
-	bool m_bSetOrientation; // 0x478	
+	bool m_bSetOrientation; // 0x490	
 private:
-	[[maybe_unused]] uint8_t __pad0479[0x3]; // 0x479
+	[[maybe_unused]] uint8_t __pad0491[0x3]; // 0x491
 public:
 	// MPropertyFriendlyName "orientation vector"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nOrientationField; // 0x47c	
+	ParticleAttributeIndex_t m_nOrientationField; // 0x494	
 	// MPropertyFriendlyName "set number of children based on particle count"
-	bool m_bNumBasedOnParticleCount; // 0x480	
+	bool m_bNumBasedOnParticleCount; // 0x498	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
@@ -44243,7 +45235,6 @@ public:
 // Alignment: 8
 // Size: 0x88
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CStateMachineComponentUpdater : public CAnimComponentUpdater
@@ -44259,7 +45250,6 @@ public:
 // Alignment: 8
 // Size: 0x3d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Transform: Trace In Direction"
@@ -44276,42 +45266,55 @@ public:
 	CSmartPropAttributeFloat m_flTraceLength; // 0x390	
 };
 
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
+// Size: 0x108
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+// MPropertyFriendlyName "Material"
+// MPropertyDescription "Material Asset Variable"
+class CSmartPropVariable_Material : public CSmartPropVariable
+{
+public:
+	// MPropertyFriendlyName "Default Material"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIMaterial2 > > m_DefaultValue; // 0x28	
+};
+
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x8a0
+// Size: 0x8c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_ModelDampenMovement : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1b8	
+	int32_t m_nControlPointNumber; // 0x1c0	
 	// MPropertyFriendlyName "use only bounding box"
-	bool m_bBoundBox; // 0x1bc	
+	bool m_bBoundBox; // 0x1c4	
 	// MPropertyFriendlyName "dampen outside instead of inside"
-	bool m_bOutside; // 0x1bd	
+	bool m_bOutside; // 0x1c5	
 	// MPropertyFriendlyName "use bones instead of hitboxes"
-	bool m_bUseBones; // 0x1be	
+	bool m_bUseBones; // 0x1c6	
 	// MPropertyFriendlyName "hitbox set"
-	char m_HitboxSetName[128]; // 0x1bf	
+	char m_HitboxSetName[128]; // 0x1c7	
 private:
-	[[maybe_unused]] uint8_t __pad023f[0x1]; // 0x23f
+	[[maybe_unused]] uint8_t __pad0247[0x1]; // 0x247
 public:
 	// MPropertyFriendlyName "test position offset"
 	// MVectorIsCoordinate
-	CPerParticleVecInput m_vecPosOffset; // 0x240	
+	CPerParticleVecInput m_vecPosOffset; // 0x248	
 	// MPropertyFriendlyName "drag"
 	// MPropertyAttributeRange "-1 1"
-	float m_fDrag; // 0x898	
+	float m_fDrag; // 0x8c0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c8
+// Size: 0x1d0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapVectorComponentToScalar : public CParticleFunctionOperator
@@ -44319,75 +45322,83 @@ class C_OP_RemapVectorComponentToScalar : public CParticleFunctionOperator
 public:
 	// MPropertyFriendlyName "Input Vector"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nFieldInput; // 0x1b8	
+	ParticleAttributeIndex_t m_nFieldInput; // 0x1c0	
 	// MPropertyFriendlyName "Output Scalar"
 	// MPropertyAttributeChoiceName "particlefield_scalar"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 	// MPropertyFriendlyName "Vector Component"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nComponent; // 0x1c0	
+	int32_t m_nComponent; // 0x1c8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x210
+// Size: 0x220
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_MaintainSequentialPath : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "maximum distance"
-	float m_fMaxDistance; // 0x1b8	
+	float m_fMaxDistance; // 0x1c0	
 	// MPropertyFriendlyName "particles to map from start to end"
-	float m_flNumToAssign; // 0x1bc	
+	float m_flNumToAssign; // 0x1c4	
 	// MPropertyFriendlyName "cohesion strength"
-	float m_flCohesionStrength; // 0x1c0	
+	float m_flCohesionStrength; // 0x1c8	
 	// MPropertyFriendlyName "control point movement tolerance"
-	float m_flTolerance; // 0x1c4	
+	float m_flTolerance; // 0x1cc	
 	// MPropertyFriendlyName "restart behavior (0 = bounce, 1 = loop )"
-	bool m_bLoop; // 0x1c8	
+	bool m_bLoop; // 0x1d0	
 	// MPropertyFriendlyName "use existing particle count"
-	bool m_bUseParticleCount; // 0x1c9	
+	bool m_bUseParticleCount; // 0x1d1	
 private:
-	[[maybe_unused]] uint8_t __pad01ca[0x6]; // 0x1ca
+	[[maybe_unused]] uint8_t __pad01d2[0xe]; // 0x1d2
 public:
-	CPathParameters m_PathParams; // 0x1d0	
+	CPathParameters m_PathParams; // 0x1e0	
+};
+
+// Registered binary: animationsystem.dll (project 'animlib')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// 
+// MGetKV3ClassDefaults
+class CNmDurationScaleNode::CDefinition : public CNmSpeedScaleBaseNode::CDefinition
+{
+public:
 };
 
 // Registered binary: soundsystem.dll (project 'soundsystem_voicecontainers')
 // Alignment: 8
-// Size: 0x1b8
+// Size: 0x188
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Granulator Container"
 class CVoiceContainerGranulator : public CVoiceContainerBase
 {
 public:
-	float m_flGrainLength; // 0xe8	
-	float m_flGrainCrossfadeAmount; // 0xec	
-	float m_flStartJitter; // 0xf0	
-	float m_flPlaybackJitter; // 0xf4	
-	CStrongHandle< InfoForResourceTypeCVoiceContainerBase > m_sourceAudio; // 0xf8	
+	float m_flGrainLength; // 0xb8	
+	float m_flGrainCrossfadeAmount; // 0xbc	
+	float m_flStartJitter; // 0xc0	
+	float m_flPlaybackJitter; // 0xc4	
+	CStrongHandle< InfoForResourceTypeCVoiceContainerBase > m_sourceAudio; // 0xc8	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_Decay : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "Reduce rope popping on decay"
-	bool m_bRopeDecay; // 0x1b8	
+	bool m_bRopeDecay; // 0x1c0	
 	// MPropertyFriendlyName "force preserving particle order"
-	bool m_bForcePreserveParticleOrder; // 0x1b9	
+	bool m_bForcePreserveParticleOrder; // 0x1c1	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
@@ -44404,7 +45415,6 @@ public:
 // Alignment: 16
 // Size: 0x1e0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CTwoBoneIKUpdateNode : public CUnaryUpdateNode
@@ -44419,7 +45429,6 @@ public:
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "BaseDomain"
@@ -44466,7 +45475,6 @@ public:
 // Size: 0x78
 // Has VTable
 // Is Abstract
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CPulseCell_BaseLerp : public CPulseCell_BaseYieldingInflow
@@ -44478,7 +45486,6 @@ public:
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
 // Size: 0x38
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeVertexMapDesc_t
@@ -44502,7 +45509,6 @@ public:
 // Alignment: 2
 // Size: 0x4
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct FeSourceEdge_t
@@ -44516,7 +45522,6 @@ public:
 // Size: 0x30
 // Has Trivial Constructor
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VMixDynamicsDesc_t
@@ -44553,78 +45558,75 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1f0
+// Size: 0x1f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreatePhyllotaxis : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "scale size multiplier from CP"
-	int32_t m_nScaleCP; // 0x1c4	
+	int32_t m_nScaleCP; // 0x1cc	
 	// MPropertyFriendlyName "scale CP component 0/1/2 X/Y/Z"
 	// MPropertyAttributeChoiceName "vector_component"
-	int32_t m_nComponent; // 0x1c8	
+	int32_t m_nComponent; // 0x1d0	
 	// MPropertyFriendlyName "center core radius"
-	float m_fRadCentCore; // 0x1cc	
+	float m_fRadCentCore; // 0x1d4	
 	// MPropertyFriendlyName "radius multiplier"
-	float m_fRadPerPoint; // 0x1d0	
+	float m_fRadPerPoint; // 0x1d8	
 	// MPropertyFriendlyName "radius max (-1 procedural growth)"
-	float m_fRadPerPointTo; // 0x1d4	
+	float m_fRadPerPointTo; // 0x1dc	
 	// MPropertyFriendlyName "golden angle (is 137.508)"
-	float m_fpointAngle; // 0x1d8	
+	float m_fpointAngle; // 0x1e0	
 	// MPropertyFriendlyName "overall size multiplier (-1 count based distribution)"
-	float m_fsizeOverall; // 0x1dc	
+	float m_fsizeOverall; // 0x1e4	
 	// MPropertyFriendlyName "radius bias"
-	float m_fRadBias; // 0x1e0	
+	float m_fRadBias; // 0x1e8	
 	// MPropertyFriendlyName "radius min "
-	float m_fMinRad; // 0x1e4	
+	float m_fMinRad; // 0x1ec	
 	// MPropertyFriendlyName "distribution bias"
-	float m_fDistBias; // 0x1e8	
+	float m_fDistBias; // 0x1f0	
 	// MPropertyFriendlyName "local space"
-	bool m_bUseLocalCoords; // 0x1ec	
+	bool m_bUseLocalCoords; // 0x1f4	
 	// MPropertyFriendlyName "use continuous emission"
-	bool m_bUseWithContEmit; // 0x1ed	
+	bool m_bUseWithContEmit; // 0x1f5	
 	// MPropertyFriendlyName "scale radius from initial value"
-	bool m_bUseOrigRadius; // 0x1ee	
+	bool m_bUseOrigRadius; // 0x1f6	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1f8
+// Size: 0x200
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_ColorLitPerParticle : public CParticleFunctionInitializer
 {
 private:
-	[[maybe_unused]] uint8_t __pad01c0[0x18]; // 0x1c0
+	[[maybe_unused]] uint8_t __pad01c8[0x18]; // 0x1c8
 public:
 	// MPropertyFriendlyName "color1"
-	Color m_ColorMin; // 0x1d8	
+	Color m_ColorMin; // 0x1e0	
 	// MPropertyFriendlyName "color2"
-	Color m_ColorMax; // 0x1dc	
+	Color m_ColorMax; // 0x1e4	
 	// MPropertyFriendlyName "tint clamp min"
-	Color m_TintMin; // 0x1e0	
+	Color m_TintMin; // 0x1e8	
 	// MPropertyFriendlyName "tint clamp max"
-	Color m_TintMax; // 0x1e4	
+	Color m_TintMax; // 0x1ec	
 	// MPropertyFriendlyName "light bias"
-	float m_flTintPerc; // 0x1e8	
+	float m_flTintPerc; // 0x1f0	
 	// MPropertyFriendlyName "tint blend mode"
-	ParticleColorBlendMode_t m_nTintBlendMode; // 0x1ec	
+	ParticleColorBlendMode_t m_nTintBlendMode; // 0x1f4	
 	// MPropertyFriendlyName "light amplification amount"
-	float m_flLightAmplification; // 0x1f0	
+	float m_flLightAmplification; // 0x1f8	
 };
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 8
 // Size: 0x10
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CNmZeroPoseNode::CDefinition : public CNmPoseNode::CDefinition
@@ -44650,7 +45652,6 @@ public:
 // Alignment: 8
 // Size: 0xa8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "TestDomain"
@@ -44668,7 +45669,6 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Selection Mode"
@@ -44682,198 +45682,191 @@ public:
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1c0
+// Size: 0x1c8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_FadeOutSimple : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "proportional fade out time"
-	float m_flFadeOutTime; // 0x1b8	
+	float m_flFadeOutTime; // 0x1c0	
 	// MPropertyFriendlyName "alpha field"
 	// MPropertyAttributeChoiceName "particlefield_alpha"
-	ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc	
+	ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1f0
+// Size: 0x1f8
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_TeleportBeam : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "Position Control Point"
-	int32_t m_nCPPosition; // 0x1b8	
+	int32_t m_nCPPosition; // 0x1c0	
 	// MPropertyFriendlyName "Velocity Control Point"
-	int32_t m_nCPVelocity; // 0x1bc	
+	int32_t m_nCPVelocity; // 0x1c4	
 	// MPropertyFriendlyName "Misc Control Point"
-	int32_t m_nCPMisc; // 0x1c0	
+	int32_t m_nCPMisc; // 0x1c8	
 	// MPropertyFriendlyName "Color Control Point"
-	int32_t m_nCPColor; // 0x1c4	
+	int32_t m_nCPColor; // 0x1cc	
 	// MPropertyFriendlyName "Invalid Color Control Point"
-	int32_t m_nCPInvalidColor; // 0x1c8	
+	int32_t m_nCPInvalidColor; // 0x1d0	
 	// MPropertyFriendlyName "Extra Arc Data Point"
-	int32_t m_nCPExtraArcData; // 0x1cc	
+	int32_t m_nCPExtraArcData; // 0x1d4	
 	// MPropertyFriendlyName "Gravity"
-	Vector m_vGravity; // 0x1d0	
+	Vector m_vGravity; // 0x1d8	
 	// MPropertyFriendlyName "Arc Duration Maximum"
-	float m_flArcMaxDuration; // 0x1dc	
+	float m_flArcMaxDuration; // 0x1e4	
 	// MPropertyFriendlyName "Segment Break"
-	float m_flSegmentBreak; // 0x1e0	
+	float m_flSegmentBreak; // 0x1e8	
 	// MPropertyFriendlyName "Arc Speed"
-	float m_flArcSpeed; // 0x1e4	
+	float m_flArcSpeed; // 0x1ec	
 	// MPropertyFriendlyName "Alpha"
-	float m_flAlpha; // 0x1e8	
+	float m_flAlpha; // 0x1f0	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 16
-// Size: 0x880
+// Size: 0x8b0
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_OP_RemapGravityToVector : public CParticleFunctionOperator
 {
 public:
 	// MPropertyFriendlyName "position input"
-	CPerParticleVecInput m_vInput1; // 0x1b8	
+	CPerParticleVecInput m_vInput1; // 0x1c0	
 	// MPropertyFriendlyName "output field"
 	// MPropertyAttributeChoiceName "particlefield_vector"
-	ParticleAttributeIndex_t m_nOutputField; // 0x810	
+	ParticleAttributeIndex_t m_nOutputField; // 0x838	
 	// MPropertyFriendlyName "set value method"
-	ParticleSetMethod_t m_nSetMethod; // 0x814	
+	ParticleSetMethod_t m_nSetMethod; // 0x83c	
 	// MPropertyFriendlyName "normalize result"
-	bool m_bNormalizedOutput; // 0x818	
+	bool m_bNormalizedOutput; // 0x840	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xa08
+// Size: 0xa38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_SetHitboxToClosest : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c0	
+	int32_t m_nControlPointNumber; // 0x1c8	
 	// MPropertyFriendlyName "desired hitbox"
-	int32_t m_nDesiredHitbox; // 0x1c4	
+	int32_t m_nDesiredHitbox; // 0x1cc	
 	// MPropertyFriendlyName "model hitbox scale"
-	CParticleCollectionVecInput m_vecHitBoxScale; // 0x1c8	
+	CParticleCollectionVecInput m_vecHitBoxScale; // 0x1d0	
 	// MPropertyFriendlyName "hitbox set"
-	char m_HitboxSetName[128]; // 0x820	
+	char m_HitboxSetName[128]; // 0x848	
 	// MPropertyFriendlyName "use bones instead of hitboxes"
-	bool m_bUseBones; // 0x8a0	
+	bool m_bUseBones; // 0x8c8	
 	// MPropertyFriendlyName "get closest point on closest hitbox"
-	bool m_bUseClosestPointOnHitbox; // 0x8a1	
+	bool m_bUseClosestPointOnHitbox; // 0x8c9	
 private:
-	[[maybe_unused]] uint8_t __pad08a2[0x2]; // 0x8a2
+	[[maybe_unused]] uint8_t __pad08ca[0x2]; // 0x8ca
 public:
 	// MPropertyFriendlyName "closest point test type"
-	ClosestPointTestType_t m_nTestType; // 0x8a4	
+	ClosestPointTestType_t m_nTestType; // 0x8cc	
 	// MPropertyFriendlyName "hybrid ratio"
-	CParticleCollectionFloatInput m_flHybridRatio; // 0x8a8	
+	CParticleCollectionFloatInput m_flHybridRatio; // 0x8d0	
 	// MPropertyFriendlyName "set initial position"
-	bool m_bUpdatePosition; // 0xa00	
+	bool m_bUpdatePosition; // 0xa30	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0xcf0
+// Size: 0xd38
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RingWave : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "input transform"
-	CParticleTransformInput m_TransformInput; // 0x1c0	
+	CParticleTransformInput m_TransformInput; // 0x1c8	
 	// MPropertyFriendlyName "even distribution count"
-	CParticleCollectionFloatInput m_flParticlesPerOrbit; // 0x228	
+	CParticleCollectionFloatInput m_flParticlesPerOrbit; // 0x230	
 	// MPropertyFriendlyName "initial radius"
-	CPerParticleFloatInput m_flInitialRadius; // 0x380	
+	CPerParticleFloatInput m_flInitialRadius; // 0x390	
 	// MPropertyFriendlyName "thickness"
-	CPerParticleFloatInput m_flThickness; // 0x4d8	
+	CPerParticleFloatInput m_flThickness; // 0x4f0	
 	// MPropertyFriendlyName "min initial speed"
-	CPerParticleFloatInput m_flInitialSpeedMin; // 0x630	
+	CPerParticleFloatInput m_flInitialSpeedMin; // 0x650	
 	// MPropertyFriendlyName "max initial speed"
-	CPerParticleFloatInput m_flInitialSpeedMax; // 0x788	
+	CPerParticleFloatInput m_flInitialSpeedMax; // 0x7b0	
 	// MPropertyFriendlyName "roll"
-	CPerParticleFloatInput m_flRoll; // 0x8e0	
+	CPerParticleFloatInput m_flRoll; // 0x910	
 	// MPropertyFriendlyName "pitch"
-	CPerParticleFloatInput m_flPitch; // 0xa38	
+	CPerParticleFloatInput m_flPitch; // 0xa70	
 	// MPropertyFriendlyName "yaw"
-	CPerParticleFloatInput m_flYaw; // 0xb90	
+	CPerParticleFloatInput m_flYaw; // 0xbd0	
 	// MPropertyFriendlyName "even distribution"
-	bool m_bEvenDistribution; // 0xce8	
+	bool m_bEvenDistribution; // 0xd30	
 	// MPropertyFriendlyName "XY velocity only"
-	bool m_bXYVelocityOnly; // 0xce9	
+	bool m_bXYVelocityOnly; // 0xd31	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x1310
+// Size: 0x1370
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_CreateOnModelAtHeight : public CParticleFunctionInitializer
 {
 public:
 	// MPropertyFriendlyName "use bones instead of hitboxes"
-	bool m_bUseBones; // 0x1c0	
+	bool m_bUseBones; // 0x1c8	
 	// MPropertyFriendlyName "force creation height to desired height"
-	bool m_bForceZ; // 0x1c1	
+	bool m_bForceZ; // 0x1c9	
 private:
-	[[maybe_unused]] uint8_t __pad01c2[0x2]; // 0x1c2
+	[[maybe_unused]] uint8_t __pad01ca[0x2]; // 0x1ca
 public:
 	// MPropertyFriendlyName "control point number"
-	int32_t m_nControlPointNumber; // 0x1c4	
+	int32_t m_nControlPointNumber; // 0x1cc	
 	// MPropertyFriendlyName "height override control point number"
-	int32_t m_nHeightCP; // 0x1c8	
+	int32_t m_nHeightCP; // 0x1d0	
 	// MPropertyFriendlyName "desired height is relative to water"
-	bool m_bUseWaterHeight; // 0x1cc	
+	bool m_bUseWaterHeight; // 0x1d4	
 private:
-	[[maybe_unused]] uint8_t __pad01cd[0x3]; // 0x1cd
+	[[maybe_unused]] uint8_t __pad01d5[0x3]; // 0x1d5
 public:
 	// MPropertyFriendlyName "relative desired height"
-	CParticleCollectionFloatInput m_flDesiredHeight; // 0x1d0	
+	CParticleCollectionFloatInput m_flDesiredHeight; // 0x1d8	
 	// MPropertyFriendlyName "model hitbox scale"
-	CParticleCollectionVecInput m_vecHitBoxScale; // 0x328	
+	CParticleCollectionVecInput m_vecHitBoxScale; // 0x338	
 	// MPropertyFriendlyName "direction bias"
 	// MVectorIsCoordinate
-	CParticleCollectionVecInput m_vecDirectionBias; // 0x980	
+	CParticleCollectionVecInput m_vecDirectionBias; // 0x9b0	
 	// MPropertyFriendlyName "bias type"
-	ParticleHitboxBiasType_t m_nBiasType; // 0xfd8	
+	ParticleHitboxBiasType_t m_nBiasType; // 0x1028	
 	// MPropertyFriendlyName "bias in local space"
-	bool m_bLocalCoords; // 0xfdc	
+	bool m_bLocalCoords; // 0x102c	
 	// MPropertyFriendlyName "bias prefers moving hitboxes"
-	bool m_bPreferMovingBoxes; // 0xfdd	
+	bool m_bPreferMovingBoxes; // 0x102d	
 	// MPropertyFriendlyName "hitbox set"
-	char m_HitboxSetName[128]; // 0xfde	
+	char m_HitboxSetName[128]; // 0x102e	
 private:
-	[[maybe_unused]] uint8_t __pad105e[0x2]; // 0x105e
+	[[maybe_unused]] uint8_t __pad10ae[0x2]; // 0x10ae
 public:
 	// MPropertyFriendlyName "hitbox velocity inherited scale"
-	CParticleCollectionFloatInput m_flHitboxVelocityScale; // 0x1060	
+	CParticleCollectionFloatInput m_flHitboxVelocityScale; // 0x10b0	
 	// MPropertyFriendlyName "max hitbox velocity"
-	CParticleCollectionFloatInput m_flMaxBoneVelocity; // 0x11b8	
+	CParticleCollectionFloatInput m_flMaxBoneVelocity; // 0x1210	
 };
 
 // Registered binary: animationsystem.dll (project 'modellib')
 // Alignment: 16
-// Size: 0xb0
+// Size: 0xc0
 // Has Trivial Destructor
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct VPhysXJoint_t
@@ -44921,12 +45914,14 @@ public:
 	float m_flAngularFrequency; // 0xa4	
 	float m_flAngularDampingRatio; // 0xa8	
 	float m_flFriction; // 0xac	
+	float m_flElasticity; // 0xb0	
+	float m_flElasticDamping; // 0xb4	
+	float m_flPlasticity; // 0xb8	
 };
 
 // Registered binary: animationsystem.dll (project 'animgraphlib')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyFriendlyName "Body Group Setting"
@@ -44948,7 +45943,6 @@ public:
 // Alignment: 8
 // Size: 0x50
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MCellForDomain "TestDomain"
@@ -44965,7 +45959,6 @@ public:
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
 // Size: 0x28
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CSmartPropChoiceOption
@@ -44982,21 +45975,19 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x20
-// Construct allowed
+// Size: 0x28
 // 
 // MGetKV3ClassDefaults
 struct RnSphereDesc_t : public RnShapeDesc_t
 {
 public:
-	SphereBase_t< float32 > m_Sphere; // 0x10	
+	SphereBase_t< float32 > m_Sphere; // 0x18	
 };
 
 // Registered binary: particles.dll (project 'particles')
 // Alignment: 8
-// Size: 0x208
+// Size: 0x210
 // Has VTable
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class C_INIT_RemapNamedModelMeshGroupToScalar : public C_INIT_RemapNamedModelElementToScalar
@@ -45006,26 +45997,25 @@ public:
 
 // Registered binary: animationsystem.dll (project 'animlib')
 // Alignment: 16
-// Size: 0x30
-// Has Trivial Destructor
-// Construct allowed
+// Size: 0x40
+// Has VTable
 // 
 // MGetKV3ClassDefaults
-class CNmTarget
+class CNmConstTargetNode::CDefinition : public CNmTargetValueNode::CDefinition
 {
 public:
-	CTransform m_transform; // 0x0	
-	CGlobalSymbol m_boneID; // 0x20	
-	bool m_bIsBoneTarget; // 0x28	
-	bool m_bIsUsingBoneSpaceOffsets; // 0x29	
-	bool m_bHasOffsets; // 0x2a	
-	bool m_bIsSet; // 0x2b	
+	// -> m_transform - 0x10
+	// -> m_boneID - 0x30
+	// -> m_bIsBoneTarget - 0x38
+	// -> m_bIsUsingBoneSpaceOffsets - 0x39
+	// -> m_bHasOffsets - 0x3a
+	// -> m_bIsSet - 0x3b
+	CNmTarget m_value; // 0x10	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x658
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CCitadelWeaponInfo
@@ -45169,38 +46159,39 @@ public:
 	CRangeFloat m_StandingShootSpreadPenalty; // 0x110	
 	// MPropertyDescription "Scale of multi-bullet (shotgun) spread in Y-axis"
 	float m_flScatterYawScale; // 0x118	
-	// MPropertyDescription "Vertical view punch per shot"
-	float m_flVerticalPunch; // 0x11c	
-	// MPropertyDescription "Horizontal view punch per shot"
-	float m_flHorizontalPunch; // 0x120	
 	// MPropertyDescription "Spread increase per shot. 0-1, % of max shoot penalty to add per shot."
-	float m_flShootSpreadPenaltyPerShot; // 0x124	
+	float m_flShootSpreadPenaltyPerShot; // 0x11c	
 	// MPropertyDescription "Delay after shooting stops to start decaying shooting spread penalty.  -1 means use Cycle Time"
-	float m_flShootSpreadPenaltyDecayDelay; // 0x128	
+	float m_flShootSpreadPenaltyDecayDelay; // 0x120	
 	// MPropertyDescription "How much shoot spread penalty to decay per second"
-	float m_flShootSpreadPenaltyDecay; // 0x12c	
+	float m_flShootSpreadPenaltyDecay; // 0x124	
 	// MPropertyDescription "Spread penalty decay. This is used for things like mantle and dash."
-	float m_flSpreadPenaltyDecay; // 0x130	
+	float m_flSpreadPenaltyDecay; // 0x128	
 	// MPropertyDescription "NPCS ONLY. Spread penalty when aiming up"
-	float m_flShootingUpSpreadPenalty; // 0x134	
+	float m_flShootingUpSpreadPenalty; // 0x12c	
 	// MPropertyDescription "NPCS ONLY. The amount of time the weapon is idle befoer we fully replenish the clip (0 means don't do it)"
-	float m_flAutoReplenishClip; // 0x138	
+	float m_flAutoReplenishClip; // 0x130	
 	// MPropertyDescription "NPCS ONLY. Aiming spread for npc guns. "
-	CRangeFloat m_NpcAimingSpread; // 0x13c	
+	CRangeFloat m_NpcAimingSpread; // 0x134	
 private:
-	[[maybe_unused]] uint8_t __pad0144[0x4]; // 0x144
+	[[maybe_unused]] uint8_t __pad013c[0x4]; // 0x13c
 public:
 	// MPropertyDescription "Shotgun Scatter offsets. Allows you to manually define where pellets from shotguns go. "
-	CUtlVector< Vector2D > m_vecScatterOffsets; // 0x148	
+	CUtlVector< Vector2D > m_vecScatterOffsets; // 0x140	
 	// MPropertyDescription "Shotgun Scatter pellet factor. Spread for shotguns is used to determine per pellet spread. This control the overall spread of the pattern."
-	float m_flPelletScatterFactor; // 0x160	
+	float m_flPelletScatterFactor; // 0x158	
 	// MPropertyDescription "Shotgun Scatter pellet spread factor. Before applying spread to individual pellets, this factor is applied. No pellet spread is applied to the first bullet."
-	float m_flPelletScatterSpreadFactor; // 0x164	
+	float m_flPelletScatterSpreadFactor; // 0x15c	
 	// MPropertyDescription "Shotgun Scatter only. Should spread be applied to the first pellet?"
-	bool m_bApplySpreadToFirstPellet; // 0x168	
+	bool m_bApplySpreadToFirstPellet; // 0x160	
 private:
-	[[maybe_unused]] uint8_t __pad0169[0x3]; // 0x169
+	[[maybe_unused]] uint8_t __pad0161[0x3]; // 0x161
 public:
+	// MPropertyStartGroup "Recoil"
+	// MPropertyDescription "Vertical view punch per shot"
+	float m_flVerticalPunch; // 0x164	
+	// MPropertyDescription "Horizontal view punch per shot"
+	float m_flHorizontalPunch; // 0x168	
 	// -> m_Range - 0x16c
 	// -> m_flBurstSlope - 0x174
 	// -> m_flBurstExponent - 0x178

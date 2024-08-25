@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: resourcesystem.dll
-// Classes count: 0 (Allocated) | 48 (Unallocated)
+// Classes count: 0 (Allocated) | 49 (Unallocated)
 // Enums count: 0 (Allocated) | 0 (Unallocated)
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -127,7 +127,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vanmgrpheconitemÄiù°¯"
+// MResourceTypeForInfoType "vanmgrpheconitem¿YmΩ˚"
 class InfoForResourceTypeIAnimGraphModelBinding
 {
 private:
@@ -239,6 +239,20 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
+// MResourceTypeForInfoType "vnmik"
+class InfoForResourceTypeCNmIKRig
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: resourcesystem.dll (project 'resourcesystem')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
 // MResourceTypeForInfoType "vrr"
 class InfoForResourceTypeCResponseRulesList
 {
@@ -337,7 +351,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vgcxdata"
+// MResourceTypeForInfoType "vgcxdata‡bmΩ˚"
 class InfoForResourceTypeCGcExportableExternalData
 {
 private:
@@ -376,7 +390,6 @@ public:
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
 // Alignment: 8
 // Size: 0x8
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct TestResource_t
@@ -532,7 +545,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "econitemÄiù°¯"
+// MResourceTypeForInfoType "econitem¿YmΩ˚"
 class InfoForResourceTypeCCSGOEconItem
 {
 private:
@@ -560,7 +573,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MResourceTypeForInfoType "vcompmat–où°¯"
+// MResourceTypeForInfoType "vcompmat"
 class InfoForResourceTypeCCompositeMaterialKit
 {
 private:
@@ -641,7 +654,6 @@ public:
 // Registered binary: resourcesystem.dll (project 'resourcesystem')
 // Alignment: 8
 // Size: 0x10
-// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct ManifestTestResource_t
