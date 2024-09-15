@@ -21,7 +21,6 @@ namespace source2sdk::server
     // Standard-layout class: true
     // Size: 0x60
     // Has VTable
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "CEconItemAttribute m_Attributes"
     #pragma pack(push, 1)

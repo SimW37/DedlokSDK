@@ -14,7 +14,6 @@ namespace source2sdk::particleslib
     // Alignment: 0x1
     // Standard-layout class: true
     // Size: 0x28
-    // MNetworkNoBase
     #pragma pack(push, 1)
     class CParticleProperty
     {

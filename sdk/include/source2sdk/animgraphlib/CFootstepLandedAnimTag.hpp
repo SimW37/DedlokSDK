@@ -17,7 +17,6 @@ namespace source2sdk::animgraphlib
     // Standard-layout class: false
     // Size: 0x78
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyFriendlyName "FootstepLanded Tag"

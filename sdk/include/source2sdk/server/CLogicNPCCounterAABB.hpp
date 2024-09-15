@@ -14,21 +14,19 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x828
+    // Size: 0x848
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CLogicNPCCounterAABB : public server::CLogicNPCCounter
     {
     public:
-        Vector m_vDistanceOuterMins; // 0x7f8        
-        Vector m_vDistanceOuterMaxs; // 0x804        
-        Vector m_vOuterMins; // 0x810        
-        Vector m_vOuterMaxs; // 0x81c        
+        Vector m_vDistanceOuterMins; // 0x818        
+        Vector m_vDistanceOuterMaxs; // 0x824        
+        Vector m_vOuterMins; // 0x830        
+        Vector m_vOuterMaxs; // 0x83c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CLogicNPCCounterAABB because it is not a standard-layout class
-    static_assert(sizeof(CLogicNPCCounterAABB) == 0x828);
+    static_assert(sizeof(CLogicNPCCounterAABB) == 0x848);
 };

@@ -21,11 +21,8 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xd00
+    // Size: 0xce0
     // Has VTable
-    // Construct allowed
-    // MNetworkNoBase
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkIncludeByUserGroup "Origin"
     // static metadata: MNetworkIncludeByName "CGameSceneNode::m_angRotation"
@@ -54,48 +51,48 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        char m_szSnapshotFileName[512]; // 0x788        
+        char m_szSnapshotFileName[512]; // 0x768        
         // metadata: MNetworkEnable
-        bool m_bActive; // 0x988        
+        bool m_bActive; // 0x968        
         // metadata: MNetworkEnable
-        bool m_bFrozen; // 0x989        
-        [[maybe_unused]] std::uint8_t pad_0x98a[0x2]; // 0x98a
+        bool m_bFrozen; // 0x969        
+        [[maybe_unused]] std::uint8_t pad_0x96a[0x2]; // 0x96a
         // metadata: MNetworkEnable
-        float m_flFreezeTransitionDuration; // 0x98c        
+        float m_flFreezeTransitionDuration; // 0x96c        
         // metadata: MNetworkEnable
-        int32_t m_nStopType; // 0x990        
+        int32_t m_nStopType; // 0x970        
         // metadata: MNetworkEnable
-        bool m_bAnimateDuringGameplayPause; // 0x994        
-        [[maybe_unused]] std::uint8_t pad_0x995[0x3]; // 0x995
+        bool m_bAnimateDuringGameplayPause; // 0x974        
+        [[maybe_unused]] std::uint8_t pad_0x975[0x3]; // 0x975
         // metadata: MNetworkEnable
         // m_iEffectIndex has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEffectIndex;
-        char m_iEffectIndex[0x8]; // 0x998        
+        char m_iEffectIndex[0x8]; // 0x978        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flStartTime; // 0x9a0        
+        entity2::GameTime_t m_flStartTime; // 0x980        
         // metadata: MNetworkEnable
-        float m_flPreSimTime; // 0x9a4        
+        float m_flPreSimTime; // 0x984        
         // metadata: MNetworkEnable
-        Vector m_vServerControlPoints[4]; // 0x9a8        
+        Vector m_vServerControlPoints[4]; // 0x988        
         // metadata: MNetworkEnable
-        uint8_t m_iServerControlPointAssignments[4]; // 0x9d8        
+        uint8_t m_iServerControlPointAssignments[4]; // 0x9b8        
         // metadata: MNetworkEnable
         // m_hControlPointEnts has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hControlPointEnts[64];
-        char m_hControlPointEnts[0x100]; // 0x9dc        
+        char m_hControlPointEnts[0x100]; // 0x9bc        
         // metadata: MNetworkEnable
-        bool m_bNoSave; // 0xadc        
+        bool m_bNoSave; // 0xabc        
         // metadata: MNetworkEnable
-        bool m_bNoFreeze; // 0xadd        
+        bool m_bNoFreeze; // 0xabd        
         // metadata: MNetworkEnable
-        bool m_bNoRamp; // 0xade        
-        bool m_bStartActive; // 0xadf        
-        CUtlSymbolLarge m_iszEffectName; // 0xae0        
-        CUtlSymbolLarge m_iszControlPointNames[64]; // 0xae8        
-        int32_t m_nDataCP; // 0xce8        
-        Vector m_vecDataCPValue; // 0xcec        
-        int32_t m_nTintCP; // 0xcf8        
-        Color m_clrTint; // 0xcfc        
+        bool m_bNoRamp; // 0xabe        
+        bool m_bStartActive; // 0xabf        
+        CUtlSymbolLarge m_iszEffectName; // 0xac0        
+        CUtlSymbolLarge m_iszControlPointNames[64]; // 0xac8        
+        int32_t m_nDataCP; // 0xcc8        
+        Vector m_vecDataCPValue; // 0xccc        
+        int32_t m_nTintCP; // 0xcd8        
+        Color m_clrTint; // 0xcdc        
         
         // Datamap fields:
         // void InputStart; // 0x0
@@ -112,5 +109,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CParticleSystem because it is not a standard-layout class
-    static_assert(sizeof(CParticleSystem) == 0xd00);
+    static_assert(sizeof(CParticleSystem) == 0xce0);
 };

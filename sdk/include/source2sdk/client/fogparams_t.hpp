@@ -17,8 +17,6 @@ namespace source2sdk::client
     // Size: 0x68
     // Has VTable
     // Has Trivial Destructor
-    // MClassHasEntityLimitedDataDesc
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "Vector dirPrimary"
     // static metadata: MNetworkVarNames "Color colorPrimary"

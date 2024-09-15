@@ -17,7 +17,6 @@ namespace source2sdk::particles
     // Standard-layout class: false
     // Size: 0x1d0
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MParticleMaxVersion "8"
     // static metadata: MParticleReplacementOp "C_OP_InheritFromParentParticlesV2"

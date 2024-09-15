@@ -16,7 +16,6 @@ namespace source2sdk::animlib
     // Standard-layout class: false
     // Size: 0x40
     // Has VTable
-    // Construct allowed
     #pragma pack(push, 1)
     class CNmCachedPoseReadTask : public animlib::CNmTask
     {

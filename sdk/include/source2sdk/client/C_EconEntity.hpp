@@ -16,7 +16,7 @@
 
 namespace source2sdk::client
 {
-    class CBaseAnimatingActivity;
+    class CBaseAnimGraph;
 };
 
 namespace source2sdk::client
@@ -29,45 +29,42 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb10
+    // Size: 0xe78
     // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "CAttributeContainer m_AttributeManager"
     #pragma pack(push, 1)
     class C_EconEntity : public client::C_BaseFlex
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x988[0x10]; // 0x988
+        [[maybe_unused]] std::uint8_t pad_0xcd8[0x10]; // 0xcd8
         // metadata: MNetworkEnable
-        client::CAttributeContainer m_AttributeManager; // 0x998        
-        bool m_bClientside; // 0xac0        
-        [[maybe_unused]] std::uint8_t pad_0xac1[0x3]; // 0xac1
-        client::EconEntityParticleDisableMode_t m_nDisableMode; // 0xac4        
-        bool m_bParticleSystemsCreated; // 0xac8        
-        bool m_bForceDestroyAttachedParticlesImmediately; // 0xac9        
-        [[maybe_unused]] std::uint8_t pad_0xaca[0x6]; // 0xaca
+        client::CAttributeContainer m_AttributeManager; // 0xce8        
+        bool m_bClientside; // 0xe28        
+        [[maybe_unused]] std::uint8_t pad_0xe29[0x3]; // 0xe29
+        client::EconEntityParticleDisableMode_t m_nDisableMode; // 0xe2c        
+        bool m_bParticleSystemsCreated; // 0xe30        
+        bool m_bForceDestroyAttachedParticlesImmediately; // 0xe31        
+        [[maybe_unused]] std::uint8_t pad_0xe32[0x6]; // 0xe32
         // m_vecAttachedParticles has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<client::C_EconEntity__AttachedParticleInfo_t> m_vecAttachedParticles;
-        char m_vecAttachedParticles[0x18]; // 0xad0        
+        char m_vecAttachedParticles[0x18]; // 0xe38        
         // m_hViewmodelAttachment has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<client::CBaseAnimatingActivity> m_hViewmodelAttachment;
-        char m_hViewmodelAttachment[0x4]; // 0xae8        
-        int32_t m_iOldTeam; // 0xaec        
-        bool m_bAttachmentDirty; // 0xaf0        
-        client::style_index_t m_iOldStyle; // 0xaf1        
-        [[maybe_unused]] std::uint8_t pad_0xaf2[0x2]; // 0xaf2
+        // CHandle<client::CBaseAnimGraph> m_hViewmodelAttachment;
+        char m_hViewmodelAttachment[0x4]; // 0xe50        
+        int32_t m_iOldTeam; // 0xe54        
+        bool m_bAttachmentDirty; // 0xe58        
+        client::style_index_t m_iOldStyle; // 0xe59        
+        [[maybe_unused]] std::uint8_t pad_0xe5a[0x2]; // 0xe5a
         // m_hOldProvidee has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hOldProvidee;
-        char m_hOldProvidee[0x4]; // 0xaf4        
+        char m_hOldProvidee[0x4]; // 0xe5c        
         // m_vecAttachedModels has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<client::C_EconEntity__AttachedModelData_t> m_vecAttachedModels;
-        char m_vecAttachedModels[0x18]; // 0xaf8        
+        char m_vecAttachedModels[0x18]; // 0xe60        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_EconEntity because it is not a standard-layout class
-    static_assert(sizeof(C_EconEntity) == 0xb10);
+    static_assert(sizeof(C_EconEntity) == 0xe78);
 };

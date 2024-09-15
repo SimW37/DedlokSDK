@@ -22,8 +22,6 @@ namespace source2sdk::server
     // Standard-layout class: true
     // Size: 0x258
     // Has VTable
-    // MClassHasEntityLimitedDataDesc
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "GameTime_t m_flStartTime"
     // static metadata: MNetworkVarNames "uint32 m_iWindSeed"

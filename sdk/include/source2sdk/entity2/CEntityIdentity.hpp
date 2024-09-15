@@ -15,7 +15,6 @@ namespace source2sdk::entity2
     // Alignment: 0x8
     // Standard-layout class: true
     // Size: 0x78
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "int32 m_nameStringableIndex"
     #pragma pack(push, 1)

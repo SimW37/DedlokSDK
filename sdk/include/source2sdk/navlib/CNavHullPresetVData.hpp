@@ -14,7 +14,6 @@ namespace source2sdk::navlib
     // Alignment: 0x8
     // Standard-layout class: true
     // Size: 0x18
-    // Construct allowed
     // 
     // static metadata: MVDataRoot
     // static metadata: MGetKV3ClassDefaults

@@ -13,16 +13,15 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x1
     // Standard-layout class: true
-    // Size: 0x1a0
+    // Size: 0x1c0
     // Has VTable
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CNetworkTransmitComponent
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x00[0x16c]; // 0x0
-        uint8_t m_nTransmitStateOwnedCounter; // 0x16c        
-        [[maybe_unused]] std::uint8_t pad_0x16d[0x33];
+        [[maybe_unused]] std::uint8_t pad_0x00[0x184]; // 0x0
+        uint8_t m_nTransmitStateOwnedCounter; // 0x184        
+        [[maybe_unused]] std::uint8_t pad_0x185[0x3b];
         
         // Static fields:
         static int32_t &Get_s_nDebugStateChange() {return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNetworkTransmitComponent")->GetStaticFields()[0]->m_pInstance);};
@@ -34,7 +33,7 @@ namespace source2sdk::client
     };
     #pragma pack(pop)
     
-    static_assert(offsetof(CNetworkTransmitComponent, m_nTransmitStateOwnedCounter) == 0x16c);
+    static_assert(offsetof(CNetworkTransmitComponent, m_nTransmitStateOwnedCounter) == 0x184);
     
-    static_assert(sizeof(CNetworkTransmitComponent) == 0x1a0);
+    static_assert(sizeof(CNetworkTransmitComponent) == 0x1c0);
 };

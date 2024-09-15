@@ -15,7 +15,6 @@ namespace source2sdk::particleslib
     // Alignment: 0x8
     // Standard-layout class: true
     // Size: 0x40
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyCustomEditor "ParticleVariableRef()"

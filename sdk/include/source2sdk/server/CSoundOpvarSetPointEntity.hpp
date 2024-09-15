@@ -17,16 +17,14 @@ namespace source2sdk::server
     // Standard-layout class: false
     // Size: 0x660
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CSoundOpvarSetPointEntity : public server::CSoundOpvarSetPointBase
     {
     public:
-        entity2::CEntityIOOutput m_OnEnter; // 0x550        
-        entity2::CEntityIOOutput m_OnExit; // 0x578        
-        bool m_bAutoDisable; // 0x5a0        
-        [[maybe_unused]] std::uint8_t pad_0x5a1[0x43]; // 0x5a1
+        entity2::CEntityIOOutput m_OnEnter; // 0x570        
+        entity2::CEntityIOOutput m_OnExit; // 0x598        
+        bool m_bAutoDisable; // 0x5c0        
+        [[maybe_unused]] std::uint8_t pad_0x5c1[0x23]; // 0x5c1
         float m_flDistanceMin; // 0x5e4        
         float m_flDistanceMax; // 0x5e8        
         float m_flDistanceMapMin; // 0x5ec        

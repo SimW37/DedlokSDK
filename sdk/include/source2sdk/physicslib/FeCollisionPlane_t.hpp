@@ -16,7 +16,6 @@ namespace source2sdk::physicslib
     // Standard-layout class: true
     // Size: 0x18
     // Has Trivial Destructor
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

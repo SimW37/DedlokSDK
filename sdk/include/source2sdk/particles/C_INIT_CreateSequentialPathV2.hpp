@@ -19,7 +19,6 @@ namespace source2sdk::particles
     // Standard-layout class: false
     // Size: 0x4e0
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MParticleMinVersion "8"
     // static metadata: MGetKV3ClassDefaults

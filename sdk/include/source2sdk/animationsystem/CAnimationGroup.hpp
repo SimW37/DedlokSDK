@@ -19,7 +19,6 @@ namespace source2sdk::animationsystem
     // Standard-layout class: true
     // Size: 0x130
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

@@ -18,7 +18,6 @@ namespace source2sdk::server
     // Size: 0x228
     // Has VTable
     // Has Trivial Destructor
-    // MNetworkNoBase
     // 
     // static metadata: MNetworkVarNames "float m_flValues"
     // static metadata: MNetworkVarNames "int m_nValueCounts"

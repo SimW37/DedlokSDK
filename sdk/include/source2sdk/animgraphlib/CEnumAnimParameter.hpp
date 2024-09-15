@@ -16,7 +16,6 @@ namespace source2sdk::animgraphlib
     // Standard-layout class: false
     // Size: 0xd8
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyFriendlyName "Enum Parameter"

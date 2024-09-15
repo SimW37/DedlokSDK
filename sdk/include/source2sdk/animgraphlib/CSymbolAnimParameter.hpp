@@ -16,7 +16,6 @@ namespace source2sdk::animgraphlib
     // Standard-layout class: false
     // Size: 0x88
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyFriendlyName "Symbol Parameter"

@@ -23,8 +23,6 @@ namespace source2sdk::server
     // Standard-layout class: false
     // Size: 0x50
     // Has VTable
-    // Construct disallowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CBodyComponent : public entity2::CEntityComponent
     {

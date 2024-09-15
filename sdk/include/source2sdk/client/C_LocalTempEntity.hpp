@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/client/CBaseAnimatingActivity.hpp"
+#include "source2sdk/client/CBaseAnimGraph.hpp"
 #include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -15,45 +15,42 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x8a8
+    // Size: 0xbe8
     // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
-    class C_LocalTempEntity : public client::CBaseAnimatingActivity
+    class C_LocalTempEntity : public client::CBaseAnimGraph
     {
     public:
-        int32_t flags; // 0x800        
-        entity2::GameTime_t die; // 0x804        
-        float m_flFrameMax; // 0x808        
-        float x; // 0x80c        
-        float y; // 0x810        
-        float fadeSpeed; // 0x814        
-        float bounceFactor; // 0x818        
-        int32_t hitSound; // 0x81c        
-        int32_t priority; // 0x820        
-        Vector tentOffset; // 0x824        
-        QAngle m_vecTempEntAngVelocity; // 0x830        
-        int32_t tempent_renderamt; // 0x83c        
-        Vector m_vecNormal; // 0x840        
-        float m_flSpriteScale; // 0x84c        
-        int32_t m_nFlickerFrame; // 0x850        
-        float m_flFrameRate; // 0x854        
-        float m_flFrame; // 0x858        
-        [[maybe_unused]] std::uint8_t pad_0x85c[0x4]; // 0x85c
-        char* m_pszImpactEffect; // 0x860        
-        char* m_pszParticleEffect; // 0x868        
-        bool m_bParticleCollision; // 0x870        
-        [[maybe_unused]] std::uint8_t pad_0x871[0x3]; // 0x871
-        int32_t m_iLastCollisionFrame; // 0x874        
-        Vector m_vLastCollisionOrigin; // 0x878        
-        Vector m_vecTempEntVelocity; // 0x884        
-        Vector m_vecPrevAbsOrigin; // 0x890        
-        Vector m_vecTempEntAcceleration; // 0x89c        
+        int32_t flags; // 0xb40        
+        entity2::GameTime_t die; // 0xb44        
+        float m_flFrameMax; // 0xb48        
+        float x; // 0xb4c        
+        float y; // 0xb50        
+        float fadeSpeed; // 0xb54        
+        float bounceFactor; // 0xb58        
+        int32_t hitSound; // 0xb5c        
+        int32_t priority; // 0xb60        
+        Vector tentOffset; // 0xb64        
+        QAngle m_vecTempEntAngVelocity; // 0xb70        
+        int32_t tempent_renderamt; // 0xb7c        
+        Vector m_vecNormal; // 0xb80        
+        float m_flSpriteScale; // 0xb8c        
+        int32_t m_nFlickerFrame; // 0xb90        
+        float m_flFrameRate; // 0xb94        
+        float m_flFrame; // 0xb98        
+        [[maybe_unused]] std::uint8_t pad_0xb9c[0x4]; // 0xb9c
+        char* m_pszImpactEffect; // 0xba0        
+        char* m_pszParticleEffect; // 0xba8        
+        bool m_bParticleCollision; // 0xbb0        
+        [[maybe_unused]] std::uint8_t pad_0xbb1[0x3]; // 0xbb1
+        int32_t m_iLastCollisionFrame; // 0xbb4        
+        Vector m_vLastCollisionOrigin; // 0xbb8        
+        Vector m_vecTempEntVelocity; // 0xbc4        
+        Vector m_vecPrevAbsOrigin; // 0xbd0        
+        Vector m_vecTempEntAcceleration; // 0xbdc        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_LocalTempEntity because it is not a standard-layout class
-    static_assert(sizeof(C_LocalTempEntity) == 0x8a8);
+    static_assert(sizeof(C_LocalTempEntity) == 0xbe8);
 };

@@ -14,7 +14,6 @@ namespace source2sdk::particles
     // Alignment: 0x8
     // Standard-layout class: true
     // Size: 0x10
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

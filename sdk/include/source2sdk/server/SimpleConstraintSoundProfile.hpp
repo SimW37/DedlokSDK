@@ -17,7 +17,6 @@ namespace source2sdk::server
     // Size: 0x20
     // Has VTable
     // Has Trivial Destructor
-    // MClassHasEntityLimitedDataDesc
     #pragma pack(push, 1)
     class SimpleConstraintSoundProfile
     {

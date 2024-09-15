@@ -17,7 +17,6 @@ namespace source2sdk::mathlib_extended
     // Alignment: 0x8
     // Standard-layout class: true
     // Size: 0xb0
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

@@ -15,7 +15,6 @@ namespace source2sdk::server
     // Standard-layout class: true
     // Size: 0x208
     // Has VTable
-    // MIgnoreTypeScopeMetaChecks
     // 
     // static metadata: MNetworkVarNames "uint32 m_PredNetBoolVariables"
     // static metadata: MNetworkVarNames "byte m_PredNetByteVariables"

@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 53
+    // Enumerator count: 48
     // Alignment: 4
     // Size: 0x4
     enum class GameAnimEventIndex_t : std::uint32_t
@@ -48,23 +48,18 @@ namespace source2sdk::client
         AE_DISABLE_PLATFORM = 0x20,
         AE_ENABLE_PLATFORM = 0x21,
         AE_ANIMGRAPH_SET_PARAM = 0x22,
-        AE_CL_SUPPRESS_EVENTS_WITH_TAG = 0x23,
-        AE_CL_HIDE_PARTICLE_EFFECT = 0x24,
-        AE_CL_SHOW_PARTICLE_EFFECT = 0x25,
-        AE_CL_ADD_PARTICLE_EFFECT_CP = 0x26,
-        AE_CL_SPEECH = 0x27,
-        AE_CL_PANORAMA_EVENT = 0x28,
-        AE_CL_DOTA_PLAY_STATUS_EFFECT = 0x29,
-        AE_CL_DOTA_STOP_STATUS_EFFECT = 0x2a,
-        AE_CL_DOTA_NPC_CREATE_PARTICLE_EFFECT = 0x2b,
-        AE_CL_DOTA_RUBICK_ARCANA_CREATE_PARTICLE_EFFECT = 0x2c,
-        AE_DOTA_PET_ITEM_PICKUP = 0x2d,
-        AE_DOTA_PET_ITEM_DROP = 0x2e,
-        AE_DOTA_SUPPRESS_CONSTANT_LAYER = 0x2f,
-        AE_DOTA_PLAY_SOUND_ATTACK_SPECIAL = 0x30,
-        AE_DOTA_CREATE_CLINKZ_ATTACK = 0x31,
-        AE_DOTA_PLAY_SOUND_ATTACK_BACKSTAB = 0x32,
-        AE_DOTA_DIE_PHANTOM_DEATH_PARTICLES = 0x33,
-        AE_DOTA_SWITCH_ATTACK_COMBO = 0x34,
+        AE_NPC_LEFTFOOT = 0x23,
+        AE_NPC_RIGHTFOOT = 0x24,
+        AE_NPC_BODYDROP_LIGHT = 0x25,
+        AE_NPC_BODYDROP_HEAVY = 0x26,
+        AE_NPC_SWISHSOUND = 0x27,
+        AE_NPC_WEAPON_DROP = 0x28,
+        AE_NPC_RAGDOLL = 0x29,
+        AE_NPC_ATTACK_BROADCAST = 0x2a,
+        AE_NPC_GIB = 0x2b,
+        AE_HURDLE_RISE_START = 0x2c,
+        AE_HURDLE_DROP_START = 0x2d,
+        AE_RAGDOLL_WINDOW = 0x2e,
+        AE_MELEE_ATTACK = 0x2f,
     };
 };

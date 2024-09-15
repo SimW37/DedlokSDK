@@ -17,7 +17,6 @@ namespace source2sdk::pulse_system
     // Standard-layout class: false
     // Size: 0x88
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MCellForDomain "BaseDomain"

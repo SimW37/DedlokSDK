@@ -16,7 +16,6 @@ namespace source2sdk::pulse_runtime_lib
     // Alignment: 0x8
     // Standard-layout class: true
     // Size: 0x28
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

@@ -25,8 +25,6 @@ namespace source2sdk::entity2
     // Standard-layout class: true
     // Size: 0x38
     // Has VTable
-    // Construct disallowed
-    // MConstructibleClassBase
     // 
     // static metadata: MNetworkVarNames "CEntityIdentity * m_pEntity"
     // static metadata: MNetworkVarNames "CScriptComponent::Storage_t m_CScriptComponent"

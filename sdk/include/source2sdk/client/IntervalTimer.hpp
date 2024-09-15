@@ -17,8 +17,6 @@ namespace source2sdk::client
     // Size: 0x10
     // Has VTable
     // Has Trivial Destructor
-    // MDisableDataDescValidation
-    // MNetworkNoBase
     // 
     // static metadata: MNetworkVarNames "GameTime_t m_timestamp"
     // static metadata: MNetworkVarNames "WorldGroupId_t m_nWorldGroupId"

@@ -18,7 +18,6 @@ namespace source2sdk::animgraphlib
     // Alignment: 0x8
     // Standard-layout class: true
     // Size: 0x108
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

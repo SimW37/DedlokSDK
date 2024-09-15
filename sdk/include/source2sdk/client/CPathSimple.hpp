@@ -14,10 +14,8 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x590
+    // Size: 0x5b8
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MEntityAllowsPortraitWorldSpawn
     // static metadata: MNetworkVarNames "CUtlString m_pathString"
@@ -25,12 +23,12 @@ namespace source2sdk::client
     class CPathSimple : public client::C_BaseEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x538[0x50]; // 0x538
+        [[maybe_unused]] std::uint8_t pad_0x558[0x58]; // 0x558
         // metadata: MNetworkEnable
-        CUtlString m_pathString; // 0x588        
+        CUtlString m_pathString; // 0x5b0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPathSimple because it is not a standard-layout class
-    static_assert(sizeof(CPathSimple) == 0x590);
+    static_assert(sizeof(CPathSimple) == 0x5b8);
 };

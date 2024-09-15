@@ -16,7 +16,6 @@ namespace source2sdk::server
     // Size: 0x64
     // Has Trivial Constructor
     // Has Trivial Destructor
-    // MClassHasEntityLimitedDataDesc
     #pragma pack(push, 1)
     struct dynpitchvol_base_t
     {

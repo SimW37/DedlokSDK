@@ -28,7 +28,6 @@ namespace source2sdk::modellib
     // Standard-layout class: true
     // Size: 0x1c0
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

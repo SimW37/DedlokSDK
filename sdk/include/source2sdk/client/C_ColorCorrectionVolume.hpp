@@ -14,11 +14,8 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa08
+    // Size: 0xa60
     // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "bool m_bEnabled"
     // static metadata: MNetworkVarNames "float m_MaxWeight"
@@ -29,25 +26,25 @@ namespace source2sdk::client
     class C_ColorCorrectionVolume : public client::C_BaseTrigger
     {
     public:
-        float m_LastEnterWeight; // 0x7e0        
-        float m_LastEnterTime; // 0x7e4        
-        float m_LastExitWeight; // 0x7e8        
-        float m_LastExitTime; // 0x7ec        
+        float m_LastEnterWeight; // 0x838        
+        float m_LastEnterTime; // 0x83c        
+        float m_LastExitWeight; // 0x840        
+        float m_LastExitTime; // 0x844        
         // metadata: MNetworkEnable
-        bool m_bEnabled; // 0x7f0        
-        [[maybe_unused]] std::uint8_t pad_0x7f1[0x3]; // 0x7f1
+        bool m_bEnabled; // 0x848        
+        [[maybe_unused]] std::uint8_t pad_0x849[0x3]; // 0x849
         // metadata: MNetworkEnable
-        float m_MaxWeight; // 0x7f4        
+        float m_MaxWeight; // 0x84c        
         // metadata: MNetworkEnable
-        float m_FadeDuration; // 0x7f8        
+        float m_FadeDuration; // 0x850        
         // metadata: MNetworkEnable
-        float m_Weight; // 0x7fc        
+        float m_Weight; // 0x854        
         // metadata: MNetworkEnable
-        char m_lookupFilename[512]; // 0x800        
-        [[maybe_unused]] std::uint8_t pad_0xa00[0x8];
+        char m_lookupFilename[512]; // 0x858        
+        [[maybe_unused]] std::uint8_t pad_0xa58[0x8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_ColorCorrectionVolume because it is not a standard-layout class
-    static_assert(sizeof(C_ColorCorrectionVolume) == 0xa08);
+    static_assert(sizeof(C_ColorCorrectionVolume) == 0xa60);
 };

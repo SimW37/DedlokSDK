@@ -20,7 +20,6 @@ namespace source2sdk::client
     // Standard-layout class: true
     // Size: 0x2e0
     // Has VTable
-    // MDisableDataDescValidation
     // 
     // static metadata: MNetworkVarNames "CHandle< C_BaseEntity> m_hTargetEntity"
     // static metadata: MNetworkVarNames "bool m_bState"

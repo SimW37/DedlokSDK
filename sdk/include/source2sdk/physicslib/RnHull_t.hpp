@@ -24,7 +24,6 @@ namespace source2sdk::physicslib
     // Alignment: 0x8
     // Standard-layout class: true
     // Size: 0xf8
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

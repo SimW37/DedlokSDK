@@ -16,8 +16,6 @@ namespace source2sdk::server
     // Standard-layout class: false
     // Size: 0x6c8
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CSoundOpvarSetAABBEntity : public server::CSoundOpvarSetPointEntity
     {

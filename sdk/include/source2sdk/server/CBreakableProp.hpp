@@ -29,10 +29,8 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x948
+    // Size: 0xb50
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "CPropDataComponent::Storage_t m_CPropDataComponent"
     // static metadata: MNetworkVarNames "bool m_noGhostCollision"
@@ -40,61 +38,61 @@ namespace source2sdk::server
     class CBreakableProp : public server::CBaseProp
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x7d8[0x8]; // 0x7d8
+        [[maybe_unused]] std::uint8_t pad_0x9e0[0x8]; // 0x9e0
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "CPropDataComponent"
         // metadata: MNetworkAlias "CPropDataComponent"
         // metadata: MNetworkTypeAlias "CPropDataComponent"
-        server::CPropDataComponent m_CPropDataComponent; // 0x7e0        
-        entity2::CEntityIOOutput m_OnBreak; // 0x820        
+        server::CPropDataComponent m_CPropDataComponent; // 0x9e8        
+        entity2::CEntityIOOutput m_OnBreak; // 0xa28        
         // m_OnHealthChanged has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEntityOutputTemplate<float> m_OnHealthChanged;
-        char m_OnHealthChanged[0x28]; // 0x848        
-        entity2::CEntityIOOutput m_OnTakeDamage; // 0x870        
-        float m_impactEnergyScale; // 0x898        
-        int32_t m_iMinHealthDmg; // 0x89c        
-        QAngle m_preferredCarryAngles; // 0x8a0        
-        float m_flPressureDelay; // 0x8ac        
-        float m_flDefBurstScale; // 0x8b0        
-        Vector m_vDefBurstOffset; // 0x8b4        
+        char m_OnHealthChanged[0x28]; // 0xa50        
+        entity2::CEntityIOOutput m_OnTakeDamage; // 0xa78        
+        float m_impactEnergyScale; // 0xaa0        
+        int32_t m_iMinHealthDmg; // 0xaa4        
+        QAngle m_preferredCarryAngles; // 0xaa8        
+        float m_flPressureDelay; // 0xab4        
+        float m_flDefBurstScale; // 0xab8        
+        Vector m_vDefBurstOffset; // 0xabc        
         // m_hBreaker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hBreaker;
-        char m_hBreaker[0x4]; // 0x8c0        
-        client::PerformanceMode_t m_PerformanceMode; // 0x8c4        
-        entity2::GameTime_t m_flPreventDamageBeforeTime; // 0x8c8        
-        client::BreakableContentsType_t m_BreakableContentsType; // 0x8cc        
-        CUtlString m_strBreakableContentsPropGroupOverride; // 0x8d0        
-        CUtlString m_strBreakableContentsParticleOverride; // 0x8d8        
-        bool m_bHasBreakPiecesOrCommands; // 0x8e0        
-        [[maybe_unused]] std::uint8_t pad_0x8e1[0x3]; // 0x8e1
-        float m_explodeDamage; // 0x8e4        
-        float m_explodeRadius; // 0x8e8        
-        [[maybe_unused]] std::uint8_t pad_0x8ec[0x4]; // 0x8ec
-        float m_explosionDelay; // 0x8f0        
-        [[maybe_unused]] std::uint8_t pad_0x8f4[0x4]; // 0x8f4
-        CUtlSymbolLarge m_explosionBuildupSound; // 0x8f8        
-        CUtlSymbolLarge m_explosionCustomEffect; // 0x900        
-        CUtlSymbolLarge m_explosionCustomSound; // 0x908        
-        CUtlSymbolLarge m_explosionModifier; // 0x910        
+        char m_hBreaker[0x4]; // 0xac8        
+        client::PerformanceMode_t m_PerformanceMode; // 0xacc        
+        entity2::GameTime_t m_flPreventDamageBeforeTime; // 0xad0        
+        client::BreakableContentsType_t m_BreakableContentsType; // 0xad4        
+        CUtlString m_strBreakableContentsPropGroupOverride; // 0xad8        
+        CUtlString m_strBreakableContentsParticleOverride; // 0xae0        
+        bool m_bHasBreakPiecesOrCommands; // 0xae8        
+        [[maybe_unused]] std::uint8_t pad_0xae9[0x3]; // 0xae9
+        float m_explodeDamage; // 0xaec        
+        float m_explodeRadius; // 0xaf0        
+        [[maybe_unused]] std::uint8_t pad_0xaf4[0x4]; // 0xaf4
+        float m_explosionDelay; // 0xaf8        
+        [[maybe_unused]] std::uint8_t pad_0xafc[0x4]; // 0xafc
+        CUtlSymbolLarge m_explosionBuildupSound; // 0xb00        
+        CUtlSymbolLarge m_explosionCustomEffect; // 0xb08        
+        CUtlSymbolLarge m_explosionCustomSound; // 0xb10        
+        CUtlSymbolLarge m_explosionModifier; // 0xb18        
         // m_hPhysicsAttacker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBasePlayerPawn> m_hPhysicsAttacker;
-        char m_hPhysicsAttacker[0x4]; // 0x918        
-        entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x91c        
-        bool m_bOriginalBlockLOS; // 0x920        
-        [[maybe_unused]] std::uint8_t pad_0x921[0x3]; // 0x921
-        float m_flDefaultFadeScale; // 0x924        
+        char m_hPhysicsAttacker[0x4]; // 0xb20        
+        entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0xb24        
+        bool m_bOriginalBlockLOS; // 0xb28        
+        [[maybe_unused]] std::uint8_t pad_0xb29[0x3]; // 0xb29
+        float m_flDefaultFadeScale; // 0xb2c        
         // m_hLastAttacker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hLastAttacker;
-        char m_hLastAttacker[0x4]; // 0x928        
+        char m_hLastAttacker[0x4]; // 0xb30        
         // m_hFlareEnt has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hFlareEnt;
-        char m_hFlareEnt[0x4]; // 0x92c        
-        bool m_bUsePuntSound; // 0x930        
-        [[maybe_unused]] std::uint8_t pad_0x931[0x7]; // 0x931
-        CUtlSymbolLarge m_iszPuntSound; // 0x938        
+        char m_hFlareEnt[0x4]; // 0xb34        
+        bool m_bUsePuntSound; // 0xb38        
+        [[maybe_unused]] std::uint8_t pad_0xb39[0x7]; // 0xb39
+        CUtlSymbolLarge m_iszPuntSound; // 0xb40        
         // metadata: MNetworkEnable
-        bool m_noGhostCollision; // 0x940        
-        [[maybe_unused]] std::uint8_t pad_0x941[0x7];
+        bool m_noGhostCollision; // 0xb48        
+        [[maybe_unused]] std::uint8_t pad_0xb49[0x7];
         
         // Datamap fields:
         // void InputBreak; // 0x0
@@ -106,10 +104,10 @@ namespace source2sdk::server
         // void InputDisablePuntSound; // 0x0
         // void CBreakablePropBreakThink; // 0x0
         // void CBreakablePropRampToDefaultFadeScale; // 0x0
-        // uint32_t m_nExplosionType; // 0x8ec
+        // uint32_t m_nExplosionType; // 0xaf4
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBreakableProp because it is not a standard-layout class
-    static_assert(sizeof(CBreakableProp) == 0x948);
+    static_assert(sizeof(CBreakableProp) == 0xb50);
 };

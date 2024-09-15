@@ -18,7 +18,6 @@ namespace source2sdk::materialsystem2
     // Alignment: 0x8
     // Standard-layout class: true
     // Size: 0x118
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

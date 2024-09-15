@@ -14,10 +14,8 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xaf0
+    // Size: 0xcf8
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CPhysicsPropOverride : public server::CPhysicsProp
     {
@@ -26,5 +24,5 @@ namespace source2sdk::server
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CPhysicsPropOverride) == 0xaf0);
+    static_assert(sizeof(CPhysicsPropOverride) == 0xcf8);
 };

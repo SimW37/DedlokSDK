@@ -17,7 +17,6 @@ namespace source2sdk::server
     // Standard-layout class: true
     // Size: 0x88
     // Has VTable
-    // MClassHasEntityLimitedDataDesc
     #pragma pack(push, 1)
     class ConstraintSoundInfo
     {

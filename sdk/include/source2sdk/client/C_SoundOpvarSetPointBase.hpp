@@ -14,10 +14,8 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x558
+    // Size: 0x578
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "string_t m_iszStackName"
     // static metadata: MNetworkVarNames "string_t m_iszOperatorName"
@@ -29,19 +27,19 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_iszStackName; // 0x538        
+        CUtlSymbolLarge m_iszStackName; // 0x558        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_iszOperatorName; // 0x540        
+        CUtlSymbolLarge m_iszOperatorName; // 0x560        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_iszOpvarName; // 0x548        
+        CUtlSymbolLarge m_iszOpvarName; // 0x568        
         // metadata: MNetworkEnable
-        int32_t m_iOpvarIndex; // 0x550        
+        int32_t m_iOpvarIndex; // 0x570        
         // metadata: MNetworkEnable
-        bool m_bUseAutoCompare; // 0x554        
-        [[maybe_unused]] std::uint8_t pad_0x555[0x3];
+        bool m_bUseAutoCompare; // 0x574        
+        [[maybe_unused]] std::uint8_t pad_0x575[0x3];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_SoundOpvarSetPointBase because it is not a standard-layout class
-    static_assert(sizeof(C_SoundOpvarSetPointBase) == 0x558);
+    static_assert(sizeof(C_SoundOpvarSetPointBase) == 0x578);
 };

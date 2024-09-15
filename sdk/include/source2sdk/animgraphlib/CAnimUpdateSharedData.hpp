@@ -24,7 +24,6 @@ namespace source2sdk::animgraphlib
     // Standard-layout class: true
     // Size: 0x100
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

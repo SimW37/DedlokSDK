@@ -15,7 +15,6 @@ namespace source2sdk::soundsystem_voicecontainers
     // Alignment: 0x8
     // Standard-layout class: true
     // Size: 0x60
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

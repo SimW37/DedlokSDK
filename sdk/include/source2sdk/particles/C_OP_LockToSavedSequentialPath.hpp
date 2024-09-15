@@ -17,7 +17,6 @@ namespace source2sdk::particles
     // Standard-layout class: false
     // Size: 0x210
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MParticleMaxVersion "7"
     // static metadata: MParticleReplacementOp "C_OP_LockToSavedSequentialPathV2"

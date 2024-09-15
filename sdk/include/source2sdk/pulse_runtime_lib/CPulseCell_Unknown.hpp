@@ -16,7 +16,6 @@ namespace source2sdk::pulse_runtime_lib
     // Standard-layout class: false
     // Size: 0x58
     // Has VTable
-    // Construct allowed
     #pragma pack(push, 1)
     class CPulseCell_Unknown : public pulse_runtime_lib::CPulseCell_Base
     {

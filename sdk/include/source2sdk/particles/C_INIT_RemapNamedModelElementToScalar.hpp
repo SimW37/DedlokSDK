@@ -20,7 +20,6 @@ namespace source2sdk::particles
     // Size: 0x210
     // Has VTable
     // Is Abstract
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

@@ -17,7 +17,6 @@ namespace source2sdk::pulse_runtime_lib
     // Size: 0x48
     // Has VTable
     // Is Abstract
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

@@ -19,7 +19,6 @@ namespace source2sdk::particles
     // Standard-layout class: false
     // Size: 0xa08
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

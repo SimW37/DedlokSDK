@@ -16,7 +16,6 @@ namespace source2sdk::animgraphlib
     // Standard-layout class: false
     // Size: 0x28
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyFriendlyName "Networking"

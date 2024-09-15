@@ -16,7 +16,6 @@ namespace source2sdk::pulse_runtime_lib
     // Size: 0x8
     // Has Trivial Constructor
     // Has Trivial Destructor
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

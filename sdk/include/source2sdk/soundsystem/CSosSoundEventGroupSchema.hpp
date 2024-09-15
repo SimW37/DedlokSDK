@@ -22,7 +22,6 @@ namespace source2sdk::soundsystem
     // Alignment: 0x8
     // Standard-layout class: false
     // Size: 0xe0
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyElementNameFn

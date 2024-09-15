@@ -16,7 +16,6 @@ namespace source2sdk::animlib
     // Standard-layout class: false
     // Size: 0xc0
     // Has VTable
-    // Construct allowed
     #pragma pack(push, 1)
     class CNmBlendTask : public animlib::CNmBlendTaskBase
     {

@@ -14,10 +14,8 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x7e0
+    // Size: 0x7c0
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CRopeKeyframeAlias_move_rope : public server::CRopeKeyframe
     {
@@ -26,5 +24,5 @@ namespace source2sdk::server
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CRopeKeyframeAlias_move_rope) == 0x7e0);
+    static_assert(sizeof(CRopeKeyframeAlias_move_rope) == 0x7c0);
 };

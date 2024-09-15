@@ -15,10 +15,8 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x620
+    // Size: 0x640
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MEntityAllowsPortraitWorldSpawn
     // static metadata: MNetworkVarNames "HRenderTextureStrong m_Entity_hCubemapTexture"
@@ -43,55 +41,55 @@ namespace source2sdk::client
     class C_EnvCubemap : public client::C_BaseEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x538[0x80]; // 0x538
+        [[maybe_unused]] std::uint8_t pad_0x558[0x80]; // 0x558
         // metadata: MNetworkEnable
         // m_Entity_hCubemapTexture has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase> m_Entity_hCubemapTexture;
-        char m_Entity_hCubemapTexture[0x8]; // 0x5b8        
+        char m_Entity_hCubemapTexture[0x8]; // 0x5d8        
         // metadata: MNetworkEnable
-        bool m_Entity_bCustomCubemapTexture; // 0x5c0        
-        [[maybe_unused]] std::uint8_t pad_0x5c1[0x3]; // 0x5c1
-        // metadata: MNetworkEnable
-        float m_Entity_flInfluenceRadius; // 0x5c4        
-        // metadata: MNetworkEnable
-        Vector m_Entity_vBoxProjectMins; // 0x5c8        
-        // metadata: MNetworkEnable
-        Vector m_Entity_vBoxProjectMaxs; // 0x5d4        
-        // metadata: MNetworkEnable
-        bool m_Entity_bMoveable; // 0x5e0        
+        bool m_Entity_bCustomCubemapTexture; // 0x5e0        
         [[maybe_unused]] std::uint8_t pad_0x5e1[0x3]; // 0x5e1
         // metadata: MNetworkEnable
-        int32_t m_Entity_nHandshake; // 0x5e4        
+        float m_Entity_flInfluenceRadius; // 0x5e4        
         // metadata: MNetworkEnable
-        int32_t m_Entity_nEnvCubeMapArrayIndex; // 0x5e8        
+        Vector m_Entity_vBoxProjectMins; // 0x5e8        
         // metadata: MNetworkEnable
-        int32_t m_Entity_nPriority; // 0x5ec        
+        Vector m_Entity_vBoxProjectMaxs; // 0x5f4        
         // metadata: MNetworkEnable
-        float m_Entity_flEdgeFadeDist; // 0x5f0        
+        bool m_Entity_bMoveable; // 0x600        
+        [[maybe_unused]] std::uint8_t pad_0x601[0x3]; // 0x601
         // metadata: MNetworkEnable
-        Vector m_Entity_vEdgeFadeDists; // 0x5f4        
+        int32_t m_Entity_nHandshake; // 0x604        
         // metadata: MNetworkEnable
-        float m_Entity_flDiffuseScale; // 0x600        
+        int32_t m_Entity_nEnvCubeMapArrayIndex; // 0x608        
         // metadata: MNetworkEnable
-        bool m_Entity_bStartDisabled; // 0x604        
+        int32_t m_Entity_nPriority; // 0x60c        
         // metadata: MNetworkEnable
-        bool m_Entity_bDefaultEnvMap; // 0x605        
+        float m_Entity_flEdgeFadeDist; // 0x610        
         // metadata: MNetworkEnable
-        bool m_Entity_bDefaultSpecEnvMap; // 0x606        
+        Vector m_Entity_vEdgeFadeDists; // 0x614        
         // metadata: MNetworkEnable
-        bool m_Entity_bIndoorCubeMap; // 0x607        
+        float m_Entity_flDiffuseScale; // 0x620        
         // metadata: MNetworkEnable
-        bool m_Entity_bCopyDiffuseFromDefaultCubemap; // 0x608        
-        [[maybe_unused]] std::uint8_t pad_0x609[0xf]; // 0x609
+        bool m_Entity_bStartDisabled; // 0x624        
         // metadata: MNetworkEnable
-        bool m_Entity_bEnabled; // 0x618        
-        [[maybe_unused]] std::uint8_t pad_0x619[0x7];
+        bool m_Entity_bDefaultEnvMap; // 0x625        
+        // metadata: MNetworkEnable
+        bool m_Entity_bDefaultSpecEnvMap; // 0x626        
+        // metadata: MNetworkEnable
+        bool m_Entity_bIndoorCubeMap; // 0x627        
+        // metadata: MNetworkEnable
+        bool m_Entity_bCopyDiffuseFromDefaultCubemap; // 0x628        
+        [[maybe_unused]] std::uint8_t pad_0x629[0xf]; // 0x629
+        // metadata: MNetworkEnable
+        bool m_Entity_bEnabled; // 0x638        
+        [[maybe_unused]] std::uint8_t pad_0x639[0x7];
         
         // Datamap fields:
-        // void m_Entity_pSceneObject; // 0x610
+        // void m_Entity_pSceneObject; // 0x630
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_EnvCubemap because it is not a standard-layout class
-    static_assert(sizeof(C_EnvCubemap) == 0x620);
+    static_assert(sizeof(C_EnvCubemap) == 0x640);
 };

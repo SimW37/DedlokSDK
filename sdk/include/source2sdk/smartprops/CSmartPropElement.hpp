@@ -25,7 +25,6 @@ namespace source2sdk::smartprops
     // Standard-layout class: true
     // Size: 0x80
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MVDataBase

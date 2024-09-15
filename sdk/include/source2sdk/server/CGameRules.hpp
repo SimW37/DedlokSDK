@@ -17,7 +17,6 @@ namespace source2sdk::server
     // Size: 0xc0
     // Has VTable
     // Is Abstract
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "int m_nTotalPausedTicks"
     // static metadata: MNetworkVarNames "int m_nPauseStartTick"

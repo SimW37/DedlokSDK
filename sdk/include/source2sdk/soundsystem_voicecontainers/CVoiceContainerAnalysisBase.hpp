@@ -15,7 +15,6 @@ namespace source2sdk::soundsystem_voicecontainers
     // Standard-layout class: true
     // Size: 0x50
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MVDataNodeType "1"

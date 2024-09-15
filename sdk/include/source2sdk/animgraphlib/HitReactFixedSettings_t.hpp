@@ -16,7 +16,6 @@ namespace source2sdk::animgraphlib
     // Size: 0x44
     // Has Trivial Constructor
     // Has Trivial Destructor
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

@@ -20,7 +20,6 @@ namespace source2sdk::client
     // Standard-layout class: true
     // Size: 0x48
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MNetworkVarNames "CTransform m_Transforms"
     // static metadata: MNetworkVarNames "EHANDLE m_hOwner"

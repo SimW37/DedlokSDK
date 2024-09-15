@@ -16,7 +16,6 @@ namespace source2sdk::worldrenderer
     // Alignment: 0x8
     // Standard-layout class: false
     // Size: 0x18
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

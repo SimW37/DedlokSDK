@@ -15,11 +15,8 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xaf0
+    // Size: 0xe20
     // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkExcludeByName "m_flAnimTime"
     // static metadata: MNetworkExcludeByName "m_flexWeight"
@@ -37,25 +34,25 @@ namespace source2sdk::client
     class C_BasePropDoor : public client::C_DynamicProp
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xab0[0x10]; // 0xab0
+        [[maybe_unused]] std::uint8_t pad_0xde0[0x10]; // 0xde0
         // metadata: MNetworkEnable
-        client::DoorState_t m_eDoorState; // 0xac0        
-        bool m_modelChanged; // 0xac4        
+        client::DoorState_t m_eDoorState; // 0xdf0        
+        bool m_modelChanged; // 0xdf4        
         // metadata: MNetworkEnable
-        bool m_bLocked; // 0xac5        
-        [[maybe_unused]] std::uint8_t pad_0xac6[0x2]; // 0xac6
+        bool m_bLocked; // 0xdf5        
+        [[maybe_unused]] std::uint8_t pad_0xdf6[0x2]; // 0xdf6
         // metadata: MNetworkEnable
-        Vector m_closedPosition; // 0xac8        
+        Vector m_closedPosition; // 0xdf8        
         // metadata: MNetworkEnable
-        QAngle m_closedAngles; // 0xad4        
+        QAngle m_closedAngles; // 0xe04        
         // metadata: MNetworkEnable
         // m_hMaster has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BasePropDoor> m_hMaster;
-        char m_hMaster[0x4]; // 0xae0        
-        Vector m_vWhereToSetLightingOrigin; // 0xae4        
+        char m_hMaster[0x4]; // 0xe10        
+        Vector m_vWhereToSetLightingOrigin; // 0xe14        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_BasePropDoor because it is not a standard-layout class
-    static_assert(sizeof(C_BasePropDoor) == 0xaf0);
+    static_assert(sizeof(C_BasePropDoor) == 0xe20);
 };

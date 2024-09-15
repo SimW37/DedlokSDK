@@ -14,7 +14,6 @@ namespace source2sdk::modellib
     // Alignment: 0x8
     // Standard-layout class: true
     // Size: 0x38
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

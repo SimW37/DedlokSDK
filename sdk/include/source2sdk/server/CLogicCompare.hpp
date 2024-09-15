@@ -14,28 +14,26 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x560
+    // Size: 0x580
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CLogicCompare : public server::CLogicalEntity
     {
     public:
-        float m_flInValue; // 0x4b8        
-        float m_flCompareValue; // 0x4bc        
+        float m_flInValue; // 0x4d8        
+        float m_flCompareValue; // 0x4dc        
         // m_OnLessThan has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEntityOutputTemplate<float> m_OnLessThan;
-        char m_OnLessThan[0x28]; // 0x4c0        
+        char m_OnLessThan[0x28]; // 0x4e0        
         // m_OnEqualTo has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEntityOutputTemplate<float> m_OnEqualTo;
-        char m_OnEqualTo[0x28]; // 0x4e8        
+        char m_OnEqualTo[0x28]; // 0x508        
         // m_OnNotEqualTo has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEntityOutputTemplate<float> m_OnNotEqualTo;
-        char m_OnNotEqualTo[0x28]; // 0x510        
+        char m_OnNotEqualTo[0x28]; // 0x530        
         // m_OnGreaterThan has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEntityOutputTemplate<float> m_OnGreaterThan;
-        char m_OnGreaterThan[0x28]; // 0x538        
+        char m_OnGreaterThan[0x28]; // 0x558        
         
         // Datamap fields:
         // float InputSetValue; // 0x0
@@ -46,5 +44,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CLogicCompare because it is not a standard-layout class
-    static_assert(sizeof(CLogicCompare) == 0x560);
+    static_assert(sizeof(CLogicCompare) == 0x580);
 };

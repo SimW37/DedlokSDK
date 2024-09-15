@@ -18,8 +18,6 @@ namespace source2sdk::server
     // Standard-layout class: false
     // Size: 0x1b0
     // Has VTable
-    // Construct disallowed
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "CGameSceneNode m_sceneNode"
     #pragma pack(push, 1)

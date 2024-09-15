@@ -18,8 +18,6 @@ namespace source2sdk::server
     // Standard-layout class: false
     // Size: 0xb8
     // Has VTable
-    // MClassHasEntityLimitedDataDesc
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CRenderComponent : public entity2::CEntityComponent
     {

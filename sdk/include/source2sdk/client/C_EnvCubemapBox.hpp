@@ -14,10 +14,8 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x620
+    // Size: 0x640
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class C_EnvCubemapBox : public client::C_EnvCubemap
     {
@@ -26,5 +24,5 @@ namespace source2sdk::client
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(C_EnvCubemapBox) == 0x620);
+    static_assert(sizeof(C_EnvCubemapBox) == 0x640);
 };

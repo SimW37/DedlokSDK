@@ -14,10 +14,8 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x558
+    // Size: 0x578
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CEnvSoundscapeProxyAlias_snd_soundscape_proxy : public server::CEnvSoundscapeProxy
     {
@@ -26,5 +24,5 @@ namespace source2sdk::server
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CEnvSoundscapeProxyAlias_snd_soundscape_proxy) == 0x558);
+    static_assert(sizeof(CEnvSoundscapeProxyAlias_snd_soundscape_proxy) == 0x578);
 };

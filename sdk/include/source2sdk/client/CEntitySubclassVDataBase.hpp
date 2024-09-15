@@ -15,7 +15,6 @@ namespace source2sdk::client
     // Standard-layout class: true
     // Size: 0x28
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MVDataRoot

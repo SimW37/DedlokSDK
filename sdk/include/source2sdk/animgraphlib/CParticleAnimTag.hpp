@@ -18,7 +18,6 @@ namespace source2sdk::animgraphlib
     // Standard-layout class: false
     // Size: 0x98
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyFriendlyName "Particle Tag"

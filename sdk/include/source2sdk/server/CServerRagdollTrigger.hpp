@@ -14,10 +14,8 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x958
+    // Size: 0x938
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CServerRagdollTrigger : public server::CBaseTrigger
     {
@@ -26,5 +24,5 @@ namespace source2sdk::server
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CServerRagdollTrigger) == 0x958);
+    static_assert(sizeof(CServerRagdollTrigger) == 0x938);
 };

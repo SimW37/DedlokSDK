@@ -16,7 +16,6 @@ namespace source2sdk::animgraphlib
     // Standard-layout class: false
     // Size: 0x70
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyFriendlyName "Cloth Settings Tag"

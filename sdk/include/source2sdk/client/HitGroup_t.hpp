@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 14
+    // Enumerator count: 21
     // Alignment: 4
     // Size: 0x4
     enum class HitGroup_t : std::uint32_t
@@ -26,6 +26,13 @@ namespace source2sdk::client
         HITGROUP_UNUSED = 0x9,
         HITGROUP_GEAR = 0xa,
         HITGROUP_SPECIAL = 0xb,
-        HITGROUP_COUNT = 0xc,
+        HITGROUP_T2_BOSS_FRONT_LEFT_LEG_WEAKPOINT = 0xc,
+        HITGROUP_T2_BOSS_FRONT_RIGHT_LEG_WEAKPOINT = 0xd,
+        HITGROUP_T2_BOSS_REAR_LEFT_LEG_WEAKPOINT = 0xe,
+        HITGROUP_T2_BOSS_REAR_RIGHT_LEG_WEAKPOINT = 0xf,
+        HITGROUP_T2_BOSS_HEAD_WEAKPOINT = 0x10,
+        HITGROUP_T2_BOSS_BACK_WEAKPOINT = 0x11,
+        HITGROUP_DRONE_BOSS_DRONE_WEAKPOINT = 0x12,
+        HITGROUP_COUNT = 0x13,
     };
 };

@@ -21,10 +21,8 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa18
+    // Size: 0x9f8
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "bool m_bTestOcclusion"
     #pragma pack(push, 1)
@@ -33,22 +31,22 @@ namespace source2sdk::server
     public:
         // m_hLookTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hLookTarget;
-        char m_hLookTarget[0x4]; // 0x980        
-        float m_flFieldOfView; // 0x984        
-        float m_flLookTime; // 0x988        
-        float m_flLookTimeTotal; // 0x98c        
-        entity2::GameTime_t m_flLookTimeLast; // 0x990        
-        float m_flTimeoutDuration; // 0x994        
-        bool m_bTimeoutFired; // 0x998        
-        bool m_bIsLooking; // 0x999        
-        bool m_b2DFOV; // 0x99a        
-        bool m_bUseVelocity; // 0x99b        
+        char m_hLookTarget[0x4]; // 0x960        
+        float m_flFieldOfView; // 0x964        
+        float m_flLookTime; // 0x968        
+        float m_flLookTimeTotal; // 0x96c        
+        entity2::GameTime_t m_flLookTimeLast; // 0x970        
+        float m_flTimeoutDuration; // 0x974        
+        bool m_bTimeoutFired; // 0x978        
+        bool m_bIsLooking; // 0x979        
+        bool m_b2DFOV; // 0x97a        
+        bool m_bUseVelocity; // 0x97b        
         // metadata: MNetworkEnable
-        bool m_bTestOcclusion; // 0x99c        
-        [[maybe_unused]] std::uint8_t pad_0x99d[0x3]; // 0x99d
-        entity2::CEntityIOOutput m_OnTimeout; // 0x9a0        
-        entity2::CEntityIOOutput m_OnStartLook; // 0x9c8        
-        entity2::CEntityIOOutput m_OnEndLook; // 0x9f0        
+        bool m_bTestOcclusion; // 0x97c        
+        [[maybe_unused]] std::uint8_t pad_0x97d[0x3]; // 0x97d
+        entity2::CEntityIOOutput m_OnTimeout; // 0x980        
+        entity2::CEntityIOOutput m_OnStartLook; // 0x9a8        
+        entity2::CEntityIOOutput m_OnEndLook; // 0x9d0        
         
         // Datamap fields:
         // void CTriggerLookTimeoutThink; // 0x0
@@ -56,5 +54,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTriggerLook because it is not a standard-layout class
-    static_assert(sizeof(CTriggerLook) == 0xa18);
+    static_assert(sizeof(CTriggerLook) == 0x9f8);
 };

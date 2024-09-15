@@ -17,7 +17,6 @@ namespace source2sdk::animgraphlib
     // Size: 0x10
     // Has VTable
     // Has Trivial Destructor
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyFriendlyName "Damping"

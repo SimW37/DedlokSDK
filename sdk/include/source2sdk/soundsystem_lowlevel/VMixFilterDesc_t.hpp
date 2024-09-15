@@ -17,7 +17,6 @@ namespace source2sdk::soundsystem_lowlevel
     // Standard-layout class: true
     // Size: 0x10
     // Has Trivial Destructor
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

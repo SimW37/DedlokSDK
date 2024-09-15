@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 18
+    // Enumerator count: 40
     // Alignment: 8
     // Size: 0x8
     enum class InputBitMask_t : std::uint64_t
@@ -33,6 +33,28 @@ namespace source2sdk::client
         IN_JOYAUTOSPRINT = 0x20000,
         // MEnumeratorIsNotAFlag
         IN_FIRST_MOD_SPECIFIC_BIT = 0x100000000,
-        IN_QUERY = 0x100000000,
+        IN_WEAPON1 = 0x100000000,
+        IN_ABILITY1 = 0x200000000,
+        IN_ABILITY2 = 0x400000000,
+        IN_ABILITY3 = 0x800000000,
+        IN_ABILITY4 = 0x1000000000,
+        IN_ITEM1 = 0x2000000000,
+        IN_ITEM2 = 0x4000000000,
+        IN_ITEM3 = 0x8000000000,
+        IN_ITEM4 = 0x10000000000,
+        IN_ITEM5 = 0x20000000000,
+        IN_ABILITY_HELD = 0x40000000000,
+        IN_INNATE_1 = 0x100000000000,
+        IN_INNATE_2 = 0x200000000000,
+        IN_INNATE_3 = 0x400000000000,
+        IN_MANTLE = 0x1000000000000,
+        IN_SPEC_NEXT = 0x2000000000000,
+        IN_SPEC_PREV = 0x4000000000000,
+        IN_SPEC_MODE = 0x8000000000000,
+        IN_SPEC_TOGGLE_TEAM = 0x10000000000000,
+        IN_ALT_CAST = 0x20000000000000,
+        IN_REPLAY_DEATH = 0x40000000000000,
+        IN_TELEPORT = 0x80000000000000,
+        IN_CANCEL_ABILITY = 0x100000000000000,
     };
 };

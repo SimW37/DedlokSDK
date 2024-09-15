@@ -17,10 +17,9 @@ namespace source2sdk::pulse_runtime_lib
     // Standard-layout class: false
     // Size: 0xa8
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
-    // static metadata: MCellForDomain "BaseDomain"
+    // static metadata: MCellForDomain "TestDomain"
     // static metadata: MPulseCellMethodBindings
     // static metadata: MPulseCellOutflowHookInfo
     // static metadata: MPropertyFriendlyName "[Test] Random Yes/No Outflow"

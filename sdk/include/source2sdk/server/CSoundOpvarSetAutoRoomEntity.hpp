@@ -18,8 +18,6 @@ namespace source2sdk::server
     // Standard-layout class: false
     // Size: 0x6a0
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CSoundOpvarSetAutoRoomEntity : public server::CSoundOpvarSetPointEntity
     {

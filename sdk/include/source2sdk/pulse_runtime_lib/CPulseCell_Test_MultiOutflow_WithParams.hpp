@@ -17,7 +17,6 @@ namespace source2sdk::pulse_runtime_lib
     // Standard-layout class: false
     // Size: 0xa8
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MCellForDomain "TestDomain"
@@ -28,7 +27,9 @@ namespace source2sdk::pulse_runtime_lib
     {
     public:
         // metadata: MPulseCellOutflow_IsDefault
+        // metadata: MPulseSignatureName
         pulse_runtime_lib::SignatureOutflow_Continue m_Out1; // 0x48        
+        // metadata: MPulseSignatureName
         pulse_runtime_lib::SignatureOutflow_Continue m_Out2; // 0x78        
     };
     #pragma pack(pop)

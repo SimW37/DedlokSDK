@@ -16,8 +16,6 @@ namespace source2sdk::server
     // Size: 0x18
     // Has VTable
     // Has Trivial Destructor
-    // MNetworkNoBase
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "float32 m_duration"
     // static metadata: MNetworkVarNames "float32 m_timestamp"

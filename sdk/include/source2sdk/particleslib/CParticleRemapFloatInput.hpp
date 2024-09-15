@@ -16,7 +16,6 @@ namespace source2sdk::particleslib
     // Standard-layout class: false
     // Size: 0x160
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyCustomEditor "RemapFloatInput()"

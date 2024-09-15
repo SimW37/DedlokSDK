@@ -14,10 +14,8 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x550
+    // Size: 0x570
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CEnvSoundscapeTriggerable : public server::CEnvSoundscape
     {
@@ -26,5 +24,5 @@ namespace source2sdk::server
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CEnvSoundscapeTriggerable) == 0x550);
+    static_assert(sizeof(CEnvSoundscapeTriggerable) == 0x570);
 };

@@ -34,7 +34,6 @@ namespace source2sdk::smartprops
     // Alignment: 0x8
     // Standard-layout class: true
     // Size: 0xc8
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MSmartPropClassVersion

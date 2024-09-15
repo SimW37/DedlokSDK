@@ -14,10 +14,8 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x568
+    // Size: 0x588
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "float m_flVisibilityStrength"
     // static metadata: MNetworkVarNames "float m_flFogDistanceMultiplier"
@@ -31,21 +29,21 @@ namespace source2sdk::client
     public:
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "PlayerVisibilityStateChanged"
-        float m_flVisibilityStrength; // 0x538        
+        float m_flVisibilityStrength; // 0x558        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "PlayerVisibilityStateChanged"
-        float m_flFogDistanceMultiplier; // 0x53c        
+        float m_flFogDistanceMultiplier; // 0x55c        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "PlayerVisibilityStateChanged"
-        float m_flFogMaxDensityMultiplier; // 0x540        
+        float m_flFogMaxDensityMultiplier; // 0x560        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "PlayerVisibilityStateChanged"
-        float m_flFadeTime; // 0x544        
+        float m_flFadeTime; // 0x564        
         // metadata: MNetworkEnable
-        bool m_bStartDisabled; // 0x548        
+        bool m_bStartDisabled; // 0x568        
         // metadata: MNetworkEnable
-        bool m_bIsEnabled; // 0x549        
-        [[maybe_unused]] std::uint8_t pad_0x54a[0x1e];
+        bool m_bIsEnabled; // 0x569        
+        [[maybe_unused]] std::uint8_t pad_0x56a[0x1e];
         
         // Datamap fields:
         // bool InputEnable; // 0x0
@@ -57,5 +55,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_PlayerVisibility because it is not a standard-layout class
-    static_assert(sizeof(C_PlayerVisibility) == 0x568);
+    static_assert(sizeof(C_PlayerVisibility) == 0x588);
 };

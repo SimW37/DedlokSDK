@@ -16,7 +16,6 @@ namespace source2sdk::soundsystem
     // Standard-layout class: false
     // Size: 0x48
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)

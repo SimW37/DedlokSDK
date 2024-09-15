@@ -19,7 +19,6 @@ namespace source2sdk::pulse_runtime_lib
     // Standard-layout class: false
     // Size: 0xa0
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MCellForDomain "BaseDomain"

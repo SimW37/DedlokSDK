@@ -16,7 +16,6 @@ namespace source2sdk::soundsystem
     // Standard-layout class: true
     // Size: 0x18
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyElementNameFn

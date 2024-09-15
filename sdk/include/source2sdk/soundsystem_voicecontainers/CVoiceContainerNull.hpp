@@ -14,9 +14,8 @@ namespace source2sdk::soundsystem_voicecontainers
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb8
+    // Size: 0xc0
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyFriendlyName "Null Container"
@@ -28,5 +27,5 @@ namespace source2sdk::soundsystem_voicecontainers
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CVoiceContainerNull) == 0xb8);
+    static_assert(sizeof(CVoiceContainerNull) == 0xc0);
 };

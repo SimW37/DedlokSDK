@@ -15,30 +15,28 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x558
+    // Size: 0x578
     // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
     class CTimerEntity : public server::CLogicalEntity
     {
     public:
-        entity2::CEntityIOOutput m_OnTimer; // 0x4b8        
-        entity2::CEntityIOOutput m_OnTimerHigh; // 0x4e0        
-        entity2::CEntityIOOutput m_OnTimerLow; // 0x508        
-        int32_t m_iDisabled; // 0x530        
-        float m_flInitialDelay; // 0x534        
-        float m_flRefireTime; // 0x538        
-        bool m_bUpDownState; // 0x53c        
-        [[maybe_unused]] std::uint8_t pad_0x53d[0x3]; // 0x53d
-        int32_t m_iUseRandomTime; // 0x540        
-        bool m_bPauseAfterFiring; // 0x544        
-        [[maybe_unused]] std::uint8_t pad_0x545[0x3]; // 0x545
-        float m_flLowerRandomBound; // 0x548        
-        float m_flUpperRandomBound; // 0x54c        
-        float m_flRemainingTime; // 0x550        
-        bool m_bPaused; // 0x554        
-        [[maybe_unused]] std::uint8_t pad_0x555[0x3];
+        entity2::CEntityIOOutput m_OnTimer; // 0x4d8        
+        entity2::CEntityIOOutput m_OnTimerHigh; // 0x500        
+        entity2::CEntityIOOutput m_OnTimerLow; // 0x528        
+        int32_t m_iDisabled; // 0x550        
+        float m_flInitialDelay; // 0x554        
+        float m_flRefireTime; // 0x558        
+        bool m_bUpDownState; // 0x55c        
+        [[maybe_unused]] std::uint8_t pad_0x55d[0x3]; // 0x55d
+        int32_t m_iUseRandomTime; // 0x560        
+        bool m_bPauseAfterFiring; // 0x564        
+        [[maybe_unused]] std::uint8_t pad_0x565[0x3]; // 0x565
+        float m_flLowerRandomBound; // 0x568        
+        float m_flUpperRandomBound; // 0x56c        
+        float m_flRemainingTime; // 0x570        
+        bool m_bPaused; // 0x574        
+        [[maybe_unused]] std::uint8_t pad_0x575[0x3];
         
         // Datamap fields:
         // float InputRefireTime; // 0x0
@@ -55,5 +53,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTimerEntity because it is not a standard-layout class
-    static_assert(sizeof(CTimerEntity) == 0x558);
+    static_assert(sizeof(CTimerEntity) == 0x578);
 };

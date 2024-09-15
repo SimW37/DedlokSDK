@@ -16,7 +16,6 @@ namespace source2sdk::particles
     // Standard-layout class: false
     // Size: 0x210
     // Has VTable
-    // Construct allowed
     // 
     // static metadata: MObsoleteParticleFunction
     // static metadata: MGetKV3ClassDefaults

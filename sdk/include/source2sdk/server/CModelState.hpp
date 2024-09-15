@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x230
+    // Size: 0x260
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "HModelStrong m_hModel"
@@ -25,43 +25,43 @@ namespace source2sdk::server
     class CModelState
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x00[0xa0]; // 0x0
+        [[maybe_unused]] std::uint8_t pad_0x00[0xd0]; // 0x0
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "skeletonModelChanged"
         // m_hModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeCModel> m_hModel;
-        char m_hModel[0x8]; // 0xa0        
+        char m_hModel[0x8]; // 0xd0        
         // metadata: MNetworkDisable
-        CUtlSymbolLarge m_ModelName; // 0xa8        
-        [[maybe_unused]] std::uint8_t pad_0xb0[0x38]; // 0xb0
+        CUtlSymbolLarge m_ModelName; // 0xd8        
+        [[maybe_unused]] std::uint8_t pad_0xe0[0x38]; // 0xe0
         // metadata: MNetworkEnable
-        bool m_bClientClothCreationSuppressed; // 0xe8        
-        [[maybe_unused]] std::uint8_t pad_0xe9[0xaf]; // 0xe9
+        bool m_bClientClothCreationSuppressed; // 0x118        
+        [[maybe_unused]] std::uint8_t pad_0x119[0xb7]; // 0x119
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "skeletonMeshGroupMaskChanged"
-        uint64_t m_MeshGroupMask; // 0x198        
-        [[maybe_unused]] std::uint8_t pad_0x1a0[0x7a]; // 0x1a0
+        uint64_t m_MeshGroupMask; // 0x1d0        
+        [[maybe_unused]] std::uint8_t pad_0x1d8[0x7a]; // 0x1d8
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "skeletonMotionTypeChanged"
-        int8_t m_nIdealMotionType; // 0x21a        
+        int8_t m_nIdealMotionType; // 0x252        
         // metadata: MNetworkDisable
-        int8_t m_nForceLOD; // 0x21b        
+        int8_t m_nForceLOD; // 0x253        
         // metadata: MNetworkDisable
-        int8_t m_nClothUpdateFlags; // 0x21c        
-        [[maybe_unused]] std::uint8_t pad_0x21d[0x13];
+        int8_t m_nClothUpdateFlags; // 0x254        
+        [[maybe_unused]] std::uint8_t pad_0x255[0xb];
         
         // Datamap fields:
-        // void m_pVPhysicsAggregate; // 0xe0
+        // void m_pVPhysicsAggregate; // 0x110
     };
     #pragma pack(pop)
     
-    static_assert(offsetof(CModelState, m_hModel) == 0xa0);
-    static_assert(offsetof(CModelState, m_ModelName) == 0xa8);
-    static_assert(offsetof(CModelState, m_bClientClothCreationSuppressed) == 0xe8);
-    static_assert(offsetof(CModelState, m_MeshGroupMask) == 0x198);
-    static_assert(offsetof(CModelState, m_nIdealMotionType) == 0x21a);
-    static_assert(offsetof(CModelState, m_nForceLOD) == 0x21b);
-    static_assert(offsetof(CModelState, m_nClothUpdateFlags) == 0x21c);
+    static_assert(offsetof(CModelState, m_hModel) == 0xd0);
+    static_assert(offsetof(CModelState, m_ModelName) == 0xd8);
+    static_assert(offsetof(CModelState, m_bClientClothCreationSuppressed) == 0x118);
+    static_assert(offsetof(CModelState, m_MeshGroupMask) == 0x1d0);
+    static_assert(offsetof(CModelState, m_nIdealMotionType) == 0x252);
+    static_assert(offsetof(CModelState, m_nForceLOD) == 0x253);
+    static_assert(offsetof(CModelState, m_nClothUpdateFlags) == 0x254);
     
-    static_assert(sizeof(CModelState) == 0x230);
+    static_assert(sizeof(CModelState) == 0x260);
 };

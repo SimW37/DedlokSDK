@@ -21,7 +21,6 @@ namespace source2sdk::client
     // Standard-layout class: true
     // Size: 0x60
     // Has VTable
-    // MNetworkAssumeNotNetworkable
     // 
     // static metadata: MNetworkVarNames "C_EconItemAttribute m_Attributes"
     #pragma pack(push, 1)
