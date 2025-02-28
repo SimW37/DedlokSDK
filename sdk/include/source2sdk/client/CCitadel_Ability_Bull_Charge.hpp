@@ -15,32 +15,35 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xef0
+    // Size: 0xf18
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "QAngle m_anglesCharging"
     // static metadata: MNetworkVarNames "GameTime_t m_flChargeStartTime"
     // static metadata: MNetworkVarNames "GameTime_t m_flFastChargeEndTime"
-    // static metadata: MNetworkVarNames "bool bHitAnEnemy"
+    // static metadata: MNetworkVarNames "bool m_bHitAPlayer"
     #pragma pack(push, 1)
     class CCitadel_Ability_Bull_Charge : public client::C_CitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc70[0x268]; // 0xc70
+        [[maybe_unused]] std::uint8_t pad_0xc50[0x2a0]; // 0xc50
         // metadata: MNetworkEnable
-        QAngle m_anglesCharging; // 0xed8        
+        QAngle m_anglesCharging; // 0xef0        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnChargingStateChanged"
-        entity2::GameTime_t m_flChargeStartTime; // 0xee4        
+        entity2::GameTime_t m_flChargeStartTime; // 0xefc        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flFastChargeEndTime; // 0xee8        
+        entity2::GameTime_t m_flFastChargeEndTime; // 0xf00        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool bHitAnEnemy; // 0xeec        
-        [[maybe_unused]] std::uint8_t pad_0xeed[0x3];
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bHitAPlayer; // 0xf04        
+        [[maybe_unused]] std::uint8_t pad_0xf05[0x3]; // 0xf05
+        bool m_bFirstTick; // 0xf08        
+        [[maybe_unused]] std::uint8_t pad_0xf09[0x3]; // 0xf09
+        Vector m_vGoalDir; // 0xf0c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Bull_Charge because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Bull_Charge) == 0xef0);
+    static_assert(sizeof(CCitadel_Ability_Bull_Charge) == 0xf18);
 };

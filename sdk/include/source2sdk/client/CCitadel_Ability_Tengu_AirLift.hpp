@@ -1,5 +1,6 @@
 #pragma once
 #include "source2sdk/client/C_CitadelBaseAbility.hpp"
+#include "source2sdk/client/EFlightState.hpp"
 #include "source2sdk/client/ParticleIndex_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -12,14 +13,19 @@
 
 namespace source2sdk::client
 {
+    class C_BaseEntity;
+};
+
+namespace source2sdk::client
+{
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xe88
+    // Size: 0xe68
     // Has VTable
     // 
-    // static metadata: MNetworkVarNames "bool m_bFlying"
-    // static metadata: MNetworkVarNames "bool m_bFlyingStarted"
+    // static metadata: MNetworkVarNames "EHANDLE m_hGrabTarget"
+    // static metadata: MNetworkVarNames "EFlightState m_eFlightState"
     // static metadata: MNetworkVarNames "bool m_bIsGrabbing"
     // static metadata: MNetworkVarNames "bool m_bIsHoldingBomb"
     // static metadata: MNetworkVarNames "float m_flCurrentSpeed"
@@ -27,22 +33,25 @@ namespace source2sdk::client
     class CCitadel_Ability_Tengu_AirLift : public client::C_CitadelBaseAbility
     {
     public:
-        client::ParticleIndex_t m_nHoldBombEffect; // 0xc70        
-        [[maybe_unused]] std::uint8_t pad_0xc74[0x1fc]; // 0xc74
         // metadata: MNetworkEnable
-        bool m_bFlying; // 0xe70        
+        // m_hGrabTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CHandle<client::C_BaseEntity> m_hGrabTarget;
+        char m_hGrabTarget[0x4]; // 0xc50        
+        client::ParticleIndex_t m_nHoldBombEffect; // 0xc54        
+        [[maybe_unused]] std::uint8_t pad_0xc58[0x1f8]; // 0xc58
         // metadata: MNetworkEnable
-        bool m_bFlyingStarted; // 0xe71        
+        client::EFlightState m_eFlightState; // 0xe50        
         // metadata: MNetworkEnable
-        bool m_bIsGrabbing; // 0xe72        
+        bool m_bIsGrabbing; // 0xe51        
         // metadata: MNetworkEnable
-        bool m_bIsHoldingBomb; // 0xe73        
+        bool m_bIsHoldingBomb; // 0xe52        
+        [[maybe_unused]] std::uint8_t pad_0xe53[0x1]; // 0xe53
         // metadata: MNetworkEnable
-        float m_flCurrentSpeed; // 0xe74        
-        [[maybe_unused]] std::uint8_t pad_0xe78[0x10];
+        float m_flCurrentSpeed; // 0xe54        
+        [[maybe_unused]] std::uint8_t pad_0xe58[0x10];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Tengu_AirLift because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Tengu_AirLift) == 0xe88);
+    static_assert(sizeof(CCitadel_Ability_Tengu_AirLift) == 0xe68);
 };

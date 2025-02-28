@@ -24,7 +24,8 @@ namespace source2sdk::physicslib
     public:
         int32_t m_nPriority; // 0x20        
         uint32_t m_nVertexMapHash; // 0x24        
-        [[maybe_unused]] std::uint8_t pad_0x28[0x8];
+        uint32_t m_nAntitunnelGroupBits; // 0x28        
+        [[maybe_unused]] std::uint8_t pad_0x2c[0x4];
     };
     #pragma pack(pop)
     

@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x20
+    // Size: 0x28
     // Has VTable
     // Has Trivial Destructor
     // 
@@ -35,6 +35,7 @@ namespace source2sdk::client
         // metadata: MPropertyDescription "How long to apply all of the horizontal movement of this mantle.  NOTE: Horizontal applies after the vertical"
         float m_flHorizontalTime; // 0x18        
         client::EMantleType m_eMantleType; // 0x1c        
+        [[maybe_unused]] std::uint8_t pad_0x20[0x8];
     };
     #pragma pack(pop)
     
@@ -45,5 +46,5 @@ namespace source2sdk::client
     static_assert(offsetof(MantleType_t, m_flHorizontalTime) == 0x18);
     static_assert(offsetof(MantleType_t, m_eMantleType) == 0x1c);
     
-    static_assert(sizeof(MantleType_t) == 0x20);
+    static_assert(sizeof(MantleType_t) == 0x28);
 };

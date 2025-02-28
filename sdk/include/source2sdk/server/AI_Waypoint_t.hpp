@@ -44,7 +44,8 @@ namespace source2sdk::server
         uint32_t m_nNavLinkAreaId; // 0x44        
         navlib::NavGravity_t m_gravityOverride; // 0x48        
         bool m_bGravityOverrideSet; // 0x58        
-        [[maybe_unused]] std::uint8_t pad_0x59[0x7];
+        [[maybe_unused]] std::uint8_t pad_0x59[0x3]; // 0x59
+        uint32_t m_nConstrainedToMovableMeshId; // 0x5c        
     };
     #pragma pack(pop)
     
@@ -61,6 +62,7 @@ namespace source2sdk::server
     static_assert(offsetof(AI_Waypoint_t, m_nNavLinkAreaId) == 0x44);
     static_assert(offsetof(AI_Waypoint_t, m_gravityOverride) == 0x48);
     static_assert(offsetof(AI_Waypoint_t, m_bGravityOverrideSet) == 0x58);
+    static_assert(offsetof(AI_Waypoint_t, m_nConstrainedToMovableMeshId) == 0x5c);
     
     static_assert(sizeof(AI_Waypoint_t) == 0x60);
 };

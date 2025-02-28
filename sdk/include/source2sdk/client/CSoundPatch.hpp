@@ -45,9 +45,6 @@ namespace source2sdk::client
         [[maybe_unused]] std::uint8_t pad_0x85[0x3]; // 0x85
         CUtlSymbolLarge m_iszClassName; // 0x88        
         
-        // Static fields:
-        static int32_t &Get_g_SoundPatchCount() {return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CSoundPatch")->GetStaticFields()[0]->m_pInstance);};
-        
         // Datamap fields:
         // void m_guid; // 0x28
     };

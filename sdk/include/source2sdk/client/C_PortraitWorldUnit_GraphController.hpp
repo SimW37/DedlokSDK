@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/client/CAnimGraphControllerBase.hpp"
+#include "source2sdk/client/CBaseAnimGraphAnimGraphController.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -14,25 +14,27 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x68
+    // Size: 0x158
     // Has VTable
     #pragma pack(push, 1)
-    class C_PortraitWorldUnit_GraphController : public client::CAnimGraphControllerBase
+    class C_PortraitWorldUnit_GraphController : public client::CBaseAnimGraphAnimGraphController
     {
     public:
         // m_pszHeroUI has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<char*> m_pszHeroUI;
-        char m_pszHeroUI[0x28]; // 0x18        
+        char m_pszHeroUI[0x28]; // 0xc8        
         // m_pszShopUI has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<char*> m_pszShopUI;
-        char m_pszShopUI[0x28]; // 0x40        
-        
-        // Static fields:
-        static uint32_t &Get_s_nControllerTypeID() {return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("C_PortraitWorldUnit_GraphController")->GetStaticFields()[0]->m_pInstance);};
-        static bool &Get_s_bSchemaTest() {return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("C_PortraitWorldUnit_GraphController")->GetStaticFields()[1]->m_pInstance);};
+        char m_pszShopUI[0x28]; // 0xf0        
+        // m_flMenuLookAtWeight has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CAnimGraphParamOptionalRef<float> m_flMenuLookAtWeight;
+        char m_flMenuLookAtWeight[0x20]; // 0x118        
+        // m_vecLookAtPosMS has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CAnimGraphParamOptionalRef<Vector> m_vecLookAtPosMS;
+        char m_vecLookAtPosMS[0x20]; // 0x138        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_PortraitWorldUnit_GraphController because it is not a standard-layout class
-    static_assert(sizeof(C_PortraitWorldUnit_GraphController) == 0x68);
+    static_assert(sizeof(C_PortraitWorldUnit_GraphController) == 0x158);
 };

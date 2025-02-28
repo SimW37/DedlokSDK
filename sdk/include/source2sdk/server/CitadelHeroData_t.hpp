@@ -1,5 +1,4 @@
 #pragma once
-#include "source2sdk/client/AmbientParticleSettings_t.hpp"
 #include "source2sdk/client/CFootstepTableHandle.hpp"
 #include "source2sdk/client/CitadelStatsDisplay_t.hpp"
 #include "source2sdk/client/EAbilityResourceType.hpp"
@@ -16,8 +15,8 @@
 #include "source2sdk/client/HeroStatsUI_t.hpp"
 #include "source2sdk/client/ItemSlotInfo_t.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeCModel.hpp"
+#include "source2sdk/resourcesystem/InfoForResourceTypeCNmGraphDefinition.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeCVSoundEventScriptList.hpp"
-#include "source2sdk/resourcesystem/InfoForResourceTypeIAnimGraphModelBinding.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -33,7 +32,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x10a0
+    // Size: 0xed8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -51,239 +50,237 @@ namespace source2sdk::server
         [[maybe_unused]] std::uint8_t pad_0x20[0x8]; // 0x20
         client::HeroID_t m_HeroID; // 0x28        
         [[maybe_unused]] std::uint8_t pad_0x2c[0x4]; // 0x2c
+        // metadata: MPropertyStartGroup "AnimGraph2"
+        // metadata: MPropertyFriendlyName "AnimGraph2 Variant Name"
+        // m_sAG2VariationName has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeCNmGraphDefinition>> m_sAG2VariationName;
+        char m_sAG2VariationName[0xe0]; // 0x30        
         // metadata: MPropertyStartGroup "Screen Space Particle FX"
         // m_hDamageTakenParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hDamageTakenParticle;
-        char m_hDamageTakenParticle[0xe0]; // 0x30        
+        char m_hDamageTakenParticle[0xe0]; // 0x110        
         // m_hGroundDamageTakenParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hGroundDamageTakenParticle;
-        char m_hGroundDamageTakenParticle[0xe0]; // 0x110        
+        char m_hGroundDamageTakenParticle[0xe0]; // 0x1f0        
         // m_hDeathParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hDeathParticle;
-        char m_hDeathParticle[0xe0]; // 0x1f0        
+        char m_hDeathParticle[0xe0]; // 0x2d0        
         // m_hLowHealthParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hLowHealthParticle;
-        char m_hLowHealthParticle[0xe0]; // 0x2d0        
+        char m_hLowHealthParticle[0xe0]; // 0x3b0        
         // metadata: MPropertyStartGroup "Visuals"
-        CPanoramaImageName m_strSelectionImage; // 0x3b0        
-        CPanoramaImageName m_strIconImageSmall; // 0x3c0        
-        CPanoramaImageName m_strIconHeroCard; // 0x3d0        
-        CPanoramaImageName m_strMinimapImage; // 0x3e0        
-        CPanoramaImageName m_strTopBarImage; // 0x3f0        
-        CPanoramaImageName m_strTopBarVertical; // 0x400        
+        CPanoramaImageName m_strSelectionImage; // 0x490        
+        CPanoramaImageName m_strIconImageSmall; // 0x4a0        
+        CPanoramaImageName m_strIconHeroCard; // 0x4b0        
+        CPanoramaImageName m_strMinimapImage; // 0x4c0        
+        CPanoramaImageName m_strTopBarImage; // 0x4d0        
+        CPanoramaImageName m_strTopBarVertical; // 0x4e0        
         // m_hRespawnParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hRespawnParticle;
-        char m_hRespawnParticle[0xe0]; // 0x410        
-        Color m_colorUI; // 0x4f0        
-        [[maybe_unused]] std::uint8_t pad_0x4f4[0x4]; // 0x4f4
-        // m_hAmbientParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_hAmbientParticle;
-        char m_hAmbientParticle[0xe0]; // 0x4f8        
-        // m_vecAmbientParticleSettings has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<client::AmbientParticleSettings_t> m_vecAmbientParticleSettings;
-        char m_vecAmbientParticleSettings[0x18]; // 0x5d8        
-        Color m_colorGlowFriendly; // 0x5f0        
-        Color m_colorGlowEnemy; // 0x5f4        
-        Color m_colorGlowTeam1; // 0x5f8        
-        Color m_colorGlowTeam2; // 0x5fc        
+        char m_hRespawnParticle[0xe0]; // 0x4f0        
+        Color m_colorUI; // 0x5d0        
+        Color m_colorGlowFriendly; // 0x5d4        
+        Color m_colorGlowEnemy; // 0x5d8        
+        Color m_colorGlowTeam1; // 0x5dc        
+        Color m_colorGlowTeam2; // 0x5e0        
+        [[maybe_unused]] std::uint8_t pad_0x5e4[0x4]; // 0x5e4
         // m_strModelName has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeCModel>> m_strModelName;
-        char m_strModelName[0xe0]; // 0x600        
-        int32_t m_nModelSkin; // 0x6e0        
-        [[maybe_unused]] std::uint8_t pad_0x6e4[0x4]; // 0x6e4
-        // metadata: MPropertyDescription "If specified, this model will be used in steam public universe only."
-        // m_strPublicModelName has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeCModel>> m_strPublicModelName;
-        char m_strPublicModelName[0xe0]; // 0x6e8        
+        char m_strModelName[0xe0]; // 0x5e8        
+        int32_t m_nModelSkin; // 0x6c8        
+        [[maybe_unused]] std::uint8_t pad_0x6cc[0x4]; // 0x6cc
         // metadata: MPropertyDescription "If specified, this model will be used if convar citadel_use_wip_models is true."
         // m_strWIPModelName has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeCModel>> m_strWIPModelName;
-        char m_strWIPModelName[0xe0]; // 0x7c8        
+        char m_strWIPModelName[0xe0]; // 0x6d0        
+        // metadata: MPropertyDescription "If specified, this model will be used in main instead of 'Model Name'."
+        // m_strMainOnlyModelName has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeCModel>> m_strMainOnlyModelName;
+        char m_strMainOnlyModelName[0xe0]; // 0x7b0        
         // metadata: MPropertyStartGroup "UI"
-        // metadata: MPropertyDescription "AnimGraph for UI"
-        // m_strUIAnimGraph has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIAnimGraphModelBinding>> m_strUIAnimGraph;
-        char m_strUIAnimGraph[0xe0]; // 0x8a8        
-        // m_strUIShopAnimGraph has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIAnimGraphModelBinding>> m_strUIShopAnimGraph;
-        char m_strUIShopAnimGraph[0xe0]; // 0x988        
+        uint64_t m_iAddedTime; // 0x890        
         // metadata: MPropertyAttributeEditor "AssetBrowse( vmap )"
-        CUtlString m_strUIPortraitMap; // 0xa68        
+        CUtlString m_strUIPortraitMap; // 0x898        
         // metadata: MPropertyAttributeEditor "AssetBrowse( vmap )"
-        CUtlString m_strUIShoppingMap; // 0xa70        
-        client::HeroStatsUI_t m_heroStatsUI; // 0xa78        
-        client::HeroStatsDisplay_t m_heroStatsDisplay; // 0xaa8        
-        client::CitadelStatsDisplay_t m_ShopStatDisplay; // 0xb38        
+        CUtlString m_strUIShoppingMap; // 0x8a0        
+        client::HeroStatsUI_t m_heroStatsUI; // 0x8a8        
+        client::HeroStatsDisplay_t m_heroStatsDisplay; // 0x8d8        
+        client::CitadelStatsDisplay_t m_ShopStatDisplay; // 0x968        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strDeathSound; // 0xbe0        
-        CSoundEventName m_strLastHitSound; // 0xbf0        
-        CSoundEventName m_strRosterSelectedSound; // 0xc00        
-        CSoundEventName m_strRosterRemovedSound; // 0xc10        
-        CSoundEventName m_strFootstepSoundEventDefault; // 0xc20        
-        CSoundEventName m_strLowHealthSound; // 0xc30        
-        CSoundEventName m_strHeroSpecificLowHealthSound; // 0xc40        
-        CSoundEventName m_strMovementLoop; // 0xc50        
+        CSoundEventName m_strDeathSound; // 0xa10        
+        CSoundEventName m_strLastHitSound; // 0xa20        
+        CSoundEventName m_strRosterSelectedSound; // 0xa30        
+        CSoundEventName m_strRosterRemovedSound; // 0xa40        
+        CSoundEventName m_strFootstepSoundEventDefault; // 0xa50        
+        CSoundEventName m_strLowHealthSound; // 0xa60        
+        CSoundEventName m_strHeroSpecificLowHealthSound; // 0xa70        
+        CSoundEventName m_strMovementLoop; // 0xa80        
         // metadata: MPropertyDescription "Teammate footstep sounds are relative to whoever we're spectating."
-        client::CFootstepTableHandle m_hFootstepSounds; // 0xc60        
+        client::CFootstepTableHandle m_hFootstepSounds; // 0xa90        
         // m_hGameSoundEventScript has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeCVSoundEventScriptList>> m_hGameSoundEventScript;
-        char m_hGameSoundEventScript[0xe0]; // 0xc68        
+        char m_hGameSoundEventScript[0xe0]; // 0xa98        
         // m_hGeneratedVOEventScript has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeCVSoundEventScriptList>> m_hGeneratedVOEventScript;
-        char m_hGeneratedVOEventScript[0xe0]; // 0xd48        
-        float m_flFootstepSoundTravelDistanceMeters; // 0xe28        
-        float m_flStealthSpeedMetersPerSecond; // 0xe2c        
-        float m_flStepSoundTime; // 0xe30        
-        float m_flStepSoundTimeSprinting; // 0xe34        
+        char m_hGeneratedVOEventScript[0xe0]; // 0xb78        
+        float m_flFootstepSoundTravelDistanceMeters; // 0xc58        
+        float m_flStealthSpeedMetersPerSecond; // 0xc5c        
+        float m_flStepSoundTime; // 0xc60        
+        float m_flStepSoundTimeSprinting; // 0xc64        
         // metadata: MPropertyStartGroup
-        float m_flCollisionRadius; // 0xe38        
-        float m_flCollisionHeight; // 0xe3c        
-        float m_flStepHeight; // 0xe40        
-        bool m_bInDevelopment; // 0xe44        
-        bool m_bAssignedPlayersOnly; // 0xe45        
-        bool m_bBotSelectable; // 0xe46        
-        bool m_bNewPlayerRecommended; // 0xe47        
-        bool m_bLaneTestingRecommended; // 0xe48        
-        bool m_bNeedsTesting; // 0xe49        
-        bool m_bLimitedTesting; // 0xe4a        
-        bool m_bDisabled; // 0xe4b        
-        bool m_bPlayerSelectable; // 0xe4c        
-        [[maybe_unused]] std::uint8_t pad_0xe4d[0x3]; // 0xe4d
-        int32_t m_nComplexity; // 0xe50        
-        int32_t m_nReadability; // 0xe54        
+        float m_flCollisionRadius; // 0xc68        
+        float m_flCollisionHeight; // 0xc6c        
+        float m_flStepHeight; // 0xc70        
+        bool m_bInDevelopment; // 0xc74        
+        bool m_bAssignedPlayersOnly; // 0xc75        
+        bool m_bNewPlayerRecommended; // 0xc76        
+        bool m_bLaneTestingRecommended; // 0xc77        
+        bool m_bNeedsTesting; // 0xc78        
+        bool m_bLimitedTesting; // 0xc79        
+        bool m_bDisabled; // 0xc7a        
+        bool m_bPlayerSelectable; // 0xc7b        
+        bool m_bAvailableInHeroLabs; // 0xc7c        
+        [[maybe_unused]] std::uint8_t pad_0xc7d[0x3]; // 0xc7d
+        int32_t m_nComplexity; // 0xc80        
+        // metadata: MPropertyDescription "Minimum bot match difficulty for this hero to appear as an ally bot. -1 = never."
+        // metadata: MPropertyAttributeRange "-1 4"
+        int32_t m_nAllyBotDifficulty; // 0xc84        
+        // metadata: MPropertyDescription "Minimum bot match difficulty for this hero to appear as an enemy bot. -1 = never."
+        // metadata: MPropertyAttributeRange "-1 4"
+        int32_t m_nEnemyBotDifficulty; // 0xc88        
         // metadata: MPropertyStartGroup "Low Health Settings"
         // metadata: MPropertyDescription "Percentage of health to be considered low health"
         // metadata: MPropertyAttributeRange "0 1"
-        float m_flMinLowHealthPercentage; // 0xe58        
+        float m_flMinLowHealthPercentage; // 0xc8c        
         // metadata: MPropertyDescription "Percentage of health to be considered low health when you have high max health."
         // metadata: MPropertyAttributeRange "0 1"
-        float m_flMaxLowHealthPercentage; // 0xe5c        
+        float m_flMaxLowHealthPercentage; // 0xc90        
         // metadata: MPropertyDescription "Percentage of health to be considered mid health"
         // metadata: MPropertyAttributeRange "0 1"
-        float m_flMinMidHealthPercentage; // 0xe60        
+        float m_flMinMidHealthPercentage; // 0xc94        
         // metadata: MPropertyDescription "Percentage of health to be considered mid health when you have high max health."
         // metadata: MPropertyAttributeRange "0 1"
-        float m_flMaxMidHealthPercentage; // 0xe64        
+        float m_flMaxMidHealthPercentage; // 0xc98        
         // metadata: MPropertyDescription "Min Max Health for Remapped Value"
-        float m_flMinHealthForThreshold; // 0xe68        
+        float m_flMinHealthForThreshold; // 0xc9c        
         // metadata: MPropertyDescription "Max Max Health for remapped value"
-        float m_flMaxHealthForThreshold; // 0xe6c        
+        float m_flMaxHealthForThreshold; // 0xca0        
+        [[maybe_unused]] std::uint8_t pad_0xca4[0x4]; // 0xca4
         // metadata: MPropertyStartGroup
         // m_mapStartingStats has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlOrderedMap<client::EStatsType,float> m_mapStartingStats;
-        char m_mapStartingStats[0x28]; // 0xe70        
+        char m_mapStartingStats[0x28]; // 0xca8        
         // m_mapScalingStats has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlOrderedMap<client::EStatsType,client::HeroScalingStat_t> m_mapScalingStats;
-        char m_mapScalingStats[0x28]; // 0xe98        
-        [[maybe_unused]] std::uint8_t pad_0xec0[0x18]; // 0xec0
+        char m_mapScalingStats[0x28]; // 0xcd0        
+        [[maybe_unused]] std::uint8_t pad_0xcf8[0x18]; // 0xcf8
         // m_mapBoundAbilities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlOrderedMap<client::EAbilitySlots_t,CSubclassName<4>> m_mapBoundAbilities;
-        char m_mapBoundAbilities[0x28]; // 0xed8        
+        char m_mapBoundAbilities[0x28]; // 0xd10        
         // m_mapWIPAbilities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlOrderedMap<client::EAbilitySlots_t,CSubclassName<4>> m_mapWIPAbilities;
-        char m_mapWIPAbilities[0x28]; // 0xf00        
+        char m_mapWIPAbilities[0x28]; // 0xd38        
         // m_mapItemSlotInfo has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlOrderedMap<client::EItemSlotTypes_t,client::ItemSlotInfo_t> m_mapItemSlotInfo;
-        char m_mapItemSlotInfo[0x28]; // 0xf28        
+        char m_mapItemSlotInfo[0x28]; // 0xd60        
         // m_RecommendedUpgrades has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CSubclassName<4>> m_RecommendedUpgrades;
-        char m_RecommendedUpgrades[0x18]; // 0xf50        
-        [[maybe_unused]] std::uint8_t pad_0xf68[0x70]; // 0xf68
+        char m_RecommendedUpgrades[0x18]; // 0xd88        
+        [[maybe_unused]] std::uint8_t pad_0xda0[0x70]; // 0xda0
         // m_RecommendedAbilityOrder has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CSubclassName<4>> m_RecommendedAbilityOrder;
-        char m_RecommendedAbilityOrder[0x18]; // 0xfd8        
-        [[maybe_unused]] std::uint8_t pad_0xff0[0x18]; // 0xff0
-        client::EAbilityResourceType m_eAbilityResourceType; // 0x1008        
-        [[maybe_unused]] std::uint8_t pad_0x100c[0x1c]; // 0x100c
+        char m_RecommendedAbilityOrder[0x18]; // 0xe10        
+        [[maybe_unused]] std::uint8_t pad_0xe28[0x18]; // 0xe28
+        client::EAbilityResourceType m_eAbilityResourceType; // 0xe40        
+        [[maybe_unused]] std::uint8_t pad_0xe44[0x1c]; // 0xe44
         // m_mapStandardLevelUpUpgrades has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlOrderedMap<client::EModifierValue,float> m_mapStandardLevelUpUpgrades;
-        char m_mapStandardLevelUpUpgrades[0x28]; // 0x1028        
+        char m_mapStandardLevelUpUpgrades[0x28]; // 0xe60        
         // m_mapLevelInfo has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlOrderedMap<int32_t,client::HeroLevel_t> m_mapLevelInfo;
-        char m_mapLevelInfo[0x28]; // 0x1050        
+        char m_mapLevelInfo[0x28]; // 0xe88        
         // m_mapPurchaseBonuses has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlOrderedMap<client::EItemSlotTypes_t,CUtlVector<client::HeroPurchaseBonus_t>> m_mapPurchaseBonuses;
-        char m_mapPurchaseBonuses[0x28]; // 0x1078        
+        char m_mapPurchaseBonuses[0x28]; // 0xeb0        
     };
     #pragma pack(pop)
     
     static_assert(offsetof(CitadelHeroData_t, m_vecAnimGraphDefaultValueOverrides) == 0x8);
     static_assert(offsetof(CitadelHeroData_t, m_HeroID) == 0x28);
-    static_assert(offsetof(CitadelHeroData_t, m_hDamageTakenParticle) == 0x30);
-    static_assert(offsetof(CitadelHeroData_t, m_hGroundDamageTakenParticle) == 0x110);
-    static_assert(offsetof(CitadelHeroData_t, m_hDeathParticle) == 0x1f0);
-    static_assert(offsetof(CitadelHeroData_t, m_hLowHealthParticle) == 0x2d0);
-    static_assert(offsetof(CitadelHeroData_t, m_strSelectionImage) == 0x3b0);
-    static_assert(offsetof(CitadelHeroData_t, m_strIconImageSmall) == 0x3c0);
-    static_assert(offsetof(CitadelHeroData_t, m_strIconHeroCard) == 0x3d0);
-    static_assert(offsetof(CitadelHeroData_t, m_strMinimapImage) == 0x3e0);
-    static_assert(offsetof(CitadelHeroData_t, m_strTopBarImage) == 0x3f0);
-    static_assert(offsetof(CitadelHeroData_t, m_strTopBarVertical) == 0x400);
-    static_assert(offsetof(CitadelHeroData_t, m_hRespawnParticle) == 0x410);
-    static_assert(offsetof(CitadelHeroData_t, m_colorUI) == 0x4f0);
-    static_assert(offsetof(CitadelHeroData_t, m_hAmbientParticle) == 0x4f8);
-    static_assert(offsetof(CitadelHeroData_t, m_vecAmbientParticleSettings) == 0x5d8);
-    static_assert(offsetof(CitadelHeroData_t, m_colorGlowFriendly) == 0x5f0);
-    static_assert(offsetof(CitadelHeroData_t, m_colorGlowEnemy) == 0x5f4);
-    static_assert(offsetof(CitadelHeroData_t, m_colorGlowTeam1) == 0x5f8);
-    static_assert(offsetof(CitadelHeroData_t, m_colorGlowTeam2) == 0x5fc);
-    static_assert(offsetof(CitadelHeroData_t, m_strModelName) == 0x600);
-    static_assert(offsetof(CitadelHeroData_t, m_nModelSkin) == 0x6e0);
-    static_assert(offsetof(CitadelHeroData_t, m_strPublicModelName) == 0x6e8);
-    static_assert(offsetof(CitadelHeroData_t, m_strWIPModelName) == 0x7c8);
-    static_assert(offsetof(CitadelHeroData_t, m_strUIAnimGraph) == 0x8a8);
-    static_assert(offsetof(CitadelHeroData_t, m_strUIShopAnimGraph) == 0x988);
-    static_assert(offsetof(CitadelHeroData_t, m_strUIPortraitMap) == 0xa68);
-    static_assert(offsetof(CitadelHeroData_t, m_strUIShoppingMap) == 0xa70);
-    static_assert(offsetof(CitadelHeroData_t, m_heroStatsUI) == 0xa78);
-    static_assert(offsetof(CitadelHeroData_t, m_heroStatsDisplay) == 0xaa8);
-    static_assert(offsetof(CitadelHeroData_t, m_ShopStatDisplay) == 0xb38);
-    static_assert(offsetof(CitadelHeroData_t, m_strDeathSound) == 0xbe0);
-    static_assert(offsetof(CitadelHeroData_t, m_strLastHitSound) == 0xbf0);
-    static_assert(offsetof(CitadelHeroData_t, m_strRosterSelectedSound) == 0xc00);
-    static_assert(offsetof(CitadelHeroData_t, m_strRosterRemovedSound) == 0xc10);
-    static_assert(offsetof(CitadelHeroData_t, m_strFootstepSoundEventDefault) == 0xc20);
-    static_assert(offsetof(CitadelHeroData_t, m_strLowHealthSound) == 0xc30);
-    static_assert(offsetof(CitadelHeroData_t, m_strHeroSpecificLowHealthSound) == 0xc40);
-    static_assert(offsetof(CitadelHeroData_t, m_strMovementLoop) == 0xc50);
-    static_assert(offsetof(CitadelHeroData_t, m_hFootstepSounds) == 0xc60);
-    static_assert(offsetof(CitadelHeroData_t, m_hGameSoundEventScript) == 0xc68);
-    static_assert(offsetof(CitadelHeroData_t, m_hGeneratedVOEventScript) == 0xd48);
-    static_assert(offsetof(CitadelHeroData_t, m_flFootstepSoundTravelDistanceMeters) == 0xe28);
-    static_assert(offsetof(CitadelHeroData_t, m_flStealthSpeedMetersPerSecond) == 0xe2c);
-    static_assert(offsetof(CitadelHeroData_t, m_flStepSoundTime) == 0xe30);
-    static_assert(offsetof(CitadelHeroData_t, m_flStepSoundTimeSprinting) == 0xe34);
-    static_assert(offsetof(CitadelHeroData_t, m_flCollisionRadius) == 0xe38);
-    static_assert(offsetof(CitadelHeroData_t, m_flCollisionHeight) == 0xe3c);
-    static_assert(offsetof(CitadelHeroData_t, m_flStepHeight) == 0xe40);
-    static_assert(offsetof(CitadelHeroData_t, m_bInDevelopment) == 0xe44);
-    static_assert(offsetof(CitadelHeroData_t, m_bAssignedPlayersOnly) == 0xe45);
-    static_assert(offsetof(CitadelHeroData_t, m_bBotSelectable) == 0xe46);
-    static_assert(offsetof(CitadelHeroData_t, m_bNewPlayerRecommended) == 0xe47);
-    static_assert(offsetof(CitadelHeroData_t, m_bLaneTestingRecommended) == 0xe48);
-    static_assert(offsetof(CitadelHeroData_t, m_bNeedsTesting) == 0xe49);
-    static_assert(offsetof(CitadelHeroData_t, m_bLimitedTesting) == 0xe4a);
-    static_assert(offsetof(CitadelHeroData_t, m_bDisabled) == 0xe4b);
-    static_assert(offsetof(CitadelHeroData_t, m_bPlayerSelectable) == 0xe4c);
-    static_assert(offsetof(CitadelHeroData_t, m_nComplexity) == 0xe50);
-    static_assert(offsetof(CitadelHeroData_t, m_nReadability) == 0xe54);
-    static_assert(offsetof(CitadelHeroData_t, m_flMinLowHealthPercentage) == 0xe58);
-    static_assert(offsetof(CitadelHeroData_t, m_flMaxLowHealthPercentage) == 0xe5c);
-    static_assert(offsetof(CitadelHeroData_t, m_flMinMidHealthPercentage) == 0xe60);
-    static_assert(offsetof(CitadelHeroData_t, m_flMaxMidHealthPercentage) == 0xe64);
-    static_assert(offsetof(CitadelHeroData_t, m_flMinHealthForThreshold) == 0xe68);
-    static_assert(offsetof(CitadelHeroData_t, m_flMaxHealthForThreshold) == 0xe6c);
-    static_assert(offsetof(CitadelHeroData_t, m_mapStartingStats) == 0xe70);
-    static_assert(offsetof(CitadelHeroData_t, m_mapScalingStats) == 0xe98);
-    static_assert(offsetof(CitadelHeroData_t, m_mapBoundAbilities) == 0xed8);
-    static_assert(offsetof(CitadelHeroData_t, m_mapWIPAbilities) == 0xf00);
-    static_assert(offsetof(CitadelHeroData_t, m_mapItemSlotInfo) == 0xf28);
-    static_assert(offsetof(CitadelHeroData_t, m_RecommendedUpgrades) == 0xf50);
-    static_assert(offsetof(CitadelHeroData_t, m_RecommendedAbilityOrder) == 0xfd8);
-    static_assert(offsetof(CitadelHeroData_t, m_eAbilityResourceType) == 0x1008);
-    static_assert(offsetof(CitadelHeroData_t, m_mapStandardLevelUpUpgrades) == 0x1028);
-    static_assert(offsetof(CitadelHeroData_t, m_mapLevelInfo) == 0x1050);
-    static_assert(offsetof(CitadelHeroData_t, m_mapPurchaseBonuses) == 0x1078);
+    static_assert(offsetof(CitadelHeroData_t, m_sAG2VariationName) == 0x30);
+    static_assert(offsetof(CitadelHeroData_t, m_hDamageTakenParticle) == 0x110);
+    static_assert(offsetof(CitadelHeroData_t, m_hGroundDamageTakenParticle) == 0x1f0);
+    static_assert(offsetof(CitadelHeroData_t, m_hDeathParticle) == 0x2d0);
+    static_assert(offsetof(CitadelHeroData_t, m_hLowHealthParticle) == 0x3b0);
+    static_assert(offsetof(CitadelHeroData_t, m_strSelectionImage) == 0x490);
+    static_assert(offsetof(CitadelHeroData_t, m_strIconImageSmall) == 0x4a0);
+    static_assert(offsetof(CitadelHeroData_t, m_strIconHeroCard) == 0x4b0);
+    static_assert(offsetof(CitadelHeroData_t, m_strMinimapImage) == 0x4c0);
+    static_assert(offsetof(CitadelHeroData_t, m_strTopBarImage) == 0x4d0);
+    static_assert(offsetof(CitadelHeroData_t, m_strTopBarVertical) == 0x4e0);
+    static_assert(offsetof(CitadelHeroData_t, m_hRespawnParticle) == 0x4f0);
+    static_assert(offsetof(CitadelHeroData_t, m_colorUI) == 0x5d0);
+    static_assert(offsetof(CitadelHeroData_t, m_colorGlowFriendly) == 0x5d4);
+    static_assert(offsetof(CitadelHeroData_t, m_colorGlowEnemy) == 0x5d8);
+    static_assert(offsetof(CitadelHeroData_t, m_colorGlowTeam1) == 0x5dc);
+    static_assert(offsetof(CitadelHeroData_t, m_colorGlowTeam2) == 0x5e0);
+    static_assert(offsetof(CitadelHeroData_t, m_strModelName) == 0x5e8);
+    static_assert(offsetof(CitadelHeroData_t, m_nModelSkin) == 0x6c8);
+    static_assert(offsetof(CitadelHeroData_t, m_strWIPModelName) == 0x6d0);
+    static_assert(offsetof(CitadelHeroData_t, m_strMainOnlyModelName) == 0x7b0);
+    static_assert(offsetof(CitadelHeroData_t, m_iAddedTime) == 0x890);
+    static_assert(offsetof(CitadelHeroData_t, m_strUIPortraitMap) == 0x898);
+    static_assert(offsetof(CitadelHeroData_t, m_strUIShoppingMap) == 0x8a0);
+    static_assert(offsetof(CitadelHeroData_t, m_heroStatsUI) == 0x8a8);
+    static_assert(offsetof(CitadelHeroData_t, m_heroStatsDisplay) == 0x8d8);
+    static_assert(offsetof(CitadelHeroData_t, m_ShopStatDisplay) == 0x968);
+    static_assert(offsetof(CitadelHeroData_t, m_strDeathSound) == 0xa10);
+    static_assert(offsetof(CitadelHeroData_t, m_strLastHitSound) == 0xa20);
+    static_assert(offsetof(CitadelHeroData_t, m_strRosterSelectedSound) == 0xa30);
+    static_assert(offsetof(CitadelHeroData_t, m_strRosterRemovedSound) == 0xa40);
+    static_assert(offsetof(CitadelHeroData_t, m_strFootstepSoundEventDefault) == 0xa50);
+    static_assert(offsetof(CitadelHeroData_t, m_strLowHealthSound) == 0xa60);
+    static_assert(offsetof(CitadelHeroData_t, m_strHeroSpecificLowHealthSound) == 0xa70);
+    static_assert(offsetof(CitadelHeroData_t, m_strMovementLoop) == 0xa80);
+    static_assert(offsetof(CitadelHeroData_t, m_hFootstepSounds) == 0xa90);
+    static_assert(offsetof(CitadelHeroData_t, m_hGameSoundEventScript) == 0xa98);
+    static_assert(offsetof(CitadelHeroData_t, m_hGeneratedVOEventScript) == 0xb78);
+    static_assert(offsetof(CitadelHeroData_t, m_flFootstepSoundTravelDistanceMeters) == 0xc58);
+    static_assert(offsetof(CitadelHeroData_t, m_flStealthSpeedMetersPerSecond) == 0xc5c);
+    static_assert(offsetof(CitadelHeroData_t, m_flStepSoundTime) == 0xc60);
+    static_assert(offsetof(CitadelHeroData_t, m_flStepSoundTimeSprinting) == 0xc64);
+    static_assert(offsetof(CitadelHeroData_t, m_flCollisionRadius) == 0xc68);
+    static_assert(offsetof(CitadelHeroData_t, m_flCollisionHeight) == 0xc6c);
+    static_assert(offsetof(CitadelHeroData_t, m_flStepHeight) == 0xc70);
+    static_assert(offsetof(CitadelHeroData_t, m_bInDevelopment) == 0xc74);
+    static_assert(offsetof(CitadelHeroData_t, m_bAssignedPlayersOnly) == 0xc75);
+    static_assert(offsetof(CitadelHeroData_t, m_bNewPlayerRecommended) == 0xc76);
+    static_assert(offsetof(CitadelHeroData_t, m_bLaneTestingRecommended) == 0xc77);
+    static_assert(offsetof(CitadelHeroData_t, m_bNeedsTesting) == 0xc78);
+    static_assert(offsetof(CitadelHeroData_t, m_bLimitedTesting) == 0xc79);
+    static_assert(offsetof(CitadelHeroData_t, m_bDisabled) == 0xc7a);
+    static_assert(offsetof(CitadelHeroData_t, m_bPlayerSelectable) == 0xc7b);
+    static_assert(offsetof(CitadelHeroData_t, m_bAvailableInHeroLabs) == 0xc7c);
+    static_assert(offsetof(CitadelHeroData_t, m_nComplexity) == 0xc80);
+    static_assert(offsetof(CitadelHeroData_t, m_nAllyBotDifficulty) == 0xc84);
+    static_assert(offsetof(CitadelHeroData_t, m_nEnemyBotDifficulty) == 0xc88);
+    static_assert(offsetof(CitadelHeroData_t, m_flMinLowHealthPercentage) == 0xc8c);
+    static_assert(offsetof(CitadelHeroData_t, m_flMaxLowHealthPercentage) == 0xc90);
+    static_assert(offsetof(CitadelHeroData_t, m_flMinMidHealthPercentage) == 0xc94);
+    static_assert(offsetof(CitadelHeroData_t, m_flMaxMidHealthPercentage) == 0xc98);
+    static_assert(offsetof(CitadelHeroData_t, m_flMinHealthForThreshold) == 0xc9c);
+    static_assert(offsetof(CitadelHeroData_t, m_flMaxHealthForThreshold) == 0xca0);
+    static_assert(offsetof(CitadelHeroData_t, m_mapStartingStats) == 0xca8);
+    static_assert(offsetof(CitadelHeroData_t, m_mapScalingStats) == 0xcd0);
+    static_assert(offsetof(CitadelHeroData_t, m_mapBoundAbilities) == 0xd10);
+    static_assert(offsetof(CitadelHeroData_t, m_mapWIPAbilities) == 0xd38);
+    static_assert(offsetof(CitadelHeroData_t, m_mapItemSlotInfo) == 0xd60);
+    static_assert(offsetof(CitadelHeroData_t, m_RecommendedUpgrades) == 0xd88);
+    static_assert(offsetof(CitadelHeroData_t, m_RecommendedAbilityOrder) == 0xe10);
+    static_assert(offsetof(CitadelHeroData_t, m_eAbilityResourceType) == 0xe40);
+    static_assert(offsetof(CitadelHeroData_t, m_mapStandardLevelUpUpgrades) == 0xe60);
+    static_assert(offsetof(CitadelHeroData_t, m_mapLevelInfo) == 0xe88);
+    static_assert(offsetof(CitadelHeroData_t, m_mapPurchaseBonuses) == 0xeb0);
     
-    static_assert(sizeof(CitadelHeroData_t) == 0x10a0);
+    static_assert(sizeof(CitadelHeroData_t) == 0xed8);
 };

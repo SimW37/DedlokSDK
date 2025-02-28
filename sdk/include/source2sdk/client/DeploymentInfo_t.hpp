@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x1e0
+    // Size: 0x1e8
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
@@ -35,10 +35,11 @@ namespace source2sdk::client
         // m_previewParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_previewParticle;
         char m_previewParticle[0xe0]; // 0xe8        
-        CUtlString m_strExraBodygroup; // 0x1c8        
-        CUtlString m_strPreviewClass; // 0x1d0        
-        float m_flPreviewModelScale; // 0x1d8        
-        float m_flGroundCheckHeightOffset; // 0x1dc        
+        CUtlString m_strPreviewParticleEffectConfig; // 0x1c8        
+        CUtlString m_strExraBodygroup; // 0x1d0        
+        CUtlString m_strPreviewClass; // 0x1d8        
+        float m_flPreviewModelScale; // 0x1e0        
+        float m_flGroundCheckHeightOffset; // 0x1e4        
     };
     #pragma pack(pop)
     
@@ -49,10 +50,11 @@ namespace source2sdk::client
     static_assert(offsetof(DeploymentInfo_t, m_bCheckPlayerFit) == 0x4);
     static_assert(offsetof(DeploymentInfo_t, m_previewModel) == 0x8);
     static_assert(offsetof(DeploymentInfo_t, m_previewParticle) == 0xe8);
-    static_assert(offsetof(DeploymentInfo_t, m_strExraBodygroup) == 0x1c8);
-    static_assert(offsetof(DeploymentInfo_t, m_strPreviewClass) == 0x1d0);
-    static_assert(offsetof(DeploymentInfo_t, m_flPreviewModelScale) == 0x1d8);
-    static_assert(offsetof(DeploymentInfo_t, m_flGroundCheckHeightOffset) == 0x1dc);
+    static_assert(offsetof(DeploymentInfo_t, m_strPreviewParticleEffectConfig) == 0x1c8);
+    static_assert(offsetof(DeploymentInfo_t, m_strExraBodygroup) == 0x1d0);
+    static_assert(offsetof(DeploymentInfo_t, m_strPreviewClass) == 0x1d8);
+    static_assert(offsetof(DeploymentInfo_t, m_flPreviewModelScale) == 0x1e0);
+    static_assert(offsetof(DeploymentInfo_t, m_flGroundCheckHeightOffset) == 0x1e4);
     
-    static_assert(sizeof(DeploymentInfo_t) == 0x1e0);
+    static_assert(sizeof(DeploymentInfo_t) == 0x1e8);
 };

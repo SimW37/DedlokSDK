@@ -25,37 +25,32 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x938
+    // Size: 0x978
     // Has VTable
     // 
     // static metadata: MNetworkIncludeByName "m_spawnflags"
     // static metadata: MNetworkVarNames "bool m_bDisabled"
-    // static metadata: MNetworkVarNames "bool m_bClientSidePredicted"
     #pragma pack(push, 1)
     class CBaseTrigger : public server::CBaseToggle
     {
     public:
-        // metadata: MNetworkEnable
-        bool m_bDisabled; // 0x7e8        
-        [[maybe_unused]] std::uint8_t pad_0x7e9[0x7]; // 0x7e9
-        CUtlSymbolLarge m_iFilterName; // 0x7f0        
-        // m_hFilter has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseFilter> m_hFilter;
-        char m_hFilter[0x4]; // 0x7f8        
-        [[maybe_unused]] std::uint8_t pad_0x7fc[0x4]; // 0x7fc
-        entity2::CEntityIOOutput m_OnStartTouch; // 0x800        
-        entity2::CEntityIOOutput m_OnStartTouchAll; // 0x828        
-        entity2::CEntityIOOutput m_OnEndTouch; // 0x850        
-        entity2::CEntityIOOutput m_OnEndTouchAll; // 0x878        
-        entity2::CEntityIOOutput m_OnTouching; // 0x8a0        
-        entity2::CEntityIOOutput m_OnTouchingEachEntity; // 0x8c8        
-        entity2::CEntityIOOutput m_OnNotTouching; // 0x8f0        
+        entity2::CEntityIOOutput m_OnStartTouch; // 0x838        
+        entity2::CEntityIOOutput m_OnStartTouchAll; // 0x860        
+        entity2::CEntityIOOutput m_OnEndTouch; // 0x888        
+        entity2::CEntityIOOutput m_OnEndTouchAll; // 0x8b0        
+        entity2::CEntityIOOutput m_OnTouching; // 0x8d8        
+        entity2::CEntityIOOutput m_OnTouchingEachEntity; // 0x900        
+        entity2::CEntityIOOutput m_OnNotTouching; // 0x928        
         // m_hTouchingEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CHandle<server::CBaseEntity>> m_hTouchingEntities;
-        char m_hTouchingEntities[0x18]; // 0x918        
+        char m_hTouchingEntities[0x18]; // 0x950        
+        CUtlSymbolLarge m_iFilterName; // 0x968        
+        // m_hFilter has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CHandle<server::CBaseFilter> m_hFilter;
+        char m_hFilter[0x4]; // 0x970        
         // metadata: MNetworkEnable
-        bool m_bClientSidePredicted; // 0x930        
-        [[maybe_unused]] std::uint8_t pad_0x931[0x7];
+        bool m_bDisabled; // 0x974        
+        [[maybe_unused]] std::uint8_t pad_0x975[0x3];
         
         // Datamap fields:
         // void InputEnable; // 0x0
@@ -65,9 +60,10 @@ namespace source2sdk::server
         // void InputStartTouch; // 0x0
         // void InputEndTouch; // 0x0
         // bool okifnomodel; // 0x7fffffff
+        // float radius; // 0x7fffffff
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBaseTrigger because it is not a standard-layout class
-    static_assert(sizeof(CBaseTrigger) == 0x938);
+    static_assert(sizeof(CBaseTrigger) == 0x978);
 };

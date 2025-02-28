@@ -8,7 +8,7 @@
 
 namespace source2sdk::server
 {
-    // Enumerator count: 4
+    // Enumerator count: 5
     // Alignment: 4
     // Size: 0x4
     enum class CAI_InterestTarget__Type_t : std::uint32_t
@@ -17,5 +17,6 @@ namespace source2sdk::server
         eEntity = 0x1,
         ePosition = 0x2,
         eDirection = 0x3,
+        ePath = 0x4,
     };
 };

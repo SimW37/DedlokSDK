@@ -17,7 +17,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xd18
+    // Size: 0xcf8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CCitadelAutoScaledTime m_flGroundDashSlideTime"
@@ -26,9 +26,9 @@ namespace source2sdk::client
     // static metadata: MNetworkVarNames "bool m_bWantsSlide"
     // static metadata: MNetworkVarNames "bool m_bAirborneWhenDuckPressed"
     // static metadata: MNetworkVarNames "bool m_bIsSliding"
+    // static metadata: MNetworkVarNames "bool m_bSlideIsSticky"
     // static metadata: MNetworkVarNames "float m_flSpeedAdjust"
     // static metadata: MNetworkVarNames "GameTime_t m_flDuckPressedTime"
-    // static metadata: MNetworkVarNames "float m_flVelocityAtDuckPressedTime"
     // static metadata: MNetworkVarNames "GameTime_t m_flSlideChangeTime"
     // static metadata: MNetworkVarNames "GameTime_t m_flSlidingOnFlatStartTime"
     // static metadata: MNetworkVarNames "int m_nJumpsThisSlideSession"
@@ -38,54 +38,55 @@ namespace source2sdk::client
     class CCitadel_Ability_Slide : public client::C_CitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc70[0x58]; // 0xc70
+        [[maybe_unused]] std::uint8_t pad_0xc50[0x58]; // 0xc50
         // metadata: MNetworkEnable
-        client::CCitadelAutoScaledTime m_flGroundDashSlideTime; // 0xcc8        
+        client::CCitadelAutoScaledTime m_flGroundDashSlideTime; // 0xca8        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flSlowGetupStartTime; // 0xce0        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flSlowGetupStartTime; // 0xcc0        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool m_bShouldTriggerSlowGetup; // 0xce4        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bShouldTriggerSlowGetup; // 0xcc4        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool m_bWantsSlide; // 0xce5        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bWantsSlide; // 0xcc5        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool m_bAirborneWhenDuckPressed; // 0xce6        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bAirborneWhenDuckPressed; // 0xcc6        
         // metadata: MNetworkEnable
-        bool m_bIsSliding; // 0xce7        
+        bool m_bIsSliding; // 0xcc7        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        float m_flSpeedAdjust; // 0xce8        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bSlideIsSticky; // 0xcc8        
+        [[maybe_unused]] std::uint8_t pad_0xcc9[0x3]; // 0xcc9
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flDuckPressedTime; // 0xcec        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        float m_flSpeedAdjust; // 0xccc        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        float m_flVelocityAtDuckPressedTime; // 0xcf0        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flDuckPressedTime; // 0xcd0        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flSlideChangeTime; // 0xcf4        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flSlideChangeTime; // 0xcd4        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flSlidingOnFlatStartTime; // 0xcf8        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flSlidingOnFlatStartTime; // 0xcd8        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        int32_t m_nJumpsThisSlideSession; // 0xcfc        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        int32_t m_nJumpsThisSlideSession; // 0xcdc        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flOnGroundStartTime; // 0xd00        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flOnGroundStartTime; // 0xce0        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flDashSlideStartTime; // 0xd04        
-        bool m_bStartedSlideViaProbeSlope; // 0xd08        
-        [[maybe_unused]] std::uint8_t pad_0xd09[0x3]; // 0xd09
-        client::ParticleIndex_t m_nSlideEffectIndex; // 0xd0c        
-        [[maybe_unused]] std::uint8_t pad_0xd10[0x8];
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flDashSlideStartTime; // 0xce4        
+        bool m_bStartedSlideViaProbeSlope; // 0xce8        
+        [[maybe_unused]] std::uint8_t pad_0xce9[0x3]; // 0xce9
+        client::ParticleIndex_t m_nSlideEffectIndex; // 0xcec        
+        [[maybe_unused]] std::uint8_t pad_0xcf0[0x8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Slide because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Slide) == 0xd18);
+    static_assert(sizeof(CCitadel_Ability_Slide) == 0xcf8);
 };

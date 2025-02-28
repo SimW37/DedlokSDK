@@ -1,5 +1,4 @@
 #pragma once
-#include "source2sdk/pulse_runtime_lib/IGapHost_ExecLog.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -13,15 +12,16 @@ namespace source2sdk::pulse_runtime_lib
 {
     // Registered alignment: unknown
     // Alignment: 0x1
-    // Standard-layout class: false
+    // Standard-layout class: true
     // Size: 0x8
     // Has VTable
     // Is Abstract
     // Has Trivial Destructor
     #pragma pack(push, 1)
-    class IGapHost_Cursor : public pulse_runtime_lib::IGapHost_ExecLog
+    class IGapHost_Cursor
     {
     public:
+        [[maybe_unused]] std::uint8_t pad_0x00[0x8];
         // No schema binary for binding
     };
     #pragma pack(pop)

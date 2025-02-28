@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x608
+    // Size: 0x678
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,10 +23,15 @@ namespace source2sdk::client
     {
     public:
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_PullSound; // 0x5f8        
+        CSoundEventName m_PullSound; // 0x658        
+        // metadata: MPropertyStartGroup "Gameplay"
+        float m_flPullSpeedMin; // 0x668        
+        float m_flPullSpeedMax; // 0x66c        
+        float m_flPullDistanceMin; // 0x670        
+        float m_flPullDistanceMax; // 0x674        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Succor_MoveVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Succor_MoveVData) == 0x608);
+    static_assert(sizeof(CCitadel_Modifier_Succor_MoveVData) == 0x678);
 };

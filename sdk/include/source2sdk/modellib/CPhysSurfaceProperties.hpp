@@ -35,9 +35,9 @@ namespace source2sdk::modellib
         CUtlString m_description; // 0x20        
         // metadata: MKV3TransferName "physics"
         modellib::CPhysSurfacePropertiesPhysics m_physics; // 0x28        
-        [[maybe_unused]] std::uint8_t pad_0x4c[0x4]; // 0x4c
+        [[maybe_unused]] std::uint8_t pad_0x44[0x4]; // 0x44
         // metadata: MKV3TransferName "audiosounds"
-        modellib::CPhysSurfacePropertiesSoundNames m_audioSounds; // 0x50        
+        modellib::CPhysSurfacePropertiesSoundNames m_audioSounds; // 0x48        
         // metadata: MKV3TransferName "audioparams"
         modellib::CPhysSurfacePropertiesAudio m_audioParams; // 0xa8        
     };
@@ -49,7 +49,7 @@ namespace source2sdk::modellib
     static_assert(offsetof(CPhysSurfaceProperties, m_bHidden) == 0x18);
     static_assert(offsetof(CPhysSurfaceProperties, m_description) == 0x20);
     static_assert(offsetof(CPhysSurfaceProperties, m_physics) == 0x28);
-    static_assert(offsetof(CPhysSurfaceProperties, m_audioSounds) == 0x50);
+    static_assert(offsetof(CPhysSurfaceProperties, m_audioSounds) == 0x48);
     static_assert(offsetof(CPhysSurfaceProperties, m_audioParams) == 0xa8);
     
     static_assert(sizeof(CPhysSurfaceProperties) == 0xc8);

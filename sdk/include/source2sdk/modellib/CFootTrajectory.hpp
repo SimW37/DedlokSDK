@@ -10,10 +10,11 @@
 
 namespace source2sdk::modellib
 {
-    // Registered alignment: 0x4
-    // Alignment: 0x4
+    // Registered alignment: 0x8
+    // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x14
+    // Size: 0x20
+    // Has VTable
     // Has Trivial Destructor
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -21,18 +22,17 @@ namespace source2sdk::modellib
     class CFootTrajectory
     {
     public:
-        Vector m_vOffset; // 0x0        
-        float m_flRotationOffset; // 0xc        
-        float m_flProgression; // 0x10        
-        
-        // Static fields:
-        static modellib::CFootTrajectory &Get_Identity() {return *reinterpret_cast<modellib::CFootTrajectory*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CFootTrajectory")->GetStaticFields()[0]->m_pInstance);};
+        [[maybe_unused]] std::uint8_t pad_0x00[0x8]; // 0x0
+        Vector m_vOffset; // 0x8        
+        float m_flRotationOffset; // 0x14        
+        float m_flProgression; // 0x18        
+        [[maybe_unused]] std::uint8_t pad_0x1c[0x4];
     };
     #pragma pack(pop)
     
-    static_assert(offsetof(CFootTrajectory, m_vOffset) == 0x0);
-    static_assert(offsetof(CFootTrajectory, m_flRotationOffset) == 0xc);
-    static_assert(offsetof(CFootTrajectory, m_flProgression) == 0x10);
+    static_assert(offsetof(CFootTrajectory, m_vOffset) == 0x8);
+    static_assert(offsetof(CFootTrajectory, m_flRotationOffset) == 0x14);
+    static_assert(offsetof(CFootTrajectory, m_flProgression) == 0x18);
     
-    static_assert(sizeof(CFootTrajectory) == 0x14);
+    static_assert(sizeof(CFootTrajectory) == 0x20);
 };

@@ -21,7 +21,7 @@ namespace source2sdk::client
     {
     public:
         bool m_bForceApplied; // 0xc0        
-        bool m_bLandedOnGround; // 0xc1        
+        bool m_bRestrictMovement; // 0xc1        
         [[maybe_unused]] std::uint8_t pad_0xc2[0x2]; // 0xc2
         Vector m_vTossUpForce; // 0xc4        
         float m_flCurrentVelocityScale; // 0xd0        

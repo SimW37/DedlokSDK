@@ -21,33 +21,33 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xf78
+    // Size: 0x1060
     // Has VTable
     #pragma pack(push, 1)
     class CPropDoorRotating : public server::CBasePropDoor
     {
     public:
-        Vector m_vecAxis; // 0xee0        
-        float m_flDistance; // 0xeec        
-        server::PropDoorRotatingSpawnPos_t m_eSpawnPosition; // 0xef0        
-        server::PropDoorRotatingOpenDirection_e m_eOpenDirection; // 0xef4        
-        server::PropDoorRotatingOpenDirection_e m_eCurrentOpenDirection; // 0xef8        
-        float m_flAjarAngle; // 0xefc        
-        QAngle m_angRotationAjarDeprecated; // 0xf00        
-        QAngle m_angRotationClosed; // 0xf0c        
-        QAngle m_angRotationOpenForward; // 0xf18        
-        QAngle m_angRotationOpenBack; // 0xf24        
-        QAngle m_angGoal; // 0xf30        
-        Vector m_vecForwardBoundsMin; // 0xf3c        
-        Vector m_vecForwardBoundsMax; // 0xf48        
-        Vector m_vecBackBoundsMin; // 0xf54        
-        Vector m_vecBackBoundsMax; // 0xf60        
-        bool m_bAjarDoorShouldntAlwaysOpen; // 0xf6c        
-        [[maybe_unused]] std::uint8_t pad_0xf6d[0x3]; // 0xf6d
+        Vector m_vecAxis; // 0xfc8        
+        float m_flDistance; // 0xfd4        
+        server::PropDoorRotatingSpawnPos_t m_eSpawnPosition; // 0xfd8        
+        server::PropDoorRotatingOpenDirection_e m_eOpenDirection; // 0xfdc        
+        server::PropDoorRotatingOpenDirection_e m_eCurrentOpenDirection; // 0xfe0        
+        float m_flAjarAngle; // 0xfe4        
+        QAngle m_angRotationAjarDeprecated; // 0xfe8        
+        QAngle m_angRotationClosed; // 0xff4        
+        QAngle m_angRotationOpenForward; // 0x1000        
+        QAngle m_angRotationOpenBack; // 0x100c        
+        QAngle m_angGoal; // 0x1018        
+        Vector m_vecForwardBoundsMin; // 0x1024        
+        Vector m_vecForwardBoundsMax; // 0x1030        
+        Vector m_vecBackBoundsMin; // 0x103c        
+        Vector m_vecBackBoundsMax; // 0x1048        
+        bool m_bAjarDoorShouldntAlwaysOpen; // 0x1054        
+        [[maybe_unused]] std::uint8_t pad_0x1055[0x3]; // 0x1055
         // m_hEntityBlocker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CEntityBlocker> m_hEntityBlocker;
-        char m_hEntityBlocker[0x4]; // 0xf70        
-        [[maybe_unused]] std::uint8_t pad_0xf74[0x4];
+        char m_hEntityBlocker[0x4]; // 0x1058        
+        [[maybe_unused]] std::uint8_t pad_0x105c[0x4];
         
         // Datamap fields:
         // float InputSetRotationDistance; // 0x0
@@ -56,5 +56,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPropDoorRotating because it is not a standard-layout class
-    static_assert(sizeof(CPropDoorRotating) == 0xf78);
+    static_assert(sizeof(CPropDoorRotating) == 0x1060);
 };

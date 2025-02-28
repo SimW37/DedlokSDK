@@ -16,21 +16,21 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xcf0
+    // Size: 0xcb0
     // Has VTable
     #pragma pack(push, 1)
     class C_PhysPropClientside : public client::C_BreakableProp
     {
     public:
-        entity2::GameTime_t m_flTouchDelta; // 0xcc8        
-        entity2::GameTime_t m_fDeathTime; // 0xccc        
-        float m_inertiaScale; // 0xcd0        
-        Vector m_vecDamagePosition; // 0xcd4        
-        Vector m_vecDamageDirection; // 0xce0        
-        client::DamageTypes_t m_nDamageType; // 0xcec        
+        entity2::GameTime_t m_flTouchDelta; // 0xc88        
+        entity2::GameTime_t m_fDeathTime; // 0xc8c        
+        Vector m_vecDamagePosition; // 0xc90        
+        Vector m_vecDamageDirection; // 0xc9c        
+        client::DamageTypes_t m_nDamageType; // 0xca8        
+        [[maybe_unused]] std::uint8_t pad_0xcac[0x4];
         
         // Datamap fields:
-        // float m_impactEnergyScale; // 0xc38
+        // float m_impactEnergyScale; // 0xbf8
         // bool forcemotiondisabled; // 0x7fffffff
         // bool phys_start_asleep; // 0x7fffffff
         // float fademaxdist; // 0x7fffffff
@@ -42,5 +42,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_PhysPropClientside because it is not a standard-layout class
-    static_assert(sizeof(C_PhysPropClientside) == 0xcf0);
+    static_assert(sizeof(C_PhysPropClientside) == 0xcb0);
 };

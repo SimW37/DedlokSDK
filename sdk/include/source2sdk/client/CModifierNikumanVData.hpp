@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x808
+    // Size: 0x870
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,15 +26,15 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_SelfParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SelfParticle;
-        char m_SelfParticle[0xe0]; // 0x638        
+        char m_SelfParticle[0xe0]; // 0x6a0        
         // m_AOEFriendParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEFriendParticle;
-        char m_AOEFriendParticle[0xe0]; // 0x718        
+        char m_AOEFriendParticle[0xe0]; // 0x780        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strAmbientLoopingLocalPlayerSound; // 0x7f8        
+        CSoundEventName m_strAmbientLoopingLocalPlayerSound; // 0x860        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CModifierNikumanVData because it is not a standard-layout class
-    static_assert(sizeof(CModifierNikumanVData) == 0x808);
+    static_assert(sizeof(CModifierNikumanVData) == 0x870);
 };

@@ -23,8 +23,6 @@ namespace source2sdk::pulse_runtime_lib
     {
     public:
         [[maybe_unused]] std::uint8_t pad_0x00[0x8];
-        // Static fields:
-        static pulse_runtime_lib::CPulseTestGapTypeQueryRegistration &Get_s_Instance() {return *reinterpret_cast<pulse_runtime_lib::CPulseTestGapTypeQueryRegistration*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CPulseTestGapTypeQueryRegistration")->GetStaticFields()[0]->m_pInstance);};
     };
     #pragma pack(pop)
     

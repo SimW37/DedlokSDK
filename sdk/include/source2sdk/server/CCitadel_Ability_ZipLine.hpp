@@ -23,7 +23,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1040
+    // Size: 0xfb0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "GameTime_t m_flTimeStartZipping"
@@ -41,65 +41,70 @@ namespace source2sdk::server
     // static metadata: MNetworkVarNames "int m_iAttachedZipLineLane"
     // static metadata: MNetworkVarNames "bool m_bDroppedFromZipline"
     // static metadata: MNetworkVarNames "Vector m_vAttachZipLineOffset"
+    // static metadata: MNetworkVarNames "float m_flZiplineAirDrag"
     #pragma pack(push, 1)
     class CCitadel_Ability_ZipLine : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xae8[0x4d0]; // 0xae8
-        entity2::GameTime_t m_flActivatePressTime; // 0xfb8        
-        bool m_bThinking; // 0xfbc        
-        bool m_bMoveCollidedPushUp; // 0xfbd        
-        [[maybe_unused]] std::uint8_t pad_0xfbe[0x6]; // 0xfbe
+        [[maybe_unused]] std::uint8_t pad_0xb00[0x3f0]; // 0xb00
+        entity2::GameTime_t m_flActivatePressTime; // 0xef0        
+        bool m_bThinking; // 0xef4        
+        bool m_bMoveCollidedPushUp; // 0xef5        
+        [[maybe_unused]] std::uint8_t pad_0xef6[0x36]; // 0xef6
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flTimeStartZipping; // 0xfc4        
+        entity2::GameTime_t m_flTimeStartZipping; // 0xf2c        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flTimeForKnockdownProtection; // 0xfc8        
+        entity2::GameTime_t m_flTimeForKnockdownProtection; // 0xf30        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flTimeStopZipping; // 0xfcc        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flTimeStopZipping; // 0xf34        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        float m_flCasterSpeed; // 0xfd0        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        float m_flCasterSpeed; // 0xf38        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        client::CNetworkVelocityVector m_vecInitialVel; // 0xfd4        
-        [[maybe_unused]] std::uint8_t pad_0xffc[0xc]; // 0xffc
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        client::CNetworkVelocityVector m_vecInitialVel; // 0xf3c        
+        [[maybe_unused]] std::uint8_t pad_0xf64[0xc]; // 0xf64
         // metadata: MNetworkEnable
-        Vector m_vecAttachPoint; // 0x1008        
+        Vector m_vecAttachPoint; // 0xf70        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
         // m_pPrevNode has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_pPrevNode;
-        char m_pPrevNode[0x4]; // 0x1014        
+        char m_pPrevNode[0x4]; // 0xf7c        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
         // m_pNextNode has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_pNextNode;
-        char m_pNextNode[0x4]; // 0x1018        
+        char m_pNextNode[0x4]; // 0xf80        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flTimeEnterState; // 0x101c        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flTimeEnterState; // 0xf84        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flLatchTime; // 0x1020        
+        entity2::GameTime_t m_flLatchTime; // 0xf88        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flDamagedTime; // 0x1024        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flDamagedTime; // 0xf8c        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "ZiplingAttachStateChanged"
-        client::EAttachState_t m_eAttachState; // 0x1028        
+        client::EAttachState_t m_eAttachState; // 0xf90        
         // metadata: MNetworkEnable
-        int32_t m_iAttachedZipLineLane; // 0x102c        
+        int32_t m_iAttachedZipLineLane; // 0xf94        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool m_bDroppedFromZipline; // 0x1030        
-        modellib::AttachmentHandle_t m_hAttachZipLine; // 0x1031        
-        [[maybe_unused]] std::uint8_t pad_0x1032[0x2]; // 0x1032
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bDroppedFromZipline; // 0xf98        
+        modellib::AttachmentHandle_t m_hAttachZipLine; // 0xf99        
+        [[maybe_unused]] std::uint8_t pad_0xf9a[0x2]; // 0xf9a
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        Vector m_vAttachZipLineOffset; // 0x1034        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        Vector m_vAttachZipLineOffset; // 0xf9c        
+        // metadata: MNetworkEnable
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        float m_flZiplineAirDrag; // 0xfa8        
+        [[maybe_unused]] std::uint8_t pad_0xfac[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_ZipLine because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_ZipLine) == 0x1040);
+    static_assert(sizeof(CCitadel_Ability_ZipLine) == 0xfb0);
 };

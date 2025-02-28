@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xe50
+    // Size: 0xe68
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bWantsSlow"
@@ -28,27 +28,27 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool m_bWantsSlow; // 0xc70        
-        [[maybe_unused]] std::uint8_t pad_0xc71[0x3]; // 0xc71
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bWantsSlow; // 0xc50        
+        [[maybe_unused]] std::uint8_t pad_0xc51[0x3]; // 0xc51
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flLatchedTimeScaleFracChangeTime; // 0xc74        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flLatchedTimeScaleFracChangeTime; // 0xc54        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        float m_flLatchedTimeScaleFrac; // 0xc78        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        float m_flLatchedTimeScaleFrac; // 0xc58        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flSpeedBoostEndTime; // 0xc7c        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flSpeedBoostEndTime; // 0xc5c        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flShotTimeScaleEndTime; // 0xc80        
-        [[maybe_unused]] std::uint8_t pad_0xc84[0x4]; // 0xc84
-        float m_flStoredPowerPct; // 0xc88        
-        [[maybe_unused]] std::uint8_t pad_0xc8c[0x1c4];
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flShotTimeScaleEndTime; // 0xc60        
+        [[maybe_unused]] std::uint8_t pad_0xc64[0x4]; // 0xc64
+        float m_flStoredPowerPct; // 0xc68        
+        [[maybe_unused]] std::uint8_t pad_0xc6c[0x1fc];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Chrono_KineticCarbine because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Chrono_KineticCarbine) == 0xe50);
+    static_assert(sizeof(CCitadel_Ability_Chrono_KineticCarbine) == 0xe68);
 };

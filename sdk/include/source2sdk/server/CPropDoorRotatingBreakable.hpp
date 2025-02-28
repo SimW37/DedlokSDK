@@ -14,19 +14,19 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xf98
+    // Size: 0x1080
     // Has VTable
     #pragma pack(push, 1)
     class CPropDoorRotatingBreakable : public server::CPropDoorRotating
     {
     public:
-        bool m_bBreakable; // 0xf78        
-        bool m_isAbleToCloseAreaPortals; // 0xf79        
-        [[maybe_unused]] std::uint8_t pad_0xf7a[0x2]; // 0xf7a
-        int32_t m_currentDamageState; // 0xf7c        
+        bool m_bBreakable; // 0x1060        
+        bool m_isAbleToCloseAreaPortals; // 0x1061        
+        [[maybe_unused]] std::uint8_t pad_0x1062[0x2]; // 0x1062
+        int32_t m_currentDamageState; // 0x1064        
         // m_damageStates has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CUtlSymbolLarge> m_damageStates;
-        char m_damageStates[0x18]; // 0xf80        
+        char m_damageStates[0x18]; // 0x1068        
         
         // Datamap fields:
         // void InputSetUnbreakable; // 0x0
@@ -35,5 +35,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPropDoorRotatingBreakable because it is not a standard-layout class
-    static_assert(sizeof(CPropDoorRotatingBreakable) == 0xf98);
+    static_assert(sizeof(CPropDoorRotatingBreakable) == 0x1080);
 };

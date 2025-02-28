@@ -35,9 +35,6 @@ namespace source2sdk::soundsystem_voicecontainers
         // CUtlVector<CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>> m_grainResources;
         char m_grainResources[0x18]; // 0xd8        
         [[maybe_unused]] std::uint8_t pad_0xf0[0xf8];
-        
-        // Static fields:
-        static int32_t &Get_nInstancesFixed() {return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CVoiceContainerRandomSampler")->GetStaticFields()[0]->m_pInstance);};
     };
     #pragma pack(pop)
     

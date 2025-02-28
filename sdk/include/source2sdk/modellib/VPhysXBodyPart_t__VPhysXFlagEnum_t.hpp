@@ -8,7 +8,7 @@
 
 namespace source2sdk::modellib
 {
-    // Enumerator count: 5
+    // Enumerator count: 6
     // Alignment: 4
     // Size: 0x4
     enum class VPhysXBodyPart_t__VPhysXFlagEnum_t : std::uint32_t
@@ -18,5 +18,6 @@ namespace source2sdk::modellib
         FLAG_JOINT = 0x4,
         FLAG_MASS = 0x8,
         FLAG_ALWAYS_DYNAMIC_ON_CLIENT = 0x10,
+        FLAG_DISABLE_CCD = 0x20,
     };
 };

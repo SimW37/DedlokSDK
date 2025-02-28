@@ -1,5 +1,6 @@
 #pragma once
 #include "source2sdk/server/CBaseEntity.hpp"
+#include "source2sdk/server/CPathQueryComponent.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -16,25 +17,33 @@ namespace source2sdk::server
 
 namespace source2sdk::server
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
+    // Registered alignment: 0x10
+    // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0x550
+    // Size: 0x620
     // Has VTable
+    // 
+    // static metadata: MNetworkVarNames "CPathQueryComponent::Storage_t m_CPathQueryComponent"
     #pragma pack(push, 1)
     class CPathMover : public server::CBaseEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x4d8[0x8]; // 0x4d8
+        [[maybe_unused]] std::uint8_t pad_0x4e0[0x10]; // 0x4e0
+        // metadata: MNetworkEnable
+        // metadata: MNetworkUserGroup "CPathQueryComponent"
+        // metadata: MNetworkAlias "CPathQueryComponent"
+        // metadata: MNetworkTypeAlias "CPathQueryComponent"
+        server::CPathQueryComponent m_CPathQueryComponent; // 0x4f0        
         // m_vecPathNodes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CHandle<server::CMoverPathNode>> m_vecPathNodes;
-        char m_vecPathNodes[0x18]; // 0x4e0        
-        float m_flPathLength; // 0x4f8        
-        bool m_bClosedLoop; // 0x4fc        
-        [[maybe_unused]] std::uint8_t pad_0x4fd[0x53];
+        char m_vecPathNodes[0x18]; // 0x580        
+        [[maybe_unused]] std::uint8_t pad_0x598[0x8]; // 0x598
+        CTransform m_xInitialPathWorldToLocal; // 0x5a0        
+        bool m_bClosedLoop; // 0x5c0        
+        [[maybe_unused]] std::uint8_t pad_0x5c1[0x5f];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPathMover because it is not a standard-layout class
-    static_assert(sizeof(CPathMover) == 0x550);
+    static_assert(sizeof(CPathMover) == 0x620);
 };

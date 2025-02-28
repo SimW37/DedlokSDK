@@ -29,7 +29,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x9ee0
+    // Size: 0x9ee8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bFreezePeriod"
@@ -41,12 +41,16 @@ namespace source2sdk::client
     // static metadata: MNetworkVarNames "EHANDLE m_hTowerSapphire"
     // static metadata: MNetworkVarNames "bool m_bEnemyInAmberBase"
     // static metadata: MNetworkVarNames "bool m_bEnemyInSapphireBase"
+    // static metadata: MNetworkVarNames "bool m_bEnemyPlayersInAmberBase"
+    // static metadata: MNetworkVarNames "bool m_bEnemyPlayersInSapphireBase"
     // static metadata: MNetworkVarNames "Vector m_vMinimapMins"
     // static metadata: MNetworkVarNames "Vector m_vMinimapMaxs"
     // static metadata: MNetworkVarNames "bool m_bMatchSafeToAbandon"
+    // static metadata: MNetworkVarNames "bool m_bMatchNotScored"
     // static metadata: MNetworkVarNames "bool m_bNoDeathEnabled"
     // static metadata: MNetworkVarNames "bool m_bFastCooldownsEnabled"
     // static metadata: MNetworkVarNames "bool m_bStaminaCooldownsEnabled"
+    // static metadata: MNetworkVarNames "bool m_bUnlimitedAmmoEnabled"
     // static metadata: MNetworkVarNames "bool m_bInfiniteResourcesEnabled"
     // static metadata: MNetworkVarNames "bool m_bFlexSlotsForcedUnlocked"
     // static metadata: MNetworkVarNames "ECitadelMatchMode m_eMatchMode"
@@ -63,7 +67,7 @@ namespace source2sdk::client
     // static metadata: MNetworkVarNames "int m_eGGTeam"
     // static metadata: MNetworkVarNames "GameTime_t m_flGGEndsAtTime"
     // static metadata: MNetworkVarNames "MatchID_t m_unMatchID"
-    // static metadata: MNetworkVarNames "int m_nExperimentalGameplayState"
+    // static metadata: MNetworkVarNames "CUtlString m_sGameplayExperiment"
     // static metadata: MNetworkVarNames "GameTime_t m_flHeroDiedTime"
     #pragma pack(push, 1)
     class C_CitadelGameRules : public client::C_TeamplayRules
@@ -93,7 +97,10 @@ namespace source2sdk::client
         bool m_bEnemyInAmberBase; // 0x74        
         // metadata: MNetworkEnable
         bool m_bEnemyInSapphireBase; // 0x75        
-        [[maybe_unused]] std::uint8_t pad_0x76[0x2]; // 0x76
+        // metadata: MNetworkEnable
+        bool m_bEnemyPlayersInAmberBase; // 0x76        
+        // metadata: MNetworkEnable
+        bool m_bEnemyPlayersInSapphireBase; // 0x77        
         // metadata: MNetworkEnable
         Vector m_vMinimapMins; // 0x78        
         // metadata: MNetworkEnable
@@ -101,16 +108,19 @@ namespace source2sdk::client
         // metadata: MNetworkEnable
         bool m_bMatchSafeToAbandon; // 0x90        
         // metadata: MNetworkEnable
-        bool m_bNoDeathEnabled; // 0x91        
+        bool m_bMatchNotScored; // 0x91        
         // metadata: MNetworkEnable
-        bool m_bFastCooldownsEnabled; // 0x92        
+        bool m_bNoDeathEnabled; // 0x92        
         // metadata: MNetworkEnable
-        bool m_bStaminaCooldownsEnabled; // 0x93        
+        bool m_bFastCooldownsEnabled; // 0x93        
         // metadata: MNetworkEnable
-        bool m_bInfiniteResourcesEnabled; // 0x94        
+        bool m_bStaminaCooldownsEnabled; // 0x94        
         // metadata: MNetworkEnable
-        bool m_bFlexSlotsForcedUnlocked; // 0x95        
-        [[maybe_unused]] std::uint8_t pad_0x96[0x2]; // 0x96
+        bool m_bUnlimitedAmmoEnabled; // 0x95        
+        // metadata: MNetworkEnable
+        bool m_bInfiniteResourcesEnabled; // 0x96        
+        // metadata: MNetworkEnable
+        bool m_bFlexSlotsForcedUnlocked; // 0x97        
         // metadata: MNetworkEnable
         client::ECitadelMatchMode m_eMatchMode; // 0x98        
         // metadata: MNetworkEnable
@@ -165,17 +175,17 @@ namespace source2sdk::client
         // metadata: MNetworkEnable
         client::MatchID_t m_unMatchID; // 0x9ea0        
         // metadata: MNetworkEnable
-        int32_t m_nExperimentalGameplayState; // 0x9ea8        
-        int32_t m_nPlayerDeathEventID; // 0x9eac        
-        int32_t m_nReplayChangedEvent; // 0x9eb0        
-        int32_t m_nGameOverEvent; // 0x9eb4        
-        [[maybe_unused]] std::uint8_t pad_0x9eb8[0x20]; // 0x9eb8
+        CUtlString m_sGameplayExperiment; // 0x9ea8        
+        int32_t m_nPlayerDeathEventID; // 0x9eb0        
+        int32_t m_nReplayChangedEvent; // 0x9eb4        
+        int32_t m_nGameOverEvent; // 0x9eb8        
+        [[maybe_unused]] std::uint8_t pad_0x9ebc[0x24]; // 0x9ebc
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flHeroDiedTime; // 0x9ed8        
-        [[maybe_unused]] std::uint8_t pad_0x9edc[0x4];
+        entity2::GameTime_t m_flHeroDiedTime; // 0x9ee0        
+        [[maybe_unused]] std::uint8_t pad_0x9ee4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_CitadelGameRules because it is not a standard-layout class
-    static_assert(sizeof(C_CitadelGameRules) == 0x9ee0);
+    static_assert(sizeof(C_CitadelGameRules) == 0x9ee8);
 };

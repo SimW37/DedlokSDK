@@ -8,7 +8,7 @@
 
 namespace source2sdk::particles
 {
-    // Enumerator count: 9
+    // Enumerator count: 12
     // Alignment: 4
     // Size: 0x4
     enum class ScalarExpressionType_t : std::uint32_t
@@ -31,5 +31,11 @@ namespace source2sdk::particles
         SCALAR_EXPRESSION_MAX = 0x6,
         // MPropertyFriendlyName "Mod"
         SCALAR_EXPRESSION_MOD = 0x7,
+        // MPropertyFriendlyName "Equal"
+        SCALAR_EXPRESSION_EQUAL = 0x8,
+        // MPropertyFriendlyName "Greater Than"
+        SCALAR_EXPRESSION_GT = 0x9,
+        // MPropertyFriendlyName "Less Than"
+        SCALAR_EXPRESSION_LT = 0xa,
     };
 };

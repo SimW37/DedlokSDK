@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc48
+    // Size: 0xc60
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "float m_flDissipationRate"
@@ -27,27 +27,27 @@ namespace source2sdk::server
     class CCitadel_Ability_Tokamak_HeatSinks_Inherent : public server::CCitadelBaseAbility
     {
     public:
-        int32_t m_nIntervalsElapsed; // 0xae8        
-        entity2::GameTime_t m_NextShotTime; // 0xaec        
+        int32_t m_nIntervalsElapsed; // 0xb00        
+        entity2::GameTime_t m_NextShotTime; // 0xb04        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        float m_flDissipationRate; // 0xaf0        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        float m_flDissipationRate; // 0xb08        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flDissipationTime; // 0xaf4        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flDissipationTime; // 0xb0c        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flHeatTime; // 0xaf8        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flHeatTime; // 0xb10        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flOverheatSoundTime; // 0xafc        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flOverheatSoundTime; // 0xb14        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool m_bOverheating; // 0xb00        
-        [[maybe_unused]] std::uint8_t pad_0xb01[0x147];
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bOverheating; // 0xb18        
+        [[maybe_unused]] std::uint8_t pad_0xb19[0x147];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Tokamak_HeatSinks_Inherent because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Tokamak_HeatSinks_Inherent) == 0xc48);
+    static_assert(sizeof(CCitadel_Ability_Tokamak_HeatSinks_Inherent) == 0xc60);
 };

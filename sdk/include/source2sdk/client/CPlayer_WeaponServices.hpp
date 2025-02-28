@@ -31,6 +31,7 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
+        // metadata: MNetworkChangeCallback "OnMyWeaponsChanged"
         // m_hMyWeapons has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // C_NetworkUtlVectorBase<CHandle<client::C_BasePlayerWeapon>> m_hMyWeapons;
         char m_hMyWeapons[0x18]; // 0x40        

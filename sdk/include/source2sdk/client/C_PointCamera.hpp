@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x5b8
+    // Size: 0x570
     // Has VTable
     // 
     // static metadata: MEntityAllowsPortraitWorldSpawn
@@ -45,58 +45,58 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        float m_FOV; // 0x558        
+        float m_FOV; // 0x510        
         // metadata: MNetworkEnable
-        float m_Resolution; // 0x55c        
+        float m_Resolution; // 0x514        
         // metadata: MNetworkEnable
-        bool m_bFogEnable; // 0x560        
+        bool m_bFogEnable; // 0x518        
         // metadata: MNetworkEnable
-        Color m_FogColor; // 0x561        
+        Color m_FogColor; // 0x519        
+        [[maybe_unused]] std::uint8_t pad_0x51d[0x3]; // 0x51d
+        // metadata: MNetworkEnable
+        float m_flFogStart; // 0x520        
+        // metadata: MNetworkEnable
+        float m_flFogEnd; // 0x524        
+        // metadata: MNetworkEnable
+        float m_flFogMaxDensity; // 0x528        
+        // metadata: MNetworkEnable
+        bool m_bActive; // 0x52c        
+        // metadata: MNetworkEnable
+        bool m_bUseScreenAspectRatio; // 0x52d        
+        [[maybe_unused]] std::uint8_t pad_0x52e[0x2]; // 0x52e
+        // metadata: MNetworkEnable
+        float m_flAspectRatio; // 0x530        
+        // metadata: MNetworkEnable
+        bool m_bNoSky; // 0x534        
+        [[maybe_unused]] std::uint8_t pad_0x535[0x3]; // 0x535
+        // metadata: MNetworkEnable
+        float m_fBrightness; // 0x538        
+        // metadata: MNetworkEnable
+        float m_flZFar; // 0x53c        
+        // metadata: MNetworkEnable
+        float m_flZNear; // 0x540        
+        // metadata: MNetworkEnable
+        bool m_bCanHLTVUse; // 0x544        
+        // metadata: MNetworkEnable
+        bool m_bAlignWithParent; // 0x545        
+        // metadata: MNetworkEnable
+        bool m_bDofEnabled; // 0x546        
+        [[maybe_unused]] std::uint8_t pad_0x547[0x1]; // 0x547
+        // metadata: MNetworkEnable
+        float m_flDofNearBlurry; // 0x548        
+        // metadata: MNetworkEnable
+        float m_flDofNearCrisp; // 0x54c        
+        // metadata: MNetworkEnable
+        float m_flDofFarCrisp; // 0x550        
+        // metadata: MNetworkEnable
+        float m_flDofFarBlurry; // 0x554        
+        // metadata: MNetworkEnable
+        float m_flDofTiltToGround; // 0x558        
+        float m_TargetFOV; // 0x55c        
+        float m_DegreesPerSecond; // 0x560        
+        bool m_bIsOn; // 0x564        
         [[maybe_unused]] std::uint8_t pad_0x565[0x3]; // 0x565
-        // metadata: MNetworkEnable
-        float m_flFogStart; // 0x568        
-        // metadata: MNetworkEnable
-        float m_flFogEnd; // 0x56c        
-        // metadata: MNetworkEnable
-        float m_flFogMaxDensity; // 0x570        
-        // metadata: MNetworkEnable
-        bool m_bActive; // 0x574        
-        // metadata: MNetworkEnable
-        bool m_bUseScreenAspectRatio; // 0x575        
-        [[maybe_unused]] std::uint8_t pad_0x576[0x2]; // 0x576
-        // metadata: MNetworkEnable
-        float m_flAspectRatio; // 0x578        
-        // metadata: MNetworkEnable
-        bool m_bNoSky; // 0x57c        
-        [[maybe_unused]] std::uint8_t pad_0x57d[0x3]; // 0x57d
-        // metadata: MNetworkEnable
-        float m_fBrightness; // 0x580        
-        // metadata: MNetworkEnable
-        float m_flZFar; // 0x584        
-        // metadata: MNetworkEnable
-        float m_flZNear; // 0x588        
-        // metadata: MNetworkEnable
-        bool m_bCanHLTVUse; // 0x58c        
-        // metadata: MNetworkEnable
-        bool m_bAlignWithParent; // 0x58d        
-        // metadata: MNetworkEnable
-        bool m_bDofEnabled; // 0x58e        
-        [[maybe_unused]] std::uint8_t pad_0x58f[0x1]; // 0x58f
-        // metadata: MNetworkEnable
-        float m_flDofNearBlurry; // 0x590        
-        // metadata: MNetworkEnable
-        float m_flDofNearCrisp; // 0x594        
-        // metadata: MNetworkEnable
-        float m_flDofFarCrisp; // 0x598        
-        // metadata: MNetworkEnable
-        float m_flDofFarBlurry; // 0x59c        
-        // metadata: MNetworkEnable
-        float m_flDofTiltToGround; // 0x5a0        
-        float m_TargetFOV; // 0x5a4        
-        float m_DegreesPerSecond; // 0x5a8        
-        bool m_bIsOn; // 0x5ac        
-        [[maybe_unused]] std::uint8_t pad_0x5ad[0x3]; // 0x5ad
-        client::C_PointCamera* m_pNext; // 0x5b0        
+        client::C_PointCamera* m_pNext; // 0x568        
         
         // Datamap fields:
         // CUtlSymbolLarge InputChangeFOV; // 0x0
@@ -116,5 +116,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_PointCamera because it is not a standard-layout class
-    static_assert(sizeof(C_PointCamera) == 0x5b8);
+    static_assert(sizeof(C_PointCamera) == 0x570);
 };

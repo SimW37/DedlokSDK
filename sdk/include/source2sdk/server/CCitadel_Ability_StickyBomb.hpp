@@ -1,4 +1,5 @@
 #pragma once
+#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/server/CCitadelBaseAbility.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -11,24 +12,37 @@
 
 namespace source2sdk::server
 {
+    class CBaseEntity;
+};
+
+namespace source2sdk::server
+{
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xbd8
+    // Size: 0xc28
     // Has VTable
     // 
-    // static metadata: MNetworkVarNames "int m_nPlayersHit"
+    // static metadata: MNetworkVarNames "EHANDLE m_hAutoTarget"
+    // static metadata: MNetworkVarNames "GameTime_t m_flHookEndTime"
+    // static metadata: MNetworkVarNames "float m_flBombBonus"
     #pragma pack(push, 1)
     class CCitadel_Ability_StickyBomb : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xae8[0x8]; // 0xae8
+        [[maybe_unused]] std::uint8_t pad_0xb00[0x4]; // 0xb00
         // metadata: MNetworkEnable
-        int32_t m_nPlayersHit; // 0xaf0        
-        [[maybe_unused]] std::uint8_t pad_0xaf4[0xe4];
+        // m_hAutoTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CHandle<server::CBaseEntity> m_hAutoTarget;
+        char m_hAutoTarget[0x4]; // 0xb04        
+        // metadata: MNetworkEnable
+        entity2::GameTime_t m_flHookEndTime; // 0xb08        
+        // metadata: MNetworkEnable
+        float m_flBombBonus; // 0xb0c        
+        [[maybe_unused]] std::uint8_t pad_0xb10[0x118];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_StickyBomb because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_StickyBomb) == 0xbd8);
+    static_assert(sizeof(CCitadel_Ability_StickyBomb) == 0xc28);
 };

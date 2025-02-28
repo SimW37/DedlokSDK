@@ -23,8 +23,8 @@ namespace source2sdk::client
         CUtlString m_strLaneName; // 0x0        
         CUtlString m_strCSSClass; // 0x8        
         Color m_Color; // 0x10        
-        Color m_MinimapColorOverride; // 0x14        
-        Color m_MinimapZiplineColorOverride; // 0x18        
+        Color m_MinimapZiplineColorOverride; // 0x14        
+        Color m_Color4Lanes; // 0x18        
         [[maybe_unused]] std::uint8_t pad_0x1c[0x4];
     };
     #pragma pack(pop)
@@ -32,8 +32,8 @@ namespace source2sdk::client
     static_assert(offsetof(LaneDesc_t, m_strLaneName) == 0x0);
     static_assert(offsetof(LaneDesc_t, m_strCSSClass) == 0x8);
     static_assert(offsetof(LaneDesc_t, m_Color) == 0x10);
-    static_assert(offsetof(LaneDesc_t, m_MinimapColorOverride) == 0x14);
-    static_assert(offsetof(LaneDesc_t, m_MinimapZiplineColorOverride) == 0x18);
+    static_assert(offsetof(LaneDesc_t, m_MinimapZiplineColorOverride) == 0x14);
+    static_assert(offsetof(LaneDesc_t, m_Color4Lanes) == 0x18);
     
     static_assert(sizeof(LaneDesc_t) == 0x20);
 };

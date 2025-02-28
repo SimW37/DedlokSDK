@@ -17,7 +17,7 @@ namespace source2sdk::animgraphlib
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0x150
+    // Size: 0x160
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -25,18 +25,17 @@ namespace source2sdk::animgraphlib
     class CLookAtUpdateNode : public animgraphlib::CUnaryUpdateNode
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x68[0x8]; // 0x68
         animgraphlib::LookAtOpFixedSettings_t m_opFixedSettings; // 0x70        
-        [[maybe_unused]] std::uint8_t pad_0x130[0x8]; // 0x130
-        animgraphlib::AnimVectorSource m_target; // 0x138        
-        animgraphlib::CAnimParamHandle m_paramIndex; // 0x13c        
-        animgraphlib::CAnimParamHandle m_weightParamIndex; // 0x13e        
-        bool m_bResetChild; // 0x140        
-        bool m_bLockWhenWaning; // 0x141        
-        [[maybe_unused]] std::uint8_t pad_0x142[0xe];
+        [[maybe_unused]] std::uint8_t pad_0x140[0x8]; // 0x140
+        animgraphlib::AnimVectorSource m_target; // 0x148        
+        animgraphlib::CAnimParamHandle m_paramIndex; // 0x14c        
+        animgraphlib::CAnimParamHandle m_weightParamIndex; // 0x14e        
+        bool m_bResetChild; // 0x150        
+        bool m_bLockWhenWaning; // 0x151        
+        [[maybe_unused]] std::uint8_t pad_0x152[0xe];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CLookAtUpdateNode because it is not a standard-layout class
-    static_assert(sizeof(CLookAtUpdateNode) == 0x150);
+    static_assert(sizeof(CLookAtUpdateNode) == 0x160);
 };

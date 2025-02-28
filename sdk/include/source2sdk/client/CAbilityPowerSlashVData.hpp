@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1a50
+    // Size: 0x1ae8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -24,46 +24,47 @@ namespace source2sdk::client
     class CAbilityPowerSlashVData : public client::CCitadelYamatoBaseVData
     {
     public:
-        float m_flAirDrag; // 0x1530        
-        float m_flMaxPowerPadding; // 0x1534        
-        float m_flEffectGroundTrace; // 0x1538        
-        float m_flWhizbyMaxRange; // 0x153c        
-        float m_flStartPosTestCapsuleLength; // 0x1540        
+        float m_flAirDrag; // 0x15d0        
+        float m_flMaxPowerPadding; // 0x15d4        
+        float m_flEffectGroundTrace; // 0x15d8        
+        float m_flWhizbyMaxRange; // 0x15dc        
+        float m_flStartPosTestCapsuleLength; // 0x15e0        
+        float m_flCoverLOSBackDist; // 0x15e4        
         // metadata: MPropertyDescription "Visual offset for the origin of the long-slash particle effect"
-        Vector m_vecLongEffectOffset; // 0x1544        
+        Vector m_vecLongEffectOffset; // 0x15e8        
+        [[maybe_unused]] std::uint8_t pad_0x15f4[0x4]; // 0x15f4
         // metadata: MPropertyStartGroup "Visuals"
         // m_PowerSlashParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PowerSlashParticle;
-        char m_PowerSlashParticle[0xe0]; // 0x1550        
+        char m_PowerSlashParticle[0xe0]; // 0x15f8        
         // m_PowerSlashFullParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PowerSlashFullParticle;
-        char m_PowerSlashFullParticle[0xe0]; // 0x1630        
+        char m_PowerSlashFullParticle[0xe0]; // 0x16d8        
         // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-        char m_ImpactParticle[0xe0]; // 0x1710        
+        char m_ImpactParticle[0xe0]; // 0x17b8        
         // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-        char m_CastParticle[0xe0]; // 0x17f0        
+        char m_CastParticle[0xe0]; // 0x1898        
         // m_PowerUpParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PowerUpParticle;
-        char m_PowerUpParticle[0xe0]; // 0x18d0        
+        char m_PowerUpParticle[0xe0]; // 0x1978        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strStartSound; // 0x19b0        
-        CSoundEventName m_strDamageImpactSound; // 0x19c0        
-        CSoundEventName m_strDamageImpactVictimSound; // 0x19d0        
-        CSoundEventName m_strPowerUp1Sounds; // 0x19e0        
-        CSoundEventName m_strPowerUp2Sounds; // 0x19f0        
-        CSoundEventName m_strPowerUp3Sounds; // 0x1a00        
-        CSoundEventName m_strWhizbySound; // 0x1a10        
-        CSoundEventName m_strSlashSound; // 0x1a20        
-        CSoundEventName m_strSlashFullSound; // 0x1a30        
+        CSoundEventName m_strStartSound; // 0x1a58        
+        CSoundEventName m_strHitConfirmSound; // 0x1a68        
+        CSoundEventName m_strPowerUp1Sounds; // 0x1a78        
+        CSoundEventName m_strPowerUp2Sounds; // 0x1a88        
+        CSoundEventName m_strPowerUp3Sounds; // 0x1a98        
+        CSoundEventName m_strWhizbySound; // 0x1aa8        
+        CSoundEventName m_strSlashSound; // 0x1ab8        
+        CSoundEventName m_strSlashFullSound; // 0x1ac8        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CBaseModifier> m_SlowModifier;
-        char m_SlowModifier[0x10]; // 0x1a40        
+        char m_SlowModifier[0x10]; // 0x1ad8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbilityPowerSlashVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityPowerSlashVData) == 0x1a50);
+    static_assert(sizeof(CAbilityPowerSlashVData) == 0x1ae8);
 };

@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1750
+    // Size: 0x17f0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,16 +26,16 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_DeployParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeployParticle;
-        char m_DeployParticle[0xe0]; // 0x1570        
+        char m_DeployParticle[0xe0]; // 0x1610        
         // m_RespawnParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RespawnParticle;
-        char m_RespawnParticle[0xe0]; // 0x1650        
+        char m_RespawnParticle[0xe0]; // 0x16f0        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_sDeploySound; // 0x1730        
-        CSoundEventName m_sRespawnSound; // 0x1740        
+        CSoundEventName m_sDeploySound; // 0x17d0        
+        CSoundEventName m_sRespawnSound; // 0x17e0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_ArmorUpgrade_PersonalRejuvenatorVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_ArmorUpgrade_PersonalRejuvenatorVData) == 0x1750);
+    static_assert(sizeof(CCitadel_ArmorUpgrade_PersonalRejuvenatorVData) == 0x17f0);
 };

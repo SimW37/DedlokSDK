@@ -26,7 +26,7 @@ namespace source2sdk::server
         [[maybe_unused]] std::uint8_t pad_0x70[0x8];
         
         // Datamap fields:
-        // CHandle< CBaseEntity > m_hNavLinkAreaEntity; // 0x70
+        // CHandle< CBaseEntity > m_hNavLinkEntity; // 0x70
     };
     #pragma pack(pop)
     

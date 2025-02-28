@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1698
+    // Size: 0x1740
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,29 +27,32 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Modifiers"
         // m_SelfModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_SelfModifier;
-        char m_SelfModifier[0x10]; // 0x1528        
+        char m_SelfModifier[0x10]; // 0x15c8        
         // m_TargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_TargetModifier;
-        char m_TargetModifier[0x10]; // 0x1538        
+        char m_TargetModifier[0x10]; // 0x15d8        
         // m_BulletAmpModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_BulletAmpModifier;
-        char m_BulletAmpModifier[0x10]; // 0x1548        
+        char m_BulletAmpModifier[0x10]; // 0x15e8        
         // m_ShieldModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_ShieldModifier;
-        char m_ShieldModifier[0x10]; // 0x1558        
+        char m_ShieldModifier[0x10]; // 0x15f8        
         // metadata: MPropertyStartGroup "Visuals"
         // m_HookOutParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HookOutParticle;
-        char m_HookOutParticle[0xe0]; // 0x1568        
+        char m_HookOutParticle[0xe0]; // 0x1608        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strHookSuccessSound; // 0x1648        
-        CSoundEventName m_strHookAllySound; // 0x1658        
-        CSoundEventName m_strHookMissSound; // 0x1668        
-        CSoundEventName m_strHookImpactGeoSound; // 0x1678        
-        CSoundEventName m_SelfBuffCastSound; // 0x1688        
+        CSoundEventName m_strHookSuccessSound; // 0x16e8        
+        CSoundEventName m_strHookAllySound; // 0x16f8        
+        CSoundEventName m_strHookMissSound; // 0x1708        
+        CSoundEventName m_strHookImpactGeoSound; // 0x1718        
+        CSoundEventName m_SelfBuffCastSound; // 0x1728        
+        // metadata: MPropertyStartGroup "Gameplay"
+        float m_flTrooperHitRadius; // 0x1738        
+        [[maybe_unused]] std::uint8_t pad_0x173c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbilityHookVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityHookVData) == 0x1698);
+    static_assert(sizeof(CAbilityHookVData) == 0x1740);
 };

@@ -20,7 +20,7 @@ namespace source2sdk::server
     class CCitadel_Modifier_BoxingGlove : public server::CCitadel_Modifier_BaseEventProc
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x170[0xe0];
+        [[maybe_unused]] std::uint8_t pad_0x168[0xe8];
         // No schema binary for binding
     };
     #pragma pack(pop)

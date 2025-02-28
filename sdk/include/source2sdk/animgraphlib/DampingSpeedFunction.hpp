@@ -8,7 +8,7 @@
 
 namespace source2sdk::animgraphlib
 {
-    // Enumerator count: 3
+    // Enumerator count: 4
     // Alignment: 4
     // Size: 0x4
     enum class DampingSpeedFunction : std::uint32_t
@@ -16,5 +16,6 @@ namespace source2sdk::animgraphlib
         NoDamping = 0x0,
         Constant = 0x1,
         Spring = 0x2,
+        AsymmetricSpring = 0x3,
     };
 };

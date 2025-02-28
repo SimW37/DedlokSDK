@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x908
+    // Size: 0x998
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,27 +27,38 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_AOEParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEParticle;
-        char m_AOEParticle[0xe0]; // 0x5f8        
+        char m_AOEParticle[0xe0]; // 0x658        
         // m_EnabledParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnabledParticle;
-        char m_EnabledParticle[0xe0]; // 0x6d8        
+        char m_EnabledParticle[0xe0]; // 0x738        
         // m_DrainParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DrainParticle;
-        char m_DrainParticle[0xe0]; // 0x7b8        
+        char m_DrainParticle[0xe0]; // 0x818        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strEnabledSound; // 0x898        
-        CSoundEventName m_strEnabledLoopSound; // 0x8a8        
-        CSoundEventName m_strDisabledSound; // 0x8b8        
-        CSoundEventName m_strLaserHitSound; // 0x8c8        
-        CSoundEventName m_strLaserStartSound; // 0x8d8        
-        CSoundEventName m_strLaserLoopSound; // 0x8e8        
+        CSoundEventName m_strEnabledSound; // 0x8f8        
+        CSoundEventName m_strEnabledLoopSound; // 0x908        
+        CSoundEventName m_strDisabledSound; // 0x918        
+        CSoundEventName m_strLaserHitSound; // 0x928        
+        CSoundEventName m_strLaserStartSound; // 0x938        
+        CSoundEventName m_strLaserLoopSound; // 0x948        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_TargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_TargetModifier;
-        char m_TargetModifier[0x10]; // 0x8f8        
+        char m_TargetModifier[0x10]; // 0x958        
+        // m_RevealModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CEmbeddedSubclass<server::CCitadelModifier> m_RevealModifier;
+        char m_RevealModifier[0x10]; // 0x968        
+        // m_StatueInvis has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CEmbeddedSubclass<server::CCitadelModifier> m_StatueInvis;
+        char m_StatueInvis[0x10]; // 0x978        
+        // metadata: MPropertyStartGroup "GamePlay"
+        float m_flNewTargetAttackTime; // 0x988        
+        float m_flMinRevealTime; // 0x98c        
+        float m_flMinDebuffTime; // 0x990        
+        [[maybe_unused]] std::uint8_t pad_0x994[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Nano_PredatoryStatueVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Nano_PredatoryStatueVData) == 0x908);
+    static_assert(sizeof(CCitadel_Modifier_Nano_PredatoryStatueVData) == 0x998);
 };

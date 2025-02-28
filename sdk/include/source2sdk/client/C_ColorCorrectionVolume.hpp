@@ -1,5 +1,6 @@
 #pragma once
 #include "source2sdk/client/C_BaseTrigger.hpp"
+#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -14,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa60
+    // Size: 0xb70
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bEnabled"
@@ -26,25 +27,25 @@ namespace source2sdk::client
     class C_ColorCorrectionVolume : public client::C_BaseTrigger
     {
     public:
-        float m_LastEnterWeight; // 0x838        
-        float m_LastEnterTime; // 0x83c        
-        float m_LastExitWeight; // 0x840        
-        float m_LastExitTime; // 0x844        
+        float m_LastEnterWeight; // 0x948        
+        entity2::GameTime_t m_LastEnterTime; // 0x94c        
+        float m_LastExitWeight; // 0x950        
+        entity2::GameTime_t m_LastExitTime; // 0x954        
         // metadata: MNetworkEnable
-        bool m_bEnabled; // 0x848        
-        [[maybe_unused]] std::uint8_t pad_0x849[0x3]; // 0x849
+        bool m_bEnabled; // 0x958        
+        [[maybe_unused]] std::uint8_t pad_0x959[0x3]; // 0x959
         // metadata: MNetworkEnable
-        float m_MaxWeight; // 0x84c        
+        float m_MaxWeight; // 0x95c        
         // metadata: MNetworkEnable
-        float m_FadeDuration; // 0x850        
+        float m_FadeDuration; // 0x960        
         // metadata: MNetworkEnable
-        float m_Weight; // 0x854        
+        float m_Weight; // 0x964        
         // metadata: MNetworkEnable
-        char m_lookupFilename[512]; // 0x858        
-        [[maybe_unused]] std::uint8_t pad_0xa58[0x8];
+        char m_lookupFilename[512]; // 0x968        
+        [[maybe_unused]] std::uint8_t pad_0xb68[0x8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_ColorCorrectionVolume because it is not a standard-layout class
-    static_assert(sizeof(C_ColorCorrectionVolume) == 0xa60);
+    static_assert(sizeof(C_ColorCorrectionVolume) == 0xb70);
 };

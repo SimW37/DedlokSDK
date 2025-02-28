@@ -14,7 +14,7 @@ namespace source2sdk::smartprops
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x140
+    // Size: 0x180
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -34,9 +34,11 @@ namespace source2sdk::smartprops
         CSmartPropAttributeMaterialGroup m_MaterialGroupName; // 0xc0        
         // metadata: MPropertyDescription "Scale factor (may be non-uniform) to be applied directly to the model (in the model's local space)."
         CSmartPropAttributeVector m_vModelScale; // 0x100        
+        // metadata: MPropertyDescription "If enabled the model will be rendered as a detail object, which is faster for placing many small objects and has fade out functionality, but may have different lighting characteristics."
+        CSmartPropAttributeBool m_bDetailObject; // 0x140        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSmartPropElement_Model because it is not a standard-layout class
-    static_assert(sizeof(CSmartPropElement_Model) == 0x140);
+    static_assert(sizeof(CSmartPropElement_Model) == 0x180);
 };

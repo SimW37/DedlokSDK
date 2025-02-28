@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/server/CCitadelModifier.hpp"
+#include "source2sdk/server/CCitadel_Modifier_PowerUp.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -17,7 +17,7 @@ namespace source2sdk::server
     // Size: 0xc8
     // Has VTable
     #pragma pack(push, 1)
-    class CCitadel_Modifier_PermanentPickup : public server::CCitadelModifier
+    class CCitadel_Modifier_PermanentPickup : public server::CCitadel_Modifier_PowerUp
     {
     public:
         // No schema binary for binding

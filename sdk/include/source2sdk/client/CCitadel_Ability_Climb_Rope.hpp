@@ -17,7 +17,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xd08
+    // Size: 0xcf8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CNetworkOriginQuantizedVector m_vTop"
@@ -32,38 +32,37 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        client::CNetworkOriginQuantizedVector m_vTop; // 0xc70        
-        [[maybe_unused]] std::uint8_t pad_0xc98[0x8]; // 0xc98
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        client::CNetworkOriginQuantizedVector m_vTop; // 0xc50        
+        [[maybe_unused]] std::uint8_t pad_0xc78[0x8]; // 0xc78
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        client::CNetworkOriginQuantizedVector m_vBottom; // 0xca0        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        client::CNetworkOriginQuantizedVector m_vBottom; // 0xc80        
+        [[maybe_unused]] std::uint8_t pad_0xca8[0x8]; // 0xca8
+        entity2::GameTime_t m_flActivatePressTime; // 0xcb0        
+        entity2::GameTime_t m_flDisconnectTime; // 0xcb4        
+        entity2::GameTime_t m_flClimbStartTime; // 0xcb8        
+        Vector m_vLastPos; // 0xcbc        
         [[maybe_unused]] std::uint8_t pad_0xcc8[0x8]; // 0xcc8
-        entity2::GameTime_t m_flActivatePressTime; // 0xcd0        
-        entity2::GameTime_t m_flDisconnectTime; // 0xcd4        
-        entity2::GameTime_t m_flClimbStartTime; // 0xcd8        
-        Vector m_vLastPos; // 0xcdc        
-        [[maybe_unused]] std::uint8_t pad_0xce8[0x8]; // 0xce8
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool m_bRequestStopClimbing; // 0xcf0        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bRequestStopClimbing; // 0xcd0        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool m_bRequestJumpToRoof; // 0xcf1        
-        [[maybe_unused]] std::uint8_t pad_0xcf2[0x2]; // 0xcf2
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bRequestJumpToRoof; // 0xcd1        
+        [[maybe_unused]] std::uint8_t pad_0xcd2[0x2]; // 0xcd2
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flLastMoveTime; // 0xcf4        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flLastMoveTime; // 0xcd4        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flMoveDownStartTime; // 0xcf8        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flMoveDownStartTime; // 0xcd8        
         // metadata: MNetworkEnable
-        client::EClimbRopeState_t m_eClimbState; // 0xcfc        
-        [[maybe_unused]] std::uint8_t pad_0xd00[0x4]; // 0xd00
-        int32_t m_ClimbCount; // 0xd04        
+        client::EClimbRopeState_t m_eClimbState; // 0xcdc        
+        [[maybe_unused]] std::uint8_t pad_0xce0[0x18];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Climb_Rope because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Climb_Rope) == 0xd08);
+    static_assert(sizeof(CCitadel_Ability_Climb_Rope) == 0xcf8);
 };

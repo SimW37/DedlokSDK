@@ -26,9 +26,8 @@ namespace source2sdk::server
         entity2::GameTime_t m_flTimeStarted; // 0x8        
         entity2::GameTime_t m_flTimeCurTaskStarted; // 0xc        
         int64_t m_taskFailureCode; // 0x10        
-        int32_t m_nTaskInterrupt; // 0x18        
-        bool m_bScheduleWasInterrupted; // 0x1c        
-        [[maybe_unused]] std::uint8_t pad_0x1d[0x3];
+        bool m_bScheduleWasInterrupted; // 0x18        
+        [[maybe_unused]] std::uint8_t pad_0x19[0x7];
     };
     #pragma pack(pop)
     
@@ -37,8 +36,7 @@ namespace source2sdk::server
     static_assert(offsetof(AIScheduleState_t, m_flTimeStarted) == 0x8);
     static_assert(offsetof(AIScheduleState_t, m_flTimeCurTaskStarted) == 0xc);
     static_assert(offsetof(AIScheduleState_t, m_taskFailureCode) == 0x10);
-    static_assert(offsetof(AIScheduleState_t, m_nTaskInterrupt) == 0x18);
-    static_assert(offsetof(AIScheduleState_t, m_bScheduleWasInterrupted) == 0x1c);
+    static_assert(offsetof(AIScheduleState_t, m_bScheduleWasInterrupted) == 0x18);
     
     static_assert(sizeof(AIScheduleState_t) == 0x20);
 };

@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1820
+    // Size: 0x18c0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,28 +27,28 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Modifiers"
         // m_DashModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_DashModifier;
-        char m_DashModifier[0x10]; // 0x1528        
+        char m_DashModifier[0x10]; // 0x15c8        
         // metadata: MPropertyStartGroup "Visuals"
         // m_DashImpactEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashImpactEffect;
-        char m_DashImpactEffect[0xe0]; // 0x1538        
+        char m_DashImpactEffect[0xe0]; // 0x15d8        
         // m_DashSwingEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashSwingEffect;
-        char m_DashSwingEffect[0xe0]; // 0x1618        
+        char m_DashSwingEffect[0xe0]; // 0x16b8        
         // m_DashLineEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashLineEffect;
-        char m_DashLineEffect[0xe0]; // 0x16f8        
+        char m_DashLineEffect[0xe0]; // 0x1798        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strDashStartWithTargets; // 0x17d8        
-        CSoundEventName m_strDashStartEcho; // 0x17e8        
-        CSoundEventName m_strDashStartMiss; // 0x17f8        
-        CSoundEventName m_strDashHitEnemy; // 0x1808        
+        CSoundEventName m_strDashStartWithTargets; // 0x1878        
+        CSoundEventName m_strDashStartEcho; // 0x1888        
+        CSoundEventName m_strDashStartMiss; // 0x1898        
+        CSoundEventName m_strDashHitEnemy; // 0x18a8        
         // metadata: MPropertyStartGroup "+Dash Properties"
-        float m_flEchoDelay; // 0x1818        
-        [[maybe_unused]] std::uint8_t pad_0x181c[0x4];
+        float m_flEchoDelay; // 0x18b8        
+        [[maybe_unused]] std::uint8_t pad_0x18bc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbilityShivDashVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityShivDashVData) == 0x1820);
+    static_assert(sizeof(CAbilityShivDashVData) == 0x18c0);
 };

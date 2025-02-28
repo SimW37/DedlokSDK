@@ -14,7 +14,7 @@ namespace source2sdk::pulse_runtime_lib
     // Registered alignment: unknown
     // Alignment: 0x1
     // Standard-layout class: false
-    // Size: 0xa8
+    // Size: 0xd0
     // Has VTable
     // 
     // static metadata: MPulseInternal_IsCursor
@@ -22,9 +22,9 @@ namespace source2sdk::pulse_runtime_lib
     class CPulseExecCursor : public pulse_runtime_lib::IGapHost_YieldingCursor
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x08[0xa0];
+        [[maybe_unused]] std::uint8_t pad_0x08[0xc8];
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CPulseExecCursor) == 0xa8);
+    static_assert(sizeof(CPulseExecCursor) == 0xd0);
 };

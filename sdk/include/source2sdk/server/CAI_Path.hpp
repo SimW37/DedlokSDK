@@ -23,7 +23,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0xc8
+    // Size: 0xe8
     // Has VTable
     #pragma pack(push, 1)
     class CAI_Path
@@ -55,9 +55,17 @@ namespace source2sdk::server
         entity2::GameTime_t m_flGoalChangeTime; // 0xa8        
         entity2::GameTime_t m_flPathChangeTime; // 0xac        
         float m_flDistAdvancedToCurWaypoint; // 0xb0        
-        [[maybe_unused]] std::uint8_t pad_0xb4[0xc]; // 0xb4
-        uint32_t m_nConstrainedToMovableMeshId; // 0xc0        
-        [[maybe_unused]] std::uint8_t pad_0xc4[0x4];
+        [[maybe_unused]] std::uint8_t pad_0xb4[0x10]; // 0xb4
+        bool m_bOnMovableNavMesh; // 0xc4        
+        [[maybe_unused]] std::uint8_t pad_0xc5[0x3]; // 0xc5
+        uint32_t m_unGoalActualMovableMeshId; // 0xc8        
+        uint32_t m_unGoalBaseMovableMeshId; // 0xcc        
+        uint32_t m_unPrevWaypointMovableMeshId; // 0xd0        
+        uint32_t m_unPrevWaypointBaseMovableMeshId; // 0xd4        
+        uint32_t m_unGoalActualMovableMeshId_EntityInitial; // 0xd8        
+        uint32_t m_unGoalBaseMovableMeshId_EntityInitial; // 0xdc        
+        uint32_t m_unGoalPosBlockedMovableMeshId; // 0xe0        
+        [[maybe_unused]] std::uint8_t pad_0xe4[0x4];
     };
     #pragma pack(pop)
     
@@ -81,7 +89,14 @@ namespace source2sdk::server
     static_assert(offsetof(CAI_Path, m_flGoalChangeTime) == 0xa8);
     static_assert(offsetof(CAI_Path, m_flPathChangeTime) == 0xac);
     static_assert(offsetof(CAI_Path, m_flDistAdvancedToCurWaypoint) == 0xb0);
-    static_assert(offsetof(CAI_Path, m_nConstrainedToMovableMeshId) == 0xc0);
+    static_assert(offsetof(CAI_Path, m_bOnMovableNavMesh) == 0xc4);
+    static_assert(offsetof(CAI_Path, m_unGoalActualMovableMeshId) == 0xc8);
+    static_assert(offsetof(CAI_Path, m_unGoalBaseMovableMeshId) == 0xcc);
+    static_assert(offsetof(CAI_Path, m_unPrevWaypointMovableMeshId) == 0xd0);
+    static_assert(offsetof(CAI_Path, m_unPrevWaypointBaseMovableMeshId) == 0xd4);
+    static_assert(offsetof(CAI_Path, m_unGoalActualMovableMeshId_EntityInitial) == 0xd8);
+    static_assert(offsetof(CAI_Path, m_unGoalBaseMovableMeshId_EntityInitial) == 0xdc);
+    static_assert(offsetof(CAI_Path, m_unGoalPosBlockedMovableMeshId) == 0xe0);
     
-    static_assert(sizeof(CAI_Path) == 0xc8);
+    static_assert(sizeof(CAI_Path) == 0xe8);
 };

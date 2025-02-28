@@ -8,7 +8,7 @@
 
 namespace source2sdk::animgraphlib
 {
-    // Enumerator count: 4
+    // Enumerator count: 5
     // Alignment: 4
     // Size: 0x4
     enum class StateActionBehavior : std::uint32_t
@@ -17,5 +17,6 @@ namespace source2sdk::animgraphlib
         STATETAGBEHAVIOR_FIRE_ON_ENTER = 0x1,
         STATETAGBEHAVIOR_FIRE_ON_EXIT = 0x2,
         STATETAGBEHAVIOR_FIRE_ON_ENTER_AND_EXIT = 0x3,
+        STATETAGBEHAVIOR_ACTIVE_WHILE_FULLY_BLENDED = 0x4,
     };
 };

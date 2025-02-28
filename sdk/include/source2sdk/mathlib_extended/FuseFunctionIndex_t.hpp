@@ -22,9 +22,6 @@ namespace source2sdk::mathlib_extended
     {
     public:
         uint16_t m_Value; // 0x0        
-        
-        // Static fields:
-        static bool &Get_IS_TYPESAFE_INTEGER() {return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("FuseFunctionIndex_t")->GetStaticFields()[0]->m_pInstance);};
     };
     #pragma pack(pop)
     

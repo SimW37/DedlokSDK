@@ -23,7 +23,8 @@ namespace source2sdk::animlib
     {
     public:
         int16_t m_nSourceStateNodeIdx; // 0x10        
-        [[maybe_unused]] std::uint8_t pad_0x12[0x6];
+        bool m_bOnlyReturnPercentageThrough; // 0x12        
+        [[maybe_unused]] std::uint8_t pad_0x13[0x5];
     };
     #pragma pack(pop)
     

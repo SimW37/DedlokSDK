@@ -38,10 +38,6 @@ namespace source2sdk::soundsystem_voicecontainers
         soundsystem_voicecontainers::CVSound m_vSound; // 0x38        
         // metadata: MPropertySuppressExpr "true"
         soundsystem_voicecontainers::CVoiceContainerAnalysisBase* m_pEnvelopeAnalyzer; // 0xb8        
-        
-        // Static fields:
-        static bool &Get_bAudioFinishedPlaying() {return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CVoiceContainerBase")->GetStaticFields()[0]->m_pInstance);};
-        static bool &Get_bAudioStillPlaying() {return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CVoiceContainerBase")->GetStaticFields()[1]->m_pInstance);};
     };
     #pragma pack(pop)
     

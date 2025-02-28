@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x608
+    // Size: 0x668
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -22,13 +22,13 @@ namespace source2sdk::server
     class CCitadel_Modifier_DamageResistanceVData : public server::CCitadelModifierVData
     {
     public:
-        float m_flDamageResistancePerSecond; // 0x5f8        
-        float m_flTickInterval; // 0x5fc        
-        float m_flDamageResistanceBonusPerGameMinute; // 0x600        
-        [[maybe_unused]] std::uint8_t pad_0x604[0x4];
+        float m_flDamageResistancePerSecond; // 0x658        
+        float m_flTickInterval; // 0x65c        
+        float m_flDamageResistanceBonusPerGameMinute; // 0x660        
+        [[maybe_unused]] std::uint8_t pad_0x664[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_DamageResistanceVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_DamageResistanceVData) == 0x608);
+    static_assert(sizeof(CCitadel_Modifier_DamageResistanceVData) == 0x668);
 };

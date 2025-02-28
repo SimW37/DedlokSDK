@@ -16,41 +16,44 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xd60
+    // Size: 0xd78
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "GameTime_t m_flCastTime"
     // static metadata: MNetworkVarNames "bool m_bCrashingDown"
     // static metadata: MNetworkVarNames "bool m_bImpulseApplied"
+    // static metadata: MNetworkVarNames "bool m_bCanCrash"
     // static metadata: MNetworkVarNames "Vector m_vecCrashPosition"
     // static metadata: MNetworkVarNames "Vector m_vecCrashDirection"
     #pragma pack(push, 1)
     class CCitadel_UtilityUpgrade_RocketBooster : public server::CCitadel_UtilityUpgrade_RocketBoots
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb78[0x4]; // 0xb78
-        client::ParticleIndex_t m_nTargetingParticleIndex; // 0xb7c        
+        client::ParticleIndex_t m_nTargetingParticleIndex; // 0xb90        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnCanSlamDownChanged"
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flCastTime; // 0xb80        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flCastTime; // 0xb94        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool m_bCrashingDown; // 0xb84        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bCrashingDown; // 0xb98        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool m_bImpulseApplied; // 0xb85        
-        [[maybe_unused]] std::uint8_t pad_0xb86[0x2]; // 0xb86
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bImpulseApplied; // 0xb99        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        Vector m_vecCrashPosition; // 0xb88        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bCanCrash; // 0xb9a        
+        [[maybe_unused]] std::uint8_t pad_0xb9b[0x1]; // 0xb9b
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        Vector m_vecCrashDirection; // 0xb94        
-        [[maybe_unused]] std::uint8_t pad_0xba0[0x1c0];
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        Vector m_vecCrashPosition; // 0xb9c        
+        // metadata: MNetworkEnable
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        Vector m_vecCrashDirection; // 0xba8        
+        [[maybe_unused]] std::uint8_t pad_0xbb4[0x1c4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_UtilityUpgrade_RocketBooster because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_UtilityUpgrade_RocketBooster) == 0xd60);
+    static_assert(sizeof(CCitadel_UtilityUpgrade_RocketBooster) == 0xd78);
 };

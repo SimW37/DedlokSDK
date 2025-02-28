@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x648
+    // Size: 0x6a8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,13 +26,13 @@ namespace source2sdk::client
         // metadata: MPropertyGroupName "Modifiers"
         // m_BleedModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CBaseModifier> m_BleedModifier;
-        char m_BleedModifier[0x10]; // 0x628        
+        char m_BleedModifier[0x10]; // 0x688        
         // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CBaseModifier> m_SlowModifier;
-        char m_SlowModifier[0x10]; // 0x638        
+        char m_SlowModifier[0x10]; // 0x698        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_TechBleed_ProcVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_TechBleed_ProcVData) == 0x648);
+    static_assert(sizeof(CCitadel_Modifier_TechBleed_ProcVData) == 0x6a8);
 };

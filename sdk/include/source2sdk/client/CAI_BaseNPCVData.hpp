@@ -1,14 +1,14 @@
 #pragma once
-#include "source2sdk/client/CAI_BaseNPC_DestructiblePartHitGroupInfoAndData.hpp"
+#include "source2sdk/client/AI_AdditionalMovementSettings.hpp"
 #include "source2sdk/client/CCitadelModifier.hpp"
 #include "source2sdk/client/CEntitySubclassVDataBase.hpp"
 #include "source2sdk/client/CFootstepTableHandle.hpp"
 #include "source2sdk/client/CSkillFloat.hpp"
 #include "source2sdk/client/CSkillInt.hpp"
-#include "source2sdk/client/HitGroup_t.hpp"
 #include "source2sdk/client/NPCAttachmentDesc_t.hpp"
 #include "source2sdk/client/NPCStatusEffectMap_t.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeCModel.hpp"
+#include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -23,7 +23,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x230
+    // Size: 0x388
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -64,33 +64,47 @@ namespace source2sdk::client
         client::CSkillInt m_nMaxAdditionalAmmoBalancingShots; // 0x1b8        
         bool m_bTakesDamage; // 0x1c8        
         [[maybe_unused]] std::uint8_t pad_0x1c9[0x7]; // 0x1c9
-        // metadata: MPropertyDescription "Destructible Parts"
-        // m_DestructiblePartsDataByHitGroup has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlOrderedMap<client::HitGroup_t,client::CAI_BaseNPC_DestructiblePartHitGroupInfoAndData> m_DestructiblePartsDataByHitGroup;
-        char m_DestructiblePartsDataByHitGroup[0x28]; // 0x1d0        
+        // metadata: MPropertyDescription "Damaged Effect"
+        // m_strDamagedEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strDamagedEffect;
+        char m_strDamagedEffect[0xe0]; // 0x1d0        
+        // metadata: MPropertyDescription "Amount of health to grant to a ragdoll before the ragdoll is destroyed."
+        int32_t m_nRagdollHealth; // 0x2b0        
         // metadata: MPropertyStartGroup "Navigation"
-        bool m_bAllowNonZUpMovement; // 0x1f8        
+        bool m_bAllowNonZUpMovement; // 0x2b4        
+        // metadata: MPropertyDescription "If true, this NPC will use a dynamic collision hull that allows it to be pushed by heavy things and affected by constraints."
+        bool m_bUseDynamicCollisionHull; // 0x2b5        
         // metadata: MPropertyDescription "If true, this NPC will use the capsule collision.  Capsule collision will also be used if m_bAllowNonZUpMovement is set."
-        bool m_bRequestCapsuleCollision; // 0x1f9        
-        [[maybe_unused]] std::uint8_t pad_0x1fa[0x2]; // 0x1fa
+        bool m_bRequestCapsuleCollision; // 0x2b6        
+        [[maybe_unused]] std::uint8_t pad_0x2b7[0x1]; // 0x2b7
         // metadata: MPropertyDescription "Override the radius of the capsule. Requires m_bAllowNonZUpMovement or m_bRequestCapsuleCollision to be set. 0 to use collision prop OBB"
-        float m_flCapsuleRadiusOverride; // 0x1fc        
+        float m_flCapsuleRadiusOverride; // 0x2b8        
         // metadata: MPropertyDescription "Override the height of the capsule. Requires m_bAllowNonZUpMovement or m_bRequestCapsuleCollision to be set. 0 to use collision prop height."
-        float m_flCapsuleHeightOverride; // 0x200        
-        [[maybe_unused]] std::uint8_t pad_0x204[0x4]; // 0x204
+        float m_flCapsuleHeightOverride; // 0x2bc        
         // metadata: MPropertyStartGroup "Animation"
         // metadata: MPropertyFriendlyName "Enabled Shared Actions"
         // metadata: MPropertyDescription "List of the shared BaseNPC actions this NPC supports"
         // metadata: MPropertyAttributeEditor "VDataAnimGraphParamEnumValue( m_sModelName; literal; e_action_desired_shared )"
         // m_vecActionDesiredShared has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CGlobalSymbol> m_vecActionDesiredShared;
-        char m_vecActionDesiredShared[0x18]; // 0x208        
+        char m_vecActionDesiredShared[0x18]; // 0x2c0        
         // metadata: MPropertyStartGroup "Sounds"
         // metadata: MPropertyDescription "Player Killed NPC Sound"
-        CSoundEventName m_sPlayerKilledNpcSound; // 0x220        
+        CSoundEventName m_sPlayerKilledNpcSound; // 0x2d8        
+        // metadata: MPropertyStartGroup "Death"
+        CGlobalSymbol m_sCustomDeathHandshake; // 0x2e8        
+        // metadata: MPropertyStartGroup "Movement"
+        // metadata: MPropertyDescription "If true, this NPC will use code driven animgraph movement actions such as starts and stops"
+        bool m_bEnableCodeDrivenAnimgraphMovement; // 0x2f0        
+        // metadata: MPropertyDescription "If true, the NPC will request strafing if it is supported by the animgraph. Can still be overriden by schedules."
+        bool m_bEnableAnimgraphTagDrivenStrafing; // 0x2f1        
+        [[maybe_unused]] std::uint8_t pad_0x2f2[0x6]; // 0x2f2
+        client::AI_AdditionalMovementSettings m_defaultAdditionalMovementSettings; // 0x2f8        
+        float m_flThreatTemperature; // 0x380        
+        float m_flFlashpoint; // 0x384        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAI_BaseNPCVData because it is not a standard-layout class
-    static_assert(sizeof(CAI_BaseNPCVData) == 0x230);
+    static_assert(sizeof(CAI_BaseNPCVData) == 0x388);
 };

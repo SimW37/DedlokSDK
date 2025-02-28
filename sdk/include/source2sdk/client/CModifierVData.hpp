@@ -25,7 +25,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x3e8
+    // Size: 0x3f0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -83,46 +83,44 @@ namespace source2sdk::client
         // metadata: MPropertyGroupName "Scripted Settings"
         // m_nEnabledStateMask has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CBitVecEnum<client::EModifierState> m_nEnabledStateMask;
-        char m_nEnabledStateMask[0x18]; // 0x350        
+        char m_nEnabledStateMask[0x1c]; // 0x350        
         // metadata: MPropertyGroupName "Scripted Settings"
         // m_nDisabledStateMask has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CBitVecEnum<client::EModifierState> m_nDisabledStateMask;
-        char m_nDisabledStateMask[0x18]; // 0x368        
+        char m_nDisabledStateMask[0x1c]; // 0x36c        
         // metadata: MPropertyGroupName "Scripted Settings"
-        client::ModifierAttribute_t m_nAttributes; // 0x380        
-        [[maybe_unused]] std::uint8_t pad_0x384[0x4]; // 0x384
+        client::ModifierAttribute_t m_nAttributes; // 0x388        
+        [[maybe_unused]] std::uint8_t pad_0x38c[0x4]; // 0x38c
         // metadata: MPropertyGroupName "Scripted Settings"
         // metadata: MPropertyDescription "Scripted Modifier Values"
         // m_vecScriptValues has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<client::ModifierScriptValue_t> m_vecScriptValues;
-        char m_vecScriptValues[0x18]; // 0x388        
+        char m_vecScriptValues[0x18]; // 0x390        
         // metadata: MPropertyGroupName "Scripted Settings"
         // metadata: MPropertyDescription "Scripted Event Handlers"
         // m_vecScriptEventHandlers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<client::ModifierScriptedEventHandler_t> m_vecScriptEventHandlers;
-        char m_vecScriptEventHandlers[0x18]; // 0x3a0        
-        client::ModifierDisableGroup_t m_nDisableGroupsMask; // 0x3b8        
-        // metadata: MPropertyDescription "When set, the modifier only provides data to requests made directly to the attached entity and not to other modifier properties that the owner provides to."
-        bool m_bPrivateAccess; // 0x3bc        
+        char m_vecScriptEventHandlers[0x18]; // 0x3a8        
+        client::ModifierDisableGroup_t m_nDisableGroupsMask; // 0x3c0        
         // metadata: MPropertyGroupName "UI"
         // metadata: MPropertyDescription "When set, the modifier will not be visible to UI or visible modifier list."
-        bool m_bIsHidden; // 0x3bd        
-        [[maybe_unused]] std::uint8_t pad_0x3be[0x2]; // 0x3be
+        bool m_bIsHidden; // 0x3c4        
+        [[maybe_unused]] std::uint8_t pad_0x3c5[0x3]; // 0x3c5
         // metadata: MPropertyGroupName "UI"
         // metadata: MPropertySuppressExpr "m_bIsHidden != true"
-        client::ModifierHiddenType_t m_eHiddenType; // 0x3c0        
-        [[maybe_unused]] std::uint8_t pad_0x3c4[0x4]; // 0x3c4
+        client::ModifierHiddenType_t m_eHiddenType; // 0x3c8        
+        [[maybe_unused]] std::uint8_t pad_0x3cc[0x4]; // 0x3cc
         // metadata: MPropertyGroupName "UI"
         // metadata: MPropertyDescription "When set, use the value as localization key."
-        CUtlString m_sLocalizationName; // 0x3c8        
+        CUtlString m_sLocalizationName; // 0x3d0        
         // metadata: MPropertyDescription "When to consider the modifier a debuff."
-        client::ModifierDebuffType_t m_eDebuffType; // 0x3d0        
+        client::ModifierDebuffType_t m_eDebuffType; // 0x3d8        
         // metadata: MPropertyDescription "When set, stacks will automatically be decayed after a duration's worth of time has passed.  Only makes sense if adding a stack refreshed the modifier."
-        bool m_bAutomaticallyDecayStacks; // 0x3d4        
-        [[maybe_unused]] std::uint8_t pad_0x3d5[0x13];
+        bool m_bAutomaticallyDecayStacks; // 0x3dc        
+        [[maybe_unused]] std::uint8_t pad_0x3dd[0x13];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CModifierVData because it is not a standard-layout class
-    static_assert(sizeof(CModifierVData) == 0x3e8);
+    static_assert(sizeof(CModifierVData) == 0x3f0);
 };

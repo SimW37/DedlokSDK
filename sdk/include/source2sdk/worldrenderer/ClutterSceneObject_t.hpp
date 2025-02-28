@@ -17,7 +17,7 @@ namespace source2sdk::worldrenderer
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0xa0
+    // Size: 0xa8
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
@@ -44,6 +44,8 @@ namespace source2sdk::worldrenderer
         // m_renderableModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeCModel> m_renderableModel;
         char m_renderableModel[0x8]; // 0x98        
+        CUtlStringToken m_materialGroup; // 0xa0        
+        [[maybe_unused]] std::uint8_t pad_0xa4[0x4];
     };
     #pragma pack(pop)
     
@@ -55,6 +57,7 @@ namespace source2sdk::worldrenderer
     static_assert(offsetof(ClutterSceneObject_t, m_instanceTintSrgb) == 0x68);
     static_assert(offsetof(ClutterSceneObject_t, m_tiles) == 0x80);
     static_assert(offsetof(ClutterSceneObject_t, m_renderableModel) == 0x98);
+    static_assert(offsetof(ClutterSceneObject_t, m_materialGroup) == 0xa0);
     
-    static_assert(sizeof(ClutterSceneObject_t) == 0xa0);
+    static_assert(sizeof(ClutterSceneObject_t) == 0xa8);
 };

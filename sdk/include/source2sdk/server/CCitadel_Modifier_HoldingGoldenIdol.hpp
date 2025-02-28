@@ -21,9 +21,11 @@ namespace source2sdk::server
     class CCitadel_Modifier_HoldingGoldenIdol : public server::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc8[0x70]; // 0xc8
-        client::ParticleIndex_t m_iIdolParticle; // 0x138        
-        int32_t m_nGoldValue; // 0x13c        
+        [[maybe_unused]] std::uint8_t pad_0xc0[0x70]; // 0xc0
+        client::ParticleIndex_t m_iIdolParticle; // 0x130        
+        int32_t m_nGoldValue; // 0x134        
+        bool m_bRevealed; // 0x138        
+        [[maybe_unused]] std::uint8_t pad_0x139[0x7];
     };
     #pragma pack(pop)
     

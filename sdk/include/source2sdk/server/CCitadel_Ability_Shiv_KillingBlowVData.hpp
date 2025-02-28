@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1908
+    // Size: 0x19a8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,37 +27,37 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Modifiers"
         // m_LeapModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_LeapModifier;
-        char m_LeapModifier[0x10]; // 0x1528        
+        char m_LeapModifier[0x10]; // 0x15c8        
         // m_ActiveBuff has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_ActiveBuff;
-        char m_ActiveBuff[0x10]; // 0x1538        
+        char m_ActiveBuff[0x10]; // 0x15d8        
         // m_KillableModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_KillableModifier;
-        char m_KillableModifier[0x10]; // 0x1548        
+        char m_KillableModifier[0x10]; // 0x15e8        
         // metadata: MPropertyStartGroup "Visuals"
         // m_AttackParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackParticle;
-        char m_AttackParticle[0xe0]; // 0x1558        
+        char m_AttackParticle[0xe0]; // 0x15f8        
         // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-        char m_ImpactParticle[0xe0]; // 0x1638        
+        char m_ImpactParticle[0xe0]; // 0x16d8        
         // m_FlashParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FlashParticle;
-        char m_FlashParticle[0xe0]; // 0x1718        
+        char m_FlashParticle[0xe0]; // 0x17b8        
         // m_KillingBlowCastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_KillingBlowCastParticle;
-        char m_KillingBlowCastParticle[0xe0]; // 0x17f8        
+        char m_KillingBlowCastParticle[0xe0]; // 0x1898        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_ChargeUpSound; // 0x18d8        
-        CSoundEventName m_OnKillSound; // 0x18e8        
+        CSoundEventName m_ChargeUpSound; // 0x1978        
+        CSoundEventName m_OnKillSound; // 0x1988        
         // metadata: MPropertyStartGroup "+Killing Blow Params"
-        float m_flPreArrivalAttackStartTime; // 0x18f8        
-        float m_flKillableGlowRange; // 0x18fc        
-        float m_flGlowMinTime; // 0x1900        
-        [[maybe_unused]] std::uint8_t pad_0x1904[0x4];
+        float m_flPreArrivalAttackStartTime; // 0x1998        
+        float m_flKillableGlowRange; // 0x199c        
+        float m_flGlowMinTime; // 0x19a0        
+        [[maybe_unused]] std::uint8_t pad_0x19a4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Shiv_KillingBlowVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlowVData) == 0x1908);
+    static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlowVData) == 0x19a8);
 };

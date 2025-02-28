@@ -18,7 +18,7 @@ namespace source2sdk::animgraphlib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa8
+    // Size: 0xb0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -30,17 +30,17 @@ namespace source2sdk::animgraphlib
         animationsystem::HSequence m_hSequences[8]; // 0x5c        
         [[maybe_unused]] std::uint8_t pad_0x7c[0x4]; // 0x7c
         animgraphlib::CAnimInputDamping m_damping; // 0x80        
-        animgraphlib::AnimValueSource m_blendValueSource; // 0x90        
-        animgraphlib::CAnimParamHandle m_paramIndex; // 0x94        
-        [[maybe_unused]] std::uint8_t pad_0x96[0x2]; // 0x96
-        float m_playbackSpeed; // 0x98        
-        float m_duration; // 0x9c        
-        bool m_bLoop; // 0xa0        
-        bool m_bLockBlendOnReset; // 0xa1        
-        [[maybe_unused]] std::uint8_t pad_0xa2[0x6];
+        animgraphlib::AnimValueSource m_blendValueSource; // 0x98        
+        animgraphlib::CAnimParamHandle m_paramIndex; // 0x9c        
+        [[maybe_unused]] std::uint8_t pad_0x9e[0x2]; // 0x9e
+        float m_playbackSpeed; // 0xa0        
+        float m_duration; // 0xa4        
+        bool m_bLoop; // 0xa8        
+        bool m_bLockBlendOnReset; // 0xa9        
+        [[maybe_unused]] std::uint8_t pad_0xaa[0x6];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CDirectionalBlendUpdateNode because it is not a standard-layout class
-    static_assert(sizeof(CDirectionalBlendUpdateNode) == 0xa8);
+    static_assert(sizeof(CDirectionalBlendUpdateNode) == 0xb0);
 };

@@ -15,10 +15,11 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x268
+    // Size: 0x298
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CNetworkVelocityVector m_vPositionDeltaVelocity"
+    // static metadata: MNetworkVarNames "bool m_bToggleDuckActive"
     #pragma pack(push, 1)
     class CCitadelPlayer_MovementServices : public client::CPlayer_MovementServices_Humanoid
     {
@@ -26,17 +27,24 @@ namespace source2sdk::client
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
         // metadata: MNetworkPriority "32"
-        client::CNetworkVelocityVector m_vPositionDeltaVelocity; // 0x218        
-        [[maybe_unused]] std::uint8_t pad_0x240[0x8]; // 0x240
-        Vector m_vecPogoVelocity; // 0x248        
-        Vector m_vecSupport; // 0x254        
-        bool m_bColliding; // 0x260        
-        bool m_bLandedOnGround; // 0x261        
-        bool m_bHasFreeCursor; // 0x262        
-        [[maybe_unused]] std::uint8_t pad_0x263[0x5];
+        client::CNetworkVelocityVector m_vPositionDeltaVelocity; // 0x228        
+        [[maybe_unused]] std::uint8_t pad_0x250[0x8]; // 0x250
+        // metadata: MNetworkEnable
+        // metadata: MNetworkUserGroup "LocalPlayerExclusive"
+        // metadata: MNetworkPriority "32"
+        bool m_bToggleDuckActive; // 0x258        
+        [[maybe_unused]] std::uint8_t pad_0x259[0x3]; // 0x259
+        Vector m_vecPogoVelocity; // 0x25c        
+        Vector m_vecSupport; // 0x268        
+        bool m_bColliding; // 0x274        
+        bool m_bLandedOnGround; // 0x275        
+        bool m_bHasFreeCursor; // 0x276        
+        [[maybe_unused]] std::uint8_t pad_0x277[0x1]; // 0x277
+        float m_flTurnSpringSpeed; // 0x278        
+        [[maybe_unused]] std::uint8_t pad_0x27c[0x1c];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelPlayer_MovementServices because it is not a standard-layout class
-    static_assert(sizeof(CCitadelPlayer_MovementServices) == 0x268);
+    static_assert(sizeof(CCitadelPlayer_MovementServices) == 0x298);
 };

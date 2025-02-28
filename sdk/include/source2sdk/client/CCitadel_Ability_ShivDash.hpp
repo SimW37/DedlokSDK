@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xef0
+    // Size: 0xed0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "Vector m_vStartPosition"
@@ -27,29 +27,29 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        Vector m_vStartPosition; // 0xc70        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        Vector m_vStartPosition; // 0xc50        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        Vector m_vDashDirection; // 0xc7c        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        Vector m_vDashDirection; // 0xc5c        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool m_bIsDashing; // 0xc88        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bIsDashing; // 0xc68        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        bool m_bStartedInAir; // 0xc89        
-        [[maybe_unused]] std::uint8_t pad_0xc8a[0x6]; // 0xc8a
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        bool m_bStartedInAir; // 0xc69        
+        [[maybe_unused]] std::uint8_t pad_0xc6a[0x6]; // 0xc6a
         // m_vecHitEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CEntityIndex> m_vecHitEnemies;
-        char m_vecHitEnemies[0x18]; // 0xc90        
-        Vector m_vecLastPosition; // 0xca8        
-        int32_t m_nReductionsLeft; // 0xcb4        
-        [[maybe_unused]] std::uint8_t pad_0xcb8[0x230]; // 0xcb8
-        entity2::GameTime_t m_flStuckTime; // 0xee8        
-        [[maybe_unused]] std::uint8_t pad_0xeec[0x4];
+        char m_vecHitEnemies[0x18]; // 0xc70        
+        Vector m_vecLastPosition; // 0xc88        
+        int32_t m_nReductionsLeft; // 0xc94        
+        [[maybe_unused]] std::uint8_t pad_0xc98[0x230]; // 0xc98
+        entity2::GameTime_t m_flStuckTime; // 0xec8        
+        [[maybe_unused]] std::uint8_t pad_0xecc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_ShivDash because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_ShivDash) == 0xef0);
+    static_assert(sizeof(CCitadel_Ability_ShivDash) == 0xed0);
 };

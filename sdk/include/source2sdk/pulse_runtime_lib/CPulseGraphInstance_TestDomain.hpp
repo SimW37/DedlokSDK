@@ -14,7 +14,7 @@ namespace source2sdk::pulse_runtime_lib
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x120
+    // Size: 0x140
     // Has VTable
     // 
     // static metadata: MPulseInstanceDomainInfo
@@ -25,22 +25,22 @@ namespace source2sdk::pulse_runtime_lib
     class CPulseGraphInstance_TestDomain : public pulse_runtime_lib::CBasePulseGraphInstance
     {
     public:
-        bool m_bIsRunningUnitTests; // 0xf8        
-        bool m_bExplicitTimeStepping; // 0xf9        
-        bool m_bExpectingToDestroyWithYieldedCursors; // 0xfa        
-        [[maybe_unused]] std::uint8_t pad_0xfb[0x1]; // 0xfb
-        int32_t m_nNextValidateIndex; // 0xfc        
+        bool m_bIsRunningUnitTests; // 0x110        
+        bool m_bExplicitTimeStepping; // 0x111        
+        bool m_bExpectingToDestroyWithYieldedCursors; // 0x112        
+        bool m_bQuietTracepoints; // 0x113        
+        bool m_bExpectingCursorTerminatedDueToMaxInstructions; // 0x114        
+        [[maybe_unused]] std::uint8_t pad_0x115[0x3]; // 0x115
+        int32_t m_nCursorsTerminatedDueToMaxInstructions; // 0x118        
+        int32_t m_nNextValidateIndex; // 0x11c        
         // m_Tracepoints has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CUtlString> m_Tracepoints;
-        char m_Tracepoints[0x18]; // 0x100        
-        bool m_bTestYesOrNoPath; // 0x118        
-        [[maybe_unused]] std::uint8_t pad_0x119[0x7];
-        
-        // Static fields:
-        static double &Get_s_flExplicitCurTime() {return *reinterpret_cast<double*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CPulseGraphInstance_TestDomain")->GetStaticFields()[0]->m_pInstance);};
+        char m_Tracepoints[0x18]; // 0x120        
+        bool m_bTestYesOrNoPath; // 0x138        
+        [[maybe_unused]] std::uint8_t pad_0x139[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPulseGraphInstance_TestDomain because it is not a standard-layout class
-    static_assert(sizeof(CPulseGraphInstance_TestDomain) == 0x120);
+    static_assert(sizeof(CPulseGraphInstance_TestDomain) == 0x140);
 };

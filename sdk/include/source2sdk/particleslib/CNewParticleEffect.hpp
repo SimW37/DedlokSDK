@@ -50,11 +50,12 @@ namespace source2sdk::particleslib
         uint16_t m_bSimulate: 1;
         uint16_t m_bShouldPerformCullCheck: 1;
         uint16_t m_bForceNoDraw: 1;
+        uint16_t m_bSuppressScreenSpaceEffect: 1;
         uint16_t m_bShouldSave: 1;
         uint16_t m_bDisableAggregation: 1;
         uint16_t m_bShouldSimulateDuringGamePaused: 1;
         uint16_t m_bShouldCheckFoW: 1;
-        // end of bitfield block // 13 bits
+        // end of bitfield block // 14 bits
         [[maybe_unused]] std::uint8_t pad_0x32[0xe]; // 0x32
         Vector m_vSortOrigin; // 0x40        
         float m_flScale; // 0x4c        

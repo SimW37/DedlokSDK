@@ -26,8 +26,8 @@ namespace source2sdk::animgraphlib
     public:
         // m_targetHandles has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<animgraphlib::CSolveIKTargetHandle_t> m_targetHandles;
-        char m_targetHandles[0x18]; // 0x68        
-        animgraphlib::SolveIKChainPoseOpFixedSettings_t m_opFixedData; // 0x80        
+        char m_targetHandles[0x18]; // 0x70        
+        animgraphlib::SolveIKChainPoseOpFixedSettings_t m_opFixedData; // 0x88        
         [[maybe_unused]] std::uint8_t pad_0xa0[0x8];
     };
     #pragma pack(pop)

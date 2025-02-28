@@ -1,4 +1,6 @@
 #pragma once
+#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/server/CCitadelAutoScaledTime.hpp"
 #include "source2sdk/server/CCitadelBaseAbility.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -11,18 +13,40 @@
 
 namespace source2sdk::server
 {
+    class CBaseEntity;
+};
+
+namespace source2sdk::server
+{
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xae8
+    // Size: 0xc68
     // Has VTable
+    // 
+    // static metadata: MNetworkVarNames "CCitadelAutoScaledTime m_flFlurryEndTime"
+    // static metadata: MNetworkVarNames "GameTime_t m_flNextAttackTime"
     #pragma pack(push, 1)
     class CCitadel_Ability_BulletFlurry : public server::CCitadelBaseAbility
     {
     public:
-        // No schema binary for binding
+        // metadata: MNetworkEnable
+        server::CCitadelAutoScaledTime m_flFlurryEndTime; // 0xb00        
+        // metadata: MNetworkEnable
+        entity2::GameTime_t m_flNextAttackTime; // 0xb18        
+        [[maybe_unused]] std::uint8_t pad_0xb1c[0x11c]; // 0xb1c
+        // m_vecShootTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CUtlVector<CHandle<server::CBaseEntity>> m_vecShootTargets;
+        char m_vecShootTargets[0x18]; // 0xc38        
+        int32_t m_nNumPlayersKilled; // 0xc50        
+        int32_t m_nShootIndex; // 0xc54        
+        int32_t m_nShootIndexNPC; // 0xc58        
+        int32_t m_nBurstShots; // 0xc5c        
+        bool m_bHasCameraOverride; // 0xc60        
+        [[maybe_unused]] std::uint8_t pad_0xc61[0x7];
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Ability_BulletFlurry) == 0xae8);
+    // Cannot assert offsets of fields in CCitadel_Ability_BulletFlurry because it is not a standard-layout class
+    static_assert(sizeof(CCitadel_Ability_BulletFlurry) == 0xc68);
 };

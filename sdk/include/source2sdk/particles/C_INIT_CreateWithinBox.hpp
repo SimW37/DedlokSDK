@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xec8
+    // Size: 0xed0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -37,9 +37,12 @@ namespace source2sdk::particles
         [[maybe_unused]] std::uint8_t pad_0xebd[0x3]; // 0xebd
         // metadata: MPropertyFriendlyName "Random number generator controls"
         particles::CRandomNumberGeneratorParameters m_randomnessParameters; // 0xec0        
+        // metadata: MPropertyFriendlyName "use new code"
+        bool m_bUseNewCode; // 0xec8        
+        [[maybe_unused]] std::uint8_t pad_0xec9[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_CreateWithinBox because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_CreateWithinBox) == 0xec8);
+    static_assert(sizeof(C_INIT_CreateWithinBox) == 0xed0);
 };

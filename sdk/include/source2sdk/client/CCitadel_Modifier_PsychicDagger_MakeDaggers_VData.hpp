@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa98
+    // Size: 0xaf8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,33 +23,33 @@ namespace source2sdk::client
     class CCitadel_Modifier_PsychicDagger_MakeDaggers_VData : public client::CCitadelModifierVData
     {
     public:
-        float m_flDesatAmount; // 0x5f8        
-        Color m_DesatTint; // 0x5fc        
-        Color m_SatTint; // 0x600        
-        Color m_Outline; // 0x604        
+        float m_flDesatAmount; // 0x658        
+        Color m_DesatTint; // 0x65c        
+        Color m_SatTint; // 0x660        
+        Color m_Outline; // 0x664        
         // metadata: MPropertyStartGroup "Visuals"
         // m_DaggerShot has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DaggerShot;
-        char m_DaggerShot[0xe0]; // 0x608        
+        char m_DaggerShot[0xe0]; // 0x668        
         // m_DaggerSpawn has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DaggerSpawn;
-        char m_DaggerSpawn[0xe0]; // 0x6e8        
+        char m_DaggerSpawn[0xe0]; // 0x748        
         // m_DaggerAoE has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DaggerAoE;
-        char m_DaggerAoE[0xe0]; // 0x7c8        
+        char m_DaggerAoE[0xe0]; // 0x828        
         // m_DaggerTargetPreview has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DaggerTargetPreview;
-        char m_DaggerTargetPreview[0xe0]; // 0x8a8        
+        char m_DaggerTargetPreview[0xe0]; // 0x908        
         // m_DaggerShotFail has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DaggerShotFail;
-        char m_DaggerShotFail[0xe0]; // 0x988        
+        char m_DaggerShotFail[0xe0]; // 0x9e8        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_DaggerFireSound; // 0xa68        
-        CSoundEventName m_DaggerMissSound; // 0xa78        
-        CSoundEventName m_LastDaggerMissSound; // 0xa88        
+        CSoundEventName m_DaggerFireSound; // 0xac8        
+        CSoundEventName m_DaggerMissSound; // 0xad8        
+        CSoundEventName m_LastDaggerMissSound; // 0xae8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_PsychicDagger_MakeDaggers_VData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_PsychicDagger_MakeDaggers_VData) == 0xa98);
+    static_assert(sizeof(CCitadel_Modifier_PsychicDagger_MakeDaggers_VData) == 0xaf8);
 };

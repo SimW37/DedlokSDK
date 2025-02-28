@@ -8,7 +8,7 @@
 
 namespace source2sdk::soundsystem_lowlevel
 {
-    // Enumerator count: 30
+    // Enumerator count: 31
     // Alignment: 2
     // Size: 0x2
     enum class VMixProcessorType_t : std::uint16_t
@@ -31,17 +31,18 @@ namespace source2sdk::soundsystem_lowlevel
         VPROCESSOR_ENVELOPE = 0xf,
         VPROCESSOR_VOCODER = 0x10,
         VPROCESSOR_CONVOLUTION = 0x11,
-        VPROCESSOR_DYNAMICS_3BAND = 0x12,
-        VPROCESSOR_DYNAMICS_COMPRESSOR = 0x13,
-        VPROCESSOR_SHAPER = 0x14,
-        VPROCESSOR_PANNER = 0x15,
-        VPROCESSOR_UTILITY = 0x16,
-        VPROCESSOR_AUTOFILTER = 0x17,
-        VPROCESSOR_OSC = 0x18,
-        VPROCESSOR_STEREODELAY = 0x19,
-        VPROCESSOR_EFFECT_CHAIN = 0x1a,
-        VPROCESSOR_SUBGRAPH_SWITCH = 0x1b,
-        VPROCESSOR_STEAMAUDIO_DIRECT = 0x1c,
-        VPROCESSOR_STEAMAUDIO_HYBRIDREVERB = 0x1d,
+        VPROCESSOR_DUAL_COMPRESSOR = 0x12,
+        VPROCESSOR_DYNAMICS_3BAND = 0x13,
+        VPROCESSOR_DYNAMICS_COMPRESSOR = 0x14,
+        VPROCESSOR_SHAPER = 0x15,
+        VPROCESSOR_PANNER = 0x16,
+        VPROCESSOR_UTILITY = 0x17,
+        VPROCESSOR_AUTOFILTER = 0x18,
+        VPROCESSOR_OSC = 0x19,
+        VPROCESSOR_STEREODELAY = 0x1a,
+        VPROCESSOR_EFFECT_CHAIN = 0x1b,
+        VPROCESSOR_SUBGRAPH_SWITCH = 0x1c,
+        VPROCESSOR_STEAMAUDIO_DIRECT = 0x1d,
+        VPROCESSOR_STEAMAUDIO_HYBRIDREVERB = 0x1e,
     };
 };

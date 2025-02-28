@@ -1,6 +1,5 @@
 #pragma once
 #include "source2sdk/entity2/CEntityComponent.hpp"
-#include "source2sdk/entity2/EntComponentInfo_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -23,10 +22,6 @@ namespace source2sdk::entity2
     public:
         [[maybe_unused]] std::uint8_t pad_0x08[0x28]; // 0x8
         CUtlSymbolLarge m_scriptClassName; // 0x30        
-        
-        // Static fields:
-        static entity2::EntComponentInfo_t &Get_s_EntComponentInfo() {return *reinterpret_cast<entity2::EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CScriptComponent")->GetStaticFields()[0]->m_pInstance);};
-        static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced() {return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CScriptComponent")->GetStaticFields()[1]->m_pInstance);};
     };
     #pragma pack(pop)
     

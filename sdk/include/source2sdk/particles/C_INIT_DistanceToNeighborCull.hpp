@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x330
+    // Size: 0x490
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,10 +27,12 @@ namespace source2sdk::particles
         particleslib::CPerParticleFloatInput m_flDistance; // 0x1c8        
         // metadata: MPropertyFriendlyName "include particle radius"
         bool m_bIncludeRadii; // 0x328        
-        [[maybe_unused]] std::uint8_t pad_0x329[0x7];
+        [[maybe_unused]] std::uint8_t pad_0x329[0x7]; // 0x329
+        // metadata: MPropertyFriendlyName "lifespan overlap percentage"
+        particleslib::CPerParticleFloatInput m_flLifespanOverlap; // 0x330        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_DistanceToNeighborCull because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_DistanceToNeighborCull) == 0x330);
+    static_assert(sizeof(C_INIT_DistanceToNeighborCull) == 0x490);
 };

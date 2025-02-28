@@ -1,4 +1,5 @@
 #pragma once
+#include "source2sdk/physicslib/DynamicContinuousContactBehavior_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -55,7 +56,8 @@ namespace source2sdk::physicslib
         bool m_bGravityDisabled; // 0xc8        
         bool m_bSpeculativeEnabled; // 0xc9        
         bool m_bHasShadowController; // 0xca        
-        [[maybe_unused]] std::uint8_t pad_0xcb[0x5];
+        physicslib::DynamicContinuousContactBehavior_t m_nDynamicContinuousContactBehavior; // 0xcb        
+        [[maybe_unused]] std::uint8_t pad_0xcc[0x4];
     };
     #pragma pack(pop)
     
@@ -94,6 +96,7 @@ namespace source2sdk::physicslib
     static_assert(offsetof(RnBodyDesc_t, m_bGravityDisabled) == 0xc8);
     static_assert(offsetof(RnBodyDesc_t, m_bSpeculativeEnabled) == 0xc9);
     static_assert(offsetof(RnBodyDesc_t, m_bHasShadowController) == 0xca);
+    static_assert(offsetof(RnBodyDesc_t, m_nDynamicContinuousContactBehavior) == 0xcb);
     
     static_assert(sizeof(RnBodyDesc_t) == 0xd0);
 };

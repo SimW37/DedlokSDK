@@ -14,7 +14,7 @@ namespace source2sdk::pulse_runtime_lib
     // Registered alignment: unknown
     // Alignment: 0x1
     // Standard-layout class: false
-    // Size: 0x118
+    // Size: 0x130
     // Has VTable
     // 
     // static metadata: MPulseInstanceDomainInfo
@@ -24,9 +24,9 @@ namespace source2sdk::pulse_runtime_lib
     class CPulseGraphInstance_TurtleGraphics : public pulse_runtime_lib::CBasePulseGraphInstance
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xf8[0x20];
+        [[maybe_unused]] std::uint8_t pad_0x110[0x20];
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CPulseGraphInstance_TurtleGraphics) == 0x118);
+    static_assert(sizeof(CPulseGraphInstance_TurtleGraphics) == 0x130);
 };

@@ -22,9 +22,6 @@ namespace source2sdk::animlib
     {
     public:
         uint32_t m_flags; // 0x0        
-        
-        // Static fields:
-        static uint8_t &Get_MaxFlags() {return *reinterpret_cast<uint8_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNmBitFlags")->GetStaticFields()[0]->m_pInstance);};
     };
     #pragma pack(pop)
     

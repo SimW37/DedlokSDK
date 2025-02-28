@@ -1,5 +1,4 @@
 #pragma once
-#include "source2sdk/client/SummaryTakeDamageInfo_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -29,9 +28,6 @@ namespace source2sdk::client
         // m_vecSummaries has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<client::SummaryTakeDamageInfo_t*> m_vecSummaries;
         char m_vecSummaries[0x18]; // 0x8        
-        
-        // Static fields:
-        static client::SummaryTakeDamageInfo_t &Get_EmptySummary() {return *reinterpret_cast<client::SummaryTakeDamageInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CTakeDamageSummaryScopeGuard")->GetStaticFields()[0]->m_pInstance);};
     };
     #pragma pack(pop)
     

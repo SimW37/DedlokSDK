@@ -14,15 +14,17 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc88
+    // Size: 0xc70
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Item_ActiveReload : public client::CCitadel_Item
     {
     public:
-        // No schema binary for binding
+        bool m_bPlayedStartSound; // 0xc68        
+        [[maybe_unused]] std::uint8_t pad_0xc69[0x7];
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Item_ActiveReload) == 0xc88);
+    // Cannot assert offsets of fields in CCitadel_Item_ActiveReload because it is not a standard-layout class
+    static_assert(sizeof(CCitadel_Item_ActiveReload) == 0xc70);
 };

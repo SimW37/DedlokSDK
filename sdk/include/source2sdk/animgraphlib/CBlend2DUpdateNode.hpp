@@ -21,7 +21,7 @@ namespace source2sdk::animgraphlib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xf0
+    // Size: 0xf8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -41,22 +41,22 @@ namespace source2sdk::animgraphlib
         // CUtlVector<int32_t> m_nodeItemIndices;
         char m_nodeItemIndices[0x18]; // 0xa8        
         animgraphlib::CAnimInputDamping m_damping; // 0xc0        
-        animgraphlib::AnimValueSource m_blendSourceX; // 0xd0        
-        animgraphlib::CAnimParamHandle m_paramX; // 0xd4        
-        [[maybe_unused]] std::uint8_t pad_0xd6[0x2]; // 0xd6
-        animgraphlib::AnimValueSource m_blendSourceY; // 0xd8        
-        animgraphlib::CAnimParamHandle m_paramY; // 0xdc        
+        animgraphlib::AnimValueSource m_blendSourceX; // 0xd8        
+        animgraphlib::CAnimParamHandle m_paramX; // 0xdc        
         [[maybe_unused]] std::uint8_t pad_0xde[0x2]; // 0xde
-        animgraphlib::Blend2DMode m_eBlendMode; // 0xe0        
-        float m_playbackSpeed; // 0xe4        
-        bool m_bLoop; // 0xe8        
-        bool m_bLockBlendOnReset; // 0xe9        
-        bool m_bLockWhenWaning; // 0xea        
-        bool m_bAnimEventsAndTagsOnMostWeightedOnly; // 0xeb        
-        [[maybe_unused]] std::uint8_t pad_0xec[0x4];
+        animgraphlib::AnimValueSource m_blendSourceY; // 0xe0        
+        animgraphlib::CAnimParamHandle m_paramY; // 0xe4        
+        [[maybe_unused]] std::uint8_t pad_0xe6[0x2]; // 0xe6
+        animgraphlib::Blend2DMode m_eBlendMode; // 0xe8        
+        float m_playbackSpeed; // 0xec        
+        bool m_bLoop; // 0xf0        
+        bool m_bLockBlendOnReset; // 0xf1        
+        bool m_bLockWhenWaning; // 0xf2        
+        bool m_bAnimEventsAndTagsOnMostWeightedOnly; // 0xf3        
+        [[maybe_unused]] std::uint8_t pad_0xf4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBlend2DUpdateNode because it is not a standard-layout class
-    static_assert(sizeof(CBlend2DUpdateNode) == 0xf0);
+    static_assert(sizeof(CBlend2DUpdateNode) == 0xf8);
 };

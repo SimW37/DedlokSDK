@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x890
+    // Size: 0x868
     // Has VTable
     // 
     // static metadata: MEntityAllowsPortraitWorldSpawn
@@ -39,47 +39,47 @@ namespace source2sdk::client
         // metadata: MNetworkChangeCallback "SkyStateChanged"
         // m_hSkyMaterial has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2> m_hSkyMaterial;
-        char m_hSkyMaterial[0x8]; // 0x830        
+        char m_hSkyMaterial[0x8]; // 0x808        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "SkyStateChanged"
         // m_hSkyMaterialLightingOnly has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2> m_hSkyMaterialLightingOnly;
-        char m_hSkyMaterialLightingOnly[0x8]; // 0x838        
+        char m_hSkyMaterialLightingOnly[0x8]; // 0x810        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "SkyStateChanged"
-        bool m_bStartDisabled; // 0x840        
+        bool m_bStartDisabled; // 0x818        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "SkyStateChanged"
-        Color m_vTintColor; // 0x841        
+        Color m_vTintColor; // 0x819        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "SkyStateChanged"
-        Color m_vTintColorLightingOnly; // 0x845        
-        [[maybe_unused]] std::uint8_t pad_0x849[0x3]; // 0x849
+        Color m_vTintColorLightingOnly; // 0x81d        
+        [[maybe_unused]] std::uint8_t pad_0x821[0x3]; // 0x821
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "SkyStateChanged"
-        float m_flBrightnessScale; // 0x84c        
+        float m_flBrightnessScale; // 0x824        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "SkyStateChanged"
-        int32_t m_nFogType; // 0x850        
+        int32_t m_nFogType; // 0x828        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "SkyStateChanged"
-        float m_flFogMinStart; // 0x854        
+        float m_flFogMinStart; // 0x82c        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "SkyStateChanged"
-        float m_flFogMinEnd; // 0x858        
+        float m_flFogMinEnd; // 0x830        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "SkyStateChanged"
-        float m_flFogMaxStart; // 0x85c        
+        float m_flFogMaxStart; // 0x834        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "SkyStateChanged"
-        float m_flFogMaxEnd; // 0x860        
+        float m_flFogMaxEnd; // 0x838        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "SkyStateChanged"
-        bool m_bEnabled; // 0x864        
-        [[maybe_unused]] std::uint8_t pad_0x865[0x2b];
+        bool m_bEnabled; // 0x83c        
+        [[maybe_unused]] std::uint8_t pad_0x83d[0x2b];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_EnvSky because it is not a standard-layout class
-    static_assert(sizeof(C_EnvSky) == 0x890);
+    static_assert(sizeof(C_EnvSky) == 0x868);
 };

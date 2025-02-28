@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x18f8
+    // Size: 0x1998
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,25 +26,25 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_LaserShot has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserShot;
-        char m_LaserShot[0xe0]; // 0x1528        
+        char m_LaserShot[0xe0]; // 0x15c8        
         // m_ChargeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle;
-        char m_ChargeParticle[0xe0]; // 0x1608        
+        char m_ChargeParticle[0xe0]; // 0x16a8        
         // m_CasterOnlyTargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CasterOnlyTargetParticle;
-        char m_CasterOnlyTargetParticle[0xe0]; // 0x16e8        
+        char m_CasterOnlyTargetParticle[0xe0]; // 0x1788        
         // m_EnemyTargetedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyTargetedParticle;
-        char m_EnemyTargetedParticle[0xe0]; // 0x17c8        
+        char m_EnemyTargetedParticle[0xe0]; // 0x1868        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strEnemyBeenTargetedSound; // 0x18a8        
-        CSoundEventName m_strCasterTargetSelectedSound; // 0x18b8        
-        CSoundEventName m_strFireSound; // 0x18c8        
-        CSoundEventName m_strImpactSound; // 0x18d8        
-        CSoundEventName m_strBlockedSound; // 0x18e8        
+        CSoundEventName m_strEnemyBeenTargetedSound; // 0x1948        
+        CSoundEventName m_strCasterTargetSelectedSound; // 0x1958        
+        CSoundEventName m_strFireSound; // 0x1968        
+        CSoundEventName m_strImpactSound; // 0x1978        
+        CSoundEventName m_strBlockedSound; // 0x1988        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Tokamak_CrimsonCannonVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Tokamak_CrimsonCannonVData) == 0x18f8);
+    static_assert(sizeof(CCitadel_Ability_Tokamak_CrimsonCannonVData) == 0x1998);
 };

@@ -36,9 +36,7 @@ namespace source2sdk::particles
         float m_flRepulsionMaxStrength; // 0x1e4        
         // metadata: MPropertyFriendlyName "use aabbtree"
         bool m_bUseAABB; // 0x1e8        
-        // metadata: MPropertyFriendlyName "thread pairwise collision"
-        bool m_bThreadIt; // 0x1e9        
-        [[maybe_unused]] std::uint8_t pad_0x1ea[0x6];
+        [[maybe_unused]] std::uint8_t pad_0x1e9[0x7];
     };
     #pragma pack(pop)
     

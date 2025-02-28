@@ -14,7 +14,7 @@ namespace source2sdk::physicslib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x58
+    // Size: 0x60
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
@@ -23,9 +23,11 @@ namespace source2sdk::physicslib
     public:
         int32_t m_nPriority; // 0x50        
         uint32_t m_nVertexMapHash; // 0x54        
+        uint32_t m_nAntitunnelGroupBits; // 0x58        
+        [[maybe_unused]] std::uint8_t pad_0x5c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in FeBuildSDFRigid_t because it is not a standard-layout class
-    static_assert(sizeof(FeBuildSDFRigid_t) == 0x58);
+    static_assert(sizeof(FeBuildSDFRigid_t) == 0x60);
 };

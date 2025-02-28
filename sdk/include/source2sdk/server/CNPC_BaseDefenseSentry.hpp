@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb98
+    // Size: 0xc88
     // Has VTable
     // 
     // static metadata: MNetworkIncludeByName "m_bTakesDamage"
@@ -25,18 +25,18 @@ namespace source2sdk::server
     class CNPC_BaseDefenseSentry : public server::CNPC_SimpleAnimatingAI
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb38[0x8]; // 0xb38
+        [[maybe_unused]] std::uint8_t pad_0xc28[0x8]; // 0xc28
         // metadata: MNetworkEnable
-        Vector m_vecUnitStatusOffset; // 0xb40        
-        [[maybe_unused]] std::uint8_t pad_0xb4c[0x28]; // 0xb4c
-        float m_flAttackCone; // 0xb74        
-        float m_flAttackDelay; // 0xb78        
-        entity2::GameTime_t m_flLastAlertSound; // 0xb7c        
-        [[maybe_unused]] std::uint8_t pad_0xb80[0x4]; // 0xb80
-        int16_t m_nSentryLevel; // 0xb84        
-        [[maybe_unused]] std::uint8_t pad_0xb86[0x2]; // 0xb86
-        Vector m_vecForward; // 0xb88        
-        [[maybe_unused]] std::uint8_t pad_0xb94[0x4];
+        Vector m_vecUnitStatusOffset; // 0xc30        
+        [[maybe_unused]] std::uint8_t pad_0xc3c[0x28]; // 0xc3c
+        float m_flAttackCone; // 0xc64        
+        float m_flAttackDelay; // 0xc68        
+        entity2::GameTime_t m_flLastAlertSound; // 0xc6c        
+        [[maybe_unused]] std::uint8_t pad_0xc70[0x4]; // 0xc70
+        int16_t m_nSentryLevel; // 0xc74        
+        [[maybe_unused]] std::uint8_t pad_0xc76[0x2]; // 0xc76
+        Vector m_vecForward; // 0xc78        
+        [[maybe_unused]] std::uint8_t pad_0xc84[0x4];
         
         // Datamap fields:
         // void EnableAttacking; // 0x0
@@ -45,5 +45,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CNPC_BaseDefenseSentry because it is not a standard-layout class
-    static_assert(sizeof(CNPC_BaseDefenseSentry) == 0xb98);
+    static_assert(sizeof(CNPC_BaseDefenseSentry) == 0xc88);
 };

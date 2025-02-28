@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x580
+    // Size: 0x538
     // Has VTable
     // Is Abstract
     // 
@@ -26,21 +26,21 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        bool m_bDisabled; // 0x558        
-        [[maybe_unused]] std::uint8_t pad_0x559[0x7]; // 0x559
-        bool m_bWasEnabled; // 0x560        
-        [[maybe_unused]] std::uint8_t pad_0x561[0x7]; // 0x561
+        bool m_bDisabled; // 0x510        
+        [[maybe_unused]] std::uint8_t pad_0x511[0x7]; // 0x511
+        bool m_bWasEnabled; // 0x518        
+        [[maybe_unused]] std::uint8_t pad_0x519[0x7]; // 0x519
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_iszSoundAreaType; // 0x568        
+        CUtlSymbolLarge m_iszSoundAreaType; // 0x520        
         // metadata: MNetworkEnable
-        Vector m_vPos; // 0x570        
-        [[maybe_unused]] std::uint8_t pad_0x57c[0x4];
+        Vector m_vPos; // 0x528        
+        [[maybe_unused]] std::uint8_t pad_0x534[0x4];
         
         // Datamap fields:
-        // void m_nGUID; // 0x55c
+        // void m_nGUID; // 0x514
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_SoundAreaEntityBase because it is not a standard-layout class
-    static_assert(sizeof(C_SoundAreaEntityBase) == 0x580);
+    static_assert(sizeof(C_SoundAreaEntityBase) == 0x538);
 };

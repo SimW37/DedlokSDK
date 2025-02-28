@@ -14,16 +14,20 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x840
+    // Size: 0x958
     // Has VTable
+    // 
+    // static metadata: MNetworkVarNames "bool m_bAlignCameraOnAutoDismount"
     #pragma pack(push, 1)
     class C_CitadelClimbRopeTrigger : public client::C_BaseTrigger
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x838[0x8];
-        // No schema binary for binding
+        // metadata: MNetworkEnable
+        bool m_bAlignCameraOnAutoDismount; // 0x948        
+        [[maybe_unused]] std::uint8_t pad_0x949[0xf];
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(C_CitadelClimbRopeTrigger) == 0x840);
+    // Cannot assert offsets of fields in C_CitadelClimbRopeTrigger because it is not a standard-layout class
+    static_assert(sizeof(C_CitadelClimbRopeTrigger) == 0x958);
 };

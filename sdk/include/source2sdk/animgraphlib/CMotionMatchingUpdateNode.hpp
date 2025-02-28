@@ -18,7 +18,7 @@ namespace source2sdk::animgraphlib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x140
+    // Size: 0x148
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -54,15 +54,15 @@ namespace source2sdk::animgraphlib
         float m_flGoalAssistTolerance; // 0x110        
         [[maybe_unused]] std::uint8_t pad_0x114[0x4]; // 0x114
         animgraphlib::CAnimInputDamping m_distanceScale_Damping; // 0x118        
-        float m_flDistanceScale_OuterRadius; // 0x128        
-        float m_flDistanceScale_InnerRadius; // 0x12c        
-        float m_flDistanceScale_MaxScale; // 0x130        
-        float m_flDistanceScale_MinScale; // 0x134        
-        bool m_bEnableDistanceScaling; // 0x138        
-        [[maybe_unused]] std::uint8_t pad_0x139[0x7];
+        float m_flDistanceScale_OuterRadius; // 0x130        
+        float m_flDistanceScale_InnerRadius; // 0x134        
+        float m_flDistanceScale_MaxScale; // 0x138        
+        float m_flDistanceScale_MinScale; // 0x13c        
+        bool m_bEnableDistanceScaling; // 0x140        
+        [[maybe_unused]] std::uint8_t pad_0x141[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CMotionMatchingUpdateNode because it is not a standard-layout class
-    static_assert(sizeof(CMotionMatchingUpdateNode) == 0x140);
+    static_assert(sizeof(CMotionMatchingUpdateNode) == 0x148);
 };

@@ -29,9 +29,6 @@ namespace source2sdk::server
         [[maybe_unused]] std::uint8_t pad_0x80[0x20]; // 0x80
         CUtlString m_sInterruptText; // 0xa0        
         
-        // Static fields:
-        static int32_t &Get_ms_nTasksRun() {return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_Scheduler")->GetStaticFields()[0]->m_pInstance);};
-        
         // Datamap fields:
         // void m_pSchedule; // 0x60
         // void m_pFailedSchedule; // 0x80

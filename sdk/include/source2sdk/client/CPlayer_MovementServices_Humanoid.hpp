@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x218
+    // Size: 0x228
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "float32 m_flFallVelocity"
@@ -29,46 +29,46 @@ namespace source2sdk::client
     class CPlayer_MovementServices_Humanoid : public client::CPlayer_MovementServices
     {
     public:
-        float m_flStepSoundTime; // 0x1d8        
+        float m_flStepSoundTime; // 0x1e8        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
         // metadata: MNetworkBitCount "17"
         // metadata: MNetworkMinValue "-4096,000000"
         // metadata: MNetworkMaxValue "4096,000000"
         // metadata: MNetworkEncodeFlags "4"
-        float m_flFallVelocity; // 0x1dc        
+        float m_flFallVelocity; // 0x1ec        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-        bool m_bInCrouch; // 0x1e0        
-        [[maybe_unused]] std::uint8_t pad_0x1e1[0x3]; // 0x1e1
+        bool m_bInCrouch; // 0x1f0        
+        [[maybe_unused]] std::uint8_t pad_0x1f1[0x3]; // 0x1f1
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-        uint32_t m_nCrouchState; // 0x1e4        
+        uint32_t m_nCrouchState; // 0x1f4        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-        entity2::GameTime_t m_flCrouchTransitionStartTime; // 0x1e8        
+        entity2::GameTime_t m_flCrouchTransitionStartTime; // 0x1f8        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-        bool m_bDucked; // 0x1ec        
+        bool m_bDucked; // 0x1fc        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-        bool m_bDucking; // 0x1ed        
+        bool m_bDucking; // 0x1fd        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-        bool m_bInDuckJump; // 0x1ee        
-        [[maybe_unused]] std::uint8_t pad_0x1ef[0x1]; // 0x1ef
-        Vector m_groundNormal; // 0x1f0        
-        float m_flSurfaceFriction; // 0x1fc        
-        CUtlStringToken m_surfaceProps; // 0x200        
-        [[maybe_unused]] std::uint8_t pad_0x204[0xc]; // 0x204
-        int32_t m_nStepside; // 0x210        
-        [[maybe_unused]] std::uint8_t pad_0x214[0x4];
+        bool m_bInDuckJump; // 0x1fe        
+        [[maybe_unused]] std::uint8_t pad_0x1ff[0x1]; // 0x1ff
+        Vector m_groundNormal; // 0x200        
+        float m_flSurfaceFriction; // 0x20c        
+        CUtlStringToken m_surfaceProps; // 0x210        
+        [[maybe_unused]] std::uint8_t pad_0x214[0xc]; // 0x214
+        int32_t m_nStepside; // 0x220        
+        [[maybe_unused]] std::uint8_t pad_0x224[0x4];
         
         // Datamap fields:
-        // void m_pSurfaceData; // 0x208
+        // void m_pSurfaceData; // 0x218
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPlayer_MovementServices_Humanoid because it is not a standard-layout class
-    static_assert(sizeof(CPlayer_MovementServices_Humanoid) == 0x218);
+    static_assert(sizeof(CPlayer_MovementServices_Humanoid) == 0x228);
 };

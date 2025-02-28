@@ -8,12 +8,13 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 2
+    // Enumerator count: 3
     // Alignment: 4
     // Size: 0x4
     enum class HudDisplayLocation_t : std::uint32_t
     {
-        DISPLAY_HUD_LEFT = 0x0,
-        DISPLAY_HUD_CENTER = 0x1,
+        DISPLAY_HUD_NONE = 0x0,
+        DISPLAY_HUD_LEFT = 0x1,
+        DISPLAY_HUD_CENTER = 0x2,
     };
 };

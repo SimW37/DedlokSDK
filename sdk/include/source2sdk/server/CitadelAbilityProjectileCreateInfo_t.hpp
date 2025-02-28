@@ -27,7 +27,7 @@ namespace source2sdk::server
         bool m_bWantsInitialVelocity; // 0x2d        
         [[maybe_unused]] std::uint8_t pad_0x2e[0x2]; // 0x2e
         float m_flChargeAmount; // 0x30        
-        float m_flArmingTime; // 0x34        
+        [[maybe_unused]] std::uint8_t pad_0x34[0x4]; // 0x34
         CUtlString m_sOverrideClassName; // 0x38        
         bool m_bShouldHitThrower; // 0x40        
         bool m_bLagCompensatePosition; // 0x41        
@@ -45,7 +45,6 @@ namespace source2sdk::server
     static_assert(offsetof(CitadelAbilityProjectileCreateInfo_t, m_bPrimaryAttack) == 0x2c);
     static_assert(offsetof(CitadelAbilityProjectileCreateInfo_t, m_bWantsInitialVelocity) == 0x2d);
     static_assert(offsetof(CitadelAbilityProjectileCreateInfo_t, m_flChargeAmount) == 0x30);
-    static_assert(offsetof(CitadelAbilityProjectileCreateInfo_t, m_flArmingTime) == 0x34);
     static_assert(offsetof(CitadelAbilityProjectileCreateInfo_t, m_sOverrideClassName) == 0x38);
     static_assert(offsetof(CitadelAbilityProjectileCreateInfo_t, m_bShouldHitThrower) == 0x40);
     static_assert(offsetof(CitadelAbilityProjectileCreateInfo_t, m_bLagCompensatePosition) == 0x41);

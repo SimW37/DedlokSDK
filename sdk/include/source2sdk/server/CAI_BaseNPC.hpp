@@ -1,9 +1,9 @@
 #pragma once
+#include "source2sdk/client/AILOD_t.hpp"
 #include "source2sdk/client/CAI_ScheduleBits.hpp"
 #include "source2sdk/client/CRandStopwatch.hpp"
 #include "source2sdk/client/CSimpleSimTimer.hpp"
 #include "source2sdk/client/CTakeDamageResult.hpp"
-#include "source2sdk/client/HitGroup_t.hpp"
 #include "source2sdk/client/NPC_STATE.hpp"
 #include "source2sdk/client/SquadSlotNPCEntry_t.hpp"
 #include "source2sdk/entity2/CEntityIOOutput.hpp"
@@ -37,6 +37,11 @@ namespace source2sdk::server
 
 namespace source2sdk::server
 {
+    class CAI_FacingServices;
+};
+
+namespace source2sdk::server
+{
     class CAI_Motor;
 };
 
@@ -60,7 +65,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x10a8
+    // Size: 0x1320
     // Has VTable
     // 
     // static metadata: MNetworkIncludeByName "m_lifeState"
@@ -72,163 +77,148 @@ namespace source2sdk::server
     class CAI_BaseNPC : public server::CBaseCombatCharacter
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xac0[0x10]; // 0xac0
-        bool m_bCheckContacts; // 0xad0        
-        bool m_bIsUsingSmallHull; // 0xad1        
-        [[maybe_unused]] std::uint8_t pad_0xad2[0x2]; // 0xad2
-        Vector m_vecLastPosition; // 0xad4        
-        float m_flLastPositionTolerance; // 0xae0        
+        [[maybe_unused]] std::uint8_t pad_0xbe8[0x10]; // 0xbe8
+        bool m_bCheckContacts; // 0xbf8        
+        bool m_bIsUsingSmallHull; // 0xbf9        
+        bool m_bForceDynamicHull; // 0xbfa        
+        [[maybe_unused]] std::uint8_t pad_0xbfb[0x1]; // 0xbfb
+        Vector m_vecLastPosition; // 0xbfc        
+        float m_flLastPositionTolerance; // 0xc08        
         // m_hSynchronizedPrimaryNPC has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CAI_BaseNPC> m_hSynchronizedPrimaryNPC;
-        char m_hSynchronizedPrimaryNPC[0x4]; // 0xae4        
+        char m_hSynchronizedPrimaryNPC[0x4]; // 0xc0c        
         // m_vecSynchronizedSecondaryNPCs has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CHandle<server::CAI_BaseNPC>> m_vecSynchronizedSecondaryNPCs;
-        char m_vecSynchronizedSecondaryNPCs[0x18]; // 0xae8        
+        char m_vecSynchronizedSecondaryNPCs[0x18]; // 0xc10        
         // metadata: MNetworkEnable
-        client::NPC_STATE m_NPCState; // 0xb00        
-        client::NPC_STATE m_nPreModifierNPCState; // 0xb04        
-        client::NPC_STATE m_IdealNPCState; // 0xb08        
-        entity2::GameTime_t m_flLastStateChangeTime; // 0xb0c        
-        [[maybe_unused]] std::uint8_t pad_0xb10[0x8]; // 0xb10
-        client::CAI_ScheduleBits m_Conditions; // 0xb18        
-        client::CAI_ScheduleBits m_NonGatherConditions; // 0xb3c        
-        client::CAI_ScheduleBits m_CustomInterruptConditions; // 0xb60        
-        bool m_bForceConditionsGather; // 0xb84        
-        bool m_bConditionsGathered; // 0xb85        
-        bool m_bDoPostRestoreRefindPath; // 0xb86        
-        [[maybe_unused]] std::uint8_t pad_0xb87[0x1]; // 0xb87
-        server::CAI_BehaviorHost* m_pBehaviorHost; // 0xb88        
-        [[maybe_unused]] std::uint8_t pad_0xb90[0x8]; // 0xb90
-        entity2::GameTime_t m_flBlinkTime; // 0xb98        
-        [[maybe_unused]] std::uint8_t pad_0xb9c[0x4]; // 0xb9c
-        server::CAI_EnemyServices* m_pEnemyServices; // 0xba0        
-        client::CRandStopwatch m_GiveUpOnDeadEnemyTimer; // 0xba8        
-        client::CSimpleSimTimer m_FailChooseEnemyTimer; // 0xbbc        
-        entity2::GameTime_t m_flAcceptableTimeSeenEnemy; // 0xbc4        
-        bool m_bSkippedChooseEnemy; // 0xbc8        
-        bool m_bIgnoreUnseenEnemies; // 0xbc9        
-        [[maybe_unused]] std::uint8_t pad_0xbca[0x2]; // 0xbca
+        client::NPC_STATE m_NPCState; // 0xc28        
+        client::NPC_STATE m_nPreModifierNPCState; // 0xc2c        
+        client::NPC_STATE m_IdealNPCState; // 0xc30        
+        entity2::GameTime_t m_flLastStateChangeTime; // 0xc34        
+        [[maybe_unused]] std::uint8_t pad_0xc38[0x8]; // 0xc38
+        client::CAI_ScheduleBits m_Conditions; // 0xc40        
+        client::CAI_ScheduleBits m_NonGatherConditions; // 0xc64        
+        client::CAI_ScheduleBits m_CustomInterruptConditions; // 0xc88        
+        bool m_bForceConditionsGather; // 0xcac        
+        bool m_bConditionsGathered; // 0xcad        
+        bool m_bDoPostRestoreRefindPath; // 0xcae        
+        [[maybe_unused]] std::uint8_t pad_0xcaf[0x1]; // 0xcaf
+        server::CAI_BehaviorHost* m_pBehaviorHost; // 0xcb0        
+        [[maybe_unused]] std::uint8_t pad_0xcb8[0x8]; // 0xcb8
+        entity2::GameTime_t m_flBlinkTime; // 0xcc0        
+        [[maybe_unused]] std::uint8_t pad_0xcc4[0x4]; // 0xcc4
+        server::CAI_EnemyServices* m_pEnemyServices; // 0xcc8        
+        client::CRandStopwatch m_GiveUpOnDeadEnemyTimer; // 0xcd0        
+        client::CSimpleSimTimer m_FailChooseEnemyTimer; // 0xce4        
+        entity2::GameTime_t m_flAcceptableTimeSeenEnemy; // 0xcec        
+        bool m_bSkippedChooseEnemy; // 0xcf0        
+        bool m_bIgnoreUnseenEnemies; // 0xcf1        
+        [[maybe_unused]] std::uint8_t pad_0xcf2[0x2]; // 0xcf2
         // m_hEnemyFilter has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseFilter> m_hEnemyFilter;
-        char m_hEnemyFilter[0x4]; // 0xbcc        
-        CUtlSymbolLarge m_iszEnemyFilterName; // 0xbd0        
+        char m_hEnemyFilter[0x4]; // 0xcf4        
+        CUtlSymbolLarge m_iszEnemyFilterName; // 0xcf8        
         // m_hTargetEnt has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hTargetEnt;
-        char m_hTargetEnt[0x4]; // 0xbd8        
-        bool m_bClearTargetOnScheduleEnd; // 0xbdc        
-        [[maybe_unused]] std::uint8_t pad_0xbdd[0x3]; // 0xbdd
-        entity2::GameTime_t m_flSoundWaitTime; // 0xbe0        
-        int32_t m_nSoundPriority; // 0xbe4        
-        bool m_bSuppressFootsteps; // 0xbe8        
-        [[maybe_unused]] std::uint8_t pad_0xbe9[0x3]; // 0xbe9
-        int32_t m_afCapability; // 0xbec        
-        // metadata: MNetworkDisable
-        float m_flGroundSpeed; // 0xbf0        
-        entity2::GameTime_t m_flMoveWaitFinished; // 0xbf4        
+        char m_hTargetEnt[0x4]; // 0xd00        
+        bool m_bClearTargetOnScheduleEnd; // 0xd04        
+        [[maybe_unused]] std::uint8_t pad_0xd05[0x3]; // 0xd05
+        entity2::GameTime_t m_flSoundWaitTime; // 0xd08        
+        int32_t m_nSoundPriority; // 0xd0c        
+        bool m_bSuppressFootsteps; // 0xd10        
+        [[maybe_unused]] std::uint8_t pad_0xd11[0x3]; // 0xd11
+        int32_t m_afCapability; // 0xd14        
+        [[maybe_unused]] std::uint8_t pad_0xd18[0x170]; // 0xd18
+        float m_flGroundSpeed; // 0xe88        
+        entity2::GameTime_t m_flMoveWaitFinished; // 0xe8c        
         // m_hOpeningDoor has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hOpeningDoor;
-        char m_hOpeningDoor[0x4]; // 0xbf8        
-        [[maybe_unused]] std::uint8_t pad_0xbfc[0x4]; // 0xbfc
-        server::CUnreachableTargetList m_UnreachableTargets; // 0xc00        
+        char m_hOpeningDoor[0x4]; // 0xe90        
+        [[maybe_unused]] std::uint8_t pad_0xe94[0x4]; // 0xe94
+        server::CUnreachableTargetList m_UnreachableTargets; // 0xe98        
         // m_hPathObstructor has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hPathObstructor;
-        char m_hPathObstructor[0x4]; // 0xc20        
-        float m_flJumpMaxRise; // 0xc24        
-        float m_flJumpMaxDrop; // 0xc28        
-        float m_flJumpMaxDist; // 0xc2c        
-        float m_flJumpMinDist; // 0xc30        
-        [[maybe_unused]] std::uint8_t pad_0xc34[0x4]; // 0xc34
-        server::CAI_AnimGraphServices* m_pAnimGraphServices; // 0xc38        
-        bool m_bAnimGraphIsAnimatingDeath; // 0xc40        
-        bool m_bDeferredNavigation; // 0xc41        
-        [[maybe_unused]] std::uint8_t pad_0xc42[0x6]; // 0xc42
-        server::CAI_Scheduler m_Scheduler; // 0xc48        
-        server::CAI_Navigator* m_pNavigatorNavmesh; // 0xcf0        
-        [[maybe_unused]] std::uint8_t pad_0xcf8[0x18]; // 0xcf8
-        server::CAI_Motor* m_pMotor; // 0xd10        
-        entity2::GameTime_t m_flTimeLastMovement; // 0xd18        
-        entity2::GameTime_t m_flTimeLastFootstep; // 0xd1c        
-        client::CSimpleSimTimer m_CheckOnGroundTimer; // 0xd20        
-        CUtlSymbolLarge m_strNavRestrictionVolume; // 0xd28        
-        Vector m_vDefaultEyeOffset; // 0xd30        
-        int32_t m_afMemory; // 0xd3c        
-        entity2::GameTime_t m_flLastAttackTime; // 0xd40        
-        entity2::GameTime_t m_flLastTookDamageTime; // 0xd44        
-        entity2::GameTime_t m_flLastTookDamageFromPlayerTime; // 0xd48        
-        Vector m_vecLastTookDamageAttackVector; // 0xd4c        
-        CUtlSymbolLarge m_iszSquadName; // 0xd58        
+        char m_hPathObstructor[0x4]; // 0xeb8        
+        float m_flJumpMaxRise; // 0xebc        
+        float m_flJumpMaxDrop; // 0xec0        
+        float m_flJumpMaxDist; // 0xec4        
+        float m_flJumpMinDist; // 0xec8        
+        [[maybe_unused]] std::uint8_t pad_0xecc[0x4]; // 0xecc
+        server::CAI_FacingServices* m_pFacingServices; // 0xed0        
+        server::CAI_AnimGraphServices* m_pAnimGraphServices; // 0xed8        
+        bool m_bAnimGraphIsAnimatingDeath; // 0xee0        
+        bool m_bDeferredNavigation; // 0xee1        
+        [[maybe_unused]] std::uint8_t pad_0xee2[0x6]; // 0xee2
+        server::CAI_Scheduler m_Scheduler; // 0xee8        
+        server::CAI_Navigator* m_pNavigatorNavmesh; // 0xf90        
+        [[maybe_unused]] std::uint8_t pad_0xf98[0x18]; // 0xf98
+        server::CAI_Motor* m_pMotor; // 0xfb0        
+        entity2::GameTime_t m_flTimeLastMovement; // 0xfb8        
+        entity2::GameTime_t m_flTimeLastFootstep; // 0xfbc        
+        client::CSimpleSimTimer m_CheckOnGroundTimer; // 0xfc0        
+        CUtlSymbolLarge m_strNavRestrictionVolume; // 0xfc8        
+        Vector m_vDefaultEyeOffset; // 0xfd0        
+        int32_t m_afMemory; // 0xfdc        
+        entity2::GameTime_t m_flLastAttackTime; // 0xfe0        
+        entity2::GameTime_t m_flLastTookDamageTime; // 0xfe4        
+        entity2::GameTime_t m_flLastTookDamageFromPlayerTime; // 0xfe8        
+        Vector m_vecLastTookDamageAttackVector; // 0xfec        
+        CUtlSymbolLarge m_iszSquadName; // 0xff8        
         // m_vecMySquadSlots has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<client::SquadSlotNPCEntry_t> m_vecMySquadSlots;
-        char m_vecMySquadSlots[0x18]; // 0xd60        
-        [[maybe_unused]] std::uint8_t pad_0xd78[0x8]; // 0xd78
-        client::HitGroup_t m_nDestructiblePartInitialStateDestructed0; // 0xd80        
-        client::HitGroup_t m_nDestructiblePartInitialStateDestructed1; // 0xd84        
-        client::HitGroup_t m_nDestructiblePartInitialStateDestructed2; // 0xd88        
-        client::HitGroup_t m_nDestructiblePartInitialStateDestructed3; // 0xd8c        
-        client::HitGroup_t m_nDestructiblePartInitialStateDestructed4; // 0xd90        
-        int32_t m_nLastHitDestructiblePartIndex; // 0xd94        
-        int32_t m_nPrevHealthDuringModifyDamage; // 0xd98        
+        char m_vecMySquadSlots[0x18]; // 0x1000        
+        [[maybe_unused]] std::uint8_t pad_0x1018[0x8]; // 0x1018
+        int32_t m_nPrevHealthDuringModifyDamage; // 0x1020        
+        [[maybe_unused]] std::uint8_t pad_0x1024[0x4]; // 0x1024
         // metadata: MNetworkEnable
-        bool m_bFadeCorpse; // 0xd9c        
+        bool m_bFadeCorpse; // 0x1028        
         // metadata: MNetworkEnable
-        bool m_bImportantRagdoll; // 0xd9d        
-        [[maybe_unused]] std::uint8_t pad_0xd9e[0x2]; // 0xd9e
-        client::CTakeDamageResult m_deathBlowResult; // 0xda0        
-        bool m_bDidDeathCleanup; // 0xdb8        
-        bool m_bReceivedEnemyDeadNotification; // 0xdb9        
-        [[maybe_unused]] std::uint8_t pad_0xdba[0x2]; // 0xdba
-        entity2::GameTime_t m_flWaitFinished; // 0xdbc        
-        bool m_fNoDamageDecal; // 0xdc0        
-        [[maybe_unused]] std::uint8_t pad_0xdc1[0x7]; // 0xdc1
+        bool m_bImportantRagdoll; // 0x1029        
+        [[maybe_unused]] std::uint8_t pad_0x102a[0x6]; // 0x102a
+        client::CTakeDamageResult m_deathBlowResult; // 0x1030        
+        bool m_bDidDeathCleanup; // 0x1050        
+        bool m_bReceivedEnemyDeadNotification; // 0x1051        
+        [[maybe_unused]] std::uint8_t pad_0x1052[0x2]; // 0x1052
+        entity2::GameTime_t m_flWaitFinished; // 0x1054        
+        bool m_fNoDamageDecal; // 0x1058        
+        [[maybe_unused]] std::uint8_t pad_0x1059[0x7]; // 0x1059
         // m_pVecAttachments has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CHandle<server::CBaseEntity>>* m_pVecAttachments;
-        char m_pVecAttachments[0x8]; // 0xdc8        
-        entity2::CEntityIOOutput m_OnDamaged; // 0xdd0        
-        entity2::CEntityIOOutput m_OnDeath; // 0xdf8        
-        entity2::CEntityIOOutput m_OnQuarterHealth; // 0xe20        
-        entity2::CEntityIOOutput m_OnHalfHealth; // 0xe48        
-        entity2::CEntityIOOutput m_OnThreeQuarterHealth; // 0xe70        
+        char m_pVecAttachments[0x8]; // 0x1060        
+        entity2::CEntityIOOutput m_OnDamaged; // 0x1068        
+        entity2::CEntityIOOutput m_OnDeath; // 0x1090        
+        entity2::CEntityIOOutput m_OnQuarterHealth; // 0x10b8        
+        entity2::CEntityIOOutput m_OnHalfHealth; // 0x10e0        
+        entity2::CEntityIOOutput m_OnThreeQuarterHealth; // 0x1108        
         // m_OnFoundEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEntityOutputTemplate<CHandle<server::CBaseEntity>> m_OnFoundEnemy;
-        char m_OnFoundEnemy[0x28]; // 0xe98        
-        entity2::CEntityIOOutput m_OnLostEnemy; // 0xec0        
-        entity2::CEntityIOOutput m_OnLostPlayer; // 0xee8        
-        entity2::CEntityIOOutput m_OnDamagedByPlayer; // 0xf10        
-        entity2::CEntityIOOutput m_OnDamagedByPlayerSquad; // 0xf38        
-        entity2::CEntityIOOutput m_OnPlayerUse; // 0xf60        
-        entity2::CEntityIOOutput m_OnUse; // 0xf88        
-        entity2::CEntityIOOutput m_OnStartTouchMaterial; // 0xfb0        
-        entity2::CEntityIOOutput m_OnEndTouchMaterial; // 0xfd8        
-        entity2::CEntityIOOutput m_OnLostEnemyLOS; // 0x1000        
-        entity2::CEntityIOOutput m_OnLostPlayerLOS; // 0x1028        
-        uint64_t m_nAITraceMask; // 0x1050        
-        float m_flThinkTime; // 0x1058        
-        [[maybe_unused]] std::uint8_t pad_0x105c[0x44]; // 0x105c
-        int32_t m_nDebugCurIndex; // 0x10a0        
-        // start of bitfield block at 0x10a4
-        uint16_t m_bInvokingBehaviorIsValidEnemy: 1;
-        uint16_t m_bInvokingBehaviorBestEnemy: 1;
-        uint16_t m_bInvokingBehaviorShouldIgnoreSound: 1;
-        uint16_t m_bInvokingBehaviorIsInterruptable: 1;
-        uint16_t m_bInvokingBehaviorOnTakeDamage_React_Alive: 1;
-        uint16_t m_bInvokingBehaviorQueryHearSound: 1;
-        uint16_t m_bInvokingBehaviorOnCalcBaseMove: 1;
-        uint16_t m_bInvokingBehaviorShouldAlwaysGatherEnvironmentalConditions: 1;
-        uint16_t m_bInvokingBehaviorAimGun: 1;
-        // end of bitfield block // 9 bits
-        [[maybe_unused]] std::uint8_t pad_0x10a6[0x2];
-        
-        // Static fields:
-        static CUtlSymbolLarge &Get_sm_iszPlayerSquad() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_BaseNPC")->GetStaticFields()[0]->m_pInstance);};
-        static int32_t &Get_sm_nDebugBits() {return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_BaseNPC")->GetStaticFields()[1]->m_pInstance);};
-        static int32_t &Get_sm_nDebugPauseIndex() {return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_BaseNPC")->GetStaticFields()[2]->m_pInstance);};
+        char m_OnFoundEnemy[0x28]; // 0x1130        
+        entity2::CEntityIOOutput m_OnLostEnemy; // 0x1158        
+        entity2::CEntityIOOutput m_OnLostPlayer; // 0x1180        
+        entity2::CEntityIOOutput m_OnDamagedByPlayer; // 0x11a8        
+        entity2::CEntityIOOutput m_OnDamagedByPlayerSquad; // 0x11d0        
+        entity2::CEntityIOOutput m_OnPlayerUse; // 0x11f8        
+        entity2::CEntityIOOutput m_OnUse; // 0x1220        
+        entity2::CEntityIOOutput m_OnStartTouchMaterial; // 0x1248        
+        entity2::CEntityIOOutput m_OnEndTouchMaterial; // 0x1270        
+        entity2::CEntityIOOutput m_OnLostEnemyLOS; // 0x1298        
+        entity2::CEntityIOOutput m_OnLostPlayerLOS; // 0x12c0        
+        uint64_t m_nAITraceMask; // 0x12e8        
+        bool m_bDynamicAILOD; // 0x12f0        
+        [[maybe_unused]] std::uint8_t pad_0x12f1[0x3]; // 0x12f1
+        client::AILOD_t m_aiLOD; // 0x12f4        
+        float m_flThinkTime; // 0x12f8        
+        [[maybe_unused]] std::uint8_t pad_0x12fc[0x1c]; // 0x12fc
+        int32_t m_nDebugCurIndex; // 0x1318        
+        [[maybe_unused]] std::uint8_t pad_0x131c[0x4];
         
         // Datamap fields:
-        // CAI_Senses m_pSenses; // 0xb10
-        // void m_pSquad; // 0xd78
-        // void m_vecTaskThinkTimes; // 0x1060
-        // CAI_Pathfinder m_pPathfinderNavmesh; // 0xcf8
-        // void m_DestructiblePartsRuntimeDataByHitGroup; // 0x1078
+        // CAI_Senses m_pSenses; // 0xc38
+        // void m_pSquad; // 0x1018
+        // void CAI_BaseNPCForceSelectedGoLoopThink; // 0x0
+        // void m_vecTaskThinkTimes; // 0x1300
+        // CAI_Pathfinder m_pPathfinderNavmesh; // 0xf98
+        // void m_hDamagedFX; // 0x1024
         // CUtlSymbolLarge InputSetEnemyFilter; // 0x0
         // int32_t InputOverrideHealth; // 0x0
         // int32_t InputSetHealth; // 0x0
@@ -248,5 +238,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAI_BaseNPC because it is not a standard-layout class
-    static_assert(sizeof(CAI_BaseNPC) == 0x10a8);
+    static_assert(sizeof(CAI_BaseNPC) == 0x1320);
 };

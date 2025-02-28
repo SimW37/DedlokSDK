@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xce8
+    // Size: 0xcc8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "float m_flVertOffset"
@@ -30,30 +30,30 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        float m_flVertOffset; // 0xc70        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        float m_flVertOffset; // 0xc50        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        float m_flHorizGap; // 0xc74        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        float m_flHorizGap; // 0xc54        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        Vector m_vStartPos; // 0xc78        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        Vector m_vStartPos; // 0xc58        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        Vector m_vTargetPos; // 0xc84        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        Vector m_vTargetPos; // 0xc64        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        QAngle m_angFacing; // 0xc90        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        QAngle m_angFacing; // 0xc70        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        int32_t m_nMantleTypeIndex; // 0xc9c        
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        int32_t m_nMantleTypeIndex; // 0xc7c        
         // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_flStartTime; // 0xca0        
-        [[maybe_unused]] std::uint8_t pad_0xca4[0x44];
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        entity2::GameTime_t m_flStartTime; // 0xc80        
+        [[maybe_unused]] std::uint8_t pad_0xc84[0x44];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Mantle because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Mantle) == 0xce8);
+    static_assert(sizeof(CCitadel_Ability_Mantle) == 0xcc8);
 };

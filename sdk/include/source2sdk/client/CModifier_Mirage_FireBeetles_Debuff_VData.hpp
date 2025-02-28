@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x6d8
+    // Size: 0x818
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,10 +26,13 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_DebuffParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffParticle;
-        char m_DebuffParticle[0xe0]; // 0x5f8        
+        char m_DebuffParticle[0xe0]; // 0x658        
+        // m_DebuffStartParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffStartParticle;
+        char m_DebuffStartParticle[0xe0]; // 0x738        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CModifier_Mirage_FireBeetles_Debuff_VData because it is not a standard-layout class
-    static_assert(sizeof(CModifier_Mirage_FireBeetles_Debuff_VData) == 0x6d8);
+    static_assert(sizeof(CModifier_Mirage_FireBeetles_Debuff_VData) == 0x818);
 };

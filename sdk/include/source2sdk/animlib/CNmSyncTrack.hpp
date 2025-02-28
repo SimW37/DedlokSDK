@@ -26,9 +26,6 @@ namespace source2sdk::animlib
         char m_syncEvents[0xa8]; // 0x0        
         int32_t m_nStartEventOffset; // 0xa8        
         [[maybe_unused]] std::uint8_t pad_0xac[0x4];
-        
-        // Static fields:
-        static animlib::CNmSyncTrack &Get_s_defaultTrack() {return *reinterpret_cast<animlib::CNmSyncTrack*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CNmSyncTrack")->GetStaticFields()[0]->m_pInstance);};
     };
     #pragma pack(pop)
     

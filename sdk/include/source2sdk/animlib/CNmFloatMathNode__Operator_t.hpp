@@ -8,7 +8,7 @@
 
 namespace source2sdk::animlib
 {
-    // Enumerator count: 4
+    // Enumerator count: 5
     // Alignment: 1
     // Size: 0x1
     enum class CNmFloatMathNode__Operator_t : std::uint8_t
@@ -17,5 +17,6 @@ namespace source2sdk::animlib
         Sub = 1,
         Mul = 2,
         Div = 3,
+        Mod = 4,
     };
 };

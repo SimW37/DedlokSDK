@@ -17,7 +17,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x700
+    // Size: 0x760
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -25,28 +25,28 @@ namespace source2sdk::server
     class CCitadel_Modifier_ShieldTracker_BaseVData : public server::CCitadelModifierVData
     {
     public:
-        float m_flShieldImpactEffectDuration; // 0x5f8        
-        [[maybe_unused]] std::uint8_t pad_0x5fc[0x4]; // 0x5fc
+        float m_flShieldImpactEffectDuration; // 0x658        
+        [[maybe_unused]] std::uint8_t pad_0x65c[0x4]; // 0x65c
         // metadata: MPropertyGroupName "Visuals"
         // m_ShieldImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldImpactParticle;
-        char m_ShieldImpactParticle[0xe0]; // 0x600        
+        char m_ShieldImpactParticle[0xe0]; // 0x660        
         // metadata: MPropertyGroupName "Modifiers"
         // m_ShieldImpactModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_ShieldImpactModifier;
-        char m_ShieldImpactModifier[0x10]; // 0x6e0        
+        char m_ShieldImpactModifier[0x10]; // 0x740        
         // metadata: MPropertyDescription "What type of shield is this."
-        client::EShieldType_t eShieldType; // 0x6f0        
-        [[maybe_unused]] std::uint8_t pad_0x6f1[0x3]; // 0x6f1
+        client::EShieldType_t eShieldType; // 0x750        
+        [[maybe_unused]] std::uint8_t pad_0x751[0x3]; // 0x751
         // metadata: MPropertyDescription "How long before the shield can regenerate after taking damage, but not breaking."
-        float flCooldownOnDamage; // 0x6f4        
+        float flCooldownOnDamage; // 0x754        
         // metadata: MPropertyDescription "How long before the shield can regenerate after breaking (going to 0 shield)"
-        float flCooldownOnBreak; // 0x6f8        
+        float flCooldownOnBreak; // 0x758        
         // metadata: MPropertyDescription "How long does it take the shield to regenerate from 0 to full health. For partial regen, it's the same rate."
-        float flRegenDuration; // 0x6fc        
+        float flRegenDuration; // 0x75c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_ShieldTracker_BaseVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_ShieldTracker_BaseVData) == 0x700);
+    static_assert(sizeof(CCitadel_Modifier_ShieldTracker_BaseVData) == 0x760);
 };

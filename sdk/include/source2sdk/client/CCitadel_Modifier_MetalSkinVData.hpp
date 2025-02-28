@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x7b8
+    // Size: 0x828
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,13 +26,15 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_BuffStartParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffStartParticle;
-        char m_BuffStartParticle[0xe0]; // 0x5f8        
+        char m_BuffStartParticle[0xe0]; // 0x658        
         // m_BuffEndParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffEndParticle;
-        char m_BuffEndParticle[0xe0]; // 0x6d8        
+        char m_BuffEndParticle[0xe0]; // 0x738        
+        // metadata: MPropertyStartGroup "Sounds"
+        CSoundEventName m_strHitProcSound; // 0x818        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_MetalSkinVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_MetalSkinVData) == 0x7b8);
+    static_assert(sizeof(CCitadel_Modifier_MetalSkinVData) == 0x828);
 };

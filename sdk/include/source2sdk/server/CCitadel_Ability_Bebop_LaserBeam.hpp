@@ -1,4 +1,6 @@
 #pragma once
+#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/server/CCitadelAbilityBeam_t.hpp"
 #include "source2sdk/server/CCitadelBaseAbility.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -14,29 +16,29 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc58
+    // Size: 0x1388
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bAirCast"
-    // static metadata: MNetworkVarNames "Vector m_vBeamAimPos"
-    // static metadata: MNetworkVarNames "QAngle m_angBeamAngles"
+    // static metadata: MNetworkVarNames "CCitadelAbilityBeam_t m_beam"
     #pragma pack(push, 1)
     class CCitadel_Ability_Bebop_LaserBeam : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xae8[0x150]; // 0xae8
-        bool m_bZoomed; // 0xc38        
+        [[maybe_unused]] std::uint8_t pad_0xb00[0x380]; // 0xb00
+        bool m_bZoomed; // 0xe80        
         // metadata: MNetworkEnable
-        bool m_bAirCast; // 0xc39        
-        [[maybe_unused]] std::uint8_t pad_0xc3a[0x2]; // 0xc3a
+        bool m_bAirCast; // 0xe81        
+        [[maybe_unused]] std::uint8_t pad_0xe82[0x6]; // 0xe82
         // metadata: MNetworkEnable
-        Vector m_vBeamAimPos; // 0xc3c        
-        [[maybe_unused]] std::uint8_t pad_0xc48[0x4]; // 0xc48
-        // metadata: MNetworkEnable
-        QAngle m_angBeamAngles; // 0xc4c        
+        server::CCitadelAbilityBeam_t m_beam; // 0xe88        
+        [[maybe_unused]] std::uint8_t pad_0x1378[0x4]; // 0x1378
+        float m_flAngleBetweenTrace; // 0x137c        
+        int32_t m_nTotalDamage; // 0x1380        
+        entity2::GameTime_t m_flNextDamageTime; // 0x1384        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Bebop_LaserBeam because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Bebop_LaserBeam) == 0xc58);
+    static_assert(sizeof(CCitadel_Ability_Bebop_LaserBeam) == 0x1388);
 };

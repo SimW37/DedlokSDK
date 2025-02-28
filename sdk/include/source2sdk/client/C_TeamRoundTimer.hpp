@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x5a0
+    // Size: 0x558
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bTimerPaused"
@@ -39,58 +39,58 @@ namespace source2sdk::client
     public:
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnTimerPaused"
-        bool m_bTimerPaused; // 0x558        
-        [[maybe_unused]] std::uint8_t pad_0x559[0x3]; // 0x559
+        bool m_bTimerPaused; // 0x510        
+        [[maybe_unused]] std::uint8_t pad_0x511[0x3]; // 0x511
         // metadata: MNetworkEnable
-        float m_flTimeRemaining; // 0x55c        
+        float m_flTimeRemaining; // 0x514        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flTimerEndTime; // 0x560        
+        entity2::GameTime_t m_flTimerEndTime; // 0x518        
         // metadata: MNetworkEnable
-        bool m_bIsDisabled; // 0x564        
+        bool m_bIsDisabled; // 0x51c        
         // metadata: MNetworkEnable
-        bool m_bShowInHUD; // 0x565        
-        [[maybe_unused]] std::uint8_t pad_0x566[0x2]; // 0x566
+        bool m_bShowInHUD; // 0x51d        
+        [[maybe_unused]] std::uint8_t pad_0x51e[0x2]; // 0x51e
         // metadata: MNetworkEnable
-        int32_t m_nTimerLength; // 0x568        
+        int32_t m_nTimerLength; // 0x520        
         // metadata: MNetworkEnable
-        int32_t m_nTimerInitialLength; // 0x56c        
+        int32_t m_nTimerInitialLength; // 0x524        
         // metadata: MNetworkEnable
-        int32_t m_nTimerMaxLength; // 0x570        
+        int32_t m_nTimerMaxLength; // 0x528        
         // metadata: MNetworkEnable
-        bool m_bAutoCountdown; // 0x574        
-        [[maybe_unused]] std::uint8_t pad_0x575[0x3]; // 0x575
+        bool m_bAutoCountdown; // 0x52c        
+        [[maybe_unused]] std::uint8_t pad_0x52d[0x3]; // 0x52d
         // metadata: MNetworkEnable
-        int32_t m_nSetupTimeLength; // 0x578        
+        int32_t m_nSetupTimeLength; // 0x530        
         // metadata: MNetworkEnable
-        int32_t m_nState; // 0x57c        
+        int32_t m_nState; // 0x534        
         // metadata: MNetworkEnable
-        bool m_bStartPaused; // 0x580        
+        bool m_bStartPaused; // 0x538        
         // metadata: MNetworkEnable
-        bool m_bInCaptureWatchState; // 0x581        
-        [[maybe_unused]] std::uint8_t pad_0x582[0x2]; // 0x582
+        bool m_bInCaptureWatchState; // 0x539        
+        [[maybe_unused]] std::uint8_t pad_0x53a[0x2]; // 0x53a
         // metadata: MNetworkEnable
-        float m_flTotalTime; // 0x584        
+        float m_flTotalTime; // 0x53c        
         // metadata: MNetworkEnable
-        bool m_bStopWatchTimer; // 0x588        
-        bool m_bFireFinished; // 0x589        
-        bool m_bFire5MinRemain; // 0x58a        
-        bool m_bFire4MinRemain; // 0x58b        
-        bool m_bFire3MinRemain; // 0x58c        
-        bool m_bFire2MinRemain; // 0x58d        
-        bool m_bFire1MinRemain; // 0x58e        
-        bool m_bFire30SecRemain; // 0x58f        
-        bool m_bFire10SecRemain; // 0x590        
-        bool m_bFire5SecRemain; // 0x591        
-        bool m_bFire4SecRemain; // 0x592        
-        bool m_bFire3SecRemain; // 0x593        
-        bool m_bFire2SecRemain; // 0x594        
-        bool m_bFire1SecRemain; // 0x595        
-        [[maybe_unused]] std::uint8_t pad_0x596[0x2]; // 0x596
-        int32_t m_nOldTimerLength; // 0x598        
-        int32_t m_nOldTimerState; // 0x59c        
+        bool m_bStopWatchTimer; // 0x540        
+        bool m_bFireFinished; // 0x541        
+        bool m_bFire5MinRemain; // 0x542        
+        bool m_bFire4MinRemain; // 0x543        
+        bool m_bFire3MinRemain; // 0x544        
+        bool m_bFire2MinRemain; // 0x545        
+        bool m_bFire1MinRemain; // 0x546        
+        bool m_bFire30SecRemain; // 0x547        
+        bool m_bFire10SecRemain; // 0x548        
+        bool m_bFire5SecRemain; // 0x549        
+        bool m_bFire4SecRemain; // 0x54a        
+        bool m_bFire3SecRemain; // 0x54b        
+        bool m_bFire2SecRemain; // 0x54c        
+        bool m_bFire1SecRemain; // 0x54d        
+        [[maybe_unused]] std::uint8_t pad_0x54e[0x2]; // 0x54e
+        int32_t m_nOldTimerLength; // 0x550        
+        int32_t m_nOldTimerState; // 0x554        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_TeamRoundTimer because it is not a standard-layout class
-    static_assert(sizeof(C_TeamRoundTimer) == 0x5a0);
+    static_assert(sizeof(C_TeamRoundTimer) == 0x558);
 };

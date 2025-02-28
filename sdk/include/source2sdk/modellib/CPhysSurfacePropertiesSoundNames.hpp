@@ -13,7 +13,7 @@ namespace source2sdk::modellib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x58
+    // Size: 0x60
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
@@ -42,6 +42,8 @@ namespace source2sdk::modellib
         CUtlString m_pushOff; // 0x48        
         // metadata: MKV3TransferName "skidstop"
         CUtlString m_skidStop; // 0x50        
+        // metadata: MKV3TransferName "resonant"
+        CUtlString m_resonant; // 0x58        
     };
     #pragma pack(pop)
     
@@ -56,6 +58,7 @@ namespace source2sdk::modellib
     static_assert(offsetof(CPhysSurfacePropertiesSoundNames, m_meleeImpact) == 0x40);
     static_assert(offsetof(CPhysSurfacePropertiesSoundNames, m_pushOff) == 0x48);
     static_assert(offsetof(CPhysSurfacePropertiesSoundNames, m_skidStop) == 0x50);
+    static_assert(offsetof(CPhysSurfacePropertiesSoundNames, m_resonant) == 0x58);
     
-    static_assert(sizeof(CPhysSurfacePropertiesSoundNames) == 0x58);
+    static_assert(sizeof(CPhysSurfacePropertiesSoundNames) == 0x60);
 };

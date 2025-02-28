@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x520
+    // Size: 0x528
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -35,13 +35,13 @@ namespace source2sdk::client
         // metadata: MPropertyDescription "When true, this attack can be parried"
         bool m_bCanBeParried; // 0x15        
         [[maybe_unused]] std::uint8_t pad_0x16[0x2]; // 0x16
-        // metadata: MPropertyDescription "How long the button needs to be held to trigger this attack"
-        float m_flHoldTimeRequired; // 0x18        
         // metadata: MPropertyDescription "How long after triggering until we can perform another melee attack"
-        float m_flCooldownOnMiss; // 0x1c        
-        float m_flCooldownOnHit; // 0x20        
+        float m_flCooldownOnMiss; // 0x18        
+        float m_flCooldownOnHit; // 0x1c        
         // metadata: MPropertyDescription "Half width of the cone at the player"
-        float m_flTraceConeHalfWidth; // 0x24        
+        float m_flTraceConeHalfWidth; // 0x20        
+        // metadata: MPropertyDescription "How much force to apply upward on hit"
+        float m_flKnockUpStrength; // 0x24        
         // metadata: MPropertyDescription "Trigger a big screen shake when this attack hits"
         bool m_bApplyScreenShake; // 0x28        
         [[maybe_unused]] std::uint8_t pad_0x29[0x7]; // 0x29
@@ -89,10 +89,10 @@ namespace source2sdk::client
     static_assert(offsetof(AttackData_t, m_flEnemySlowOnHitSpeed) == 0x10);
     static_assert(offsetof(AttackData_t, bIsHeavyAttack) == 0x14);
     static_assert(offsetof(AttackData_t, m_bCanBeParried) == 0x15);
-    static_assert(offsetof(AttackData_t, m_flHoldTimeRequired) == 0x18);
-    static_assert(offsetof(AttackData_t, m_flCooldownOnMiss) == 0x1c);
-    static_assert(offsetof(AttackData_t, m_flCooldownOnHit) == 0x20);
-    static_assert(offsetof(AttackData_t, m_flTraceConeHalfWidth) == 0x24);
+    static_assert(offsetof(AttackData_t, m_flCooldownOnMiss) == 0x18);
+    static_assert(offsetof(AttackData_t, m_flCooldownOnHit) == 0x1c);
+    static_assert(offsetof(AttackData_t, m_flTraceConeHalfWidth) == 0x20);
+    static_assert(offsetof(AttackData_t, m_flKnockUpStrength) == 0x24);
     static_assert(offsetof(AttackData_t, m_bApplyScreenShake) == 0x28);
     static_assert(offsetof(AttackData_t, m_SpeedBonusCurve) == 0x30);
     static_assert(offsetof(AttackData_t, m_MovementSpeedCurve) == 0x70);
@@ -111,5 +111,5 @@ namespace source2sdk::client
     static_assert(offsetof(AttackData_t, m_MeleeImpactParticle) == 0x3c0);
     static_assert(offsetof(AttackData_t, m_cameraSequenceAttackStart) == 0x4a0);
     
-    static_assert(sizeof(AttackData_t) == 0x520);
+    static_assert(sizeof(AttackData_t) == 0x528);
 };

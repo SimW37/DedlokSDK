@@ -14,18 +14,18 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xda0
+    // Size: 0xd80
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Hornet_Chain : public client::C_CitadelBaseAbility
     {
     public:
-        Vector m_vLaunchPosition; // 0xc70        
-        QAngle m_qLaunchAngle; // 0xc7c        
-        [[maybe_unused]] std::uint8_t pad_0xc88[0x118];
+        Vector m_vLaunchPosition; // 0xc50        
+        QAngle m_qLaunchAngle; // 0xc5c        
+        [[maybe_unused]] std::uint8_t pad_0xc68[0x118];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Hornet_Chain because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Hornet_Chain) == 0xda0);
+    static_assert(sizeof(CCitadel_Ability_Hornet_Chain) == 0xd80);
 };

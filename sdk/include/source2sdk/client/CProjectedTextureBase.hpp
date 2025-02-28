@@ -130,9 +130,6 @@ namespace source2sdk::client
         // metadata: MNetworkEnable
         bool m_bFlipHorizontal; // 0x26c        
         [[maybe_unused]] std::uint8_t pad_0x26d[0x73];
-        
-        // Static fields:
-        static float &Get_m_flVisibleBBoxMinHeight() {return *reinterpret_cast<float*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CProjectedTextureBase")->GetStaticFields()[0]->m_pInstance);};
     };
     #pragma pack(pop)
     

@@ -15,7 +15,7 @@ namespace source2sdk::animgraphlib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x70
+    // Size: 0x88
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,12 +23,20 @@ namespace source2sdk::animgraphlib
     class CTargetWarpUpdateNode : public animgraphlib::CUnaryUpdateNode
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x68[0x4]; // 0x68
-        animgraphlib::CAnimParamHandle m_hPositionParameter; // 0x6c        
-        animgraphlib::CAnimParamHandle m_hOrientationParameter; // 0x6e        
+        [[maybe_unused]] std::uint8_t pad_0x70[0x4]; // 0x70
+        animgraphlib::CAnimParamHandle m_hTargetPositionParameter; // 0x74        
+        animgraphlib::CAnimParamHandle m_hTargetUpVectorParameter; // 0x76        
+        animgraphlib::CAnimParamHandle m_hTargetFacePositionParameter; // 0x78        
+        bool m_bTargetFacePositionIsWorldSpace; // 0x7a        
+        bool m_bTargetPositionIsWorldSpace; // 0x7b        
+        bool m_bOnlyWarpWhenTagIsFound; // 0x7c        
+        bool m_bWarpOrientationDuringTranslation; // 0x7d        
+        [[maybe_unused]] std::uint8_t pad_0x7e[0x2]; // 0x7e
+        float m_flMaxAngle; // 0x80        
+        [[maybe_unused]] std::uint8_t pad_0x84[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTargetWarpUpdateNode because it is not a standard-layout class
-    static_assert(sizeof(CTargetWarpUpdateNode) == 0x70);
+    static_assert(sizeof(CTargetWarpUpdateNode) == 0x88);
 };

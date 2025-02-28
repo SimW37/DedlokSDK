@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1570
+    // Size: 0x1618
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -24,25 +24,27 @@ namespace source2sdk::client
     {
     public:
         // metadata: MPropertyDescription "The DOF settings to apply while zoomed in."
-        client::DOFDesc_t m_DOFWhileZoomed; // 0x1528        
+        client::DOFDesc_t m_DOFWhileZoomed; // 0x15c8        
         // metadata: MPropertyDescription "When true, the 'Far Crisp' and 'Far Blurry' are added on top of the gun's range.  When false, use the values directly."
-        bool m_bDOFFarSettingsAreOffsetByGunRange; // 0x1538        
-        [[maybe_unused]] std::uint8_t pad_0x1539[0x7]; // 0x1539
+        bool m_bDOFFarSettingsAreOffsetByGunRange; // 0x15d8        
+        [[maybe_unused]] std::uint8_t pad_0x15d9[0x7]; // 0x15d9
         // metadata: MPropertyStartGroup "Sounds"
         // metadata: MPropertyFriendlyName "Fire while disarmed sound"
-        CSoundEventName m_sDisarmedSound; // 0x1540        
-        float m_flMinDisarmedSoundInterval; // 0x1550        
-        [[maybe_unused]] std::uint8_t pad_0x1554[0x4]; // 0x1554
-        CSoundEventName m_sObstructedShotSound; // 0x1558        
+        CSoundEventName m_sDisarmedSound; // 0x15e0        
+        float m_flMinDisarmedSoundInterval; // 0x15f0        
+        [[maybe_unused]] std::uint8_t pad_0x15f4[0x4]; // 0x15f4
+        CSoundEventName m_sObstructedShotSound; // 0x15f8        
         // metadata: MPropertyStartGroup "Action Reload"
         // metadata: MPropertyAttributeRange "0 1"
         // metadata: MPropertyDescription "If we have action reloads, at what fraction of our reload progress does the timing window start.  The window is centered on this time."
-        float m_flActionReloadTimingStart; // 0x1568        
+        float m_flActionReloadTimingStart; // 0x1608        
         // metadata: MPropertyDescription "If we have action reloads, how long is the window"
-        float m_flActionReloadTimingDuration; // 0x156c        
+        float m_flActionReloadTimingDuration; // 0x160c        
+        // metadata: MPropertyStartGroup "UI"
+        CUtlString m_strCrosshairCSSClass; // 0x1610        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_PrimaryWeaponVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_PrimaryWeaponVData) == 0x1570);
+    static_assert(sizeof(CCitadel_Ability_PrimaryWeaponVData) == 0x1618);
 };

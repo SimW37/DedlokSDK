@@ -10,23 +10,23 @@
 
 namespace source2sdk::pulse_runtime_lib
 {
-    // Registered alignment: 0x8
+    // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x20
-    // 
-    // static metadata: MGetKV3ClassDefaults
+    // Size: 0x30
     #pragma pack(push, 1)
     struct PulseRegisterMap_t
     {
     public:
         KeyValues3 m_Inparams; // 0x0        
-        KeyValues3 m_Outparams; // 0x10        
+        CKV3MemberNameSet m_InparamsWhichCanBeMoved; // 0x10        
+        KeyValues3 m_Outparams; // 0x20        
     };
     #pragma pack(pop)
     
     static_assert(offsetof(PulseRegisterMap_t, m_Inparams) == 0x0);
-    static_assert(offsetof(PulseRegisterMap_t, m_Outparams) == 0x10);
+    static_assert(offsetof(PulseRegisterMap_t, m_InparamsWhichCanBeMoved) == 0x10);
+    static_assert(offsetof(PulseRegisterMap_t, m_Outparams) == 0x20);
     
-    static_assert(sizeof(PulseRegisterMap_t) == 0x20);
+    static_assert(sizeof(PulseRegisterMap_t) == 0x30);
 };

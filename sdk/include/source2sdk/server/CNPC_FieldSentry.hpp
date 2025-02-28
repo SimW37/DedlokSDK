@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb80
+    // Size: 0xc70
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "float m_flAimPitch"
@@ -24,28 +24,28 @@ namespace source2sdk::server
     class CNPC_FieldSentry : public server::CNPC_SimpleAnimatingAI
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb38[0xc]; // 0xb38
+        [[maybe_unused]] std::uint8_t pad_0xc28[0xc]; // 0xc28
         // metadata: MNetworkEnable
-        float m_flAimPitch; // 0xb44        
-        entity2::GameTime_t m_flNextAttackTime; // 0xb48        
-        float m_flAttackCone; // 0xb4c        
-        float m_flAttackDelay; // 0xb50        
-        entity2::GameTime_t m_flLastAlertSound; // 0xb54        
-        float m_flTrackingSpeed; // 0xb58        
-        float m_flDeployTime; // 0xb5c        
-        [[maybe_unused]] std::uint8_t pad_0xb60[0xa]; // 0xb60
-        bool m_bHadEnemy; // 0xb6a        
-        bool m_bLockedOn; // 0xb6b        
-        [[maybe_unused]] std::uint8_t pad_0xb6c[0x10]; // 0xb6c
+        float m_flAimPitch; // 0xc34        
+        entity2::GameTime_t m_flNextAttackTime; // 0xc38        
+        float m_flAttackCone; // 0xc3c        
+        float m_flAttackDelay; // 0xc40        
+        entity2::GameTime_t m_flLastAlertSound; // 0xc44        
+        float m_flTrackingSpeed; // 0xc48        
+        float m_flDeployTime; // 0xc4c        
+        [[maybe_unused]] std::uint8_t pad_0xc50[0xa]; // 0xc50
+        bool m_bHadEnemy; // 0xc5a        
+        bool m_bLockedOn; // 0xc5b        
+        [[maybe_unused]] std::uint8_t pad_0xc5c[0x10]; // 0xc5c
         // metadata: MNetworkEnable
-        float m_flAttackRange; // 0xb7c        
+        float m_flAttackRange; // 0xc6c        
         
         // Datamap fields:
-        // float m_flLifeTime; // 0xb64
-        // void m_flSpawnTime; // 0xb60
+        // float m_flLifeTime; // 0xc54
+        // void m_flSpawnTime; // 0xc50
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CNPC_FieldSentry because it is not a standard-layout class
-    static_assert(sizeof(CNPC_FieldSentry) == 0xb80);
+    static_assert(sizeof(CNPC_FieldSentry) == 0xc70);
 };

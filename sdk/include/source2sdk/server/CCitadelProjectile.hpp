@@ -19,7 +19,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x820
+    // Size: 0x868
     // Has VTable
     // 
     // static metadata: MNetworkIncludeByName "m_flTimeScale"
@@ -38,49 +38,47 @@ namespace source2sdk::server
     class CCitadelProjectile : public server::CBaseModelEntity
     {
     public:
-        // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseEntity> m_hTarget;
-        char m_hTarget[0x4]; // 0x768        
-        float m_flMaxDistance; // 0x76c        
-        float m_flArmingTime; // 0x770        
-        float m_flChargeAmount; // 0x774        
-        bool m_bCollideWithThrower; // 0x778        
-        bool m_bNewCollideWithThrower; // 0x779        
-        [[maybe_unused]] std::uint8_t pad_0x77a[0xe]; // 0x77a
-        float m_flTickSoundInterval; // 0x788        
-        [[maybe_unused]] std::uint8_t pad_0x78c[0x4]; // 0x78c
-        Vector m_vLastAbsOrigin; // 0x790        
-        Vector m_vLastAbsVelocity; // 0x79c        
-        [[maybe_unused]] std::uint8_t pad_0x7a8[0x18]; // 0x7a8
+        float m_flMaxDistance; // 0x7b8        
+        float m_flArmingTime; // 0x7bc        
+        float m_flChargeAmount; // 0x7c0        
+        bool m_bCollideWithThrower; // 0x7c4        
+        bool m_bNewCollideWithThrower; // 0x7c5        
+        [[maybe_unused]] std::uint8_t pad_0x7c6[0xa]; // 0x7c6
+        float m_flTickSoundInterval; // 0x7d0        
+        [[maybe_unused]] std::uint8_t pad_0x7d4[0x4]; // 0x7d4
+        Vector m_vLastAbsOrigin; // 0x7d8        
+        Vector m_vLastAbsVelocity; // 0x7e4        
+        [[maybe_unused]] std::uint8_t pad_0x7f0[0x18]; // 0x7f0
         // m_vecTargetToIgnore has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CHandle<server::CBaseEntity>> m_vecTargetToIgnore;
-        char m_vecTargetToIgnore[0x18]; // 0x7c0        
-        bool m_bDetonateStarted; // 0x7d8        
-        [[maybe_unused]] std::uint8_t pad_0x7d9[0x3]; // 0x7d9
+        char m_vecTargetToIgnore[0x18]; // 0x808        
+        bool m_bDetonateStarted; // 0x820        
+        bool m_bTouchDisabled; // 0x821        
+        [[maybe_unused]] std::uint8_t pad_0x822[0x2]; // 0x822
         // metadata: MNetworkEnable
-        Vector m_vInitialVelocity; // 0x7dc        
+        Vector m_vInitialVelocity; // 0x824        
         // metadata: MNetworkEnable
-        Vector m_vInitialPosition; // 0x7e8        
+        Vector m_vInitialPosition; // 0x830        
         // metadata: MNetworkEnable
-        CUtlStringToken m_abilityID; // 0x7f4        
+        CUtlStringToken m_abilityID; // 0x83c        
         // metadata: MNetworkEnable
         // m_hThrower has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hThrower;
-        char m_hThrower[0x4]; // 0x7f8        
-        [[maybe_unused]] std::uint8_t pad_0x7fc[0x4]; // 0x7fc
+        char m_hThrower[0x4]; // 0x840        
+        [[maybe_unused]] std::uint8_t pad_0x844[0x4]; // 0x844
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_sParticleName; // 0x800        
+        CUtlSymbolLarge m_sParticleName; // 0x848        
         // metadata: MNetworkEnable
-        Vector m_vecSpawnPosition; // 0x808        
+        Vector m_vecSpawnPosition; // 0x850        
         // metadata: MNetworkEnable
-        float m_flProjectileSpeed; // 0x814        
+        float m_flProjectileSpeed; // 0x85c        
         // metadata: MNetworkEnable
-        float m_flMaxLifetime; // 0x818        
+        float m_flMaxLifetime; // 0x860        
         // metadata: MNetworkEnable
-        float m_flParticleRadius; // 0x81c        
+        float m_flParticleRadius; // 0x864        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelProjectile because it is not a standard-layout class
-    static_assert(sizeof(CCitadelProjectile) == 0x820);
+    static_assert(sizeof(CCitadelProjectile) == 0x868);
 };

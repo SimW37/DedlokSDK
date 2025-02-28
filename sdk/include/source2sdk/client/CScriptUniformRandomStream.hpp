@@ -23,9 +23,6 @@ namespace source2sdk::client
         HSCRIPT m_hScriptScope; // 0x8        
         [[maybe_unused]] std::uint8_t pad_0x10[0x8c]; // 0x10
         int32_t m_nInitialSeed; // 0x9c        
-        
-        // Static fields:
-        static CUtlVector<client::CScriptUniformRandomStream*> &Get_sm_UniformStreams() {return *reinterpret_cast<CUtlVector<client::CScriptUniformRandomStream*>*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CScriptUniformRandomStream")->GetStaticFields()[0]->m_pInstance);};
     };
     #pragma pack(pop)
     

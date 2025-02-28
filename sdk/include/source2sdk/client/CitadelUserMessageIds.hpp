@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 42
+    // Enumerator count: 54
     // Alignment: 4
     // Size: 0x4
     enum class CitadelUserMessageIds : std::uint32_t
@@ -55,5 +55,17 @@ namespace source2sdk::client
         k_EUserMsg_CurrencyChanged = 0x159,
         k_EUserMsg_GameOver = 0x15a,
         k_EUserMsg_BossKilled = 0x15b,
+        k_EUserMsg_BossDamaged = 0x15c,
+        k_EUserMsg_MidBossSpawned = 0x15d,
+        k_EUserMsg_RejuvStatus = 0x15e,
+        k_EUserMsg_KillStreak = 0x15f,
+        k_EUserMsg_TeamMsg = 0x160,
+        k_EUserMsg_PlayerRespawned = 0x161,
+        k_EUserMsg_CallCheaterVote = 0x162,
+        k_EUserMsg_MeleeHit = 0x163,
+        k_EUserMsg_FlexSlotUnlocked = 0x164,
+        k_EUserMsg_SeasonalAchievementUnlocked = 0x165,
+        k_EUserMsg_MusicQueue = 0x166,
+        k_EUserMsg_AG2ParamTrigger = 0x167,
     };
 };

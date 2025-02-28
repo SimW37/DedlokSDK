@@ -30,13 +30,15 @@ namespace source2sdk::modellib
         // CUtlVector<modellib::CModelConfigElement*> m_Elements;
         char m_Elements[0x18]; // 0x8        
         bool m_bTopLevel; // 0x20        
-        [[maybe_unused]] std::uint8_t pad_0x21[0x7];
+        bool m_bActiveInEditorByDefault; // 0x21        
+        [[maybe_unused]] std::uint8_t pad_0x22[0x6];
     };
     #pragma pack(pop)
     
     static_assert(offsetof(CModelConfig, m_ConfigName) == 0x0);
     static_assert(offsetof(CModelConfig, m_Elements) == 0x8);
     static_assert(offsetof(CModelConfig, m_bTopLevel) == 0x20);
+    static_assert(offsetof(CModelConfig, m_bActiveInEditorByDefault) == 0x21);
     
     static_assert(sizeof(CModelConfig) == 0x28);
 };

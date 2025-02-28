@@ -14,7 +14,7 @@ namespace source2sdk::pulse_runtime_lib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x98
+    // Size: 0xc8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,13 +26,13 @@ namespace source2sdk::pulse_runtime_lib
     class CPulseCell_Inflow_EntOutputHandler : public pulse_runtime_lib::CPulseCell_Inflow_BaseEntrypoint
     {
     public:
-        CUtlSymbolLarge m_SourceEntity; // 0x70        
-        CUtlSymbolLarge m_SourceOutput; // 0x78        
-        CUtlSymbolLarge m_TargetInput; // 0x80        
-        CPulseValueFullType m_ExpectedParamType; // 0x88        
+        PulseSymbol_t m_SourceEntity; // 0x80        
+        PulseSymbol_t m_SourceOutput; // 0x90        
+        PulseSymbol_t m_TargetInput; // 0xa0        
+        CPulseValueFullType m_ExpectedParamType; // 0xb0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPulseCell_Inflow_EntOutputHandler because it is not a standard-layout class
-    static_assert(sizeof(CPulseCell_Inflow_EntOutputHandler) == 0x98);
+    static_assert(sizeof(CPulseCell_Inflow_EntOutputHandler) == 0xc8);
 };

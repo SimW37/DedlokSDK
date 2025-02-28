@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x50
+    // Size: 0x70
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -33,9 +33,15 @@ namespace source2sdk::server
         // m_BackdoorBulletResistModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_BackdoorBulletResistModifier;
         char m_BackdoorBulletResistModifier[0x10]; // 0x40        
+        // m_BackdoorProtectionModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CEmbeddedSubclass<server::CCitadelModifier> m_BackdoorProtectionModifier;
+        char m_BackdoorProtectionModifier[0x10]; // 0x50        
+        // m_RangedArmorModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CEmbeddedSubclass<server::CCitadelModifier> m_RangedArmorModifier;
+        char m_RangedArmorModifier[0x10]; // 0x60        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CDestructableBuildingVData because it is not a standard-layout class
-    static_assert(sizeof(CDestructableBuildingVData) == 0x50);
+    static_assert(sizeof(CDestructableBuildingVData) == 0x70);
 };

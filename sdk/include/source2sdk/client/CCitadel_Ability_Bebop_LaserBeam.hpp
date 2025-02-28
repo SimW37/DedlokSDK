@@ -1,4 +1,5 @@
 #pragma once
+#include "source2sdk/client/CCitadelAbilityBeam_t.hpp"
 #include "source2sdk/client/C_CitadelBaseAbility.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -14,32 +15,26 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xdf0
+    // Size: 0x14f0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bAirCast"
-    // static metadata: MNetworkVarNames "Vector m_vBeamAimPos"
+    // static metadata: MNetworkVarNames "CCitadelAbilityBeam_t m_beam"
     #pragma pack(push, 1)
     class CCitadel_Ability_Bebop_LaserBeam : public client::C_CitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc70[0x150]; // 0xc70
-        bool m_bZoomed; // 0xdc0        
+        [[maybe_unused]] std::uint8_t pad_0xc50[0x380]; // 0xc50
+        bool m_bZoomed; // 0xfd0        
         // metadata: MNetworkEnable
-        bool m_bAirCast; // 0xdc1        
-        [[maybe_unused]] std::uint8_t pad_0xdc2[0x2]; // 0xdc2
+        bool m_bAirCast; // 0xfd1        
+        [[maybe_unused]] std::uint8_t pad_0xfd2[0x6]; // 0xfd2
         // metadata: MNetworkEnable
-        Vector m_vBeamAimPos; // 0xdc4        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkEncoder "qangle"
-        // metadata: MNetworkChangeCallback "OnBebopBeamAnglesChanged"
-        QAngle m_angBeamAngles; // 0xdd0        
-        [[maybe_unused]] std::uint8_t pad_0xddc[0xc]; // 0xddc
-        bool m_bNeedsBeamReset; // 0xde8        
-        [[maybe_unused]] std::uint8_t pad_0xde9[0x7];
+        client::CCitadelAbilityBeam_t m_beam; // 0xfd8        
+        [[maybe_unused]] std::uint8_t pad_0x14e8[0x8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Bebop_LaserBeam because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Bebop_LaserBeam) == 0xdf0);
+    static_assert(sizeof(CCitadel_Ability_Bebop_LaserBeam) == 0x14f0);
 };

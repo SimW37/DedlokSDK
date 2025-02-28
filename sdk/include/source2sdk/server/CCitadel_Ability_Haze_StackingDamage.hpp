@@ -14,16 +14,16 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb90
+    // Size: 0xb70
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Haze_StackingDamage : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xae8[0xa8];
+        [[maybe_unused]] std::uint8_t pad_0xb00[0x70];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Ability_Haze_StackingDamage) == 0xb90);
+    static_assert(sizeof(CCitadel_Ability_Haze_StackingDamage) == 0xb70);
 };

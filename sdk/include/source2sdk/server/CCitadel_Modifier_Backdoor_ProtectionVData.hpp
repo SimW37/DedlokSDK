@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x7e8
+    // Size: 0x840
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,37 +23,32 @@ namespace source2sdk::server
     class CCitadel_Modifier_Backdoor_ProtectionVData : public server::CCitadelModifierVData
     {
     public:
-        // metadata: MPropertyStartGroup "Backdoor Protection"
-        // metadata: MPropertyDescription "Range to check for nearby troopers (in units). Once troopers are within range, backdoor protection is removed. 0 range means disabled"
-        float m_flBackdoorProtectionNearbyTrooperRange; // 0x5f8        
-        // metadata: MPropertyDescription "How often do we check for troopers?"
-        float m_flBackdoorProtectionNearbyTrooperThinkInterval; // 0x5fc        
-        // metadata: MPropertyDescription "How long does a nearby trooper lower backdoor protection?"
-        float m_flBackdoorProtectionNearbyTrooperRemovalDuration; // 0x600        
+        // metadata: MPropertyDescription "How long this modifier must be alive before backdoor protection is activated"
+        float m_flActivationTime; // 0x658        
         // metadata: MPropertyDescription "How much should damage be reduced from players when backdoor protection is up? 0 is no reduction, 100 is complete reduction"
         // metadata: MPropertyAttributeRange "0 100"
-        float m_flBackdoorProtectionDamageMitigationFromPlayers; // 0x604        
+        float m_flBackdoorProtectionDamageMitigationFromPlayers; // 0x65c        
         // metadata: MPropertyDescription "How health per second does backdoor protection regen?"
-        float m_flHealthPerSecondRegen; // 0x608        
+        float m_flHealthPerSecondRegen; // 0x660        
         // metadata: MPropertyDescription "How health per second when out of combat?"
-        float m_flOutOfCombatHealthRegen; // 0x60c        
+        float m_flOutOfCombatHealthRegen; // 0x664        
         // metadata: MPropertyDescription "How longer after taking no damage will out out of combat regen kick in?"
-        float m_flOutOfCombatRegenDelay; // 0x610        
+        float m_flOutOfCombatRegenDelay; // 0x668        
         // metadata: MPropertyDescription "How long the shield effect lingers after having taken damage"
-        float m_flEffectsLingerTime; // 0x614        
+        float m_flEffectsLingerTime; // 0x66c        
         // metadata: MPropertyStartGroup "Visuals"
         // m_ShieldImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldImpactParticle;
-        char m_ShieldImpactParticle[0xe0]; // 0x618        
+        char m_ShieldImpactParticle[0xe0]; // 0x670        
         // m_ShieldActiveParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldActiveParticle;
-        char m_ShieldActiveParticle[0xe0]; // 0x6f8        
-        CUtlString m_strActiveEffectConfigName; // 0x7d8        
-        float flShieldImpactDirectionOffset; // 0x7e0        
-        [[maybe_unused]] std::uint8_t pad_0x7e4[0x4];
+        char m_ShieldActiveParticle[0xe0]; // 0x750        
+        CUtlString m_strActiveEffectConfigName; // 0x830        
+        float flShieldImpactDirectionOffset; // 0x838        
+        [[maybe_unused]] std::uint8_t pad_0x83c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Backdoor_ProtectionVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Backdoor_ProtectionVData) == 0x7e8);
+    static_assert(sizeof(CCitadel_Modifier_Backdoor_ProtectionVData) == 0x840);
 };

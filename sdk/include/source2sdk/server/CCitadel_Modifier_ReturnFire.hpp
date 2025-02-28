@@ -20,7 +20,7 @@ namespace source2sdk::server
     class CCitadel_Modifier_ReturnFire : public server::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc8[0x70];
+        [[maybe_unused]] std::uint8_t pad_0xc0[0x78];
         // No schema binary for binding
     };
     #pragma pack(pop)

@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x5f0
+    // Size: 0x5a8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "HRenderTextureStrong m_hGradientFogTexture"
@@ -40,53 +40,50 @@ namespace source2sdk::client
         // metadata: MNetworkEnable
         // m_hGradientFogTexture has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase> m_hGradientFogTexture;
-        char m_hGradientFogTexture[0x8]; // 0x558        
+        char m_hGradientFogTexture[0x8]; // 0x510        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogStartDistance; // 0x560        
+        float m_flFogStartDistance; // 0x518        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogEndDistance; // 0x564        
+        float m_flFogEndDistance; // 0x51c        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        bool m_bHeightFogEnabled; // 0x568        
-        [[maybe_unused]] std::uint8_t pad_0x569[0x3]; // 0x569
+        bool m_bHeightFogEnabled; // 0x520        
+        [[maybe_unused]] std::uint8_t pad_0x521[0x3]; // 0x521
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogStartHeight; // 0x56c        
+        float m_flFogStartHeight; // 0x524        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogEndHeight; // 0x570        
+        float m_flFogEndHeight; // 0x528        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFarZ; // 0x574        
+        float m_flFarZ; // 0x52c        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogMaxOpacity; // 0x578        
+        float m_flFogMaxOpacity; // 0x530        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogFalloffExponent; // 0x57c        
+        float m_flFogFalloffExponent; // 0x534        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogVerticalExponent; // 0x580        
+        float m_flFogVerticalExponent; // 0x538        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        Color m_fogColor; // 0x584        
+        Color m_fogColor; // 0x53c        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogStrength; // 0x588        
+        float m_flFogStrength; // 0x540        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFadeTime; // 0x58c        
+        float m_flFadeTime; // 0x544        
         // metadata: MNetworkEnable
-        bool m_bStartDisabled; // 0x590        
+        bool m_bStartDisabled; // 0x548        
         // metadata: MNetworkEnable
-        bool m_bIsEnabled; // 0x591        
-        bool m_bGradientFogNeedsTextures; // 0x592        
-        [[maybe_unused]] std::uint8_t pad_0x593[0x5d];
-        
-        // Static fields:
-        static client::C_GradientFog* &Get_sm_pGradientFog() {return *reinterpret_cast<client::C_GradientFog**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GradientFog")->GetStaticFields()[0]->m_pInstance);};
+        bool m_bIsEnabled; // 0x549        
+        bool m_bGradientFogNeedsTextures; // 0x54a        
+        [[maybe_unused]] std::uint8_t pad_0x54b[0x5d];
         
         // Datamap fields:
         // bool InputEnable; // 0x0
@@ -105,5 +102,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_GradientFog because it is not a standard-layout class
-    static_assert(sizeof(C_GradientFog) == 0x5f0);
+    static_assert(sizeof(C_GradientFog) == 0x5a8);
 };

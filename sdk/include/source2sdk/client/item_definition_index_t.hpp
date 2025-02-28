@@ -22,9 +22,6 @@ namespace source2sdk::client
     {
     public:
         uint32_t m_Value; // 0x0        
-        
-        // Static fields:
-        static bool &Get_IS_TYPESAFE_INTEGER() {return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("item_definition_index_t")->GetStaticFields()[0]->m_pInstance);};
     };
     #pragma pack(pop)
     

@@ -14,7 +14,7 @@ namespace source2sdk::particleslib
     // Registered alignment: unknown
     // Alignment: 0x1
     // Standard-layout class: false
-    // Size: 0x120
+    // Size: 0x138
     // Has VTable
     // 
     // static metadata: MPulseInstanceDomainInfo
@@ -28,5 +28,5 @@ namespace source2sdk::particleslib
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CParticleBindingRealPulse) == 0x120);
+    static_assert(sizeof(CParticleBindingRealPulse) == 0x138);
 };

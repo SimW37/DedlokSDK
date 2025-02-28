@@ -18,7 +18,7 @@ namespace source2sdk::animgraphlib
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0x170
+    // Size: 0x180
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,19 +26,18 @@ namespace source2sdk::animgraphlib
     class CAimMatrixUpdateNode : public animgraphlib::CUnaryUpdateNode
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x68[0x8]; // 0x68
         animgraphlib::AimMatrixOpFixedSettings_t m_opFixedSettings; // 0x70        
-        [[maybe_unused]] std::uint8_t pad_0x150[0x8]; // 0x150
-        animgraphlib::AnimVectorSource m_target; // 0x158        
-        animgraphlib::CAnimParamHandle m_paramIndex; // 0x15c        
-        [[maybe_unused]] std::uint8_t pad_0x15e[0x2]; // 0x15e
-        animationsystem::HSequence m_hSequence; // 0x160        
-        bool m_bResetChild; // 0x164        
-        bool m_bLockWhenWaning; // 0x165        
-        [[maybe_unused]] std::uint8_t pad_0x166[0xa];
+        [[maybe_unused]] std::uint8_t pad_0x160[0x8]; // 0x160
+        animgraphlib::AnimVectorSource m_target; // 0x168        
+        animgraphlib::CAnimParamHandle m_paramIndex; // 0x16c        
+        [[maybe_unused]] std::uint8_t pad_0x16e[0x2]; // 0x16e
+        animationsystem::HSequence m_hSequence; // 0x170        
+        bool m_bResetChild; // 0x174        
+        bool m_bLockWhenWaning; // 0x175        
+        [[maybe_unused]] std::uint8_t pad_0x176[0xa];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAimMatrixUpdateNode because it is not a standard-layout class
-    static_assert(sizeof(CAimMatrixUpdateNode) == 0x170);
+    static_assert(sizeof(CAimMatrixUpdateNode) == 0x180);
 };

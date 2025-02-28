@@ -18,7 +18,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x380
+    // Size: 0x3a0
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
@@ -71,21 +71,29 @@ namespace source2sdk::client
         float m_flProjectileModelScale; // 0x310        
         [[maybe_unused]] std::uint8_t pad_0x314[0x4]; // 0x314
         // metadata: MPropertyStartGroup "Sounds"
+        // metadata: MPropertyDescription "Plays when a projectile hits a valid target - or the world. Not the same as detonating, just colliding."
         CSoundEventName m_HitSound; // 0x318        
-        CSoundEventName m_DetonateSound; // 0x328        
-        CSoundEventName m_LoopingSound; // 0x338        
-        CSoundEventName m_WarningSound; // 0x348        
+        // metadata: MPropertyDescription "Plays when a projectile hits a valid target ONLY."
+        CSoundEventName m_HitTargetSound; // 0x328        
+        // metadata: MPropertyDescription "Plays when a projectile hits the world ONLY."
+        CSoundEventName m_HitWorldSound; // 0x338        
+        // metadata: MPropertyDescription "Plays when a projectile detonates. Not all projectiles detonate."
+        CSoundEventName m_DetonateSound; // 0x348        
+        // metadata: MPropertyDescription "Plays while a projectile is alive."
+        CSoundEventName m_LoopingSound; // 0x358        
+        // metadata: MPropertyDescription "Plays a warning sound when a projectile hits a surface, but before it detonates. Plays ONLY if a warning particle is also created."
+        CSoundEventName m_WarningSound; // 0x368        
         // metadata: MPropertyStartGroup "Tracking"
-        float m_flTrackingDampingCoefficient; // 0x358        
-        float m_flTrackingDuration; // 0x35c        
-        float m_flTrackingStartTime; // 0x360        
-        float m_flTrackingEndTime; // 0x364        
-        float m_flTrackingStopDuration; // 0x368        
-        [[maybe_unused]] std::uint8_t pad_0x36c[0x4]; // 0x36c
+        float m_flTrackingDampingCoefficient; // 0x378        
+        float m_flTrackingDuration; // 0x37c        
+        float m_flTrackingStartTime; // 0x380        
+        float m_flTrackingEndTime; // 0x384        
+        float m_flTrackingStopDuration; // 0x388        
+        [[maybe_unused]] std::uint8_t pad_0x38c[0x4]; // 0x38c
         // metadata: MPropertyStartGroup "Modifiers"
         // m_AutoProjectileModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CBaseModifier> m_AutoProjectileModifier;
-        char m_AutoProjectileModifier[0x10]; // 0x370        
+        char m_AutoProjectileModifier[0x10]; // 0x390        
     };
     #pragma pack(pop)
     
@@ -112,15 +120,17 @@ namespace source2sdk::client
     static_assert(offsetof(ProjectileInfo_t, m_customModel) == 0x230);
     static_assert(offsetof(ProjectileInfo_t, m_flProjectileModelScale) == 0x310);
     static_assert(offsetof(ProjectileInfo_t, m_HitSound) == 0x318);
-    static_assert(offsetof(ProjectileInfo_t, m_DetonateSound) == 0x328);
-    static_assert(offsetof(ProjectileInfo_t, m_LoopingSound) == 0x338);
-    static_assert(offsetof(ProjectileInfo_t, m_WarningSound) == 0x348);
-    static_assert(offsetof(ProjectileInfo_t, m_flTrackingDampingCoefficient) == 0x358);
-    static_assert(offsetof(ProjectileInfo_t, m_flTrackingDuration) == 0x35c);
-    static_assert(offsetof(ProjectileInfo_t, m_flTrackingStartTime) == 0x360);
-    static_assert(offsetof(ProjectileInfo_t, m_flTrackingEndTime) == 0x364);
-    static_assert(offsetof(ProjectileInfo_t, m_flTrackingStopDuration) == 0x368);
-    static_assert(offsetof(ProjectileInfo_t, m_AutoProjectileModifier) == 0x370);
+    static_assert(offsetof(ProjectileInfo_t, m_HitTargetSound) == 0x328);
+    static_assert(offsetof(ProjectileInfo_t, m_HitWorldSound) == 0x338);
+    static_assert(offsetof(ProjectileInfo_t, m_DetonateSound) == 0x348);
+    static_assert(offsetof(ProjectileInfo_t, m_LoopingSound) == 0x358);
+    static_assert(offsetof(ProjectileInfo_t, m_WarningSound) == 0x368);
+    static_assert(offsetof(ProjectileInfo_t, m_flTrackingDampingCoefficient) == 0x378);
+    static_assert(offsetof(ProjectileInfo_t, m_flTrackingDuration) == 0x37c);
+    static_assert(offsetof(ProjectileInfo_t, m_flTrackingStartTime) == 0x380);
+    static_assert(offsetof(ProjectileInfo_t, m_flTrackingEndTime) == 0x384);
+    static_assert(offsetof(ProjectileInfo_t, m_flTrackingStopDuration) == 0x388);
+    static_assert(offsetof(ProjectileInfo_t, m_AutoProjectileModifier) == 0x390);
     
-    static_assert(sizeof(ProjectileInfo_t) == 0x380);
+    static_assert(sizeof(ProjectileInfo_t) == 0x3a0);
 };

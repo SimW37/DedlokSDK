@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x16b0
+    // Size: 0x1758
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -24,21 +24,21 @@ namespace source2sdk::server
     {
     public:
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strWindupSound; // 0x1578        
-        CSoundEventName m_strBeamStartSound; // 0x1588        
-        CSoundEventName m_strBeamLoopSound1; // 0x1598        
-        CSoundEventName m_strBeamLoopSound2; // 0x15a8        
-        CSoundEventName m_strBeamStopSound; // 0x15b8        
+        CSoundEventName m_strWindupSound; // 0x1620        
+        CSoundEventName m_strBeamStartSound; // 0x1630        
+        CSoundEventName m_strBeamLoopSound1; // 0x1640        
+        CSoundEventName m_strBeamLoopSound2; // 0x1650        
+        CSoundEventName m_strBeamStopSound; // 0x1660        
         // metadata: MPropertyStartGroup "Visuals"
         // m_szWeaponBeamParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szWeaponBeamParticle;
-        char m_szWeaponBeamParticle[0xe0]; // 0x15c8        
+        char m_szWeaponBeamParticle[0xe0]; // 0x1670        
         // metadata: MPropertyStartGroup "Misc"
-        float m_flWindupRepeatCycle; // 0x16a8        
-        [[maybe_unused]] std::uint8_t pad_0x16ac[0x4];
+        float m_flWindupRepeatCycle; // 0x1750        
+        [[maybe_unused]] std::uint8_t pad_0x1754[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_PrimaryWeapon_BebopVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_PrimaryWeapon_BebopVData) == 0x16b0);
+    static_assert(sizeof(CCitadel_Ability_PrimaryWeapon_BebopVData) == 0x1758);
 };

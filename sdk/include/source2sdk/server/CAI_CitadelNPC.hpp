@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/client/ConditionId_t.hpp"
+#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/server/CAI_BaseNPC.hpp"
 #include "source2sdk/server/CCitadelAbilityComponent.hpp"
 #include "source2sdk/server/CCitadelMinimapComponent.hpp"
@@ -29,7 +29,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1600
+    // Size: 0x1890
     // Has VTable
     // Is Abstract
     // 
@@ -54,103 +54,58 @@ namespace source2sdk::server
     class CAI_CitadelNPC : public server::CAI_BaseNPC
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x10a8[0x18]; // 0x10a8
-        Vector m_vLastGroundEntityCheckPos; // 0x10c0        
-        [[maybe_unused]] std::uint8_t pad_0x10cc[0x4]; // 0x10cc
+        [[maybe_unused]] std::uint8_t pad_0x1320[0x18]; // 0x1320
+        Vector m_vLastGroundEntityCheckPos; // 0x1338        
+        entity2::GameTime_t m_flLastGroundCheckTime; // 0x1344        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
         // metadata: MNetworkAlias "CCitadelAbilityComponent"
         // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
-        server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x10d0        
+        server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x1348        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "CCitadelRegenComponent"
         // metadata: MNetworkAlias "CCitadelRegenComponent"
         // metadata: MNetworkTypeAlias "CCitadelRegenComponent"
-        server::CCitadelRegenComponent m_CCitadelRegenComponent; // 0x12d8        
+        server::CCitadelRegenComponent m_CCitadelRegenComponent; // 0x1550        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
         // metadata: MNetworkAlias "CCitadelMinimapComponent"
         // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-        server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x1458        
-        [[maybe_unused]] std::uint8_t pad_0x1470[0x4]; // 0x1470
-        int32_t m_iBaseGoldReward; // 0x1474        
-        int32_t m_iSkillShotReward; // 0x1478        
-        [[maybe_unused]] std::uint8_t pad_0x147c[0x30]; // 0x147c
+        server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x16d0        
+        [[maybe_unused]] std::uint8_t pad_0x16e8[0x4]; // 0x16e8
+        int32_t m_iBaseGoldReward; // 0x16ec        
+        int32_t m_iSkillShotReward; // 0x16f0        
+        [[maybe_unused]] std::uint8_t pad_0x16f4[0x30]; // 0x16f4
         // m_hAbilityOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CCitadelBaseAbility> m_hAbilityOwner;
-        char m_hAbilityOwner[0x4]; // 0x14ac        
-        [[maybe_unused]] std::uint8_t pad_0x14b0[0x48]; // 0x14b0
+        char m_hAbilityOwner[0x4]; // 0x1724        
+        [[maybe_unused]] std::uint8_t pad_0x1728[0x48]; // 0x1728
         // metadata: MNetworkEnable
         // m_vecWeakPoints has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVectorEmbeddedNetworkVar<server::WeakPoint_t> m_vecWeakPoints;
-        char m_vecWeakPoints[0x50]; // 0x14f8        
+        char m_vecWeakPoints[0x68]; // 0x1770        
         // metadata: MNetworkEnable
-        bool m_bMinion; // 0x1548        
-        [[maybe_unused]] std::uint8_t pad_0x1549[0x3]; // 0x1549
+        bool m_bMinion; // 0x17d8        
+        [[maybe_unused]] std::uint8_t pad_0x17d9[0x3]; // 0x17d9
         // metadata: MNetworkEnable
         // m_hLookTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hLookTarget;
-        char m_hLookTarget[0x4]; // 0x154c        
-        [[maybe_unused]] std::uint8_t pad_0x1550[0x10]; // 0x1550
-        int32_t m_iCoverGroupID; // 0x1560        
-        [[maybe_unused]] std::uint8_t pad_0x1564[0x5c]; // 0x1564
-        Vector m_vecSpawnOrigin; // 0x15c0        
-        [[maybe_unused]] std::uint8_t pad_0x15cc[0x18]; // 0x15cc
+        char m_hLookTarget[0x4]; // 0x17dc        
+        [[maybe_unused]] std::uint8_t pad_0x17e0[0x10]; // 0x17e0
+        int32_t m_iCoverGroupID; // 0x17f0        
+        [[maybe_unused]] std::uint8_t pad_0x17f4[0x5c]; // 0x17f4
+        Vector m_vecSpawnOrigin; // 0x1850        
+        [[maybe_unused]] std::uint8_t pad_0x185c[0x18]; // 0x185c
         // metadata: MNetworkEnable
-        bool m_bBeamActive; // 0x15e4        
-        [[maybe_unused]] std::uint8_t pad_0x15e5[0x3]; // 0x15e5
+        bool m_bBeamActive; // 0x1874        
+        [[maybe_unused]] std::uint8_t pad_0x1875[0x3]; // 0x1875
         // metadata: MNetworkEnable
         // metadata: MNetworkEncoder "coord"
-        Vector m_vEyeBeamTarget; // 0x15e8        
-        [[maybe_unused]] std::uint8_t pad_0x15f4[0xc];
-        
-        // Static fields:
-        static client::ConditionId_t &Get_COND_RECEIVED_AGGRO() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[0]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_STUNNED() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[1]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_FORCED_AGGRO() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[2]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_FORCED_CALM() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[3]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_IMMOBILIZED() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[4]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_DISARMED() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[5]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_CAN_MELEE_ATTACK() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[6]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_CAN_MELEE_ATTACK_CLOSE() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[7]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_CAN_RANGE_ATTACK() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[8]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_RANGE_ATTACK_LOS_BLOCKED() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[9]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_RANGE_ATTACK_TOO_CLOSE() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[10]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_RANGE_ATTACK_TOO_FAR() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[11]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_TAKEN_DAMAGE() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[12]->m_pInstance);};
-        static client::ConditionId_t &Get_COND_TAKEN_FLINCH_DAMAGE() {return *reinterpret_cast<client::ConditionId_t*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[13]->m_pInstance);};
-        static CUtlSymbolLarge &Get_SCHED_WAIT_RANDOM() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[14]->m_pInstance);};
-        static CUtlSymbolLarge &Get_SCHED_NO_OP() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[15]->m_pInstance);};
-        static CUtlSymbolLarge &Get_SCHED_WAIT_STUNNED() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[16]->m_pInstance);};
-        static CUtlSymbolLarge &Get_SCHED_PUSH_AWAY_FROM_BLOCKING_NPC() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[17]->m_pInstance);};
-        static CUtlSymbolLarge &Get_SCHED_RUN_TEST_PATH() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[18]->m_pInstance);};
-        static CUtlSymbolLarge &Get_SCHED_RUN_TEST_PATH_TO_COVER_POINT() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[19]->m_pInstance);};
-        static CUtlSymbolLarge &Get_SCHED_MOVE_TO_MELEE_ENEMY() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[20]->m_pInstance);};
-        static CUtlSymbolLarge &Get_SCHED_MOVE_TO_SHOOT_ENEMY() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[21]->m_pInstance);};
-        static CUtlSymbolLarge &Get_SCHED_MOVE_TO_OWNER_AGRO() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[22]->m_pInstance);};
-        static CUtlSymbolLarge &Get_SCHED_MOVE_TO_OWNER() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[23]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_TURN_TOWARD_ENEMY() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[24]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_GET_PATH_TO_SPAWN() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[25]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_PUSH_AWAY_FROM_BLOCKING_NPC() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[26]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_GET_PATH_ADVANCE_ON_ENEMY() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[27]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_GET_PATH_TO_MELEE_ENEMY() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[28]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_GET_TEST_PATH() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[29]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_GET_TEST_PATH_TO_COVER_POINT() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[30]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_FIND_PATH_TO_COVER() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[31]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_GET_PATH_FORWARD() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[32]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_GET_PATH_TO_NAV_MESH() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[33]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_RELOAD() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[34]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_CROUCH() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[35]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_STAND() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[36]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_WAIT_FACE_ENEMY() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[37]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_BUILD_PATH_TO_OWNER() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[38]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_MELEE_ATTACK() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[39]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_BEAM_ATTACK() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[40]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_SLEEP() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[41]->m_pInstance);};
-        static CUtlSymbolLarge &Get_TASK_WAIT_FOR_GROUND_MOVEMENT() {return *reinterpret_cast<CUtlSymbolLarge*>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CAI_CitadelNPC")->GetStaticFields()[42]->m_pInstance);};
+        Vector m_vEyeBeamTarget; // 0x1878        
+        [[maybe_unused]] std::uint8_t pad_0x1884[0xc];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAI_CitadelNPC because it is not a standard-layout class
-    static_assert(sizeof(CAI_CitadelNPC) == 0x1600);
+    static_assert(sizeof(CAI_CitadelNPC) == 0x1890);
 };

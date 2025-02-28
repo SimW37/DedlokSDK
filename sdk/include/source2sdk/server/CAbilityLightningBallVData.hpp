@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1638
+    // Size: 0x16d8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,18 +27,18 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Modifiers"
         // m_ZapModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_ZapModifier;
-        char m_ZapModifier[0x10]; // 0x1528        
+        char m_ZapModifier[0x10]; // 0x15c8        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strHitSound; // 0x1538        
+        CSoundEventName m_strHitSound; // 0x15d8        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strProjectileLoopingSound; // 0x1548        
+        CSoundEventName m_strProjectileLoopingSound; // 0x15e8        
         // metadata: MPropertyStartGroup "Visuals"
         // m_ZapParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapParticle;
-        char m_ZapParticle[0xe0]; // 0x1558        
+        char m_ZapParticle[0xe0]; // 0x15f8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbilityLightningBallVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityLightningBallVData) == 0x1638);
+    static_assert(sizeof(CAbilityLightningBallVData) == 0x16d8);
 };

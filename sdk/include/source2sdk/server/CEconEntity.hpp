@@ -20,7 +20,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb88
+    // Size: 0xc90
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CAttributeContainer m_AttributeManager"
@@ -28,16 +28,16 @@ namespace source2sdk::server
     class CEconEntity : public server::CBaseFlex
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xa30[0x10]; // 0xa30
+        [[maybe_unused]] std::uint8_t pad_0xb20[0x10]; // 0xb20
         // metadata: MNetworkEnable
-        server::CAttributeContainer m_AttributeManager; // 0xa40        
+        server::CAttributeContainer m_AttributeManager; // 0xb30        
         // m_hOldProvidee has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hOldProvidee;
-        char m_hOldProvidee[0x4]; // 0xb80        
-        int32_t m_iOldOwnerClass; // 0xb84        
+        char m_hOldProvidee[0x4]; // 0xc88        
+        int32_t m_iOldOwnerClass; // 0xc8c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CEconEntity because it is not a standard-layout class
-    static_assert(sizeof(CEconEntity) == 0xb88);
+    static_assert(sizeof(CEconEntity) == 0xc90);
 };

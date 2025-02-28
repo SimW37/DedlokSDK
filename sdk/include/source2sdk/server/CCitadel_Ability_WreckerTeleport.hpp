@@ -20,7 +20,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc20
+    // Size: 0xc38
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "EHANDLE m_hProjectile"
@@ -30,26 +30,26 @@ namespace source2sdk::server
     class CCitadel_Ability_WreckerTeleport : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xae8[0x8]; // 0xae8
+        [[maybe_unused]] std::uint8_t pad_0xb00[0x8]; // 0xb00
         // metadata: MNetworkEnable
         // m_hProjectile has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hProjectile;
-        char m_hProjectile[0x4]; // 0xaf0        
+        char m_hProjectile[0x4]; // 0xb08        
         // metadata: MNetworkEnable
-        float m_flArrowSpeed; // 0xaf4        
+        float m_flArrowSpeed; // 0xb0c        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flSnapAnglesBackTime; // 0xaf8        
-        float m_flCastTimeDamage; // 0xafc        
-        entity2::GameTime_t m_flCastTime; // 0xb00        
-        bool m_bNeedsExplosion; // 0xb04        
-        [[maybe_unused]] std::uint8_t pad_0xb05[0x3]; // 0xb05
-        Vector m_vProjectileRemovedOrigin; // 0xb08        
-        QAngle m_angCasterAnglesAtCastTime; // 0xb14        
-        float m_flTravelDistance; // 0xb20        
-        [[maybe_unused]] std::uint8_t pad_0xb24[0xfc];
+        entity2::GameTime_t m_flSnapAnglesBackTime; // 0xb10        
+        float m_flCastTimeDamage; // 0xb14        
+        entity2::GameTime_t m_flCastTime; // 0xb18        
+        bool m_bNeedsExplosion; // 0xb1c        
+        [[maybe_unused]] std::uint8_t pad_0xb1d[0x3]; // 0xb1d
+        Vector m_vProjectileRemovedOrigin; // 0xb20        
+        QAngle m_angCasterAnglesAtCastTime; // 0xb2c        
+        float m_flTravelDistance; // 0xb38        
+        [[maybe_unused]] std::uint8_t pad_0xb3c[0xfc];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_WreckerTeleport because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_WreckerTeleport) == 0xc20);
+    static_assert(sizeof(CCitadel_Ability_WreckerTeleport) == 0xc38);
 };

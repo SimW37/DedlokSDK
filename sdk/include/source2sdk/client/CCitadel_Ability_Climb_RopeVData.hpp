@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1598
+    // Size: 0x1640
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,37 +23,39 @@ namespace source2sdk::client
     class CCitadel_Ability_Climb_RopeVData : public client::CitadelAbilityVData
     {
     public:
-        float m_flMinButtonHoldTimeToActivate; // 0x1528        
-        float m_flClimbSpeedUp; // 0x152c        
-        float m_flClimbSpeedDown; // 0x1530        
-        float m_flClimbSpeedDownMax; // 0x1534        
-        float m_flClimbDownAccelTime; // 0x1538        
-        float m_flLatchSpeed; // 0x153c        
-        float m_flAttachOffset; // 0x1540        
-        float m_flMinReconnectTime; // 0x1544        
-        float m_flSideMoveReduction; // 0x1548        
-        float m_flTopOffset; // 0x154c        
-        float m_flBottomOffset; // 0x1550        
-        float m_flTraceRadiusSize; // 0x1554        
-        float m_flStopTimeToShoot; // 0x1558        
-        float m_flJumpOffVertical; // 0x155c        
-        float m_flJumpOffHorizontal; // 0x1560        
-        float m_flDuckOffVertical; // 0x1564        
-        float m_flDuckOffHorizontal; // 0x1568        
-        float m_flActivateRange; // 0x156c        
-        float m_flJumpToRoofRayCheckDist; // 0x1570        
-        float m_flMinTimeToRoofCheck; // 0x1574        
-        float m_flTimeToHintRefresh; // 0x1578        
-        float m_iMaxHintCount; // 0x157c        
-        float m_flClimbRopeSlowDurationOnHit; // 0x1580        
-        [[maybe_unused]] std::uint8_t pad_0x1584[0x4]; // 0x1584
+        float m_flMinButtonHoldTimeToActivate; // 0x15c8        
+        float m_flClimbSpeedUp; // 0x15cc        
+        float m_flClimbSpeedDown; // 0x15d0        
+        float m_flClimbSpeedDownMax; // 0x15d4        
+        float m_flClimbDownAccelTime; // 0x15d8        
+        float m_flLatchSpeed; // 0x15dc        
+        float m_flAttachOffset; // 0x15e0        
+        float m_flMinReconnectTime; // 0x15e4        
+        float m_flSideMoveReduction; // 0x15e8        
+        float m_flTopOffset; // 0x15ec        
+        float m_flBottomOffset; // 0x15f0        
+        float m_flTraceRadiusSize; // 0x15f4        
+        float m_flStopTimeToShoot; // 0x15f8        
+        float m_flJumpOffVertical; // 0x15fc        
+        float m_flJumpOffHorizontal; // 0x1600        
+        float m_flDuckOffVertical; // 0x1604        
+        float m_flDuckOffHorizontal; // 0x1608        
+        float m_flActivateRange; // 0x160c        
+        float m_flJumpToRoofRayCheckDist; // 0x1610        
+        float m_flMinTimeToRoofCheck; // 0x1614        
+        float m_flTimeToHintRefresh; // 0x1618        
+        float m_iMaxHintCount; // 0x161c        
+        float m_flClimbRopeSlowDurationOnHit; // 0x1620        
+        float m_flCameraRotateSpeed; // 0x1624        
+        float m_flCameraRotateMaxTime; // 0x1628        
+        [[maybe_unused]] std::uint8_t pad_0x162c[0x4]; // 0x162c
         // metadata: MPropertyStartGroup "Modifiers"
         // m_ClimbRopeSlowOnHitModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_ClimbRopeSlowOnHitModifier;
-        char m_ClimbRopeSlowOnHitModifier[0x10]; // 0x1588        
+        char m_ClimbRopeSlowOnHitModifier[0x10]; // 0x1630        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Climb_RopeVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Climb_RopeVData) == 0x1598);
+    static_assert(sizeof(CCitadel_Ability_Climb_RopeVData) == 0x1640);
 };

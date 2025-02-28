@@ -22,9 +22,12 @@ namespace source2sdk::server
     class CCitadel_Modifier_Backdoor_Protection : public server::CCitadelModifier
     {
     public:
-        int32_t m_MaxHealth; // 0xc8        
-        entity2::GameTime_t m_flLastAttackedTime; // 0xcc        
-        client::ParticleIndex_t m_nActiveShieldEffect; // 0xd0        
+        int32_t m_MaxHealth; // 0xc0        
+        entity2::GameTime_t m_flLastAttackedTime; // 0xc4        
+        client::ParticleIndex_t m_nActiveShieldEffect; // 0xc8        
+        bool m_bIsActive; // 0xcc        
+        [[maybe_unused]] std::uint8_t pad_0xcd[0x3]; // 0xcd
+        entity2::GameTime_t m_tActivationTime; // 0xd0        
         [[maybe_unused]] std::uint8_t pad_0xd4[0x4];
     };
     #pragma pack(pop)
