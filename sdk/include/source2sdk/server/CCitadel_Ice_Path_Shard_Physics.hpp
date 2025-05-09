@@ -13,15 +13,10 @@
 
 namespace source2sdk::server
 {
-    class CTriggerIcePathVolume;
-};
-
-namespace source2sdk::server
-{
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x810
+    // Size: 0x828
     // Has VTable
     // 
     // static metadata: MNetworkExcludeByName "m_hModel"
@@ -29,29 +24,31 @@ namespace source2sdk::server
     // static metadata: MNetworkVarNames "QAngle m_qForward"
     // static metadata: MNetworkVarNames "GameTime_t m_flStartTime"
     // static metadata: MNetworkVarNames "GameTime_t m_flEndTime"
+    // static metadata: MNetworkVarNames "float m_flShardWidth"
     #pragma pack(push, 1)
     class CCitadel_Ice_Path_Shard_Physics : public server::CBaseModelEntity
     {
     public:
         // metadata: MNetworkEnable
-        server::ice_path_shard_model_desc_t m_ShardDesc; // 0x7b8        
+        server::ice_path_shard_model_desc_t m_ShardDesc; // 0x7d0        
         // metadata: MNetworkEnable
-        QAngle m_qForward; // 0x7f0        
+        QAngle m_qForward; // 0x808        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnStartTimeChanged"
-        entity2::GameTime_t m_flStartTime; // 0x7fc        
+        entity2::GameTime_t m_flStartTime; // 0x814        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnEndTimeChanged"
-        entity2::GameTime_t m_flEndTime; // 0x800        
-        bool m_bIsBase; // 0x804        
-        [[maybe_unused]] std::uint8_t pad_0x805[0x3]; // 0x805
-        // m_hTrooperTrigger has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CTriggerIcePathVolume> m_hTrooperTrigger;
-        char m_hTrooperTrigger[0x4]; // 0x808        
-        [[maybe_unused]] std::uint8_t pad_0x80c[0x4];
+        entity2::GameTime_t m_flEndTime; // 0x818        
+        // metadata: MNetworkEnable
+        float m_flShardWidth; // 0x81c        
+        [[maybe_unused]] std::uint8_t pad_0x820[0x8];
+        
+        // Datamap fields:
+        // void m_bIsBase; // 0x820
+        // void m_hTrooperTrigger; // 0x824
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ice_Path_Shard_Physics because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ice_Path_Shard_Physics) == 0x810);
+    static_assert(sizeof(CCitadel_Ice_Path_Shard_Physics) == 0x828);
 };

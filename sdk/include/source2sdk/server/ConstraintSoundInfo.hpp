@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x88
+    // Size: 0x98
     // Has VTable
     #pragma pack(push, 1)
     class ConstraintSoundInfo
@@ -29,16 +29,16 @@ namespace source2sdk::server
         [[maybe_unused]] std::uint8_t pad_0x4c[0x4]; // 0x4c
         CUtlSymbolLarge m_iszTravelSoundFwd; // 0x50        
         CUtlSymbolLarge m_iszTravelSoundBack; // 0x58        
-        [[maybe_unused]] std::uint8_t pad_0x60[0x8]; // 0x60
-        CUtlSymbolLarge m_iszReversalSounds[3]; // 0x68        
-        bool m_bPlayTravelSound; // 0x80        
-        bool m_bPlayReversalSound; // 0x81        
-        [[maybe_unused]] std::uint8_t pad_0x82[0x6];
+        [[maybe_unused]] std::uint8_t pad_0x60[0x18]; // 0x60
+        CUtlSymbolLarge m_iszReversalSounds[3]; // 0x78        
+        bool m_bPlayTravelSound; // 0x90        
+        bool m_bPlayReversalSound; // 0x91        
+        [[maybe_unused]] std::uint8_t pad_0x92[0x6];
         
         // Datamap fields:
-        // CUtlSymbolLarge m_iszReversalSounds[0]; // 0x68
-        // CUtlSymbolLarge m_iszReversalSounds[1]; // 0x70
-        // CUtlSymbolLarge m_iszReversalSounds[2]; // 0x78
+        // CUtlSymbolLarge m_iszReversalSounds[0]; // 0x78
+        // CUtlSymbolLarge m_iszReversalSounds[1]; // 0x80
+        // CUtlSymbolLarge m_iszReversalSounds[2]; // 0x88
     };
     #pragma pack(pop)
     
@@ -47,9 +47,9 @@ namespace source2sdk::server
     static_assert(offsetof(ConstraintSoundInfo, m_forwardAxis) == 0x40);
     static_assert(offsetof(ConstraintSoundInfo, m_iszTravelSoundFwd) == 0x50);
     static_assert(offsetof(ConstraintSoundInfo, m_iszTravelSoundBack) == 0x58);
-    static_assert(offsetof(ConstraintSoundInfo, m_iszReversalSounds) == 0x68);
-    static_assert(offsetof(ConstraintSoundInfo, m_bPlayTravelSound) == 0x80);
-    static_assert(offsetof(ConstraintSoundInfo, m_bPlayReversalSound) == 0x81);
+    static_assert(offsetof(ConstraintSoundInfo, m_iszReversalSounds) == 0x78);
+    static_assert(offsetof(ConstraintSoundInfo, m_bPlayTravelSound) == 0x90);
+    static_assert(offsetof(ConstraintSoundInfo, m_bPlayReversalSound) == 0x91);
     
-    static_assert(sizeof(ConstraintSoundInfo) == 0x88);
+    static_assert(sizeof(ConstraintSoundInfo) == 0x98);
 };

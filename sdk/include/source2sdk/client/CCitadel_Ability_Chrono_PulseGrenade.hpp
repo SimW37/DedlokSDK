@@ -14,18 +14,18 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xd48
+    // Size: 0xed8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Chrono_PulseGrenade : public client::C_CitadelBaseAbility
     {
     public:
-        Vector m_vLaunchPosition; // 0xc50        
-        QAngle m_qLaunchAngle; // 0xc5c        
-        [[maybe_unused]] std::uint8_t pad_0xc68[0xe0];
+        Vector m_vLaunchPosition; // 0xdc0        
+        QAngle m_qLaunchAngle; // 0xdcc        
+        [[maybe_unused]] std::uint8_t pad_0xdd8[0x100];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Chrono_PulseGrenade because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Chrono_PulseGrenade) == 0xd48);
+    static_assert(sizeof(CCitadel_Ability_Chrono_PulseGrenade) == 0xed8);
 };

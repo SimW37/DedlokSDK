@@ -13,15 +13,15 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x1
     // Standard-layout class: true
-    // Size: 0xc8
+    // Size: 0x100
     // Has VTable
     #pragma pack(push, 1)
     class CNavSmartGoalHelper
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x00[0xc0]; // 0x0
-        bool m_bExecuteQueuedGoal; // 0xc0        
-        [[maybe_unused]] std::uint8_t pad_0xc1[0x7];
+        [[maybe_unused]] std::uint8_t pad_0x00[0xf8]; // 0x0
+        bool m_bExecuteQueuedGoal; // 0xf8        
+        [[maybe_unused]] std::uint8_t pad_0xf9[0x7];
         
         // Datamap fields:
         // void m_pNPC; // 0x8
@@ -31,7 +31,7 @@ namespace source2sdk::server
     };
     #pragma pack(pop)
     
-    static_assert(offsetof(CNavSmartGoalHelper, m_bExecuteQueuedGoal) == 0xc0);
+    static_assert(offsetof(CNavSmartGoalHelper, m_bExecuteQueuedGoal) == 0xf8);
     
-    static_assert(sizeof(CNavSmartGoalHelper) == 0xc8);
+    static_assert(sizeof(CNavSmartGoalHelper) == 0x100);
 };

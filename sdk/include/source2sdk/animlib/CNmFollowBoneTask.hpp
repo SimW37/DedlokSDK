@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/animlib/CNmTask.hpp"
+#include "source2sdk/animlib/CNmPoseTask.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -17,7 +17,7 @@ namespace source2sdk::animlib
     // Size: 0x48
     // Has VTable
     #pragma pack(push, 1)
-    class CNmFollowBoneTask : public animlib::CNmTask
+    class CNmFollowBoneTask : public animlib::CNmPoseTask
     {
     public:
         [[maybe_unused]] std::uint8_t pad_0x30[0x18];

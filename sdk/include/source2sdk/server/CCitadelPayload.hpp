@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc78
+    // Size: 0xca0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "float m_flProgress"
@@ -24,21 +24,21 @@ namespace source2sdk::server
     class CCitadelPayload : public server::CCitadelAnimatingModelEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc10[0x18]; // 0xc10
+        [[maybe_unused]] std::uint8_t pad_0xc38[0x18]; // 0xc38
         // m_hPusherAura has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CModifierHandleTyped<server::CCitadelModifierAura> m_hPusherAura;
-        char m_hPusherAura[0x18]; // 0xc28        
+        char m_hPusherAura[0x18]; // 0xc50        
         // m_hBlockerAura has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CModifierHandleTyped<server::CCitadelModifierAura> m_hBlockerAura;
-        char m_hBlockerAura[0x18]; // 0xc40        
-        [[maybe_unused]] std::uint8_t pad_0xc58[0x18]; // 0xc58
+        char m_hBlockerAura[0x18]; // 0xc68        
+        [[maybe_unused]] std::uint8_t pad_0xc80[0x18]; // 0xc80
         // metadata: MNetworkEnable
-        float m_flProgress; // 0xc70        
+        float m_flProgress; // 0xc98        
         // metadata: MNetworkEnable
-        int32_t m_nNumPushers; // 0xc74        
+        int32_t m_nNumPushers; // 0xc9c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelPayload because it is not a standard-layout class
-    static_assert(sizeof(CCitadelPayload) == 0xc78);
+    static_assert(sizeof(CCitadelPayload) == 0xca0);
 };

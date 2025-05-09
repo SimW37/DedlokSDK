@@ -21,7 +21,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x5c8
+    // Size: 0x5d0
     // Has VTable
     #pragma pack(push, 1)
     class CAI_Hint : public server::CServerOnlyEntity
@@ -55,6 +55,7 @@ namespace source2sdk::server
         char m_hAssociatedEntity[0x4]; // 0x5bc        
         float m_flInteractionDistance; // 0x5c0        
         float m_flCooldown; // 0x5c4        
+        CUtlSymbolLarge m_iszNPCFollowsEntity; // 0x5c8        
         
         // Datamap fields:
         // void CAI_HintEnableThink; // 0x0
@@ -65,5 +66,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAI_Hint because it is not a standard-layout class
-    static_assert(sizeof(CAI_Hint) == 0x5c8);
+    static_assert(sizeof(CAI_Hint) == 0x5d0);
 };

@@ -19,7 +19,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x870
+    // Size: 0x888
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CHandle<CCitadelZipLineNode> m_vecConnections"
@@ -43,55 +43,55 @@ namespace source2sdk::server
     class CCitadelZipLineNode : public server::CBaseModelEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x7b8[0x10]; // 0x7b8
+        [[maybe_unused]] std::uint8_t pad_0x7d0[0x10]; // 0x7d0
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "connectionsChanged"
         // m_vecConnections has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CNetworkUtlVectorBase<CHandle<server::CCitadelZipLineNode>> m_vecConnections;
-        char m_vecConnections[0x18]; // 0x7c8        
+        char m_vecConnections[0x18]; // 0x7e0        
         // metadata: MNetworkEnable
-        Vector m_vTangentIn; // 0x7e0        
+        Vector m_vTangentIn; // 0x7f8        
         // metadata: MNetworkEnable
-        Vector m_vTangentOut; // 0x7ec        
+        Vector m_vTangentOut; // 0x804        
         // metadata: MNetworkEnable
-        float m_flCumulativeDistance; // 0x7f8        
-        [[maybe_unused]] std::uint8_t pad_0x7fc[0x3c]; // 0x7fc
-        CUtlSymbolLarge m_strGuardBossName; // 0x838        
-        CUtlSymbolLarge m_strGuardBossName2; // 0x840        
-        CUtlSymbolLarge m_strGuardBossName3; // 0x848        
+        float m_flCumulativeDistance; // 0x810        
+        [[maybe_unused]] std::uint8_t pad_0x814[0x3c]; // 0x814
+        CUtlSymbolLarge m_strGuardBossName; // 0x850        
+        CUtlSymbolLarge m_strGuardBossName2; // 0x858        
+        CUtlSymbolLarge m_strGuardBossName3; // 0x860        
         // metadata: MNetworkEnable
-        int16_t m_iNodeIndex; // 0x850        
+        int16_t m_iNodeIndex; // 0x868        
         // metadata: MNetworkEnable
-        int16_t m_eCaptureState; // 0x852        
+        int16_t m_eCaptureState; // 0x86a        
         // metadata: MNetworkEnable
-        int16_t m_iPrimaryLane; // 0x854        
+        int16_t m_iPrimaryLane; // 0x86c        
         // metadata: MNetworkEnable
-        int16_t m_nRopesParity; // 0x856        
+        int16_t m_nRopesParity; // 0x86e        
         // metadata: MNetworkEnable
-        bool m_bCornerNode; // 0x858        
+        bool m_bCornerNode; // 0x870        
         // metadata: MNetworkEnable
-        bool m_bCapturable; // 0x859        
+        bool m_bCapturable; // 0x871        
         // metadata: MNetworkEnable
-        bool m_bAlwaysUsable; // 0x85a        
+        bool m_bAlwaysUsable; // 0x872        
         // metadata: MNetworkEnable
-        bool m_bOneWay; // 0x85b        
+        bool m_bOneWay; // 0x873        
         // metadata: MNetworkEnable
-        bool m_bDisableZippingToByPlayers; // 0x85c        
+        bool m_bDisableZippingToByPlayers; // 0x874        
         // metadata: MNetworkEnable
-        bool m_bUseForMinimapDrawing; // 0x85d        
-        [[maybe_unused]] std::uint8_t pad_0x85e[0x2]; // 0x85e
+        bool m_bUseForMinimapDrawing; // 0x875        
+        [[maybe_unused]] std::uint8_t pad_0x876[0x2]; // 0x876
         // metadata: MNetworkEnable
         // m_hGuardingBoss has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hGuardingBoss;
-        char m_hGuardingBoss[0x4]; // 0x860        
+        char m_hGuardingBoss[0x4]; // 0x878        
         // metadata: MNetworkEnable
-        float m_flRopeRadius; // 0x864        
+        float m_flRopeRadius; // 0x87c        
         // metadata: MNetworkEnable
-        bool m_bEnabled; // 0x868        
-        [[maybe_unused]] std::uint8_t pad_0x869[0x7];
+        bool m_bEnabled; // 0x880        
+        [[maybe_unused]] std::uint8_t pad_0x881[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelZipLineNode because it is not a standard-layout class
-    static_assert(sizeof(CCitadelZipLineNode) == 0x870);
+    static_assert(sizeof(CCitadelZipLineNode) == 0x888);
 };

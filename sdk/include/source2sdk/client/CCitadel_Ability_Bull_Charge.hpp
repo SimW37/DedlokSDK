@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xf18
+    // Size: 0x1128
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "QAngle m_anglesCharging"
@@ -26,24 +26,24 @@ namespace source2sdk::client
     class CCitadel_Ability_Bull_Charge : public client::C_CitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc50[0x2a0]; // 0xc50
+        [[maybe_unused]] std::uint8_t pad_0xdc0[0x340]; // 0xdc0
         // metadata: MNetworkEnable
-        QAngle m_anglesCharging; // 0xef0        
+        QAngle m_anglesCharging; // 0x1100        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnChargingStateChanged"
-        entity2::GameTime_t m_flChargeStartTime; // 0xefc        
+        entity2::GameTime_t m_flChargeStartTime; // 0x110c        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flFastChargeEndTime; // 0xf00        
+        entity2::GameTime_t m_flFastChargeEndTime; // 0x1110        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        bool m_bHitAPlayer; // 0xf04        
-        [[maybe_unused]] std::uint8_t pad_0xf05[0x3]; // 0xf05
-        bool m_bFirstTick; // 0xf08        
-        [[maybe_unused]] std::uint8_t pad_0xf09[0x3]; // 0xf09
-        Vector m_vGoalDir; // 0xf0c        
+        bool m_bHitAPlayer; // 0x1114        
+        [[maybe_unused]] std::uint8_t pad_0x1115[0x3]; // 0x1115
+        bool m_bFirstTick; // 0x1118        
+        [[maybe_unused]] std::uint8_t pad_0x1119[0x3]; // 0x1119
+        Vector m_vGoalDir; // 0x111c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Bull_Charge because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Bull_Charge) == 0xf18);
+    static_assert(sizeof(CCitadel_Ability_Bull_Charge) == 0x1128);
 };

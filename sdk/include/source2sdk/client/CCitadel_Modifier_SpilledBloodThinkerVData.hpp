@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x740
+    // Size: 0x748
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,13 +26,13 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_SpilledBloodParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpilledBloodParticle;
-        char m_SpilledBloodParticle[0xe0]; // 0x658        
+        char m_SpilledBloodParticle[0xe0]; // 0x660        
         // metadata: MPropertyStartGroup "Gameplay"
-        float m_flTickRate; // 0x738        
-        float m_flHeight; // 0x73c        
+        float m_flTickRate; // 0x740        
+        float m_flHeight; // 0x744        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_SpilledBloodThinkerVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_SpilledBloodThinkerVData) == 0x740);
+    static_assert(sizeof(CCitadel_Modifier_SpilledBloodThinkerVData) == 0x748);
 };

@@ -20,7 +20,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1470
+    // Size: 0x17c8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "int m_iLane"
@@ -32,30 +32,30 @@ namespace source2sdk::client
     class C_NPC_Boss_Tier2 : public client::C_AI_CitadelNPC
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x1428[0x18]; // 0x1428
+        [[maybe_unused]] std::uint8_t pad_0x1708[0x18]; // 0x1708
         // metadata: MNetworkEnable
-        int32_t m_iLane; // 0x1440        
+        int32_t m_iLane; // 0x1720        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flFadeOutStart; // 0x1444        
+        entity2::GameTime_t m_flFadeOutStart; // 0x1724        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flFadeOutEnd; // 0x1448        
+        entity2::GameTime_t m_flFadeOutEnd; // 0x1728        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnBossTargetedEnemyChanged"
         // m_hTargetedEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hTargetedEnemy;
-        char m_hTargetedEnemy[0x4]; // 0x144c        
+        char m_hTargetedEnemy[0x4]; // 0x172c        
         // metadata: MNetworkEnable
         // metadata: MNetworkEncoder "coord"
         // metadata: MNetworkChangeCallback "OnLookTargetChanged"
-        Vector m_vecElectricBeamLookTarget; // 0x1450        
-        [[maybe_unused]] std::uint8_t pad_0x145c[0xc]; // 0x145c
+        Vector m_vecElectricBeamLookTarget; // 0x1730        
+        [[maybe_unused]] std::uint8_t pad_0x173c[0x84]; // 0x173c
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnElectricBeamCastsChanged"
-        int32_t m_nElectricBeamCasts; // 0x1468        
-        [[maybe_unused]] std::uint8_t pad_0x146c[0x4];
+        int32_t m_nElectricBeamCasts; // 0x17c0        
+        [[maybe_unused]] std::uint8_t pad_0x17c4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_NPC_Boss_Tier2 because it is not a standard-layout class
-    static_assert(sizeof(C_NPC_Boss_Tier2) == 0x1470);
+    static_assert(sizeof(C_NPC_Boss_Tier2) == 0x17c8);
 };

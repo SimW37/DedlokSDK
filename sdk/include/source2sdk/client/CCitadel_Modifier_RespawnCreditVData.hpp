@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x688
+    // Size: 0x690
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -24,23 +24,23 @@ namespace source2sdk::client
     {
     public:
         // metadata: MPropertyStartGroup "Respawn Settings"
-        client::ERejuvenatorRespawnMechanic m_eRespawnMechanic; // 0x658        
+        client::ERejuvenatorRespawnMechanic m_eRespawnMechanic; // 0x660        
         // metadata: MPropertySuppressExpr "m_eRespawnMechanic != RejuvenatorRespawnMechanic_FixedDelay"
         // metadata: MPropertyDescription "Respawn time is set to this fixed duration after dying."
-        float m_flRespawnDelay; // 0x65c        
+        float m_flRespawnDelay; // 0x664        
         // metadata: MPropertyStartGroup "Buff Values"
-        float m_flBonusClipSize; // 0x660        
-        float m_flBonusFirerate; // 0x664        
-        float m_flBonusHealth; // 0x668        
-        float m_flBonusMoveSpeedMeterPerSecond; // 0x66c        
+        float m_flBonusClipSize; // 0x668        
+        float m_flBonusFirerate; // 0x66c        
+        float m_flBonusHealth; // 0x670        
+        float m_flBonusMoveSpeedMeterPerSecond; // 0x674        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_sExpireSound; // 0x670        
+        CSoundEventName m_sExpireSound; // 0x678        
         // metadata: MPropertyStartGroup "UI Messages"
-        int32_t m_iMaxMessages; // 0x680        
-        float m_flMessageInterval; // 0x684        
+        int32_t m_iMaxMessages; // 0x688        
+        float m_flMessageInterval; // 0x68c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_RespawnCreditVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_RespawnCreditVData) == 0x688);
+    static_assert(sizeof(CCitadel_Modifier_RespawnCreditVData) == 0x690);
 };

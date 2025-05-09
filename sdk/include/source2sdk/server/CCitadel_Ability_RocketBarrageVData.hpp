@@ -17,7 +17,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1768
+    // Size: 0x17b0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -28,24 +28,26 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Modifiers"
         // m_BarrageModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_BarrageModifier;
-        char m_BarrageModifier[0x10]; // 0x15c8        
+        char m_BarrageModifier[0x10]; // 0x15f0        
         // m_MoveSlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_MoveSlowModifier;
-        char m_MoveSlowModifier[0x10]; // 0x15d8        
+        char m_MoveSlowModifier[0x10]; // 0x1600        
         // metadata: MPropertyStartGroup "Visuals"
         // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-        char m_ImpactParticle[0xe0]; // 0x15e8        
+        char m_ImpactParticle[0xe0]; // 0x1610        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strExplodeSound; // 0x16c8        
+        CSoundEventName m_strExplodeSound; // 0x16f0        
+        CSoundEventName m_strBarrageSound; // 0x1700        
+        CSoundEventName m_strBarrageLoop; // 0x1710        
         // metadata: MPropertyStartGroup "Camera"
-        client::CitadelCameraOperationsSequence_t m_cameraSequenceSelected; // 0x16d8        
+        client::CitadelCameraOperationsSequence_t m_cameraSequenceSelected; // 0x1720        
         // metadata: MPropertyStartGroup "+Rocket Barrage Properties"
-        float m_flMoveSpeedReductionPct; // 0x1760        
-        float m_flHeightTestDistance; // 0x1764        
+        float m_flMoveSpeedReductionPct; // 0x17a8        
+        float m_flHeightTestDistance; // 0x17ac        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_RocketBarrageVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_RocketBarrageVData) == 0x1768);
+    static_assert(sizeof(CCitadel_Ability_RocketBarrageVData) == 0x17b0);
 };

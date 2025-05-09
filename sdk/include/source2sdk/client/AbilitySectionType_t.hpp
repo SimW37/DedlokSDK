@@ -13,8 +13,11 @@ namespace source2sdk::client
     // Size: 0x4
     enum class AbilitySectionType_t : std::uint32_t
     {
+        // MPropertyFriendlyName "Innate"
         EArea_Innate = 0x0,
+        // MPropertyFriendlyName "Passive"
         EArea_Passive = 0x1,
+        // MPropertyFriendlyName "Active"
         EArea_Active = 0x2,
     };
 };

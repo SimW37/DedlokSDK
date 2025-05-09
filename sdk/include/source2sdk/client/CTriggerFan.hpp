@@ -20,7 +20,7 @@ namespace source2sdk::client
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0x9d0
+    // Size: 0xb70
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "Vector m_vFanOrigin"
@@ -28,7 +28,8 @@ namespace source2sdk::client
     // static metadata: MNetworkVarNames "Vector m_vFanEnd"
     // static metadata: MNetworkVarNames "Vector m_vNoiseDirectionTarget"
     // static metadata: MNetworkVarNames "Vector m_vDirection"
-    // static metadata: MNetworkVarNames "bool m_bPushTowardsEntity"
+    // static metadata: MNetworkVarNames "bool m_bPushTowardsInfoTarget"
+    // static metadata: MNetworkVarNames "bool m_bPushAwayFromInfoTarget"
     // static metadata: MNetworkVarNames "Quaternion m_qNoiseDelta"
     // static metadata: MNetworkVarNames "CHandle< CInfoFan> m_hInfoFan"
     // static metadata: MNetworkVarNames "float m_flForce"
@@ -39,35 +40,37 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        Vector m_vFanOrigin; // 0x948        
+        Vector m_vFanOrigin; // 0xae8        
         // metadata: MNetworkEnable
-        Vector m_vFanOriginOffset; // 0x954        
+        Vector m_vFanOriginOffset; // 0xaf4        
         // metadata: MNetworkEnable
-        Vector m_vFanEnd; // 0x960        
+        Vector m_vFanEnd; // 0xb00        
         // metadata: MNetworkEnable
-        Vector m_vNoiseDirectionTarget; // 0x96c        
+        Vector m_vNoiseDirectionTarget; // 0xb0c        
         // metadata: MNetworkEnable
-        Vector m_vDirection; // 0x978        
+        Vector m_vDirection; // 0xb18        
         // metadata: MNetworkEnable
-        bool m_bPushTowardsEntity; // 0x984        
-        [[maybe_unused]] std::uint8_t pad_0x985[0xb]; // 0x985
+        bool m_bPushTowardsInfoTarget; // 0xb24        
         // metadata: MNetworkEnable
-        Quaternion m_qNoiseDelta; // 0x990        
+        bool m_bPushAwayFromInfoTarget; // 0xb25        
+        [[maybe_unused]] std::uint8_t pad_0xb26[0xa]; // 0xb26
+        // metadata: MNetworkEnable
+        Quaternion m_qNoiseDelta; // 0xb30        
         // metadata: MNetworkEnable
         // m_hInfoFan has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::CInfoFan> m_hInfoFan;
-        char m_hInfoFan[0x4]; // 0x9a0        
+        char m_hInfoFan[0x4]; // 0xb40        
         // metadata: MNetworkEnable
-        float m_flForce; // 0x9a4        
+        float m_flForce; // 0xb44        
         // metadata: MNetworkEnable
-        bool m_bFalloff; // 0x9a8        
-        [[maybe_unused]] std::uint8_t pad_0x9a9[0x7]; // 0x9a9
+        bool m_bFalloff; // 0xb48        
+        [[maybe_unused]] std::uint8_t pad_0xb49[0x7]; // 0xb49
         // metadata: MNetworkEnable
-        client::CountdownTimer m_RampTimer; // 0x9b0        
-        [[maybe_unused]] std::uint8_t pad_0x9c8[0x8];
+        client::CountdownTimer m_RampTimer; // 0xb50        
+        [[maybe_unused]] std::uint8_t pad_0xb68[0x8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTriggerFan because it is not a standard-layout class
-    static_assert(sizeof(CTriggerFan) == 0x9d0);
+    static_assert(sizeof(CTriggerFan) == 0xb70);
 };

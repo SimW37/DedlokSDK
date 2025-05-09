@@ -14,18 +14,18 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xf08
+    // Size: 0x10d8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Uppercut : public client::CCitadel_Ability_Melee_Base
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xcd0[0x230]; // 0xcd0
-        bool m_bShouldUseResources; // 0xf00        
-        [[maybe_unused]] std::uint8_t pad_0xf01[0x7];
+        [[maybe_unused]] std::uint8_t pad_0xe50[0x280]; // 0xe50
+        bool m_bShouldUseResources; // 0x10d0        
+        [[maybe_unused]] std::uint8_t pad_0x10d1[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Uppercut because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Uppercut) == 0xf08);
+    static_assert(sizeof(CCitadel_Ability_Uppercut) == 0x10d8);
 };

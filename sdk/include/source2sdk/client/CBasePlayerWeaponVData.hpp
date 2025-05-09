@@ -95,13 +95,13 @@ namespace source2sdk::client
         bool m_bAutoSwitchFrom; // 0x31d        
         [[maybe_unused]] std::uint8_t pad_0x31e[0x2]; // 0x31e
         client::RumbleEffect_t m_iRumbleEffect; // 0x320        
+        float m_flDropSpeed; // 0x324        
         // metadata: MPropertyFriendlyName "HUD Bucket"
         // metadata: MPropertyDescription "Which 'column' to display this weapon in the HUD"
-        int32_t m_iSlot; // 0x324        
+        int32_t m_iSlot; // 0x328        
         // metadata: MPropertyFriendlyName "HUD Bucket Position"
         // metadata: MPropertyDescription "Which 'row' to display this weapon in the HUD"
-        int32_t m_iPosition; // 0x328        
-        [[maybe_unused]] std::uint8_t pad_0x32c[0x4]; // 0x32c
+        int32_t m_iPosition; // 0x32c        
         // metadata: MPropertyStartGroup "Sounds"
         // m_aShootSounds has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlOrderedMap<client::WeaponSound_t,CSoundEventName> m_aShootSounds;
@@ -130,8 +130,9 @@ namespace source2sdk::client
     static_assert(offsetof(CBasePlayerWeaponVData, m_bAutoSwitchTo) == 0x31c);
     static_assert(offsetof(CBasePlayerWeaponVData, m_bAutoSwitchFrom) == 0x31d);
     static_assert(offsetof(CBasePlayerWeaponVData, m_iRumbleEffect) == 0x320);
-    static_assert(offsetof(CBasePlayerWeaponVData, m_iSlot) == 0x324);
-    static_assert(offsetof(CBasePlayerWeaponVData, m_iPosition) == 0x328);
+    static_assert(offsetof(CBasePlayerWeaponVData, m_flDropSpeed) == 0x324);
+    static_assert(offsetof(CBasePlayerWeaponVData, m_iSlot) == 0x328);
+    static_assert(offsetof(CBasePlayerWeaponVData, m_iPosition) == 0x32c);
     static_assert(offsetof(CBasePlayerWeaponVData, m_aShootSounds) == 0x330);
     
     static_assert(sizeof(CBasePlayerWeaponVData) == 0x358);

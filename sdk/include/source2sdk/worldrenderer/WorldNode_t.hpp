@@ -1,6 +1,7 @@
 #pragma once
 #include "source2sdk/worldrenderer/AggregateInstanceStreamOnDiskData_t.hpp"
 #include "source2sdk/worldrenderer/AggregateSceneObject_t.hpp"
+#include "source2sdk/worldrenderer/AggregateVertexAlbedoStreamOnDiskData_t.hpp"
 #include "source2sdk/worldrenderer/BakedLightingInfo_t.hpp"
 #include "source2sdk/worldrenderer/ClutterSceneObject_t.hpp"
 #include "source2sdk/worldrenderer/ExtraVertexStreamOverride_t.hpp"
@@ -22,7 +23,7 @@ namespace source2sdk::worldrenderer
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x160
+    // Size: 0x178
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
@@ -56,19 +57,22 @@ namespace source2sdk::worldrenderer
         // m_aggregateInstanceStreams has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<worldrenderer::AggregateInstanceStreamOnDiskData_t> m_aggregateInstanceStreams;
         char m_aggregateInstanceStreams[0x18]; // 0xc0        
+        // m_vertexAlbedoStreams has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CUtlVector<worldrenderer::AggregateVertexAlbedoStreamOnDiskData_t> m_vertexAlbedoStreams;
+        char m_vertexAlbedoStreams[0x18]; // 0xd8        
         // m_layerNames has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CUtlString> m_layerNames;
-        char m_layerNames[0x18]; // 0xd8        
+        char m_layerNames[0x18]; // 0xf0        
         // m_sceneObjectLayerIndices has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<uint8_t> m_sceneObjectLayerIndices;
-        char m_sceneObjectLayerIndices[0x18]; // 0xf0        
+        char m_sceneObjectLayerIndices[0x18]; // 0x108        
         // m_overlayLayerIndices has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<uint8_t> m_overlayLayerIndices;
-        char m_overlayLayerIndices[0x18]; // 0x108        
-        CUtlString m_grassFileName; // 0x120        
-        worldrenderer::BakedLightingInfo_t m_nodeLightingInfo; // 0x128        
-        bool m_bHasBakedGeometryFlag; // 0x158        
-        [[maybe_unused]] std::uint8_t pad_0x159[0x7];
+        char m_overlayLayerIndices[0x18]; // 0x120        
+        CUtlString m_grassFileName; // 0x138        
+        worldrenderer::BakedLightingInfo_t m_nodeLightingInfo; // 0x140        
+        bool m_bHasBakedGeometryFlag; // 0x170        
+        [[maybe_unused]] std::uint8_t pad_0x171[0x7];
     };
     #pragma pack(pop)
     
@@ -81,12 +85,13 @@ namespace source2sdk::worldrenderer
     static_assert(offsetof(WorldNode_t, m_materialOverrides) == 0x90);
     static_assert(offsetof(WorldNode_t, m_extraVertexStreams) == 0xa8);
     static_assert(offsetof(WorldNode_t, m_aggregateInstanceStreams) == 0xc0);
-    static_assert(offsetof(WorldNode_t, m_layerNames) == 0xd8);
-    static_assert(offsetof(WorldNode_t, m_sceneObjectLayerIndices) == 0xf0);
-    static_assert(offsetof(WorldNode_t, m_overlayLayerIndices) == 0x108);
-    static_assert(offsetof(WorldNode_t, m_grassFileName) == 0x120);
-    static_assert(offsetof(WorldNode_t, m_nodeLightingInfo) == 0x128);
-    static_assert(offsetof(WorldNode_t, m_bHasBakedGeometryFlag) == 0x158);
+    static_assert(offsetof(WorldNode_t, m_vertexAlbedoStreams) == 0xd8);
+    static_assert(offsetof(WorldNode_t, m_layerNames) == 0xf0);
+    static_assert(offsetof(WorldNode_t, m_sceneObjectLayerIndices) == 0x108);
+    static_assert(offsetof(WorldNode_t, m_overlayLayerIndices) == 0x120);
+    static_assert(offsetof(WorldNode_t, m_grassFileName) == 0x138);
+    static_assert(offsetof(WorldNode_t, m_nodeLightingInfo) == 0x140);
+    static_assert(offsetof(WorldNode_t, m_bHasBakedGeometryFlag) == 0x170);
     
-    static_assert(sizeof(WorldNode_t) == 0x160);
+    static_assert(sizeof(WorldNode_t) == 0x178);
 };

@@ -1,5 +1,7 @@
 #pragma once
-#include "source2sdk/client/CDestructiblePartsSystemData_PartRuntimeData.hpp"
+#include "source2sdk/client/CSkillInt.hpp"
+#include "source2sdk/client/EDestructiblePartDamagePassThroughType.hpp"
+#include "source2sdk/tier2/CRangeFloat.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -14,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x88
+    // Size: 0x50
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
@@ -25,7 +27,7 @@ namespace source2sdk::client
         CUtlString m_sName; // 0x0        
         // metadata: MPropertyStartGroup "+Model Setup"
         // metadata: MPropertyDescription "Name of the breakable part to trigger breaking on when health reaches zero."
-        // metadata: MPropertyAttributeEditor "VDataModelBreakPiece( m_sModelName )"
+        // metadata: MPropertyAttributeEditor "ModelDocPicker( 15 )"
         CGlobalSymbol m_sBreakablePieceName; // 0x8        
         // metadata: MPropertyStartGroup "+Model Setup/+Body Group"
         // metadata: MPropertyDescription "Body group to set when this part is broken."
@@ -33,14 +35,25 @@ namespace source2sdk::client
         CGlobalSymbol m_sBodyGroupName; // 0x10        
         // metadata: MPropertyDescription "Value to set for the body group when the part is broken."
         int32_t m_nBodyGroupValue; // 0x18        
-        [[maybe_unused]] std::uint8_t pad_0x1c[0x4]; // 0x1c
-        // metadata: MPropertyStartGroup "+Model Setup/+Animgraph"
-        // metadata: MPropertyDescription "Animgraph parameter (boolean) to set when this part is destroyed."
-        // metadata: MPropertyAttributeEditor "VDataAnimGraphParamBool( m_sModelName )"
-        CGlobalSymbol m_sAnimGraphParamName_PartDestroyed; // 0x20        
-        // metadata: MPropertyStartGroup
-        // metadata: MPropertyDescription "Default runtime data for this part - can be overriden in npc_units.vdata if such file exists."
-        client::CDestructiblePartsSystemData_PartRuntimeData m_DefaultRuntimeData; // 0x28        
+        // metadata: MPropertyStartGroup "+Damage"
+        // metadata: MPropertyDescription "Total health of this part. When it reaches 0, the part is 'broken' using the breakable prop system."
+        client::CSkillInt m_nHealth; // 0x1c        
+        // metadata: MPropertyDescription "How damage to this part is handled."
+        client::EDestructiblePartDamagePassThroughType m_nDamagePassthroughType; // 0x2c        
+        // metadata: MPropertyStartGroup "+Death"
+        // metadata: MPropertyDescription "Should the entity die when this part is destroyed?"
+        bool m_bKillEntityOnDestruction; // 0x30        
+        [[maybe_unused]] std::uint8_t pad_0x31[0x7]; // 0x31
+        // metadata: MPropertyDescription "Custom death handshake to set when this part is destroyed."
+        // metadata: MPropertySuppressExpr "m_bKillEntityOnDestruction == false"
+        CGlobalSymbol m_sCustomDeathHandshake; // 0x38        
+        // metadata: MPropertyDescription "Whether the part should be destroyed when the entity dies."
+        bool m_bShouldDestroyOnDeath; // 0x40        
+        [[maybe_unused]] std::uint8_t pad_0x41[0x3]; // 0x41
+        // metadata: MPropertyDescription "Time after death the part should be destroyed"
+        // metadata: MPropertySuppressExpr "m_bShouldDestroyOnDeath == false"
+        tier2::CRangeFloat m_flDeathDestroyTime; // 0x44        
+        [[maybe_unused]] std::uint8_t pad_0x4c[0x4];
     };
     #pragma pack(pop)
     
@@ -48,8 +61,12 @@ namespace source2sdk::client
     static_assert(offsetof(CDestructiblePartsSystemData_PartData, m_sBreakablePieceName) == 0x8);
     static_assert(offsetof(CDestructiblePartsSystemData_PartData, m_sBodyGroupName) == 0x10);
     static_assert(offsetof(CDestructiblePartsSystemData_PartData, m_nBodyGroupValue) == 0x18);
-    static_assert(offsetof(CDestructiblePartsSystemData_PartData, m_sAnimGraphParamName_PartDestroyed) == 0x20);
-    static_assert(offsetof(CDestructiblePartsSystemData_PartData, m_DefaultRuntimeData) == 0x28);
+    static_assert(offsetof(CDestructiblePartsSystemData_PartData, m_nHealth) == 0x1c);
+    static_assert(offsetof(CDestructiblePartsSystemData_PartData, m_nDamagePassthroughType) == 0x2c);
+    static_assert(offsetof(CDestructiblePartsSystemData_PartData, m_bKillEntityOnDestruction) == 0x30);
+    static_assert(offsetof(CDestructiblePartsSystemData_PartData, m_sCustomDeathHandshake) == 0x38);
+    static_assert(offsetof(CDestructiblePartsSystemData_PartData, m_bShouldDestroyOnDeath) == 0x40);
+    static_assert(offsetof(CDestructiblePartsSystemData_PartData, m_flDeathDestroyTime) == 0x44);
     
-    static_assert(sizeof(CDestructiblePartsSystemData_PartData) == 0x88);
+    static_assert(sizeof(CDestructiblePartsSystemData_PartData) == 0x50);
 };

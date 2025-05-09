@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x758
+    // Size: 0x760
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,13 +26,13 @@ namespace source2sdk::client
         // metadata: MPropertyGroupName "Visuals"
         // m_ChainParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChainParticle;
-        char m_ChainParticle[0xe0]; // 0x658        
+        char m_ChainParticle[0xe0]; // 0x660        
         // metadata: MPropertyGroupName "Sounds"
-        CSoundEventName m_ChainSound; // 0x738        
-        CSoundEventName m_VictimSound; // 0x748        
+        CSoundEventName m_ChainSound; // 0x740        
+        CSoundEventName m_VictimSound; // 0x750        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_ChainLightningEffectVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_ChainLightningEffectVData) == 0x758);
+    static_assert(sizeof(CCitadel_Modifier_ChainLightningEffectVData) == 0x760);
 };

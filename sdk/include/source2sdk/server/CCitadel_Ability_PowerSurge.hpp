@@ -15,18 +15,18 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb78
+    // Size: 0xc28
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_PowerSurge : public server::CCitadelBaseAbility
     {
     public:
-        entity2::GameTime_t m_flNextProcTime; // 0xb00        
-        float m_flBaseCooldown; // 0xb04        
-        [[maybe_unused]] std::uint8_t pad_0xb08[0x70];
+        entity2::GameTime_t m_flNextProcTime; // 0xba0        
+        float m_flBaseCooldown; // 0xba4        
+        [[maybe_unused]] std::uint8_t pad_0xba8[0x80];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_PowerSurge because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_PowerSurge) == 0xb78);
+    static_assert(sizeof(CCitadel_Ability_PowerSurge) == 0xc28);
 };

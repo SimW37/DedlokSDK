@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x910
+    // Size: 0x918
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -24,25 +24,25 @@ namespace source2sdk::server
     class CCitadel_Modifier_ItemPickupPunchableVData : public server::CCitadelModifierVData
     {
     public:
-        float m_flPhysicsRadius; // 0x658        
-        [[maybe_unused]] std::uint8_t pad_0x65c[0x4]; // 0x65c
+        float m_flPhysicsRadius; // 0x660        
+        [[maybe_unused]] std::uint8_t pad_0x664[0x4]; // 0x664
         // metadata: MPropertyStartGroup "Visuals"
         // m_IsDroppingParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IsDroppingParticle;
-        char m_IsDroppingParticle[0xe0]; // 0x660        
+        char m_IsDroppingParticle[0xe0]; // 0x668        
         // m_IsPunchableParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IsPunchableParticle;
-        char m_IsPunchableParticle[0xe0]; // 0x740        
+        char m_IsPunchableParticle[0xe0]; // 0x748        
         // m_IsFrozenParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_IsFrozenParticle;
-        char m_IsFrozenParticle[0xe0]; // 0x820        
+        char m_IsFrozenParticle[0xe0]; // 0x828        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_NearRejuvAuraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_NearRejuvAuraModifier;
-        char m_NearRejuvAuraModifier[0x10]; // 0x900        
+        char m_NearRejuvAuraModifier[0x10]; // 0x908        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_ItemPickupPunchableVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_ItemPickupPunchableVData) == 0x910);
+    static_assert(sizeof(CCitadel_Modifier_ItemPickupPunchableVData) == 0x918);
 };

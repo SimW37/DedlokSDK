@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x220
+    // Size: 0x250
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_Gunslinger_DemonCarbine : public server::CCitadelModifier
@@ -24,10 +24,10 @@ namespace source2sdk::server
         int32_t m_nBulletCount; // 0xc0        
         float m_flElapsedPct; // 0xc4        
         client::ParticleIndex_t m_nFullyChargedParticle; // 0xc8        
-        [[maybe_unused]] std::uint8_t pad_0xcc[0x154];
+        [[maybe_unused]] std::uint8_t pad_0xcc[0x184];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Gunslinger_DemonCarbine because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Gunslinger_DemonCarbine) == 0x220);
+    static_assert(sizeof(CCitadel_Modifier_Gunslinger_DemonCarbine) == 0x250);
 };

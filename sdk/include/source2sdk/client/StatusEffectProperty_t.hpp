@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 17
+    // Enumerator count: 19
     // Alignment: 4
     // Size: 0x4
     enum class StatusEffectProperty_t : std::uint32_t
@@ -45,7 +45,11 @@ namespace source2sdk::client
         EStatusEffect_Buff = 0xe,
         // MPropertyFriendlyName "Shows Petrify Status Effect in the Important Box"
         EStatusEffect_Petrify = 0xf,
+        // MPropertyFriendlyName "Shows Debuff Status Effect in the Important Box"
+        EStatusEffect_CustomDebuff = 0x10,
+        // MPropertyFriendlyName "Shows Unstoppable Status Effect in the Important Box"
+        EStatusEffect_Unstoppable = 0x11,
         // MPropertySuppressEnumerator
-        EStatusEffect_Count = 0x10,
+        EStatusEffect_Count = 0x12,
     };
 };

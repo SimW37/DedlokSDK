@@ -14,17 +14,17 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa98
+    // Size: 0xac0
     // Has VTable
     #pragma pack(push, 1)
     class CConstraintAnchor : public server::CBaseAnimGraph
     {
     public:
-        float m_massScale; // 0xa90        
-        [[maybe_unused]] std::uint8_t pad_0xa94[0x4];
+        float m_massScale; // 0xab8        
+        [[maybe_unused]] std::uint8_t pad_0xabc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CConstraintAnchor because it is not a standard-layout class
-    static_assert(sizeof(CConstraintAnchor) == 0xa98);
+    static_assert(sizeof(CConstraintAnchor) == 0xac0);
 };

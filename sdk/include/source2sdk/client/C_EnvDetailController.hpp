@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x518
+    // Size: 0x5e8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "float32 m_flFadeStartDist"
@@ -24,12 +24,12 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        float m_flFadeStartDist; // 0x510        
+        float m_flFadeStartDist; // 0x5e0        
         // metadata: MNetworkEnable
-        float m_flFadeEndDist; // 0x514        
+        float m_flFadeEndDist; // 0x5e4        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_EnvDetailController because it is not a standard-layout class
-    static_assert(sizeof(C_EnvDetailController) == 0x518);
+    static_assert(sizeof(C_EnvDetailController) == 0x5e8);
 };

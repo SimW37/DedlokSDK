@@ -21,7 +21,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x578
+    // Size: 0x588
     // Has VTable
     #pragma pack(push, 1)
     class CAmbientGeneric : public server::CPointEntity
@@ -40,7 +40,7 @@ namespace source2sdk::server
         // CHandle<server::CBaseEntity> m_hSoundSource;
         char m_hSoundSource[0x4]; // 0x568        
         CEntityIndex m_nSoundSourceEntIndex; // 0x56c        
-        [[maybe_unused]] std::uint8_t pad_0x570[0x8];
+        [[maybe_unused]] std::uint8_t pad_0x570[0x18];
         
         // Datamap fields:
         // void m_nGUID; // 0x570
@@ -60,5 +60,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAmbientGeneric because it is not a standard-layout class
-    static_assert(sizeof(CAmbientGeneric) == 0x578);
+    static_assert(sizeof(CAmbientGeneric) == 0x588);
 };

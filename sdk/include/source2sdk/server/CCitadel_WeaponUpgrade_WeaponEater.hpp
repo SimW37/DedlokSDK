@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc08
+    // Size: 0xcb0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "int m_nWeaponPower"
@@ -22,13 +22,13 @@ namespace source2sdk::server
     class CCitadel_WeaponUpgrade_WeaponEater : public server::CCitadel_Item
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb20[0xe0]; // 0xb20
+        [[maybe_unused]] std::uint8_t pad_0xba8[0x100]; // 0xba8
         // metadata: MNetworkEnable
-        int32_t m_nWeaponPower; // 0xc00        
-        [[maybe_unused]] std::uint8_t pad_0xc04[0x4];
+        int32_t m_nWeaponPower; // 0xca8        
+        [[maybe_unused]] std::uint8_t pad_0xcac[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_WeaponUpgrade_WeaponEater because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_WeaponUpgrade_WeaponEater) == 0xc08);
+    static_assert(sizeof(CCitadel_WeaponUpgrade_WeaponEater) == 0xcb0);
 };

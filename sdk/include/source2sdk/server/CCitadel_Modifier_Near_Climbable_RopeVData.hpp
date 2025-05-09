@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x660
+    // Size: 0x668
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -22,11 +22,11 @@ namespace source2sdk::server
     class CCitadel_Modifier_Near_Climbable_RopeVData : public server::CCitadelModifierVData
     {
     public:
-        float m_flEnableStateTime; // 0x658        
-        [[maybe_unused]] std::uint8_t pad_0x65c[0x4];
+        float m_flEnableStateTime; // 0x660        
+        [[maybe_unused]] std::uint8_t pad_0x664[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Near_Climbable_RopeVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Near_Climbable_RopeVData) == 0x660);
+    static_assert(sizeof(CCitadel_Modifier_Near_Climbable_RopeVData) == 0x668);
 };

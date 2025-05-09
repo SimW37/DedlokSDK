@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc08
+    // Size: 0xcd0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "Vector m_vecStartPos"
@@ -31,29 +31,30 @@ namespace source2sdk::server
     class CCitadel_Ability_FissureWall : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0xb8]; // 0xb00
+        [[maybe_unused]] std::uint8_t pad_0xba0[0xd0]; // 0xba0
         // metadata: MNetworkEnable
-        Vector m_vecStartPos; // 0xbb8        
+        Vector m_vecStartPos; // 0xc70        
         // metadata: MNetworkEnable
-        Vector m_vecPosition; // 0xbc4        
+        Vector m_vecPosition; // 0xc7c        
         // metadata: MNetworkEnable
-        Vector m_vecInitialPosition; // 0xbd0        
+        Vector m_vecInitialPosition; // 0xc88        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_CastTime; // 0xbdc        
+        entity2::GameTime_t m_CastTime; // 0xc94        
         // metadata: MNetworkEnable
-        Vector m_vecDirection; // 0xbe0        
+        Vector m_vecDirection; // 0xc98        
         // metadata: MNetworkEnable
-        Vector m_vecLeft; // 0xbec        
+        Vector m_vecLeft; // 0xca4        
         // metadata: MNetworkEnable
-        float m_Length; // 0xbf8        
-        [[maybe_unused]] std::uint8_t pad_0xbfc[0xa]; // 0xbfc
+        float m_Length; // 0xcb0        
+        [[maybe_unused]] std::uint8_t pad_0xcb4[0x16]; // 0xcb4
         // metadata: MNetworkEnable
-        bool m_bTraveling; // 0xc06        
+        bool m_bTraveling; // 0xcca        
         // metadata: MNetworkEnable
-        bool m_bPreview; // 0xc07        
+        bool m_bPreview; // 0xccb        
+        [[maybe_unused]] std::uint8_t pad_0xccc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_FissureWall because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_FissureWall) == 0xc08);
+    static_assert(sizeof(CCitadel_Ability_FissureWall) == 0xcd0);
 };

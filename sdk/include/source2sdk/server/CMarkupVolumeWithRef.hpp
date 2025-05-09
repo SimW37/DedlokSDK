@@ -14,20 +14,21 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x810
+    // Size: 0x838
     // Has VTable
     #pragma pack(push, 1)
     class CMarkupVolumeWithRef : public server::CMarkupVolumeTagged
     {
     public:
-        bool m_bUseRef; // 0x7f8        
-        [[maybe_unused]] std::uint8_t pad_0x7f9[0x3]; // 0x7f9
-        Vector m_vRefPos; // 0x7fc        
-        float m_flRefDot; // 0x808        
-        [[maybe_unused]] std::uint8_t pad_0x80c[0x4];
+        [[maybe_unused]] std::uint8_t pad_0x810[0x8]; // 0x810
+        bool m_bUseRef; // 0x818        
+        [[maybe_unused]] std::uint8_t pad_0x819[0x3]; // 0x819
+        Vector m_vRefPosEntitySpace; // 0x81c        
+        Vector m_vRefPosWorldSpace; // 0x828        
+        float m_flRefDot; // 0x834        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CMarkupVolumeWithRef because it is not a standard-layout class
-    static_assert(sizeof(CMarkupVolumeWithRef) == 0x810);
+    static_assert(sizeof(CMarkupVolumeWithRef) == 0x838);
 };

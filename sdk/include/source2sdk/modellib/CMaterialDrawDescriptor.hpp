@@ -1,4 +1,5 @@
 #pragma once
+#include "source2sdk/modellib/CMaterialDrawDescriptor__RigidMeshPart_t.hpp"
 #include "source2sdk/modellib/CRenderBufferBinding.hpp"
 #include "source2sdk/rendersystemdx11/RenderPrimitiveType_t.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeIMaterial2.hpp"
@@ -16,7 +17,7 @@ namespace source2sdk::modellib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0xd8
+    // Size: 0x100
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
@@ -32,18 +33,23 @@ namespace source2sdk::modellib
         uint32_t m_nFirstMeshlet; // 0x1c        
         uint32_t m_nAppliedIndexOffset; // 0x20        
         uint8_t m_nDepthVertexBufferIndex; // 0x24        
-        [[maybe_unused]] std::uint8_t pad_0x25[0x3]; // 0x25
-        rendersystemdx11::RenderPrimitiveType_t m_nPrimitiveType; // 0x28        
-        int32_t m_nBaseVertex; // 0x2c        
-        int32_t m_nVertexCount; // 0x30        
-        int32_t m_nStartIndex; // 0x34        
-        int32_t m_nIndexCount; // 0x38        
-        [[maybe_unused]] std::uint8_t pad_0x3c[0x64]; // 0x3c
-        modellib::CRenderBufferBinding m_indexBuffer; // 0xa0        
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x10]; // 0xc0
+        uint8_t m_nMeshletPackedIVBIndex; // 0x25        
+        [[maybe_unused]] std::uint8_t pad_0x26[0x2]; // 0x26
+        // m_rigidMeshParts has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CUtlLeanVector<modellib::CMaterialDrawDescriptor__RigidMeshPart_t> m_rigidMeshParts;
+        char m_rigidMeshParts[0x10]; // 0x28        
+        rendersystemdx11::RenderPrimitiveType_t m_nPrimitiveType; // 0x38        
+        int32_t m_nBaseVertex; // 0x3c        
+        int32_t m_nVertexCount; // 0x40        
+        int32_t m_nStartIndex; // 0x44        
+        int32_t m_nIndexCount; // 0x48        
+        [[maybe_unused]] std::uint8_t pad_0x4c[0x64]; // 0x4c
+        modellib::CRenderBufferBinding m_indexBuffer; // 0xb0        
+        modellib::CRenderBufferBinding m_meshletPackedIVB; // 0xd0        
+        [[maybe_unused]] std::uint8_t pad_0xf0[0x8]; // 0xf0
         // m_material has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2> m_material;
-        char m_material[0x8]; // 0xd0        
+        char m_material[0x8]; // 0xf8        
     };
     #pragma pack(pop)
     
@@ -54,13 +60,16 @@ namespace source2sdk::modellib
     static_assert(offsetof(CMaterialDrawDescriptor, m_nFirstMeshlet) == 0x1c);
     static_assert(offsetof(CMaterialDrawDescriptor, m_nAppliedIndexOffset) == 0x20);
     static_assert(offsetof(CMaterialDrawDescriptor, m_nDepthVertexBufferIndex) == 0x24);
-    static_assert(offsetof(CMaterialDrawDescriptor, m_nPrimitiveType) == 0x28);
-    static_assert(offsetof(CMaterialDrawDescriptor, m_nBaseVertex) == 0x2c);
-    static_assert(offsetof(CMaterialDrawDescriptor, m_nVertexCount) == 0x30);
-    static_assert(offsetof(CMaterialDrawDescriptor, m_nStartIndex) == 0x34);
-    static_assert(offsetof(CMaterialDrawDescriptor, m_nIndexCount) == 0x38);
-    static_assert(offsetof(CMaterialDrawDescriptor, m_indexBuffer) == 0xa0);
-    static_assert(offsetof(CMaterialDrawDescriptor, m_material) == 0xd0);
+    static_assert(offsetof(CMaterialDrawDescriptor, m_nMeshletPackedIVBIndex) == 0x25);
+    static_assert(offsetof(CMaterialDrawDescriptor, m_rigidMeshParts) == 0x28);
+    static_assert(offsetof(CMaterialDrawDescriptor, m_nPrimitiveType) == 0x38);
+    static_assert(offsetof(CMaterialDrawDescriptor, m_nBaseVertex) == 0x3c);
+    static_assert(offsetof(CMaterialDrawDescriptor, m_nVertexCount) == 0x40);
+    static_assert(offsetof(CMaterialDrawDescriptor, m_nStartIndex) == 0x44);
+    static_assert(offsetof(CMaterialDrawDescriptor, m_nIndexCount) == 0x48);
+    static_assert(offsetof(CMaterialDrawDescriptor, m_indexBuffer) == 0xb0);
+    static_assert(offsetof(CMaterialDrawDescriptor, m_meshletPackedIVB) == 0xd0);
+    static_assert(offsetof(CMaterialDrawDescriptor, m_material) == 0xf8);
     
-    static_assert(sizeof(CMaterialDrawDescriptor) == 0xd8);
+    static_assert(sizeof(CMaterialDrawDescriptor) == 0x100);
 };

@@ -20,7 +20,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x4
     // Standard-layout class: false
-    // Size: 0xa8
+    // Size: 0x198
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CHandle< CBaseEntity> m_hOverrideObserverTarget"
@@ -53,15 +53,15 @@ namespace source2sdk::client
         // metadata: MNetworkEncoder "qangle"
         // metadata: MNetworkChangeCallback "OnTargetCameraAnglesChanged"
         QAngle m_angTargetCamera; // 0x78        
-        [[maybe_unused]] std::uint8_t pad_0x84[0xc]; // 0x84
+        [[maybe_unused]] std::uint8_t pad_0x84[0x84]; // 0x84
         // metadata: MNetworkEnable
         // metadata: MNetworkEncoder "coord"
         // metadata: MNetworkChangeCallback "OnTargetCameraPositionChanged"
-        Vector m_vTargetCameraPos; // 0x90        
-        [[maybe_unused]] std::uint8_t pad_0x9c[0xc];
+        Vector m_vTargetCameraPos; // 0x108        
+        [[maybe_unused]] std::uint8_t pad_0x114[0x84];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelPlayer_ObserverServices because it is not a standard-layout class
-    static_assert(sizeof(CCitadelPlayer_ObserverServices) == 0xa8);
+    static_assert(sizeof(CCitadelPlayer_ObserverServices) == 0x198);
 };

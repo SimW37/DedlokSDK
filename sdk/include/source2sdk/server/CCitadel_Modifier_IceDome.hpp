@@ -26,7 +26,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x288
+    // Size: 0x2b0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_IceDome : public server::CCitadelModifier
@@ -43,12 +43,12 @@ namespace source2sdk::server
         char m_hEnemyAura[0x4]; // 0xc8        
         client::ParticleIndex_t m_nParticleIndex; // 0xcc        
         entity2::GameTime_t m_flStartTime; // 0xd0        
-        [[maybe_unused]] std::uint8_t pad_0xd4[0xe4]; // 0xd4
-        Vector m_vOrigin; // 0x1b8        
-        [[maybe_unused]] std::uint8_t pad_0x1c4[0xc4];
+        [[maybe_unused]] std::uint8_t pad_0xd4[0x104]; // 0xd4
+        Vector m_vOrigin; // 0x1d8        
+        [[maybe_unused]] std::uint8_t pad_0x1e4[0xcc];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_IceDome because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_IceDome) == 0x288);
+    static_assert(sizeof(CCitadel_Modifier_IceDome) == 0x2b0);
 };

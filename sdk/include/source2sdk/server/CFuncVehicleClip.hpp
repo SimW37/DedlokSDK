@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x7b8
+    // Size: 0x7d0
     // Has VTable
     #pragma pack(push, 1)
     class CFuncVehicleClip : public server::CBaseModelEntity
@@ -23,9 +23,11 @@ namespace source2sdk::server
         // Datamap fields:
         // void InputEnable; // 0x0
         // void InputDisable; // 0x0
+        // void InputEnable; // 0x0
+        // void InputDisable; // 0x0
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CFuncVehicleClip) == 0x7b8);
+    static_assert(sizeof(CFuncVehicleClip) == 0x7d0);
 };

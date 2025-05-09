@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x598
+    // Size: 0x5a8
     // Has VTable
     #pragma pack(push, 1)
     class CSoundEventEntity : public server::CBaseEntity
@@ -38,9 +38,10 @@ namespace source2sdk::server
         float m_flClientCullRadius; // 0x550        
         [[maybe_unused]] std::uint8_t pad_0x554[0x2c]; // 0x554
         CUtlSymbolLarge m_iszSoundName; // 0x580        
-        [[maybe_unused]] std::uint8_t pad_0x588[0x8]; // 0x588
-        CEntityHandle m_hSource; // 0x590        
-        int32_t m_nEntityIndexSelection; // 0x594        
+        [[maybe_unused]] std::uint8_t pad_0x588[0x14]; // 0x588
+        CEntityHandle m_hSource; // 0x59c        
+        int32_t m_nEntityIndexSelection; // 0x5a0        
+        [[maybe_unused]] std::uint8_t pad_0x5a4[0x4];
         
         // Datamap fields:
         // CUtlSymbolLarge InputSetSoundName; // 0x0
@@ -55,5 +56,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSoundEventEntity because it is not a standard-layout class
-    static_assert(sizeof(CSoundEventEntity) == 0x598);
+    static_assert(sizeof(CSoundEventEntity) == 0x5a8);
 };

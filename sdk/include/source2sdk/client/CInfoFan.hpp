@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x568
+    // Size: 0x638
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "float m_fFanForceMaxRadius"
@@ -25,19 +25,19 @@ namespace source2sdk::client
     class CInfoFan : public client::C_PointEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x510[0x40]; // 0x510
+        [[maybe_unused]] std::uint8_t pad_0x5e0[0x40]; // 0x5e0
         // metadata: MNetworkEnable
-        float m_fFanForceMaxRadius; // 0x550        
+        float m_fFanForceMaxRadius; // 0x620        
         // metadata: MNetworkEnable
-        float m_fFanForceMinRadius; // 0x554        
+        float m_fFanForceMinRadius; // 0x624        
         // metadata: MNetworkEnable
-        float m_flCurveDistRange; // 0x558        
-        [[maybe_unused]] std::uint8_t pad_0x55c[0x4]; // 0x55c
+        float m_flCurveDistRange; // 0x628        
+        [[maybe_unused]] std::uint8_t pad_0x62c[0x4]; // 0x62c
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_FanForceCurveString; // 0x560        
+        CUtlSymbolLarge m_FanForceCurveString; // 0x630        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CInfoFan because it is not a standard-layout class
-    static_assert(sizeof(CInfoFan) == 0x568);
+    static_assert(sizeof(CInfoFan) == 0x638);
 };

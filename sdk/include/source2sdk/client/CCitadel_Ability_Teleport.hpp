@@ -14,20 +14,20 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc78
+    // Size: 0xde8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Teleport : public client::C_CitadelBaseAbility
     {
     public:
-        bool m_bTeleportingToTarget; // 0xc50        
-        [[maybe_unused]] std::uint8_t pad_0xc51[0x3]; // 0xc51
-        Vector m_vTargetPosition; // 0xc54        
-        QAngle m_vTargetAngles; // 0xc60        
-        [[maybe_unused]] std::uint8_t pad_0xc6c[0xc];
+        bool m_bTeleportingToTarget; // 0xdc0        
+        [[maybe_unused]] std::uint8_t pad_0xdc1[0x3]; // 0xdc1
+        Vector m_vTargetPosition; // 0xdc4        
+        QAngle m_vTargetAngles; // 0xdd0        
+        [[maybe_unused]] std::uint8_t pad_0xddc[0xc];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Teleport because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Teleport) == 0xc78);
+    static_assert(sizeof(CCitadel_Ability_Teleport) == 0xde8);
 };

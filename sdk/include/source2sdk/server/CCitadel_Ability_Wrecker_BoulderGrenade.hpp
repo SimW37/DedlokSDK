@@ -20,7 +20,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc70
+    // Size: 0xd40
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Wrecker_BoulderGrenade : public server::CCitadelBaseAbility
@@ -28,13 +28,13 @@ namespace source2sdk::server
     public:
         // m_hHitTroopers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CHandle<server::CBaseEntity>> m_hHitTroopers;
-        char m_hHitTroopers[0x18]; // 0xb00        
-        [[maybe_unused]] std::uint8_t pad_0xb18[0x4]; // 0xb18
-        client::ParticleIndex_t m_nBallParticle; // 0xb1c        
-        [[maybe_unused]] std::uint8_t pad_0xb20[0x150];
+        char m_hHitTroopers[0x18]; // 0xba0        
+        [[maybe_unused]] std::uint8_t pad_0xbb8[0x4]; // 0xbb8
+        client::ParticleIndex_t m_nBallParticle; // 0xbbc        
+        [[maybe_unused]] std::uint8_t pad_0xbc0[0x180];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Wrecker_BoulderGrenade because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Wrecker_BoulderGrenade) == 0xc70);
+    static_assert(sizeof(CCitadel_Ability_Wrecker_BoulderGrenade) == 0xd40);
 };

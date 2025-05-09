@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x930
+    // Size: 0x938
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,16 +23,16 @@ namespace source2sdk::server
     {
     public:
         // metadata: MPropertyStartGroup "+Properties"
-        float m_flMaxCameraAngleForSeeing; // 0x920        
+        float m_flMaxCameraAngleForSeeing; // 0x928        
         // metadata: MPropertyDescription "Max distance a player can look at Fathom to reveal him"
-        float m_flMaxDistanceForSeeing; // 0x924        
+        float m_flMaxDistanceForSeeing; // 0x92c        
         // metadata: MPropertyDescription "Visual bias on how the invis is applied"
-        float m_flInvisBias; // 0x928        
+        float m_flInvisBias; // 0x930        
         // metadata: MPropertyDescription "How long a player needs to look at Fathom before the invis even starts to reveal"
-        float m_flSpottedMinTimeToStart; // 0x92c        
+        float m_flSpottedMinTimeToStart; // 0x934        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_LurkersAmbush_InvisVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_LurkersAmbush_InvisVData) == 0x930);
+    static_assert(sizeof(CCitadel_Modifier_LurkersAmbush_InvisVData) == 0x938);
 };

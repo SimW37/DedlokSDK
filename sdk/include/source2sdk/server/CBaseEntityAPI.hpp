@@ -13,18 +13,19 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x1
     // Standard-layout class: true
-    // Size: 0x1
-    // Has Trivial Constructor
+    // Size: 0x8
     // Has Trivial Destructor
     // 
-    // static metadata: MPulseProvideFeatureTag "1"
     // static metadata: MPulseLibraryBindings
+    // static metadata: MPulseProvideFeatureTag "1"
+    // static metadata: MPulseDomainHookInfo
     #pragma pack(push, 1)
     class CBaseEntityAPI
     {
     public:
+        [[maybe_unused]] std::uint8_t pad_0x00[0x8];
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CBaseEntityAPI) == 0x1);
+    static_assert(sizeof(CBaseEntityAPI) == 0x8);
 };

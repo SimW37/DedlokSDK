@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1d0
+    // Size: 0x470
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Destroyable_Building_GraphController : public client::CBaseAnimGraphAnimGraphController
@@ -22,31 +22,31 @@ namespace source2sdk::client
     public:
         // m_bHitTrigger has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<bool> m_bHitTrigger;
-        char m_bHitTrigger[0x20]; // 0xc8        
+        char m_bHitTrigger[0x20]; // 0x368        
         // m_eState has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<char*> m_eState;
-        char m_eState[0x28]; // 0xe8        
+        char m_eState[0x28]; // 0x388        
         // m_flHealth has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<float> m_flHealth;
-        char m_flHealth[0x20]; // 0x110        
+        char m_flHealth[0x20]; // 0x3b0        
         // m_bActive has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<bool> m_bActive;
-        char m_bActive[0x20]; // 0x130        
+        char m_bActive[0x20]; // 0x3d0        
         // m_flHealthPercent has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<float> m_flHealthPercent;
-        char m_flHealthPercent[0x20]; // 0x150        
+        char m_flHealthPercent[0x20]; // 0x3f0        
         // m_bVulnerable has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<bool> m_bVulnerable;
-        char m_bVulnerable[0x20]; // 0x170        
+        char m_bVulnerable[0x20]; // 0x410        
         // m_bDestroyed has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<bool> m_bDestroyed;
-        char m_bDestroyed[0x20]; // 0x190        
+        char m_bDestroyed[0x20]; // 0x430        
         // m_flExposedDurationFraction has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<float> m_flExposedDurationFraction;
-        char m_flExposedDurationFraction[0x20]; // 0x1b0        
+        char m_flExposedDurationFraction[0x20]; // 0x450        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Destroyable_Building_GraphController because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Destroyable_Building_GraphController) == 0x1d0);
+    static_assert(sizeof(CCitadel_Destroyable_Building_GraphController) == 0x470);
 };

@@ -15,23 +15,23 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb68
+    // Size: 0xb90
     // Has VTable
     #pragma pack(push, 1)
     class CItem : public server::CBaseAnimGraph
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xa90[0x8]; // 0xa90
-        entity2::CEntityIOOutput m_OnPlayerTouch; // 0xa98        
-        entity2::CEntityIOOutput m_OnPlayerPickup; // 0xac0        
-        bool m_bActivateWhenAtRest; // 0xae8        
-        [[maybe_unused]] std::uint8_t pad_0xae9[0x7]; // 0xae9
-        entity2::CEntityIOOutput m_OnCacheInteraction; // 0xaf0        
-        entity2::CEntityIOOutput m_OnGlovePulled; // 0xb18        
-        Vector m_vOriginalSpawnOrigin; // 0xb40        
-        QAngle m_vOriginalSpawnAngles; // 0xb4c        
-        bool m_bPhysStartAsleep; // 0xb58        
-        [[maybe_unused]] std::uint8_t pad_0xb59[0xf];
+        [[maybe_unused]] std::uint8_t pad_0xab8[0x8]; // 0xab8
+        entity2::CEntityIOOutput m_OnPlayerTouch; // 0xac0        
+        entity2::CEntityIOOutput m_OnPlayerPickup; // 0xae8        
+        bool m_bActivateWhenAtRest; // 0xb10        
+        [[maybe_unused]] std::uint8_t pad_0xb11[0x7]; // 0xb11
+        entity2::CEntityIOOutput m_OnCacheInteraction; // 0xb18        
+        entity2::CEntityIOOutput m_OnGlovePulled; // 0xb40        
+        Vector m_vOriginalSpawnOrigin; // 0xb68        
+        QAngle m_vOriginalSpawnAngles; // 0xb74        
+        bool m_bPhysStartAsleep; // 0xb80        
+        [[maybe_unused]] std::uint8_t pad_0xb81[0xf];
         
         // Datamap fields:
         // void CItemItemTouch; // 0x0
@@ -41,5 +41,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CItem because it is not a standard-layout class
-    static_assert(sizeof(CItem) == 0xb68);
+    static_assert(sizeof(CItem) == 0xb90);
 };

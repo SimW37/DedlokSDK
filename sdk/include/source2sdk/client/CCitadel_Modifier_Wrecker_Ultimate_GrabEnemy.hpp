@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x220
+    // Size: 0x250
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy : public client::CCitadelModifier
@@ -22,10 +22,10 @@ namespace source2sdk::client
     public:
         Vector m_vHoldOffset; // 0xc0        
         float m_flLastTouchTime; // 0xcc        
-        [[maybe_unused]] std::uint8_t pad_0xd0[0x150];
+        [[maybe_unused]] std::uint8_t pad_0xd0[0x180];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy) == 0x220);
+    static_assert(sizeof(CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy) == 0x250);
 };

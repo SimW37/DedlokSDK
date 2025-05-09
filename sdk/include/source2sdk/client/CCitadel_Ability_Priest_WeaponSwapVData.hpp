@@ -1,0 +1,48 @@
+#pragma once
+#include "source2sdk/client/CCitadelModifier.hpp"
+#include "source2sdk/client/CitadelAbilityVData.hpp"
+#include "source2sdk/client/CitadelCameraOperationsSequence_t.hpp"
+#include "source2sdk/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
+
+// /////////////////////////////////////////////////////////////
+// Module: client
+// Created using source2gen - github.com/neverlosecc/source2gen
+// /////////////////////////////////////////////////////////////
+
+namespace source2sdk::client
+{
+    // Registered alignment: 0x8
+    // Alignment: 0x8
+    // Standard-layout class: false
+    // Size: 0x16b8
+    // Has VTable
+    // 
+    // static metadata: MGetKV3ClassDefaults
+    #pragma pack(push, 1)
+    class CCitadel_Ability_Priest_WeaponSwapVData : public client::CitadelAbilityVData
+    {
+    public:
+        // metadata: MPropertyStartGroup "Modifiers"
+        // m_SelfModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CEmbeddedSubclass<client::CCitadelModifier> m_SelfModifier;
+        char m_SelfModifier[0x10]; // 0x15f0        
+        // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CEmbeddedSubclass<client::CCitadelModifier> m_SlowModifier;
+        char m_SlowModifier[0x10]; // 0x1600        
+        // metadata: MPropertyStartGroup "Gameplay"
+        // m_StartingWeaponAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CSubclassName<4> m_StartingWeaponAbility;
+        char m_StartingWeaponAbility[0x10]; // 0x1610        
+        // m_NewWeaponAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CSubclassName<4> m_NewWeaponAbility;
+        char m_NewWeaponAbility[0x10]; // 0x1620        
+        // metadata: MPropertyStartGroup "Camera"
+        client::CitadelCameraOperationsSequence_t m_cameraSequenceSwapWeapons; // 0x1630        
+    };
+    #pragma pack(pop)
+    
+    // Cannot assert offsets of fields in CCitadel_Ability_Priest_WeaponSwapVData because it is not a standard-layout class
+    static_assert(sizeof(CCitadel_Ability_Priest_WeaponSwapVData) == 0x16b8);
+};

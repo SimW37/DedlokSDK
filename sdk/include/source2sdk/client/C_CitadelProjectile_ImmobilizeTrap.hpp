@@ -14,17 +14,17 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xba8
+    // Size: 0xe28
     // Has VTable
     #pragma pack(push, 1)
     class C_CitadelProjectile_ImmobilizeTrap : public client::C_CitadelProjectile
     {
     public:
-        bool m_bShouldDraw; // 0x890        
-        [[maybe_unused]] std::uint8_t pad_0x891[0x317];
+        bool m_bShouldDraw; // 0xaa0        
+        [[maybe_unused]] std::uint8_t pad_0xaa1[0x387];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_CitadelProjectile_ImmobilizeTrap because it is not a standard-layout class
-    static_assert(sizeof(C_CitadelProjectile_ImmobilizeTrap) == 0xba8);
+    static_assert(sizeof(C_CitadelProjectile_ImmobilizeTrap) == 0xe28);
 };

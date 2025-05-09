@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb20
+    // Size: 0xcd0
     // Has VTable
     #pragma pack(push, 1)
     class C_ItemAmmo : public client::CBaseAnimGraph
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0x20];
+        [[maybe_unused]] std::uint8_t pad_0xcb0[0x20];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(C_ItemAmmo) == 0xb20);
+    static_assert(sizeof(C_ItemAmmo) == 0xcd0);
 };

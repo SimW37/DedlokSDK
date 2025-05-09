@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x17c0
+    // Size: 0x17e8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,26 +27,26 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_MeleeSwingParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle;
-        char m_MeleeSwingParticle[0xe0]; // 0x15c8        
+        char m_MeleeSwingParticle[0xe0]; // 0x15f0        
         // m_MeleeImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeImpactParticle;
-        char m_MeleeImpactParticle[0xe0]; // 0x16a8        
+        char m_MeleeImpactParticle[0xe0]; // 0x16d0        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_SelfModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_SelfModifier;
-        char m_SelfModifier[0x10]; // 0x1788        
+        char m_SelfModifier[0x10]; // 0x17b0        
         // m_TargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_TargetModifier;
-        char m_TargetModifier[0x10]; // 0x1798        
+        char m_TargetModifier[0x10]; // 0x17c0        
         // m_KillCheckModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_KillCheckModifier;
-        char m_KillCheckModifier[0x10]; // 0x17a8        
+        char m_KillCheckModifier[0x10]; // 0x17d0        
         // metadata: MPropertyStartGroup "Gameplay"
-        float m_flKillCheckWindow; // 0x17b8        
-        [[maybe_unused]] std::uint8_t pad_0x17bc[0x4];
+        float m_flKillCheckWindow; // 0x17e0        
+        float m_flDamageInterval; // 0x17e4        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_UltComboVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_UltComboVData) == 0x17c0);
+    static_assert(sizeof(CCitadel_Ability_UltComboVData) == 0x17e8);
 };

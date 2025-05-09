@@ -47,7 +47,6 @@ namespace source2sdk::server
     // static metadata: MNetworkVarNames "float m_flDefaultDrawDistance"
     // static metadata: MNetworkVarNames "bool m_bStartDisabled"
     // static metadata: MNetworkVarNames "bool m_bEnableIndirect"
-    // static metadata: MNetworkVarNames "bool m_bIndirectUseLPVs"
     // static metadata: MNetworkVarNames "bool m_bIsMaster"
     // static metadata: MNetworkVarNames "HRenderTextureStrong m_hFogIndirectTexture"
     // static metadata: MNetworkVarNames "int m_nForceRefreshCount"
@@ -116,9 +115,8 @@ namespace source2sdk::server
         // metadata: MNetworkEnable
         bool m_bEnableIndirect; // 0x555        
         // metadata: MNetworkEnable
-        bool m_bIndirectUseLPVs; // 0x556        
-        // metadata: MNetworkEnable
-        bool m_bIsMaster; // 0x557        
+        bool m_bIsMaster; // 0x556        
+        [[maybe_unused]] std::uint8_t pad_0x557[0x1]; // 0x557
         // metadata: MNetworkEnable
         // m_hFogIndirectTexture has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase> m_hFogIndirectTexture;

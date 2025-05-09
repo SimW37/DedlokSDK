@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc20
+    // Size: 0xce8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bInFlight"
@@ -23,13 +23,13 @@ namespace source2sdk::server
     class CCitadel_Ability_Fathom_Breach : public server::CCitadelBaseAbility
     {
     public:
-        client::ParticleIndex_t m_nRollFXIndex; // 0xb00        
+        client::ParticleIndex_t m_nRollFXIndex; // 0xba0        
         // metadata: MNetworkEnable
-        bool m_bInFlight; // 0xb04        
-        [[maybe_unused]] std::uint8_t pad_0xb05[0x11b];
+        bool m_bInFlight; // 0xba4        
+        [[maybe_unused]] std::uint8_t pad_0xba5[0x143];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Fathom_Breach because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Fathom_Breach) == 0xc20);
+    static_assert(sizeof(CCitadel_Ability_Fathom_Breach) == 0xce8);
 };

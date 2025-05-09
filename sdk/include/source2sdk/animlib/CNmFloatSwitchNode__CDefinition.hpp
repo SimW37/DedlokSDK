@@ -14,7 +14,7 @@ namespace source2sdk::animlib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x18
+    // Size: 0x20
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -25,10 +25,12 @@ namespace source2sdk::animlib
         int16_t m_nSwitchValueNodeIdx; // 0x10        
         int16_t m_nTrueValueNodeIdx; // 0x12        
         int16_t m_nFalseValueNodeIdx; // 0x14        
-        [[maybe_unused]] std::uint8_t pad_0x16[0x2];
+        [[maybe_unused]] std::uint8_t pad_0x16[0x2]; // 0x16
+        float m_flFalseValue; // 0x18        
+        float m_flTrueValue; // 0x1c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CNmFloatSwitchNode::CDefinition because it is not a standard-layout class
-    static_assert(sizeof(CNmFloatSwitchNode__CDefinition) == 0x18);
+    static_assert(sizeof(CNmFloatSwitchNode__CDefinition) == 0x20);
 };

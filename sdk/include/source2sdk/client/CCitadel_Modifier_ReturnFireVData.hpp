@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x918
+    // Size: 0x920
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,19 +26,19 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_AttackerHitFx has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackerHitFx;
-        char m_AttackerHitFx[0xe0]; // 0x658        
+        char m_AttackerHitFx[0xe0]; // 0x660        
         // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-        char m_ImpactParticle[0xe0]; // 0x738        
+        char m_ImpactParticle[0xe0]; // 0x740        
         // m_SpiritReflectTracerReplacement has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpiritReflectTracerReplacement;
-        char m_SpiritReflectTracerReplacement[0xe0]; // 0x818        
+        char m_SpiritReflectTracerReplacement[0xe0]; // 0x820        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strAttackerHitSound; // 0x8f8        
-        CSoundEventName m_strHitProcSound; // 0x908        
+        CSoundEventName m_strAttackerHitSound; // 0x900        
+        CSoundEventName m_strHitProcSound; // 0x910        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_ReturnFireVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_ReturnFireVData) == 0x918);
+    static_assert(sizeof(CCitadel_Modifier_ReturnFireVData) == 0x920);
 };

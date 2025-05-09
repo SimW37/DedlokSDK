@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xe0
+    // Size: 0x380
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_MedicHeal_GraphController : public client::CCitadelBaseAbilityGraphController
@@ -22,10 +22,10 @@ namespace source2sdk::client
     public:
         // m_bMedicHeal has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraph1ParamOptionalRef<bool> m_bMedicHeal;
-        char m_bMedicHeal[0x18]; // 0xc8        
+        char m_bMedicHeal[0x18]; // 0x368        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_MedicHeal_GraphController because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_MedicHeal_GraphController) == 0xe0);
+    static_assert(sizeof(CCitadel_Ability_MedicHeal_GraphController) == 0x380);
 };

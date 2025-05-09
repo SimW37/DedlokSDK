@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x668
+    // Size: 0x670
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,13 +23,13 @@ namespace source2sdk::client
     {
     public:
         // metadata: MPropertyStartGroup "Gameplay"
-        float m_flForwardOffset; // 0x658        
-        float m_flVerticalOffset; // 0x65c        
-        float m_flDragDistance; // 0x660        
-        float m_flForceDistScale; // 0x664        
+        float m_flForwardOffset; // 0x660        
+        float m_flVerticalOffset; // 0x664        
+        float m_flDragDistance; // 0x668        
+        float m_flForceDistScale; // 0x66c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_DragEnemyVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_DragEnemyVData) == 0x668);
+    static_assert(sizeof(CCitadel_Modifier_DragEnemyVData) == 0x670);
 };

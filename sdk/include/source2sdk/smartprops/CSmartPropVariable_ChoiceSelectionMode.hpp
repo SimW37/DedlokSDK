@@ -15,7 +15,7 @@ namespace source2sdk::smartprops
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x30
+    // Size: 0x40
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,11 +26,11 @@ namespace source2sdk::smartprops
     class CSmartPropVariable_ChoiceSelectionMode : public smartprops::CSmartPropVariable
     {
     public:
-        smartprops::SmartPropChoiceSelectionMode_t m_DefaultValue; // 0x28        
-        [[maybe_unused]] std::uint8_t pad_0x2c[0x4];
+        smartprops::SmartPropChoiceSelectionMode_t m_DefaultValue; // 0x38        
+        [[maybe_unused]] std::uint8_t pad_0x3c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSmartPropVariable_ChoiceSelectionMode because it is not a standard-layout class
-    static_assert(sizeof(CSmartPropVariable_ChoiceSelectionMode) == 0x30);
+    static_assert(sizeof(CSmartPropVariable_ChoiceSelectionMode) == 0x40);
 };

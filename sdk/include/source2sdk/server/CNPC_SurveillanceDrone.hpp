@@ -14,22 +14,22 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1948
+    // Size: 0x1a68
     // Has VTable
     #pragma pack(push, 1)
     class CNPC_SurveillanceDrone : public server::CNPC_FlyingDrone
     {
     public:
-        int32_t m_iMinionHealth; // 0x18e8        
-        float m_flLifetime; // 0x18ec        
-        [[maybe_unused]] std::uint8_t pad_0x18f0[0xc]; // 0x18f0
-        Vector m_vecHome; // 0x18fc        
-        [[maybe_unused]] std::uint8_t pad_0x1908[0x10]; // 0x1908
-        int32_t m_nAbilityLevel; // 0x1918        
-        [[maybe_unused]] std::uint8_t pad_0x191c[0x2c];
+        int32_t m_iMinionHealth; // 0x1a08        
+        float m_flLifetime; // 0x1a0c        
+        [[maybe_unused]] std::uint8_t pad_0x1a10[0xc]; // 0x1a10
+        Vector m_vecHome; // 0x1a1c        
+        [[maybe_unused]] std::uint8_t pad_0x1a28[0x10]; // 0x1a28
+        int32_t m_nAbilityLevel; // 0x1a38        
+        [[maybe_unused]] std::uint8_t pad_0x1a3c[0x2c];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CNPC_SurveillanceDrone because it is not a standard-layout class
-    static_assert(sizeof(CNPC_SurveillanceDrone) == 0x1948);
+    static_assert(sizeof(CNPC_SurveillanceDrone) == 0x1a68);
 };

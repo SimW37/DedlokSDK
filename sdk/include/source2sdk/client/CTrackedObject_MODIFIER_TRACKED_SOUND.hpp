@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x10
+    // Size: 0x20
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -24,9 +24,10 @@ namespace source2sdk::client
     {
     public:
         client::ModifierTrackedSound_t m_objectData; // 0x8        
+        [[maybe_unused]] std::uint8_t pad_0x1c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTrackedObject_MODIFIER_TRACKED_SOUND because it is not a standard-layout class
-    static_assert(sizeof(CTrackedObject_MODIFIER_TRACKED_SOUND) == 0x10);
+    static_assert(sizeof(CTrackedObject_MODIFIER_TRACKED_SOUND) == 0x20);
 };

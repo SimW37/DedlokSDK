@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xee0
+    // Size: 0x10a8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "Vector m_vStrikeVel"
@@ -25,21 +25,21 @@ namespace source2sdk::client
     class CCitadel_Ability_LashDownStrike : public client::C_CitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc50[0xa8]; // 0xc50
-        entity2::GameTime_t m_ImpactTime; // 0xcf8        
-        Vector m_vDamagePos; // 0xcfc        
-        [[maybe_unused]] std::uint8_t pad_0xd08[0x4]; // 0xd08
-        client::ParticleIndex_t m_PreviewEffect; // 0xd0c        
-        [[maybe_unused]] std::uint8_t pad_0xd10[0x1c0]; // 0xd10
+        [[maybe_unused]] std::uint8_t pad_0xdc0[0xc0]; // 0xdc0
+        entity2::GameTime_t m_ImpactTime; // 0xe80        
+        Vector m_vDamagePos; // 0xe84        
+        [[maybe_unused]] std::uint8_t pad_0xe90[0x4]; // 0xe90
+        client::ParticleIndex_t m_PreviewEffect; // 0xe94        
+        [[maybe_unused]] std::uint8_t pad_0xe98[0x200]; // 0xe98
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        Vector m_vStrikeVel; // 0xed0        
+        Vector m_vStrikeVel; // 0x1098        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        float m_flStartHeight; // 0xedc        
+        float m_flStartHeight; // 0x10a4        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_LashDownStrike because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_LashDownStrike) == 0xee0);
+    static_assert(sizeof(CCitadel_Ability_LashDownStrike) == 0x10a8);
 };

@@ -21,7 +21,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xd30
+    // Size: 0xd48
     // Has VTable
     // 
     // static metadata: MNetworkIncludeByUserGroup "Origin"
@@ -51,48 +51,48 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        char m_szSnapshotFileName[512]; // 0x7b8        
+        char m_szSnapshotFileName[512]; // 0x7d0        
         // metadata: MNetworkEnable
-        bool m_bActive; // 0x9b8        
+        bool m_bActive; // 0x9d0        
         // metadata: MNetworkEnable
-        bool m_bFrozen; // 0x9b9        
-        [[maybe_unused]] std::uint8_t pad_0x9ba[0x2]; // 0x9ba
+        bool m_bFrozen; // 0x9d1        
+        [[maybe_unused]] std::uint8_t pad_0x9d2[0x2]; // 0x9d2
         // metadata: MNetworkEnable
-        float m_flFreezeTransitionDuration; // 0x9bc        
+        float m_flFreezeTransitionDuration; // 0x9d4        
         // metadata: MNetworkEnable
-        int32_t m_nStopType; // 0x9c0        
+        int32_t m_nStopType; // 0x9d8        
         // metadata: MNetworkEnable
-        bool m_bAnimateDuringGameplayPause; // 0x9c4        
-        [[maybe_unused]] std::uint8_t pad_0x9c5[0x3]; // 0x9c5
+        bool m_bAnimateDuringGameplayPause; // 0x9dc        
+        [[maybe_unused]] std::uint8_t pad_0x9dd[0x3]; // 0x9dd
         // metadata: MNetworkEnable
         // m_iEffectIndex has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEffectIndex;
-        char m_iEffectIndex[0x8]; // 0x9c8        
+        char m_iEffectIndex[0x8]; // 0x9e0        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flStartTime; // 0x9d0        
+        entity2::GameTime_t m_flStartTime; // 0x9e8        
         // metadata: MNetworkEnable
-        float m_flPreSimTime; // 0x9d4        
+        float m_flPreSimTime; // 0x9ec        
         // metadata: MNetworkEnable
-        Vector m_vServerControlPoints[4]; // 0x9d8        
+        Vector m_vServerControlPoints[4]; // 0x9f0        
         // metadata: MNetworkEnable
-        uint8_t m_iServerControlPointAssignments[4]; // 0xa08        
+        uint8_t m_iServerControlPointAssignments[4]; // 0xa20        
         // metadata: MNetworkEnable
         // m_hControlPointEnts has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hControlPointEnts[64];
-        char m_hControlPointEnts[0x100]; // 0xa0c        
+        char m_hControlPointEnts[0x100]; // 0xa24        
         // metadata: MNetworkEnable
-        bool m_bNoSave; // 0xb0c        
+        bool m_bNoSave; // 0xb24        
         // metadata: MNetworkEnable
-        bool m_bNoFreeze; // 0xb0d        
+        bool m_bNoFreeze; // 0xb25        
         // metadata: MNetworkEnable
-        bool m_bNoRamp; // 0xb0e        
-        bool m_bStartActive; // 0xb0f        
-        CUtlSymbolLarge m_iszEffectName; // 0xb10        
-        CUtlSymbolLarge m_iszControlPointNames[64]; // 0xb18        
-        int32_t m_nDataCP; // 0xd18        
-        Vector m_vecDataCPValue; // 0xd1c        
-        int32_t m_nTintCP; // 0xd28        
-        Color m_clrTint; // 0xd2c        
+        bool m_bNoRamp; // 0xb26        
+        bool m_bStartActive; // 0xb27        
+        CUtlSymbolLarge m_iszEffectName; // 0xb28        
+        CUtlSymbolLarge m_iszControlPointNames[64]; // 0xb30        
+        int32_t m_nDataCP; // 0xd30        
+        Vector m_vecDataCPValue; // 0xd34        
+        int32_t m_nTintCP; // 0xd40        
+        Color m_clrTint; // 0xd44        
         
         // Datamap fields:
         // void InputStart; // 0x0
@@ -111,5 +111,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CParticleSystem because it is not a standard-layout class
-    static_assert(sizeof(CParticleSystem) == 0xd30);
+    static_assert(sizeof(CParticleSystem) == 0xd48);
 };

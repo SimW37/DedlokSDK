@@ -31,7 +31,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x6d8
+    // Size: 0x6e8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bDisabled"
@@ -121,18 +121,18 @@ namespace source2sdk::server
         CUtlSymbolLarge m_iszSoundReachedValueZero; // 0x5a0        
         CUtlSymbolLarge m_iszSoundReachedValueOne; // 0x5a8        
         CUtlSymbolLarge m_iszSoundMovingLoop; // 0x5b0        
-        [[maybe_unused]] std::uint8_t pad_0x5b8[0x8]; // 0x5b8
+        [[maybe_unused]] std::uint8_t pad_0x5b8[0x18]; // 0x5b8
         // m_Position has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEntityOutputTemplate<float> m_Position;
-        char m_Position[0x28]; // 0x5c0        
+        char m_Position[0x28]; // 0x5d0        
         // m_PositionDelta has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEntityOutputTemplate<float> m_PositionDelta;
-        char m_PositionDelta[0x28]; // 0x5e8        
-        entity2::CEntityIOOutput m_OnReachedValueZero; // 0x610        
-        entity2::CEntityIOOutput m_OnReachedValueOne; // 0x638        
-        entity2::CEntityIOOutput m_OnReachedValueCustom; // 0x660        
-        entity2::CEntityIOOutput m_OnEngage; // 0x688        
-        entity2::CEntityIOOutput m_OnDisengage; // 0x6b0        
+        char m_PositionDelta[0x28]; // 0x5f8        
+        entity2::CEntityIOOutput m_OnReachedValueZero; // 0x620        
+        entity2::CEntityIOOutput m_OnReachedValueOne; // 0x648        
+        entity2::CEntityIOOutput m_OnReachedValueCustom; // 0x670        
+        entity2::CEntityIOOutput m_OnEngage; // 0x698        
+        entity2::CEntityIOOutput m_OnDisengage; // 0x6c0        
         
         // Datamap fields:
         // void CPointValueRemapperUpdateThink; // 0x0
@@ -140,5 +140,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPointValueRemapper because it is not a standard-layout class
-    static_assert(sizeof(CPointValueRemapper) == 0x6d8);
+    static_assert(sizeof(CPointValueRemapper) == 0x6e8);
 };

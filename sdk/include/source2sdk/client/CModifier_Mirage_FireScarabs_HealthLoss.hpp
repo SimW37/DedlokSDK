@@ -14,16 +14,17 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x168
+    // Size: 0x188
     // Has VTable
     #pragma pack(push, 1)
     class CModifier_Mirage_FireScarabs_HealthLoss : public client::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0xa8];
-        // No schema binary for binding
+        bool m_bCanProc; // 0xc0        
+        [[maybe_unused]] std::uint8_t pad_0xc1[0xc7];
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CModifier_Mirage_FireScarabs_HealthLoss) == 0x168);
+    // Cannot assert offsets of fields in CModifier_Mirage_FireScarabs_HealthLoss because it is not a standard-layout class
+    static_assert(sizeof(CModifier_Mirage_FireScarabs_HealthLoss) == 0x188);
 };

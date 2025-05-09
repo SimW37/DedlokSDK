@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xd48
+    // Size: 0xe38
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bLeaping"
@@ -25,19 +25,19 @@ namespace source2sdk::server
     class CCitadel_Ability_HornetLeap : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0x2]; // 0xb00
+        [[maybe_unused]] std::uint8_t pad_0xba0[0x2]; // 0xba0
         // metadata: MNetworkEnable
-        bool m_bLeaping; // 0xb02        
-        [[maybe_unused]] std::uint8_t pad_0xb03[0x1]; // 0xb03
+        bool m_bLeaping; // 0xba2        
+        [[maybe_unused]] std::uint8_t pad_0xba3[0x1]; // 0xba3
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flLeapStartTime; // 0xb04        
-        client::ParticleIndex_t m_nFXIndex; // 0xb08        
-        [[maybe_unused]] std::uint8_t pad_0xb0c[0x234]; // 0xb0c
-        client::ParticleIndex_t m_TrailFX; // 0xd40        
-        [[maybe_unused]] std::uint8_t pad_0xd44[0x4];
+        entity2::GameTime_t m_flLeapStartTime; // 0xba4        
+        client::ParticleIndex_t m_nFXIndex; // 0xba8        
+        [[maybe_unused]] std::uint8_t pad_0xbac[0x284]; // 0xbac
+        client::ParticleIndex_t m_TrailFX; // 0xe30        
+        [[maybe_unused]] std::uint8_t pad_0xe34[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_HornetLeap because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_HornetLeap) == 0xd48);
+    static_assert(sizeof(CCitadel_Ability_HornetLeap) == 0xe38);
 };

@@ -19,19 +19,19 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb18
+    // Size: 0xbb8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_TangoTether_Trigger : public server::CCitadelBaseTriggerAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb10[0x4]; // 0xb10
+        [[maybe_unused]] std::uint8_t pad_0xbb0[0x4]; // 0xbb0
         // m_hBaseAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CCitadelBaseAbility> m_hBaseAbility;
-        char m_hBaseAbility[0x4]; // 0xb14        
+        char m_hBaseAbility[0x4]; // 0xbb4        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_TangoTether_Trigger because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_TangoTether_Trigger) == 0xb18);
+    static_assert(sizeof(CCitadel_Ability_TangoTether_Trigger) == 0xbb8);
 };

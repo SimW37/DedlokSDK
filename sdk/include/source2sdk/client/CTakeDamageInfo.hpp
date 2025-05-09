@@ -45,24 +45,24 @@ namespace source2sdk::client
         char m_hAbility[0x4]; // 0x40        
         float m_flDamage; // 0x44        
         float m_flTotalledDamage; // 0x48        
-        float m_flTotalledDamageAbsorbed; // 0x4c        
-        client::DamageTypes_t m_bitsDamageType; // 0x50        
-        int32_t m_iDamageCustom; // 0x54        
-        client::AmmoIndex_t m_iAmmoType; // 0x58        
-        [[maybe_unused]] std::uint8_t pad_0x59[0xf]; // 0x59
-        float m_flOriginalDamage; // 0x68        
-        bool m_bShouldBleed; // 0x6c        
-        bool m_bShouldSpark; // 0x6d        
-        [[maybe_unused]] std::uint8_t pad_0x6e[0x2]; // 0x6e
-        float m_flDamageAbsorbed; // 0x70        
-        [[maybe_unused]] std::uint8_t pad_0x74[0xc]; // 0x74
-        client::TakeDamageFlags_t m_nDamageFlags; // 0x80        
-        client::ECitadelDamageType m_eCitadelDamageType; // 0x88        
-        float m_flAfterBuffDamage; // 0x8c        
-        float m_flPreResistDamage; // 0x90        
-        bool m_bEvaded; // 0x94        
-        [[maybe_unused]] std::uint8_t pad_0x95[0x3]; // 0x95
-        client::HitGroup_t m_iHitGroupId; // 0x98        
+        client::DamageTypes_t m_bitsDamageType; // 0x4c        
+        int32_t m_iDamageCustom; // 0x50        
+        client::AmmoIndex_t m_iAmmoType; // 0x54        
+        [[maybe_unused]] std::uint8_t pad_0x55[0xb]; // 0x55
+        float m_flOriginalDamage; // 0x60        
+        bool m_bShouldBleed; // 0x64        
+        bool m_bShouldSpark; // 0x65        
+        [[maybe_unused]] std::uint8_t pad_0x66[0x2]; // 0x66
+        float m_flDamageAbsorbed; // 0x68        
+        [[maybe_unused]] std::uint8_t pad_0x6c[0xc]; // 0x6c
+        client::TakeDamageFlags_t m_nDamageFlags; // 0x78        
+        CGlobalSymbol m_sDamageSourceName; // 0x80        
+        client::HitGroup_t m_iHitGroupId; // 0x88        
+        client::ECitadelDamageType m_eCitadelDamageType; // 0x8c        
+        float m_flAfterBuffDamage; // 0x90        
+        float m_flPreResistDamage; // 0x94        
+        bool m_bEvaded; // 0x98        
+        [[maybe_unused]] std::uint8_t pad_0x99[0x3]; // 0x99
         Vector m_vecDamageNormal; // 0x9c        
         [[maybe_unused]] std::uint8_t pad_0xa8[0x8]; // 0xa8
         // m_hOriginator has a template type with potentially unknown template parameters. You can try uncommenting the field below.
@@ -90,20 +90,20 @@ namespace source2sdk::client
     static_assert(offsetof(CTakeDamageInfo, m_hAbility) == 0x40);
     static_assert(offsetof(CTakeDamageInfo, m_flDamage) == 0x44);
     static_assert(offsetof(CTakeDamageInfo, m_flTotalledDamage) == 0x48);
-    static_assert(offsetof(CTakeDamageInfo, m_flTotalledDamageAbsorbed) == 0x4c);
-    static_assert(offsetof(CTakeDamageInfo, m_bitsDamageType) == 0x50);
-    static_assert(offsetof(CTakeDamageInfo, m_iDamageCustom) == 0x54);
-    static_assert(offsetof(CTakeDamageInfo, m_iAmmoType) == 0x58);
-    static_assert(offsetof(CTakeDamageInfo, m_flOriginalDamage) == 0x68);
-    static_assert(offsetof(CTakeDamageInfo, m_bShouldBleed) == 0x6c);
-    static_assert(offsetof(CTakeDamageInfo, m_bShouldSpark) == 0x6d);
-    static_assert(offsetof(CTakeDamageInfo, m_flDamageAbsorbed) == 0x70);
-    static_assert(offsetof(CTakeDamageInfo, m_nDamageFlags) == 0x80);
-    static_assert(offsetof(CTakeDamageInfo, m_eCitadelDamageType) == 0x88);
-    static_assert(offsetof(CTakeDamageInfo, m_flAfterBuffDamage) == 0x8c);
-    static_assert(offsetof(CTakeDamageInfo, m_flPreResistDamage) == 0x90);
-    static_assert(offsetof(CTakeDamageInfo, m_bEvaded) == 0x94);
-    static_assert(offsetof(CTakeDamageInfo, m_iHitGroupId) == 0x98);
+    static_assert(offsetof(CTakeDamageInfo, m_bitsDamageType) == 0x4c);
+    static_assert(offsetof(CTakeDamageInfo, m_iDamageCustom) == 0x50);
+    static_assert(offsetof(CTakeDamageInfo, m_iAmmoType) == 0x54);
+    static_assert(offsetof(CTakeDamageInfo, m_flOriginalDamage) == 0x60);
+    static_assert(offsetof(CTakeDamageInfo, m_bShouldBleed) == 0x64);
+    static_assert(offsetof(CTakeDamageInfo, m_bShouldSpark) == 0x65);
+    static_assert(offsetof(CTakeDamageInfo, m_flDamageAbsorbed) == 0x68);
+    static_assert(offsetof(CTakeDamageInfo, m_nDamageFlags) == 0x78);
+    static_assert(offsetof(CTakeDamageInfo, m_sDamageSourceName) == 0x80);
+    static_assert(offsetof(CTakeDamageInfo, m_iHitGroupId) == 0x88);
+    static_assert(offsetof(CTakeDamageInfo, m_eCitadelDamageType) == 0x8c);
+    static_assert(offsetof(CTakeDamageInfo, m_flAfterBuffDamage) == 0x90);
+    static_assert(offsetof(CTakeDamageInfo, m_flPreResistDamage) == 0x94);
+    static_assert(offsetof(CTakeDamageInfo, m_bEvaded) == 0x98);
     static_assert(offsetof(CTakeDamageInfo, m_vecDamageNormal) == 0x9c);
     static_assert(offsetof(CTakeDamageInfo, m_hOriginator) == 0xb0);
     static_assert(offsetof(CTakeDamageInfo, m_iBatchCount) == 0xb4);

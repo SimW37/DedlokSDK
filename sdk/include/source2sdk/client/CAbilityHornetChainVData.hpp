@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x16d8
+    // Size: 0x1700
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,20 +27,20 @@ namespace source2sdk::client
         // metadata: MPropertyGroupName "Visuals"
         // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-        char m_ExplodeParticle[0xe0]; // 0x15c8        
+        char m_ExplodeParticle[0xe0]; // 0x15f0        
         // metadata: MPropertyGroupName "Sounds"
-        CSoundEventName m_strExplodeSound; // 0x16a8        
+        CSoundEventName m_strExplodeSound; // 0x16d0        
         // metadata: MPropertyGroupName "Modifiers"
         // m_ChainModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_ChainModifier;
-        char m_ChainModifier[0x10]; // 0x16b8        
+        char m_ChainModifier[0x10]; // 0x16e0        
         // metadata: MPropertyGroupName "Modifiers"
         // m_DisarmModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_DisarmModifier;
-        char m_DisarmModifier[0x10]; // 0x16c8        
+        char m_DisarmModifier[0x10]; // 0x16f0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbilityHornetChainVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityHornetChainVData) == 0x16d8);
+    static_assert(sizeof(CAbilityHornetChainVData) == 0x1700);
 };

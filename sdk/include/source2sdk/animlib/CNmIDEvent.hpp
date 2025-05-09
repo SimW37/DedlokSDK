@@ -14,7 +14,7 @@ namespace source2sdk::animlib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x20
+    // Size: 0x28
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,9 +23,10 @@ namespace source2sdk::animlib
     {
     public:
         CGlobalSymbol m_ID; // 0x18        
+        CGlobalSymbol m_secondaryID; // 0x20        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CNmIDEvent because it is not a standard-layout class
-    static_assert(sizeof(CNmIDEvent) == 0x20);
+    static_assert(sizeof(CNmIDEvent) == 0x28);
 };

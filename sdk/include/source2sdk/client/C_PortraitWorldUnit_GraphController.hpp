@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x158
+    // Size: 0x3f8
     // Has VTable
     #pragma pack(push, 1)
     class C_PortraitWorldUnit_GraphController : public client::CBaseAnimGraphAnimGraphController
@@ -22,19 +22,19 @@ namespace source2sdk::client
     public:
         // m_pszHeroUI has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<char*> m_pszHeroUI;
-        char m_pszHeroUI[0x28]; // 0xc8        
+        char m_pszHeroUI[0x28]; // 0x368        
         // m_pszShopUI has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<char*> m_pszShopUI;
-        char m_pszShopUI[0x28]; // 0xf0        
+        char m_pszShopUI[0x28]; // 0x390        
         // m_flMenuLookAtWeight has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<float> m_flMenuLookAtWeight;
-        char m_flMenuLookAtWeight[0x20]; // 0x118        
+        char m_flMenuLookAtWeight[0x20]; // 0x3b8        
         // m_vecLookAtPosMS has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<Vector> m_vecLookAtPosMS;
-        char m_vecLookAtPosMS[0x20]; // 0x138        
+        char m_vecLookAtPosMS[0x20]; // 0x3d8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_PortraitWorldUnit_GraphController because it is not a standard-layout class
-    static_assert(sizeof(C_PortraitWorldUnit_GraphController) == 0x158);
+    static_assert(sizeof(C_PortraitWorldUnit_GraphController) == 0x3f8);
 };

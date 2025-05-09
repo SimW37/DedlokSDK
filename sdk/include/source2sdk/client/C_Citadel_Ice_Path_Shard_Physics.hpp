@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x858
+    // Size: 0x9f8
     // Has VTable
     // 
     // static metadata: MNetworkExcludeByName "m_hModel"
@@ -24,24 +24,26 @@ namespace source2sdk::client
     // static metadata: MNetworkVarNames "QAngle m_qForward"
     // static metadata: MNetworkVarNames "GameTime_t m_flStartTime"
     // static metadata: MNetworkVarNames "GameTime_t m_flEndTime"
+    // static metadata: MNetworkVarNames "float m_flShardWidth"
     #pragma pack(push, 1)
     class C_Citadel_Ice_Path_Shard_Physics : public client::C_BaseModelEntity
     {
     public:
         // metadata: MNetworkEnable
-        client::ice_path_shard_model_desc_t m_ShardDesc; // 0x808        
+        client::ice_path_shard_model_desc_t m_ShardDesc; // 0x9a8        
         // metadata: MNetworkEnable
-        QAngle m_qForward; // 0x840        
+        QAngle m_qForward; // 0x9e0        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnStartTimeChanged"
-        entity2::GameTime_t m_flStartTime; // 0x84c        
+        entity2::GameTime_t m_flStartTime; // 0x9ec        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnEndTimeChanged"
-        entity2::GameTime_t m_flEndTime; // 0x850        
-        [[maybe_unused]] std::uint8_t pad_0x854[0x4];
+        entity2::GameTime_t m_flEndTime; // 0x9f0        
+        // metadata: MNetworkEnable
+        float m_flShardWidth; // 0x9f4        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_Citadel_Ice_Path_Shard_Physics because it is not a standard-layout class
-    static_assert(sizeof(C_Citadel_Ice_Path_Shard_Physics) == 0x858);
+    static_assert(sizeof(C_Citadel_Ice_Path_Shard_Physics) == 0x9f8);
 };

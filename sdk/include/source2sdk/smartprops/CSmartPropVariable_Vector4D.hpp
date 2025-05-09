@@ -14,7 +14,7 @@ namespace source2sdk::smartprops
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x38
+    // Size: 0x48
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,10 +23,10 @@ namespace source2sdk::smartprops
     class CSmartPropVariable_Vector4D : public smartprops::CSmartPropVariable
     {
     public:
-        Vector4D m_DefaultValue; // 0x28        
+        Vector4D m_DefaultValue; // 0x38        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSmartPropVariable_Vector4D because it is not a standard-layout class
-    static_assert(sizeof(CSmartPropVariable_Vector4D) == 0x38);
+    static_assert(sizeof(CSmartPropVariable_Vector4D) == 0x48);
 };

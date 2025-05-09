@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1700
+    // Size: 0x1758
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,14 +27,14 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-        char m_ExplodeParticle[0xe0]; // 0x1610        
+        char m_ExplodeParticle[0xe0]; // 0x1668        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_ExplosionModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_ExplosionModifier;
-        char m_ExplosionModifier[0x10]; // 0x16f0        
+        char m_ExplosionModifier[0x10]; // 0x1748        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_TechUpgrade_CorpseExplosionVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_TechUpgrade_CorpseExplosionVData) == 0x1700);
+    static_assert(sizeof(CCitadel_TechUpgrade_CorpseExplosionVData) == 0x1758);
 };

@@ -101,18 +101,18 @@ namespace source2sdk::server
         int32_t m_nAutomatedAction; // 0x57c        
         float m_flAutomationDelay; // 0x580        
         float m_flAutomationTime; // 0x584        
+        int32_t m_nSpeechPriority; // 0x588        
         // m_hWaitingForThisResumeScene has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hWaitingForThisResumeScene;
-        char m_hWaitingForThisResumeScene[0x4]; // 0x588        
-        bool m_bWaitingForResumeScene; // 0x58c        
-        bool m_bPausedViaInput; // 0x58d        
-        bool m_bPauseAtNextInterrupt; // 0x58e        
-        bool m_bWaitingForActor; // 0x58f        
-        bool m_bWaitingForInterrupt; // 0x590        
-        bool m_bInterruptedActorsScenes; // 0x591        
-        bool m_bBreakOnNonIdle; // 0x592        
-        bool m_bSceneFinished; // 0x593        
-        [[maybe_unused]] std::uint8_t pad_0x594[0x4]; // 0x594
+        char m_hWaitingForThisResumeScene[0x4]; // 0x58c        
+        bool m_bWaitingForResumeScene; // 0x590        
+        bool m_bPausedViaInput; // 0x591        
+        bool m_bPauseAtNextInterrupt; // 0x592        
+        bool m_bWaitingForActor; // 0x593        
+        bool m_bWaitingForInterrupt; // 0x594        
+        bool m_bInterruptedActorsScenes; // 0x595        
+        bool m_bBreakOnNonIdle; // 0x596        
+        bool m_bSceneFinished; // 0x597        
         // metadata: MNetworkEnable
         // m_hActorList has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CNetworkUtlVectorBase<CHandle<server::CBaseFlex>> m_hActorList;

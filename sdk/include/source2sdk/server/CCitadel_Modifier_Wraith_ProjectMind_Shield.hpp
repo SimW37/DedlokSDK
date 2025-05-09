@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/server/CCitadel_Modifier_BaseShield.hpp"
+#include "source2sdk/server/CCitadelModifier.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -14,15 +14,16 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc8
+    // Size: 0x100
     // Has VTable
     #pragma pack(push, 1)
-    class CCitadel_Modifier_Wraith_ProjectMind_Shield : public server::CCitadel_Modifier_BaseShield
+    class CCitadel_Modifier_Wraith_ProjectMind_Shield : public server::CCitadelModifier
     {
     public:
+        [[maybe_unused]] std::uint8_t pad_0xc0[0x40];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Modifier_Wraith_ProjectMind_Shield) == 0xc8);
+    static_assert(sizeof(CCitadel_Modifier_Wraith_ProjectMind_Shield) == 0x100);
 };

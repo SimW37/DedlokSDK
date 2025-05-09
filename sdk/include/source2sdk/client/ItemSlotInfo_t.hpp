@@ -13,7 +13,7 @@ namespace source2sdk::client
     // Registered alignment: 0x4
     // Alignment: 0x4
     // Standard-layout class: true
-    // Size: 0x28
+    // Size: 0x30
     // Has Trivial Destructor
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -21,13 +21,13 @@ namespace source2sdk::client
     struct ItemSlotInfo_t
     {
     public:
-        int32_t m_arMaxPurchasesForTier[5]; // 0x0        
-        float m_arPriceAdjustPercentForTier[5]; // 0x14        
+        int32_t m_arMaxPurchasesForTier[6]; // 0x0        
+        float m_arPriceAdjustPercentForTier[6]; // 0x18        
     };
     #pragma pack(pop)
     
     static_assert(offsetof(ItemSlotInfo_t, m_arMaxPurchasesForTier) == 0x0);
-    static_assert(offsetof(ItemSlotInfo_t, m_arPriceAdjustPercentForTier) == 0x14);
+    static_assert(offsetof(ItemSlotInfo_t, m_arPriceAdjustPercentForTier) == 0x18);
     
-    static_assert(sizeof(ItemSlotInfo_t) == 0x28);
+    static_assert(sizeof(ItemSlotInfo_t) == 0x30);
 };

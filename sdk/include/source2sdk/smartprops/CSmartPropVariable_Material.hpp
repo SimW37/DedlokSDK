@@ -15,7 +15,7 @@ namespace source2sdk::smartprops
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x108
+    // Size: 0x118
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -28,10 +28,10 @@ namespace source2sdk::smartprops
         // metadata: MPropertyFriendlyName "Default Material"
         // m_DefaultValue has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIMaterial2>> m_DefaultValue;
-        char m_DefaultValue[0xe0]; // 0x28        
+        char m_DefaultValue[0xe0]; // 0x38        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSmartPropVariable_Material because it is not a standard-layout class
-    static_assert(sizeof(CSmartPropVariable_Material) == 0x108);
+    static_assert(sizeof(CSmartPropVariable_Material) == 0x118);
 };

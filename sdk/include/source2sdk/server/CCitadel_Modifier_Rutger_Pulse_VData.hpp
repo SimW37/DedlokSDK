@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x668
+    // Size: 0x670
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,10 +23,10 @@ namespace source2sdk::server
     {
     public:
         // metadata: MPropertyGroupName "Sounds"
-        CSoundEventName m_strSilenceTargetSound; // 0x658        
+        CSoundEventName m_strSilenceTargetSound; // 0x660        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Rutger_Pulse_VData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Rutger_Pulse_VData) == 0x668);
+    static_assert(sizeof(CCitadel_Modifier_Rutger_Pulse_VData) == 0x670);
 };

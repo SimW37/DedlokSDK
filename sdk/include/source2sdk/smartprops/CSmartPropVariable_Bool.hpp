@@ -14,7 +14,7 @@ namespace source2sdk::smartprops
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x30
+    // Size: 0x40
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,11 +23,11 @@ namespace source2sdk::smartprops
     class CSmartPropVariable_Bool : public smartprops::CSmartPropVariable
     {
     public:
-        bool m_DefaultValue; // 0x28        
-        [[maybe_unused]] std::uint8_t pad_0x29[0x7];
+        bool m_DefaultValue; // 0x38        
+        [[maybe_unused]] std::uint8_t pad_0x39[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSmartPropVariable_Bool because it is not a standard-layout class
-    static_assert(sizeof(CSmartPropVariable_Bool) == 0x30);
+    static_assert(sizeof(CSmartPropVariable_Bool) == 0x40);
 };

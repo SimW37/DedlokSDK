@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x9f8
+    // Size: 0xa00
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,16 +27,16 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-        char m_ExplodeParticle[0xe0]; // 0x8f8        
+        char m_ExplodeParticle[0xe0]; // 0x900        
         // metadata: MPropertyGroupName "Sounds"
-        CSoundEventName m_ExplodeSound; // 0x9d8        
+        CSoundEventName m_ExplodeSound; // 0x9e0        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_BuffModifier;
-        char m_BuffModifier[0x10]; // 0x9e8        
+        char m_BuffModifier[0x10]; // 0x9f0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_BubbleVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_BubbleVData) == 0x9f8);
+    static_assert(sizeof(CCitadel_Modifier_BubbleVData) == 0xa00);
 };

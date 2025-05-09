@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xf78
+    // Size: 0x1150
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "Vector m_vStartPosition"
@@ -28,27 +28,27 @@ namespace source2sdk::client
     public:
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        Vector m_vStartPosition; // 0xc50        
+        Vector m_vStartPosition; // 0xdc0        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        Vector m_vDashDirection; // 0xc5c        
+        Vector m_vDashDirection; // 0xdcc        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        bool m_bIsDashing; // 0xc68        
+        bool m_bIsDashing; // 0xdd8        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        bool m_bStartedInAir; // 0xc69        
-        [[maybe_unused]] std::uint8_t pad_0xc6a[0x6]; // 0xc6a
+        bool m_bStartedInAir; // 0xdd9        
+        [[maybe_unused]] std::uint8_t pad_0xdda[0x6]; // 0xdda
         // m_vecHitEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CEntityIndex> m_vecHitEnemies;
-        char m_vecHitEnemies[0x18]; // 0xc70        
-        Vector m_vecLastPosition; // 0xc88        
-        [[maybe_unused]] std::uint8_t pad_0xc94[0x2dc]; // 0xc94
-        entity2::GameTime_t m_flStuckTime; // 0xf70        
-        [[maybe_unused]] std::uint8_t pad_0xf74[0x4];
+        char m_vecHitEnemies[0x18]; // 0xde0        
+        Vector m_vecLastPosition; // 0xdf8        
+        [[maybe_unused]] std::uint8_t pad_0xe04[0x344]; // 0xe04
+        entity2::GameTime_t m_flStuckTime; // 0x1148        
+        [[maybe_unused]] std::uint8_t pad_0x114c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_NanoDash because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_NanoDash) == 0xf78);
+    static_assert(sizeof(CCitadel_Ability_NanoDash) == 0x1150);
 };

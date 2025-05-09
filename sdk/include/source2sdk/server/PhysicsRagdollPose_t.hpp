@@ -37,12 +37,14 @@ namespace source2sdk::server
         // m_hOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hOwner;
         char m_hOwner[0x4]; // 0x20        
-        [[maybe_unused]] std::uint8_t pad_0x24[0x4];
+        bool m_bSetFromDebugHistory; // 0x24        
+        [[maybe_unused]] std::uint8_t pad_0x25[0x3];
     };
     #pragma pack(pop)
     
     static_assert(offsetof(PhysicsRagdollPose_t, m_Transforms) == 0x8);
     static_assert(offsetof(PhysicsRagdollPose_t, m_hOwner) == 0x20);
+    static_assert(offsetof(PhysicsRagdollPose_t, m_bSetFromDebugHistory) == 0x24);
     
     static_assert(sizeof(PhysicsRagdollPose_t) == 0x28);
 };

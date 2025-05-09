@@ -16,21 +16,21 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xca8
+    // Size: 0xd80
     // Has VTable
     #pragma pack(push, 1)
     class CAbility_Rutger_ForceField : public server::CCitadelBaseAbility
     {
     public:
-        client::ParticleIndex_t m_hChargingParticle; // 0xb00        
-        client::ParticleIndex_t m_hExplodeParticle; // 0xb04        
-        Vector m_vSpawnPos; // 0xb08        
-        entity2::GameTime_t m_fTimeToDestroyForceField; // 0xb14        
-        bool m_bFirstThink; // 0xb18        
-        [[maybe_unused]] std::uint8_t pad_0xb19[0x18f];
+        client::ParticleIndex_t m_hChargingParticle; // 0xba0        
+        client::ParticleIndex_t m_hExplodeParticle; // 0xba4        
+        Vector m_vSpawnPos; // 0xba8        
+        entity2::GameTime_t m_fTimeToDestroyForceField; // 0xbb4        
+        bool m_bFirstThink; // 0xbb8        
+        [[maybe_unused]] std::uint8_t pad_0xbb9[0x1c7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbility_Rutger_ForceField because it is not a standard-layout class
-    static_assert(sizeof(CAbility_Rutger_ForceField) == 0xca8);
+    static_assert(sizeof(CAbility_Rutger_ForceField) == 0xd80);
 };

@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1890
+    // Size: 0x18b8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,25 +27,25 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_ExplodeBaseParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeBaseParticle;
-        char m_ExplodeBaseParticle[0xe0]; // 0x15c8        
+        char m_ExplodeBaseParticle[0xe0]; // 0x15f0        
         // m_ExplodeFriendlyParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeFriendlyParticle;
-        char m_ExplodeFriendlyParticle[0xe0]; // 0x16a8        
+        char m_ExplodeFriendlyParticle[0xe0]; // 0x16d0        
         // m_ExplodeEnemyParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeEnemyParticle;
-        char m_ExplodeEnemyParticle[0xe0]; // 0x1788        
+        char m_ExplodeEnemyParticle[0xe0]; // 0x17b0        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strExplodeSound; // 0x1868        
+        CSoundEventName m_strExplodeSound; // 0x1890        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_ModifierDragEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_ModifierDragEnemy;
-        char m_ModifierDragEnemy[0x10]; // 0x1878        
+        char m_ModifierDragEnemy[0x10]; // 0x18a0        
         // metadata: MPropertyStartGroup "Gameplay"
-        float m_flOnHitDetonateTimer; // 0x1888        
-        float m_flTraceTravelRadius; // 0x188c        
+        float m_flOnHitDetonateTimer; // 0x18b0        
+        float m_flTraceTravelRadius; // 0x18b4        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbilityPerchedPredatorVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityPerchedPredatorVData) == 0x1890);
+    static_assert(sizeof(CAbilityPerchedPredatorVData) == 0x18b8);
 };

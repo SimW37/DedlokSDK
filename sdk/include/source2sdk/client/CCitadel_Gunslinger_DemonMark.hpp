@@ -15,17 +15,17 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xd38
+    // Size: 0xec8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Gunslinger_DemonMark : public client::C_CitadelBaseAbility
     {
     public:
-        entity2::GameTime_t m_flNextSearchTime; // 0xc50        
-        [[maybe_unused]] std::uint8_t pad_0xc54[0xe4];
+        entity2::GameTime_t m_flNextSearchTime; // 0xdc0        
+        [[maybe_unused]] std::uint8_t pad_0xdc4[0x104];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Gunslinger_DemonMark because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Gunslinger_DemonMark) == 0xd38);
+    static_assert(sizeof(CCitadel_Gunslinger_DemonMark) == 0xec8);
 };

@@ -14,17 +14,17 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x8a0
+    // Size: 0xab0
     // Has VTable
     #pragma pack(push, 1)
     class C_CitadelPositionHomingProjectile : public client::C_CitadelTrackedProjectile
     {
     public:
-        Vector m_vecHomingPosition; // 0x890        
-        [[maybe_unused]] std::uint8_t pad_0x89c[0x4];
+        Vector m_vecHomingPosition; // 0xaa0        
+        [[maybe_unused]] std::uint8_t pad_0xaac[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_CitadelPositionHomingProjectile because it is not a standard-layout class
-    static_assert(sizeof(C_CitadelPositionHomingProjectile) == 0x8a0);
+    static_assert(sizeof(C_CitadelPositionHomingProjectile) == 0xab0);
 };

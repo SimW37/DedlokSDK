@@ -1,4 +1,5 @@
 #pragma once
+#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/server/CCitadelModifier.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -14,23 +15,24 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x180
+    // Size: 0x1b8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_HookTarget : public server::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x4]; // 0xc0
-        float m_flCurrentVerticalSpeed; // 0xc4        
-        bool m_bSuccess; // 0xc8        
-        bool m_bSameTeam; // 0xc9        
-        bool m_bPlayedApproachingWhoosh; // 0xca        
-        [[maybe_unused]] std::uint8_t pad_0xcb[0x1]; // 0xcb
-        float m_flInitialTravelDistance; // 0xcc        
-        [[maybe_unused]] std::uint8_t pad_0xd0[0xb0];
+        float m_flCurrentVerticalSpeed; // 0xc0        
+        bool m_bSuccess; // 0xc4        
+        bool m_bSameTeam; // 0xc5        
+        bool m_bPlayedApproachingWhoosh; // 0xc6        
+        [[maybe_unused]] std::uint8_t pad_0xc7[0x1]; // 0xc7
+        float m_flInitialTravelDistance; // 0xc8        
+        entity2::GameTime_t m_flStuckStartTime; // 0xcc        
+        Vector m_vLastPos; // 0xd0        
+        [[maybe_unused]] std::uint8_t pad_0xdc[0xdc];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_HookTarget because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_HookTarget) == 0x180);
+    static_assert(sizeof(CCitadel_Modifier_HookTarget) == 0x1b8);
 };

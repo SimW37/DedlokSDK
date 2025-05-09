@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa18
+    // Size: 0xc60
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Projectile_SpiderProjectile : public client::C_CitadelProjectile
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x890[0x188];
+        [[maybe_unused]] std::uint8_t pad_0xaa0[0x1c0];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Projectile_SpiderProjectile) == 0xa18);
+    static_assert(sizeof(CCitadel_Projectile_SpiderProjectile) == 0xc60);
 };

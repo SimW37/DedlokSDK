@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xe60
+    // Size: 0xeb0
     // Has VTable
     // 
     // static metadata: MNetworkExcludeByName "m_hModel"
@@ -24,14 +24,14 @@ namespace source2sdk::server
     class CShatterGlassShardPhysics : public server::CPhysicsProp
     {
     public:
-        bool m_bDebris; // 0xdd8        
-        [[maybe_unused]] std::uint8_t pad_0xdd9[0x3]; // 0xdd9
-        uint32_t m_hParentShard; // 0xddc        
+        bool m_bDebris; // 0xe28        
+        [[maybe_unused]] std::uint8_t pad_0xe29[0x3]; // 0xe29
+        uint32_t m_hParentShard; // 0xe2c        
         // metadata: MNetworkEnable
-        server::shard_model_desc_t m_ShardDesc; // 0xde0        
+        server::shard_model_desc_t m_ShardDesc; // 0xe30        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CShatterGlassShardPhysics because it is not a standard-layout class
-    static_assert(sizeof(CShatterGlassShardPhysics) == 0xe60);
+    static_assert(sizeof(CShatterGlassShardPhysics) == 0xeb0);
 };

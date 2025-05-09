@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x668
+    // Size: 0x670
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,10 +26,10 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Modifiers"
         // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_DebuffModifier;
-        char m_DebuffModifier[0x10]; // 0x658        
+        char m_DebuffModifier[0x10]; // 0x660        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Astro_ShotgunBuffVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Astro_ShotgunBuffVData) == 0x668);
+    static_assert(sizeof(CCitadel_Modifier_Astro_ShotgunBuffVData) == 0x670);
 };

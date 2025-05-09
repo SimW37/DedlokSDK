@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x248
+    // Size: 0x278
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_VoidSphere : public server::CCitadelModifier
@@ -29,10 +29,10 @@ namespace source2sdk::server
         Vector m_vecEndLocation; // 0xd0        
         Vector m_vecStartPosition; // 0xdc        
         Vector m_vecEndLocationCaster; // 0xe8        
-        [[maybe_unused]] std::uint8_t pad_0xf4[0x154];
+        [[maybe_unused]] std::uint8_t pad_0xf4[0x184];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_VoidSphere because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_VoidSphere) == 0x248);
+    static_assert(sizeof(CCitadel_Modifier_VoidSphere) == 0x278);
 };

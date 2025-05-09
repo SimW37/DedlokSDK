@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x350
+    // Size: 0x3a8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_RocketBarrageVolley : public server::CCitadelModifier
@@ -25,10 +25,10 @@ namespace source2sdk::server
         entity2::GameTime_t m_flCastTime; // 0xc4        
         entity2::GameTime_t m_flNextRocketTime; // 0xc8        
         int32_t m_nGrenadesLeft; // 0xcc        
-        [[maybe_unused]] std::uint8_t pad_0xd0[0x280];
+        [[maybe_unused]] std::uint8_t pad_0xd0[0x2d8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_RocketBarrageVolley because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_RocketBarrageVolley) == 0x350);
+    static_assert(sizeof(CCitadel_Modifier_RocketBarrageVolley) == 0x3a8);
 };

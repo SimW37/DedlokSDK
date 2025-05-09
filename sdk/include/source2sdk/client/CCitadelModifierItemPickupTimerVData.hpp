@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x678
+    // Size: 0x680
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -24,18 +24,18 @@ namespace source2sdk::client
     {
     public:
         // metadata: MPropertyGroupName "Timers"
-        float m_TimerToSilence; // 0x658        
-        float m_SilenceDuration; // 0x65c        
+        float m_TimerToSilence; // 0x660        
+        float m_SilenceDuration; // 0x664        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_SilenceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_SilenceModifier;
-        char m_SilenceModifier[0x10]; // 0x660        
+        char m_SilenceModifier[0x10]; // 0x668        
         // metadata: MPropertyStartGroup "Gameplay"
-        bool m_bIsIdolPickup; // 0x670        
-        [[maybe_unused]] std::uint8_t pad_0x671[0x7];
+        bool m_bIsIdolPickup; // 0x678        
+        [[maybe_unused]] std::uint8_t pad_0x679[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelModifierItemPickupTimerVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadelModifierItemPickupTimerVData) == 0x678);
+    static_assert(sizeof(CCitadelModifierItemPickupTimerVData) == 0x680);
 };

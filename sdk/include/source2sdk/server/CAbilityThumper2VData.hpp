@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x16d8
+    // Size: 0x1700
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,19 +27,19 @@ namespace source2sdk::server
         // metadata: MPropertyGroupName "Visuals"
         // m_StompParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompParticle;
-        char m_StompParticle[0xe0]; // 0x15c8        
+        char m_StompParticle[0xe0]; // 0x15f0        
         // metadata: MPropertyGroupName "Sounds"
-        CSoundEventName m_strStompExplosionSound; // 0x16a8        
+        CSoundEventName m_strStompExplosionSound; // 0x16d0        
         // metadata: MPropertyGroupName "Modifiers"
         // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_BuffModifier;
-        char m_BuffModifier[0x10]; // 0x16b8        
+        char m_BuffModifier[0x10]; // 0x16e0        
         // m_BarbedWireAuraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_BarbedWireAuraModifier;
-        char m_BarbedWireAuraModifier[0x10]; // 0x16c8        
+        char m_BarbedWireAuraModifier[0x10]; // 0x16f0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbilityThumper2VData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityThumper2VData) == 0x16d8);
+    static_assert(sizeof(CAbilityThumper2VData) == 0x1700);
 };

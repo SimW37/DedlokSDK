@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1708
+    // Size: 0x1730
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,26 +27,26 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-        char m_ExplodeParticle[0xe0]; // 0x15c8        
+        char m_ExplodeParticle[0xe0]; // 0x15f0        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_CasterModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_CasterModifier;
-        char m_CasterModifier[0x10]; // 0x16a8        
+        char m_CasterModifier[0x10]; // 0x16d0        
         // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_DebuffModifier;
-        char m_DebuffModifier[0x10]; // 0x16b8        
+        char m_DebuffModifier[0x10]; // 0x16e0        
         // m_StatStealModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_StatStealModifier;
-        char m_StatStealModifier[0x10]; // 0x16c8        
+        char m_StatStealModifier[0x10]; // 0x16f0        
         // m_StealWatcherModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_StealWatcherModifier;
-        char m_StealWatcherModifier[0x10]; // 0x16d8        
+        char m_StealWatcherModifier[0x10]; // 0x1700        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_ExplosionSound; // 0x16e8        
-        CSoundEventName m_strHitConfirm; // 0x16f8        
+        CSoundEventName m_ExplosionSound; // 0x1710        
+        CSoundEventName m_strHitConfirm; // 0x1720        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Mirage_FireBeetles_VData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Mirage_FireBeetles_VData) == 0x1708);
+    static_assert(sizeof(CCitadel_Ability_Mirage_FireBeetles_VData) == 0x1730);
 };

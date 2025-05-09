@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x5a8
+    // Size: 0x678
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "HRenderTextureStrong m_hGradientFogTexture"
@@ -40,50 +40,50 @@ namespace source2sdk::client
         // metadata: MNetworkEnable
         // m_hGradientFogTexture has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase> m_hGradientFogTexture;
-        char m_hGradientFogTexture[0x8]; // 0x510        
+        char m_hGradientFogTexture[0x8]; // 0x5e0        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogStartDistance; // 0x518        
+        float m_flFogStartDistance; // 0x5e8        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogEndDistance; // 0x51c        
+        float m_flFogEndDistance; // 0x5ec        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        bool m_bHeightFogEnabled; // 0x520        
-        [[maybe_unused]] std::uint8_t pad_0x521[0x3]; // 0x521
+        bool m_bHeightFogEnabled; // 0x5f0        
+        [[maybe_unused]] std::uint8_t pad_0x5f1[0x3]; // 0x5f1
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogStartHeight; // 0x524        
+        float m_flFogStartHeight; // 0x5f4        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogEndHeight; // 0x528        
+        float m_flFogEndHeight; // 0x5f8        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFarZ; // 0x52c        
+        float m_flFarZ; // 0x5fc        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogMaxOpacity; // 0x530        
+        float m_flFogMaxOpacity; // 0x600        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogFalloffExponent; // 0x534        
+        float m_flFogFalloffExponent; // 0x604        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogVerticalExponent; // 0x538        
+        float m_flFogVerticalExponent; // 0x608        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        Color m_fogColor; // 0x53c        
+        Color m_fogColor; // 0x60c        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFogStrength; // 0x540        
+        float m_flFogStrength; // 0x610        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "FogStateChanged"
-        float m_flFadeTime; // 0x544        
+        float m_flFadeTime; // 0x614        
         // metadata: MNetworkEnable
-        bool m_bStartDisabled; // 0x548        
+        bool m_bStartDisabled; // 0x618        
         // metadata: MNetworkEnable
-        bool m_bIsEnabled; // 0x549        
-        bool m_bGradientFogNeedsTextures; // 0x54a        
-        [[maybe_unused]] std::uint8_t pad_0x54b[0x5d];
+        bool m_bIsEnabled; // 0x619        
+        bool m_bGradientFogNeedsTextures; // 0x61a        
+        [[maybe_unused]] std::uint8_t pad_0x61b[0x5d];
         
         // Datamap fields:
         // bool InputEnable; // 0x0
@@ -102,5 +102,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_GradientFog because it is not a standard-layout class
-    static_assert(sizeof(C_GradientFog) == 0x5a8);
+    static_assert(sizeof(C_GradientFog) == 0x678);
 };

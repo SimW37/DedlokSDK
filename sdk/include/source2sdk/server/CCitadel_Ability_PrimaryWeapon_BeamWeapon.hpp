@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xbb8
+    // Size: 0xc60
     // Has VTable
     // Is Abstract
     #pragma pack(push, 1)
@@ -25,5 +25,5 @@ namespace source2sdk::server
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Ability_PrimaryWeapon_BeamWeapon) == 0xbb8);
+    static_assert(sizeof(CCitadel_Ability_PrimaryWeapon_BeamWeapon) == 0xc60);
 };

@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x528
+    // Size: 0x5f8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "int m_nMode"
@@ -24,14 +24,14 @@ namespace source2sdk::client
     class C_InfoVisibilityBox : public client::C_BaseEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x510[0x4]; // 0x510
+        [[maybe_unused]] std::uint8_t pad_0x5e0[0x4]; // 0x5e0
         // metadata: MNetworkEnable
-        int32_t m_nMode; // 0x514        
+        int32_t m_nMode; // 0x5e4        
         // metadata: MNetworkEnable
-        Vector m_vBoxSize; // 0x518        
+        Vector m_vBoxSize; // 0x5e8        
         // metadata: MNetworkEnable
-        bool m_bEnabled; // 0x524        
-        [[maybe_unused]] std::uint8_t pad_0x525[0x3];
+        bool m_bEnabled; // 0x5f4        
+        [[maybe_unused]] std::uint8_t pad_0x5f5[0x3];
         
         // Datamap fields:
         // void InputEnable; // 0x0
@@ -40,5 +40,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_InfoVisibilityBox because it is not a standard-layout class
-    static_assert(sizeof(C_InfoVisibilityBox) == 0x528);
+    static_assert(sizeof(C_InfoVisibilityBox) == 0x5f8);
 };

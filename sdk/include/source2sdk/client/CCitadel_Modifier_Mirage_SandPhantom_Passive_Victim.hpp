@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x228
+    // Size: 0x258
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim : public client::CCitadelModifier
@@ -23,10 +23,10 @@ namespace source2sdk::client
     public:
         [[maybe_unused]] std::uint8_t pad_0xc0[0x10]; // 0xc0
         entity2::GameTime_t m_flLastProcTime; // 0xd0        
-        [[maybe_unused]] std::uint8_t pad_0xd4[0x154];
+        [[maybe_unused]] std::uint8_t pad_0xd4[0x184];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim) == 0x228);
+    static_assert(sizeof(CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim) == 0x258);
 };

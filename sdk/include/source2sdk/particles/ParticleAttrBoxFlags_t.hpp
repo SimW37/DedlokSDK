@@ -8,7 +8,7 @@
 
 namespace source2sdk::particles
 {
-    // Enumerator count: 4
+    // Enumerator count: 6
     // Alignment: 4
     // Size: 0x4
     enum class ParticleAttrBoxFlags_t : std::uint32_t
@@ -19,7 +19,11 @@ namespace source2sdk::particles
         PARTICLE_ATTR_BOX_FLAGS_WATER = 0x1,
         // MPropertyFriendlyName "On Fire"
         PARTICLE_ATTR_BOX_FLAGS_ON_FIRE = 0x2,
+        // MPropertyFriendlyName "Electrified"
+        PARTICLE_ATTR_BOX_FLAGS_ELECTRIFIED = 0x4,
         // MPropertyFriendlyName "Asleep"
-        PARTICLE_ATTR_BOX_FLAGS_ASLEEP = 0x3,
+        PARTICLE_ATTR_BOX_FLAGS_ASLEEP = 0x8,
+        // MPropertyFriendlyName "Frozen"
+        PARTICLE_ATTR_BOX_FLAGS_FROZEN = 0x10,
     };
 };

@@ -1,5 +1,6 @@
 #pragma once
 #include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/server/CCitadelAutoScaledTime.hpp"
 #include "source2sdk/server/CCitadelBaseAbility.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -15,21 +16,25 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xce8
+    // Size: 0xe30
     // Has VTable
+    // 
+    // static metadata: MNetworkVarNames "CCitadelAutoScaledTime m_flBarrageEndTime"
     #pragma pack(push, 1)
     class CCitadel_Ability_RocketBarrage : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0x1c0]; // 0xb00
-        float m_flCurrentTimeScale; // 0xcc0        
-        Vector m_vecAimPos; // 0xcc4        
-        Vector m_vecAimVel; // 0xcd0        
-        entity2::GameTime_t m_flLastUpdateTime; // 0xcdc        
-        [[maybe_unused]] std::uint8_t pad_0xce0[0x8];
+        // metadata: MNetworkEnable
+        server::CCitadelAutoScaledTime m_flBarrageEndTime; // 0xba0        
+        [[maybe_unused]] std::uint8_t pad_0xbb8[0x240]; // 0xbb8
+        float m_flCurrentTimeScale; // 0xdf8        
+        Vector m_vecAimPos; // 0xdfc        
+        Vector m_vecAimVel; // 0xe08        
+        entity2::GameTime_t m_flLastUpdateTime; // 0xe14        
+        [[maybe_unused]] std::uint8_t pad_0xe18[0x18];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_RocketBarrage because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_RocketBarrage) == 0xce8);
+    static_assert(sizeof(CCitadel_Ability_RocketBarrage) == 0xe30);
 };

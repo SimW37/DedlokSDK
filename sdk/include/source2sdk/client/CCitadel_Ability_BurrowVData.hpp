@@ -17,7 +17,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1a08
+    // Size: 0x1a30
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -28,33 +28,33 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-        char m_ExplodeParticle[0xe0]; // 0x15c8        
+        char m_ExplodeParticle[0xe0]; // 0x15f0        
         // m_BurrowStartParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BurrowStartParticle;
-        char m_BurrowStartParticle[0xe0]; // 0x16a8        
+        char m_BurrowStartParticle[0xe0]; // 0x16d0        
         // m_BurrowEndParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BurrowEndParticle;
-        char m_BurrowEndParticle[0xe0]; // 0x1788        
+        char m_BurrowEndParticle[0xe0]; // 0x17b0        
         // m_BurrowInGroundParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BurrowInGroundParticle;
-        char m_BurrowInGroundParticle[0xe0]; // 0x1868        
+        char m_BurrowInGroundParticle[0xe0]; // 0x1890        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_BurrowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_BurrowModifier;
-        char m_BurrowModifier[0x10]; // 0x1948        
+        char m_BurrowModifier[0x10]; // 0x1970        
         // m_SpinModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_SpinModifier;
-        char m_SpinModifier[0x10]; // 0x1958        
+        char m_SpinModifier[0x10]; // 0x1980        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strBurrowEndSound; // 0x1968        
+        CSoundEventName m_strBurrowEndSound; // 0x1990        
         // metadata: MPropertyStartGroup "+Burrow Properties"
-        float m_flChannelEndEnemyPopUpForce; // 0x1978        
-        float m_flChannelEndEnemyPopUpCylinderHeight; // 0x197c        
+        float m_flChannelEndEnemyPopUpForce; // 0x19a0        
+        float m_flChannelEndEnemyPopUpCylinderHeight; // 0x19a4        
         // metadata: MPropertyDescription "Spin Camera Controller that matches the modifier for client"
-        client::CitadelCameraOperationsSequence_t m_cameraSpinStart; // 0x1980        
+        client::CitadelCameraOperationsSequence_t m_cameraSpinStart; // 0x19a8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_BurrowVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_BurrowVData) == 0x1a08);
+    static_assert(sizeof(CCitadel_Ability_BurrowVData) == 0x1a30);
 };

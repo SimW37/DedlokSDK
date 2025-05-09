@@ -17,7 +17,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x17a0
+    // Size: 0x17c8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -28,18 +28,18 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Modifiers"
         // m_EscapeModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_EscapeModifier;
-        char m_EscapeModifier[0x10]; // 0x1618        
+        char m_EscapeModifier[0x10]; // 0x1640        
         // metadata: MPropertyStartGroup "Visuals"
         // m_SlashEffectParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashEffectParticle;
-        char m_SlashEffectParticle[0xe0]; // 0x1628        
+        char m_SlashEffectParticle[0xe0]; // 0x1650        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strExpireSound; // 0x1708        
+        CSoundEventName m_strExpireSound; // 0x1730        
         // metadata: MPropertyStartGroup "Camera"
-        client::CitadelCameraOperationsSequence_t m_cameraSequenceInShadow; // 0x1718        
+        client::CitadelCameraOperationsSequence_t m_cameraSequenceInShadow; // 0x1740        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Nano_PrimaryWeaponVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Nano_PrimaryWeaponVData) == 0x17a0);
+    static_assert(sizeof(CCitadel_Ability_Nano_PrimaryWeaponVData) == 0x17c8);
 };

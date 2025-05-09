@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa58
+    // Size: 0xa60
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,23 +27,23 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Modifiers"
         // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_DebuffModifier;
-        char m_DebuffModifier[0x10]; // 0x788        
+        char m_DebuffModifier[0x10]; // 0x790        
         // metadata: MPropertyStartGroup "Visuals"
         // m_ExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle;
-        char m_ExplosionParticle[0xe0]; // 0x798        
+        char m_ExplosionParticle[0xe0]; // 0x7a0        
         // m_ExplosionVictimParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionVictimParticle;
-        char m_ExplosionVictimParticle[0xe0]; // 0x878        
+        char m_ExplosionVictimParticle[0xe0]; // 0x880        
         // m_SalvoWeaponParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SalvoWeaponParticle;
-        char m_SalvoWeaponParticle[0xe0]; // 0x958        
+        char m_SalvoWeaponParticle[0xe0]; // 0x960        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_ShotVictimSound; // 0xa38        
-        CSoundEventName m_ShotConfirmationSound; // 0xa48        
+        CSoundEventName m_ShotVictimSound; // 0xa40        
+        CSoundEventName m_ShotConfirmationSound; // 0xa50        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_SalvoBulletVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_SalvoBulletVData) == 0xa58);
+    static_assert(sizeof(CCitadel_Modifier_SalvoBulletVData) == 0xa60);
 };

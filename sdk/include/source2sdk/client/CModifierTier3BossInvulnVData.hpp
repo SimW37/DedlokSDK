@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x740
+    // Size: 0x748
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,12 +26,12 @@ namespace source2sdk::client
         // metadata: MPropertyGroupName "Visuals"
         // m_ShieldParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldParticle;
-        char m_ShieldParticle[0xe0]; // 0x658        
-        float m_flShieldRadius; // 0x738        
-        [[maybe_unused]] std::uint8_t pad_0x73c[0x4];
+        char m_ShieldParticle[0xe0]; // 0x660        
+        float m_flShieldRadius; // 0x740        
+        [[maybe_unused]] std::uint8_t pad_0x744[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CModifierTier3BossInvulnVData because it is not a standard-layout class
-    static_assert(sizeof(CModifierTier3BossInvulnVData) == 0x740);
+    static_assert(sizeof(CModifierTier3BossInvulnVData) == 0x748);
 };

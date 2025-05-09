@@ -21,7 +21,7 @@ namespace source2sdk::pulse_runtime_lib
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MCellForDomain "TestDomain"
     // static metadata: MPulseCellMethodBindings
-    // static metadata: MPulseCellOutflowHookInfo
+    // static metadata: MPulseCellOutflowHookInfo "Äùí¯"
     // static metadata: MPropertyFriendlyName "[Test] Random Yes/No Outflow"
     // static metadata: MPropertyDescription "Test node that randomly picks between two outflows."
     #pragma pack(push, 1)

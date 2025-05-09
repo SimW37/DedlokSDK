@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x130
+    // Size: 0x140
     // Has VTable
     #pragma pack(push, 1)
     class CModifier_Synth_Pulse_Escape : public client::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x70];
+        [[maybe_unused]] std::uint8_t pad_0xc0[0x80];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CModifier_Synth_Pulse_Escape) == 0x130);
+    static_assert(sizeof(CModifier_Synth_Pulse_Escape) == 0x140);
 };

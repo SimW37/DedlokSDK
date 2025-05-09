@@ -16,26 +16,26 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x268
+    // Size: 0x2a0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_Invis : public client::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x188]; // 0xc0
-        bool m_bInvis; // 0x248        
-        [[maybe_unused]] std::uint8_t pad_0x249[0x3]; // 0x249
-        entity2::GameTime_t m_flStartInvisTime; // 0x24c        
-        bool m_bFullyInvis; // 0x250        
-        [[maybe_unused]] std::uint8_t pad_0x251[0x3]; // 0x251
-        entity2::GameTime_t m_flLastDamageTaken; // 0x254        
-        entity2::GameTime_t m_flLastSpotted; // 0x258        
-        client::ParticleIndex_t m_nDetectionRangeRing; // 0x25c        
-        client::ParticleIndex_t m_nFullInvisEffect; // 0x260        
-        [[maybe_unused]] std::uint8_t pad_0x264[0x4];
+        [[maybe_unused]] std::uint8_t pad_0xc0[0x1c0]; // 0xc0
+        bool m_bInvis; // 0x280        
+        [[maybe_unused]] std::uint8_t pad_0x281[0x3]; // 0x281
+        entity2::GameTime_t m_flStartInvisTime; // 0x284        
+        bool m_bFullyInvis; // 0x288        
+        [[maybe_unused]] std::uint8_t pad_0x289[0x3]; // 0x289
+        entity2::GameTime_t m_flLastDamageTaken; // 0x28c        
+        entity2::GameTime_t m_flLastSpotted; // 0x290        
+        client::ParticleIndex_t m_nDetectionRangeRing; // 0x294        
+        client::ParticleIndex_t m_nFullInvisEffect; // 0x298        
+        [[maybe_unused]] std::uint8_t pad_0x29c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Invis because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Invis) == 0x268);
+    static_assert(sizeof(CCitadel_Modifier_Invis) == 0x2a0);
 };

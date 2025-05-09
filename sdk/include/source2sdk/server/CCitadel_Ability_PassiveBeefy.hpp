@@ -15,18 +15,18 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc70
+    // Size: 0xd40
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_PassiveBeefy : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0x18]; // 0xb00
-        entity2::GameTime_t m_flLastHealTime; // 0xb18        
-        [[maybe_unused]] std::uint8_t pad_0xb1c[0x154];
+        [[maybe_unused]] std::uint8_t pad_0xba0[0x18]; // 0xba0
+        entity2::GameTime_t m_flLastHealTime; // 0xbb8        
+        [[maybe_unused]] std::uint8_t pad_0xbbc[0x184];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_PassiveBeefy because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_PassiveBeefy) == 0xc70);
+    static_assert(sizeof(CCitadel_Ability_PassiveBeefy) == 0xd40);
 };

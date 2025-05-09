@@ -29,7 +29,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa78
+    // Size: 0xb80
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "EPlayerPlayState m_ePlayState"
@@ -65,86 +65,88 @@ namespace source2sdk::client
     class CCitadelPlayerController : public client::CBasePlayerController
     {
     public:
+        [[maybe_unused]] std::uint8_t pad_0x7e0[0x4]; // 0x7e0
         // metadata: MNetworkEnable
-        client::EPlayerPlayState m_ePlayState; // 0x718        
+        client::EPlayerPlayState m_ePlayState; // 0x7e4        
         // metadata: MNetworkEnable
-        int32_t m_iGuidedBotMatchLastHits; // 0x71c        
+        int32_t m_iGuidedBotMatchLastHits; // 0x7e8        
         // metadata: MNetworkEnable
-        int32_t m_iGuidedBotMatchOrbsSecured; // 0x720        
+        int32_t m_iGuidedBotMatchOrbsSecured; // 0x7ec        
         // metadata: MNetworkEnable
-        int32_t m_iGuidedBotMatchOrbsDenied; // 0x724        
+        int32_t m_iGuidedBotMatchOrbsDenied; // 0x7f0        
         // metadata: MNetworkEnable
-        int32_t m_iGuidedBotMatchDamageToGuardians; // 0x728        
+        int32_t m_iGuidedBotMatchDamageToGuardians; // 0x7f4        
         // metadata: MNetworkEnable
-        int32_t m_iGuidedBotMatchDamageToPlayers; // 0x72c        
+        int32_t m_iGuidedBotMatchDamageToPlayers; // 0x7f8        
         // metadata: MNetworkEnable
-        int32_t m_iGuidedBotMatchDamageTaken; // 0x730        
+        int32_t m_iGuidedBotMatchDamageTaken; // 0x7fc        
         // metadata: MNetworkEnable
-        int32_t m_iGuidedBotMatchNetWorth; // 0x734        
+        int32_t m_iGuidedBotMatchNetWorth; // 0x800        
         // metadata: MNetworkEnable
-        int32_t m_iGuidedBotMatchModsPurchased; // 0x738        
+        int32_t m_iGuidedBotMatchModsPurchased; // 0x804        
         // metadata: MNetworkEnable
-        int32_t m_iGuidedBotMatchAbilityUpgrades; // 0x73c        
+        int32_t m_iGuidedBotMatchAbilityUpgrades; // 0x808        
         // metadata: MNetworkEnable
-        float m_flGuideBotMatchLastTaskNagVO; // 0x740        
+        float m_flGuideBotMatchLastTaskNagVO; // 0x80c        
         // metadata: MNetworkEnable
-        float m_flGuideBotLastTimeTaskCompleted; // 0x744        
+        float m_flGuideBotLastTimeTaskCompleted; // 0x810        
         // metadata: MNetworkEnable
-        client::EGuidedBotMatchObjective m_eGuidedBotMatchObjective; // 0x748        
+        client::EGuidedBotMatchObjective m_eGuidedBotMatchObjective; // 0x814        
         // metadata: MNetworkEnable
-        int32_t m_nCurrentRank; // 0x74c        
+        int32_t m_nCurrentRank; // 0x818        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "AssignedLaneChanged"
-        int8_t m_nAssignedLane; // 0x750        
+        int8_t m_nAssignedLane; // 0x81c        
         // metadata: MNetworkEnable
-        int8_t m_nOriginalLaneAssignment; // 0x751        
+        int8_t m_nOriginalLaneAssignment; // 0x81d        
         // metadata: MNetworkEnable
-        bool m_bIsKingPanda; // 0x752        
+        bool m_bIsKingPanda; // 0x81e        
         // metadata: MNetworkEnable
-        bool m_bBotDisconnectTakeover; // 0x753        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkChangeCallback "ChatGroupsChanged"
-        bool m_bInTeamChat; // 0x754        
+        bool m_bBotDisconnectTakeover; // 0x81f        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "ChatGroupsChanged"
-        bool m_bInPartyChat; // 0x755        
-        [[maybe_unused]] std::uint8_t pad_0x756[0x2]; // 0x756
+        bool m_bInTeamChat; // 0x820        
+        // metadata: MNetworkEnable
+        // metadata: MNetworkChangeCallback "ChatGroupsChanged"
+        bool m_bInPartyChat; // 0x821        
+        [[maybe_unused]] std::uint8_t pad_0x822[0x2]; // 0x822
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        client::HeroBuildID_t m_unHeroBuildID; // 0x758        
+        client::HeroBuildID_t m_unHeroBuildID; // 0x824        
         // metadata: MNetworkEnable
-        bool m_bLaneSwapLocked; // 0x75c        
-        [[maybe_unused]] std::uint8_t pad_0x75d[0x3]; // 0x75d
+        bool m_bLaneSwapLocked; // 0x828        
+        [[maybe_unused]] std::uint8_t pad_0x829[0x7]; // 0x829
         // metadata: MNetworkEnable
         // m_vecLaneSwapRequests has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // C_NetworkUtlVectorBase<CHandle<client::C_BaseEntity>> m_vecLaneSwapRequests;
-        char m_vecLaneSwapRequests[0x18]; // 0x760        
+        char m_vecLaneSwapRequests[0x18]; // 0x830        
         // metadata: MNetworkEnable
         // m_vecLaneSwapRejects has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // C_NetworkUtlVectorBase<CHandle<client::C_BaseEntity>> m_vecLaneSwapRejects;
-        char m_vecLaneSwapRejects[0x18]; // 0x778        
+        char m_vecLaneSwapRejects[0x18]; // 0x848        
         // metadata: MNetworkEnable
         // m_vecMutedPlayers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // C_NetworkUtlVectorBase<int32_t> m_vecMutedPlayers;
-        char m_vecMutedPlayers[0x18]; // 0x790        
+        char m_vecMutedPlayers[0x18]; // 0x860        
         // metadata: MNetworkEnable
+        // metadata: MNetworkChangeCallback "OnHeroPawnChanged"
         // m_hHeroPawn has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_CitadelPlayerPawn> m_hHeroPawn;
-        char m_hHeroPawn[0x4]; // 0x7a8        
-        [[maybe_unused]] std::uint8_t pad_0x7ac[0x34]; // 0x7ac
+        char m_hHeroPawn[0x4]; // 0x878        
+        [[maybe_unused]] std::uint8_t pad_0x87c[0x3c]; // 0x87c
         // metadata: MNetworkEnable
-        client::PlayerDataGlobal_t m_PlayerDataGlobal; // 0x7e0        
+        client::PlayerDataGlobal_t m_PlayerDataGlobal; // 0x8b8        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        int8_t m_nDeathReplayAvailable; // 0xa68        
+        int8_t m_nDeathReplayAvailable; // 0xb70        
         // metadata: MNetworkEnable
-        client::CitadelLobbyPlayerSlot_t m_unLobbyPlayerSlot; // 0xa69        
-        bool m_bHasCheckedFriendName; // 0xa6a        
-        [[maybe_unused]] std::uint8_t pad_0xa6b[0x5]; // 0xa6b
-        CUtlString m_sFriendName; // 0xa70        
+        client::CitadelLobbyPlayerSlot_t m_unLobbyPlayerSlot; // 0xb71        
+        bool m_bHasCheckedFriendName; // 0xb72        
+        [[maybe_unused]] std::uint8_t pad_0xb73[0x5]; // 0xb73
+        CUtlString m_sFriendName; // 0xb78        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelPlayerController because it is not a standard-layout class
-    static_assert(sizeof(CCitadelPlayerController) == 0xa78);
+    static_assert(sizeof(CCitadelPlayerController) == 0xb80);
 };

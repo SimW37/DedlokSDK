@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1880
+    // Size: 0x18a8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,19 +26,19 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-        char m_ExplodeParticle[0xe0]; // 0x15c8        
+        char m_ExplodeParticle[0xe0]; // 0x15f0        
         // m_SummonParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonParticle;
-        char m_SummonParticle[0xe0]; // 0x16a8        
+        char m_SummonParticle[0xe0]; // 0x16d0        
         // m_SummonReadyParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonReadyParticle;
-        char m_SummonReadyParticle[0xe0]; // 0x1788        
-        CUtlString m_SummonParticleAttachment; // 0x1868        
+        char m_SummonReadyParticle[0xe0]; // 0x17b0        
+        CUtlString m_SummonParticleAttachment; // 0x1890        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_ExplodeSound; // 0x1870        
+        CSoundEventName m_ExplodeSound; // 0x1898        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Wrecker_BoulderGrenadeVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Wrecker_BoulderGrenadeVData) == 0x1880);
+    static_assert(sizeof(CCitadel_Ability_Wrecker_BoulderGrenadeVData) == 0x18a8);
 };

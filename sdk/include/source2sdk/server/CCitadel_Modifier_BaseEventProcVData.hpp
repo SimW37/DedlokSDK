@@ -18,7 +18,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x688
+    // Size: 0x690
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,21 +26,21 @@ namespace source2sdk::server
     class CCitadel_Modifier_BaseEventProcVData : public server::CCitadelModifierVData
     {
     public:
-        bool m_bProcChanceAffectedByEffectiveness; // 0x658        
-        bool m_bShouldApplyAbilityCooldown; // 0x659        
+        bool m_bProcChanceAffectedByEffectiveness; // 0x660        
+        bool m_bShouldApplyAbilityCooldown; // 0x661        
         // metadata: MPropertySuppressExpr "m_bCanProcMultipleTimesFromSameShot != true"
-        bool m_bCanProcMultipleTimesOnOneTarget; // 0x65a        
-        bool m_bCanProcByOtherObjects; // 0x65b        
-        client::CITADEL_UNIT_TARGET_TYPE m_nAbilityTargetTypes; // 0x65c        
-        client::CITADEL_UNIT_TARGET_FLAGS m_nAbilityTargetFlags; // 0x660        
-        [[maybe_unused]] std::uint8_t pad_0x664[0x4]; // 0x664
+        bool m_bCanProcMultipleTimesOnOneTarget; // 0x662        
+        bool m_bCanProcByOtherObjects; // 0x663        
+        client::CITADEL_UNIT_TARGET_TYPE m_nAbilityTargetTypes; // 0x664        
+        client::CITADEL_UNIT_TARGET_FLAGS m_nAbilityTargetFlags; // 0x668        
+        [[maybe_unused]] std::uint8_t pad_0x66c[0x4]; // 0x66c
         // m_vecProcDamageTypes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<client::ECitadelDamageType> m_vecProcDamageTypes;
-        char m_vecProcDamageTypes[0x18]; // 0x668        
-        client::TakeDamageFlags_t m_nRequiredDamageFlags; // 0x680        
+        char m_vecProcDamageTypes[0x18]; // 0x670        
+        client::TakeDamageFlags_t m_nRequiredDamageFlags; // 0x688        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_BaseEventProcVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_BaseEventProcVData) == 0x688);
+    static_assert(sizeof(CCitadel_Modifier_BaseEventProcVData) == 0x690);
 };

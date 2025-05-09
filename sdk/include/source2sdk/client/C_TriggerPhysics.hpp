@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x998
+    // Size: 0xb38
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "float m_gravityScale"
@@ -35,36 +35,36 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        float m_gravityScale; // 0x948        
+        float m_gravityScale; // 0xae8        
         // metadata: MNetworkEnable
-        float m_linearLimit; // 0x94c        
+        float m_linearLimit; // 0xaec        
         // metadata: MNetworkEnable
-        float m_linearDamping; // 0x950        
+        float m_linearDamping; // 0xaf0        
         // metadata: MNetworkEnable
-        float m_angularLimit; // 0x954        
+        float m_angularLimit; // 0xaf4        
         // metadata: MNetworkEnable
-        float m_angularDamping; // 0x958        
+        float m_angularDamping; // 0xaf8        
         // metadata: MNetworkEnable
-        float m_linearForce; // 0x95c        
+        float m_linearForce; // 0xafc        
         // metadata: MNetworkEnable
-        float m_flFrequency; // 0x960        
+        float m_flFrequency; // 0xb00        
         // metadata: MNetworkEnable
-        float m_flDampingRatio; // 0x964        
+        float m_flDampingRatio; // 0xb04        
         // metadata: MNetworkEnable
-        Vector m_vecLinearForcePointAt; // 0x968        
+        Vector m_vecLinearForcePointAt; // 0xb08        
         // metadata: MNetworkEnable
-        bool m_bCollapseToForcePoint; // 0x974        
-        [[maybe_unused]] std::uint8_t pad_0x975[0x3]; // 0x975
+        bool m_bCollapseToForcePoint; // 0xb14        
+        [[maybe_unused]] std::uint8_t pad_0xb15[0x3]; // 0xb15
         // metadata: MNetworkEnable
-        Vector m_vecLinearForcePointAtWorld; // 0x978        
+        Vector m_vecLinearForcePointAtWorld; // 0xb18        
         // metadata: MNetworkEnable
-        Vector m_vecLinearForceDirection; // 0x984        
+        Vector m_vecLinearForceDirection; // 0xb24        
         // metadata: MNetworkEnable
-        bool m_bConvertToDebrisWhenPossible; // 0x990        
-        [[maybe_unused]] std::uint8_t pad_0x991[0x7];
+        bool m_bConvertToDebrisWhenPossible; // 0xb30        
+        [[maybe_unused]] std::uint8_t pad_0xb31[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_TriggerPhysics because it is not a standard-layout class
-    static_assert(sizeof(C_TriggerPhysics) == 0x998);
+    static_assert(sizeof(C_TriggerPhysics) == 0xb38);
 };

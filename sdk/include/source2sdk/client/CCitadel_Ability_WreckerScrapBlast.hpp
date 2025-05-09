@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xcf8
+    // Size: 0xe80
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_WreckerScrapBlast : public client::C_CitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc50[0xa8];
+        [[maybe_unused]] std::uint8_t pad_0xdc0[0xc0];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Ability_WreckerScrapBlast) == 0xcf8);
+    static_assert(sizeof(CCitadel_Ability_WreckerScrapBlast) == 0xe80);
 };

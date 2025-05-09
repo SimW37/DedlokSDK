@@ -8,7 +8,7 @@
 
 namespace source2sdk::mathlib_extended
 {
-    // Enumerator count: 81
+    // Enumerator count: 82
     // Alignment: 1
     // Size: 0x1
     enum class fieldtype_t : std::uint8_t
@@ -93,6 +93,7 @@ namespace source2sdk::mathlib_extended
         FIELD_ENGINE_TICK = 77,
         FIELD_WORLD_GROUP_ID = 78,
         FIELD_GLOBALSYMBOL = 79,
-        FIELD_TYPECOUNT = 80,
+        FIELD_HNMGRAPHDEFINITION = 80,
+        FIELD_TYPECOUNT = 81,
     };
 };

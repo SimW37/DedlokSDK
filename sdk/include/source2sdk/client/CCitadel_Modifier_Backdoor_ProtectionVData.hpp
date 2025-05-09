@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x840
+    // Size: 0x848
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -24,31 +24,31 @@ namespace source2sdk::client
     {
     public:
         // metadata: MPropertyDescription "How long this modifier must be alive before backdoor protection is activated"
-        float m_flActivationTime; // 0x658        
+        float m_flActivationTime; // 0x660        
         // metadata: MPropertyDescription "How much should damage be reduced from players when backdoor protection is up? 0 is no reduction, 100 is complete reduction"
         // metadata: MPropertyAttributeRange "0 100"
-        float m_flBackdoorProtectionDamageMitigationFromPlayers; // 0x65c        
+        float m_flBackdoorProtectionDamageMitigationFromPlayers; // 0x664        
         // metadata: MPropertyDescription "How health per second does backdoor protection regen?"
-        float m_flHealthPerSecondRegen; // 0x660        
+        float m_flHealthPerSecondRegen; // 0x668        
         // metadata: MPropertyDescription "How health per second when out of combat?"
-        float m_flOutOfCombatHealthRegen; // 0x664        
+        float m_flOutOfCombatHealthRegen; // 0x66c        
         // metadata: MPropertyDescription "How longer after taking no damage will out out of combat regen kick in?"
-        float m_flOutOfCombatRegenDelay; // 0x668        
+        float m_flOutOfCombatRegenDelay; // 0x670        
         // metadata: MPropertyDescription "How long the shield effect lingers after having taken damage"
-        float m_flEffectsLingerTime; // 0x66c        
+        float m_flEffectsLingerTime; // 0x674        
         // metadata: MPropertyStartGroup "Visuals"
         // m_ShieldImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldImpactParticle;
-        char m_ShieldImpactParticle[0xe0]; // 0x670        
+        char m_ShieldImpactParticle[0xe0]; // 0x678        
         // m_ShieldActiveParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldActiveParticle;
-        char m_ShieldActiveParticle[0xe0]; // 0x750        
-        CUtlString m_strActiveEffectConfigName; // 0x830        
-        float flShieldImpactDirectionOffset; // 0x838        
-        [[maybe_unused]] std::uint8_t pad_0x83c[0x4];
+        char m_ShieldActiveParticle[0xe0]; // 0x758        
+        CUtlString m_strActiveEffectConfigName; // 0x838        
+        float flShieldImpactDirectionOffset; // 0x840        
+        [[maybe_unused]] std::uint8_t pad_0x844[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Backdoor_ProtectionVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Backdoor_ProtectionVData) == 0x840);
+    static_assert(sizeof(CCitadel_Modifier_Backdoor_ProtectionVData) == 0x848);
 };

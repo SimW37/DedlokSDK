@@ -14,7 +14,7 @@ namespace source2sdk::animlib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc0
+    // Size: 0xb8
     // Has VTable
     #pragma pack(push, 1)
     class CNmModelSpaceBlendTask : public animlib::CNmBlendTaskBase
@@ -24,5 +24,5 @@ namespace source2sdk::animlib
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CNmModelSpaceBlendTask) == 0xc0);
+    static_assert(sizeof(CNmModelSpaceBlendTask) == 0xb8);
 };

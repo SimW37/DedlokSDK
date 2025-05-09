@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1708
+    // Size: 0x1760
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,17 +27,17 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_DetonateParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DetonateParticle;
-        char m_DetonateParticle[0xe0]; // 0x1610        
+        char m_DetonateParticle[0xe0]; // 0x1668        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_DisruptModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_DisruptModifier;
-        char m_DisruptModifier[0x10]; // 0x16f0        
+        char m_DisruptModifier[0x10]; // 0x1748        
         // metadata: MPropertyStartGroup "Gameplay"
-        float m_flWaveSpeed; // 0x1700        
-        [[maybe_unused]] std::uint8_t pad_0x1704[0x4];
+        float m_flWaveSpeed; // 0x1758        
+        [[maybe_unused]] std::uint8_t pad_0x175c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Item_ModDisruptorVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Item_ModDisruptorVData) == 0x1708);
+    static_assert(sizeof(CCitadel_Item_ModDisruptorVData) == 0x1760);
 };

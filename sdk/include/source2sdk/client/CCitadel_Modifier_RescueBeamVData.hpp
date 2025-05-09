@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x818
+    // Size: 0x820
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,13 +26,13 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_BeamParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle;
-        char m_BeamParticle[0xe0]; // 0x658        
+        char m_BeamParticle[0xe0]; // 0x660        
         // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-        char m_ImpactParticle[0xe0]; // 0x738        
+        char m_ImpactParticle[0xe0]; // 0x740        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_RescueBeamVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_RescueBeamVData) == 0x818);
+    static_assert(sizeof(CCitadel_Modifier_RescueBeamVData) == 0x820);
 };

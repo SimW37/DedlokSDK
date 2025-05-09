@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1890
+    // Size: 0x18b8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,23 +27,23 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_SummonParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonParticle;
-        char m_SummonParticle[0xe0]; // 0x15c8        
+        char m_SummonParticle[0xe0]; // 0x15f0        
         // m_SummonReadyParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonReadyParticle;
-        char m_SummonReadyParticle[0xe0]; // 0x16a8        
-        CUtlString m_SummonParticleAttachment; // 0x1788        
+        char m_SummonReadyParticle[0xe0]; // 0x16d0        
+        CUtlString m_SummonParticleAttachment; // 0x17b0        
         // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-        char m_ExplodeParticle[0xe0]; // 0x1790        
+        char m_ExplodeParticle[0xe0]; // 0x17b8        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_AutoThrowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_AutoThrowModifier;
-        char m_AutoThrowModifier[0x10]; // 0x1870        
+        char m_AutoThrowModifier[0x10]; // 0x1898        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_HoldingBallLoop; // 0x1880        
+        CSoundEventName m_HoldingBallLoop; // 0x18a8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbilityWreckingBallVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityWreckingBallVData) == 0x1890);
+    static_assert(sizeof(CAbilityWreckingBallVData) == 0x18b8);
 };

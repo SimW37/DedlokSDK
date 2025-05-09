@@ -1,6 +1,7 @@
 #pragma once
+#include "source2sdk/client/AuraCenterType_t.hpp"
+#include "source2sdk/client/AuraShapeType_t.hpp"
 #include "source2sdk/client/CModifierLevelFloat.hpp"
-#include "source2sdk/client/eAuraShapeType.hpp"
 #include "source2sdk/server/CBaseModifier.hpp"
 #include "source2sdk/server/CCitadelModifierVData.hpp"
 #include "source2sdk/source2gen.hpp"
@@ -17,7 +18,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x690
+    // Size: 0x6a0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -25,20 +26,22 @@ namespace source2sdk::server
     class CModifierVData_BaseAura : public server::CCitadelModifierVData
     {
     public:
-        client::eAuraShapeType m_eAuraShapeType; // 0x658        
-        // metadata: MPropertySuppressExpr "m_eAuraShapeType != k_eAuraShapeTypeSphere"
-        client::CModifierLevelFloat m_flAuraRadius; // 0x65c        
-        // metadata: MPropertySuppressExpr "m_eAuraShapeType != k_eAuraShapeTypeEntityBased"
-        client::CModifierLevelFloat m_flAuraEntityBoundsScale; // 0x66c        
-        int32_t m_nAmbientParticleRadiusControlPoint; // 0x67c        
+        client::AuraShapeType_t m_nAuraShapeType; // 0x660        
+        client::AuraCenterType_t m_nCenterType; // 0x664        
+        // metadata: MPropertySuppressExpr "m_nAuraShapeType != eSphere"
+        client::CModifierLevelFloat m_flAuraRadius; // 0x668        
+        // metadata: MPropertySuppressExpr "m_nAuraShapeType != eEntityBased"
+        client::CModifierLevelFloat m_flAuraEntityBoundsScale; // 0x678        
+        int32_t m_nAmbientParticleRadiusControlPoint; // 0x688        
+        [[maybe_unused]] std::uint8_t pad_0x68c[0x4]; // 0x68c
         // metadata: MPropertyDescription "Aura - Modifier to Apply"
         // metadata: MPropertyFriendlyName "Modifier Provided By Aura"
         // m_modifierProvidedByAura has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CBaseModifier> m_modifierProvidedByAura;
-        char m_modifierProvidedByAura[0x10]; // 0x680        
+        char m_modifierProvidedByAura[0x10]; // 0x690        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CModifierVData_BaseAura because it is not a standard-layout class
-    static_assert(sizeof(CModifierVData_BaseAura) == 0x690);
+    static_assert(sizeof(CModifierVData_BaseAura) == 0x6a0);
 };

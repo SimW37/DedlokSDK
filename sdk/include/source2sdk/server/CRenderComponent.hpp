@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x4
     // Standard-layout class: false
-    // Size: 0xb8
+    // Size: 0xb0
     // Has VTable
     #pragma pack(push, 1)
     class CRenderComponent : public entity2::CEntityComponent
@@ -27,14 +27,13 @@ namespace source2sdk::server
         bool m_bIsRenderingWithViewModels; // 0x50        
         [[maybe_unused]] std::uint8_t pad_0x51[0x3]; // 0x51
         uint32_t m_nSplitscreenFlags; // 0x54        
-        [[maybe_unused]] std::uint8_t pad_0x58[0x8]; // 0x58
-        bool m_bEnableRendering; // 0x60        
-        [[maybe_unused]] std::uint8_t pad_0x61[0x4f]; // 0x61
-        bool m_bInterpolationReadyToDraw; // 0xb0        
-        [[maybe_unused]] std::uint8_t pad_0xb1[0x7];
+        bool m_bEnableRendering; // 0x58        
+        [[maybe_unused]] std::uint8_t pad_0x59[0x4f]; // 0x59
+        bool m_bInterpolationReadyToDraw; // 0xa8        
+        [[maybe_unused]] std::uint8_t pad_0xa9[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CRenderComponent because it is not a standard-layout class
-    static_assert(sizeof(CRenderComponent) == 0xb8);
+    static_assert(sizeof(CRenderComponent) == 0xb0);
 };

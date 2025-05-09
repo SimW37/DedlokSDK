@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x658
+    // Size: 0x660
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -25,5 +25,5 @@ namespace source2sdk::server
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CModifierTier3BossLaserBeamVData) == 0x658);
+    static_assert(sizeof(CModifierTier3BossLaserBeamVData) == 0x660);
 };

@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc8
+    // Size: 0xd8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_Bull_Leap_Boosting : public client::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x8];
+        [[maybe_unused]] std::uint8_t pad_0xc0[0x18];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Modifier_Bull_Leap_Boosting) == 0xc8);
+    static_assert(sizeof(CCitadel_Modifier_Bull_Leap_Boosting) == 0xd8);
 };

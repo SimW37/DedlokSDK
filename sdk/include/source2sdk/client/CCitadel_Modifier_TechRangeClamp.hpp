@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x100
+    // Size: 0x108
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_TechRangeClamp : public client::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x40];
+        [[maybe_unused]] std::uint8_t pad_0xc0[0x48];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Modifier_TechRangeClamp) == 0x100);
+    static_assert(sizeof(CCitadel_Modifier_TechRangeClamp) == 0x108);
 };

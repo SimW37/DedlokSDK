@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x100
+    // Size: 0x108
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_ChargedBomb : public server::CCitadelModifier
@@ -23,10 +23,10 @@ namespace source2sdk::server
     public:
         entity2::GameTime_t m_flNextBeep; // 0xc0        
         float m_flBeepInterval; // 0xc4        
-        [[maybe_unused]] std::uint8_t pad_0xc8[0x38];
+        [[maybe_unused]] std::uint8_t pad_0xc8[0x40];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_ChargedBomb because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_ChargedBomb) == 0x100);
+    static_assert(sizeof(CCitadel_Modifier_ChargedBomb) == 0x108);
 };

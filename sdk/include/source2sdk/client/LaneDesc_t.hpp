@@ -25,7 +25,7 @@ namespace source2sdk::client
         Color m_Color; // 0x10        
         Color m_MinimapZiplineColorOverride; // 0x14        
         Color m_Color4Lanes; // 0x18        
-        [[maybe_unused]] std::uint8_t pad_0x1c[0x4];
+        Color m_ObjectiveColor; // 0x1c        
     };
     #pragma pack(pop)
     
@@ -34,6 +34,7 @@ namespace source2sdk::client
     static_assert(offsetof(LaneDesc_t, m_Color) == 0x10);
     static_assert(offsetof(LaneDesc_t, m_MinimapZiplineColorOverride) == 0x14);
     static_assert(offsetof(LaneDesc_t, m_Color4Lanes) == 0x18);
+    static_assert(offsetof(LaneDesc_t, m_ObjectiveColor) == 0x1c);
     
     static_assert(sizeof(LaneDesc_t) == 0x20);
 };

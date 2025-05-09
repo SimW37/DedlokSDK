@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x580
+    // Size: 0x650
     // Has VTable
     // 
     // static metadata: MNetworkOverride "m_flScale"
@@ -28,25 +28,25 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        int32_t m_nFlameModelIndex; // 0x520        
+        int32_t m_nFlameModelIndex; // 0x5f0        
         // metadata: MNetworkEnable
-        int32_t m_nFlameFromAboveModelIndex; // 0x524        
-        float m_flScaleRegister; // 0x528        
-        float m_flScaleStart; // 0x52c        
-        float m_flScaleEnd; // 0x530        
-        entity2::GameTime_t m_flScaleTimeStart; // 0x534        
-        entity2::GameTime_t m_flScaleTimeEnd; // 0x538        
-        float m_flChildFlameSpread; // 0x53c        
-        [[maybe_unused]] std::uint8_t pad_0x540[0x10]; // 0x540
-        float m_flClipPerc; // 0x550        
-        bool m_bClipTested; // 0x554        
-        bool m_bFadingOut; // 0x555        
-        [[maybe_unused]] std::uint8_t pad_0x556[0x2]; // 0x556
-        client::TimedEvent m_tParticleSpawn; // 0x558        
-        [[maybe_unused]] std::uint8_t pad_0x560[0x20];
+        int32_t m_nFlameFromAboveModelIndex; // 0x5f4        
+        float m_flScaleRegister; // 0x5f8        
+        float m_flScaleStart; // 0x5fc        
+        float m_flScaleEnd; // 0x600        
+        entity2::GameTime_t m_flScaleTimeStart; // 0x604        
+        entity2::GameTime_t m_flScaleTimeEnd; // 0x608        
+        float m_flChildFlameSpread; // 0x60c        
+        [[maybe_unused]] std::uint8_t pad_0x610[0x10]; // 0x610
+        float m_flClipPerc; // 0x620        
+        bool m_bClipTested; // 0x624        
+        bool m_bFadingOut; // 0x625        
+        [[maybe_unused]] std::uint8_t pad_0x626[0x2]; // 0x626
+        client::TimedEvent m_tParticleSpawn; // 0x628        
+        [[maybe_unused]] std::uint8_t pad_0x630[0x20];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_FireSmoke because it is not a standard-layout class
-    static_assert(sizeof(C_FireSmoke) == 0x580);
+    static_assert(sizeof(C_FireSmoke) == 0x650);
 };

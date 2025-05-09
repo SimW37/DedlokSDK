@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x17a8
+    // Size: 0x17d0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,19 +27,19 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-        char m_ImpactParticle[0xe0]; // 0x15c8        
+        char m_ImpactParticle[0xe0]; // 0x15f0        
         // m_WallImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactParticle;
-        char m_WallImpactParticle[0xe0]; // 0x16a8        
+        char m_WallImpactParticle[0xe0]; // 0x16d0        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strWallSlamSound; // 0x1788        
+        CSoundEventName m_strWallSlamSound; // 0x17b0        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_DebuffModifier;
-        char m_DebuffModifier[0x10]; // 0x1798        
+        char m_DebuffModifier[0x10]; // 0x17c0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Gunslinger_KnockbackBlastVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Gunslinger_KnockbackBlastVData) == 0x17a8);
+    static_assert(sizeof(CCitadel_Ability_Gunslinger_KnockbackBlastVData) == 0x17d0);
 };

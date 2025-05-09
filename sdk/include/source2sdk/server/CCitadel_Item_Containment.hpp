@@ -14,16 +14,15 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb58
+    // Size: 0xba8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Item_Containment : public server::CCitadel_Item_TrackingProjectileApplyModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb20[0x38];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Item_Containment) == 0xb58);
+    static_assert(sizeof(CCitadel_Item_Containment) == 0xba8);
 };

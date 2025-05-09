@@ -14,7 +14,7 @@ namespace source2sdk::scenesystem
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x38
+    // Size: 0x30
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
@@ -24,5 +24,5 @@ namespace source2sdk::scenesystem
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CSSDSMsg_PostLayer) == 0x38);
+    static_assert(sizeof(CSSDSMsg_PostLayer) == 0x30);
 };

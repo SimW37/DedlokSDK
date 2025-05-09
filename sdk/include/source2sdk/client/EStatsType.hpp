@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 86
+    // Enumerator count: 92
     // Alignment: 4
     // Size: 0x4
     enum class EStatsType : std::uint32_t
@@ -28,7 +28,7 @@ namespace source2sdk::client
         EBulletArmorDamageReduction = 0xc,
         EBulletShieldHealth = 0xd,
         ETechArmorDamageReduction = 0xe,
-        ETechShieldHealth = 0xf,
+        ETechShieldHealth_DEPRECATED = 0xf,
         ELightMeleeDamage = 0x10,
         EHeavyMeleeDamage = 0x11,
         EWeaponRange = 0x12,
@@ -97,7 +97,13 @@ namespace source2sdk::client
         ECritDamageBonusScale = 0x51,
         EMeleeResist = 0x52,
         ELevelUpBoons = 0x53,
-        EStatsCount = 0x54,
-        EStatsInvalid = 0x54,
+        EParryCooldown = 0x54,
+        EHeroBulletLifestealEffectiveness = 0x55,
+        EHeroSpiritLifestealEffectiveness = 0x56,
+        EOOCHealthRegen = 0x57,
+        ESlowResistance = 0x58,
+        EStaminaRegenPercent = 0x59,
+        EStatsCount = 0x5a,
+        EStatsInvalid = 0x5a,
     };
 };

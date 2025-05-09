@@ -14,19 +14,19 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xdf0
+    // Size: 0xe40
     // Has VTable
     #pragma pack(push, 1)
     class CItemParachute : public server::CPhysicsProp
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xdd8[0x18];
+        [[maybe_unused]] std::uint8_t pad_0xe28[0x18];
         // Datamap fields:
-        // CHandle< CBaseEntity > m_hAttachedEntity; // 0xdd8
-        // int32_t m_eObjectivePosition; // 0xdec
+        // CHandle< CBaseEntity > m_hAttachedEntity; // 0xe28
+        // int32_t m_eObjectivePosition; // 0xe3c
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CItemParachute) == 0xdf0);
+    static_assert(sizeof(CItemParachute) == 0xe40);
 };

@@ -18,7 +18,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x4c8
+    // Size: 0x4d8
     // Has VTable
     #pragma pack(push, 1)
     class CAI_Motor : public client::CAI_Component
@@ -42,13 +42,13 @@ namespace source2sdk::server
         float m_flBoundaryDistCached; // 0xd0        
         [[maybe_unused]] std::uint8_t pad_0xd4[0x4]; // 0xd4
         server::CAI_MotorNavLink m_motorNavLink; // 0xd8        
-        server::CAI_MotorTransition m_motorTransition; // 0x150        
+        server::CAI_MotorTransition m_motorTransition; // 0x148        
         server::CAI_MotorGroundAnimGraph m_motorGroundAnimgraph; // 0x1b0        
-        bool m_bIsExecutingMoveSolve; // 0x4c0        
-        [[maybe_unused]] std::uint8_t pad_0x4c1[0x7];
+        bool m_bIsExecutingMoveSolve; // 0x4d0        
+        [[maybe_unused]] std::uint8_t pad_0x4d1[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAI_Motor because it is not a standard-layout class
-    static_assert(sizeof(CAI_Motor) == 0x4c8);
+    static_assert(sizeof(CAI_Motor) == 0x4d8);
 };

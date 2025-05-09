@@ -17,7 +17,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x16e8
+    // Size: 0x1710
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -28,22 +28,22 @@ namespace source2sdk::client
         // metadata: MPropertyGroupName "Visuals"
         // m_ChargeUpParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeUpParticle;
-        char m_ChargeUpParticle[0xe0]; // 0x15c8        
+        char m_ChargeUpParticle[0xe0]; // 0x15f0        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_InvisModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadel_Modifier_LurkersAmbush_Invis> m_InvisModifier;
-        char m_InvisModifier[0x10]; // 0x16a8        
+        char m_InvisModifier[0x10]; // 0x16d0        
         // m_RegenModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_RegenModifier;
-        char m_RegenModifier[0x10]; // 0x16b8        
+        char m_RegenModifier[0x10]; // 0x16e0        
         // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_DebuffModifier;
-        char m_DebuffModifier[0x10]; // 0x16c8        
+        char m_DebuffModifier[0x10]; // 0x16f0        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strSwapStarted; // 0x16d8        
+        CSoundEventName m_strSwapStarted; // 0x1700        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbility_Fathom_LurkersAmbush_VData because it is not a standard-layout class
-    static_assert(sizeof(CAbility_Fathom_LurkersAmbush_VData) == 0x16e8);
+    static_assert(sizeof(CAbility_Fathom_LurkersAmbush_VData) == 0x1710);
 };

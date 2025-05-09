@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/animlib/CNmTask.hpp"
+#include "source2sdk/animlib/CNmPoseTask.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -17,7 +17,7 @@ namespace source2sdk::animlib
     // Size: 0x30
     // Has VTable
     #pragma pack(push, 1)
-    class CNmZeroPoseTask : public animlib::CNmTask
+    class CNmZeroPoseTask : public animlib::CNmPoseTask
     {
     public:
         // No schema binary for binding

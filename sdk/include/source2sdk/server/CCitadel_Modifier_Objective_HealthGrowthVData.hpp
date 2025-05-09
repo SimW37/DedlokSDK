@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x668
+    // Size: 0x670
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -24,14 +24,14 @@ namespace source2sdk::server
     public:
         // metadata: MPropertyStartGroup "Objective Health Growth"
         // metadata: MPropertyDescription "How much health per Minute"
-        int32_t m_iGrowthPerMinute; // 0x658        
+        int32_t m_iGrowthPerMinute; // 0x660        
         // metadata: MPropertyDescription "How often do we update (seconds)"
-        float m_flTickRate; // 0x65c        
-        int32_t m_iGrowthStartTimeInMinutes; // 0x660        
-        [[maybe_unused]] std::uint8_t pad_0x664[0x4];
+        float m_flTickRate; // 0x664        
+        int32_t m_iGrowthStartTimeInMinutes; // 0x668        
+        [[maybe_unused]] std::uint8_t pad_0x66c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Objective_HealthGrowthVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Objective_HealthGrowthVData) == 0x668);
+    static_assert(sizeof(CCitadel_Modifier_Objective_HealthGrowthVData) == 0x670);
 };

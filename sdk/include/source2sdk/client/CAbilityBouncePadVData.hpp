@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1608
+    // Size: 0x1630
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,19 +26,19 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Modifiers"
         // m_BounceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_BounceModifier;
-        char m_BounceModifier[0x10]; // 0x15c8        
+        char m_BounceModifier[0x10]; // 0x15f0        
         // m_AllyBounceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_AllyBounceModifier;
-        char m_AllyBounceModifier[0x10]; // 0x15d8        
+        char m_AllyBounceModifier[0x10]; // 0x1600        
         // m_SpeedOnLandModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_SpeedOnLandModifier;
-        char m_SpeedOnLandModifier[0x10]; // 0x15e8        
+        char m_SpeedOnLandModifier[0x10]; // 0x1610        
         // m_NoBounceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_NoBounceModifier;
-        char m_NoBounceModifier[0x10]; // 0x15f8        
+        char m_NoBounceModifier[0x10]; // 0x1620        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbilityBouncePadVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityBouncePadVData) == 0x1608);
+    static_assert(sizeof(CAbilityBouncePadVData) == 0x1630);
 };

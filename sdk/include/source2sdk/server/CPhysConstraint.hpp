@@ -20,7 +20,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x558
+    // Size: 0x550
     // Has VTable
     // Is Abstract
     #pragma pack(push, 1)
@@ -41,11 +41,10 @@ namespace source2sdk::server
         CUtlSymbolLarge m_breakSound; // 0x510        
         float m_forceLimit; // 0x518        
         float m_torqueLimit; // 0x51c        
-        uint32_t m_teleportTick; // 0x520        
-        float m_minTeleportDistance; // 0x524        
-        bool m_bSnapObjectPositions; // 0x528        
-        [[maybe_unused]] std::uint8_t pad_0x529[0x7]; // 0x529
-        entity2::CEntityIOOutput m_OnBreak; // 0x530        
+        float m_minTeleportDistance; // 0x520        
+        bool m_bSnapObjectPositions; // 0x524        
+        [[maybe_unused]] std::uint8_t pad_0x525[0x3]; // 0x525
+        entity2::CEntityIOOutput m_OnBreak; // 0x528        
         
         // Datamap fields:
         // void m_hJoint; // 0x4e0
@@ -65,5 +64,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPhysConstraint because it is not a standard-layout class
-    static_assert(sizeof(CPhysConstraint) == 0x558);
+    static_assert(sizeof(CPhysConstraint) == 0x550);
 };

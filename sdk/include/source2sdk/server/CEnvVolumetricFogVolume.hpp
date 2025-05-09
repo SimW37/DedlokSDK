@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x530
+    // Size: 0x528
     // Has VTable
     // 
     // static metadata: MEntityAllowsPortraitWorldSpawn
@@ -22,6 +22,7 @@ namespace source2sdk::server
     // static metadata: MNetworkVarNames "Vector m_vBoxMins"
     // static metadata: MNetworkVarNames "Vector m_vBoxMaxs"
     // static metadata: MNetworkVarNames "bool m_bStartDisabled"
+    // static metadata: MNetworkVarNames "bool m_bIndirectUseLPVs"
     // static metadata: MNetworkVarNames "float m_flStrength"
     // static metadata: MNetworkVarNames "int m_nFalloffShape"
     // static metadata: MNetworkVarNames "float m_flFalloffExponent"
@@ -35,7 +36,6 @@ namespace source2sdk::server
     // static metadata: MNetworkVarNames "bool m_bOverrideIndirectLightStrength"
     // static metadata: MNetworkVarNames "bool m_bOverrideSunLightStrength"
     // static metadata: MNetworkVarNames "bool m_bOverrideNoiseStrength"
-    // static metadata: MNetworkVarNames "bool m_bAllowLPVIndirect"
     #pragma pack(push, 1)
     class CEnvVolumetricFogVolume : public server::CBaseEntity
     {
@@ -49,7 +49,9 @@ namespace source2sdk::server
         Vector m_vBoxMaxs; // 0x4f0        
         // metadata: MNetworkEnable
         bool m_bStartDisabled; // 0x4fc        
-        [[maybe_unused]] std::uint8_t pad_0x4fd[0x3]; // 0x4fd
+        // metadata: MNetworkEnable
+        bool m_bIndirectUseLPVs; // 0x4fd        
+        [[maybe_unused]] std::uint8_t pad_0x4fe[0x2]; // 0x4fe
         // metadata: MNetworkEnable
         float m_flStrength; // 0x500        
         // metadata: MNetworkEnable
@@ -76,9 +78,6 @@ namespace source2sdk::server
         bool m_bOverrideSunLightStrength; // 0x526        
         // metadata: MNetworkEnable
         bool m_bOverrideNoiseStrength; // 0x527        
-        // metadata: MNetworkEnable
-        bool m_bAllowLPVIndirect; // 0x528        
-        [[maybe_unused]] std::uint8_t pad_0x529[0x7];
         
         // Datamap fields:
         // bool InputEnable; // 0x0
@@ -87,5 +86,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CEnvVolumetricFogVolume because it is not a standard-layout class
-    static_assert(sizeof(CEnvVolumetricFogVolume) == 0x530);
+    static_assert(sizeof(CEnvVolumetricFogVolume) == 0x528);
 };

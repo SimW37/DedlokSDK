@@ -15,18 +15,18 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc90
+    // Size: 0xd68
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Crackshot : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0x4]; // 0xb00
-        client::ParticleIndex_t m_ReadyParticleIndex; // 0xb04        
-        [[maybe_unused]] std::uint8_t pad_0xb08[0x188];
+        [[maybe_unused]] std::uint8_t pad_0xba0[0x4]; // 0xba0
+        client::ParticleIndex_t m_ReadyParticleIndex; // 0xba4        
+        [[maybe_unused]] std::uint8_t pad_0xba8[0x1c0];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Crackshot because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Crackshot) == 0xc90);
+    static_assert(sizeof(CCitadel_Ability_Crackshot) == 0xd68);
 };

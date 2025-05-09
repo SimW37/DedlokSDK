@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x18a8
+    // Size: 0x18d0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,26 +27,26 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Modifiers"
         // m_DamageDebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_DamageDebuffModifier;
-        char m_DamageDebuffModifier[0x10]; // 0x15c8        
+        char m_DamageDebuffModifier[0x10]; // 0x15f0        
         // m_SlowDebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_SlowDebuffModifier;
-        char m_SlowDebuffModifier[0x10]; // 0x15d8        
+        char m_SlowDebuffModifier[0x10]; // 0x1600        
         // metadata: MPropertyStartGroup "Visuals"
         // m_DaggerStuckParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DaggerStuckParticle;
-        char m_DaggerStuckParticle[0xe0]; // 0x15e8        
+        char m_DaggerStuckParticle[0xe0]; // 0x1610        
         // m_DaggerImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DaggerImpactParticle;
-        char m_DaggerImpactParticle[0xe0]; // 0x16c8        
+        char m_DaggerImpactParticle[0xe0]; // 0x16f0        
         // m_DaggerExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DaggerExplodeParticle;
-        char m_DaggerExplodeParticle[0xe0]; // 0x17a8        
+        char m_DaggerExplodeParticle[0xe0]; // 0x17d0        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strDaggerHitSound; // 0x1888        
-        CSoundEventName m_strDaggerExplodeSound; // 0x1898        
+        CSoundEventName m_strDaggerHitSound; // 0x18b0        
+        CSoundEventName m_strDaggerExplodeSound; // 0x18c0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_ShivDaggerVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_ShivDaggerVData) == 0x18a8);
+    static_assert(sizeof(CCitadel_Ability_ShivDaggerVData) == 0x18d0);
 };

@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x660
+    // Size: 0x668
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -22,11 +22,11 @@ namespace source2sdk::client
     class CModifierRapidFireChannelVData : public client::CCitadelModifierVData
     {
     public:
-        float m_flAirDrag; // 0x658        
-        [[maybe_unused]] std::uint8_t pad_0x65c[0x4];
+        float m_flAirDrag; // 0x660        
+        [[maybe_unused]] std::uint8_t pad_0x664[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CModifierRapidFireChannelVData because it is not a standard-layout class
-    static_assert(sizeof(CModifierRapidFireChannelVData) == 0x660);
+    static_assert(sizeof(CModifierRapidFireChannelVData) == 0x668);
 };

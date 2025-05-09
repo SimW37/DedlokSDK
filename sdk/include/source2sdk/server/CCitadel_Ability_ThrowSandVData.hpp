@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x15e8
+    // Size: 0x1610
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -24,15 +24,15 @@ namespace source2sdk::server
     {
     public:
         // metadata: MPropertyStartGroup "Modifiers"
-        // m_SandDebuff has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<server::CCitadelModifier> m_SandDebuff;
-        char m_SandDebuff[0x10]; // 0x15c8        
+        // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CEmbeddedSubclass<server::CCitadelModifier> m_DebuffModifier;
+        char m_DebuffModifier[0x10]; // 0x15f0        
         // m_SilenceDebuff has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_SilenceDebuff;
-        char m_SilenceDebuff[0x10]; // 0x15d8        
+        char m_SilenceDebuff[0x10]; // 0x1600        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_ThrowSandVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_ThrowSandVData) == 0x15e8);
+    static_assert(sizeof(CCitadel_Ability_ThrowSandVData) == 0x1610);
 };

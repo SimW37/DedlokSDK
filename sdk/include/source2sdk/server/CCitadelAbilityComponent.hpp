@@ -1,6 +1,7 @@
 #pragma once
 #include "source2sdk/entity2/CEntityComponent.hpp"
 #include "source2sdk/server/AbilityResource_t.hpp"
+#include "source2sdk/server/ConsumedComponentState_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -25,11 +26,10 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x208
+    // Size: 0x240
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CHandle<CCitadelBaseAbility> m_vecAbilities"
-    // static metadata: MNetworkVarNames "EntitySubclassID_t m_vecUniversalItems"
     // static metadata: MNetworkVarNames "int32 m_arPendingAsyncAbilityReservationSlots"
     // static metadata: MNetworkVarNames "int32 m_arPendingAsyncAbilityReservationAbilityIDs"
     // static metadata: MNetworkVarNames "CHandle< CCitadelBaseAbility> m_hSelectedAbility"
@@ -40,6 +40,7 @@ namespace source2sdk::server
     // static metadata: MNetworkVarNames "bool m_bInInterruptState"
     // static metadata: MNetworkVarNames "AbilityResource_t m_ResourceStamina"
     // static metadata: MNetworkVarNames "AbilityResource_t m_ResourceAbility"
+    // static metadata: MNetworkVarNames "ConsumedComponentState_t m_vecConsumedComponents"
     #pragma pack(push, 1)
     class CCitadelAbilityComponent : public entity2::CEntityComponent
     {
@@ -47,7 +48,6 @@ namespace source2sdk::server
         [[maybe_unused]] std::uint8_t pad_0x08[0x80]; // 0x8
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "Abilities"
-        // metadata: MNetworkChangeCallback "abilitiesChanged"
         // metadata: MNetworkPriority "32"
         // m_vecAbilities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CNetworkUtlVectorBase<CHandle<server::CCitadelBaseAbility>> m_vecAbilities;
@@ -55,59 +55,58 @@ namespace source2sdk::server
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "Abilities"
         // metadata: MNetworkPriority "32"
-        // m_vecUniversalItems has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CNetworkUtlVectorBase<CUtlStringToken> m_vecUniversalItems;
-        char m_vecUniversalItems[0x18]; // 0xa0        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "Abilities"
-        // metadata: MNetworkPriority "32"
         // m_arPendingAsyncAbilityReservationSlots has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CNetworkUtlVectorBase<int32_t> m_arPendingAsyncAbilityReservationSlots;
-        char m_arPendingAsyncAbilityReservationSlots[0x18]; // 0xb8        
+        char m_arPendingAsyncAbilityReservationSlots[0x18]; // 0xa0        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "Abilities"
         // metadata: MNetworkPriority "32"
         // m_arPendingAsyncAbilityReservationAbilityIDs has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CNetworkUtlVectorBase<int32_t> m_arPendingAsyncAbilityReservationAbilityIDs;
-        char m_arPendingAsyncAbilityReservationAbilityIDs[0x18]; // 0xd0        
+        char m_arPendingAsyncAbilityReservationAbilityIDs[0x18]; // 0xb8        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "AbiCompSelectedAbilityChanged"
         // m_hSelectedAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CCitadelBaseAbility> m_hSelectedAbility;
-        char m_hSelectedAbility[0x4]; // 0xe8        
+        char m_hSelectedAbility[0x4]; // 0xd0        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
         // m_hPreviouslySelectedAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hPreviouslySelectedAbility;
-        char m_hPreviouslySelectedAbility[0x4]; // 0xec        
+        char m_hPreviouslySelectedAbility[0x4]; // 0xd4        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-        bool m_bPreviousAbilityQueued; // 0xf0        
-        [[maybe_unused]] std::uint8_t pad_0xf1[0x3]; // 0xf1
+        bool m_bPreviousAbilityQueued; // 0xd8        
+        [[maybe_unused]] std::uint8_t pad_0xd9[0x3]; // 0xd9
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "AbiCompTimeScaleChanged"
-        float m_flTimeScale; // 0xf4        
+        float m_flTimeScale; // 0xdc        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "AbiCompParticleTimeScaleChanged"
-        float m_flParticleTimeScale; // 0xf8        
+        float m_flParticleTimeScale; // 0xe0        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-        bool m_bInInterruptState; // 0xfc        
-        [[maybe_unused]] std::uint8_t pad_0xfd[0x3]; // 0xfd
+        bool m_bInInterruptState; // 0xe4        
+        [[maybe_unused]] std::uint8_t pad_0xe5[0x3]; // 0xe5
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        server::AbilityResource_t m_ResourceStamina; // 0x100        
+        server::AbilityResource_t m_ResourceStamina; // 0xe8        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        server::AbilityResource_t m_ResourceAbility; // 0x120        
-        [[maybe_unused]] std::uint8_t pad_0x140[0x48]; // 0x140
-        uint32_t m_nExecuteAbilityMask; // 0x188        
-        [[maybe_unused]] std::uint8_t pad_0x18c[0x4]; // 0x18c
-        bool m_bSelectedEffectsStarted; // 0x190        
-        [[maybe_unused]] std::uint8_t pad_0x191[0x77];
+        server::AbilityResource_t m_ResourceAbility; // 0x108        
+        // metadata: MNetworkEnable
+        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+        // m_vecConsumedComponents has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CUtlVectorEmbeddedNetworkVar<server::ConsumedComponentState_t> m_vecConsumedComponents;
+        char m_vecConsumedComponents[0x68]; // 0x128        
+        [[maybe_unused]] std::uint8_t pad_0x190[0x48]; // 0x190
+        uint32_t m_nExecuteAbilityMask; // 0x1d8        
+        [[maybe_unused]] std::uint8_t pad_0x1dc[0x4]; // 0x1dc
+        bool m_bSelectedEffectsStarted; // 0x1e0        
+        [[maybe_unused]] std::uint8_t pad_0x1e1[0x5f];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelAbilityComponent because it is not a standard-layout class
-    static_assert(sizeof(CCitadelAbilityComponent) == 0x208);
+    static_assert(sizeof(CCitadelAbilityComponent) == 0x240);
 };

@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: unknown
     // Standard-layout class: false
-    // Size: 0xaa0
+    // Size: 0xab0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CBaseAnimGraphController m_animationController"
@@ -24,11 +24,11 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        server::CBaseAnimGraphController m_animationController; // 0x510        
-        [[maybe_unused]] std::uint8_t pad_0xa98[0x8];
+        server::CBaseAnimGraphController m_animationController; // 0x520        
+        [[maybe_unused]] std::uint8_t pad_0xaa8[0x8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBodyComponentBaseAnimGraph because it is not a standard-layout class
-    static_assert(sizeof(CBodyComponentBaseAnimGraph) == 0xaa0);
+    static_assert(sizeof(CBodyComponentBaseAnimGraph) == 0xab0);
 };

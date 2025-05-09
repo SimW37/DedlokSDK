@@ -20,7 +20,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x518
+    // Size: 0x520
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CHandle< CBaseEntity> m_hEntAttached"
@@ -48,7 +48,7 @@ namespace source2sdk::server
         int32_t m_iDangerSound; // 0x500        
         float m_flDirectDamagePerSecond; // 0x504        
         int32_t m_iCustomDamageType; // 0x508        
-        [[maybe_unused]] std::uint8_t pad_0x50c[0xc];
+        [[maybe_unused]] std::uint8_t pad_0x50c[0x14];
         
         // Datamap fields:
         // void m_hPlayingSound; // 0x50c
@@ -57,5 +57,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CEntityFlame because it is not a standard-layout class
-    static_assert(sizeof(CEntityFlame) == 0x518);
+    static_assert(sizeof(CEntityFlame) == 0x520);
 };

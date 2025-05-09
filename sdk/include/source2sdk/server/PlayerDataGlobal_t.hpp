@@ -19,7 +19,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x288
+    // Size: 0x2b8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "int32 m_iLevel"
@@ -60,6 +60,8 @@ namespace source2sdk::server
     // static metadata: MNetworkVarNames "EntitySubclassID_t m_vecUpgrades"
     // static metadata: MNetworkVarNames "EntitySubclassID_t m_vecBonusCounterAbilities"
     // static metadata: MNetworkVarNames "int32 m_vecBonusCounterValues"
+    // static metadata: MNetworkVarNames "EntitySubclassID_t m_vecBonusCounterModifiers"
+    // static metadata: MNetworkVarNames "int32 m_vecModifierBonusCounterValues"
     // static metadata: MNetworkVarNames "AbilityID_t m_tHeldItem"
     // static metadata: MNetworkVarNames "ItemImbuementPair_t m_vecImbuements"
     // static metadata: MNetworkVarNames "DynamicAbilityValues_t m_vecDynamicAbilityValues"
@@ -163,28 +165,38 @@ namespace source2sdk::server
         // CNetworkUtlVectorBase<int32_t> m_vecBonusCounterValues;
         char m_vecBonusCounterValues[0x18]; // 0xc8        
         // metadata: MNetworkEnable
+        // m_vecBonusCounterModifiers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CNetworkUtlVectorBase<CUtlStringToken> m_vecBonusCounterModifiers;
+        char m_vecBonusCounterModifiers[0x18]; // 0xe0        
+        // metadata: MNetworkEnable
+        // metadata: MNetworkUserGroup "Abilities"
+        // metadata: MNetworkChangeCallback "pdgBonusCounterChanged"
+        // m_vecModifierBonusCounterValues has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CNetworkUtlVectorBase<int32_t> m_vecModifierBonusCounterValues;
+        char m_vecModifierBonusCounterValues[0x18]; // 0xf8        
+        // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "Abilities"
         // metadata: MNetworkChangeCallback "pdgUpgradesChanged"
-        CUtlStringToken m_tHeldItem; // 0xe0        
-        [[maybe_unused]] std::uint8_t pad_0xe4[0x4]; // 0xe4
+        CUtlStringToken m_tHeldItem; // 0x110        
+        [[maybe_unused]] std::uint8_t pad_0x114[0x4]; // 0x114
         // metadata: MNetworkEnable
         // m_vecImbuements has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVectorEmbeddedNetworkVar<server::ItemImbuementPair_t> m_vecImbuements;
-        char m_vecImbuements[0x68]; // 0xe8        
+        char m_vecImbuements[0x68]; // 0x118        
         // metadata: MNetworkEnable
         // m_vecDynamicAbilityValues has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVectorEmbeddedNetworkVar<server::DynamicAbilityValues_t> m_vecDynamicAbilityValues;
-        char m_vecDynamicAbilityValues[0x68]; // 0x150        
+        char m_vecDynamicAbilityValues[0x68]; // 0x180        
         // metadata: MNetworkEnable
         // m_vecStatViewerModifierValues has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVectorEmbeddedNetworkVar<server::StatViewerModifierValues_t> m_vecStatViewerModifierValues;
-        char m_vecStatViewerModifierValues[0x68]; // 0x1b8        
+        char m_vecStatViewerModifierValues[0x68]; // 0x1e8        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "Abilities"
         // metadata: MNetworkChangeCallback "pdgStolenAbilityChanged"
         // m_vecStolenAbilities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVectorEmbeddedNetworkVar<server::StolenAbilityPair_t> m_vecStolenAbilities;
-        char m_vecStolenAbilities[0x68]; // 0x220        
+        char m_vecStolenAbilities[0x68]; // 0x250        
     };
     #pragma pack(pop)
     
@@ -226,11 +238,13 @@ namespace source2sdk::server
     static_assert(offsetof(PlayerDataGlobal_t, m_vecUpgrades) == 0x98);
     static_assert(offsetof(PlayerDataGlobal_t, m_vecBonusCounterAbilities) == 0xb0);
     static_assert(offsetof(PlayerDataGlobal_t, m_vecBonusCounterValues) == 0xc8);
-    static_assert(offsetof(PlayerDataGlobal_t, m_tHeldItem) == 0xe0);
-    static_assert(offsetof(PlayerDataGlobal_t, m_vecImbuements) == 0xe8);
-    static_assert(offsetof(PlayerDataGlobal_t, m_vecDynamicAbilityValues) == 0x150);
-    static_assert(offsetof(PlayerDataGlobal_t, m_vecStatViewerModifierValues) == 0x1b8);
-    static_assert(offsetof(PlayerDataGlobal_t, m_vecStolenAbilities) == 0x220);
+    static_assert(offsetof(PlayerDataGlobal_t, m_vecBonusCounterModifiers) == 0xe0);
+    static_assert(offsetof(PlayerDataGlobal_t, m_vecModifierBonusCounterValues) == 0xf8);
+    static_assert(offsetof(PlayerDataGlobal_t, m_tHeldItem) == 0x110);
+    static_assert(offsetof(PlayerDataGlobal_t, m_vecImbuements) == 0x118);
+    static_assert(offsetof(PlayerDataGlobal_t, m_vecDynamicAbilityValues) == 0x180);
+    static_assert(offsetof(PlayerDataGlobal_t, m_vecStatViewerModifierValues) == 0x1e8);
+    static_assert(offsetof(PlayerDataGlobal_t, m_vecStolenAbilities) == 0x250);
     
-    static_assert(sizeof(PlayerDataGlobal_t) == 0x288);
+    static_assert(sizeof(PlayerDataGlobal_t) == 0x2b8);
 };

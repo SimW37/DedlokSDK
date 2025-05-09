@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x58
+    // Size: 0x60
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CEntityIndex m_nEntIndex"
@@ -63,7 +63,7 @@ namespace source2sdk::client
         // metadata: MNetworkEnable
         // metadata: MNetworkPriority "32"
         uint8_t m_nPositionY; // 0x52        
-        [[maybe_unused]] std::uint8_t pad_0x53[0x5];
+        [[maybe_unused]] std::uint8_t pad_0x53[0xd];
     };
     #pragma pack(pop)
     
@@ -80,5 +80,5 @@ namespace source2sdk::client
     static_assert(offsetof(STeamFOWEntity, m_nPositionX) == 0x51);
     static_assert(offsetof(STeamFOWEntity, m_nPositionY) == 0x52);
     
-    static_assert(sizeof(STeamFOWEntity) == 0x58);
+    static_assert(sizeof(STeamFOWEntity) == 0x60);
 };

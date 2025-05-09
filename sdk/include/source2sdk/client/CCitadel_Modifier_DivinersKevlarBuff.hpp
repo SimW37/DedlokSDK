@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x138
+    // Size: 0xc8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_DivinersKevlarBuff : public client::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x78];
+        [[maybe_unused]] std::uint8_t pad_0xc0[0x8];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Modifier_DivinersKevlarBuff) == 0x138);
+    static_assert(sizeof(CCitadel_Modifier_DivinersKevlarBuff) == 0xc8);
 };

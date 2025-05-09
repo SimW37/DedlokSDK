@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xf48
+    // Size: 0x1110
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "ELashGrappleState m_EGrappleState"
@@ -27,20 +27,20 @@ namespace source2sdk::client
     class CCitadel_Ability_Lash_Ultimate : public client::CCitadelBaseLockonAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xde0[0x2]; // 0xde0
+        [[maybe_unused]] std::uint8_t pad_0xf78[0x2]; // 0xf78
         // metadata: MNetworkEnable
-        client::ELashGrappleState m_EGrappleState; // 0xde2        
-        [[maybe_unused]] std::uint8_t pad_0xde3[0x1]; // 0xde3
+        client::ELashGrappleState m_EGrappleState; // 0xf7a        
+        [[maybe_unused]] std::uint8_t pad_0xf7b[0x1]; // 0xf7b
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flStateEnterTime; // 0xde4        
+        entity2::GameTime_t m_flStateEnterTime; // 0xf7c        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flNextStateTime; // 0xde8        
+        entity2::GameTime_t m_flNextStateTime; // 0xf80        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flBoostEndTime; // 0xdec        
-        [[maybe_unused]] std::uint8_t pad_0xdf0[0x158];
+        entity2::GameTime_t m_flBoostEndTime; // 0xf84        
+        [[maybe_unused]] std::uint8_t pad_0xf88[0x188];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Lash_Ultimate because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Lash_Ultimate) == 0xf48);
+    static_assert(sizeof(CCitadel_Ability_Lash_Ultimate) == 0x1110);
 };

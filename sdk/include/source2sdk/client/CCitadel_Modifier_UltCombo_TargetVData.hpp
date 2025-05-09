@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x750
+    // Size: 0x758
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,15 +23,15 @@ namespace source2sdk::client
     {
     public:
         // metadata: MPropertyStartGroup "Gameplay"
-        float m_flTargetPosDistance; // 0x738        
-        float m_flTargetPosRange; // 0x73c        
-        float m_flPullSpeedMin; // 0x740        
-        float m_flPullSpeedMax; // 0x744        
-        float m_flPullDistanceMin; // 0x748        
-        float m_flPullDistanceMax; // 0x74c        
+        float m_flTargetPosDistance; // 0x740        
+        float m_flTargetPosRange; // 0x744        
+        float m_flPullSpeedMin; // 0x748        
+        float m_flPullSpeedMax; // 0x74c        
+        float m_flPullDistanceMin; // 0x750        
+        float m_flPullDistanceMax; // 0x754        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_UltCombo_TargetVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_UltCombo_TargetVData) == 0x750);
+    static_assert(sizeof(CCitadel_Modifier_UltCombo_TargetVData) == 0x758);
 };

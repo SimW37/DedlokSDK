@@ -24,7 +24,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb00
+    // Size: 0xba0
     // Has VTable
     // Is Abstract
     // 
@@ -189,7 +189,7 @@ namespace source2sdk::server
         // CUtlVector<CHandle<server::CBaseEntity>> m_vecEnemyHeroesDamaged;
         char m_vecEnemyHeroesDamaged[0x18]; // 0x6b8        
         float m_flPreviousEffectiveCooldown; // 0x6d0        
-        [[maybe_unused]] std::uint8_t pad_0x6d4[0x42c];
+        [[maybe_unused]] std::uint8_t pad_0x6d4[0x4cc];
         
         // Datamap fields:
         // int32_t slot; // 0x7fffffff
@@ -199,5 +199,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelBaseAbility because it is not a standard-layout class
-    static_assert(sizeof(CCitadelBaseAbility) == 0xb00);
+    static_assert(sizeof(CCitadelBaseAbility) == 0xba0);
 };

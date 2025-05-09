@@ -19,7 +19,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x6f0
+    // Size: 0x7c0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bDisabled"
@@ -35,34 +35,34 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        bool m_bDisabled; // 0x510        
-        [[maybe_unused]] std::uint8_t pad_0x511[0x3]; // 0x511
+        bool m_bDisabled; // 0x5e0        
+        [[maybe_unused]] std::uint8_t pad_0x5e1[0x3]; // 0x5e1
         // metadata: MNetworkEnable
-        int32_t m_nResolutionX; // 0x514        
+        int32_t m_nResolutionX; // 0x5e4        
         // metadata: MNetworkEnable
-        int32_t m_nResolutionY; // 0x518        
-        [[maybe_unused]] std::uint8_t pad_0x51c[0x4]; // 0x51c
+        int32_t m_nResolutionY; // 0x5e8        
+        [[maybe_unused]] std::uint8_t pad_0x5ec[0x4]; // 0x5ec
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_szLayoutFileName; // 0x520        
+        CUtlSymbolLarge m_szLayoutFileName; // 0x5f0        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_RenderAttrName; // 0x528        
+        CUtlSymbolLarge m_RenderAttrName; // 0x5f8        
         // metadata: MNetworkEnable
         // m_TargetEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // C_NetworkUtlVectorBase<CHandle<client::C_BaseModelEntity>> m_TargetEntities;
-        char m_TargetEntities[0x18]; // 0x530        
+        char m_TargetEntities[0x18]; // 0x600        
         // metadata: MNetworkEnable
-        int32_t m_nTargetChangeCount; // 0x548        
-        [[maybe_unused]] std::uint8_t pad_0x54c[0x4]; // 0x54c
+        int32_t m_nTargetChangeCount; // 0x618        
+        [[maybe_unused]] std::uint8_t pad_0x61c[0x4]; // 0x61c
         // metadata: MNetworkEnable
         // m_vecCSSClasses has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // C_NetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses;
-        char m_vecCSSClasses[0x18]; // 0x550        
-        [[maybe_unused]] std::uint8_t pad_0x568[0x160]; // 0x568
-        bool m_bCheckCSSClasses; // 0x6c8        
-        [[maybe_unused]] std::uint8_t pad_0x6c9[0x27];
+        char m_vecCSSClasses[0x18]; // 0x620        
+        [[maybe_unused]] std::uint8_t pad_0x638[0x160]; // 0x638
+        bool m_bCheckCSSClasses; // 0x798        
+        [[maybe_unused]] std::uint8_t pad_0x799[0x27];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CInfoOffscreenPanoramaTexture because it is not a standard-layout class
-    static_assert(sizeof(CInfoOffscreenPanoramaTexture) == 0x6f0);
+    static_assert(sizeof(CInfoOffscreenPanoramaTexture) == 0x7c0);
 };

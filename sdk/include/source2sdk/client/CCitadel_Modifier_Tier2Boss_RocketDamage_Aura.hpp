@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x128
+    // Size: 0x138
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_Tier2Boss_RocketDamage_Aura : public client::CCitadelModifierAura
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xf0[0x38];
+        [[maybe_unused]] std::uint8_t pad_0xf8[0x40];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Modifier_Tier2Boss_RocketDamage_Aura) == 0x128);
+    static_assert(sizeof(CCitadel_Modifier_Tier2Boss_RocketDamage_Aura) == 0x138);
 };

@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x16a8
+    // Size: 0x16d0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,10 +26,10 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_ItemModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeCModel>> m_ItemModel;
-        char m_ItemModel[0xe0]; // 0x15c8        
+        char m_ItemModel[0xe0]; // 0x15f0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_BaseHeldItemVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_BaseHeldItemVData) == 0x16a8);
+    static_assert(sizeof(CCitadel_Ability_BaseHeldItemVData) == 0x16d0);
 };

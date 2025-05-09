@@ -14,16 +14,16 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc00
+    // Size: 0xca8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_TechUpgrade_CorpseExplosion : public server::CCitadel_Item
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb20[0xe0];
+        [[maybe_unused]] std::uint8_t pad_0xba8[0x100];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_TechUpgrade_CorpseExplosion) == 0xc00);
+    static_assert(sizeof(CCitadel_TechUpgrade_CorpseExplosion) == 0xca8);
 };

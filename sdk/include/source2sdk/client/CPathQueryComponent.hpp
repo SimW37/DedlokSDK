@@ -12,29 +12,18 @@
 namespace source2sdk::client
 {
     // Registered alignment: unknown
-    // Alignment: 0x10
+    // Alignment: 0x1
     // Standard-layout class: false
-    // Size: 0x90
+    // Size: 0xa0
     // Has VTable
     #pragma pack(push, 1)
     class CPathQueryComponent : public entity2::CEntityComponent
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x08[0x18]; // 0x8
-        CTransform m_PathToEntityTransform; // 0x20        
-        // m_vecPathSamplePositions has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<Vector> m_vecPathSamplePositions;
-        char m_vecPathSamplePositions[0x18]; // 0x40        
-        // m_vecPathSampleParameters has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<float> m_vecPathSampleParameters;
-        char m_vecPathSampleParameters[0x18]; // 0x58        
-        // m_vecPathSampleDistances has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<float> m_vecPathSampleDistances;
-        char m_vecPathSampleDistances[0x18]; // 0x70        
-        [[maybe_unused]] std::uint8_t pad_0x88[0x8];
+        [[maybe_unused]] std::uint8_t pad_0x08[0x98];
+        // No schema binary for binding
     };
     #pragma pack(pop)
     
-    // Cannot assert offsets of fields in CPathQueryComponent because it is not a standard-layout class
-    static_assert(sizeof(CPathQueryComponent) == 0x90);
+    static_assert(sizeof(CPathQueryComponent) == 0xa0);
 };

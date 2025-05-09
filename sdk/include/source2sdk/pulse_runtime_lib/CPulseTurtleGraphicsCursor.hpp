@@ -14,7 +14,7 @@ namespace source2sdk::pulse_runtime_lib
     // Registered alignment: unknown
     // Alignment: 0x4
     // Standard-layout class: false
-    // Size: 0xe8
+    // Size: 0xf0
     // Has VTable
     // 
     // static metadata: MPulseLibraryBindings
@@ -23,14 +23,14 @@ namespace source2sdk::pulse_runtime_lib
     class CPulseTurtleGraphicsCursor : public pulse_runtime_lib::CPulseExecCursor
     {
     public:
-        Color m_Color; // 0xd0        
-        Vector2D m_vPos; // 0xd4        
-        float m_flHeadingDeg; // 0xdc        
-        bool m_bPenUp; // 0xe0        
-        [[maybe_unused]] std::uint8_t pad_0xe1[0x7];
+        Color m_Color; // 0xd8        
+        Vector2D m_vPos; // 0xdc        
+        float m_flHeadingDeg; // 0xe4        
+        bool m_bPenUp; // 0xe8        
+        [[maybe_unused]] std::uint8_t pad_0xe9[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPulseTurtleGraphicsCursor because it is not a standard-layout class
-    static_assert(sizeof(CPulseTurtleGraphicsCursor) == 0xe8);
+    static_assert(sizeof(CPulseTurtleGraphicsCursor) == 0xf0);
 };

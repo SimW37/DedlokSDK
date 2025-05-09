@@ -18,7 +18,7 @@ namespace source2sdk::materialsystem2
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x138
+    // Size: 0x140
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
@@ -31,18 +31,18 @@ namespace source2sdk::materialsystem2
         bool m_bHasBloomParams; // 0x40        
         [[maybe_unused]] std::uint8_t pad_0x41[0x3]; // 0x41
         materialsystem2::PostProcessingBloomParameters_t m_bloomParams; // 0x44        
-        bool m_bHasVignetteParams; // 0xc4        
-        [[maybe_unused]] std::uint8_t pad_0xc5[0x3]; // 0xc5
-        materialsystem2::PostProcessingVignetteParameters_t m_vignetteParams; // 0xc8        
-        bool m_bHasLocalContrastParams; // 0xec        
-        [[maybe_unused]] std::uint8_t pad_0xed[0x3]; // 0xed
-        materialsystem2::PostProcessingLocalContrastParameters_t m_localConstrastParams; // 0xf0        
-        int32_t m_nColorCorrectionVolumeDim; // 0x104        
-        CUtlBinaryBlock m_colorCorrectionVolumeData; // 0x108        
-        bool m_bHasColorCorrection; // 0x120        
-        bool m_bHasFogScatteringParams; // 0x121        
-        [[maybe_unused]] std::uint8_t pad_0x122[0x2]; // 0x122
-        materialsystem2::PostProcessingFogScatteringParameters_t m_fogScatteringParams; // 0x124        
+        bool m_bHasVignetteParams; // 0xcc        
+        [[maybe_unused]] std::uint8_t pad_0xcd[0x3]; // 0xcd
+        materialsystem2::PostProcessingVignetteParameters_t m_vignetteParams; // 0xd0        
+        bool m_bHasLocalContrastParams; // 0xf4        
+        [[maybe_unused]] std::uint8_t pad_0xf5[0x3]; // 0xf5
+        materialsystem2::PostProcessingLocalContrastParameters_t m_localConstrastParams; // 0xf8        
+        int32_t m_nColorCorrectionVolumeDim; // 0x10c        
+        CUtlBinaryBlock m_colorCorrectionVolumeData; // 0x110        
+        bool m_bHasColorCorrection; // 0x128        
+        bool m_bHasFogScatteringParams; // 0x129        
+        [[maybe_unused]] std::uint8_t pad_0x12a[0x2]; // 0x12a
+        materialsystem2::PostProcessingFogScatteringParameters_t m_fogScatteringParams; // 0x12c        
     };
     #pragma pack(pop)
     
@@ -50,15 +50,15 @@ namespace source2sdk::materialsystem2
     static_assert(offsetof(PostProcessingResource_t, m_toneMapParams) == 0x4);
     static_assert(offsetof(PostProcessingResource_t, m_bHasBloomParams) == 0x40);
     static_assert(offsetof(PostProcessingResource_t, m_bloomParams) == 0x44);
-    static_assert(offsetof(PostProcessingResource_t, m_bHasVignetteParams) == 0xc4);
-    static_assert(offsetof(PostProcessingResource_t, m_vignetteParams) == 0xc8);
-    static_assert(offsetof(PostProcessingResource_t, m_bHasLocalContrastParams) == 0xec);
-    static_assert(offsetof(PostProcessingResource_t, m_localConstrastParams) == 0xf0);
-    static_assert(offsetof(PostProcessingResource_t, m_nColorCorrectionVolumeDim) == 0x104);
-    static_assert(offsetof(PostProcessingResource_t, m_colorCorrectionVolumeData) == 0x108);
-    static_assert(offsetof(PostProcessingResource_t, m_bHasColorCorrection) == 0x120);
-    static_assert(offsetof(PostProcessingResource_t, m_bHasFogScatteringParams) == 0x121);
-    static_assert(offsetof(PostProcessingResource_t, m_fogScatteringParams) == 0x124);
+    static_assert(offsetof(PostProcessingResource_t, m_bHasVignetteParams) == 0xcc);
+    static_assert(offsetof(PostProcessingResource_t, m_vignetteParams) == 0xd0);
+    static_assert(offsetof(PostProcessingResource_t, m_bHasLocalContrastParams) == 0xf4);
+    static_assert(offsetof(PostProcessingResource_t, m_localConstrastParams) == 0xf8);
+    static_assert(offsetof(PostProcessingResource_t, m_nColorCorrectionVolumeDim) == 0x10c);
+    static_assert(offsetof(PostProcessingResource_t, m_colorCorrectionVolumeData) == 0x110);
+    static_assert(offsetof(PostProcessingResource_t, m_bHasColorCorrection) == 0x128);
+    static_assert(offsetof(PostProcessingResource_t, m_bHasFogScatteringParams) == 0x129);
+    static_assert(offsetof(PostProcessingResource_t, m_fogScatteringParams) == 0x12c);
     
-    static_assert(sizeof(PostProcessingResource_t) == 0x138);
+    static_assert(sizeof(PostProcessingResource_t) == 0x140);
 };

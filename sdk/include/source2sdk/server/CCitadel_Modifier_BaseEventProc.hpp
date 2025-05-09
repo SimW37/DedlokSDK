@@ -20,7 +20,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x168
+    // Size: 0x178
     // Has VTable
     // Is Abstract
     #pragma pack(push, 1)
@@ -34,10 +34,10 @@ namespace source2sdk::server
         // CUtlVector<server::CBaseEntity*> m_vecTrackedUnitsThisFrame;
         char m_vecTrackedUnitsThisFrame[0x18]; // 0xd8        
         client::ShotID_t m_nLastShotId; // 0xf0        
-        [[maybe_unused]] std::uint8_t pad_0xf4[0x74];
+        [[maybe_unused]] std::uint8_t pad_0xf4[0x84];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_BaseEventProc because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_BaseEventProc) == 0x168);
+    static_assert(sizeof(CCitadel_Modifier_BaseEventProc) == 0x178);
 };

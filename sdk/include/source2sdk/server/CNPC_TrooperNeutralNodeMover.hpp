@@ -14,16 +14,16 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1958
+    // Size: 0x1a58
     // Has VTable
     #pragma pack(push, 1)
     class CNPC_TrooperNeutralNodeMover : public server::CNPC_TrooperNeutral
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x1900[0x58];
+        [[maybe_unused]] std::uint8_t pad_0x1a00[0x58];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CNPC_TrooperNeutralNodeMover) == 0x1958);
+    static_assert(sizeof(CNPC_TrooperNeutralNodeMover) == 0x1a58);
 };

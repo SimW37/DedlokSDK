@@ -13,7 +13,7 @@ namespace source2sdk::physicslib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x20
+    // Size: 0x18
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
@@ -27,7 +27,6 @@ namespace source2sdk::physicslib
         bool m_bUserFriendlyNameLong; // 0x11        
         [[maybe_unused]] std::uint8_t pad_0x12[0x2]; // 0x12
         uint32_t m_nToolMaterialHash; // 0x14        
-        CGlobalSymbol m_sHitGroupName; // 0x18        
     };
     #pragma pack(pop)
     
@@ -37,7 +36,6 @@ namespace source2sdk::physicslib
     static_assert(offsetof(RnShapeDesc_t, m_bUserFriendlyNameSealed) == 0x10);
     static_assert(offsetof(RnShapeDesc_t, m_bUserFriendlyNameLong) == 0x11);
     static_assert(offsetof(RnShapeDesc_t, m_nToolMaterialHash) == 0x14);
-    static_assert(offsetof(RnShapeDesc_t, m_sHitGroupName) == 0x18);
     
-    static_assert(sizeof(RnShapeDesc_t) == 0x20);
+    static_assert(sizeof(RnShapeDesc_t) == 0x18);
 };

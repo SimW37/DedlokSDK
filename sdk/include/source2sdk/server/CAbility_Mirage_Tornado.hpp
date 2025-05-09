@@ -19,7 +19,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc60
+    // Size: 0xd70
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CHandle< CCitadelProjectile> m_hActiveProjectile"
@@ -27,15 +27,15 @@ namespace source2sdk::server
     class CAbility_Mirage_Tornado : public server::CCitadelBaseAbility
     {
     public:
-        Vector m_vLastValidMovementPosition; // 0xb00        
+        Vector m_vLastValidMovementPosition; // 0xba0        
         // metadata: MNetworkEnable
         // m_hActiveProjectile has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CCitadelProjectile> m_hActiveProjectile;
-        char m_hActiveProjectile[0x4]; // 0xb0c        
-        [[maybe_unused]] std::uint8_t pad_0xb10[0x150];
+        char m_hActiveProjectile[0x4]; // 0xbac        
+        [[maybe_unused]] std::uint8_t pad_0xbb0[0x1c0];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbility_Mirage_Tornado because it is not a standard-layout class
-    static_assert(sizeof(CAbility_Mirage_Tornado) == 0xc60);
+    static_assert(sizeof(CAbility_Mirage_Tornado) == 0xd70);
 };

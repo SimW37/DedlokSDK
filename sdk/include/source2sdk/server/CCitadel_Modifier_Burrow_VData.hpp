@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x748
+    // Size: 0x750
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,14 +26,14 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_BurrowPlayerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BurrowPlayerParticle;
-        char m_BurrowPlayerParticle[0xe0]; // 0x658        
-        float m_flDesatAmount; // 0x738        
-        Color m_DesatTint; // 0x73c        
-        Color m_SatTint; // 0x740        
-        Color m_Outline; // 0x744        
+        char m_BurrowPlayerParticle[0xe0]; // 0x660        
+        float m_flDesatAmount; // 0x740        
+        Color m_DesatTint; // 0x744        
+        Color m_SatTint; // 0x748        
+        Color m_Outline; // 0x74c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Burrow_VData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Burrow_VData) == 0x748);
+    static_assert(sizeof(CCitadel_Modifier_Burrow_VData) == 0x750);
 };

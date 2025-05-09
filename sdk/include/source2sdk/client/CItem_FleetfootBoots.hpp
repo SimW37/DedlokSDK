@@ -14,16 +14,15 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xca0
+    // Size: 0xdc0
     // Has VTable
     #pragma pack(push, 1)
     class CItem_FleetfootBoots : public client::CCitadel_Item
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc68[0x38];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CItem_FleetfootBoots) == 0xca0);
+    static_assert(sizeof(CItem_FleetfootBoots) == 0xdc0);
 };

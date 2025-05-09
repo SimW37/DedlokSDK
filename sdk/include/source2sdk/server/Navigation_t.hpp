@@ -8,7 +8,7 @@
 
 namespace source2sdk::server
 {
-    // Enumerator count: 10
+    // Enumerator count: 9
     // Alignment: 4
     // Size: 0x4
     enum class Navigation_t : std::uint32_t
@@ -18,7 +18,6 @@ namespace source2sdk::server
         AI_NAV_JUMP = 0x1,
         AI_NAV_FLY = 0x2,
         AI_NAV_CLIMB = 0x3,
-        AI_NAV_LINK = 0x5,
         AI_NAV_NAVLINK = 0x5,
         AI_NAV_TRANSITION = 0x6,
         AI_NAV_ORIENTED = 0x7,

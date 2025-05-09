@@ -19,7 +19,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb48
+    // Size: 0xcf8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "int32 m_eLootType"
@@ -32,22 +32,22 @@ namespace source2sdk::client
     class C_CitadelItemPickup : public client::CCitadelAnimatingModelEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb08[0x18]; // 0xb08
+        [[maybe_unused]] std::uint8_t pad_0xcb8[0x18]; // 0xcb8
         // metadata: MNetworkEnable
-        int32_t m_eLootType; // 0xb20        
+        int32_t m_eLootType; // 0xcd0        
         // metadata: MNetworkEnable
-        int32_t m_nCurrencyValue; // 0xb24        
+        int32_t m_nCurrencyValue; // 0xcd4        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_iszModelName; // 0xb28        
+        CUtlSymbolLarge m_iszModelName; // 0xcd8        
         // metadata: MNetworkEnable
-        float m_flModelScale; // 0xb30        
+        float m_flModelScale; // 0xce0        
         // metadata: MNetworkEnable
         // m_hTargetPlayer has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hTargetPlayer;
-        char m_hTargetPlayer[0x4]; // 0xb34        
+        char m_hTargetPlayer[0x4]; // 0xce4        
         // metadata: MNetworkEnable
-        float m_flFallRate; // 0xb38        
-        [[maybe_unused]] std::uint8_t pad_0xb3c[0xc];
+        float m_flFallRate; // 0xce8        
+        [[maybe_unused]] std::uint8_t pad_0xcec[0xc];
         
         // Datamap fields:
         // bool from_crate; // 0x7fffffff
@@ -55,5 +55,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_CitadelItemPickup because it is not a standard-layout class
-    static_assert(sizeof(C_CitadelItemPickup) == 0xb48);
+    static_assert(sizeof(C_CitadelItemPickup) == 0xcf8);
 };

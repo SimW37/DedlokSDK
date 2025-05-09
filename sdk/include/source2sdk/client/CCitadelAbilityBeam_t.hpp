@@ -24,7 +24,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x4
     // Standard-layout class: true
-    // Size: 0x510
+    // Size: 0x600
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "GameTime_t m_nActivateTime"
@@ -40,33 +40,33 @@ namespace source2sdk::client
         // metadata: MNetworkEncoder "qangle"
         // metadata: MNetworkChangeCallback "OnBeamAnglesChanged"
         QAngle m_angBeamAngles; // 0x10        
-        [[maybe_unused]] std::uint8_t pad_0x1c[0xc]; // 0x1c
+        [[maybe_unused]] std::uint8_t pad_0x1c[0x84]; // 0x1c
         // metadata: MNetworkEnable
         // metadata: MNetworkEncoder "coord"
         // metadata: MNetworkChangeCallback "OnBeamAimPosChanged"
-        Vector m_vBeamAimPos; // 0x28        
-        [[maybe_unused]] std::uint8_t pad_0x34[0xc]; // 0x34
-        bool m_bNeedsBeamReset; // 0x40        
-        [[maybe_unused]] std::uint8_t pad_0x41[0x3]; // 0x41
+        Vector m_vBeamAimPos; // 0xa0        
+        [[maybe_unused]] std::uint8_t pad_0xac[0x84]; // 0xac
+        bool m_bNeedsBeamReset; // 0x130        
+        [[maybe_unused]] std::uint8_t pad_0x131[0x3]; // 0x131
         // m_hShooter has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hShooter;
-        char m_hShooter[0x4]; // 0x44        
+        char m_hShooter[0x4]; // 0x134        
         // m_hPlayerShooter has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_CitadelPlayerPawn> m_hPlayerShooter;
-        char m_hPlayerShooter[0x4]; // 0x48        
-        [[maybe_unused]] std::uint8_t pad_0x4c[0x4bc]; // 0x4c
-        bool m_bEnforceLOSToShootPosition; // 0x508        
-        [[maybe_unused]] std::uint8_t pad_0x509[0x7];
+        char m_hPlayerShooter[0x4]; // 0x138        
+        [[maybe_unused]] std::uint8_t pad_0x13c[0x4bc]; // 0x13c
+        bool m_bEnforceLOSToShootPosition; // 0x5f8        
+        [[maybe_unused]] std::uint8_t pad_0x5f9[0x7];
     };
     #pragma pack(pop)
     
     static_assert(offsetof(CCitadelAbilityBeam_t, m_nActivateTime) == 0x8);
     static_assert(offsetof(CCitadelAbilityBeam_t, m_angBeamAngles) == 0x10);
-    static_assert(offsetof(CCitadelAbilityBeam_t, m_vBeamAimPos) == 0x28);
-    static_assert(offsetof(CCitadelAbilityBeam_t, m_bNeedsBeamReset) == 0x40);
-    static_assert(offsetof(CCitadelAbilityBeam_t, m_hShooter) == 0x44);
-    static_assert(offsetof(CCitadelAbilityBeam_t, m_hPlayerShooter) == 0x48);
-    static_assert(offsetof(CCitadelAbilityBeam_t, m_bEnforceLOSToShootPosition) == 0x508);
+    static_assert(offsetof(CCitadelAbilityBeam_t, m_vBeamAimPos) == 0xa0);
+    static_assert(offsetof(CCitadelAbilityBeam_t, m_bNeedsBeamReset) == 0x130);
+    static_assert(offsetof(CCitadelAbilityBeam_t, m_hShooter) == 0x134);
+    static_assert(offsetof(CCitadelAbilityBeam_t, m_hPlayerShooter) == 0x138);
+    static_assert(offsetof(CCitadelAbilityBeam_t, m_bEnforceLOSToShootPosition) == 0x5f8);
     
-    static_assert(sizeof(CCitadelAbilityBeam_t) == 0x510);
+    static_assert(sizeof(CCitadelAbilityBeam_t) == 0x600);
 };

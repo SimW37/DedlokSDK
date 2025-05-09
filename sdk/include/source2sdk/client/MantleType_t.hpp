@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x28
+    // Size: 0x30
     // Has VTable
     // Has Trivial Destructor
     // 
@@ -35,7 +35,10 @@ namespace source2sdk::client
         // metadata: MPropertyDescription "How long to apply all of the horizontal movement of this mantle.  NOTE: Horizontal applies after the vertical"
         float m_flHorizontalTime; // 0x18        
         client::EMantleType m_eMantleType; // 0x1c        
-        [[maybe_unused]] std::uint8_t pad_0x20[0x8];
+        [[maybe_unused]] std::uint8_t pad_0x20[0x8]; // 0x20
+        // metadata: MPropertyDescription "Sliding out of a mantle gives you this impulse. units/second"
+        float m_flSlideExitBoostOnGround; // 0x28        
+        [[maybe_unused]] std::uint8_t pad_0x2c[0x4];
     };
     #pragma pack(pop)
     
@@ -45,6 +48,7 @@ namespace source2sdk::client
     static_assert(offsetof(MantleType_t, m_flVerticalTime) == 0x14);
     static_assert(offsetof(MantleType_t, m_flHorizontalTime) == 0x18);
     static_assert(offsetof(MantleType_t, m_eMantleType) == 0x1c);
+    static_assert(offsetof(MantleType_t, m_flSlideExitBoostOnGround) == 0x28);
     
-    static_assert(sizeof(MantleType_t) == 0x28);
+    static_assert(sizeof(MantleType_t) == 0x30);
 };

@@ -22,7 +22,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x530
+    // Size: 0x600
     // Has VTable
     // 
     // static metadata: MEntityAllowsPortraitWorldSpawn
@@ -30,16 +30,16 @@ namespace source2sdk::client
     class CPointOrient : public client::C_BaseEntity
     {
     public:
-        CUtlSymbolLarge m_iszSpawnTargetName; // 0x510        
+        CUtlSymbolLarge m_iszSpawnTargetName; // 0x5e0        
         // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hTarget;
-        char m_hTarget[0x4]; // 0x518        
-        bool m_bActive; // 0x51c        
-        [[maybe_unused]] std::uint8_t pad_0x51d[0x3]; // 0x51d
-        client::PointOrientGoalDirectionType_t m_nGoalDirection; // 0x520        
-        client::PointOrientConstraint_t m_nConstraint; // 0x524        
-        float m_flMaxTurnRate; // 0x528        
-        entity2::GameTime_t m_flLastGameTime; // 0x52c        
+        char m_hTarget[0x4]; // 0x5e8        
+        bool m_bActive; // 0x5ec        
+        [[maybe_unused]] std::uint8_t pad_0x5ed[0x3]; // 0x5ed
+        client::PointOrientGoalDirectionType_t m_nGoalDirection; // 0x5f0        
+        client::PointOrientConstraint_t m_nConstraint; // 0x5f4        
+        float m_flMaxTurnRate; // 0x5f8        
+        entity2::GameTime_t m_flLastGameTime; // 0x5fc        
         
         // Datamap fields:
         // bool InputSetActive; // 0x0
@@ -49,5 +49,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPointOrient because it is not a standard-layout class
-    static_assert(sizeof(CPointOrient) == 0x530);
+    static_assert(sizeof(CPointOrient) == 0x600);
 };

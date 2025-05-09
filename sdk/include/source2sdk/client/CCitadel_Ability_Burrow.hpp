@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xe20
+    // Size: 0xfd0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bInGround"
@@ -26,20 +26,20 @@ namespace source2sdk::client
     class CCitadel_Ability_Burrow : public client::C_CitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc50[0x1c0]; // 0xc50
+        [[maybe_unused]] std::uint8_t pad_0xdc0[0x200]; // 0xdc0
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        bool m_bInGround; // 0xe10        
-        [[maybe_unused]] std::uint8_t pad_0xe11[0x3]; // 0xe11
+        bool m_bInGround; // 0xfc0        
+        [[maybe_unused]] std::uint8_t pad_0xfc1[0x3]; // 0xfc1
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flLastDamageTime; // 0xe14        
+        entity2::GameTime_t m_flLastDamageTime; // 0xfc4        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_SpinEndTime; // 0xe18        
-        client::ParticleIndex_t m_nBurrowEffect; // 0xe1c        
+        entity2::GameTime_t m_SpinEndTime; // 0xfc8        
+        client::ParticleIndex_t m_nBurrowEffect; // 0xfcc        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Burrow because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Burrow) == 0xe20);
+    static_assert(sizeof(CCitadel_Ability_Burrow) == 0xfd0);
 };

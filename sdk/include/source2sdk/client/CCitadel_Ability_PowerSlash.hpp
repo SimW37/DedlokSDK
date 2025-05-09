@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xf10
+    // Size: 0x10e0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "int m_nPowerLevel"
@@ -23,15 +23,15 @@ namespace source2sdk::client
     class CCitadel_Ability_PowerSlash : public client::CCitadelBaseYamatoAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc58[0xc]; // 0xc58
+        [[maybe_unused]] std::uint8_t pad_0xdc8[0xc]; // 0xdc8
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        int32_t m_nPowerLevel; // 0xc64        
-        client::ParticleIndex_t m_nCastParticle; // 0xc68        
-        [[maybe_unused]] std::uint8_t pad_0xc6c[0x2a4];
+        int32_t m_nPowerLevel; // 0xdd4        
+        client::ParticleIndex_t m_nCastParticle; // 0xdd8        
+        [[maybe_unused]] std::uint8_t pad_0xddc[0x304];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_PowerSlash because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_PowerSlash) == 0xf10);
+    static_assert(sizeof(CCitadel_Ability_PowerSlash) == 0x10e0);
 };

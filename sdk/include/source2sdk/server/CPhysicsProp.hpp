@@ -18,7 +18,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xdd8
+    // Size: 0xe28
     // Has VTable
     // 
     // static metadata: MNetworkExcludeByName "m_flAnimTime"
@@ -33,49 +33,49 @@ namespace source2sdk::server
     class CPhysicsProp : public server::CBreakableProp
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc38[0x8]; // 0xc38
-        entity2::CEntityIOOutput m_MotionEnabled; // 0xc40        
-        entity2::CEntityIOOutput m_OnAwakened; // 0xc68        
-        entity2::CEntityIOOutput m_OnAwake; // 0xc90        
-        entity2::CEntityIOOutput m_OnAsleep; // 0xcb8        
-        entity2::CEntityIOOutput m_OnPlayerUse; // 0xce0        
-        entity2::CEntityIOOutput m_OnOutOfWorld; // 0xd08        
-        entity2::CEntityIOOutput m_OnPlayerPickup; // 0xd30        
-        bool m_bForceNavIgnore; // 0xd58        
-        bool m_bNoNavmeshBlocker; // 0xd59        
-        bool m_bForceNpcExclude; // 0xd5a        
-        [[maybe_unused]] std::uint8_t pad_0xd5b[0x1]; // 0xd5b
-        float m_massScale; // 0xd5c        
-        float m_buoyancyScale; // 0xd60        
-        int32_t m_damageType; // 0xd64        
-        int32_t m_damageToEnableMotion; // 0xd68        
-        float m_flForceToEnableMotion; // 0xd6c        
-        bool m_bThrownByPlayer; // 0xd70        
-        bool m_bDroppedByPlayer; // 0xd71        
-        bool m_bTouchedByPlayer; // 0xd72        
-        bool m_bFirstCollisionAfterLaunch; // 0xd73        
-        bool m_bHasBeenAwakened; // 0xd74        
-        bool m_bIsOverrideProp; // 0xd75        
-        physicslib::DynamicContinuousContactBehavior_t m_nDynamicContinuousContactBehavior; // 0xd76        
-        [[maybe_unused]] std::uint8_t pad_0xd77[0x1]; // 0xd77
-        entity2::GameTime_t m_fNextCheckDisableMotionContactsTime; // 0xd78        
-        int32_t m_iInitialGlowState; // 0xd7c        
-        int32_t m_nGlowRange; // 0xd80        
-        int32_t m_nGlowRangeMin; // 0xd84        
-        Color m_glowColor; // 0xd88        
-        bool m_bShouldAutoConvertBackFromDebris; // 0xd8c        
-        bool m_bMuteImpactEffects; // 0xd8d        
-        [[maybe_unused]] std::uint8_t pad_0xd8e[0x9]; // 0xd8e
-        bool m_bAcceptDamageFromHeldObjects; // 0xd97        
-        bool m_bEnableUseOutput; // 0xd98        
-        [[maybe_unused]] std::uint8_t pad_0xd99[0x3]; // 0xd99
-        server::CPhysicsProp__CrateType_t m_CrateType; // 0xd9c        
-        CUtlSymbolLarge m_strItemClass[4]; // 0xda0        
-        int32_t m_nItemCount[4]; // 0xdc0        
-        bool m_bRemovableForAmmoBalancing; // 0xdd0        
+        [[maybe_unused]] std::uint8_t pad_0xc88[0x8]; // 0xc88
+        entity2::CEntityIOOutput m_MotionEnabled; // 0xc90        
+        entity2::CEntityIOOutput m_OnAwakened; // 0xcb8        
+        entity2::CEntityIOOutput m_OnAwake; // 0xce0        
+        entity2::CEntityIOOutput m_OnAsleep; // 0xd08        
+        entity2::CEntityIOOutput m_OnPlayerUse; // 0xd30        
+        entity2::CEntityIOOutput m_OnOutOfWorld; // 0xd58        
+        entity2::CEntityIOOutput m_OnPlayerPickup; // 0xd80        
+        bool m_bForceNavIgnore; // 0xda8        
+        bool m_bNoNavmeshBlocker; // 0xda9        
+        bool m_bForceNpcExclude; // 0xdaa        
+        [[maybe_unused]] std::uint8_t pad_0xdab[0x1]; // 0xdab
+        float m_massScale; // 0xdac        
+        float m_buoyancyScale; // 0xdb0        
+        int32_t m_damageType; // 0xdb4        
+        int32_t m_damageToEnableMotion; // 0xdb8        
+        float m_flForceToEnableMotion; // 0xdbc        
+        bool m_bThrownByPlayer; // 0xdc0        
+        bool m_bDroppedByPlayer; // 0xdc1        
+        bool m_bTouchedByPlayer; // 0xdc2        
+        bool m_bFirstCollisionAfterLaunch; // 0xdc3        
+        bool m_bHasBeenAwakened; // 0xdc4        
+        bool m_bIsOverrideProp; // 0xdc5        
+        physicslib::DynamicContinuousContactBehavior_t m_nDynamicContinuousContactBehavior; // 0xdc6        
+        [[maybe_unused]] std::uint8_t pad_0xdc7[0x1]; // 0xdc7
+        entity2::GameTime_t m_fNextCheckDisableMotionContactsTime; // 0xdc8        
+        int32_t m_iInitialGlowState; // 0xdcc        
+        int32_t m_nGlowRange; // 0xdd0        
+        int32_t m_nGlowRangeMin; // 0xdd4        
+        Color m_glowColor; // 0xdd8        
+        bool m_bShouldAutoConvertBackFromDebris; // 0xddc        
+        bool m_bMuteImpactEffects; // 0xddd        
+        [[maybe_unused]] std::uint8_t pad_0xdde[0x9]; // 0xdde
+        bool m_bAcceptDamageFromHeldObjects; // 0xde7        
+        bool m_bEnableUseOutput; // 0xde8        
+        [[maybe_unused]] std::uint8_t pad_0xde9[0x3]; // 0xde9
+        server::CPhysicsProp__CrateType_t m_CrateType; // 0xdec        
+        CUtlSymbolLarge m_strItemClass[4]; // 0xdf0        
+        int32_t m_nItemCount[4]; // 0xe10        
+        bool m_bRemovableForAmmoBalancing; // 0xe20        
         // metadata: MNetworkEnable
-        bool m_bAwake; // 0xdd1        
-        [[maybe_unused]] std::uint8_t pad_0xdd2[0x6];
+        bool m_bAwake; // 0xe21        
+        [[maybe_unused]] std::uint8_t pad_0xe22[0x6];
         
         // Datamap fields:
         // void InputEnableMotion; // 0x0
@@ -97,14 +97,14 @@ namespace source2sdk::server
         // bool forcemotiondisabled; // 0x7fffffff
         // bool phys_start_asleep; // 0x7fffffff
         // void CPhysicsPropClearFlagsThink; // 0x0
-        // int32_t m_nNavObstacleType; // 0xd90
-        // bool m_bUpdateNavWhenMoving; // 0xd94
-        // bool m_bForceNavObstacleCut; // 0xd95
-        // bool m_bAllowObstacleConvexHullMerging; // 0xd96
+        // int32_t m_nNavObstacleType; // 0xde0
+        // bool m_bUpdateNavWhenMoving; // 0xde4
+        // bool m_bForceNavObstacleCut; // 0xde5
+        // bool m_bAllowObstacleConvexHullMerging; // 0xde6
         // int32_t health; // 0x7fffffff
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPhysicsProp because it is not a standard-layout class
-    static_assert(sizeof(CPhysicsProp) == 0xdd8);
+    static_assert(sizeof(CPhysicsProp) == 0xe28);
 };

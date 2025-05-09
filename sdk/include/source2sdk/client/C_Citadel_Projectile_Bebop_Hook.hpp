@@ -15,17 +15,17 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x898
+    // Size: 0xaa8
     // Has VTable
     #pragma pack(push, 1)
     class C_Citadel_Projectile_Bebop_Hook : public client::C_CitadelProjectile
     {
     public:
-        client::ParticleIndex_t m_iChainEffect; // 0x890        
-        [[maybe_unused]] std::uint8_t pad_0x894[0x4];
+        client::ParticleIndex_t m_iChainEffect; // 0xaa0        
+        [[maybe_unused]] std::uint8_t pad_0xaa4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_Citadel_Projectile_Bebop_Hook because it is not a standard-layout class
-    static_assert(sizeof(C_Citadel_Projectile_Bebop_Hook) == 0x898);
+    static_assert(sizeof(C_Citadel_Projectile_Bebop_Hook) == 0xaa8);
 };

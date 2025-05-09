@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1a0
+    // Size: 0x1b8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_ProjectMind : public server::CCitadelModifier
@@ -28,10 +28,10 @@ namespace source2sdk::server
         Vector m_vecStartPosition; // 0xd8        
         float m_flStartDelay; // 0xe4        
         Vector m_vecApplyOffset; // 0xe8        
-        [[maybe_unused]] std::uint8_t pad_0xf4[0xac];
+        [[maybe_unused]] std::uint8_t pad_0xf4[0xc4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_ProjectMind because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_ProjectMind) == 0x1a0);
+    static_assert(sizeof(CCitadel_Modifier_ProjectMind) == 0x1b8);
 };

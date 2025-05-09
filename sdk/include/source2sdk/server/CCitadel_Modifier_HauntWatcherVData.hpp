@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x6b8
+    // Size: 0x6c0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,15 +27,15 @@ namespace source2sdk::server
         // metadata: MPropertyGroupName "Modifiers"
         // m_HauntDamageModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_HauntDamageModifier;
-        char m_HauntDamageModifier[0x10]; // 0x688        
+        char m_HauntDamageModifier[0x10]; // 0x690        
         // m_BuildUpModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadel_Modifier_Base_Buildup> m_BuildUpModifier;
-        char m_BuildUpModifier[0x10]; // 0x698        
+        char m_BuildUpModifier[0x10]; // 0x6a0        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_ExplodeSound; // 0x6a8        
+        CSoundEventName m_ExplodeSound; // 0x6b0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_HauntWatcherVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_HauntWatcherVData) == 0x6b8);
+    static_assert(sizeof(CCitadel_Modifier_HauntWatcherVData) == 0x6c0);
 };

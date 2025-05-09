@@ -20,9 +20,10 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb78
+    // Size: 0xd40
     // Has VTable
     // 
+    // static metadata: MNetworkVarNames "bool m_ragEnabled"
     // static metadata: MNetworkVarNames "Vector m_ragPos"
     // static metadata: MNetworkVarNames "QAngle m_ragAngles"
     // static metadata: MNetworkVarNames "float32 m_flBlendWeight"
@@ -31,42 +32,45 @@ namespace source2sdk::client
     class C_RagdollProp : public client::CBaseAnimGraph
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0x8]; // 0xb00
+        [[maybe_unused]] std::uint8_t pad_0xcb0[0x8]; // 0xcb0
+        // metadata: MNetworkEnable
+        // metadata: MNetworkChangeCallback "ragEnabledChanged"
+        // m_ragEnabled has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // C_NetworkUtlVectorBase<bool> m_ragEnabled;
+        char m_ragEnabled[0x18]; // 0xcb8        
         // metadata: MNetworkEnable
         // metadata: MNetworkEncoder "coord"
-        // metadata: MNetworkChangeCallback "ragAnglesChanged"
         // m_ragPos has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // C_NetworkUtlVectorBase<Vector> m_ragPos;
-        char m_ragPos[0x18]; // 0xb08        
+        char m_ragPos[0x18]; // 0xcd0        
         // metadata: MNetworkEnable
         // metadata: MNetworkEncoder "qangle"
         // metadata: MNetworkBitCount "13"
-        // metadata: MNetworkChangeCallback "ragAnglesChanged"
         // m_ragAngles has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // C_NetworkUtlVectorBase<QAngle> m_ragAngles;
-        char m_ragAngles[0x18]; // 0xb20        
+        char m_ragAngles[0x18]; // 0xce8        
         // metadata: MNetworkEnable
         // metadata: MNetworkBitCount "8"
         // metadata: MNetworkMinValue "0,000000"
         // metadata: MNetworkMaxValue "1,000000"
         // metadata: MNetworkEncodeFlags "1"
-        float m_flBlendWeight; // 0xb38        
+        float m_flBlendWeight; // 0xd00        
         // metadata: MNetworkEnable
         // m_hRagdollSource has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hRagdollSource;
-        char m_hRagdollSource[0x4]; // 0xb3c        
-        modellib::AttachmentHandle_t m_iEyeAttachment; // 0xb40        
-        [[maybe_unused]] std::uint8_t pad_0xb41[0x3]; // 0xb41
-        float m_flBlendWeightCurrent; // 0xb44        
+        char m_hRagdollSource[0x4]; // 0xd04        
+        modellib::AttachmentHandle_t m_iEyeAttachment; // 0xd08        
+        [[maybe_unused]] std::uint8_t pad_0xd09[0x3]; // 0xd09
+        float m_flBlendWeightCurrent; // 0xd0c        
         // m_parentPhysicsBoneIndices has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<int32_t> m_parentPhysicsBoneIndices;
-        char m_parentPhysicsBoneIndices[0x18]; // 0xb48        
+        char m_parentPhysicsBoneIndices[0x18]; // 0xd10        
         // m_worldSpaceBoneComputationOrder has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<int32_t> m_worldSpaceBoneComputationOrder;
-        char m_worldSpaceBoneComputationOrder[0x18]; // 0xb60        
+        char m_worldSpaceBoneComputationOrder[0x18]; // 0xd28        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_RagdollProp because it is not a standard-layout class
-    static_assert(sizeof(C_RagdollProp) == 0xb78);
+    static_assert(sizeof(C_RagdollProp) == 0xd40);
 };

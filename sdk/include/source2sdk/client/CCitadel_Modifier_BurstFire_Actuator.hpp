@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x278
+    // Size: 0x2b0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_BurstFire_Actuator : public client::CCitadelModifier
@@ -34,10 +34,10 @@ namespace source2sdk::client
         float m_flCycleTimePct; // 0xe0        
         float m_flMaxCycleTimeOverride; // 0xe4        
         float m_flMaxBurstFireCooldownOverride; // 0xe8        
-        [[maybe_unused]] std::uint8_t pad_0xec[0x18c];
+        [[maybe_unused]] std::uint8_t pad_0xec[0x1c4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_BurstFire_Actuator because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_BurstFire_Actuator) == 0x278);
+    static_assert(sizeof(CCitadel_Modifier_BurstFire_Actuator) == 0x2b0);
 };

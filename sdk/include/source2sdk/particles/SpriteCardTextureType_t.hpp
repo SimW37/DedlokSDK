@@ -8,7 +8,7 @@
 
 namespace source2sdk::particles
 {
-    // Enumerator count: 11
+    // Enumerator count: 12
     // Alignment: 4
     // Size: 0x4
     enum class SpriteCardTextureType_t : std::uint32_t
@@ -35,5 +35,7 @@ namespace source2sdk::particles
         SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_C = 0x9,
         // MPropertyFriendlyName "Depth Filter Map"
         SPRITECARD_TEXTURE_DEPTH = 0xa,
+        // MPropertyFriendlyName "Illumination Gradient"
+        SPRITECARD_TEXTURE_ILLUMINATION_GRADIENT = 0xb,
     };
 };

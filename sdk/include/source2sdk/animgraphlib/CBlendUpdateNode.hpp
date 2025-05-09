@@ -5,6 +5,7 @@
 #include "source2sdk/animgraphlib/CAnimParamHandle.hpp"
 #include "source2sdk/animgraphlib/CAnimUpdateNodeBase.hpp"
 #include "source2sdk/animgraphlib/CAnimUpdateNodeRef.hpp"
+#include "source2sdk/animgraphlib/LinearRootMotionBlendMode_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -39,8 +40,9 @@ namespace source2sdk::animgraphlib
         char m_targetValues[0x18]; // 0x90        
         [[maybe_unused]] std::uint8_t pad_0xa8[0x4]; // 0xa8
         animgraphlib::AnimValueSource m_blendValueSource; // 0xac        
-        animgraphlib::CAnimParamHandle m_paramIndex; // 0xb0        
-        [[maybe_unused]] std::uint8_t pad_0xb2[0x6]; // 0xb2
+        animgraphlib::LinearRootMotionBlendMode_t m_eLinearRootMotionBlendMode; // 0xb0        
+        animgraphlib::CAnimParamHandle m_paramIndex; // 0xb4        
+        [[maybe_unused]] std::uint8_t pad_0xb6[0x2]; // 0xb6
         animgraphlib::CAnimInputDamping m_damping; // 0xb8        
         animgraphlib::BlendKeyType m_blendKeyType; // 0xd0        
         bool m_bLockBlendOnReset; // 0xd4        

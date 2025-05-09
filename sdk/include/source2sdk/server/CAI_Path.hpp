@@ -66,6 +66,9 @@ namespace source2sdk::server
         uint32_t m_unGoalBaseMovableMeshId_EntityInitial; // 0xdc        
         uint32_t m_unGoalPosBlockedMovableMeshId; // 0xe0        
         [[maybe_unused]] std::uint8_t pad_0xe4[0x4];
+        
+        // Datamap fields:
+        // int32_t m_nNavHullIdx; // 0xc0
     };
     #pragma pack(pop)
     

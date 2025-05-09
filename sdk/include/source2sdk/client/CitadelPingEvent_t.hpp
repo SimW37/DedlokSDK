@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 7
+    // Enumerator count: 8
     // Alignment: 4
     // Size: 0x4
     enum class CitadelPingEvent_t : std::uint32_t
@@ -19,6 +19,7 @@ namespace source2sdk::client
         CITADEL_PING_EVENT_ENTITY_PING = 0x3,
         CITADEL_PING_CRATE_SPAWN = 0x4,
         CITADEL_PING_OBJECTIVE_SPAWN = 0x5,
-        CITADEL_PING_NEUTRAL_SPAWN = 0x6,
+        CITADEL_PING_OBJECTIVE_KILLED = 0x6,
+        CITADEL_PING_NEUTRAL_SPAWN = 0x7,
     };
 };

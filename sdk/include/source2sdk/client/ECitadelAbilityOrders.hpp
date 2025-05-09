@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 56
+    // Enumerator count: 58
     // Alignment: 4
     // Size: 0x4
     enum class ECitadelAbilityOrders : std::uint32_t
@@ -50,24 +50,26 @@ namespace source2sdk::client
         ECitadelAbilityOrder_Invalid_NoZiplineTargeted = 0x22,
         ECitadelAbilityOrder_Invalid_NoUnitsInRadius = 0x23,
         ECitadelAbilityOrder_Invalid_OutOfStamina = 0x24,
-        ECitadelAbilityOrder_Invalid_NotInFalseDeath = 0x25,
-        ECitadelAbilityOrder_Invalid_NotAlive = 0x26,
-        ECitadelAbilityOrder_Invalid_OnlyOneAirJump = 0x27,
-        ECitadelAbilityOrder_Invalid_OnlyTwoAirJumps = 0x28,
-        ECitadelAbilityOrder_Invalid_OnlyOneAirDash = 0x29,
-        ECitadelAbilityOrder_Invalid_OnlyTwoAirDashes = 0x2a,
-        ECitadelAbilityOrder_Invalid_OnlyOneDownDash = 0x2b,
-        ECitadelAbilityOrder_Invalid_OnlyTwoDownDashes = 0x2c,
-        ECitadelAbilityOrder_Invalid_OnlyOneWallJump = 0x2d,
-        ECitadelAbilityOrder_Invalid_SlideTakingPriority = 0x2e,
-        ECitadelAbilityOrder_Invalid_NothingToRefresh = 0x2f,
-        ECitadelAbilityOrder_Invalid_BeetleTarget = 0x30,
-        ECitadelAbilityOrder_Invalid_ClipIsFull = 0x31,
-        ECitadelAbilityOrder_Invalid_DashJumpFailed = 0x32,
-        ECitadelAbilityOrder_DebugCommand_RequiresHeroTarget = 0x33,
-        ECitadelAbilityOrder_Invalid_NotEnoughAbilityResource = 0x34,
-        ECitadelAbilityOrder_Invalid_NotEnoughHeadRoom = 0x35,
-        ECitadelAbilityOrder_Invalid_NoDamageToClear = 0x36,
-        ECitadelAbilityOrder_Max = 0x37,
+        ECitadelAbilityOrder_Invalid_StaminaDisabledDebuff = 0x25,
+        ECitadelAbilityOrder_Invalid_NotInFalseDeath = 0x26,
+        ECitadelAbilityOrder_Invalid_NotAlive = 0x27,
+        ECitadelAbilityOrder_Invalid_OnlyOneAirJump = 0x28,
+        ECitadelAbilityOrder_Invalid_OnlyTwoAirJumps = 0x29,
+        ECitadelAbilityOrder_Invalid_OnlyOneAirDash = 0x2a,
+        ECitadelAbilityOrder_Invalid_OnlyTwoAirDashes = 0x2b,
+        ECitadelAbilityOrder_Invalid_OnlyOneDownDash = 0x2c,
+        ECitadelAbilityOrder_Invalid_OnlyTwoDownDashes = 0x2d,
+        ECitadelAbilityOrder_Invalid_OnlyOneWallJump = 0x2e,
+        ECitadelAbilityOrder_Invalid_OnlyTwoWallJumps = 0x2f,
+        ECitadelAbilityOrder_Invalid_SlideTakingPriority = 0x30,
+        ECitadelAbilityOrder_Invalid_NothingToRefresh = 0x31,
+        ECitadelAbilityOrder_Invalid_BeetleTarget = 0x32,
+        ECitadelAbilityOrder_Invalid_ClipIsFull = 0x33,
+        ECitadelAbilityOrder_Invalid_DashJumpFailed = 0x34,
+        ECitadelAbilityOrder_DebugCommand_RequiresHeroTarget = 0x35,
+        ECitadelAbilityOrder_Invalid_NotEnoughAbilityResource = 0x36,
+        ECitadelAbilityOrder_Invalid_NotEnoughHeadRoom = 0x37,
+        ECitadelAbilityOrder_Invalid_NoDamageToClear = 0x38,
+        ECitadelAbilityOrder_Max = 0x39,
     };
 };

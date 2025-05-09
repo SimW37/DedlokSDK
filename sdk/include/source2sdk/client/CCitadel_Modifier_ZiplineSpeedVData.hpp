@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x668
+    // Size: 0x670
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -22,13 +22,13 @@ namespace source2sdk::client
     class CCitadel_Modifier_ZiplineSpeedVData : public client::CCitadelModifierVData
     {
     public:
-        float m_flPercentageMultiplierStart; // 0x658        
-        float m_flPercentageMultiplierEnd; // 0x65c        
-        float m_flRampUpTime; // 0x660        
-        [[maybe_unused]] std::uint8_t pad_0x664[0x4];
+        float m_flPercentageMultiplierStart; // 0x660        
+        float m_flPercentageMultiplierEnd; // 0x664        
+        float m_flRampUpTime; // 0x668        
+        [[maybe_unused]] std::uint8_t pad_0x66c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_ZiplineSpeedVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_ZiplineSpeedVData) == 0x668);
+    static_assert(sizeof(CCitadel_Modifier_ZiplineSpeedVData) == 0x670);
 };

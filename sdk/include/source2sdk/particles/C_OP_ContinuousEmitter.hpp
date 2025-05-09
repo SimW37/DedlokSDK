@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x608
+    // Size: 0x618
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -43,16 +43,20 @@ namespace source2sdk::particles
         particles::EventTypeSelection_t m_nEventType; // 0x5f4        
         // metadata: MPropertyFriendlyName "control point with snapshot data"
         int32_t m_nSnapshotControlPoint; // 0x5f8        
+        [[maybe_unused]] std::uint8_t pad_0x5fc[0x4]; // 0x5fc
+        // metadata: MPropertyFriendlyName "snapshot subset"
+        // metadata: MPropertySuppressExpr "m_nSnapshotControlPoint < 0"
+        CUtlString m_strSnapshotSubset; // 0x600        
         // metadata: MPropertyFriendlyName "limit per update"
-        int32_t m_nLimitPerUpdate; // 0x5fc        
+        int32_t m_nLimitPerUpdate; // 0x608        
         // metadata: MPropertyFriendlyName "force emit on first update"
-        bool m_bForceEmitOnFirstUpdate; // 0x600        
+        bool m_bForceEmitOnFirstUpdate; // 0x60c        
         // metadata: MPropertyFriendlyName "force emit on last update"
-        bool m_bForceEmitOnLastUpdate; // 0x601        
-        [[maybe_unused]] std::uint8_t pad_0x602[0x6];
+        bool m_bForceEmitOnLastUpdate; // 0x60d        
+        [[maybe_unused]] std::uint8_t pad_0x60e[0xa];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_ContinuousEmitter because it is not a standard-layout class
-    static_assert(sizeof(C_OP_ContinuousEmitter) == 0x608);
+    static_assert(sizeof(C_OP_ContinuousEmitter) == 0x618);
 };

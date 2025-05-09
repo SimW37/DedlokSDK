@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 116
+    // Enumerator count: 131
     // Alignment: 4
     // Size: 0x4
     enum class EGCCitadelClientMessages : std::uint32_t
@@ -127,7 +127,22 @@ namespace source2sdk::client
         k_EMsgClientToGCGetLeaderboardResponse = 0x2415,
         k_EMsgClientToGCGetAccountLeaderboards = 0x2416,
         k_EMsgClientToGCGetAccountLeaderboardsResponse = 0x2417,
-        k_EMsgClientToGCSetHideHolidayModels = 0x2418,
-        k_EMsgClientToGCSetHideHolidayModelsResponse = 0x2419,
+        k_EMsgClientToGCTarotGetUserData = 0x241a,
+        k_EMsgClientToGCTarotGetUserDataResponse = 0x241b,
+        k_EMsgGCToClientTarotUserDataUpdated = 0x241c,
+        k_EMsgClientToGCTarotPlaceTile = 0x241d,
+        k_EMsgClientToGCTarotPlaceTileResponse = 0x241e,
+        k_EMsgClientToGCTarotApplyRune = 0x241f,
+        k_EMsgClientToGCTarotApplyRuneResponse = 0x2420,
+        k_EMsgClientToGCTarotCompleteBoard = 0x2421,
+        k_EMsgClientToGCTarotCompleteBoardResponse = 0x2422,
+        k_EMsgClientToGCTarotDevCreateTile = 0x2423,
+        k_EMsgClientToGCTarotDevCreateTileResponse = 0x2424,
+        k_EMsgClientToGCTarotDevCreateBoard = 0x2425,
+        k_EMsgClientToGCTarotDevCreateBoardResponse = 0x2426,
+        k_EMsgClientToGCTarotDevGenerateTestTiles = 0x2427,
+        k_EMsgClientToGCTarotDevGenerateTestTilesResponse = 0x2428,
+        k_EMsgClientToGCTarotDevModifyEnergy = 0x2429,
+        k_EMsgClientToGCTarotDevModifyEnergyResponse = 0x242a,
     };
 };

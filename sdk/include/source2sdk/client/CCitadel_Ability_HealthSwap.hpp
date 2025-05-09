@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xe28
+    // Size: 0xfd0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "GameTime_t m_flPostCastHoldEndTime"
@@ -24,16 +24,14 @@ namespace source2sdk::client
     class CCitadel_Ability_HealthSwap : public client::C_CitadelBaseAbility
     {
     public:
-        client::ParticleIndex_t m_nFXIndex; // 0xc50        
-        float m_flHealthToCaster; // 0xc54        
-        float m_flTargetHealthLost; // 0xc58        
-        [[maybe_unused]] std::uint8_t pad_0xc5c[0x18c]; // 0xc5c
+        client::ParticleIndex_t m_nFXIndex; // 0xdc0        
+        [[maybe_unused]] std::uint8_t pad_0xdc4[0x1c4]; // 0xdc4
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flPostCastHoldEndTime; // 0xde8        
-        [[maybe_unused]] std::uint8_t pad_0xdec[0x3c];
+        entity2::GameTime_t m_flPostCastHoldEndTime; // 0xf88        
+        [[maybe_unused]] std::uint8_t pad_0xf8c[0x44];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_HealthSwap because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_HealthSwap) == 0xe28);
+    static_assert(sizeof(CCitadel_Ability_HealthSwap) == 0xfd0);
 };

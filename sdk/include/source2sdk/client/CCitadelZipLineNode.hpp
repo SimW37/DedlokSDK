@@ -19,7 +19,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x898
+    // Size: 0xa38
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CHandle<CCitadelZipLineNode> m_vecConnections"
@@ -43,51 +43,51 @@ namespace source2sdk::client
     class CCitadelZipLineNode : public client::C_BaseModelEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x808[0x40]; // 0x808
+        [[maybe_unused]] std::uint8_t pad_0x9a8[0x40]; // 0x9a8
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "connectionsChanged"
         // m_vecConnections has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // C_NetworkUtlVectorBase<CHandle<client::CCitadelZipLineNode>> m_vecConnections;
-        char m_vecConnections[0x18]; // 0x848        
+        char m_vecConnections[0x18]; // 0x9e8        
         // metadata: MNetworkEnable
-        Vector m_vTangentIn; // 0x860        
+        Vector m_vTangentIn; // 0xa00        
         // metadata: MNetworkEnable
-        Vector m_vTangentOut; // 0x86c        
+        Vector m_vTangentOut; // 0xa0c        
         // metadata: MNetworkEnable
-        float m_flCumulativeDistance; // 0x878        
+        float m_flCumulativeDistance; // 0xa18        
         // metadata: MNetworkEnable
-        int16_t m_iNodeIndex; // 0x87c        
+        int16_t m_iNodeIndex; // 0xa1c        
         // metadata: MNetworkEnable
-        int16_t m_eCaptureState; // 0x87e        
+        int16_t m_eCaptureState; // 0xa1e        
         // metadata: MNetworkEnable
-        int16_t m_iPrimaryLane; // 0x880        
+        int16_t m_iPrimaryLane; // 0xa20        
         // metadata: MNetworkEnable
-        int16_t m_nRopesParity; // 0x882        
+        int16_t m_nRopesParity; // 0xa22        
         // metadata: MNetworkEnable
-        bool m_bCornerNode; // 0x884        
+        bool m_bCornerNode; // 0xa24        
         // metadata: MNetworkEnable
-        bool m_bCapturable; // 0x885        
+        bool m_bCapturable; // 0xa25        
         // metadata: MNetworkEnable
-        bool m_bAlwaysUsable; // 0x886        
+        bool m_bAlwaysUsable; // 0xa26        
         // metadata: MNetworkEnable
-        bool m_bOneWay; // 0x887        
+        bool m_bOneWay; // 0xa27        
         // metadata: MNetworkEnable
-        bool m_bDisableZippingToByPlayers; // 0x888        
+        bool m_bDisableZippingToByPlayers; // 0xa28        
         // metadata: MNetworkEnable
-        bool m_bUseForMinimapDrawing; // 0x889        
-        [[maybe_unused]] std::uint8_t pad_0x88a[0x2]; // 0x88a
+        bool m_bUseForMinimapDrawing; // 0xa29        
+        [[maybe_unused]] std::uint8_t pad_0xa2a[0x2]; // 0xa2a
         // metadata: MNetworkEnable
         // m_hGuardingBoss has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hGuardingBoss;
-        char m_hGuardingBoss[0x4]; // 0x88c        
+        char m_hGuardingBoss[0x4]; // 0xa2c        
         // metadata: MNetworkEnable
-        float m_flRopeRadius; // 0x890        
+        float m_flRopeRadius; // 0xa30        
         // metadata: MNetworkEnable
-        bool m_bEnabled; // 0x894        
-        [[maybe_unused]] std::uint8_t pad_0x895[0x3];
+        bool m_bEnabled; // 0xa34        
+        [[maybe_unused]] std::uint8_t pad_0xa35[0x3];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelZipLineNode because it is not a standard-layout class
-    static_assert(sizeof(CCitadelZipLineNode) == 0x898);
+    static_assert(sizeof(CCitadelZipLineNode) == 0xa38);
 };

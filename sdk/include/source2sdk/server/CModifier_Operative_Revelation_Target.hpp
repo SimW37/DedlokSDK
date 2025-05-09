@@ -14,17 +14,17 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e0
+    // Size: 0x208
     // Has VTable
     #pragma pack(push, 1)
     class CModifier_Operative_Revelation_Target : public server::CCitadelModifier
     {
     public:
         float m_flTotalTimeLookedAtCaster; // 0xc0        
-        [[maybe_unused]] std::uint8_t pad_0xc4[0x11c];
+        [[maybe_unused]] std::uint8_t pad_0xc4[0x144];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CModifier_Operative_Revelation_Target because it is not a standard-layout class
-    static_assert(sizeof(CModifier_Operative_Revelation_Target) == 0x1e0);
+    static_assert(sizeof(CModifier_Operative_Revelation_Target) == 0x208);
 };

@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc70
+    // Size: 0xdc8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bCanPull"
@@ -23,11 +23,11 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        bool m_bCanPull; // 0xc68        
-        [[maybe_unused]] std::uint8_t pad_0xc69[0x7];
+        bool m_bCanPull; // 0xdc0        
+        [[maybe_unused]] std::uint8_t pad_0xdc1[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Item_RescueBeam because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Item_RescueBeam) == 0xc70);
+    static_assert(sizeof(CCitadel_Item_RescueBeam) == 0xdc8);
 };

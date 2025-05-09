@@ -20,7 +20,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc10
+    // Size: 0xce0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bHoldingBall"
@@ -28,19 +28,20 @@ namespace source2sdk::server
     class CCitadel_Ability_WreckingBall : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0x8]; // 0xb00
-        client::ParticleIndex_t m_nBallParticle; // 0xb08        
-        client::ParticleIndex_t m_nCastCompleteParticle; // 0xb0c        
+        [[maybe_unused]] std::uint8_t pad_0xba0[0x14]; // 0xba0
+        client::ParticleIndex_t m_nBallParticle; // 0xbb4        
+        client::ParticleIndex_t m_nCastCompleteParticle; // 0xbb8        
+        [[maybe_unused]] std::uint8_t pad_0xbbc[0x4]; // 0xbbc
         // m_vecTargetsHit has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CHandle<server::CBaseEntity>> m_vecTargetsHit;
-        char m_vecTargetsHit[0x18]; // 0xb10        
-        [[maybe_unused]] std::uint8_t pad_0xb28[0xe0]; // 0xb28
+        char m_vecTargetsHit[0x18]; // 0xbc0        
+        [[maybe_unused]] std::uint8_t pad_0xbd8[0x100]; // 0xbd8
         // metadata: MNetworkEnable
-        bool m_bHoldingBall; // 0xc08        
-        [[maybe_unused]] std::uint8_t pad_0xc09[0x7];
+        bool m_bHoldingBall; // 0xcd8        
+        [[maybe_unused]] std::uint8_t pad_0xcd9[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_WreckingBall because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_WreckingBall) == 0xc10);
+    static_assert(sizeof(CCitadel_Ability_WreckingBall) == 0xce0);
 };

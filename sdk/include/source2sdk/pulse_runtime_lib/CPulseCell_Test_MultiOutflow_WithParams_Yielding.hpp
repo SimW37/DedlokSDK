@@ -22,7 +22,7 @@ namespace source2sdk::pulse_runtime_lib
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MCellForDomain "TestDomain"
     // static metadata: MPulseCellMethodBindings
-    // static metadata: MPulseCellOutflowHookInfo ""
+    // static metadata: MPulseCellOutflowHookInfo "Äùí¯"
     #pragma pack(push, 1)
     class CPulseCell_Test_MultiOutflow_WithParams_Yielding : public pulse_runtime_lib::CPulseCell_BaseYieldingInflow
     {

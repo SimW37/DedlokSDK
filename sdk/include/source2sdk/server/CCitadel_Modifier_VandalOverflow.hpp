@@ -14,18 +14,18 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x150
+    // Size: 0x160
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_VandalOverflow : public server::CCitadel_Modifier_Stunned
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc8[0x70]; // 0xc8
-        Vector m_vecFloatDest; // 0x138        
-        Vector m_vecStartingPos; // 0x144        
+        [[maybe_unused]] std::uint8_t pad_0xc8[0x80]; // 0xc8
+        Vector m_vecFloatDest; // 0x148        
+        Vector m_vecStartingPos; // 0x154        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_VandalOverflow because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_VandalOverflow) == 0x150);
+    static_assert(sizeof(CCitadel_Modifier_VandalOverflow) == 0x160);
 };

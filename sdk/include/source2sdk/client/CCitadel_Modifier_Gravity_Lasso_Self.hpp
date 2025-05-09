@@ -19,7 +19,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x2a0
+    // Size: 0x2e0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_Gravity_Lasso_Self : public client::CCitadelModifier
@@ -30,10 +30,10 @@ namespace source2sdk::client
         // m_vCastTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CHandle<client::C_BaseEntity>> m_vCastTargets;
         char m_vCastTargets[0x18]; // 0xc8        
-        [[maybe_unused]] std::uint8_t pad_0xe0[0x1c0];
+        [[maybe_unused]] std::uint8_t pad_0xe0[0x200];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Gravity_Lasso_Self because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Gravity_Lasso_Self) == 0x2a0);
+    static_assert(sizeof(CCitadel_Modifier_Gravity_Lasso_Self) == 0x2e0);
 };

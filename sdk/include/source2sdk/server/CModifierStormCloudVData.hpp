@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xbd8
+    // Size: 0xbe0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,30 +26,30 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_ZapFriendly has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapFriendly;
-        char m_ZapFriendly[0xe0]; // 0x658        
+        char m_ZapFriendly[0xe0]; // 0x660        
         // m_DrawFriendly has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DrawFriendly;
-        char m_DrawFriendly[0xe0]; // 0x738        
+        char m_DrawFriendly[0xe0]; // 0x740        
         // m_AoEFriendly has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEFriendly;
-        char m_AoEFriendly[0xe0]; // 0x818        
+        char m_AoEFriendly[0xe0]; // 0x820        
         // m_ZapEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapEnemy;
-        char m_ZapEnemy[0xe0]; // 0x8f8        
+        char m_ZapEnemy[0xe0]; // 0x900        
         // m_DrawEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DrawEnemy;
-        char m_DrawEnemy[0xe0]; // 0x9d8        
+        char m_DrawEnemy[0xe0]; // 0x9e0        
         // m_AoEEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEEnemy;
-        char m_AoEEnemy[0xe0]; // 0xab8        
+        char m_AoEEnemy[0xe0]; // 0xac0        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strChannelEndingSoonSound; // 0xb98        
-        CSoundEventName m_strChannelFinishedSound; // 0xba8        
-        CSoundEventName m_strDamageRecievedSound; // 0xbb8        
-        CSoundEventName m_strAmbientZapSound; // 0xbc8        
+        CSoundEventName m_strChannelEndingSoonSound; // 0xba0        
+        CSoundEventName m_strChannelFinishedSound; // 0xbb0        
+        CSoundEventName m_strDamageRecievedSound; // 0xbc0        
+        CSoundEventName m_strAmbientZapSound; // 0xbd0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CModifierStormCloudVData because it is not a standard-layout class
-    static_assert(sizeof(CModifierStormCloudVData) == 0xbd8);
+    static_assert(sizeof(CModifierStormCloudVData) == 0xbe0);
 };

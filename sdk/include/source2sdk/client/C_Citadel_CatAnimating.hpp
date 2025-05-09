@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb20
+    // Size: 0xcd0
     // Has VTable
     #pragma pack(push, 1)
     class C_Citadel_CatAnimating : public client::CCitadelAnimatingModelEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb08[0x18];
+        [[maybe_unused]] std::uint8_t pad_0xcb8[0x18];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(C_Citadel_CatAnimating) == 0xb20);
+    static_assert(sizeof(C_Citadel_CatAnimating) == 0xcd0);
 };

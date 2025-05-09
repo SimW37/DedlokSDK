@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x248
+    // Size: 0x280
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_TargetPracticeEnemy : public client::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x188];
+        [[maybe_unused]] std::uint8_t pad_0xc0[0x1c0];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Modifier_TargetPracticeEnemy) == 0x248);
+    static_assert(sizeof(CCitadel_Modifier_TargetPracticeEnemy) == 0x280);
 };

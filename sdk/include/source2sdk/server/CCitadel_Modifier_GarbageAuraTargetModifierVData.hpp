@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x750
+    // Size: 0x758
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -22,13 +22,13 @@ namespace source2sdk::server
     class CCitadel_Modifier_GarbageAuraTargetModifierVData : public server::CCitadel_Modifier_StunnedVData
     {
     public:
-        float m_flOuterSpeedScale; // 0x738        
-        float m_flSpeedScaleBias; // 0x73c        
+        float m_flOuterSpeedScale; // 0x740        
+        float m_flSpeedScaleBias; // 0x744        
         // metadata: MPropertyGroupName "Sounds"
-        CSoundEventName m_TargetLoopingSound; // 0x740        
+        CSoundEventName m_TargetLoopingSound; // 0x748        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_GarbageAuraTargetModifierVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_GarbageAuraTargetModifierVData) == 0x750);
+    static_assert(sizeof(CCitadel_Modifier_GarbageAuraTargetModifierVData) == 0x758);
 };

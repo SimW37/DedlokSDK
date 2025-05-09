@@ -14,7 +14,7 @@ namespace source2sdk::smartprops
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x38
+    // Size: 0x48
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,11 +23,11 @@ namespace source2sdk::smartprops
     class CSmartPropVariable_Angles : public smartprops::CSmartPropVariable
     {
     public:
-        QAngle m_DefaultValue; // 0x28        
-        [[maybe_unused]] std::uint8_t pad_0x34[0x4];
+        QAngle m_DefaultValue; // 0x38        
+        [[maybe_unused]] std::uint8_t pad_0x44[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSmartPropVariable_Angles because it is not a standard-layout class
-    static_assert(sizeof(CSmartPropVariable_Angles) == 0x38);
+    static_assert(sizeof(CSmartPropVariable_Angles) == 0x48);
 };

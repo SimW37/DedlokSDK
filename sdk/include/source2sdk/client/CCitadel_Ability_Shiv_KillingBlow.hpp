@@ -21,7 +21,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1038
+    // Size: 0x1228
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bActive"
@@ -35,30 +35,30 @@ namespace source2sdk::client
     class CCitadel_Ability_Shiv_KillingBlow : public client::CCitadelBaseShivAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc50[0x1c0]; // 0xc50
+        [[maybe_unused]] std::uint8_t pad_0xdc0[0x200]; // 0xdc0
         // metadata: MNetworkEnable
-        bool m_bActive; // 0xe10        
-        [[maybe_unused]] std::uint8_t pad_0xe11[0x3]; // 0xe11
+        bool m_bActive; // 0xfc0        
+        [[maybe_unused]] std::uint8_t pad_0xfc1[0x3]; // 0xfc1
         // metadata: MNetworkEnable
         // m_hCurrentTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hCurrentTarget;
-        char m_hCurrentTarget[0x4]; // 0xe14        
+        char m_hCurrentTarget[0x4]; // 0xfc4        
         // metadata: MNetworkEnable
-        Vector m_vStartPosition; // 0xe18        
+        Vector m_vStartPosition; // 0xfc8        
         // metadata: MNetworkEnable
-        Vector m_vDeparturePosition; // 0xe24        
+        Vector m_vDeparturePosition; // 0xfd4        
         // metadata: MNetworkEnable
-        client::CCitadelAutoScaledTime m_flDepartureTime; // 0xe30        
+        client::CCitadelAutoScaledTime m_flDepartureTime; // 0xfe0        
         // metadata: MNetworkEnable
-        client::CCitadelAutoScaledTime m_flArrivalTime; // 0xe48        
-        Vector m_vLastKnownSafePos; // 0xe60        
-        [[maybe_unused]] std::uint8_t pad_0xe6c[0x4]; // 0xe6c
+        client::CCitadelAutoScaledTime m_flArrivalTime; // 0xff8        
+        Vector m_vLastKnownSafePos; // 0x1010        
+        [[maybe_unused]] std::uint8_t pad_0x101c[0x4]; // 0x101c
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flDrainSuppressEndTime; // 0xe70        
-        [[maybe_unused]] std::uint8_t pad_0xe74[0x1c4];
+        entity2::GameTime_t m_flDrainSuppressEndTime; // 0x1020        
+        [[maybe_unused]] std::uint8_t pad_0x1024[0x204];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Shiv_KillingBlow because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlow) == 0x1038);
+    static_assert(sizeof(CCitadel_Ability_Shiv_KillingBlow) == 0x1228);
 };

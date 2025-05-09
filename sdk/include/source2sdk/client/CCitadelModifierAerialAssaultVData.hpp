@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x848
+    // Size: 0x850
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,24 +27,24 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Modifiers"
         // m_FireRateModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_FireRateModifier;
-        char m_FireRateModifier[0x10]; // 0x658        
+        char m_FireRateModifier[0x10]; // 0x660        
         // metadata: MPropertyStartGroup "Visuals"
         // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-        char m_ExplodeParticle[0xe0]; // 0x668        
+        char m_ExplodeParticle[0xe0]; // 0x670        
         // m_TracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle;
-        char m_TracerParticle[0xe0]; // 0x748        
+        char m_TracerParticle[0xe0]; // 0x750        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_ExplodeSound; // 0x828        
+        CSoundEventName m_ExplodeSound; // 0x830        
         // metadata: MPropertyStartGroup "Gameplay"
-        float m_flAirDrag; // 0x838        
-        float m_flAirSpeed; // 0x83c        
-        float m_flFallSpeed; // 0x840        
-        [[maybe_unused]] std::uint8_t pad_0x844[0x4];
+        float m_flAirDrag; // 0x840        
+        float m_flAirSpeed; // 0x844        
+        float m_flFallSpeed; // 0x848        
+        [[maybe_unused]] std::uint8_t pad_0x84c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelModifierAerialAssaultVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadelModifierAerialAssaultVData) == 0x848);
+    static_assert(sizeof(CCitadelModifierAerialAssaultVData) == 0x850);
 };

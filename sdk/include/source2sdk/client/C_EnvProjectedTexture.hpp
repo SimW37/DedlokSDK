@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xaf0
+    // Size: 0xc90
     // Has VTable
     #pragma pack(push, 1)
     class C_EnvProjectedTexture : public client::C_ModelPointEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x808[0x2e8];
+        [[maybe_unused]] std::uint8_t pad_0x9a8[0x2e8];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(C_EnvProjectedTexture) == 0xaf0);
+    static_assert(sizeof(C_EnvProjectedTexture) == 0xc90);
 };

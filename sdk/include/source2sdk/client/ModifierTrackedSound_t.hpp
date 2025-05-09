@@ -13,7 +13,7 @@ namespace source2sdk::client
     // Registered alignment: 0x4
     // Alignment: 0x4
     // Standard-layout class: true
-    // Size: 0x8
+    // Size: 0x14
     // Has Trivial Destructor
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -21,9 +21,9 @@ namespace source2sdk::client
     struct ModifierTrackedSound_t
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x00[0x8];
+        [[maybe_unused]] std::uint8_t pad_0x00[0x14];
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(ModifierTrackedSound_t) == 0x8);
+    static_assert(sizeof(ModifierTrackedSound_t) == 0x14);
 };

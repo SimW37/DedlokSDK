@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1798
+    // Size: 0x17c0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,17 +27,17 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_SprayParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SprayParticle;
-        char m_SprayParticle[0xe0]; // 0x15c8        
+        char m_SprayParticle[0xe0]; // 0x15f0        
         // m_ChannelStartParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChannelStartParticle;
-        char m_ChannelStartParticle[0xe0]; // 0x16a8        
+        char m_ChannelStartParticle[0xe0]; // 0x16d0        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CBaseModifier> m_DebuffModifier;
-        char m_DebuffModifier[0x10]; // 0x1788        
+        char m_DebuffModifier[0x10]; // 0x17b0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbilityWreckerScrapBlastVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityWreckerScrapBlastVData) == 0x1798);
+    static_assert(sizeof(CAbilityWreckerScrapBlastVData) == 0x17c0);
 };

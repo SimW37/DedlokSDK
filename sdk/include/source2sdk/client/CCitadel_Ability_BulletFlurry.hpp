@@ -22,7 +22,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xdb8
+    // Size: 0xf50
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CCitadelAutoScaledTime m_flFlurryEndTime"
@@ -32,23 +32,23 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        client::CCitadelAutoScaledTime m_flFlurryEndTime; // 0xc50        
+        client::CCitadelAutoScaledTime m_flFlurryEndTime; // 0xdc0        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flNextAttackTime; // 0xc68        
-        [[maybe_unused]] std::uint8_t pad_0xc6c[0x11c]; // 0xc6c
+        entity2::GameTime_t m_flNextAttackTime; // 0xdd8        
+        [[maybe_unused]] std::uint8_t pad_0xddc[0x144]; // 0xddc
         // m_vecShootTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CHandle<client::C_BaseEntity>> m_vecShootTargets;
-        char m_vecShootTargets[0x18]; // 0xd88        
-        int32_t m_nNumPlayersKilled; // 0xda0        
-        int32_t m_nShootIndex; // 0xda4        
-        int32_t m_nShootIndexNPC; // 0xda8        
-        int32_t m_nBurstShots; // 0xdac        
-        client::SatVolumeIndex_t m_nSatVolumeIndex; // 0xdb0        
-        bool m_bHasCameraOverride; // 0xdb4        
-        [[maybe_unused]] std::uint8_t pad_0xdb5[0x3];
+        char m_vecShootTargets[0x18]; // 0xf20        
+        int32_t m_nNumPlayersKilled; // 0xf38        
+        int32_t m_nShootIndex; // 0xf3c        
+        int32_t m_nShootIndexNPC; // 0xf40        
+        int32_t m_nBurstShots; // 0xf44        
+        client::SatVolumeIndex_t m_nSatVolumeIndex; // 0xf48        
+        bool m_bHasCameraOverride; // 0xf4c        
+        [[maybe_unused]] std::uint8_t pad_0xf4d[0x3];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_BulletFlurry because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_BulletFlurry) == 0xdb8);
+    static_assert(sizeof(CCitadel_Ability_BulletFlurry) == 0xf50);
 };

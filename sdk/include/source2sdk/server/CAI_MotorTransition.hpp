@@ -14,9 +14,9 @@
 namespace source2sdk::server
 {
     // Registered alignment: unknown
-    // Alignment: 0x4
+    // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x60
+    // Size: 0x68
     // Has VTable
     #pragma pack(push, 1)
     class CAI_MotorTransition : public client::CAI_Component
@@ -27,10 +27,11 @@ namespace source2sdk::server
         Vector m_vNavLinkStartPos; // 0x4c        
         entity2::GameTime_t m_flNavLinkFaceStartTime; // 0x58        
         bool m_bTransitionAnimgraphHasTicked; // 0x5c        
-        [[maybe_unused]] std::uint8_t pad_0x5d[0x3];
+        [[maybe_unused]] std::uint8_t pad_0x5d[0x3]; // 0x5d
+        CGlobalSymbol m_strMovementName; // 0x60        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAI_MotorTransition because it is not a standard-layout class
-    static_assert(sizeof(CAI_MotorTransition) == 0x60);
+    static_assert(sizeof(CAI_MotorTransition) == 0x68);
 };

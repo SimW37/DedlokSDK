@@ -22,7 +22,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xdf0
+    // Size: 0xf60
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "Vector m_vecCastStartPos"
@@ -40,47 +40,47 @@ namespace source2sdk::client
     class CCitadel_Ability_TangoTether : public client::C_CitadelBaseAbility
     {
     public:
-        client::SatVolumeIndex_t m_desatVolIdx; // 0xc50        
+        client::SatVolumeIndex_t m_desatVolIdx; // 0xdc0        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        Vector m_vecCastStartPos; // 0xc54        
+        Vector m_vecCastStartPos; // 0xdc4        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        Vector m_vecDashStartPos; // 0xc60        
+        Vector m_vecDashStartPos; // 0xdd0        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        Vector m_vecDashEndPos; // 0xc6c        
+        Vector m_vecDashEndPos; // 0xddc        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        QAngle m_angDashStartAng; // 0xc78        
+        QAngle m_angDashStartAng; // 0xde8        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flDashStartTime; // 0xc84        
+        entity2::GameTime_t m_flDashStartTime; // 0xdf4        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flGrappleStartTime; // 0xc88        
+        entity2::GameTime_t m_flGrappleStartTime; // 0xdf8        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flGrappleArriveTime; // 0xc8c        
+        entity2::GameTime_t m_flGrappleArriveTime; // 0xdfc        
         // metadata: MNetworkEnable
         // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hTarget;
-        char m_hTarget[0x4]; // 0xc90        
-        float m_flVelSpring; // 0xc94        
+        char m_hTarget[0x4]; // 0xe00        
+        float m_flVelSpring; // 0xe04        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flGrappleShotAttackTime; // 0xc98        
-        int32_t m_nTicksNotMoving; // 0xc9c        
-        Vector m_vecPrevPos; // 0xca0        
+        entity2::GameTime_t m_flGrappleShotAttackTime; // 0xe08        
+        int32_t m_nTicksNotMoving; // 0xe0c        
+        Vector m_vecPrevPos; // 0xe10        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
         // metadata: MNetworkEncoder "coord"
-        Vector m_rgTargetPos[20]; // 0xcac        
+        Vector m_rgTargetPos[20]; // 0xe1c        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_rgTargetPosTime[20]; // 0xd9c        
-        client::ParticleIndex_t m_nGrappleTravelEffect; // 0xdec        
+        entity2::GameTime_t m_rgTargetPosTime[20]; // 0xf0c        
+        client::ParticleIndex_t m_nGrappleTravelEffect; // 0xf5c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_TangoTether because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_TangoTether) == 0xdf0);
+    static_assert(sizeof(CCitadel_Ability_TangoTether) == 0xf60);
 };

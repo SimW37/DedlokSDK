@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xcf0
+    // Size: 0xed0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadelItemPickupRejuvHeroTest : public client::CCitadelItemPickupRejuv
@@ -24,5 +24,5 @@ namespace source2sdk::client
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadelItemPickupRejuvHeroTest) == 0xcf0);
+    static_assert(sizeof(CCitadelItemPickupRejuvHeroTest) == 0xed0);
 };

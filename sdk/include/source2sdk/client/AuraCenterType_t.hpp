@@ -1,0 +1,21 @@
+#pragma once
+#include <cstdint>
+
+// /////////////////////////////////////////////////////////////
+// Module: client
+// Created using source2gen - github.com/neverlosecc/source2gen
+// /////////////////////////////////////////////////////////////
+
+namespace source2sdk::client
+{
+    // Enumerator count: 2
+    // Alignment: 4
+    // Size: 0x4
+    enum class AuraCenterType_t : std::uint32_t
+    {
+        // MPropertyFriendlyName "AbsOrigin"
+        eAbsOrigin = 0x0,
+        // MPropertyFriendlyName "Center"
+        eCenter = 0x1,
+    };
+};

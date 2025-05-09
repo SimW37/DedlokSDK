@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x210
+    // Size: 0x1b8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_SpiritBurnProcWatcher : public client::CCitadel_Modifier_BaseEventProc
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x168[0xa8];
+        [[maybe_unused]] std::uint8_t pad_0x178[0x40];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Modifier_SpiritBurnProcWatcher) == 0x210);
+    static_assert(sizeof(CCitadel_Modifier_SpiritBurnProcWatcher) == 0x1b8);
 };

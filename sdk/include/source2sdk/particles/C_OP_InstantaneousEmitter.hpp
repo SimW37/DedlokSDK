@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x5f8
+    // Size: 0x600
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -40,9 +40,12 @@ namespace source2sdk::particles
         int32_t m_nMaxEmittedPerFrame; // 0x5f0        
         // metadata: MPropertyFriendlyName "control point with snapshot data"
         int32_t m_nSnapshotControlPoint; // 0x5f4        
+        // metadata: MPropertyFriendlyName "snapshot subset"
+        // metadata: MPropertySuppressExpr "m_nSnapshotControlPoint < 0"
+        CUtlString m_strSnapshotSubset; // 0x5f8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_InstantaneousEmitter because it is not a standard-layout class
-    static_assert(sizeof(C_OP_InstantaneousEmitter) == 0x5f8);
+    static_assert(sizeof(C_OP_InstantaneousEmitter) == 0x600);
 };

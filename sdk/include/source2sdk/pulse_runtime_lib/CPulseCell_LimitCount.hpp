@@ -20,7 +20,7 @@ namespace source2sdk::pulse_runtime_lib
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MCellForDomain "BaseDomain"
     // static metadata: MPulseCellMethodBindings
-    // static metadata: MPulseCellOutflowHookInfo
+    // static metadata: MPulseCellOutflowHookInfo "Äùí¯"
     // static metadata: MPropertyFriendlyName "Limit Count"
     // static metadata: MPropertyDescription "Skip this node after the limit. Check Type does not apply, the limit will always be checked."
     // static metadata: MPulseRequirementPass

@@ -1,6 +1,7 @@
 #pragma once
-#include "source2sdk/client/PathAccompanyNode_t.hpp"
+#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/server/CBaseEntity.hpp"
+#include "source2sdk/server/PathAccompanyNode_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -24,15 +25,17 @@ namespace source2sdk::server
         float m_flPathLength; // 0x4e0        
         [[maybe_unused]] std::uint8_t pad_0x4e4[0x4]; // 0x4e4
         // m_vecNodes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<client::PathAccompanyNode_t> m_vecNodes;
+        // CUtlVector<server::PathAccompanyNode_t> m_vecNodes;
         char m_vecNodes[0x18]; // 0x4e8        
-        [[maybe_unused]] std::uint8_t pad_0x500[0x8]; // 0x500
-        float m_flAutoLeadRange; // 0x508        
-        float m_flAutoBreakRange; // 0x50c        
+        entity2::GameTime_t m_flLastPathRecalc; // 0x500        
+        float m_flAutoLeadRange; // 0x504        
+        float m_flAutoBreakRange; // 0x508        
+        [[maybe_unused]] std::uint8_t pad_0x50c[0x4];
         
         // Datamap fields:
         // CUtlSymbolLarge pathNodes; // 0x7fffffff
         // CUtlSymbolLarge pathNodeRadiusScales; // 0x7fffffff
+        // CUtlSymbolLarge deformable_prop; // 0x7fffffff
     };
     #pragma pack(pop)
     

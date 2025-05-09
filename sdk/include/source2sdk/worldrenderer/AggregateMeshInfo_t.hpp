@@ -15,7 +15,7 @@ namespace source2sdk::worldrenderer
     // Registered alignment: 0x4
     // Alignment: 0x4
     // Standard-layout class: true
-    // Size: 0x20
+    // Size: 0x24
     // Has Trivial Destructor
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -34,8 +34,9 @@ namespace source2sdk::worldrenderer
         worldrenderer::ObjectTypeFlags_t m_objectFlags; // 0x10        
         int32_t m_nLightProbeVolumePrecomputedHandshake; // 0x14        
         uint32_t m_nInstanceStreamOffset; // 0x18        
-        worldrenderer::AggregateInstanceStream_t m_instanceStreams; // 0x1c        
-        [[maybe_unused]] std::uint8_t pad_0x1d[0x3];
+        uint32_t m_nVertexAlbedoStreamOffset; // 0x1c        
+        worldrenderer::AggregateInstanceStream_t m_instanceStreams; // 0x20        
+        [[maybe_unused]] std::uint8_t pad_0x21[0x3];
     };
     #pragma pack(pop)
     
@@ -49,7 +50,8 @@ namespace source2sdk::worldrenderer
     static_assert(offsetof(AggregateMeshInfo_t, m_objectFlags) == 0x10);
     static_assert(offsetof(AggregateMeshInfo_t, m_nLightProbeVolumePrecomputedHandshake) == 0x14);
     static_assert(offsetof(AggregateMeshInfo_t, m_nInstanceStreamOffset) == 0x18);
-    static_assert(offsetof(AggregateMeshInfo_t, m_instanceStreams) == 0x1c);
+    static_assert(offsetof(AggregateMeshInfo_t, m_nVertexAlbedoStreamOffset) == 0x1c);
+    static_assert(offsetof(AggregateMeshInfo_t, m_instanceStreams) == 0x20);
     
-    static_assert(sizeof(AggregateMeshInfo_t) == 0x20);
+    static_assert(sizeof(AggregateMeshInfo_t) == 0x24);
 };

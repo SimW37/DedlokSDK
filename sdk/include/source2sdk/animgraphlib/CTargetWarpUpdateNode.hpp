@@ -31,7 +31,8 @@ namespace source2sdk::animgraphlib
         bool m_bTargetPositionIsWorldSpace; // 0x7b        
         bool m_bOnlyWarpWhenTagIsFound; // 0x7c        
         bool m_bWarpOrientationDuringTranslation; // 0x7d        
-        [[maybe_unused]] std::uint8_t pad_0x7e[0x2]; // 0x7e
+        bool m_bWarpAroundCenter; // 0x7e        
+        [[maybe_unused]] std::uint8_t pad_0x7f[0x1]; // 0x7f
         float m_flMaxAngle; // 0x80        
         [[maybe_unused]] std::uint8_t pad_0x84[0x4];
     };

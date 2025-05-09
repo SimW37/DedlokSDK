@@ -19,7 +19,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x220
+    // Size: 0x248
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_ChainLightningEffect : public server::CCitadelModifier
@@ -34,10 +34,10 @@ namespace source2sdk::server
         // CUtlVector<CHandle<server::CBaseEntity>> m_hUnhitEnts;
         char m_hUnhitEnts[0x18]; // 0xe0        
         Vector m_vLastSource; // 0xf8        
-        [[maybe_unused]] std::uint8_t pad_0x104[0x11c];
+        [[maybe_unused]] std::uint8_t pad_0x104[0x144];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_ChainLightningEffect because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_ChainLightningEffect) == 0x220);
+    static_assert(sizeof(CCitadel_Modifier_ChainLightningEffect) == 0x248);
 };

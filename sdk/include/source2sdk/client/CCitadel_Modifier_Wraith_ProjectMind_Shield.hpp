@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/client/CCitadel_Modifier_BaseShield.hpp"
+#include "source2sdk/client/CCitadelModifier.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -17,7 +17,7 @@ namespace source2sdk::client
     // Size: 0xc0
     // Has VTable
     #pragma pack(push, 1)
-    class CCitadel_Modifier_Wraith_ProjectMind_Shield : public client::CCitadel_Modifier_BaseShield
+    class CCitadel_Modifier_Wraith_ProjectMind_Shield : public client::CCitadelModifier
     {
     public:
         // No schema binary for binding

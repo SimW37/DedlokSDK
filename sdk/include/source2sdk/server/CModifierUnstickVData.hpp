@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x758
+    // Size: 0x760
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,12 +23,12 @@ namespace source2sdk::server
     {
     public:
         // metadata: MPropertyGroupName "Sounds"
-        CSoundEventName m_sSuccessSound; // 0x738        
+        CSoundEventName m_sSuccessSound; // 0x740        
         // metadata: MPropertyGroupName "Sounds"
-        CSoundEventName m_sFailureSound; // 0x748        
+        CSoundEventName m_sFailureSound; // 0x750        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CModifierUnstickVData because it is not a standard-layout class
-    static_assert(sizeof(CModifierUnstickVData) == 0x758);
+    static_assert(sizeof(CModifierUnstickVData) == 0x760);
 };

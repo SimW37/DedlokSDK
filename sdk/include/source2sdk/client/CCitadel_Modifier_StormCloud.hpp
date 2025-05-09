@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x2e8
+    // Size: 0x330
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_StormCloud : public client::CCitadelModifier
@@ -31,10 +31,10 @@ namespace source2sdk::client
         int32_t m_nLastTickForLightningCenterCalc; // 0xdc        
         Vector m_vecLightningCenter; // 0xe0        
         client::SatVolumeIndex_t m_nSatVolumeIndex; // 0xec        
-        [[maybe_unused]] std::uint8_t pad_0xf0[0x1f8];
+        [[maybe_unused]] std::uint8_t pad_0xf0[0x240];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_StormCloud because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_StormCloud) == 0x2e8);
+    static_assert(sizeof(CCitadel_Modifier_StormCloud) == 0x330);
 };

@@ -15,17 +15,17 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x250
+    // Size: 0x288
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_Bolo : public client::CCitadelModifier
     {
     public:
         client::ParticleIndex_t m_hRingEffect; // 0xc0        
-        [[maybe_unused]] std::uint8_t pad_0xc4[0x18c];
+        [[maybe_unused]] std::uint8_t pad_0xc4[0x1c4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Bolo because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Bolo) == 0x250);
+    static_assert(sizeof(CCitadel_Modifier_Bolo) == 0x288);
 };

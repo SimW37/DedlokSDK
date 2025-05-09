@@ -14,17 +14,17 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x288
+    // Size: 0x2c0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_DetentionAmmo : public server::CCitadel_Modifier_BaseEventProc
     {
     public:
-        float m_flBuildupPerBullet; // 0x168        
-        [[maybe_unused]] std::uint8_t pad_0x16c[0x11c];
+        float m_flBuildupPerBullet; // 0x178        
+        [[maybe_unused]] std::uint8_t pad_0x17c[0x144];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_DetentionAmmo because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_DetentionAmmo) == 0x288);
+    static_assert(sizeof(CCitadel_Modifier_DetentionAmmo) == 0x2c0);
 };

@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc8
+    // Size: 0x368
     // Has VTable
     #pragma pack(push, 1)
     class CCitadelBaseAbilityGraphController : public client::CBaseAnimGraphAnimGraphController
@@ -24,5 +24,5 @@ namespace source2sdk::client
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadelBaseAbilityGraphController) == 0xc8);
+    static_assert(sizeof(CCitadelBaseAbilityGraphController) == 0x368);
 };

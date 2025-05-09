@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x9e0
+    // Size: 0x9e8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,22 +26,22 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_GroundParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle;
-        char m_GroundParticle[0xe0]; // 0x658        
+        char m_GroundParticle[0xe0]; // 0x660        
         // m_StrikeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StrikeParticle;
-        char m_StrikeParticle[0xe0]; // 0x738        
+        char m_StrikeParticle[0xe0]; // 0x740        
         // m_GroundParticleFriendly has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticleFriendly;
-        char m_GroundParticleFriendly[0xe0]; // 0x818        
+        char m_GroundParticleFriendly[0xe0]; // 0x820        
         // m_StrikeParticleFriendly has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StrikeParticleFriendly;
-        char m_StrikeParticleFriendly[0xe0]; // 0x8f8        
+        char m_StrikeParticleFriendly[0xe0]; // 0x900        
         // metadata: MPropertyStartGroup "Gameplay"
-        float m_flHeight; // 0x9d8        
-        [[maybe_unused]] std::uint8_t pad_0x9dc[0x4];
+        float m_flHeight; // 0x9e0        
+        [[maybe_unused]] std::uint8_t pad_0x9e4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_LightningStrikeAreaVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_LightningStrikeAreaVData) == 0x9e0);
+    static_assert(sizeof(CCitadel_Modifier_LightningStrikeAreaVData) == 0x9e8);
 };

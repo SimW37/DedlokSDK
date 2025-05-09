@@ -14,16 +14,16 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc20
+    // Size: 0xce8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Astro_Rifle : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0x120];
+        [[maybe_unused]] std::uint8_t pad_0xba0[0x148];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Ability_Astro_Rifle) == 0xc20);
+    static_assert(sizeof(CCitadel_Ability_Astro_Rifle) == 0xce8);
 };

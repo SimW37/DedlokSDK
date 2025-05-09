@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc68
+    // Size: 0xdc0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_WeaponUpgrade_Ricochet : public client::CCitadel_Item
@@ -24,5 +24,5 @@ namespace source2sdk::client
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_WeaponUpgrade_Ricochet) == 0xc68);
+    static_assert(sizeof(CCitadel_WeaponUpgrade_Ricochet) == 0xdc0);
 };

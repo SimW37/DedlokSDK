@@ -21,7 +21,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x7d8
+    // Size: 0x7e0
     // Has VTable
     // 
     // static metadata: MNetworkIncludeByName "m_pEntity"
@@ -39,6 +39,7 @@ namespace source2sdk::server
     // static metadata: MNetworkVarNames "PlayerConnectedState m_iConnected"
     // static metadata: MNetworkVarNames "char m_iszPlayerName"
     // static metadata: MNetworkVarNames "uint64 m_steamID"
+    // static metadata: MNetworkVarNames "bool m_bNoClipEnabled"
     // static metadata: MNetworkVarNames "uint32 m_iDesiredFOV"
     #pragma pack(push, 1)
     class CBasePlayerController : public server::CBaseEntity
@@ -93,8 +94,12 @@ namespace source2sdk::server
         // metadata: MNetworkChangeCallback "OnSteamIDChanged"
         uint64_t m_steamID; // 0x750        
         // metadata: MNetworkEnable
-        uint32_t m_iDesiredFOV; // 0x758        
-        [[maybe_unused]] std::uint8_t pad_0x75c[0x7c];
+        // metadata: MNetworkChangeCallback "OnNoClipEnableChanged"
+        bool m_bNoClipEnabled; // 0x758        
+        [[maybe_unused]] std::uint8_t pad_0x759[0x3]; // 0x759
+        // metadata: MNetworkEnable
+        uint32_t m_iDesiredFOV; // 0x75c        
+        [[maybe_unused]] std::uint8_t pad_0x760[0x80];
         
         // Datamap fields:
         // bool fakeclient; // 0x7fffffff
@@ -106,9 +111,10 @@ namespace source2sdk::server
         // void m_LastCmd; // 0x5e8
         // void m_nLastRealCommandNumberExecuted; // 0x714
         // void m_nLastLateCommandExecuted; // 0x718
+        // void m_hConVarUserInfoSet; // 0x7d8
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBasePlayerController because it is not a standard-layout class
-    static_assert(sizeof(CBasePlayerController) == 0x7d8);
+    static_assert(sizeof(CBasePlayerController) == 0x7e0);
 };

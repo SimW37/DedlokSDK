@@ -18,7 +18,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x10d8
+    // Size: 0x1100
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -35,91 +35,93 @@ namespace source2sdk::client
         // metadata: MPropertyGroupName "Visuals"
         // m_sAG2VariationName has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeCNmGraphDefinition>> m_sAG2VariationName;
-        char m_sAG2VariationName[0xe0]; // 0x388        
+        char m_sAG2VariationName[0xe0]; // 0x390        
         // m_mapBoundAbilities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlOrderedMap<client::EAbilitySlots_t,CSubclassName<4>> m_mapBoundAbilities;
-        char m_mapBoundAbilities[0x28]; // 0x468        
-        float m_flSightRangePlayers; // 0x490        
-        float m_flSightRangeNPCs; // 0x494        
-        CGlobalSymbol m_MeleeAnimName; // 0x498        
-        float m_flMeleeAttemptRange; // 0x4a0        
-        float m_flMeleeHitRange; // 0x4a4        
+        char m_mapBoundAbilities[0x28]; // 0x470        
+        float m_flSightRangePlayers; // 0x498        
+        float m_flSightRangeNPCs; // 0x49c        
+        CGlobalSymbol m_MeleeAnimName; // 0x4a0        
+        float m_flMeleeAttemptRange; // 0x4a8        
+        float m_flMeleeHitRange; // 0x4ac        
         // m_MeleeAttackPoints has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<float> m_MeleeAttackPoints;
-        char m_MeleeAttackPoints[0x18]; // 0x4a8        
-        float m_flMaxHealthBarDrawDistance; // 0x4c0        
+        char m_MeleeAttackPoints[0x18]; // 0x4b0        
+        float m_flMaxHealthBarDrawDistance; // 0x4c8        
         // metadata: MPropertyStartGroup "Movement"
-        float m_flWalkSpeed; // 0x4c4        
-        float m_flRunSpeed; // 0x4c8        
-        float m_flTurnRate; // 0x4cc        
-        float m_flAcceleration; // 0x4d0        
-        float m_flStepHeight; // 0x4d4        
-        int8_t m_navHull; // 0x4d8        
-        [[maybe_unused]] std::uint8_t pad_0x4d9[0x7]; // 0x4d9
+        float m_flWalkSpeed; // 0x4cc        
+        float m_flRunSpeed; // 0x4d0        
+        float m_flTurnRate; // 0x4d4        
+        float m_flAcceleration; // 0x4d8        
+        float m_flStepHeight; // 0x4dc        
+        int8_t m_navHull; // 0x4e0        
+        [[maybe_unused]] std::uint8_t pad_0x4e1[0x7]; // 0x4e1
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_BeamStartSound; // 0x4e0        
-        CSoundEventName m_BeamStopSound; // 0x4f0        
-        CSoundEventName m_BeamPointStartLoopSound; // 0x500        
-        CSoundEventName m_BeamPointEndLoopSound; // 0x510        
-        CSoundEventName m_BeamPointClosestLoopSound; // 0x520        
-        CSoundEventName m_strAmbientLoopSound; // 0x530        
-        CSoundEventName m_DeathSound; // 0x540        
-        CSoundEventName m_strLastHitSound; // 0x550        
-        bool m_bPlayLastHitSound; // 0x560        
-        [[maybe_unused]] std::uint8_t pad_0x561[0x7]; // 0x561
-        CSoundEventName m_MeleeHitSound; // 0x568        
-        CSoundEventName m_MeleeHitPlayerSound; // 0x578        
+        CSoundEventName m_BeamStartSound; // 0x4e8        
+        CSoundEventName m_BeamStopSound; // 0x4f8        
+        CSoundEventName m_BeamPointStartLoopSound; // 0x508        
+        CSoundEventName m_BeamPointEndLoopSound; // 0x518        
+        CSoundEventName m_BeamPointClosestLoopSound; // 0x528        
+        CSoundEventName m_strAmbientLoopSound; // 0x538        
+        CSoundEventName m_DeathSound; // 0x548        
+        CSoundEventName m_strLastHitSound; // 0x558        
+        bool m_bPlayLastHitSound; // 0x568        
+        [[maybe_unused]] std::uint8_t pad_0x569[0x7]; // 0x569
+        CSoundEventName m_MeleeHitSound; // 0x570        
+        CSoundEventName m_MeleeHitPlayerSound; // 0x580        
         // metadata: MPropertyStartGroup "Visuals"
-        // metadata: MPropertyAttributeEditor "VDataModelMaterialGroup( m_sModelName )"
-        CUtlString m_sDefaultMaterialGroupName; // 0x588        
-        // metadata: MPropertyAttributeEditor "VDataModelMaterialGroup( m_sModelName )"
-        CUtlString m_sEnemyMaterialGroupName; // 0x590        
-        // metadata: MPropertyAttributeEditor "VDataModelMaterialGroup( m_sModelName )"
-        CUtlString m_sTeam1MaterialGroupName; // 0x598        
-        // metadata: MPropertyAttributeEditor "VDataModelMaterialGroup( m_sModelName )"
-        CUtlString m_sTeam2MaterialGroupName; // 0x5a0        
+        CModelMaterialGroupName m_sDefaultMaterialGroupName; // 0x590        
+        CModelMaterialGroupName m_sEnemyMaterialGroupName; // 0x598        
+        CModelMaterialGroupName m_sTeam1MaterialGroupName; // 0x5a0        
+        CModelMaterialGroupName m_sTeam2MaterialGroupName; // 0x5a8        
         // m_MeleeSwingParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle;
-        char m_MeleeSwingParticle[0xe0]; // 0x5a8        
+        char m_MeleeSwingParticle[0xe0]; // 0x5b0        
         // m_MeleeActivateParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeActivateParticle;
-        char m_MeleeActivateParticle[0xe0]; // 0x688        
-        float m_flModelScale; // 0x768        
-        [[maybe_unused]] std::uint8_t pad_0x76c[0x4]; // 0x76c
+        char m_MeleeActivateParticle[0xe0]; // 0x690        
+        float m_flModelScale; // 0x770        
+        [[maybe_unused]] std::uint8_t pad_0x774[0x4]; // 0x774
         // metadata: MPropertyDescription "Particle to play instead of doing a ragdoll"
         // m_DeathParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeathParticle;
-        char m_DeathParticle[0xe0]; // 0x770        
+        char m_DeathParticle[0xe0]; // 0x778        
+        Color m_GlowColorFriend; // 0x858        
+        Color m_GlowColorEnemy; // 0x85c        
+        Color m_GlowColorTeam1; // 0x860        
+        Color m_GlowColorTeam2; // 0x864        
+        Color m_GlowColorTeamNeutral; // 0x868        
+        [[maybe_unused]] std::uint8_t pad_0x86c[0x4]; // 0x86c
         // metadata: MPropertyStartGroup "Health Bar"
         // m_HealthBarParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealthBarParticle;
-        char m_HealthBarParticle[0xe0]; // 0x850        
-        CUtlString m_sHealthBarAttachment; // 0x930        
-        Color m_HealthBarColorFriend; // 0x938        
-        Color m_HealthBarColorEnemy; // 0x93c        
-        Color m_HealthBarColorTeam1; // 0x940        
-        Color m_HealthBarColorTeam2; // 0x944        
-        Color m_HealthBarColorTeamNeutral; // 0x948        
+        char m_HealthBarParticle[0xe0]; // 0x870        
+        CUtlString m_sHealthBarAttachment; // 0x950        
+        Color m_HealthBarColorFriend; // 0x958        
+        Color m_HealthBarColorEnemy; // 0x95c        
+        Color m_HealthBarColorTeam1; // 0x960        
+        Color m_HealthBarColorTeam2; // 0x964        
+        Color m_HealthBarColorTeamNeutral; // 0x968        
         // metadata: MPropertyStartGroup "Misc"
-        float m_flHealthBarOffset; // 0x94c        
+        float m_flHealthBarOffset; // 0x96c        
         // metadata: MPropertyDescription "When true, spawns breakables defined in the model"
-        bool m_bSpawnBreakablesOnDeath; // 0x950        
-        [[maybe_unused]] std::uint8_t pad_0x951[0x3]; // 0x951
+        bool m_bSpawnBreakablesOnDeath; // 0x970        
+        [[maybe_unused]] std::uint8_t pad_0x971[0x3]; // 0x971
         // metadata: MPropertySuppressExpr "m_bSpawnBreakablesOnDeath == false"
-        float m_flBreakableForceScale; // 0x954        
+        float m_flBreakableForceScale; // 0x974        
         // metadata: MPropertyDescription "Modifier for physics impulses applied to this NPC (0 == unmoveable)"
-        float m_flPhysicsImpulseMultiplier; // 0x958        
+        float m_flPhysicsImpulseMultiplier; // 0x978        
         // metadata: MPropertyStartGroup "Beam Weapon"
-        float m_flBeamWeaponWidth; // 0x95c        
-        float m_flBeamTurnRate; // 0x960        
-        [[maybe_unused]] std::uint8_t pad_0x964[0x4]; // 0x964
+        float m_flBeamWeaponWidth; // 0x97c        
+        float m_flBeamTurnRate; // 0x980        
+        [[maybe_unused]] std::uint8_t pad_0x984[0x4]; // 0x984
         // m_BeamWeaponParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamWeaponParticle;
-        char m_BeamWeaponParticle[0xe0]; // 0x968        
-        client::CCitadelWeaponInfo m_WeaponInfo; // 0xa48        
+        char m_BeamWeaponParticle[0xe0]; // 0x988        
+        client::CCitadelWeaponInfo m_WeaponInfo; // 0xa68        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAI_CitadelNPCVData because it is not a standard-layout class
-    static_assert(sizeof(CAI_CitadelNPCVData) == 0x10d8);
+    static_assert(sizeof(CAI_CitadelNPCVData) == 0x1100);
 };

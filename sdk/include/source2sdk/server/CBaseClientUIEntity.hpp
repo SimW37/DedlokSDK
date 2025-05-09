@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x968
+    // Size: 0x980
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bEnabled"
@@ -27,24 +27,24 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        bool m_bEnabled; // 0x7b8        
-        [[maybe_unused]] std::uint8_t pad_0x7b9[0x7]; // 0x7b9
+        bool m_bEnabled; // 0x7d0        
+        [[maybe_unused]] std::uint8_t pad_0x7d1[0x7]; // 0x7d1
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_DialogXMLName; // 0x7c0        
+        CUtlSymbolLarge m_DialogXMLName; // 0x7d8        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_PanelClassName; // 0x7c8        
+        CUtlSymbolLarge m_PanelClassName; // 0x7e0        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_PanelID; // 0x7d0        
-        entity2::CEntityIOOutput m_CustomOutput0; // 0x7d8        
-        entity2::CEntityIOOutput m_CustomOutput1; // 0x800        
-        entity2::CEntityIOOutput m_CustomOutput2; // 0x828        
-        entity2::CEntityIOOutput m_CustomOutput3; // 0x850        
-        entity2::CEntityIOOutput m_CustomOutput4; // 0x878        
-        entity2::CEntityIOOutput m_CustomOutput5; // 0x8a0        
-        entity2::CEntityIOOutput m_CustomOutput6; // 0x8c8        
-        entity2::CEntityIOOutput m_CustomOutput7; // 0x8f0        
-        entity2::CEntityIOOutput m_CustomOutput8; // 0x918        
-        entity2::CEntityIOOutput m_CustomOutput9; // 0x940        
+        CUtlSymbolLarge m_PanelID; // 0x7e8        
+        entity2::CEntityIOOutput m_CustomOutput0; // 0x7f0        
+        entity2::CEntityIOOutput m_CustomOutput1; // 0x818        
+        entity2::CEntityIOOutput m_CustomOutput2; // 0x840        
+        entity2::CEntityIOOutput m_CustomOutput3; // 0x868        
+        entity2::CEntityIOOutput m_CustomOutput4; // 0x890        
+        entity2::CEntityIOOutput m_CustomOutput5; // 0x8b8        
+        entity2::CEntityIOOutput m_CustomOutput6; // 0x8e0        
+        entity2::CEntityIOOutput m_CustomOutput7; // 0x908        
+        entity2::CEntityIOOutput m_CustomOutput8; // 0x930        
+        entity2::CEntityIOOutput m_CustomOutput9; // 0x958        
         
         // Datamap fields:
         // void InputEnable; // 0x0
@@ -53,5 +53,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBaseClientUIEntity because it is not a standard-layout class
-    static_assert(sizeof(CBaseClientUIEntity) == 0x968);
+    static_assert(sizeof(CBaseClientUIEntity) == 0x980);
 };

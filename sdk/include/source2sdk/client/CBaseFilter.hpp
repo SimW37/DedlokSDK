@@ -15,16 +15,16 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x568
+    // Size: 0x638
     // Has VTable
     #pragma pack(push, 1)
     class CBaseFilter : public client::CLogicalEntity
     {
     public:
-        bool m_bNegated; // 0x510        
-        [[maybe_unused]] std::uint8_t pad_0x511[0x7]; // 0x511
-        entity2::CEntityIOOutput m_OnPass; // 0x518        
-        entity2::CEntityIOOutput m_OnFail; // 0x540        
+        bool m_bNegated; // 0x5e0        
+        [[maybe_unused]] std::uint8_t pad_0x5e1[0x7]; // 0x5e1
+        entity2::CEntityIOOutput m_OnPass; // 0x5e8        
+        entity2::CEntityIOOutput m_OnFail; // 0x610        
         
         // Datamap fields:
         // void InputTestActivator; // 0x0
@@ -32,5 +32,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBaseFilter because it is not a standard-layout class
-    static_assert(sizeof(CBaseFilter) == 0x568);
+    static_assert(sizeof(CBaseFilter) == 0x638);
 };

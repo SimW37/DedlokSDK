@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 6
+    // Enumerator count: 7
     // Alignment: 1
     // Size: 0x1
     enum class EModTier_t : std::uint8_t
@@ -18,7 +18,8 @@ namespace source2sdk::client
         EModTier_2 = 2,
         EModTier_3 = 3,
         EModTier_4 = 4,
+        EModTier_5 = 5,
         // MPropertySuppressEnumerator
-        EMaxModTier = 5,
+        EMaxModTier = 6,
     };
 };

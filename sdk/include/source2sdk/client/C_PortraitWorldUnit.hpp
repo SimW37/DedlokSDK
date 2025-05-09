@@ -18,7 +18,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xf28
+    // Size: 0x1158
     // Has VTable
     // 
     // static metadata: MEntityAllowsPortraitWorldSpawn
@@ -26,32 +26,33 @@ namespace source2sdk::client
     class C_PortraitWorldUnit : public client::C_BaseCombatCharacter
     {
     public:
-        bool m_bSuppressIntroEffects; // 0xd20        
-        bool m_bIsAlternateLoadout; // 0xd21        
-        bool m_bSpawnBackgroundModels; // 0xd22        
-        bool m_bDeferredPortrait; // 0xd23        
-        bool m_bShowParticleAssetModifiers; // 0xd24        
-        bool m_bIgnorePortraitInfo; // 0xd25        
-        bool m_bFlyingCourier; // 0xd26        
-        [[maybe_unused]] std::uint8_t pad_0xd27[0x1]; // 0xd27
-        int32_t m_nEffigyStatusEffect; // 0xd28        
-        [[maybe_unused]] std::uint8_t pad_0xd2c[0x4]; // 0xd2c
-        CUtlSymbolLarge m_effigySequenceName; // 0xd30        
-        CUtlSymbolLarge m_BodyGroup; // 0xd38        
-        float m_flStartingAnimationCycle; // 0xd40        
-        float m_flRareLoadoutAnimChance; // 0xd44        
-        [[maybe_unused]] std::uint8_t pad_0xd48[0x10]; // 0xd48
-        client::CitadelPortraitEnvironmentType_t m_environment; // 0xd58        
-        client::StartupBehavior_t m_nStartupBehavior; // 0xd5c        
-        [[maybe_unused]] std::uint8_t pad_0xd60[0x170]; // 0xd60
-        CUtlSymbolLarge m_cameraName; // 0xed0        
-        [[maybe_unused]] std::uint8_t pad_0xed8[0x30]; // 0xed8
-        client::ParticleIndex_t m_nPortraitParticle; // 0xf08        
-        client::ParticleIndex_t m_nAmbientParticle; // 0xf0c        
-        int32_t m_nCourierType; // 0xf10        
-        client::HeroID_t m_heroID; // 0xf14        
-        CUtlSymbolLarge m_heroAnimGraphEnumName; // 0xf18        
-        CUtlSymbolLarge m_heroShopAnimGraphEnumName; // 0xf20        
+        bool m_bSuppressIntroEffects; // 0xf48        
+        bool m_bIsAlternateLoadout; // 0xf49        
+        bool m_bSpawnBackgroundModels; // 0xf4a        
+        bool m_bDeferredPortrait; // 0xf4b        
+        bool m_bShowParticleAssetModifiers; // 0xf4c        
+        bool m_bIgnorePortraitInfo; // 0xf4d        
+        bool m_bFlyingCourier; // 0xf4e        
+        [[maybe_unused]] std::uint8_t pad_0xf4f[0x1]; // 0xf4f
+        int32_t m_nEffigyStatusEffect; // 0xf50        
+        [[maybe_unused]] std::uint8_t pad_0xf54[0x4]; // 0xf54
+        CUtlSymbolLarge m_effigySequenceName; // 0xf58        
+        CUtlSymbolLarge m_BodyGroup; // 0xf60        
+        float m_flStartingAnimationCycle; // 0xf68        
+        float m_flRareLoadoutAnimChance; // 0xf6c        
+        [[maybe_unused]] std::uint8_t pad_0xf70[0x10]; // 0xf70
+        client::CitadelPortraitEnvironmentType_t m_environment; // 0xf80        
+        client::StartupBehavior_t m_nStartupBehavior; // 0xf84        
+        [[maybe_unused]] std::uint8_t pad_0xf88[0x170]; // 0xf88
+        CUtlSymbolLarge m_cameraName; // 0x10f8        
+        [[maybe_unused]] std::uint8_t pad_0x1100[0x30]; // 0x1100
+        client::ParticleIndex_t m_nPortraitParticle; // 0x1130        
+        client::ParticleIndex_t m_nAmbientParticle; // 0x1134        
+        int32_t m_nCourierType; // 0x1138        
+        client::HeroID_t m_heroID; // 0x113c        
+        CUtlSymbolLarge m_heroAnimGraphEnumName; // 0x1140        
+        CUtlSymbolLarge m_heroShopAnimGraphEnumName; // 0x1148        
+        CUtlSymbolLarge m_sceneName; // 0x1150        
         
         // Datamap fields:
         // uint32_t heroid; // 0x7fffffff
@@ -62,5 +63,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_PortraitWorldUnit because it is not a standard-layout class
-    static_assert(sizeof(C_PortraitWorldUnit) == 0xf28);
+    static_assert(sizeof(C_PortraitWorldUnit) == 0x1158);
 };

@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x770
+    // Size: 0x778
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,22 +27,22 @@ namespace source2sdk::server
         // metadata: MPropertyGroupName "Visuals"
         // m_StunParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StunParticle;
-        char m_StunParticle[0xe0]; // 0x658        
+        char m_StunParticle[0xe0]; // 0x660        
         // metadata: MPropertyGroupName "Sounds"
-        CSoundEventName m_strStunSound; // 0x738        
+        CSoundEventName m_strStunSound; // 0x740        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_NoExplodeModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_NoExplodeModifier;
-        char m_NoExplodeModifier[0x10]; // 0x748        
+        char m_NoExplodeModifier[0x10]; // 0x750        
         // m_ExplodeDebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_ExplodeDebuffModifier;
-        char m_ExplodeDebuffModifier[0x10]; // 0x758        
+        char m_ExplodeDebuffModifier[0x10]; // 0x760        
         // metadata: MPropertyStartGroup "Gameplay"
-        float m_flEnemyNoAirDashDuration; // 0x768        
-        [[maybe_unused]] std::uint8_t pad_0x76c[0x4];
+        float m_flEnemyNoAirDashDuration; // 0x770        
+        [[maybe_unused]] std::uint8_t pad_0x774[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CModifierUppercuttedVData because it is not a standard-layout class
-    static_assert(sizeof(CModifierUppercuttedVData) == 0x770);
+    static_assert(sizeof(CModifierUppercuttedVData) == 0x778);
 };

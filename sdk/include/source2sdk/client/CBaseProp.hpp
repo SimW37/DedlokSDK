@@ -14,19 +14,19 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb40
+    // Size: 0xcf0
     // Has VTable
     #pragma pack(push, 1)
     class CBaseProp : public client::CBaseAnimGraph
     {
     public:
-        bool m_bModelOverrodeBlockLOS; // 0xb00        
-        [[maybe_unused]] std::uint8_t pad_0xb01[0x3]; // 0xb01
-        int32_t m_iShapeType; // 0xb04        
-        bool m_bConformToCollisionBounds; // 0xb08        
-        [[maybe_unused]] std::uint8_t pad_0xb09[0x3]; // 0xb09
-        matrix3x4_t m_mPreferredCatchTransform; // 0xb0c        
-        [[maybe_unused]] std::uint8_t pad_0xb3c[0x4];
+        bool m_bModelOverrodeBlockLOS; // 0xcb0        
+        [[maybe_unused]] std::uint8_t pad_0xcb1[0x3]; // 0xcb1
+        int32_t m_iShapeType; // 0xcb4        
+        bool m_bConformToCollisionBounds; // 0xcb8        
+        [[maybe_unused]] std::uint8_t pad_0xcb9[0x3]; // 0xcb9
+        matrix3x4_t m_mPreferredCatchTransform; // 0xcbc        
+        [[maybe_unused]] std::uint8_t pad_0xcec[0x4];
         
         // Datamap fields:
         // void health; // 0x7fffffff
@@ -35,5 +35,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBaseProp because it is not a standard-layout class
-    static_assert(sizeof(CBaseProp) == 0xb40);
+    static_assert(sizeof(CBaseProp) == 0xcf0);
 };

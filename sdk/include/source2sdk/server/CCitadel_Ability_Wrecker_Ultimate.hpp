@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc10
+    // Size: 0xcd0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "QAngle m_angBeamAngles"
@@ -22,13 +22,13 @@ namespace source2sdk::server
     class CCitadel_Ability_Wrecker_Ultimate : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0x20]; // 0xb00
+        [[maybe_unused]] std::uint8_t pad_0xba0[0x20]; // 0xba0
         // metadata: MNetworkEnable
-        QAngle m_angBeamAngles; // 0xb20        
-        [[maybe_unused]] std::uint8_t pad_0xb2c[0xe4];
+        QAngle m_angBeamAngles; // 0xbc0        
+        [[maybe_unused]] std::uint8_t pad_0xbcc[0x104];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Wrecker_Ultimate because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Wrecker_Ultimate) == 0xc10);
+    static_assert(sizeof(CCitadel_Ability_Wrecker_Ultimate) == 0xcd0);
 };

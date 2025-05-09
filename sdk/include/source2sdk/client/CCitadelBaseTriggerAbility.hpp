@@ -20,7 +20,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc60
+    // Size: 0xdd0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CHandle< CCitadelBaseAbility> m_hAbilityToTrigger"
@@ -33,14 +33,14 @@ namespace source2sdk::client
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
         // m_hAbilityToTrigger has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_CitadelBaseAbility> m_hAbilityToTrigger;
-        char m_hAbilityToTrigger[0x4]; // 0xc50        
+        char m_hAbilityToTrigger[0x4]; // 0xdc0        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_SwappedToTime; // 0xc54        
-        [[maybe_unused]] std::uint8_t pad_0xc58[0x8];
+        entity2::GameTime_t m_SwappedToTime; // 0xdc4        
+        [[maybe_unused]] std::uint8_t pad_0xdc8[0x8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelBaseTriggerAbility because it is not a standard-layout class
-    static_assert(sizeof(CCitadelBaseTriggerAbility) == 0xc60);
+    static_assert(sizeof(CCitadelBaseTriggerAbility) == 0xdd0);
 };

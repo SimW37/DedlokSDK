@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x540
+    // Size: 0x610
     // Has VTable
     #pragma pack(push, 1)
     class CCitadelSpectateNode : public client::C_BaseEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x510[0x30];
+        [[maybe_unused]] std::uint8_t pad_0x5e0[0x30];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadelSpectateNode) == 0x540);
+    static_assert(sizeof(CCitadelSpectateNode) == 0x610);
 };

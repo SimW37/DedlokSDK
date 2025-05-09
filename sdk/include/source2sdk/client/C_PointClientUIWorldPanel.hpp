@@ -19,7 +19,7 @@ namespace source2sdk::client
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0xa70
+    // Size: 0xc10
     // Has VTable
     // 
     // static metadata: MEntityAllowsPortraitWorldSpawn
@@ -50,72 +50,72 @@ namespace source2sdk::client
     class C_PointClientUIWorldPanel : public client::C_BaseClientUIEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x838[0x8]; // 0x838
-        bool m_bForceRecreateNextUpdate; // 0x840        
-        bool m_bMoveViewToPlayerNextThink; // 0x841        
-        bool m_bCheckCSSClasses; // 0x842        
-        [[maybe_unused]] std::uint8_t pad_0x843[0xd]; // 0x843
-        CTransform m_anchorDeltaTransform; // 0x850        
-        [[maybe_unused]] std::uint8_t pad_0x870[0x178]; // 0x870
-        client::CPointOffScreenIndicatorUi* m_pOffScreenIndicator; // 0x9e8        
-        [[maybe_unused]] std::uint8_t pad_0x9f0[0x20]; // 0x9f0
+        [[maybe_unused]] std::uint8_t pad_0x9d8[0x8]; // 0x9d8
+        bool m_bForceRecreateNextUpdate; // 0x9e0        
+        bool m_bMoveViewToPlayerNextThink; // 0x9e1        
+        bool m_bCheckCSSClasses; // 0x9e2        
+        [[maybe_unused]] std::uint8_t pad_0x9e3[0xd]; // 0x9e3
+        CTransform m_anchorDeltaTransform; // 0x9f0        
+        [[maybe_unused]] std::uint8_t pad_0xa10[0x178]; // 0xa10
+        client::CPointOffScreenIndicatorUi* m_pOffScreenIndicator; // 0xb88        
+        [[maybe_unused]] std::uint8_t pad_0xb90[0x20]; // 0xb90
         // metadata: MNetworkEnable
-        bool m_bIgnoreInput; // 0xa10        
+        bool m_bIgnoreInput; // 0xbb0        
         // metadata: MNetworkEnable
-        bool m_bLit; // 0xa11        
+        bool m_bLit; // 0xbb1        
         // metadata: MNetworkEnable
-        bool m_bFollowPlayerAcrossTeleport; // 0xa12        
-        [[maybe_unused]] std::uint8_t pad_0xa13[0x1]; // 0xa13
+        bool m_bFollowPlayerAcrossTeleport; // 0xbb2        
+        [[maybe_unused]] std::uint8_t pad_0xbb3[0x1]; // 0xbb3
         // metadata: MNetworkEnable
-        float m_flWidth; // 0xa14        
+        float m_flWidth; // 0xbb4        
         // metadata: MNetworkEnable
-        float m_flHeight; // 0xa18        
+        float m_flHeight; // 0xbb8        
         // metadata: MNetworkEnable
-        float m_flDPI; // 0xa1c        
+        float m_flDPI; // 0xbbc        
         // metadata: MNetworkEnable
-        float m_flInteractDistance; // 0xa20        
+        float m_flInteractDistance; // 0xbc0        
         // metadata: MNetworkEnable
-        float m_flDepthOffset; // 0xa24        
+        float m_flDepthOffset; // 0xbc4        
         // metadata: MNetworkEnable
-        uint32_t m_unOwnerContext; // 0xa28        
+        uint32_t m_unOwnerContext; // 0xbc8        
         // metadata: MNetworkEnable
-        uint32_t m_unHorizontalAlign; // 0xa2c        
+        uint32_t m_unHorizontalAlign; // 0xbcc        
         // metadata: MNetworkEnable
-        uint32_t m_unVerticalAlign; // 0xa30        
+        uint32_t m_unVerticalAlign; // 0xbd0        
         // metadata: MNetworkEnable
-        uint32_t m_unOrientation; // 0xa34        
+        uint32_t m_unOrientation; // 0xbd4        
         // metadata: MNetworkEnable
-        bool m_bAllowInteractionFromAllSceneWorlds; // 0xa38        
-        [[maybe_unused]] std::uint8_t pad_0xa39[0x7]; // 0xa39
+        bool m_bAllowInteractionFromAllSceneWorlds; // 0xbd8        
+        [[maybe_unused]] std::uint8_t pad_0xbd9[0x7]; // 0xbd9
         // metadata: MNetworkEnable
         // m_vecCSSClasses has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // C_NetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses;
-        char m_vecCSSClasses[0x18]; // 0xa40        
+        char m_vecCSSClasses[0x18]; // 0xbe0        
         // metadata: MNetworkEnable
-        bool m_bOpaque; // 0xa58        
+        bool m_bOpaque; // 0xbf8        
         // metadata: MNetworkEnable
-        bool m_bNoDepth; // 0xa59        
+        bool m_bNoDepth; // 0xbf9        
         // metadata: MNetworkEnable
-        bool m_bRenderBackface; // 0xa5a        
+        bool m_bRenderBackface; // 0xbfa        
         // metadata: MNetworkEnable
-        bool m_bUseOffScreenIndicator; // 0xa5b        
+        bool m_bUseOffScreenIndicator; // 0xbfb        
         // metadata: MNetworkEnable
-        bool m_bExcludeFromSaveGames; // 0xa5c        
+        bool m_bExcludeFromSaveGames; // 0xbfc        
         // metadata: MNetworkEnable
-        bool m_bGrabbable; // 0xa5d        
+        bool m_bGrabbable; // 0xbfd        
         // metadata: MNetworkEnable
-        bool m_bOnlyRenderToTexture; // 0xa5e        
+        bool m_bOnlyRenderToTexture; // 0xbfe        
         // metadata: MNetworkEnable
-        bool m_bDisableMipGen; // 0xa5f        
+        bool m_bDisableMipGen; // 0xbff        
         // metadata: MNetworkEnable
-        int32_t m_nExplicitImageLayout; // 0xa60        
-        [[maybe_unused]] std::uint8_t pad_0xa64[0xc];
+        int32_t m_nExplicitImageLayout; // 0xc00        
+        [[maybe_unused]] std::uint8_t pad_0xc04[0xc];
         
         // Datamap fields:
-        // CStrongHandle< InfoForResourceTypeIMaterial2 > m_hPanelOverrideMaterial; // 0x9e0
+        // CStrongHandle< InfoForResourceTypeIMaterial2 > m_hPanelOverrideMaterial; // 0xb80
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_PointClientUIWorldPanel because it is not a standard-layout class
-    static_assert(sizeof(C_PointClientUIWorldPanel) == 0xa70);
+    static_assert(sizeof(C_PointClientUIWorldPanel) == 0xc10);
 };

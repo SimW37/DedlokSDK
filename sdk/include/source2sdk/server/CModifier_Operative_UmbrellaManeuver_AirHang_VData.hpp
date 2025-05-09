@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x838
+    // Size: 0x840
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,20 +26,20 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-        char m_ExplodeParticle[0xe0]; // 0x658        
+        char m_ExplodeParticle[0xe0]; // 0x660        
         // m_TracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle;
-        char m_TracerParticle[0xe0]; // 0x738        
+        char m_TracerParticle[0xe0]; // 0x740        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_ExplodeSound; // 0x818        
+        CSoundEventName m_ExplodeSound; // 0x820        
         // metadata: MPropertyStartGroup "Gameplay"
-        float m_flAirDrag; // 0x828        
-        float m_flAirSpeed; // 0x82c        
-        float m_flFallSpeed; // 0x830        
-        [[maybe_unused]] std::uint8_t pad_0x834[0x4];
+        float m_flAirDrag; // 0x830        
+        float m_flAirSpeed; // 0x834        
+        float m_flFallSpeed; // 0x838        
+        [[maybe_unused]] std::uint8_t pad_0x83c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CModifier_Operative_UmbrellaManeuver_AirHang_VData because it is not a standard-layout class
-    static_assert(sizeof(CModifier_Operative_UmbrellaManeuver_AirHang_VData) == 0x838);
+    static_assert(sizeof(CModifier_Operative_UmbrellaManeuver_AirHang_VData) == 0x840);
 };

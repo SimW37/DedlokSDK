@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1620
+    // Size: 0x1678
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,10 +26,10 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Modifiers"
         // m_AOEModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_AOEModifier;
-        char m_AOEModifier[0x10]; // 0x1610        
+        char m_AOEModifier[0x10]; // 0x1668        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Item_ColdFrontVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Item_ColdFrontVData) == 0x1620);
+    static_assert(sizeof(CCitadel_Item_ColdFrontVData) == 0x1678);
 };

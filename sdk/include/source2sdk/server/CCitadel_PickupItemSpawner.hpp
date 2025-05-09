@@ -14,16 +14,16 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa98
+    // Size: 0xac0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_PickupItemSpawner : public server::CBaseAnimGraph
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xa90[0x8];
+        [[maybe_unused]] std::uint8_t pad_0xab8[0x8];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_PickupItemSpawner) == 0xa98);
+    static_assert(sizeof(CCitadel_PickupItemSpawner) == 0xac0);
 };

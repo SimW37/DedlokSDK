@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x390
+    // Size: 0x3f0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_PsychicDagger_MakeDaggers : public server::CCitadelModifier
@@ -24,19 +24,19 @@ namespace source2sdk::server
     public:
         int32_t m_iCurrentProjectile; // 0xc0        
         int32_t m_nDaggerCount; // 0xc4        
-        [[maybe_unused]] std::uint8_t pad_0xc8[0x230]; // 0xc8
-        entity2::GameTime_t m_flLastDaggerSpawn; // 0x2f8        
-        entity2::GameTime_t m_flLastDaggerShoot; // 0x2fc        
-        bool m_bIsSpawning; // 0x300        
-        bool m_bInterrupted; // 0x301        
-        [[maybe_unused]] std::uint8_t pad_0x302[0x6]; // 0x302
+        [[maybe_unused]] std::uint8_t pad_0xc8[0x280]; // 0xc8
+        entity2::GameTime_t m_flLastDaggerSpawn; // 0x348        
+        entity2::GameTime_t m_flLastDaggerShoot; // 0x34c        
+        bool m_bIsSpawning; // 0x350        
+        bool m_bInterrupted; // 0x351        
+        [[maybe_unused]] std::uint8_t pad_0x352[0x6]; // 0x352
         // m_vecDaggers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<server::CCitadel_Modifier_PsychicDagger_MakeDaggers__Dagger_t> m_vecDaggers;
-        char m_vecDaggers[0x18]; // 0x308        
-        [[maybe_unused]] std::uint8_t pad_0x320[0x70];
+        char m_vecDaggers[0x18]; // 0x358        
+        [[maybe_unused]] std::uint8_t pad_0x370[0x80];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_PsychicDagger_MakeDaggers because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_PsychicDagger_MakeDaggers) == 0x390);
+    static_assert(sizeof(CCitadel_Modifier_PsychicDagger_MakeDaggers) == 0x3f0);
 };

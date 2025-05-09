@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x818
+    // Size: 0x820
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,13 +26,13 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_BuffEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffEffect;
-        char m_BuffEffect[0xe0]; // 0x658        
+        char m_BuffEffect[0xe0]; // 0x660        
         // m_TracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle;
-        char m_TracerParticle[0xe0]; // 0x738        
+        char m_TracerParticle[0xe0]; // 0x740        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Upgrade_OverdriveClip_VData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Upgrade_OverdriveClip_VData) == 0x818);
+    static_assert(sizeof(CCitadel_Modifier_Upgrade_OverdriveClip_VData) == 0x820);
 };

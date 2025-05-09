@@ -53,11 +53,9 @@ namespace source2sdk::pulse_runtime_lib
     public:
         [[maybe_unused]] std::uint8_t pad_0x00[0x8]; // 0x0
         PulseSymbol_t m_DomainIdentifier; // 0x8        
-        PulseSymbol_t m_ParentMapName; // 0x18        
-        PulseSymbol_t m_ParentXmlName; // 0x28        
-        // m_vecGameBlackboards has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<PulseSymbol_t> m_vecGameBlackboards;
-        char m_vecGameBlackboards[0x18]; // 0x38        
+        CPulseValueFullType m_DomainSubType; // 0x18        
+        PulseSymbol_t m_ParentMapName; // 0x30        
+        PulseSymbol_t m_ParentXmlName; // 0x40        
         // m_Chunks has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<pulse_runtime_lib::CPulse_Chunk*> m_Chunks;
         char m_Chunks[0x18]; // 0x50        
@@ -93,9 +91,9 @@ namespace source2sdk::pulse_runtime_lib
     #pragma pack(pop)
     
     static_assert(offsetof(CPulseGraphDef, m_DomainIdentifier) == 0x8);
-    static_assert(offsetof(CPulseGraphDef, m_ParentMapName) == 0x18);
-    static_assert(offsetof(CPulseGraphDef, m_ParentXmlName) == 0x28);
-    static_assert(offsetof(CPulseGraphDef, m_vecGameBlackboards) == 0x38);
+    static_assert(offsetof(CPulseGraphDef, m_DomainSubType) == 0x18);
+    static_assert(offsetof(CPulseGraphDef, m_ParentMapName) == 0x30);
+    static_assert(offsetof(CPulseGraphDef, m_ParentXmlName) == 0x40);
     static_assert(offsetof(CPulseGraphDef, m_Chunks) == 0x50);
     static_assert(offsetof(CPulseGraphDef, m_Cells) == 0x68);
     static_assert(offsetof(CPulseGraphDef, m_Vars) == 0x80);

@@ -19,7 +19,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xda8
+    // Size: 0xf48
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "EHANDLE m_hDummyForCamera"
@@ -27,21 +27,21 @@ namespace source2sdk::client
     class CCitadel_Ability_Mirage_Teleport : public client::C_CitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc50[0x8]; // 0xc50
+        [[maybe_unused]] std::uint8_t pad_0xdc0[0x14]; // 0xdc0
         // metadata: MNetworkEnable
         // m_hDummyForCamera has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hDummyForCamera;
-        char m_hDummyForCamera[0x4]; // 0xc58        
+        char m_hDummyForCamera[0x4]; // 0xdd4        
         // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hTarget;
-        char m_hTarget[0x4]; // 0xc5c        
-        Vector m_vCastStartPosition; // 0xc60        
-        Vector m_vTargetPosition; // 0xc6c        
-        QAngle m_vTargetAngles; // 0xc78        
-        [[maybe_unused]] std::uint8_t pad_0xc84[0x124];
+        char m_hTarget[0x4]; // 0xdd8        
+        Vector m_vCastStartPosition; // 0xddc        
+        Vector m_vTargetPosition; // 0xde8        
+        QAngle m_vTargetAngles; // 0xdf4        
+        [[maybe_unused]] std::uint8_t pad_0xe00[0x148];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Mirage_Teleport because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Mirage_Teleport) == 0xda8);
+    static_assert(sizeof(CCitadel_Ability_Mirage_Teleport) == 0xf48);
 };

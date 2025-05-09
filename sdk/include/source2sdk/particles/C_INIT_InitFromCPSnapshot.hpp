@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x4a8
+    // Size: 0x4b0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,31 +27,39 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "snapshot control point number"
         int32_t m_nControlPointNumber; // 0x1c8        
+        [[maybe_unused]] std::uint8_t pad_0x1cc[0x4]; // 0x1cc
+        // metadata: MPropertyFriendlyName "snapshot subset"
+        // metadata: MPropertySuppressExpr "m_nControlPointNumber < 0"
+        CUtlString m_strSnapshotSubset; // 0x1d0        
         // metadata: MPropertyFriendlyName "field to read"
         // metadata: MPropertyAttributeChoiceName "particlefield"
-        particles::ParticleAttributeIndex_t m_nAttributeToRead; // 0x1cc        
+        particles::ParticleAttributeIndex_t m_nAttributeToRead; // 0x1d8        
         // metadata: MPropertyFriendlyName "field to write"
         // metadata: MPropertyAttributeChoiceName "particlefield"
-        particles::ParticleAttributeIndex_t m_nAttributeToWrite; // 0x1d0        
+        particles::ParticleAttributeIndex_t m_nAttributeToWrite; // 0x1dc        
         // metadata: MPropertyFriendlyName "local space control point number"
-        int32_t m_nLocalSpaceCP; // 0x1d4        
+        int32_t m_nLocalSpaceCP; // 0x1e0        
         // metadata: MPropertyFriendlyName "random order"
-        bool m_bRandom; // 0x1d8        
+        bool m_bRandom; // 0x1e4        
         // metadata: MPropertyFriendlyName "reverse order"
-        bool m_bReverse; // 0x1d9        
-        [[maybe_unused]] std::uint8_t pad_0x1da[0x6]; // 0x1da
+        // metadata: MPropertySuppressExpr "m_bRandom == true"
+        bool m_bReverse; // 0x1e5        
+        [[maybe_unused]] std::uint8_t pad_0x1e6[0x2]; // 0x1e6
         // metadata: MPropertyFriendlyName "Snapshot increment amount"
-        particleslib::CParticleCollectionFloatInput m_nSnapShotIncrement; // 0x1e0        
+        // metadata: MPropertySuppressExpr "m_bRandom == true"
+        particleslib::CParticleCollectionFloatInput m_nSnapShotIncrement; // 0x1e8        
         // metadata: MPropertyFriendlyName "Manual Snapshot Index"
-        particleslib::CPerParticleFloatInput m_nManualSnapshotIndex; // 0x340        
+        // metadata: MPropertySuppressExpr "m_bRandom == true"
+        particleslib::CPerParticleFloatInput m_nManualSnapshotIndex; // 0x348        
         // metadata: MPropertyFriendlyName "random seed"
-        int32_t m_nRandomSeed; // 0x4a0        
+        // metadata: MPropertySuppressExpr "m_bRandom == false"
+        int32_t m_nRandomSeed; // 0x4a8        
         // metadata: MPropertyFriendlyName "local space angles"
-        bool m_bLocalSpaceAngles; // 0x4a4        
-        [[maybe_unused]] std::uint8_t pad_0x4a5[0x3];
+        bool m_bLocalSpaceAngles; // 0x4ac        
+        [[maybe_unused]] std::uint8_t pad_0x4ad[0x3];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_InitFromCPSnapshot because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_InitFromCPSnapshot) == 0x4a8);
+    static_assert(sizeof(C_INIT_InitFromCPSnapshot) == 0x4b0);
 };

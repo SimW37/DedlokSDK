@@ -19,7 +19,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x890
+    // Size: 0xaa0
     // Has VTable
     // 
     // static metadata: MNetworkIncludeByName "m_flTimeScale"
@@ -37,43 +37,43 @@ namespace source2sdk::client
     class C_CitadelProjectile : public client::C_BaseModelEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x808[0xc]; // 0x808
-        float m_flMaxDistance; // 0x814        
-        float m_flArmingTime; // 0x818        
-        float m_flChargeAmount; // 0x81c        
-        bool m_bCollideWithThrower; // 0x820        
-        bool m_bNewCollideWithThrower; // 0x821        
-        [[maybe_unused]] std::uint8_t pad_0x822[0xe]; // 0x822
-        float m_flTickSoundInterval; // 0x830        
-        [[maybe_unused]] std::uint8_t pad_0x834[0x4]; // 0x834
+        [[maybe_unused]] std::uint8_t pad_0x9a8[0x18]; // 0x9a8
+        float m_flMaxDistance; // 0x9c0        
+        float m_flArmingTime; // 0x9c4        
+        float m_flChargeAmount; // 0x9c8        
+        bool m_bCollideWithThrower; // 0x9cc        
+        bool m_bNewCollideWithThrower; // 0x9cd        
+        [[maybe_unused]] std::uint8_t pad_0x9ce[0xa]; // 0x9ce
+        float m_flTickSoundInterval; // 0x9d8        
+        [[maybe_unused]] std::uint8_t pad_0x9dc[0x4]; // 0x9dc
         // metadata: MNetworkEnable
-        Vector m_vInitialVelocity; // 0x838        
+        Vector m_vInitialVelocity; // 0x9e0        
         // metadata: MNetworkEnable
-        Vector m_vInitialPosition; // 0x844        
+        Vector m_vInitialPosition; // 0x9ec        
         // metadata: MNetworkEnable
-        CUtlStringToken m_abilityID; // 0x850        
+        CUtlStringToken m_abilityID; // 0x9f8        
         // metadata: MNetworkEnable
         // m_hThrower has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hThrower;
-        char m_hThrower[0x4]; // 0x854        
+        char m_hThrower[0x4]; // 0x9fc        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_sParticleName; // 0x858        
+        CUtlSymbolLarge m_sParticleName; // 0xa00        
         // metadata: MNetworkEnable
-        Vector m_vecSpawnPosition; // 0x860        
+        Vector m_vecSpawnPosition; // 0xa08        
         // metadata: MNetworkEnable
-        float m_flProjectileSpeed; // 0x86c        
+        float m_flProjectileSpeed; // 0xa14        
         // metadata: MNetworkEnable
-        float m_flMaxLifetime; // 0x870        
-        [[maybe_unused]] std::uint8_t pad_0x874[0x4]; // 0x874
+        float m_flMaxLifetime; // 0xa18        
+        [[maybe_unused]] std::uint8_t pad_0xa1c[0x4]; // 0xa1c
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "ParticleRadiusChanged"
-        float m_flParticleRadius; // 0x878        
-        [[maybe_unused]] std::uint8_t pad_0x87c[0xc]; // 0x87c
-        float m_flPreviousTimeScale; // 0x888        
-        [[maybe_unused]] std::uint8_t pad_0x88c[0x4];
+        float m_flParticleRadius; // 0xa20        
+        [[maybe_unused]] std::uint8_t pad_0xa24[0x74]; // 0xa24
+        float m_flPreviousTimeScale; // 0xa98        
+        [[maybe_unused]] std::uint8_t pad_0xa9c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_CitadelProjectile because it is not a standard-layout class
-    static_assert(sizeof(C_CitadelProjectile) == 0x890);
+    static_assert(sizeof(C_CitadelProjectile) == 0xaa0);
 };

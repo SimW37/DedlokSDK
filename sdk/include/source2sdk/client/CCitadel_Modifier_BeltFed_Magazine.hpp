@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x228
+    // Size: 0x258
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_BeltFed_Magazine : public client::CCitadelModifier
@@ -26,10 +26,10 @@ namespace source2sdk::client
         float m_flSpinUpDecayOverride; // 0xc8        
         float m_flMaxCycleTimeOverride; // 0xcc        
         float m_flMaxBurstFireCooldownOverride; // 0xd0        
-        [[maybe_unused]] std::uint8_t pad_0xd4[0x154];
+        [[maybe_unused]] std::uint8_t pad_0xd4[0x184];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_BeltFed_Magazine because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_BeltFed_Magazine) == 0x228);
+    static_assert(sizeof(CCitadel_Modifier_BeltFed_Magazine) == 0x258);
 };

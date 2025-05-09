@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x660
+    // Size: 0x668
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -22,11 +22,11 @@ namespace source2sdk::client
     class CCitadel_Modifier_BonusDamagePercentVData : public client::CCitadelModifierVData
     {
     public:
-        bool m_bSelfish; // 0x658        
-        [[maybe_unused]] std::uint8_t pad_0x659[0x7];
+        bool m_bSelfish; // 0x660        
+        [[maybe_unused]] std::uint8_t pad_0x661[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_BonusDamagePercentVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_BonusDamagePercentVData) == 0x660);
+    static_assert(sizeof(CCitadel_Modifier_BonusDamagePercentVData) == 0x668);
 };

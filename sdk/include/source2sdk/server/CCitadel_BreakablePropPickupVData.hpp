@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x330
+    // Size: 0x340
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -38,13 +38,13 @@ namespace source2sdk::server
         Color m_Color; // 0x1e8        
         [[maybe_unused]] std::uint8_t pad_0x1ec[0x4]; // 0x1ec
         // metadata: MPropertyDescription "Model"
+        // metadata: MPropertyProvidesEditContextString
         // m_hModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeCModel>> m_hModel;
         char m_hModel[0xe0]; // 0x1f0        
         // metadata: MPropertyFriendlyName "Material group"
         // metadata: MPropertyDescription "Which material group of the model should be used?"
-        // metadata: MPropertyAttributeEditor "VDataModelMaterialGroup( m_hModel )"
-        CUtlString m_sDefaultMaterialGroupName; // 0x2d0        
+        CModelMaterialGroupName m_sDefaultMaterialGroupName; // 0x2d0        
         // metadata: MPropertyDescription "Pickup Name Loc String"
         CUtlString m_sNameLocString; // 0x2d8        
         int32_t m_nNameOffset; // 0x2e0        
@@ -53,24 +53,27 @@ namespace source2sdk::server
         bool m_bIsPermanentPickup; // 0x2e5        
         [[maybe_unused]] std::uint8_t pad_0x2e6[0x2]; // 0x2e6
         int32_t m_iTempParticleSheetIndex; // 0x2e8        
-        float m_flParticleRadius; // 0x2ec        
+        [[maybe_unused]] std::uint8_t pad_0x2ec[0x4]; // 0x2ec
+        CUtlString m_sMiniMapCssClass; // 0x2f0        
+        float m_flParticleRadius; // 0x2f8        
+        [[maybe_unused]] std::uint8_t pad_0x2fc[0x4]; // 0x2fc
         // metadata: MPropertyGroupName "Audio"
         // metadata: MPropertyDescription "Pickup Sound"
-        CSoundEventName m_sPickupSound; // 0x2f0        
+        CSoundEventName m_sPickupSound; // 0x300        
         // metadata: MPropertyGroupName "Audio"
         // metadata: MPropertyDescription "Spawn Sound"
-        CSoundEventName m_sSpawnSound; // 0x300        
+        CSoundEventName m_sSpawnSound; // 0x310        
         // metadata: MPropertyDescription "Pickup Radius"
-        float m_flPickupRadius; // 0x310        
-        [[maybe_unused]] std::uint8_t pad_0x314[0x4]; // 0x314
+        float m_flPickupRadius; // 0x320        
+        [[maybe_unused]] std::uint8_t pad_0x324[0x4]; // 0x324
         // metadata: MPropertyDescription "Ambient Sound"
-        CSoundEventName m_sAmbientSound; // 0x318        
+        CSoundEventName m_sAmbientSound; // 0x328        
         // metadata: MPropertyDescription "Pickup Expiration Duration"
-        float m_flPickupExpirationDuration; // 0x328        
-        [[maybe_unused]] std::uint8_t pad_0x32c[0x4];
+        float m_flPickupExpirationDuration; // 0x338        
+        [[maybe_unused]] std::uint8_t pad_0x33c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_BreakablePropPickupVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_BreakablePropPickupVData) == 0x330);
+    static_assert(sizeof(CCitadel_BreakablePropPickupVData) == 0x340);
 };

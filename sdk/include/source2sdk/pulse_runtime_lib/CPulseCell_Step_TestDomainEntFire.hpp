@@ -20,7 +20,7 @@ namespace source2sdk::pulse_runtime_lib
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MCellForDomain "TestDomain"
     // static metadata: MPulseCellMethodBindings
-    // static metadata: MPulseCellOutflowHookInfo
+    // static metadata: MPulseCellOutflowHookInfo "€’ø"
     // static metadata: MPropertyFriendlyName "Fake Ent-Fire"
     // static metadata: MPulseEditorHeaderText
     #pragma pack(push, 1)

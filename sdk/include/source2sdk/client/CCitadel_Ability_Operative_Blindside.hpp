@@ -14,18 +14,18 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xdf0
+    // Size: 0xf98
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Operative_Blindside : public client::C_CitadelBaseAbility
     {
     public:
-        Vector m_vLaunchPosition; // 0xc50        
-        QAngle m_qLaunchAngle; // 0xc5c        
-        [[maybe_unused]] std::uint8_t pad_0xc68[0x188];
+        Vector m_vLaunchPosition; // 0xdc0        
+        QAngle m_qLaunchAngle; // 0xdcc        
+        [[maybe_unused]] std::uint8_t pad_0xdd8[0x1c0];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Operative_Blindside because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Operative_Blindside) == 0xdf0);
+    static_assert(sizeof(CCitadel_Ability_Operative_Blindside) == 0xf98);
 };

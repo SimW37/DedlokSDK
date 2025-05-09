@@ -29,8 +29,9 @@ namespace source2sdk::modellib
         CTransform m_Frame1; // 0x10        
         CTransform m_Frame2; // 0x30        
         bool m_bEnableCollision; // 0x50        
-        bool m_bEnableLinearLimit; // 0x51        
-        [[maybe_unused]] std::uint8_t pad_0x52[0x2]; // 0x52
+        bool m_bIsLinearConstraintDisabled; // 0x51        
+        bool m_bIsAngularConstraintDisabled; // 0x52        
+        bool m_bEnableLinearLimit; // 0x53        
         modellib::VPhysXRange_t m_LinearLimit; // 0x54        
         bool m_bEnableLinearMotor; // 0x5c        
         [[maybe_unused]] std::uint8_t pad_0x5d[0x3]; // 0x5d
@@ -67,7 +68,9 @@ namespace source2sdk::modellib
     static_assert(offsetof(VPhysXJoint_t, m_Frame1) == 0x10);
     static_assert(offsetof(VPhysXJoint_t, m_Frame2) == 0x30);
     static_assert(offsetof(VPhysXJoint_t, m_bEnableCollision) == 0x50);
-    static_assert(offsetof(VPhysXJoint_t, m_bEnableLinearLimit) == 0x51);
+    static_assert(offsetof(VPhysXJoint_t, m_bIsLinearConstraintDisabled) == 0x51);
+    static_assert(offsetof(VPhysXJoint_t, m_bIsAngularConstraintDisabled) == 0x52);
+    static_assert(offsetof(VPhysXJoint_t, m_bEnableLinearLimit) == 0x53);
     static_assert(offsetof(VPhysXJoint_t, m_LinearLimit) == 0x54);
     static_assert(offsetof(VPhysXJoint_t, m_bEnableLinearMotor) == 0x5c);
     static_assert(offsetof(VPhysXJoint_t, m_vLinearTargetVelocity) == 0x60);

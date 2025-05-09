@@ -20,7 +20,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x300
+    // Size: 0x350
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_Chrono_KineticCarbine : public client::CCitadelModifier
@@ -32,10 +32,10 @@ namespace source2sdk::client
         // CHandle<client::CCitadelBulletTimeWarp> m_hTimeWarp;
         char m_hTimeWarp[0x4]; // 0xc8        
         client::ParticleIndex_t m_nFullyChargedParticle; // 0xcc        
-        [[maybe_unused]] std::uint8_t pad_0xd0[0x230];
+        [[maybe_unused]] std::uint8_t pad_0xd0[0x280];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Chrono_KineticCarbine because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Chrono_KineticCarbine) == 0x300);
+    static_assert(sizeof(CCitadel_Modifier_Chrono_KineticCarbine) == 0x350);
 };

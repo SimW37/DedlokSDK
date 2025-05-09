@@ -14,18 +14,18 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x100
+    // Size: 0x108
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_Magic_Clarity_Buff : public client::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x38]; // 0xc0
-        bool m_bAbilityLocked; // 0xf8        
-        [[maybe_unused]] std::uint8_t pad_0xf9[0x7];
+        [[maybe_unused]] std::uint8_t pad_0xc0[0x40]; // 0xc0
+        bool m_bAbilityLocked; // 0x100        
+        [[maybe_unused]] std::uint8_t pad_0x101[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Magic_Clarity_Buff because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Magic_Clarity_Buff) == 0x100);
+    static_assert(sizeof(CCitadel_Modifier_Magic_Clarity_Buff) == 0x108);
 };

@@ -14,18 +14,18 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x260
+    // Size: 0x298
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_IceBeam_Stacking_Slow : public server::CCitadel_Modifier_Base_Buildup
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xd0[0x188]; // 0xd0
-        float m_flCurrBuildup; // 0x258        
-        [[maybe_unused]] std::uint8_t pad_0x25c[0x4];
+        [[maybe_unused]] std::uint8_t pad_0xd0[0x1c0]; // 0xd0
+        float m_flCurrBuildup; // 0x290        
+        [[maybe_unused]] std::uint8_t pad_0x294[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_IceBeam_Stacking_Slow because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_IceBeam_Stacking_Slow) == 0x260);
+    static_assert(sizeof(CCitadel_Modifier_IceBeam_Stacking_Slow) == 0x298);
 };

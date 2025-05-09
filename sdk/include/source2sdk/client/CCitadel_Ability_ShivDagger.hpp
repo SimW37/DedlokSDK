@@ -14,17 +14,17 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xd50
+    // Size: 0xee0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_ShivDagger : public client::CCitadelBaseShivAbility
     {
     public:
-        bool m_bIsInRicochet; // 0xc50        
-        [[maybe_unused]] std::uint8_t pad_0xc51[0xff];
+        bool m_bIsInRicochet; // 0xdc0        
+        [[maybe_unused]] std::uint8_t pad_0xdc1[0x11f];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_ShivDagger because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_ShivDagger) == 0xd50);
+    static_assert(sizeof(CCitadel_Ability_ShivDagger) == 0xee0);
 };

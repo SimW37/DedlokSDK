@@ -30,7 +30,8 @@ namespace source2sdk::server
         float m_flInnerRadius; // 0x4f8        
         float m_flPushScale; // 0x4fc        
         bool m_bConvertToDebrisWhenPossible; // 0x500        
-        [[maybe_unused]] std::uint8_t pad_0x501[0x7]; // 0x501
+        bool m_bAffectInvulnerableEnts; // 0x501        
+        [[maybe_unused]] std::uint8_t pad_0x502[0x6]; // 0x502
         entity2::CEntityIOOutput m_OnPushedPlayer; // 0x508        
         
         // Datamap fields:

@@ -11,19 +11,27 @@
 
 namespace source2sdk::server
 {
+    class CBaseEntity;
+};
+
+namespace source2sdk::server
+{
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb38
+    // Size: 0xcb8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_IncendiaryProjectile : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0x38];
-        // No schema binary for binding
+        // m_vecHitEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CUtlVector<CHandle<server::CBaseEntity>> m_vecHitEnemies;
+        char m_vecHitEnemies[0x18]; // 0xba0        
+        [[maybe_unused]] std::uint8_t pad_0xbb8[0x100];
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Ability_IncendiaryProjectile) == 0xb38);
+    // Cannot assert offsets of fields in CCitadel_Ability_IncendiaryProjectile because it is not a standard-layout class
+    static_assert(sizeof(CCitadel_Ability_IncendiaryProjectile) == 0xcb8);
 };

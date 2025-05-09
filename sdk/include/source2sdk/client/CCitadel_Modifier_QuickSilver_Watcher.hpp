@@ -14,18 +14,18 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x218
+    // Size: 0x248
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_QuickSilver_Watcher : public client::CCitadel_Modifier_BaseEventProc
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x168[0xa8]; // 0x168
-        bool m_bProcNextHit; // 0x210        
-        [[maybe_unused]] std::uint8_t pad_0x211[0x7];
+        [[maybe_unused]] std::uint8_t pad_0x178[0xc4]; // 0x178
+        bool m_bProcNextHit; // 0x23c        
+        [[maybe_unused]] std::uint8_t pad_0x23d[0xb];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_QuickSilver_Watcher because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_QuickSilver_Watcher) == 0x218);
+    static_assert(sizeof(CCitadel_Modifier_QuickSilver_Watcher) == 0x248);
 };

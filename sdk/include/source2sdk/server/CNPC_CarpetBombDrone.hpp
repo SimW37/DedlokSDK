@@ -14,16 +14,16 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x18d0
+    // Size: 0x19e0
     // Has VTable
     #pragma pack(push, 1)
     class CNPC_CarpetBombDrone : public server::CAI_CitadelNPC
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x1890[0x40];
+        [[maybe_unused]] std::uint8_t pad_0x1990[0x50];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CNPC_CarpetBombDrone) == 0x18d0);
+    static_assert(sizeof(CNPC_CarpetBombDrone) == 0x19e0);
 };

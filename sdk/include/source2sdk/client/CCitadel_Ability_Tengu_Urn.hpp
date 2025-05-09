@@ -14,18 +14,18 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xcd8
+    // Size: 0xe58
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Tengu_Urn : public client::C_CitadelBaseAbility
     {
     public:
-        Vector m_vLaunchPosition; // 0xc50        
-        QAngle m_qLaunchAngle; // 0xc5c        
-        [[maybe_unused]] std::uint8_t pad_0xc68[0x70];
+        Vector m_vLaunchPosition; // 0xdc0        
+        QAngle m_qLaunchAngle; // 0xdcc        
+        [[maybe_unused]] std::uint8_t pad_0xdd8[0x80];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Tengu_Urn because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Tengu_Urn) == 0xcd8);
+    static_assert(sizeof(CCitadel_Ability_Tengu_Urn) == 0xe58);
 };

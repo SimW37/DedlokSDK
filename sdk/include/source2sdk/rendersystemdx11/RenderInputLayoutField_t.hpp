@@ -22,7 +22,7 @@ namespace source2sdk::rendersystemdx11
     public:
         uint8_t m_pSemanticName[32]; // 0x0        
         int32_t m_nSemanticIndex; // 0x20        
-        uint32_t m_Format; // 0x24        
+        [[maybe_unused]] std::uint8_t pad_0x24[0x4]; // 0x24
         int32_t m_nOffset; // 0x28        
         int32_t m_nSlot; // 0x2c        
         rendersystemdx11::RenderSlotType_t m_nSlotType; // 0x30        
@@ -32,7 +32,6 @@ namespace source2sdk::rendersystemdx11
     
     static_assert(offsetof(RenderInputLayoutField_t, m_pSemanticName) == 0x0);
     static_assert(offsetof(RenderInputLayoutField_t, m_nSemanticIndex) == 0x20);
-    static_assert(offsetof(RenderInputLayoutField_t, m_Format) == 0x24);
     static_assert(offsetof(RenderInputLayoutField_t, m_nOffset) == 0x28);
     static_assert(offsetof(RenderInputLayoutField_t, m_nSlot) == 0x2c);
     static_assert(offsetof(RenderInputLayoutField_t, m_nSlotType) == 0x30);

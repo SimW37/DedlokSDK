@@ -27,8 +27,8 @@ namespace source2sdk::server
         eInstantStop = 0x5,
         // MPropertyFriendlyName "Hop"
         eHop = 0x6,
-        // MPropertyFriendlyName "Loop Performance"
-        eLoopPerformance = 0x7,
+        // MPropertyFriendlyName "Custom"
+        eCustom = 0x7,
         // MPropertyFriendlyName "Planted Turn"
         ePlantedTurn = 0x8,
         // MPropertyFriendlyName "Other"

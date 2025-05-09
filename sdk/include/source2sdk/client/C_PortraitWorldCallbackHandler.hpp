@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x518
+    // Size: 0x5e8
     // Has VTable
     // 
     // static metadata: MEntityAllowsPortraitWorldSpawn
@@ -22,9 +22,9 @@ namespace source2sdk::client
     class C_PortraitWorldCallbackHandler : public client::C_BaseEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x510[0x8];
+        [[maybe_unused]] std::uint8_t pad_0x5e0[0x8];
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(C_PortraitWorldCallbackHandler) == 0x518);
+    static_assert(sizeof(C_PortraitWorldCallbackHandler) == 0x5e8);
 };

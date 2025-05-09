@@ -28,15 +28,16 @@ namespace source2sdk::server
         [[maybe_unused]] std::uint8_t pad_0x00[0x38]; // 0x0
         entity2::GameTime_t m_flStopTalkTime; // 0x38        
         entity2::GameTime_t m_flStopTalkTimeWithoutDelay; // 0x3c        
-        entity2::GameTime_t m_flBlockedTalkTime; // 0x40        
-        int32_t m_voicePitch; // 0x44        
-        entity2::GameTime_t m_flLastTimeAcceptedSpeak; // 0x48        
-        bool m_bAllowSpeakingInterrupts; // 0x4c        
-        bool m_bConsiderSceneInvolvementAsSpeech; // 0x4d        
-        bool m_bSceneEntityDisabled; // 0x4e        
-        [[maybe_unused]] std::uint8_t pad_0x4f[0x1]; // 0x4f
-        int32_t m_nLastSpokenPriority; // 0x50        
-        [[maybe_unused]] std::uint8_t pad_0x54[0x1c]; // 0x54
+        entity2::GameTime_t m_flQueuedSpeechTime; // 0x40        
+        entity2::GameTime_t m_flBlockedTalkTime; // 0x44        
+        int32_t m_voicePitch; // 0x48        
+        entity2::GameTime_t m_flLastTimeAcceptedSpeak; // 0x4c        
+        bool m_bAllowSpeakingInterrupts; // 0x50        
+        bool m_bConsiderSceneInvolvementAsSpeech; // 0x51        
+        bool m_bSceneEntityDisabled; // 0x52        
+        [[maybe_unused]] std::uint8_t pad_0x53[0x1]; // 0x53
+        int32_t m_nLastSpokenPriority; // 0x54        
+        [[maybe_unused]] std::uint8_t pad_0x58[0x18]; // 0x58
         server::CBaseFlex* m_pOuter; // 0x70        
         
         // Datamap fields:
@@ -47,13 +48,14 @@ namespace source2sdk::server
     
     static_assert(offsetof(CAI_Expresser, m_flStopTalkTime) == 0x38);
     static_assert(offsetof(CAI_Expresser, m_flStopTalkTimeWithoutDelay) == 0x3c);
-    static_assert(offsetof(CAI_Expresser, m_flBlockedTalkTime) == 0x40);
-    static_assert(offsetof(CAI_Expresser, m_voicePitch) == 0x44);
-    static_assert(offsetof(CAI_Expresser, m_flLastTimeAcceptedSpeak) == 0x48);
-    static_assert(offsetof(CAI_Expresser, m_bAllowSpeakingInterrupts) == 0x4c);
-    static_assert(offsetof(CAI_Expresser, m_bConsiderSceneInvolvementAsSpeech) == 0x4d);
-    static_assert(offsetof(CAI_Expresser, m_bSceneEntityDisabled) == 0x4e);
-    static_assert(offsetof(CAI_Expresser, m_nLastSpokenPriority) == 0x50);
+    static_assert(offsetof(CAI_Expresser, m_flQueuedSpeechTime) == 0x40);
+    static_assert(offsetof(CAI_Expresser, m_flBlockedTalkTime) == 0x44);
+    static_assert(offsetof(CAI_Expresser, m_voicePitch) == 0x48);
+    static_assert(offsetof(CAI_Expresser, m_flLastTimeAcceptedSpeak) == 0x4c);
+    static_assert(offsetof(CAI_Expresser, m_bAllowSpeakingInterrupts) == 0x50);
+    static_assert(offsetof(CAI_Expresser, m_bConsiderSceneInvolvementAsSpeech) == 0x51);
+    static_assert(offsetof(CAI_Expresser, m_bSceneEntityDisabled) == 0x52);
+    static_assert(offsetof(CAI_Expresser, m_nLastSpokenPriority) == 0x54);
     static_assert(offsetof(CAI_Expresser, m_pOuter) == 0x70);
     
     static_assert(sizeof(CAI_Expresser) == 0x78);

@@ -14,17 +14,17 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x8a0
+    // Size: 0x8b8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Projectile_HookBlade : public server::CCitadelTrackedProjectile
     {
     public:
-        bool bIsReturning; // 0x898        
-        [[maybe_unused]] std::uint8_t pad_0x899[0x7];
+        bool bIsReturning; // 0x8b0        
+        [[maybe_unused]] std::uint8_t pad_0x8b1[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Projectile_HookBlade because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Projectile_HookBlade) == 0x8a0);
+    static_assert(sizeof(CCitadel_Projectile_HookBlade) == 0x8b8);
 };

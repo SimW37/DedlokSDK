@@ -19,7 +19,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x840
+    // Size: 0x9e0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "EHANDLE m_hActivator"
@@ -31,12 +31,12 @@ namespace source2sdk::client
         // metadata: MNetworkChangeCallback "OnDialogActivatorChanged"
         // m_hActivator has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hActivator;
-        char m_hActivator[0x4]; // 0x838        
-        bool m_bStartEnabled; // 0x83c        
-        [[maybe_unused]] std::uint8_t pad_0x83d[0x3];
+        char m_hActivator[0x4]; // 0x9d8        
+        bool m_bStartEnabled; // 0x9dc        
+        [[maybe_unused]] std::uint8_t pad_0x9dd[0x3];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_PointClientUIDialog because it is not a standard-layout class
-    static_assert(sizeof(C_PointClientUIDialog) == 0x840);
+    static_assert(sizeof(C_PointClientUIDialog) == 0x9e0);
 };

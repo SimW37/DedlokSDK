@@ -19,7 +19,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xd08
+    // Size: 0xe90
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Shakedown_Target : public client::C_CitadelBaseAbility
@@ -27,12 +27,12 @@ namespace source2sdk::client
     public:
         // m_hShadowdownAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::CCitadel_Ability_Yakuza_Shakedown> m_hShadowdownAbility;
-        char m_hShadowdownAbility[0x4]; // 0xc50        
-        Vector m_AimPos; // 0xc54        
-        [[maybe_unused]] std::uint8_t pad_0xc60[0xa8];
+        char m_hShadowdownAbility[0x4]; // 0xdc0        
+        Vector m_AimPos; // 0xdc4        
+        [[maybe_unused]] std::uint8_t pad_0xdd0[0xc0];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Shakedown_Target because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Shakedown_Target) == 0xd08);
+    static_assert(sizeof(CCitadel_Ability_Shakedown_Target) == 0xe90);
 };

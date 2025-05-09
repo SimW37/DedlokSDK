@@ -14,18 +14,18 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x138
+    // Size: 0x148
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_StaticCharge : public server::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x70]; // 0xc0
-        float m_flRadius; // 0x130        
-        [[maybe_unused]] std::uint8_t pad_0x134[0x4];
+        [[maybe_unused]] std::uint8_t pad_0xc0[0x80]; // 0xc0
+        float m_flRadius; // 0x140        
+        [[maybe_unused]] std::uint8_t pad_0x144[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_StaticCharge because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_StaticCharge) == 0x138);
+    static_assert(sizeof(CCitadel_Modifier_StaticCharge) == 0x148);
 };

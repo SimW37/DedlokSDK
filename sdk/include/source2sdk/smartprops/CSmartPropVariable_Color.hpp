@@ -14,7 +14,7 @@ namespace source2sdk::smartprops
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x30
+    // Size: 0x40
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,11 +23,11 @@ namespace source2sdk::smartprops
     class CSmartPropVariable_Color : public smartprops::CSmartPropVariable
     {
     public:
-        Color m_DefaultValue; // 0x28        
-        [[maybe_unused]] std::uint8_t pad_0x2c[0x4];
+        Color m_DefaultValue; // 0x38        
+        [[maybe_unused]] std::uint8_t pad_0x3c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSmartPropVariable_Color because it is not a standard-layout class
-    static_assert(sizeof(CSmartPropVariable_Color) == 0x30);
+    static_assert(sizeof(CSmartPropVariable_Color) == 0x40);
 };

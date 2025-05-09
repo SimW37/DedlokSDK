@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 16
+    // Enumerator count: 17
     // Alignment: 4
     // Size: 0x4
     enum class ProjectileBehaviorFlag_t : std::uint32_t
@@ -48,5 +48,8 @@ namespace source2sdk::client
         // MPropertyFriendlyName "Allow Hit On Non-Tracked Targets"
         // MPropertyDescription "When set, tracked projectiles can hit non-tracked targets, allowing people to intercept."
         PBF_AllowHitOnNonTrackedTargets = 0x4000,
+        // MPropertyFriendlyName "Projectile only interacts / touches world"
+        // MPropertyDescription "When set, projectile will not touch anything but the world"
+        PBF_OnlyTouchWorld = 0x8000,
     };
 };

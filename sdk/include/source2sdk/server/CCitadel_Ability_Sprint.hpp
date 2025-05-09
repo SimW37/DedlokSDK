@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb18
+    // Size: 0xbb8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bSprinting"
@@ -27,26 +27,26 @@ namespace source2sdk::server
     class CCitadel_Ability_Sprint : public server::CCitadelBaseAbility
     {
     public:
-        client::ParticleIndex_t m_nSprintParticle; // 0xb00        
+        client::ParticleIndex_t m_nSprintParticle; // 0xba0        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnSprintingChanged"
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        bool m_bSprinting; // 0xb04        
-        [[maybe_unused]] std::uint8_t pad_0xb05[0x3]; // 0xb05
+        bool m_bSprinting; // 0xba4        
+        [[maybe_unused]] std::uint8_t pad_0xba5[0x3]; // 0xba5
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flInCombatStartTime; // 0xb08        
+        entity2::GameTime_t m_flInCombatStartTime; // 0xba8        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flInCombatEndTime; // 0xb0c        
+        entity2::GameTime_t m_flInCombatEndTime; // 0xbac        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flSprintStartTime; // 0xb10        
-        bool m_bInCombat; // 0xb14        
-        [[maybe_unused]] std::uint8_t pad_0xb15[0x3];
+        entity2::GameTime_t m_flSprintStartTime; // 0xbb0        
+        bool m_bInCombat; // 0xbb4        
+        [[maybe_unused]] std::uint8_t pad_0xbb5[0x3];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Sprint because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Sprint) == 0xb18);
+    static_assert(sizeof(CCitadel_Ability_Sprint) == 0xbb8);
 };

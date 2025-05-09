@@ -14,16 +14,16 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb58
+    // Size: 0xbe8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_WeaponUpgrade_HeadshotBooster : public server::CCitadel_Item
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb20[0x38];
+        [[maybe_unused]] std::uint8_t pad_0xba8[0x40];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_WeaponUpgrade_HeadshotBooster) == 0xb58);
+    static_assert(sizeof(CCitadel_WeaponUpgrade_HeadshotBooster) == 0xbe8);
 };

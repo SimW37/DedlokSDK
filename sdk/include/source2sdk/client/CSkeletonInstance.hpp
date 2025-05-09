@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: unknown
     // Standard-layout class: false
-    // Size: 0x490
+    // Size: 0x520
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CModelState m_modelState"
@@ -31,20 +31,20 @@ namespace source2sdk::client
         // metadata: MNetworkEnable
         client::CModelState m_modelState; // 0x170        
         // metadata: MNetworkEnable
-        bool m_bIsAnimationEnabled; // 0x3f0        
+        bool m_bIsAnimationEnabled; // 0x480        
         // metadata: MNetworkEnable
-        bool m_bUseParentRenderBounds; // 0x3f1        
-        bool m_bDisableSolidCollisionsForHierarchy; // 0x3f2        
-        // start of bitfield block at 0x3f3
+        bool m_bUseParentRenderBounds; // 0x481        
+        bool m_bDisableSolidCollisionsForHierarchy; // 0x482        
+        // start of bitfield block at 0x483
         uint8_t m_bDirtyMotionType: 1;
         uint8_t m_bIsGeneratingLatchedParentSpaceState: 1;
         // end of bitfield block // 2 bits
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "skeletonMaterialGroupChanged"
-        CUtlStringToken m_materialGroup; // 0x3f4        
+        CUtlStringToken m_materialGroup; // 0x484        
         // metadata: MNetworkEnable
-        uint8_t m_nHitboxSet; // 0x3f8        
-        [[maybe_unused]] std::uint8_t pad_0x3f9[0x97];
+        uint8_t m_nHitboxSet; // 0x488        
+        [[maybe_unused]] std::uint8_t pad_0x489[0x97];
         
         // Datamap fields:
         // Vector velocity; // 0x7fffffff
@@ -54,5 +54,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSkeletonInstance because it is not a standard-layout class
-    static_assert(sizeof(CSkeletonInstance) == 0x490);
+    static_assert(sizeof(CSkeletonInstance) == 0x520);
 };

@@ -24,23 +24,23 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xce0
+    // Size: 0xdc0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Spinning_Blade : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0x1c0]; // 0xb00
+        [[maybe_unused]] std::uint8_t pad_0xba0[0x200]; // 0xba0
         // m_vecOutgoingHits has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CHandle<server::CBaseEntity>> m_vecOutgoingHits;
-        char m_vecOutgoingHits[0x18]; // 0xcc0        
+        char m_vecOutgoingHits[0x18]; // 0xda0        
         // m_hActiveProjectile has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CCitadelProjectile> m_hActiveProjectile;
-        char m_hActiveProjectile[0x4]; // 0xcd8        
-        [[maybe_unused]] std::uint8_t pad_0xcdc[0x4];
+        char m_hActiveProjectile[0x4]; // 0xdb8        
+        [[maybe_unused]] std::uint8_t pad_0xdbc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Spinning_Blade because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Spinning_Blade) == 0xce0);
+    static_assert(sizeof(CCitadel_Ability_Spinning_Blade) == 0xdc0);
 };

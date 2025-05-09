@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x16d8
+    // Size: 0x1700
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,19 +27,19 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Modifiers"
         // m_GravityLassoSelf has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CBaseModifier> m_GravityLassoSelf;
-        char m_GravityLassoSelf[0x10]; // 0x15c8        
+        char m_GravityLassoSelf[0x10]; // 0x15f0        
         // m_GravityLassoTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CBaseModifier> m_GravityLassoTarget;
-        char m_GravityLassoTarget[0x10]; // 0x15d8        
+        char m_GravityLassoTarget[0x10]; // 0x1600        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_TargetWarningSound; // 0x15e8        
+        CSoundEventName m_TargetWarningSound; // 0x1610        
         // metadata: MPropertyStartGroup "Visuals"
         // m_PreCastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreCastParticle;
-        char m_PreCastParticle[0xe0]; // 0x15f8        
+        char m_PreCastParticle[0xe0]; // 0x1620        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Gravity_Lasso_VData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Gravity_Lasso_VData) == 0x16d8);
+    static_assert(sizeof(CCitadel_Ability_Gravity_Lasso_VData) == 0x1700);
 };

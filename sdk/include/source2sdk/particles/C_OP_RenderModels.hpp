@@ -25,7 +25,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x29b8
+    // Size: 0x2b18
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -171,62 +171,64 @@ namespace source2sdk::particles
         // CUtlVector<particles::MaterialVariable_t> m_MaterialVars;
         char m_MaterialVars[0x18]; // 0x1ae8        
         // metadata: MPropertyStartGroup "Model Overrides"
+        // metadata: MPropertyFriendlyName "render filter"
+        particleslib::CPerParticleFloatInput m_flRenderFilter; // 0x1b00        
         // metadata: MPropertyFriendlyName "model list selection override"
-        particleslib::CPerParticleFloatInput m_flManualModelSelection; // 0x1b00        
+        particleslib::CPerParticleFloatInput m_flManualModelSelection; // 0x1c60        
         // metadata: MPropertyFriendlyName "input model"
         // metadata: MParticleInputOptional
-        particleslib::CParticleModelInput m_modelInput; // 0x1c60        
+        particleslib::CParticleModelInput m_modelInput; // 0x1dc0        
         // metadata: MPropertyFriendlyName "model LOD"
-        int32_t m_nLOD; // 0x1cc0        
+        int32_t m_nLOD; // 0x1e20        
         // metadata: MPropertyFriendlyName "model override economy loadout slot type"
-        char m_EconSlotName[256]; // 0x1cc4        
+        char m_EconSlotName[256]; // 0x1e24        
         // metadata: MPropertyFriendlyName "model override original model only (ignore shapeshift/hex/etc)"
-        bool m_bOriginalModel; // 0x1dc4        
+        bool m_bOriginalModel; // 0x1f24        
         // metadata: MPropertyFriendlyName "suppress tinting of the model"
-        bool m_bSuppressTint; // 0x1dc5        
-        [[maybe_unused]] std::uint8_t pad_0x1dc6[0x2]; // 0x1dc6
+        bool m_bSuppressTint; // 0x1f25        
+        [[maybe_unused]] std::uint8_t pad_0x1f26[0x2]; // 0x1f26
         // metadata: MPropertyFriendlyName "SubModel Field Type"
-        particles::RenderModelSubModelFieldType_t m_nSubModelFieldType; // 0x1dc8        
+        particles::RenderModelSubModelFieldType_t m_nSubModelFieldType; // 0x1f28        
         // metadata: MPropertyFriendlyName "disable shadows"
-        bool m_bDisableShadows; // 0x1dcc        
+        bool m_bDisableShadows; // 0x1f2c        
         // metadata: MPropertyFriendlyName "disable depth prepass"
-        bool m_bDisableDepthPrepass; // 0x1dcd        
+        bool m_bDisableDepthPrepass; // 0x1f2d        
         // metadata: MPropertyFriendlyName "accept decals"
-        bool m_bAcceptsDecals; // 0x1dce        
+        bool m_bAcceptsDecals; // 0x1f2e        
         // metadata: MPropertyFriendlyName "forcedrawinterlevedwithsiblings"
-        bool m_bForceDrawInterlevedWithSiblings; // 0x1dcf        
+        bool m_bForceDrawInterlevedWithSiblings; // 0x1f2f        
         // metadata: MPropertyFriendlyName "do not draw in particle pass"
-        bool m_bDoNotDrawInParticlePass; // 0x1dd0        
+        bool m_bDoNotDrawInParticlePass; // 0x1f30        
         // metadata: MPropertyFriendlyName "allow approximate transforms (cpu optimizaiton)"
-        bool m_bAllowApproximateTransforms; // 0x1dd1        
+        bool m_bAllowApproximateTransforms; // 0x1f31        
         // metadata: MPropertyFriendlyName "render attribute"
-        char m_szRenderAttribute[260]; // 0x1dd2        
-        [[maybe_unused]] std::uint8_t pad_0x1ed6[0x2]; // 0x1ed6
+        char m_szRenderAttribute[260]; // 0x1f32        
+        [[maybe_unused]] std::uint8_t pad_0x2036[0x2]; // 0x2036
         // metadata: MPropertyStartGroup "+Renderer Modifiers"
         // metadata: MPropertyFriendlyName "Radius Scale"
         // metadata: MPropertySortPriority "700"
-        particleslib::CParticleCollectionFloatInput m_flRadiusScale; // 0x1ed8        
+        particleslib::CParticleCollectionFloatInput m_flRadiusScale; // 0x2038        
         // metadata: MPropertyFriendlyName "alpha scale"
         // metadata: MPropertySortPriority "700"
-        particleslib::CParticleCollectionFloatInput m_flAlphaScale; // 0x2038        
+        particleslib::CParticleCollectionFloatInput m_flAlphaScale; // 0x2198        
         // metadata: MPropertyFriendlyName "rotation roll scale"
         // metadata: MPropertySortPriority "700"
-        particleslib::CParticleCollectionFloatInput m_flRollScale; // 0x2198        
+        particleslib::CParticleCollectionFloatInput m_flRollScale; // 0x22f8        
         // metadata: MPropertyFriendlyName "per-particle alpha scale attribute"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
         // metadata: MPropertySortPriority "700"
-        particles::ParticleAttributeIndex_t m_nAlpha2Field; // 0x22f8        
-        [[maybe_unused]] std::uint8_t pad_0x22fc[0x4]; // 0x22fc
+        particles::ParticleAttributeIndex_t m_nAlpha2Field; // 0x2458        
+        [[maybe_unused]] std::uint8_t pad_0x245c[0x4]; // 0x245c
         // metadata: MPropertyFriendlyName "color blend"
         // metadata: MPropertySortPriority "700"
-        particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x2300        
+        particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x2460        
         // metadata: MPropertyFriendlyName "color blend type"
         // metadata: MPropertySortPriority "700"
-        particles::ParticleColorBlendType_t m_nColorBlendType; // 0x2978        
-        [[maybe_unused]] std::uint8_t pad_0x297c[0x3c];
+        particles::ParticleColorBlendType_t m_nColorBlendType; // 0x2ad8        
+        [[maybe_unused]] std::uint8_t pad_0x2adc[0x3c];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RenderModels because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RenderModels) == 0x29b8);
+    static_assert(sizeof(C_OP_RenderModels) == 0x2b18);
 };

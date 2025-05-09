@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 3
+    // Enumerator count: 4
     // Alignment: 4
     // Size: 0x4
     enum class ECitadelTargetAbilityEffects : std::uint32_t
@@ -16,5 +16,6 @@ namespace source2sdk::client
         CITADEL_TARGET_ABILITY_BEHAVIOR_NONE = 0x0,
         CITADEL_TARGET_ABILITY_BEHAVIOR_IMBUE_MODIFIER_VALUE = 0x1,
         CITADEL_TARGET_ABILITY_BEHAVIOR_IMBUE_ACTIVE = 0x2,
+        CITADEL_TARGET_ABILITY_BEHAVIOR_IMBUE_ACTIVE_NON_ULT = 0x4,
     };
 };

@@ -21,7 +21,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xbd0
+    // Size: 0xc88
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "int m_iBonusHealth"
@@ -32,19 +32,19 @@ namespace source2sdk::server
     public:
         // m_hTargetComboModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CModifierHandleTyped<server::CCitadelModifier> m_hTargetComboModifier;
-        char m_hTargetComboModifier[0x18]; // 0xb00        
-        entity2::GameTime_t m_flLastAttackTime; // 0xb18        
-        int32_t m_nAttackNum; // 0xb1c        
-        [[maybe_unused]] std::uint8_t pad_0xb20[0xa8]; // 0xb20
+        char m_hTargetComboModifier[0x18]; // 0xba0        
+        entity2::GameTime_t m_flLastAttackTime; // 0xbb8        
+        int32_t m_nAttackNum; // 0xbbc        
+        [[maybe_unused]] std::uint8_t pad_0xbc0[0xc0]; // 0xbc0
         // metadata: MNetworkEnable
-        int32_t m_iBonusHealth; // 0xbc8        
+        int32_t m_iBonusHealth; // 0xc80        
         // metadata: MNetworkEnable
         // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hTarget;
-        char m_hTarget[0x4]; // 0xbcc        
+        char m_hTarget[0x4]; // 0xc84        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_UltCombo because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_UltCombo) == 0xbd0);
+    static_assert(sizeof(CCitadel_Ability_UltCombo) == 0xc88);
 };

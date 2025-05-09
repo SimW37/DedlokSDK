@@ -14,16 +14,16 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x9b0
+    // Size: 0x9c8
     // Has VTable
     #pragma pack(push, 1)
     class CTriggerTeamBase : public server::CBaseTrigger
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x978[0x38];
+        [[maybe_unused]] std::uint8_t pad_0x990[0x38];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CTriggerTeamBase) == 0x9b0);
+    static_assert(sizeof(CTriggerTeamBase) == 0x9c8);
 };

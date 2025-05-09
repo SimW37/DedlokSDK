@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1620
+    // Size: 0x1698
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -23,13 +23,18 @@ namespace source2sdk::client
     class CItemSilenceGlyphVData : public client::CitadelItemVData
     {
     public:
-        // metadata: MPropertyGroupName "Modifiers"
+        // metadata: MPropertyStartGroup "Modifiers"
         // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_DebuffModifier;
-        char m_DebuffModifier[0x10]; // 0x1610        
+        char m_DebuffModifier[0x10]; // 0x1668        
+        // m_ResistReductionModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CEmbeddedSubclass<client::CCitadelModifier> m_ResistReductionModifier;
+        char m_ResistReductionModifier[0x10]; // 0x1678        
+        // metadata: MPropertyStartGroup "Sounds"
+        CSoundEventName m_strHitConfirmSound; // 0x1688        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CItemSilenceGlyphVData because it is not a standard-layout class
-    static_assert(sizeof(CItemSilenceGlyphVData) == 0x1620);
+    static_assert(sizeof(CItemSilenceGlyphVData) == 0x1698);
 };

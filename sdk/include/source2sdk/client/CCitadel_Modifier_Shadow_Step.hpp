@@ -15,17 +15,17 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x388
+    // Size: 0x3e8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_Shadow_Step : public client::CCitadel_Modifier_Invis
     {
     public:
-        client::ParticleIndex_t m_nRevealedEffect; // 0x268        
-        [[maybe_unused]] std::uint8_t pad_0x26c[0x11c];
+        client::ParticleIndex_t m_nRevealedEffect; // 0x2a0        
+        [[maybe_unused]] std::uint8_t pad_0x2a4[0x144];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Shadow_Step because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Shadow_Step) == 0x388);
+    static_assert(sizeof(CCitadel_Modifier_Shadow_Step) == 0x3e8);
 };

@@ -14,17 +14,17 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x898
+    // Size: 0xaa8
     // Has VTable
     #pragma pack(push, 1)
     class C_CitadelBoomerangProjectile : public client::C_CitadelProjectile
     {
     public:
-        bool m_bReturning; // 0x890        
-        [[maybe_unused]] std::uint8_t pad_0x891[0x7];
+        bool m_bReturning; // 0xaa0        
+        [[maybe_unused]] std::uint8_t pad_0xaa1[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_CitadelBoomerangProjectile because it is not a standard-layout class
-    static_assert(sizeof(C_CitadelBoomerangProjectile) == 0x898);
+    static_assert(sizeof(C_CitadelBoomerangProjectile) == 0xaa8);
 };

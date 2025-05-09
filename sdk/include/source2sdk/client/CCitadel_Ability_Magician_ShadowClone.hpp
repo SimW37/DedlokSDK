@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xd68
+    // Size: 0xf00
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Magician_ShadowClone : public client::C_CitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc50[0x118];
+        [[maybe_unused]] std::uint8_t pad_0xdc0[0x140];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Ability_Magician_ShadowClone) == 0xd68);
+    static_assert(sizeof(CCitadel_Ability_Magician_ShadowClone) == 0xf00);
 };

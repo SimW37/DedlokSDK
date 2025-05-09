@@ -117,7 +117,10 @@ namespace source2sdk::client
         client::ModifierDebuffType_t m_eDebuffType; // 0x3d8        
         // metadata: MPropertyDescription "When set, stacks will automatically be decayed after a duration's worth of time has passed.  Only makes sense if adding a stack refreshed the modifier."
         bool m_bAutomaticallyDecayStacks; // 0x3dc        
-        [[maybe_unused]] std::uint8_t pad_0x3dd[0x13];
+        // metadata: MPropertyStartGroup "Networking"
+        // metadata: MPropertyDescription "If true, application of the modifier will be delayed on the server to match the client's latency."
+        bool m_bAllowApplicationPrediction; // 0x3dd        
+        [[maybe_unused]] std::uint8_t pad_0x3de[0x12];
     };
     #pragma pack(pop)
     

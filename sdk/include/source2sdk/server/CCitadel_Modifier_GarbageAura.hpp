@@ -20,21 +20,21 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1a8
+    // Size: 0x1c0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_GarbageAura : public server::CCitadelModifierAura
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xe0[0xa8]; // 0xe0
+        [[maybe_unused]] std::uint8_t pad_0xe0[0xc0]; // 0xe0
         // m_hEnemyHeroInVacuum has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CHandle<server::CBaseEntity>> m_hEnemyHeroInVacuum;
-        char m_hEnemyHeroInVacuum[0x18]; // 0x188        
-        int32_t m_nNumPlayersKilled; // 0x1a0        
-        entity2::GameTime_t m_tLastDamageTime; // 0x1a4        
+        char m_hEnemyHeroInVacuum[0x18]; // 0x1a0        
+        int32_t m_nNumPlayersKilled; // 0x1b8        
+        entity2::GameTime_t m_tLastDamageTime; // 0x1bc        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_GarbageAura because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_GarbageAura) == 0x1a8);
+    static_assert(sizeof(CCitadel_Modifier_GarbageAura) == 0x1c0);
 };

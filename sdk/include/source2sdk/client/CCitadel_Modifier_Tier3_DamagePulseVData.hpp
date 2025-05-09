@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x758
+    // Size: 0x760
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,17 +26,17 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_TargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle;
-        char m_TargetParticle[0xe0]; // 0x658        
+        char m_TargetParticle[0xe0]; // 0x660        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strPulseTickSound; // 0x738        
+        CSoundEventName m_strPulseTickSound; // 0x740        
         // metadata: MPropertyStartGroup "Gameplay"
-        int32_t m_iMaxTargets; // 0x748        
-        float m_flRadius; // 0x74c        
-        float m_flDamagePerPulse; // 0x750        
-        float m_flTickRate; // 0x754        
+        int32_t m_iMaxTargets; // 0x750        
+        float m_flRadius; // 0x754        
+        float m_flDamagePerPulse; // 0x758        
+        float m_flTickRate; // 0x75c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Tier3_DamagePulseVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Tier3_DamagePulseVData) == 0x758);
+    static_assert(sizeof(CCitadel_Modifier_Tier3_DamagePulseVData) == 0x760);
 };

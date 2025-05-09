@@ -14,16 +14,16 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1d0
+    // Size: 0x1f8
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_SleepBomb_Aura : public client::CCitadelModifierAura
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xf0[0xe0];
+        [[maybe_unused]] std::uint8_t pad_0xf8[0x100];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Modifier_SleepBomb_Aura) == 0x1d0);
+    static_assert(sizeof(CCitadel_Modifier_SleepBomb_Aura) == 0x1f8);
 };

@@ -15,17 +15,17 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb60
+    // Size: 0xbf0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Item_WarpStone : public server::CCitadel_Item
     {
     public:
-        client::ParticleIndex_t m_nCastDelayParticleIndex; // 0xb20        
-        [[maybe_unused]] std::uint8_t pad_0xb24[0x3c];
+        client::ParticleIndex_t m_nCastDelayParticleIndex; // 0xba8        
+        [[maybe_unused]] std::uint8_t pad_0xbac[0x44];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Item_WarpStone because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Item_WarpStone) == 0xb60);
+    static_assert(sizeof(CCitadel_Item_WarpStone) == 0xbf0);
 };

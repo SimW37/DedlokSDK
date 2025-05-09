@@ -14,16 +14,16 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xbf0
+    // Size: 0xcb0
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Gravity_Lasso : public server::CCitadelBaseAbility
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb00[0xf0];
+        [[maybe_unused]] std::uint8_t pad_0xba0[0x110];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Ability_Gravity_Lasso) == 0xbf0);
+    static_assert(sizeof(CCitadel_Ability_Gravity_Lasso) == 0xcb0);
 };

@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/server/CCitadel_Item.hpp"
+#include "source2sdk/server/CCitadel_WeaponUpgrade_HeadshotBooster.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -14,16 +14,16 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb58
+    // Size: 0xc28
     // Has VTable
     #pragma pack(push, 1)
-    class CCitadel_WeaponUpgrade_BansheeSlugs : public server::CCitadel_Item
+    class CCitadel_WeaponUpgrade_BansheeSlugs : public server::CCitadel_WeaponUpgrade_HeadshotBooster
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xb20[0x38];
+        [[maybe_unused]] std::uint8_t pad_0xbe8[0x40];
         // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_WeaponUpgrade_BansheeSlugs) == 0xb58);
+    static_assert(sizeof(CCitadel_WeaponUpgrade_BansheeSlugs) == 0xc28);
 };

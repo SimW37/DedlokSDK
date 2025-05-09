@@ -16,7 +16,7 @@ namespace source2sdk::modellib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x60
+    // Size: 0x90
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
@@ -35,7 +35,7 @@ namespace source2sdk::modellib
         // CUtlLeanVector<modellib::CMeshletDescriptor> m_meshlets;
         char m_meshlets[0x10]; // 0x38        
         Vector4D m_vTintColor; // 0x48        
-        [[maybe_unused]] std::uint8_t pad_0x58[0x8];
+        [[maybe_unused]] std::uint8_t pad_0x58[0x38];
     };
     #pragma pack(pop)
     
@@ -46,5 +46,5 @@ namespace source2sdk::modellib
     static_assert(offsetof(CSceneObjectData, m_meshlets) == 0x38);
     static_assert(offsetof(CSceneObjectData, m_vTintColor) == 0x48);
     
-    static_assert(sizeof(CSceneObjectData) == 0x60);
+    static_assert(sizeof(CSceneObjectData) == 0x90);
 };

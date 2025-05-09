@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1630
+    // Size: 0x1688
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,13 +26,13 @@ namespace source2sdk::server
         // metadata: MPropertyGroupName "Modifiers"
         // m_AmbushModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_AmbushModifier;
-        char m_AmbushModifier[0x10]; // 0x1610        
+        char m_AmbushModifier[0x10]; // 0x1668        
         // m_InvisModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_InvisModifier;
-        char m_InvisModifier[0x10]; // 0x1620        
+        char m_InvisModifier[0x10]; // 0x1678        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_ArmorUpgrade_CloakingDeviceActive_VData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_ArmorUpgrade_CloakingDeviceActive_VData) == 0x1630);
+    static_assert(sizeof(CCitadel_ArmorUpgrade_CloakingDeviceActive_VData) == 0x1688);
 };

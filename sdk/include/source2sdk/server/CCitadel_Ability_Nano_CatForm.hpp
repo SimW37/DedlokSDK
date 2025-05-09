@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xc20
+    // Size: 0xce8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "bool m_bIsInCatform"
@@ -25,14 +25,14 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        bool m_bIsInCatform; // 0xb00        
-        [[maybe_unused]] std::uint8_t pad_0xb01[0x3]; // 0xb01
+        bool m_bIsInCatform; // 0xba0        
+        [[maybe_unused]] std::uint8_t pad_0xba1[0x3]; // 0xba1
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flLastDamageTime; // 0xb04        
-        [[maybe_unused]] std::uint8_t pad_0xb08[0x118];
+        entity2::GameTime_t m_flLastDamageTime; // 0xba4        
+        [[maybe_unused]] std::uint8_t pad_0xba8[0x140];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Nano_CatForm because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Nano_CatForm) == 0xc20);
+    static_assert(sizeof(CCitadel_Ability_Nano_CatForm) == 0xce8);
 };

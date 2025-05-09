@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 67
+    // Enumerator count: 71
     // Alignment: 4
     // Size: 0x4
     enum class EAbilityBehavior_t : std::uint32_t
@@ -79,7 +79,11 @@ namespace source2sdk::client
         CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST = 0x3f,
         CITADEL_ABILITY_BEHAVIOR_CAST_RANGE_IS_2D = 0x40,
         CITADEL_ABILITY_BEHAVIOR_REQUIRE_ABILITY_BUTTON_TO_CANCEL = 0x41,
+        CITADEL_ABILITY_BEHAVIOR_DO_NOT_ALLOW_SPAM_PROC = 0x42,
+        CITADEL_ABILITY_BEHAVIOR_CAN_CAST_WHILE_DEAD = 0x43,
+        CITADEL_ABILITY_BEHAVIOR_CANCEL_ROPE_CLIMB_ON_CAST = 0x44,
+        CITADEL_ABILITY_BEHAVIOR_INHIBIT_SOFT_CAMERA_COLLISION = 0x45,
         // MPropertySuppressEnumerator
-        CITADEL_ABILITY_BEHAVIOR_COUNT = 0x42,
+        CITADEL_ABILITY_BEHAVIOR_COUNT = 0x46,
     };
 };

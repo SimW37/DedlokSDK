@@ -14,16 +14,17 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x130
+    // Size: 0x188
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Modifier_MagicShield_SpiritBuff : public server::CCitadelModifier
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x70];
-        // No schema binary for binding
+        bool m_bHasHealthForBonuses; // 0xc0        
+        [[maybe_unused]] std::uint8_t pad_0xc1[0xc7];
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CCitadel_Modifier_MagicShield_SpiritBuff) == 0x130);
+    // Cannot assert offsets of fields in CCitadel_Modifier_MagicShield_SpiritBuff because it is not a standard-layout class
+    static_assert(sizeof(CCitadel_Modifier_MagicShield_SpiritBuff) == 0x188);
 };

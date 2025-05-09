@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x15d8
+    // Size: 0x1600
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,10 +26,10 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Modifiers"
         // m_MarkModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_MarkModifier;
-        char m_MarkModifier[0x10]; // 0x15c8        
+        char m_MarkModifier[0x10]; // 0x15f0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Gunslinger_DemonMarkVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Gunslinger_DemonMarkVData) == 0x15d8);
+    static_assert(sizeof(CCitadel_Gunslinger_DemonMarkVData) == 0x1600);
 };

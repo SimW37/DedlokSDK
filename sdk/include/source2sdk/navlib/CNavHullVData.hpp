@@ -13,7 +13,7 @@ namespace source2sdk::navlib
     // Registered alignment: 0x4
     // Alignment: 0x4
     // Standard-layout class: true
-    // Size: 0x34
+    // Size: 0x3c
     // Has Trivial Destructor
     // 
     // static metadata: MVDataRoot
@@ -32,38 +32,45 @@ namespace source2sdk::navlib
         // metadata: MPropertyFriendlyName "Height"
         // metadata: MPropertyDescription "Height of navigating agent capsule."
         float m_agentHeight; // 0x8        
-        // metadata: MPropertyFriendlyName "Enable Short Height"
-        // metadata: MPropertyDescription "Enable shorter navigating agent capsules ( e.g. crouch ) in addition to regular height capsules."
+        // metadata: MPropertyFriendlyName "Enable Crouch Height"
+        // metadata: MPropertyDescription "Enable shorter navigating agent capsules ( crouch ) in addition to regular height capsules."
         bool m_agentShortHeightEnabled; // 0xc        
         [[maybe_unused]] std::uint8_t pad_0x0d[0x3]; // 0xd
-        // metadata: MPropertyFriendlyName "Short height"
-        // metadata: MPropertyDescription "Short Height of navigating agent capsules if enabled."
+        // metadata: MPropertyFriendlyName "Crouch height"
+        // metadata: MPropertyDescription "Crouch height of navigating agent capsules if enabled."
         float m_agentShortHeight; // 0x10        
+        // metadata: MPropertyFriendlyName "Enable Crawl Height"
+        // metadata: MPropertyDescription "Enable even shorter navigating agent capsules ( crawl ) in addition to regular height capsules."
+        bool m_agentCrawlEnabled; // 0x14        
+        [[maybe_unused]] std::uint8_t pad_0x15[0x3]; // 0x15
+        // metadata: MPropertyFriendlyName "Crawl height"
+        // metadata: MPropertyDescription "Crawl height of navigating agent capsules if enabled."
+        float m_agentCrawlHeight; // 0x18        
         // metadata: MPropertyFriendlyName "Max Climb"
         // metadata: MPropertyDescription "Max vertical offset that the agent simply ignores and walks over."
-        float m_agentMaxClimb; // 0x14        
+        float m_agentMaxClimb; // 0x1c        
         // metadata: MPropertyFriendlyName "Max Slope"
         // metadata: MPropertyDescription "Max ground slope to be considered walkable."
-        int32_t m_agentMaxSlope; // 0x18        
+        int32_t m_agentMaxSlope; // 0x20        
         // metadata: MPropertyFriendlyName "Max Jump Down Distance"
         // metadata: MPropertyDescription "Max vertical offset at which to create a jump connection ( possibly one-way )."
-        float m_agentMaxJumpDownDist; // 0x1c        
+        float m_agentMaxJumpDownDist; // 0x24        
         // metadata: MPropertyFriendlyName "Max Horizontal Jump Distance"
         // metadata: MPropertyDescription "Max horizontal offset over which to create a jump connection ( actually a parameter into the true threshold function )."
-        float m_agentMaxJumpHorizDistBase; // 0x20        
+        float m_agentMaxJumpHorizDistBase; // 0x28        
         // metadata: MPropertyFriendlyName "Max Jump Up Distance"
         // metadata: MPropertyDescription "Max vertical offset at which to make a jump connection two-way."
-        float m_agentMaxJumpUpDist; // 0x24        
+        float m_agentMaxJumpUpDist; // 0x2c        
         // metadata: MPropertyFriendlyName "Border Erosion"
         // metadata: MPropertyDescription "Border erosion in voxel units ( -1 to use default value based on agent radius )."
-        int32_t m_agentBorderErosion; // 0x28        
+        int32_t m_agentBorderErosion; // 0x30        
         // metadata: MPropertyFriendlyName "Hierarchical Nav"
         // metadata: MPropertyDescription "Enables super node nav information to be generated"
-        bool m_flowMapGenerationEnabled; // 0x2c        
-        [[maybe_unused]] std::uint8_t pad_0x2d[0x3]; // 0x2d
+        bool m_flowMapGenerationEnabled; // 0x34        
+        [[maybe_unused]] std::uint8_t pad_0x35[0x3]; // 0x35
         // metadata: MPropertyFriendlyName "Hierarchical Nav Max Super Node radius"
         // metadata: MPropertyDescription "Maximum radius of a super node - larger means lower resolution"
-        float m_flowMapNodeMaxRadius; // 0x30        
+        float m_flowMapNodeMaxRadius; // 0x38        
     };
     #pragma pack(pop)
     
@@ -72,14 +79,16 @@ namespace source2sdk::navlib
     static_assert(offsetof(CNavHullVData, m_agentHeight) == 0x8);
     static_assert(offsetof(CNavHullVData, m_agentShortHeightEnabled) == 0xc);
     static_assert(offsetof(CNavHullVData, m_agentShortHeight) == 0x10);
-    static_assert(offsetof(CNavHullVData, m_agentMaxClimb) == 0x14);
-    static_assert(offsetof(CNavHullVData, m_agentMaxSlope) == 0x18);
-    static_assert(offsetof(CNavHullVData, m_agentMaxJumpDownDist) == 0x1c);
-    static_assert(offsetof(CNavHullVData, m_agentMaxJumpHorizDistBase) == 0x20);
-    static_assert(offsetof(CNavHullVData, m_agentMaxJumpUpDist) == 0x24);
-    static_assert(offsetof(CNavHullVData, m_agentBorderErosion) == 0x28);
-    static_assert(offsetof(CNavHullVData, m_flowMapGenerationEnabled) == 0x2c);
-    static_assert(offsetof(CNavHullVData, m_flowMapNodeMaxRadius) == 0x30);
+    static_assert(offsetof(CNavHullVData, m_agentCrawlEnabled) == 0x14);
+    static_assert(offsetof(CNavHullVData, m_agentCrawlHeight) == 0x18);
+    static_assert(offsetof(CNavHullVData, m_agentMaxClimb) == 0x1c);
+    static_assert(offsetof(CNavHullVData, m_agentMaxSlope) == 0x20);
+    static_assert(offsetof(CNavHullVData, m_agentMaxJumpDownDist) == 0x24);
+    static_assert(offsetof(CNavHullVData, m_agentMaxJumpHorizDistBase) == 0x28);
+    static_assert(offsetof(CNavHullVData, m_agentMaxJumpUpDist) == 0x2c);
+    static_assert(offsetof(CNavHullVData, m_agentBorderErosion) == 0x30);
+    static_assert(offsetof(CNavHullVData, m_flowMapGenerationEnabled) == 0x34);
+    static_assert(offsetof(CNavHullVData, m_flowMapNodeMaxRadius) == 0x38);
     
-    static_assert(sizeof(CNavHullVData) == 0x34);
+    static_assert(sizeof(CNavHullVData) == 0x3c);
 };

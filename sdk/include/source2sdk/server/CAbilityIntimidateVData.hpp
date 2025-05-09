@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x17a8
+    // Size: 0x17d0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,20 +27,20 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Modifiers"
         // m_EnemyModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_EnemyModifier;
-        char m_EnemyModifier[0x10]; // 0x15c8        
+        char m_EnemyModifier[0x10]; // 0x15f0        
         // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_DebuffModifier;
-        char m_DebuffModifier[0x10]; // 0x15d8        
+        char m_DebuffModifier[0x10]; // 0x1600        
         // metadata: MPropertyStartGroup "Visuals"
         // m_AoEPlayerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPlayerParticle;
-        char m_AoEPlayerParticle[0xe0]; // 0x15e8        
+        char m_AoEPlayerParticle[0xe0]; // 0x1610        
         // m_AoEParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEParticle;
-        char m_AoEParticle[0xe0]; // 0x16c8        
+        char m_AoEParticle[0xe0]; // 0x16f0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbilityIntimidateVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityIntimidateVData) == 0x17a8);
+    static_assert(sizeof(CAbilityIntimidateVData) == 0x17d0);
 };

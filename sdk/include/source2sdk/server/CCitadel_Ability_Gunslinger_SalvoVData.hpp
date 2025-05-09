@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x16c8
+    // Size: 0x16f0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,17 +27,17 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_BulletWarningParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BulletWarningParticle;
-        char m_BulletWarningParticle[0xe0]; // 0x15c8        
+        char m_BulletWarningParticle[0xe0]; // 0x15f0        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_ProcWatcherModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_ProcWatcherModifier;
-        char m_ProcWatcherModifier[0x10]; // 0x16a8        
+        char m_ProcWatcherModifier[0x10]; // 0x16d0        
         // m_VictimWarningModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_VictimWarningModifier;
-        char m_VictimWarningModifier[0x10]; // 0x16b8        
+        char m_VictimWarningModifier[0x10]; // 0x16e0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Gunslinger_SalvoVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Gunslinger_SalvoVData) == 0x16c8);
+    static_assert(sizeof(CCitadel_Ability_Gunslinger_SalvoVData) == 0x16f0);
 };

@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x750
+    // Size: 0x758
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,16 +27,16 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Modifiers"
         // m_AuraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CBaseModifier> m_AuraModifier;
-        char m_AuraModifier[0x10]; // 0x658        
+        char m_AuraModifier[0x10]; // 0x660        
         // metadata: MPropertyStartGroup "Visuals"
         // m_ShieldParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShieldParticle;
-        char m_ShieldParticle[0xe0]; // 0x668        
-        float m_flModelScale; // 0x748        
-        [[maybe_unused]] std::uint8_t pad_0x74c[0x4];
+        char m_ShieldParticle[0xe0]; // 0x670        
+        float m_flModelScale; // 0x750        
+        [[maybe_unused]] std::uint8_t pad_0x754[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_BigBoltVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_BigBoltVData) == 0x750);
+    static_assert(sizeof(CCitadel_Modifier_BigBoltVData) == 0x758);
 };

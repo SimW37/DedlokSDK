@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x16d8
+    // Size: 0x1700
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,19 +27,19 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-        char m_ExplodeParticle[0xe0]; // 0x15c8        
+        char m_ExplodeParticle[0xe0]; // 0x15f0        
         // metadata: MPropertyStartGroup "Modifiers"
         // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_SlowModifier;
-        char m_SlowModifier[0x10]; // 0x16a8        
+        char m_SlowModifier[0x10]; // 0x16d0        
         // m_PetrifyModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_PetrifyModifier;
-        char m_PetrifyModifier[0x10]; // 0x16b8        
+        char m_PetrifyModifier[0x10]; // 0x16e0        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strBolaExplodeSound; // 0x16c8        
+        CSoundEventName m_strBolaExplodeSound; // 0x16f0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Viper_PetrifyBolaVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Viper_PetrifyBolaVData) == 0x16d8);
+    static_assert(sizeof(CCitadel_Ability_Viper_PetrifyBolaVData) == 0x1700);
 };

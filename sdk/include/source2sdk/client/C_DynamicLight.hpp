@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x830
+    // Size: 0x9d0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "uint8 m_Flags"
@@ -29,30 +29,30 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        uint8_t m_Flags; // 0x808        
+        uint8_t m_Flags; // 0x9a8        
         // metadata: MNetworkEnable
-        uint8_t m_LightStyle; // 0x809        
-        [[maybe_unused]] std::uint8_t pad_0x80a[0x2]; // 0x80a
+        uint8_t m_LightStyle; // 0x9a9        
+        [[maybe_unused]] std::uint8_t pad_0x9aa[0x2]; // 0x9aa
         // metadata: MNetworkEnable
-        float m_Radius; // 0x80c        
+        float m_Radius; // 0x9ac        
         // metadata: MNetworkEnable
-        int32_t m_Exponent; // 0x810        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkBitCount "8"
-        // metadata: MNetworkMinValue "0,000000"
-        // metadata: MNetworkMaxValue "360,000000"
-        float m_InnerAngle; // 0x814        
+        int32_t m_Exponent; // 0x9b0        
         // metadata: MNetworkEnable
         // metadata: MNetworkBitCount "8"
         // metadata: MNetworkMinValue "0,000000"
         // metadata: MNetworkMaxValue "360,000000"
-        float m_OuterAngle; // 0x818        
+        float m_InnerAngle; // 0x9b4        
         // metadata: MNetworkEnable
-        float m_SpotRadius; // 0x81c        
-        [[maybe_unused]] std::uint8_t pad_0x820[0x10];
+        // metadata: MNetworkBitCount "8"
+        // metadata: MNetworkMinValue "0,000000"
+        // metadata: MNetworkMaxValue "360,000000"
+        float m_OuterAngle; // 0x9b8        
+        // metadata: MNetworkEnable
+        float m_SpotRadius; // 0x9bc        
+        [[maybe_unused]] std::uint8_t pad_0x9c0[0x10];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_DynamicLight because it is not a standard-layout class
-    static_assert(sizeof(C_DynamicLight) == 0x830);
+    static_assert(sizeof(C_DynamicLight) == 0x9d0);
 };

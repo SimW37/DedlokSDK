@@ -14,26 +14,26 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x860
+    // Size: 0x878
     // Has VTable
     #pragma pack(push, 1)
     class CBasePlatTrain : public server::CBaseToggle
     {
     public:
-        CUtlSymbolLarge m_NoiseMoving; // 0x838        
-        CUtlSymbolLarge m_NoiseArrived; // 0x840        
-        [[maybe_unused]] std::uint8_t pad_0x848[0x8]; // 0x848
-        float m_volume; // 0x850        
-        float m_flTWidth; // 0x854        
-        float m_flTLength; // 0x858        
-        [[maybe_unused]] std::uint8_t pad_0x85c[0x4];
+        CUtlSymbolLarge m_NoiseMoving; // 0x850        
+        CUtlSymbolLarge m_NoiseArrived; // 0x858        
+        [[maybe_unused]] std::uint8_t pad_0x860[0x8]; // 0x860
+        float m_volume; // 0x868        
+        float m_flTWidth; // 0x86c        
+        float m_flTLength; // 0x870        
+        [[maybe_unused]] std::uint8_t pad_0x874[0x4];
         
         // Datamap fields:
-        // void m_pMovementSound; // 0x848
+        // void m_pMovementSound; // 0x860
         // float rotation; // 0x7fffffff
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBasePlatTrain because it is not a standard-layout class
-    static_assert(sizeof(CBasePlatTrain) == 0x860);
+    static_assert(sizeof(CBasePlatTrain) == 0x878);
 };

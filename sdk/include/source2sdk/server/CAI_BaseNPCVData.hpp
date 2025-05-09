@@ -23,7 +23,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x388
+    // Size: 0x390
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -32,6 +32,7 @@ namespace source2sdk::server
     {
     public:
         // metadata: MPropertyGroupName "Visuals"
+        // metadata: MPropertyProvidesEditContextString
         // m_sModelName has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeCModel>> m_sModelName;
         char m_sModelName[0xe0]; // 0x28        
@@ -98,13 +99,14 @@ namespace source2sdk::server
         bool m_bEnableCodeDrivenAnimgraphMovement; // 0x2f0        
         // metadata: MPropertyDescription "If true, the NPC will request strafing if it is supported by the animgraph. Can still be overriden by schedules."
         bool m_bEnableAnimgraphTagDrivenStrafing; // 0x2f1        
-        [[maybe_unused]] std::uint8_t pad_0x2f2[0x6]; // 0x2f2
+        [[maybe_unused]] std::uint8_t pad_0x2f2[0x2]; // 0x2f2
+        float m_flMassOverride; // 0x2f4        
         client::AI_AdditionalMovementSettings m_defaultAdditionalMovementSettings; // 0x2f8        
-        float m_flThreatTemperature; // 0x380        
-        float m_flFlashpoint; // 0x384        
+        float m_flThreatTemperature; // 0x388        
+        float m_flFlashpoint; // 0x38c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAI_BaseNPCVData because it is not a standard-layout class
-    static_assert(sizeof(CAI_BaseNPCVData) == 0x388);
+    static_assert(sizeof(CAI_BaseNPCVData) == 0x390);
 };

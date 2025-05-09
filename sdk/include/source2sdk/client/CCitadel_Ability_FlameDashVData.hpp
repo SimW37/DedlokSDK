@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1680
+    // Size: 0x16a8
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,15 +27,15 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Modifiers"
         // m_FlameDashModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<client::CCitadelModifier> m_FlameDashModifier;
-        char m_FlameDashModifier[0x10]; // 0x15c8        
+        char m_FlameDashModifier[0x10]; // 0x15f0        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_DashBurstSound; // 0x15d8        
-        CSoundEventName m_ChargeHitSound; // 0x15e8        
+        CSoundEventName m_DashBurstSound; // 0x1600        
+        CSoundEventName m_ChargeHitSound; // 0x1610        
         // metadata: MPropertyStartGroup "Camera"
-        client::CitadelCameraOperationsSequence_t m_cameraSpeedBoost; // 0x15f8        
+        client::CitadelCameraOperationsSequence_t m_cameraSpeedBoost; // 0x1620        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_FlameDashVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_FlameDashVData) == 0x1680);
+    static_assert(sizeof(CCitadel_Ability_FlameDashVData) == 0x16a8);
 };

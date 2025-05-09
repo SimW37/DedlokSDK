@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xca0
+    // Size: 0xcc8
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
@@ -28,18 +28,18 @@ namespace source2sdk::server
         // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
         // metadata: MNetworkAlias "CCitadelMinimapComponent"
         // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-        server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xc28        
+        server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xc50        
         // metadata: MNetworkEnable
-        float m_flAttackRange; // 0xc40        
-        float m_flAttackCone; // 0xc44        
-        float m_flLifeTime; // 0xc48        
-        float m_flTrackingSpeed; // 0xc4c        
-        float m_flDeployTime; // 0xc50        
-        float m_flAttackDelay; // 0xc54        
-        [[maybe_unused]] std::uint8_t pad_0xc58[0x48];
+        float m_flAttackRange; // 0xc68        
+        float m_flAttackCone; // 0xc6c        
+        float m_flLifeTime; // 0xc70        
+        float m_flTrackingSpeed; // 0xc74        
+        float m_flDeployTime; // 0xc78        
+        float m_flAttackDelay; // 0xc7c        
+        [[maybe_unused]] std::uint8_t pad_0xc80[0x48];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CNPC_ShieldedSentry because it is not a standard-layout class
-    static_assert(sizeof(CNPC_ShieldedSentry) == 0xca0);
+    static_assert(sizeof(CNPC_ShieldedSentry) == 0xcc8);
 };

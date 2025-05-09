@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x818
+    // Size: 0x820
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,13 +26,13 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Visuals"
         // m_sAfterburnParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_sAfterburnParticle;
-        char m_sAfterburnParticle[0xe0]; // 0x658        
+        char m_sAfterburnParticle[0xe0]; // 0x660        
         // m_sAfterburnExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_sAfterburnExplodeParticle;
-        char m_sAfterburnExplodeParticle[0xe0]; // 0x738        
+        char m_sAfterburnExplodeParticle[0xe0]; // 0x740        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_Tokamak_HeatSinks_DOT_VData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Tokamak_HeatSinks_DOT_VData) == 0x818);
+    static_assert(sizeof(CCitadel_Modifier_Tokamak_HeatSinks_DOT_VData) == 0x820);
 };

@@ -7,6 +7,7 @@
 #include "source2sdk/client/EModifierValue.hpp"
 #include "source2sdk/client/FootstepSound_t.hpp"
 #include "source2sdk/client/HudDisplayLocation_t.hpp"
+#include "source2sdk/client/ModifierBarrierBehavior_t.hpp"
 #include "source2sdk/client/ModifierOverheadDrawType_t.hpp"
 #include "source2sdk/client/ModifierTimeScaleSource_t.hpp"
 #include "source2sdk/client/ModifiersDisplayLocation_t.hpp"
@@ -25,7 +26,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x658
+    // Size: 0x660
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -100,15 +101,18 @@ namespace source2sdk::client
         bool m_bEndCreatedSequenceOnRemove; // 0x590        
         [[maybe_unused]] std::uint8_t pad_0x591[0x7]; // 0x591
         client::CitadelCameraOperationsSequence_t m_cameraSequenceRemoved; // 0x598        
+        // metadata: MPropertyStartGroup "Barrier"
+        client::ModifierBarrierBehavior_t m_BarrierBehavior; // 0x620        
+        [[maybe_unused]] std::uint8_t pad_0x624[0x4]; // 0x624
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_sExpiredSound; // 0x620        
+        CSoundEventName m_sExpiredSound; // 0x628        
         // metadata: MPropertyDescription "Overrides the default footstep. The footstep with the greatest Priority is selected. It must have a priority greater than -1 to be selected!"
-        client::FootstepSound_t m_FootstepOverride; // 0x630        
+        client::FootstepSound_t m_FootstepOverride; // 0x638        
         // metadata: MPropertyDescription "Plays alongside the default footstep."
-        CSoundEventName m_FootstepAdditional; // 0x648        
+        CSoundEventName m_FootstepAdditional; // 0x650        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadelModifierVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadelModifierVData) == 0x658);
+    static_assert(sizeof(CCitadelModifierVData) == 0x660);
 };

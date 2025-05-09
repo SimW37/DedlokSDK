@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x128
+    // Size: 0x3c8
     // Has VTable
     #pragma pack(push, 1)
     class CNPC_TeslaCoil_GraphController : public server::CNPC_SimpleAnimatingAI_GraphController
@@ -22,13 +22,13 @@ namespace source2sdk::server
     public:
         // m_flPanel1 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<float> m_flPanel1;
-        char m_flPanel1[0x20]; // 0xe8        
+        char m_flPanel1[0x20]; // 0x388        
         // m_flVelocity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CAnimGraphParamOptionalRef<float> m_flVelocity;
-        char m_flVelocity[0x20]; // 0x108        
+        char m_flVelocity[0x20]; // 0x3a8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CNPC_TeslaCoil_GraphController because it is not a standard-layout class
-    static_assert(sizeof(CNPC_TeslaCoil_GraphController) == 0x128);
+    static_assert(sizeof(CNPC_TeslaCoil_GraphController) == 0x3c8);
 };

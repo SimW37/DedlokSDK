@@ -17,7 +17,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1950
+    // Size: 0x1a88
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "int m_iLane"
@@ -31,34 +31,35 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        int32_t m_iLane; // 0x1890        
-        [[maybe_unused]] std::uint8_t pad_0x1894[0x34]; // 0x1894
+        int32_t m_iLane; // 0x1990        
+        [[maybe_unused]] std::uint8_t pad_0x1994[0x30]; // 0x1994
         // metadata: MNetworkEnable
         // metadata: MNetworkEncoder "qangle"
-        QAngle m_angTargeting1; // 0x18c8        
+        QAngle m_angTargeting1; // 0x19c4        
         // metadata: MNetworkEnable
         // metadata: MNetworkEncoder "qangle"
-        QAngle m_angTargeting2; // 0x18d4        
+        QAngle m_angTargeting2; // 0x19d0        
         // metadata: MNetworkEnable
-        int32_t m_nElectricBeamCasts; // 0x18e0        
-        [[maybe_unused]] std::uint8_t pad_0x18e4[0x24]; // 0x18e4
-        entity2::CEntityIOOutput m_eventOnBossKilled; // 0x1908        
-        CUtlSymbolLarge m_backdoorProtectionTrigger; // 0x1930        
-        [[maybe_unused]] std::uint8_t pad_0x1938[0x4]; // 0x1938
+        int32_t m_nElectricBeamCasts; // 0x19dc        
+        [[maybe_unused]] std::uint8_t pad_0x19e0[0x20]; // 0x19e0
+        entity2::CEntityIOOutput m_eventOnBossKilled; // 0x1a00        
+        entity2::CEntityIOOutput m_eventOnPhase1End; // 0x1a28        
+        CUtlSymbolLarge m_backdoorProtectionTrigger; // 0x1a50        
+        [[maybe_unused]] std::uint8_t pad_0x1a58[0x4]; // 0x1a58
         // metadata: MNetworkEnable
-        client::ETier3State_t m_eAliveState; // 0x193c        
-        [[maybe_unused]] std::uint8_t pad_0x1940[0x4]; // 0x1940
+        client::ETier3State_t m_eAliveState; // 0x1a5c        
+        [[maybe_unused]] std::uint8_t pad_0x1a60[0x4]; // 0x1a60
         // metadata: MNetworkEnable
-        client::ETier3Phase_t m_ePhase; // 0x1944        
-        [[maybe_unused]] std::uint8_t pad_0x1948[0x8];
+        client::ETier3Phase_t m_ePhase; // 0x1a64        
+        [[maybe_unused]] std::uint8_t pad_0x1a68[0x20];
         
         // Datamap fields:
-        // void m_vecStartingPosition; // 0x18a0
-        // int32_t m_nDyingEndCoverPointID; // 0x18b0
-        // int32_t m_nVulnerableCoverPointID; // 0x18b4
+        // void m_vecStartingPosition; // 0x19a0
+        // int32_t m_nDyingEndCoverPointID; // 0x19ac
+        // int32_t m_nVulnerableCoverPointID; // 0x19b0
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CNPC_Boss_Tier3 because it is not a standard-layout class
-    static_assert(sizeof(CNPC_Boss_Tier3) == 0x1950);
+    static_assert(sizeof(CNPC_Boss_Tier3) == 0x1a88);
 };

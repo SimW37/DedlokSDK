@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xe18
+    // Size: 0xfc0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "int m_nFastFireBulletsLeft"
@@ -27,20 +27,20 @@ namespace source2sdk::client
     public:
         // m_vecSpecialShots has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<client::ShotID_t> m_vecSpecialShots;
-        char m_vecSpecialShots[0x18]; // 0xc50        
+        char m_vecSpecialShots[0x18]; // 0xdc0        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        int32_t m_nFastFireBulletsLeft; // 0xc68        
-        [[maybe_unused]] std::uint8_t pad_0xc6c[0x4]; // 0xc6c
+        int32_t m_nFastFireBulletsLeft; // 0xdd8        
+        [[maybe_unused]] std::uint8_t pad_0xddc[0x4]; // 0xddc
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        client::CCitadelAutoScaledTime m_flBlitzEndTime; // 0xc70        
-        bool m_bCanApplyTechAmp; // 0xc88        
-        bool m_bCanLifesteal; // 0xc89        
-        [[maybe_unused]] std::uint8_t pad_0xc8a[0x18e];
+        client::CCitadelAutoScaledTime m_flBlitzEndTime; // 0xde0        
+        bool m_bCanApplyTechAmp; // 0xdf8        
+        bool m_bCanLifesteal; // 0xdf9        
+        [[maybe_unused]] std::uint8_t pad_0xdfa[0x1c6];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAbility_Synth_Blitz because it is not a standard-layout class
-    static_assert(sizeof(CAbility_Synth_Blitz) == 0xe18);
+    static_assert(sizeof(CAbility_Synth_Blitz) == 0xfc0);
 };

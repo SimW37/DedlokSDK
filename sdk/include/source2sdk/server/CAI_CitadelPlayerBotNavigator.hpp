@@ -14,17 +14,17 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x2b8
+    // Size: 0x328
     // Has VTable
     #pragma pack(push, 1)
     class CAI_CitadelPlayerBotNavigator : public server::CAI_Navigator
     {
     public:
-        bool m_bBlocked; // 0x2b0        
-        [[maybe_unused]] std::uint8_t pad_0x2b1[0x7];
+        bool m_bBlocked; // 0x320        
+        [[maybe_unused]] std::uint8_t pad_0x321[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAI_CitadelPlayerBotNavigator because it is not a standard-layout class
-    static_assert(sizeof(CAI_CitadelPlayerBotNavigator) == 0x2b8);
+    static_assert(sizeof(CAI_CitadelPlayerBotNavigator) == 0x328);
 };

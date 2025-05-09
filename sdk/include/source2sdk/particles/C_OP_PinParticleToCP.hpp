@@ -19,7 +19,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1098
+    // Size: 0x10a0
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -56,9 +56,13 @@ namespace source2sdk::particles
         particleslib::CParticleCollectionFloatInput m_flBreakValue; // 0xdd8        
         // metadata: MPropertyFriendlyName "Interpolation"
         particleslib::CPerParticleFloatInput m_flInterpolation; // 0xf38        
+        // metadata: MPropertyFriendlyName "Retain Initial Velocity "
+        // metadata: MPropertySuppressExpr "m_nParticleSelection != PARTICLE_SELECTION_LAST"
+        bool m_bRetainInitialVelocity; // 0x1098        
+        [[maybe_unused]] std::uint8_t pad_0x1099[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_PinParticleToCP because it is not a standard-layout class
-    static_assert(sizeof(C_OP_PinParticleToCP) == 0x1098);
+    static_assert(sizeof(C_OP_PinParticleToCP) == 0x10a0);
 };

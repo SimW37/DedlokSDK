@@ -14,15 +14,12 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x508
+    // Size: 0x4f8
     // Has VTable
     // 
     // static metadata: MEntityAllowsPortraitWorldSpawn
     // static metadata: MNetworkVarNames "float m_flAutoExposureMin"
     // static metadata: MNetworkVarNames "float m_flAutoExposureMax"
-    // static metadata: MNetworkVarNames "float m_flTonemapPercentTarget"
-    // static metadata: MNetworkVarNames "float m_flTonemapPercentBrightPixels"
-    // static metadata: MNetworkVarNames "float m_flTonemapMinAvgLum"
     // static metadata: MNetworkVarNames "float m_flExposureAdaptationSpeedUp"
     // static metadata: MNetworkVarNames "float m_flExposureAdaptationSpeedDown"
     // static metadata: MNetworkVarNames "float m_flTonemapEVSmoothingRange"
@@ -35,32 +32,23 @@ namespace source2sdk::server
         // metadata: MNetworkEnable
         float m_flAutoExposureMax; // 0x4e4        
         // metadata: MNetworkEnable
-        float m_flTonemapPercentTarget; // 0x4e8        
+        float m_flExposureAdaptationSpeedUp; // 0x4e8        
         // metadata: MNetworkEnable
-        float m_flTonemapPercentBrightPixels; // 0x4ec        
+        float m_flExposureAdaptationSpeedDown; // 0x4ec        
         // metadata: MNetworkEnable
-        float m_flTonemapMinAvgLum; // 0x4f0        
-        // metadata: MNetworkEnable
-        float m_flExposureAdaptationSpeedUp; // 0x4f4        
-        // metadata: MNetworkEnable
-        float m_flExposureAdaptationSpeedDown; // 0x4f8        
-        // metadata: MNetworkEnable
-        float m_flTonemapEVSmoothingRange; // 0x4fc        
-        [[maybe_unused]] std::uint8_t pad_0x500[0x8];
+        float m_flTonemapEVSmoothingRange; // 0x4f0        
+        [[maybe_unused]] std::uint8_t pad_0x4f4[0x4];
         
         // Datamap fields:
         // void InputEnable; // 0x0
         // void InputDisable; // 0x0
         // float InputSetMinExposure; // 0x0
         // float InputSetMaxExposure; // 0x0
-        // float InputSetPercentTarget; // 0x0
-        // float InputSetPercentBrightPixels; // 0x0
-        // float InputSetMinAverageLuminosity; // 0x0
         // float InputSetExposureAdaptationSpeedUp; // 0x0
         // float InputSetExposureAdaptationSpeedDown; // 0x0
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTonemapController2 because it is not a standard-layout class
-    static_assert(sizeof(CTonemapController2) == 0x508);
+    static_assert(sizeof(CTonemapController2) == 0x4f8);
 };

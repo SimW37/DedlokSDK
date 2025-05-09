@@ -14,17 +14,16 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x570
+    // Size: 0x640
     // Has VTable
     #pragma pack(push, 1)
     class CFilterAttributeInt : public client::CBaseFilter
     {
     public:
-        CUtlStringToken m_sAttributeName; // 0x568        
-        [[maybe_unused]] std::uint8_t pad_0x56c[0x4];
+        CUtlSymbolLarge m_sAttributeName; // 0x638        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CFilterAttributeInt because it is not a standard-layout class
-    static_assert(sizeof(CFilterAttributeInt) == 0x570);
+    static_assert(sizeof(CFilterAttributeInt) == 0x640);
 };

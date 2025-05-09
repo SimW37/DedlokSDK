@@ -14,17 +14,17 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xde0
+    // Size: 0xf88
     // Has VTable
     #pragma pack(push, 1)
     class CCitadel_Ability_Tier2Boss_RocketBarrage : public client::CCitadelBaseAbilityServerOnly
     {
     public:
-        int32_t m_nGrenadesLeft; // 0xc50        
-        [[maybe_unused]] std::uint8_t pad_0xc54[0x18c];
+        int32_t m_nGrenadesLeft; // 0xdc0        
+        [[maybe_unused]] std::uint8_t pad_0xdc4[0x1c4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_Tier2Boss_RocketBarrage because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Tier2Boss_RocketBarrage) == 0xde0);
+    static_assert(sizeof(CCitadel_Ability_Tier2Boss_RocketBarrage) == 0xf88);
 };

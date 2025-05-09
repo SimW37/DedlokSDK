@@ -20,8 +20,7 @@ namespace source2sdk::server
     class CFilterAttributeInt : public server::CBaseFilter
     {
     public:
-        CUtlStringToken m_sAttributeName; // 0x538        
-        [[maybe_unused]] std::uint8_t pad_0x53c[0x4];
+        CUtlSymbolLarge m_sAttributeName; // 0x538        
     };
     #pragma pack(pop)
     

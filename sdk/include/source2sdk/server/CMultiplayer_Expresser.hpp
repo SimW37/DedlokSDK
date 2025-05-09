@@ -14,17 +14,17 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x90
+    // Size: 0x80
     // Has VTable
     #pragma pack(push, 1)
     class CMultiplayer_Expresser : public server::CAI_ExpresserWithFollowup
     {
     public:
-        bool m_bAllowMultipleScenes; // 0x88        
-        [[maybe_unused]] std::uint8_t pad_0x89[0x7];
+        bool m_bAllowMultipleScenes; // 0x78        
+        [[maybe_unused]] std::uint8_t pad_0x79[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CMultiplayer_Expresser because it is not a standard-layout class
-    static_assert(sizeof(CMultiplayer_Expresser) == 0x90);
+    static_assert(sizeof(CMultiplayer_Expresser) == 0x80);
 };

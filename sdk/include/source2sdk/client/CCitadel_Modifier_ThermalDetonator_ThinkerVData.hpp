@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x860
+    // Size: 0x870
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -26,13 +26,13 @@ namespace source2sdk::client
         // metadata: MPropertyStartGroup "Visuals"
         // m_GroundParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle;
-        char m_GroundParticle[0xe0]; // 0x6a0        
+        char m_GroundParticle[0xe0]; // 0x6b0        
         // m_GroundParticleFriendly has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticleFriendly;
-        char m_GroundParticleFriendly[0xe0]; // 0x780        
+        char m_GroundParticleFriendly[0xe0]; // 0x790        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Modifier_ThermalDetonator_ThinkerVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_ThermalDetonator_ThinkerVData) == 0x860);
+    static_assert(sizeof(CCitadel_Modifier_ThermalDetonator_ThinkerVData) == 0x870);
 };

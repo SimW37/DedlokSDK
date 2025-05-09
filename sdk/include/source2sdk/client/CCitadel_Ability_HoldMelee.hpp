@@ -17,7 +17,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xd20
+    // Size: 0xeb0
     // Has VTable
     // 
     // static metadata: MNetworkVarNames "GameTime_t m_flParryWindowEndTime"
@@ -36,42 +36,42 @@ namespace source2sdk::client
     public:
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flParryWindowEndTime; // 0xcd0        
+        entity2::GameTime_t m_flParryWindowEndTime; // 0xe50        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flNextParryTime; // 0xcd4        
+        entity2::GameTime_t m_flNextParryTime; // 0xe54        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flStateStartTime; // 0xcd8        
+        entity2::GameTime_t m_flStateStartTime; // 0xe58        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flDashStartTime; // 0xcdc        
+        entity2::GameTime_t m_flDashStartTime; // 0xe5c        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        client::EMeleeHold_AttackState m_eCurrentAttackState; // 0xce0        
+        client::EMeleeHold_AttackState m_eCurrentAttackState; // 0xe60        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        client::EMeleeHold_AttackType m_eCurrentAttackType; // 0xce4        
+        client::EMeleeHold_AttackType m_eCurrentAttackType; // 0xe64        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        Vector m_vAirDashDir; // 0xce8        
+        Vector m_vAirDashDir; // 0xe68        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        bool m_bAttackStartedWhileSliding; // 0xcf4        
-        [[maybe_unused]] std::uint8_t pad_0xcf5[0x3]; // 0xcf5
+        bool m_bAttackStartedWhileSliding; // 0xe74        
+        [[maybe_unused]] std::uint8_t pad_0xe75[0x3]; // 0xe75
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flLightChainEndTime; // 0xcf8        
+        entity2::GameTime_t m_flLightChainEndTime; // 0xe78        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        int32_t m_nLightChainCount; // 0xcfc        
-        bool m_bCreatedChargeEffects; // 0xd00        
-        [[maybe_unused]] std::uint8_t pad_0xd01[0x3]; // 0xd01
-        QAngle m_angForced; // 0xd04        
-        [[maybe_unused]] std::uint8_t pad_0xd10[0x10];
+        int32_t m_nLightChainCount; // 0xe7c        
+        bool m_bCreatedChargeEffects; // 0xe80        
+        [[maybe_unused]] std::uint8_t pad_0xe81[0x3]; // 0xe81
+        QAngle m_angForced; // 0xe84        
+        [[maybe_unused]] std::uint8_t pad_0xe90[0x20];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CCitadel_Ability_HoldMelee because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_HoldMelee) == 0xd20);
+    static_assert(sizeof(CCitadel_Ability_HoldMelee) == 0xeb0);
 };

@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x878
+    // Size: 0x880
     // Has VTable
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -27,22 +27,22 @@ namespace source2sdk::server
         // metadata: MPropertyStartGroup "Modifiers"
         // m_StealWatcherModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_StealWatcherModifier;
-        char m_StealWatcherModifier[0x10]; // 0x688        
+        char m_StealWatcherModifier[0x10]; // 0x690        
         // m_HealModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEmbeddedSubclass<server::CCitadelModifier> m_HealModifier;
-        char m_HealModifier[0x10]; // 0x698        
+        char m_HealModifier[0x10]; // 0x6a0        
         // metadata: MPropertyStartGroup "Visuals"
         // m_TracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle;
-        char m_TracerParticle[0xe0]; // 0x6a8        
+        char m_TracerParticle[0xe0]; // 0x6b0        
         // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-        char m_ExplodeParticle[0xe0]; // 0x788        
+        char m_ExplodeParticle[0xe0]; // 0x790        
         // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_ExplodeSound; // 0x868        
+        CSoundEventName m_ExplodeSound; // 0x870        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CModifier_SiphonBullets_VData because it is not a standard-layout class
-    static_assert(sizeof(CModifier_SiphonBullets_VData) == 0x878);
+    static_assert(sizeof(CModifier_SiphonBullets_VData) == 0x880);
 };
