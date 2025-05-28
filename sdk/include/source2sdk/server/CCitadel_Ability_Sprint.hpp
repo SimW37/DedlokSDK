@@ -1,52 +1,57 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/client/ParticleIndex_t.hpp"
 #include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/server/CCitadelBaseAbility.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xbb8
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "bool m_bSprinting"
-    // static metadata: MNetworkVarNames "GameTime_t m_flInCombatStartTime"
-    // static metadata: MNetworkVarNames "GameTime_t m_flInCombatEndTime"
-    // static metadata: MNetworkVarNames "GameTime_t m_flSprintStartTime"
-    #pragma pack(push, 1)
-    class CCitadel_Ability_Sprint : public server::CCitadelBaseAbility
+    namespace server
     {
-    public:
-        client::ParticleIndex_t m_nSprintParticle; // 0xba0        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkChangeCallback "OnSprintingChanged"
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        bool m_bSprinting; // 0xba4        
-        [[maybe_unused]] std::uint8_t pad_0xba5[0x3]; // 0xba5
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flInCombatStartTime; // 0xba8        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flInCombatEndTime; // 0xbac        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flSprintStartTime; // 0xbb0        
-        bool m_bInCombat; // 0xbb4        
-        [[maybe_unused]] std::uint8_t pad_0xbb5[0x3];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xbb8
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "bool m_bSprinting"
+        // static metadata: MNetworkVarNames "GameTime_t m_flInCombatStartTime"
+        // static metadata: MNetworkVarNames "GameTime_t m_flInCombatEndTime"
+        // static metadata: MNetworkVarNames "GameTime_t m_flSprintStartTime"
+        #pragma pack(push, 1)
+        class CCitadel_Ability_Sprint : public source2sdk::server::CCitadelBaseAbility
+        {
+        public:
+            source2sdk::client::ParticleIndex_t m_nSprintParticle; // 0xba0            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "OnSprintingChanged"
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            bool m_bSprinting; // 0xba4            
+            uint8_t _pad0ba5[0x3]; // 0xba5
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            source2sdk::entity2::GameTime_t m_flInCombatStartTime; // 0xba8            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            source2sdk::entity2::GameTime_t m_flInCombatEndTime; // 0xbac            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            source2sdk::entity2::GameTime_t m_flSprintStartTime; // 0xbb0            
+            bool m_bInCombat; // 0xbb4            
+            uint8_t _pad0bb5[0x3];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_Sprint because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Sprint) == 0xbb8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_Sprint because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Sprint) == 0xbb8);
 };

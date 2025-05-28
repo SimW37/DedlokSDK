@@ -1,39 +1,44 @@
 #pragma once
-#include "source2sdk/server/CAI_NPC_TrooperVData.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CAI_NPC_TrooperVData.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1830
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CNPC_TrooperBossVData : public server::CAI_NPC_TrooperVData
+    namespace server
     {
-    public:
-        bool m_bMitigateDamageFromPlayers; // 0x17f0        
-        [[maybe_unused]] std::uint8_t pad_0x17f1[0x3]; // 0x17f1
-        float m_flPlayerAutoAttackRange; // 0x17f4        
-        float m_flMinMeleeAttackTime; // 0x17f8        
-        float m_flInvulRange; // 0x17fc        
-        // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_sAngryStart; // 0x1800        
-        CSoundEventName m_sAngryLoop; // 0x1810        
-        CSoundEventName m_sAngryStop; // 0x1820        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1830
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CNPC_TrooperBossVData : public source2sdk::server::CAI_NPC_TrooperVData
+        {
+        public:
+            bool m_bMitigateDamageFromPlayers; // 0x17f0            
+            uint8_t _pad17f1[0x3]; // 0x17f1
+            float m_flPlayerAutoAttackRange; // 0x17f4            
+            float m_flMinMeleeAttackTime; // 0x17f8            
+            float m_flInvulRange; // 0x17fc            
+            // metadata: MPropertyStartGroup "Sounds"
+            CSoundEventName m_sAngryStart; // 0x1800            
+            CSoundEventName m_sAngryLoop; // 0x1810            
+            CSoundEventName m_sAngryStop; // 0x1820            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CNPC_TrooperBossVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CNPC_TrooperBossVData) == 0x1830);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CNPC_TrooperBossVData because it is not a standard-layout class
-    static_assert(sizeof(CNPC_TrooperBossVData) == 0x1830);
 };

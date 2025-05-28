@@ -1,28 +1,33 @@
 #pragma once
-#include "source2sdk/client/C_NPC_Trooper.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_NPC_Trooper.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1758
-    // Has VTable
-    #pragma pack(push, 1)
-    class C_NPC_SuperTrooper : public client::C_NPC_Trooper
+    namespace client
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1758
+        // Has VTable
+        #pragma pack(push, 1)
+        class C_NPC_SuperTrooper : public source2sdk::client::C_NPC_Trooper
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::C_NPC_SuperTrooper) == 0x1758);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(C_NPC_SuperTrooper) == 0x1758);
 };

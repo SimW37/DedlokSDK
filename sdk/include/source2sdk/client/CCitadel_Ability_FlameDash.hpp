@@ -1,37 +1,42 @@
 #pragma once
-#include "source2sdk/client/CCitadelAutoScaledTime.hpp"
-#include "source2sdk/client/C_CitadelBaseAbility.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadelAutoScaledTime.hpp"
+#include "source2sdk/client/C_CitadelBaseAbility.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xf68
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "CCitadelAutoScaledTime m_flDashEndTime"
-    // static metadata: MNetworkVarNames "bool m_bIsSpeedBursting"
-    #pragma pack(push, 1)
-    class CCitadel_Ability_FlameDash : public client::C_CitadelBaseAbility
+    namespace client
     {
-    public:
-        // metadata: MNetworkEnable
-        client::CCitadelAutoScaledTime m_flDashEndTime; // 0xdc0        
-        // metadata: MNetworkEnable
-        bool m_bIsSpeedBursting; // 0xdd8        
-        [[maybe_unused]] std::uint8_t pad_0xdd9[0x18f];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xf68
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "CCitadelAutoScaledTime m_flDashEndTime"
+        // static metadata: MNetworkVarNames "bool m_bIsSpeedBursting"
+        #pragma pack(push, 1)
+        class CCitadel_Ability_FlameDash : public source2sdk::client::C_CitadelBaseAbility
+        {
+        public:
+            // metadata: MNetworkEnable
+            source2sdk::client::CCitadelAutoScaledTime m_flDashEndTime; // 0xdc0            
+            // metadata: MNetworkEnable
+            bool m_bIsSpeedBursting; // 0xdd8            
+            uint8_t _pad0dd9[0x18f];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_FlameDash because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_FlameDash) == 0xf68);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_FlameDash because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_FlameDash) == 0xf68);
 };

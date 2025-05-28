@@ -1,36 +1,41 @@
 #pragma once
-#include "source2sdk/server/CModelPointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CModelPointEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x7e0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CRevertSaved : public server::CModelPointEntity
+    namespace server
     {
-    public:
-        float m_loadTime; // 0x7d0        
-        float m_Duration; // 0x7d4        
-        float m_HoldTime; // 0x7d8        
-        [[maybe_unused]] std::uint8_t pad_0x7dc[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x7e0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CRevertSaved : public source2sdk::server::CModelPointEntity
+        {
+        public:
+            float m_loadTime; // 0x7d0            
+            float m_Duration; // 0x7d4            
+            float m_HoldTime; // 0x7d8            
+            uint8_t _pad07dc[0x4];
+            
+            // Datamap fields:
+            // void InputReload; // 0x0
+            // void CRevertSavedLoadThink; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void InputReload; // 0x0
-        // void CRevertSavedLoadThink; // 0x0
+        // Cannot assert offsets of fields in CRevertSaved because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CRevertSaved) == 0x7e0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CRevertSaved because it is not a standard-layout class
-    static_assert(sizeof(CRevertSaved) == 0x7e0);
 };

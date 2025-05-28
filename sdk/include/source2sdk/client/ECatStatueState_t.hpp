@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,17 +9,20 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 5
-    // Alignment: 1
-    // Size: 0x1
-    enum class ECatStatueState_t : std::uint8_t
+    namespace client
     {
-        ECatStatue_None = 0,
-        ECatStatue_Shoulder = 1,
-        ECatStatue_ProjectileOut = 2,
-        ECatStatue_InWorld = 3,
-        ECatStatue_InCooldown = 4,
+        // Enumerator count: 5
+        // Alignment: 1
+        // Size: 0x1
+        enum class ECatStatueState_t : std::uint8_t
+        {
+            ECatStatue_None = 0x0,
+            ECatStatue_Shoulder = 0x1,
+            ECatStatue_ProjectileOut = 0x2,
+            ECatStatue_InWorld = 0x3,
+            ECatStatue_InCooldown = 0x4,
+        };
     };
 };

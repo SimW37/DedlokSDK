@@ -1,35 +1,40 @@
 #pragma once
-#include "source2sdk/server/CCitadelModifierAura.hpp"
-#include "source2sdk/server/CitadelAbilityVData.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelModifierAura.hpp"
+#include "source2sdk/server/CitadelAbilityVData.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1600
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CAbilityCadenceCrescendoVData : public server::CitadelAbilityVData
+    namespace server
     {
-    public:
-        // metadata: MPropertyStartGroup "Modifiers"
-        // m_CrescendoAOEModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<server::CCitadelModifierAura> m_CrescendoAOEModifier;
-        char m_CrescendoAOEModifier[0x10]; // 0x15f0        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1600
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CAbilityCadenceCrescendoVData : public source2sdk::server::CitadelAbilityVData
+        {
+        public:
+            // metadata: MPropertyStartGroup "Modifiers"
+            // m_CrescendoAOEModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifierAura> m_CrescendoAOEModifier;
+            char m_CrescendoAOEModifier[0x10]; // 0x15f0            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CAbilityCadenceCrescendoVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CAbilityCadenceCrescendoVData) == 0x1600);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CAbilityCadenceCrescendoVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityCadenceCrescendoVData) == 0x1600);
 };

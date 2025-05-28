@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CCitadel_PointTalker_Base.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadel_PointTalker_Base.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xc20
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_PointTalker : public server::CCitadel_PointTalker_Base
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xc10[0x10];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xc20
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_PointTalker : public source2sdk::server::CCitadel_PointTalker_Base
+        {
+        public:
+            uint8_t _pad0c10[0x10];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_PointTalker) == 0xc20);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_PointTalker) == 0xc20);
 };

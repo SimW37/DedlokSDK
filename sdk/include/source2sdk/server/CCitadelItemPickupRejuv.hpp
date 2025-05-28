@@ -1,41 +1,46 @@
 #pragma once
-#include "source2sdk/server/CCitadelAbilityComponent.hpp"
-#include "source2sdk/server/CCitadelItemPickup.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelAbilityComponent.hpp"
+#include "source2sdk/server/CCitadelItemPickup.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x6798
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "CCitadelAbilityComponent::Storage_t m_CCitadelAbilityComponent"
-    // static metadata: MNetworkVarNames "bool m_bPickedUp"
-    #pragma pack(push, 1)
-    class CCitadelItemPickupRejuv : public server::CCitadelItemPickup
+    namespace server
     {
-    public:
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
-        // metadata: MNetworkAlias "CCitadelAbilityComponent"
-        // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
-        server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x6550        
-        [[maybe_unused]] std::uint8_t pad_0x6790[0x4]; // 0x6790
-        // metadata: MNetworkEnable
-        bool m_bPickedUp; // 0x6794        
-        [[maybe_unused]] std::uint8_t pad_0x6795[0x3];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x6798
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "CCitadelAbilityComponent::Storage_t m_CCitadelAbilityComponent"
+        // static metadata: MNetworkVarNames "bool m_bPickedUp"
+        #pragma pack(push, 1)
+        class CCitadelItemPickupRejuv : public source2sdk::server::CCitadelItemPickup
+        {
+        public:
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
+            // metadata: MNetworkAlias "CCitadelAbilityComponent"
+            // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
+            source2sdk::server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x6550            
+            uint8_t _pad6790[0x4]; // 0x6790
+            // metadata: MNetworkEnable
+            bool m_bPickedUp; // 0x6794            
+            uint8_t _pad6795[0x3];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadelItemPickupRejuv because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadelItemPickupRejuv) == 0x6798);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadelItemPickupRejuv because it is not a standard-layout class
-    static_assert(sizeof(CCitadelItemPickupRejuv) == 0x6798);
 };

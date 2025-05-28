@@ -1,28 +1,33 @@
 #pragma once
-#include "source2sdk/client/CBaseAnimGraph.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CBaseAnimGraph.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xcb0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadelItemMetal : public client::CBaseAnimGraph
+    namespace client
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xcb0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadelItemMetal : public source2sdk::client::CBaseAnimGraph
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CCitadelItemMetal) == 0xcb0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadelItemMetal) == 0xcb0);
 };

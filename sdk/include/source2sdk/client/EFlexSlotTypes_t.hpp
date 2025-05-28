@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,22 +9,25 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 5
-    // Alignment: 2
-    // Size: 0x2
-    enum class EFlexSlotTypes_t : std::uint16_t
+    namespace client
     {
-        // MPropertyFriendlyName "Invalid"
-        EFlexSlot_Invalid = 0x0,
-        // MPropertyFriendlyName "Kill 2 Tier 1"
-        EFlexSlot_Kill2Tier1 = 0x1,
-        // MPropertyFriendlyName "Kill 1 Tier 2"
-        EFlexSlot_Kill1Tier2 = 0x2,
-        // MPropertyFriendlyName "Kill 2 Tier 2"
-        EFlexSlot_Kill2Tier2 = 0x4,
-        // MPropertyFriendlyName "1 set of base guardians"
-        EFlexSlot_BaseGuardians = 0x8,
+        // Enumerator count: 5
+        // Alignment: 2
+        // Size: 0x2
+        enum class EFlexSlotTypes_t : std::uint16_t
+        {
+            // MPropertyFriendlyName "Invalid"
+            EFlexSlot_Invalid = 0x0,
+            // MPropertyFriendlyName "Kill 2 Tier 1"
+            EFlexSlot_Kill2Tier1 = 0x1,
+            // MPropertyFriendlyName "Kill 1 Tier 2"
+            EFlexSlot_Kill1Tier2 = 0x2,
+            // MPropertyFriendlyName "Kill 2 Tier 2"
+            EFlexSlot_Kill2Tier2 = 0x4,
+            // MPropertyFriendlyName "1 set of base guardians"
+            EFlexSlot_BaseGuardians = 0x8,
+        };
     };
 };

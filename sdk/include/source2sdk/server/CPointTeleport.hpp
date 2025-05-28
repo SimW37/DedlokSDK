@@ -1,33 +1,38 @@
 #pragma once
-#include "source2sdk/server/CServerOnlyPointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CServerOnlyPointEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x500
-    // Has VTable
-    #pragma pack(push, 1)
-    class CPointTeleport : public server::CServerOnlyPointEntity
+    namespace server
     {
-    public:
-        Vector m_vSaveOrigin; // 0x4e0        
-        QAngle m_vSaveAngles; // 0x4ec        
-        bool m_bTeleportParentedEntities; // 0x4f8        
-        bool m_bTeleportUseCurrentAngle; // 0x4f9        
-        [[maybe_unused]] std::uint8_t pad_0x4fa[0x6];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x500
+        // Has VTable
+        #pragma pack(push, 1)
+        class CPointTeleport : public source2sdk::server::CServerOnlyPointEntity
+        {
+        public:
+            Vector m_vSaveOrigin; // 0x4e0            
+            QAngle m_vSaveAngles; // 0x4ec            
+            bool m_bTeleportParentedEntities; // 0x4f8            
+            bool m_bTeleportUseCurrentAngle; // 0x4f9            
+            uint8_t _pad04fa[0x6];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CPointTeleport because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CPointTeleport) == 0x500);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CPointTeleport because it is not a standard-layout class
-    static_assert(sizeof(CPointTeleport) == 0x500);
 };

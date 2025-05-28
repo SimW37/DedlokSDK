@@ -1,32 +1,37 @@
 #pragma once
-#include "source2sdk/server/CCitadelModifierAura.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelModifierAura.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x170
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_Item_AOESilence : public server::CCitadelModifierAura
+    namespace server
     {
-    public:
-        float m_flStartRadius; // 0xe0        
-        float m_flEndRadius; // 0xe4        
-        float m_flSpreadDuration; // 0xe8        
-        [[maybe_unused]] std::uint8_t pad_0xec[0x84];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x170
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_Item_AOESilence : public source2sdk::server::CCitadelModifierAura
+        {
+        public:
+            float m_flStartRadius; // 0xe0            
+            float m_flEndRadius; // 0xe4            
+            float m_flSpreadDuration; // 0xe8            
+            uint8_t _pad00ec[0x84];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Modifier_Item_AOESilence because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Item_AOESilence) == 0x170);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Modifier_Item_AOESilence because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Item_AOESilence) == 0x170);
 };

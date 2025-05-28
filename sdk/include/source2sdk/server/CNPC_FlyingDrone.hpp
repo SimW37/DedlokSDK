@@ -1,31 +1,36 @@
 #pragma once
-#include "source2sdk/server/CAI_CitadelNPC.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CAI_CitadelNPC.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1a08
-    // Has VTable
-    // 
-    // static metadata: MNetworkIncludeByName "m_iHealth"
-    // static metadata: MNetworkIncludeByName "m_iMaxHealth"
-    #pragma pack(push, 1)
-    class CNPC_FlyingDrone : public server::CAI_CitadelNPC
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x1990[0x78];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1a08
+        // Has VTable
+        // 
+        // static metadata: MNetworkIncludeByName "m_iHealth"
+        // static metadata: MNetworkIncludeByName "m_iMaxHealth"
+        #pragma pack(push, 1)
+        class CNPC_FlyingDrone : public source2sdk::server::CAI_CitadelNPC
+        {
+        public:
+            uint8_t _pad1990[0x78];
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CNPC_FlyingDrone) == 0x1a08);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CNPC_FlyingDrone) == 0x1a08);
 };

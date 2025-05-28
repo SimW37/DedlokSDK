@@ -1,28 +1,33 @@
 #pragma once
-#include "source2sdk/client/CCitadel_Modifier_BaseEventProc.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadel_Modifier_BaseEventProc.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x178
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_BulletArmorShredder_Proc : public client::CCitadel_Modifier_BaseEventProc
+    namespace client
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x178
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_BulletArmorShredder_Proc : public source2sdk::client::CCitadel_Modifier_BaseEventProc
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_BulletArmorShredder_Proc) == 0x178);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_Modifier_BulletArmorShredder_Proc) == 0x178);
 };

@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,17 +9,20 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 5
-    // Alignment: 1
-    // Size: 0x1
-    enum class ELeapState_t : std::uint8_t
+    namespace client
     {
-        ELeapState_None = 0,
-        ELeapState_Startup = 1,
-        ELeapState_BoostingUp = 2,
-        ELeapState_CrashingDown = 3,
-        ELeapState_Land = 4,
+        // Enumerator count: 5
+        // Alignment: 1
+        // Size: 0x1
+        enum class ELeapState_t : std::uint8_t
+        {
+            ELeapState_None = 0x0,
+            ELeapState_Startup = 0x1,
+            ELeapState_BoostingUp = 0x2,
+            ELeapState_CrashingDown = 0x3,
+            ELeapState_Land = 0x4,
+        };
     };
 };

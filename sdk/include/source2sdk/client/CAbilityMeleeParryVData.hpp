@@ -1,71 +1,76 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/client/CCitadelModifier.hpp"
 #include "source2sdk/client/CitadelAbilityVData.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1920
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CAbilityMeleeParryVData : public client::CitadelAbilityVData
+    namespace client
     {
-    public:
-        float m_flWhiffDuration; // 0x15f0        
-        float m_flMovementRestrictionTime; // 0x15f4        
-        float m_flActiveTime; // 0x15f8        
-        float m_flParryEndVisualTime; // 0x15fc        
-        float m_flSuccessActiveTime; // 0x1600        
-        float m_flBossVictimNoMeleeTime; // 0x1604        
-        float m_flBossVictimCalmTime; // 0x1608        
-        [[maybe_unused]] std::uint8_t pad_0x160c[0x4]; // 0x160c
-        // metadata: MPropertyStartGroup "Visuals"
-        // m_SuccessfulParryParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessfulParryParticle;
-        char m_SuccessfulParryParticle[0xe0]; // 0x1610        
-        // m_SuccessfulAbilityParryParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessfulAbilityParryParticle;
-        char m_SuccessfulAbilityParryParticle[0xe0]; // 0x16f0        
-        // m_ActiveParryParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ActiveParryParticle;
-        char m_ActiveParryParticle[0xe0]; // 0x17d0        
-        // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strSuccessfulParrySound; // 0x18b0        
-        // metadata: MPropertyStartGroup "Modifiers"
-        // m_ParryActiveModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_ParryActiveModifier;
-        char m_ParryActiveModifier[0x10]; // 0x18c0        
-        // m_ParryVictimModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_ParryVictimModifier;
-        char m_ParryVictimModifier[0x10]; // 0x18d0        
-        // m_ParryCooldownModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_ParryCooldownModifier;
-        char m_ParryCooldownModifier[0x10]; // 0x18e0        
-        // m_ParryEndVisualModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_ParryEndVisualModifier;
-        char m_ParryEndVisualModifier[0x10]; // 0x18f0        
-        // m_ParryBossVictimNoMeleeModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_ParryBossVictimNoMeleeModifier;
-        char m_ParryBossVictimNoMeleeModifier[0x10]; // 0x1900        
-        // m_ParryBossVictimCalmModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_ParryBossVictimCalmModifier;
-        char m_ParryBossVictimCalmModifier[0x10]; // 0x1910        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1920
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CAbilityMeleeParryVData : public source2sdk::client::CitadelAbilityVData
+        {
+        public:
+            float m_flWhiffDuration; // 0x15f0            
+            float m_flMovementRestrictionTime; // 0x15f4            
+            float m_flActiveTime; // 0x15f8            
+            float m_flParryEndVisualTime; // 0x15fc            
+            float m_flSuccessActiveTime; // 0x1600            
+            float m_flBossVictimNoMeleeTime; // 0x1604            
+            float m_flBossVictimCalmTime; // 0x1608            
+            uint8_t _pad160c[0x4]; // 0x160c
+            // metadata: MPropertyStartGroup "Visuals"
+            // m_SuccessfulParryParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessfulParryParticle;
+            char m_SuccessfulParryParticle[0xe0]; // 0x1610            
+            // m_SuccessfulAbilityParryParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessfulAbilityParryParticle;
+            char m_SuccessfulAbilityParryParticle[0xe0]; // 0x16f0            
+            // m_ActiveParryParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ActiveParryParticle;
+            char m_ActiveParryParticle[0xe0]; // 0x17d0            
+            // metadata: MPropertyStartGroup "Sounds"
+            CSoundEventName m_strSuccessfulParrySound; // 0x18b0            
+            // metadata: MPropertyStartGroup "Modifiers"
+            // m_ParryActiveModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ParryActiveModifier;
+            char m_ParryActiveModifier[0x10]; // 0x18c0            
+            // m_ParryVictimModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ParryVictimModifier;
+            char m_ParryVictimModifier[0x10]; // 0x18d0            
+            // m_ParryCooldownModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ParryCooldownModifier;
+            char m_ParryCooldownModifier[0x10]; // 0x18e0            
+            // m_ParryEndVisualModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ParryEndVisualModifier;
+            char m_ParryEndVisualModifier[0x10]; // 0x18f0            
+            // m_ParryBossVictimNoMeleeModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ParryBossVictimNoMeleeModifier;
+            char m_ParryBossVictimNoMeleeModifier[0x10]; // 0x1900            
+            // m_ParryBossVictimCalmModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ParryBossVictimCalmModifier;
+            char m_ParryBossVictimCalmModifier[0x10]; // 0x1910            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CAbilityMeleeParryVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CAbilityMeleeParryVData) == 0x1920);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CAbilityMeleeParryVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityMeleeParryVData) == 0x1920);
 };

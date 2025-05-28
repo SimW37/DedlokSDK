@@ -1,38 +1,43 @@
 #pragma once
-#include "source2sdk/server/CCitadelBaseAbility.hpp"
-#include "source2sdk/server/CCitadel_Ability_CardToss__Card_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelBaseAbility.hpp"
+#include "source2sdk/server/CCitadel_Ability_CardToss_Card_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xe98
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "bool m_bCardIsFlying"
-    #pragma pack(push, 1)
-    class CCitadel_Ability_CardToss : public server::CCitadelBaseAbility
+    namespace server
     {
-    public:
-        // m_vecCards has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<server::CCitadel_Ability_CardToss__Card_t> m_vecCards;
-        char m_vecCards[0x18]; // 0xba0        
-        [[maybe_unused]] std::uint8_t pad_0xbb8[0x2d8]; // 0xbb8
-        // metadata: MNetworkEnable
-        bool m_bCardIsFlying; // 0xe90        
-        [[maybe_unused]] std::uint8_t pad_0xe91[0x7];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xe98
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "bool m_bCardIsFlying"
+        #pragma pack(push, 1)
+        class CCitadel_Ability_CardToss : public source2sdk::server::CCitadelBaseAbility
+        {
+        public:
+            // m_vecCards has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<source2sdk::server::CCitadel_Ability_CardToss_Card_t> m_vecCards;
+            char m_vecCards[0x18]; // 0xba0            
+            uint8_t _pad0bb8[0x2d8]; // 0xbb8
+            // metadata: MNetworkEnable
+            bool m_bCardIsFlying; // 0xe90            
+            uint8_t _pad0e91[0x7];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_CardToss because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_CardToss) == 0xe98);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_CardToss because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_CardToss) == 0xe98);
 };

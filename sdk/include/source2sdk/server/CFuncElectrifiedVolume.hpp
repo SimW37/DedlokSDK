@@ -1,40 +1,45 @@
 #pragma once
-#include "source2sdk/server/CFuncBrush.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CFuncBrush.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x828
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "string_t m_EffectName"
-    #pragma pack(push, 1)
-    class CFuncElectrifiedVolume : public server::CFuncBrush
+    namespace server
     {
-    public:
-        // metadata: MNetworkEnable
-        CUtlSymbolLarge m_EffectName; // 0x7f0        
-        CUtlSymbolLarge m_EffectInterpenetrateName; // 0x7f8        
-        CUtlSymbolLarge m_EffectZapName; // 0x800        
-        CUtlSymbolLarge m_iszEffectSource; // 0x808        
-        [[maybe_unused]] std::uint8_t pad_0x810[0x18];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x828
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "string_t m_EffectName"
+        #pragma pack(push, 1)
+        class CFuncElectrifiedVolume : public source2sdk::server::CFuncBrush
+        {
+        public:
+            // metadata: MNetworkEnable
+            CUtlSymbolLarge m_EffectName; // 0x7f0            
+            CUtlSymbolLarge m_EffectInterpenetrateName; // 0x7f8            
+            CUtlSymbolLarge m_EffectZapName; // 0x800            
+            CUtlSymbolLarge m_iszEffectSource; // 0x808            
+            uint8_t _pad0810[0x18];
+            
+            // Datamap fields:
+            // void InputDisable; // 0x0
+            // void InputEnable; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void InputDisable; // 0x0
-        // void InputEnable; // 0x0
+        // Cannot assert offsets of fields in CFuncElectrifiedVolume because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CFuncElectrifiedVolume) == 0x828);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CFuncElectrifiedVolume because it is not a standard-layout class
-    static_assert(sizeof(CFuncElectrifiedVolume) == 0x828);
 };

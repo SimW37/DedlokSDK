@@ -1,40 +1,47 @@
 #pragma once
-#include "source2sdk/server/CCitadelBaseAbility.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelBaseAbility.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CCitadelProjectile;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CCitadelProjectile;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xc68
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "CHandle< CCitadelProjectile> m_hProjectile"
-    #pragma pack(push, 1)
-    class CCitadel_Ability_HatTrick : public server::CCitadelBaseAbility
+    namespace server
     {
-    public:
-        // metadata: MNetworkEnable
-        // m_hProjectile has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CCitadelProjectile> m_hProjectile;
-        char m_hProjectile[0x4]; // 0xba0        
-        [[maybe_unused]] std::uint8_t pad_0xba4[0xc4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xc68
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "CHandle< CCitadelProjectile> m_hProjectile"
+        #pragma pack(push, 1)
+        class CCitadel_Ability_HatTrick : public source2sdk::server::CCitadelBaseAbility
+        {
+        public:
+            // metadata: MNetworkEnable
+            // m_hProjectile has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CCitadelProjectile> m_hProjectile;
+            char m_hProjectile[0x4]; // 0xba0            
+            uint8_t _pad0ba4[0xc4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_HatTrick because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_HatTrick) == 0xc68);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_HatTrick because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_HatTrick) == 0xc68);
 };

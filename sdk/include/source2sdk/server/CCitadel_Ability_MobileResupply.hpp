@@ -1,31 +1,36 @@
 #pragma once
-#include "source2sdk/server/CCitadelBaseAbility.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelBaseAbility.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xbf8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Ability_MobileResupply : public server::CCitadelBaseAbility
+    namespace server
     {
-    public:
-        Vector m_vDeployPosition; // 0xba0        
-        QAngle m_angDeploy; // 0xbac        
-        [[maybe_unused]] std::uint8_t pad_0xbb8[0x40];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xbf8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Ability_MobileResupply : public source2sdk::server::CCitadelBaseAbility
+        {
+        public:
+            Vector m_vDeployPosition; // 0xba0            
+            QAngle m_angDeploy; // 0xbac            
+            uint8_t _pad0bb8[0x40];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_MobileResupply because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_MobileResupply) == 0xbf8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_MobileResupply because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_MobileResupply) == 0xbf8);
 };

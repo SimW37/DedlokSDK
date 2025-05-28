@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CCitadelItemPickup.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelItemPickup.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x6560
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadelItemPickupIdol : public server::CCitadelItemPickup
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x6550[0x10];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x6560
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadelItemPickupIdol : public source2sdk::server::CCitadelItemPickup
+        {
+        public:
+            uint8_t _pad6550[0x10];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadelItemPickupIdol) == 0x6560);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadelItemPickupIdol) == 0x6560);
 };

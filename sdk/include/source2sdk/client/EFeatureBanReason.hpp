@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,17 +9,20 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 5
-    // Alignment: 4
-    // Size: 0x4
-    enum class EFeatureBanReason : std::uint32_t
+    namespace client
     {
-        k_eFeatureBanReason_Invalid = 0x0,
-        k_eFeatureBanReason_DevCommand = 0x1,
-        k_eFeatureBanReason_PlayerReports = 0x2,
-        k_eFeatureBanReason_MatchAbandons = 0x3,
-        k_eFeatureBanReason_ExcessivePlayerReports = 0x4,
+        // Enumerator count: 5
+        // Alignment: 4
+        // Size: 0x4
+        enum class EFeatureBanReason : std::uint32_t
+        {
+            k_eFeatureBanReason_Invalid = 0x0,
+            k_eFeatureBanReason_DevCommand = 0x1,
+            k_eFeatureBanReason_PlayerReports = 0x2,
+            k_eFeatureBanReason_MatchAbandons = 0x3,
+            k_eFeatureBanReason_ExcessivePlayerReports = 0x4,
+        };
     };
 };

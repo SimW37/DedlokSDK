@@ -1,53 +1,60 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
-#include "source2sdk/server/CBasePlatTrain.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/server/CBasePlatTrain.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CBaseEntity;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x898
-    // Has VTable
-    #pragma pack(push, 1)
-    class CFuncTrain : public server::CBasePlatTrain
+    namespace server
     {
-    public:
-        // m_hCurrentTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseEntity> m_hCurrentTarget;
-        char m_hCurrentTarget[0x4]; // 0x878        
-        bool m_activated; // 0x87c        
-        [[maybe_unused]] std::uint8_t pad_0x87d[0x3]; // 0x87d
-        // m_hEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseEntity> m_hEnemy;
-        char m_hEnemy[0x4]; // 0x880        
-        float m_flBlockDamage; // 0x884        
-        entity2::GameTime_t m_flNextBlockTime; // 0x888        
-        [[maybe_unused]] std::uint8_t pad_0x88c[0x4]; // 0x88c
-        CUtlSymbolLarge m_iszLastTarget; // 0x890        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x898
+        // Has VTable
+        #pragma pack(push, 1)
+        class CFuncTrain : public source2sdk::server::CBasePlatTrain
+        {
+        public:
+            // m_hCurrentTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_hCurrentTarget;
+            char m_hCurrentTarget[0x4]; // 0x878            
+            bool m_activated; // 0x87c            
+            uint8_t _pad087d[0x3]; // 0x87d
+            // m_hEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_hEnemy;
+            char m_hEnemy[0x4]; // 0x880            
+            float m_flBlockDamage; // 0x884            
+            source2sdk::entity2::GameTime_t m_flNextBlockTime; // 0x888            
+            uint8_t _pad088c[0x4]; // 0x88c
+            CUtlSymbolLarge m_iszLastTarget; // 0x890            
+            
+            // Datamap fields:
+            // void CFuncTrainWait; // 0x0
+            // void CFuncTrainNext; // 0x0
+            // void InputToggle; // 0x0
+            // void InputStart; // 0x0
+            // void InputStop; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void CFuncTrainWait; // 0x0
-        // void CFuncTrainNext; // 0x0
-        // void InputToggle; // 0x0
-        // void InputStart; // 0x0
-        // void InputStop; // 0x0
+        // Cannot assert offsets of fields in CFuncTrain because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CFuncTrain) == 0x898);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CFuncTrain because it is not a standard-layout class
-    static_assert(sizeof(CFuncTrain) == 0x898);
 };

@@ -1,28 +1,33 @@
 #pragma once
-#include "source2sdk/client/CCitadel_Ability_TrooperGrenade.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadel_Ability_TrooperGrenade.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xf40
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Ability_TrooperNeutralGrenade : public client::CCitadel_Ability_TrooperGrenade
+    namespace client
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xf40
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Ability_TrooperNeutralGrenade : public source2sdk::client::CCitadel_Ability_TrooperGrenade
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_TrooperNeutralGrenade) == 0xf40);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_Ability_TrooperNeutralGrenade) == 0xf40);
 };

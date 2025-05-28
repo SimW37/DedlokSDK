@@ -1,41 +1,46 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/server/CCitadelModifier.hpp"
 #include "source2sdk/server/CNPC_TrooperNeutralVData.hpp"
 #include "source2sdk/tier2/CRangeFloat.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1728
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CNPC_TrooperNeutralNodeMoverVData : public server::CNPC_TrooperNeutralVData
+    namespace server
     {
-    public:
-        // metadata: MPropertyStartGroup "Node Movement"
-        bool m_bEnableMovementToNodes; // 0x1700        
-        [[maybe_unused]] std::uint8_t pad_0x1701[0x3]; // 0x1701
-        tier2::CRangeFloat m_flExposedDuration; // 0x1704        
-        tier2::CRangeFloat m_flHideDuration; // 0x170c        
-        [[maybe_unused]] std::uint8_t pad_0x1714[0x4]; // 0x1714
-        // m_HidingModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<server::CCitadelModifier> m_HidingModifier;
-        char m_HidingModifier[0x10]; // 0x1718        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1728
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CNPC_TrooperNeutralNodeMoverVData : public source2sdk::server::CNPC_TrooperNeutralVData
+        {
+        public:
+            // metadata: MPropertyStartGroup "Node Movement"
+            bool m_bEnableMovementToNodes; // 0x1700            
+            uint8_t _pad1701[0x3]; // 0x1701
+            source2sdk::tier2::CRangeFloat m_flExposedDuration; // 0x1704            
+            source2sdk::tier2::CRangeFloat m_flHideDuration; // 0x170c            
+            uint8_t _pad1714[0x4]; // 0x1714
+            // m_HidingModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_HidingModifier;
+            char m_HidingModifier[0x10]; // 0x1718            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CNPC_TrooperNeutralNodeMoverVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CNPC_TrooperNeutralNodeMoverVData) == 0x1728);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CNPC_TrooperNeutralNodeMoverVData because it is not a standard-layout class
-    static_assert(sizeof(CNPC_TrooperNeutralNodeMoverVData) == 0x1728);
 };

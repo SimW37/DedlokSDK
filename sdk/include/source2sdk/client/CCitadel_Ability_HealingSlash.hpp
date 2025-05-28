@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/client/CCitadelBaseYamatoAbility.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadelBaseYamatoAbility.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xf28
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Ability_HealingSlash : public client::CCitadelBaseYamatoAbility
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xdc8[0x160];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xf28
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Ability_HealingSlash : public source2sdk::client::CCitadelBaseYamatoAbility
+        {
+        public:
+            uint8_t _pad0dc8[0x160];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_HealingSlash) == 0xf28);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_Ability_HealingSlash) == 0xf28);
 };

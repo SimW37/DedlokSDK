@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,15 +9,18 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 3
-    // Alignment: 4
-    // Size: 0x4
-    enum class ECitadelNewPlayerProgressFlag : std::uint32_t
+    namespace client
     {
-        k_eNewPlayerProgress_GettingStarted = 0x1,
-        k_eNewPlayerProgress_HeroTraining = 0x2,
-        k_eNewPlayerProgress_LaneTraining = 0x3,
+        // Enumerator count: 3
+        // Alignment: 4
+        // Size: 0x4
+        enum class ECitadelNewPlayerProgressFlag : std::uint32_t
+        {
+            k_eNewPlayerProgress_GettingStarted = 0x1,
+            k_eNewPlayerProgress_HeroTraining = 0x2,
+            k_eNewPlayerProgress_LaneTraining = 0x3,
+        };
     };
 };

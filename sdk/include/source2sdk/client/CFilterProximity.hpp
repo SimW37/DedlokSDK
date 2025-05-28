@@ -1,30 +1,35 @@
 #pragma once
-#include "source2sdk/client/CBaseFilter.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CBaseFilter.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x640
-    // Has VTable
-    #pragma pack(push, 1)
-    class CFilterProximity : public client::CBaseFilter
+    namespace client
     {
-    public:
-        float m_flRadius; // 0x638        
-        [[maybe_unused]] std::uint8_t pad_0x63c[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x640
+        // Has VTable
+        #pragma pack(push, 1)
+        class CFilterProximity : public source2sdk::client::CBaseFilter
+        {
+        public:
+            float m_flRadius; // 0x638            
+            uint8_t _pad063c[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CFilterProximity because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CFilterProximity) == 0x640);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CFilterProximity because it is not a standard-layout class
-    static_assert(sizeof(CFilterProximity) == 0x640);
 };

@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,17 +9,20 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 5
-    // Alignment: 4
-    // Size: 0x4
-    enum class EPlayerPlayState : std::uint32_t
+    namespace client
     {
-        EPlayerStateInvalid = 0xffffffff,
-        EPlayerActive = 0x0,
-        EPlayerAwaitingHeroAssignment = 0x1,
-        EPlayerChoosingHero = 0x2,
-        EPlayerPlayStateCount = 0x3,
+        // Enumerator count: 5
+        // Alignment: 4
+        // Size: 0x4
+        enum class EPlayerPlayState : std::uint32_t
+        {
+            EPlayerStateInvalid = 0xffffffff,
+            EPlayerActive = 0x0,
+            EPlayerAwaitingHeroAssignment = 0x1,
+            EPlayerChoosingHero = 0x2,
+            EPlayerPlayStateCount = 0x3,
+        };
     };
 };

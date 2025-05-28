@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,16 +9,19 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 4
-    // Alignment: 1
-    // Size: 0x1
-    enum class EViscousBowlingBallState_t : std::uint8_t
+    namespace client
     {
-        EViscousBowlingBallState_None = 0,
-        EViscousBowlingBallState_TransformToBall = 1,
-        EViscousBowlingBallState_Rolling = 2,
-        EViscousBowlingBallState_TransformFromBall = 3,
+        // Enumerator count: 4
+        // Alignment: 1
+        // Size: 0x1
+        enum class EViscousBowlingBallState_t : std::uint8_t
+        {
+            EViscousBowlingBallState_None = 0x0,
+            EViscousBowlingBallState_TransformToBall = 0x1,
+            EViscousBowlingBallState_Rolling = 0x2,
+            EViscousBowlingBallState_TransformFromBall = 0x3,
+        };
     };
 };

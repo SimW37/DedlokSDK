@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,25 +9,28 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 13
-    // Alignment: 4
-    // Size: 0x4
-    enum class ECitadelClientMessages : std::uint32_t
+    namespace client
     {
-        CITADEL_CM_MapPing = 0x3ea,
-        CITADEL_CM_PerformanceStats = 0x3eb,
-        CITADEL_CM_PingWheel = 0x3ec,
-        CITADEL_CM_ChatMsg = 0x3ed,
-        CITADEL_CM_PerfReport = 0x3ee,
-        CITADEL_CM_QuickResponse = 0x3ef,
-        CITADEL_CM_Pause = 0x3f0,
-        CITADEL_CM_MapLine = 0x3f1,
-        CITADEL_CM_AbilityPing = 0x3f2,
-        CITADEL_CM_ExecuteMapUnitAbility = 0x3f3,
-        CITADEL_CM_GetDamageStats = 0x3f4,
-        CITADEL_CM_CheaterVote = 0x3f5,
-        CITADEL_CM_MutePlayers = 0x3f6,
+        // Enumerator count: 13
+        // Alignment: 4
+        // Size: 0x4
+        enum class ECitadelClientMessages : std::uint32_t
+        {
+            CITADEL_CM_MapPing = 0x3ea,
+            CITADEL_CM_PerformanceStats = 0x3eb,
+            CITADEL_CM_PingWheel = 0x3ec,
+            CITADEL_CM_ChatMsg = 0x3ed,
+            CITADEL_CM_PerfReport = 0x3ee,
+            CITADEL_CM_QuickResponse = 0x3ef,
+            CITADEL_CM_Pause = 0x3f0,
+            CITADEL_CM_MapLine = 0x3f1,
+            CITADEL_CM_AbilityPing = 0x3f2,
+            CITADEL_CM_ExecuteMapUnitAbility = 0x3f3,
+            CITADEL_CM_GetDamageStats = 0x3f4,
+            CITADEL_CM_CheaterVote = 0x3f5,
+            CITADEL_CM_MutePlayers = 0x3f6,
+        };
     };
 };

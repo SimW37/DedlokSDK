@@ -1,43 +1,48 @@
 #pragma once
-#include "source2sdk/client/C_CitadelBaseAbility.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_CitadelBaseAbility.hpp"
+#include "source2sdk/entity2/GameTime_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xe50
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "GameTime_t m_tDrainLifeStopTime"
-    // static metadata: MNetworkVarNames "GameTime_t m_tSlowStartTime"
-    // static metadata: MNetworkVarNames "GameTime_t m_tSlowStopTime"
-    #pragma pack(push, 1)
-    class CCitadel_Ability_LifeDrain : public client::C_CitadelBaseAbility
+    namespace client
     {
-    public:
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_tDrainLifeStopTime; // 0xdc0        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_tSlowStartTime; // 0xdc4        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-        entity2::GameTime_t m_tSlowStopTime; // 0xdc8        
-        [[maybe_unused]] std::uint8_t pad_0xdcc[0x84];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xe50
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "GameTime_t m_tDrainLifeStopTime"
+        // static metadata: MNetworkVarNames "GameTime_t m_tSlowStartTime"
+        // static metadata: MNetworkVarNames "GameTime_t m_tSlowStopTime"
+        #pragma pack(push, 1)
+        class CCitadel_Ability_LifeDrain : public source2sdk::client::C_CitadelBaseAbility
+        {
+        public:
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            source2sdk::entity2::GameTime_t m_tDrainLifeStopTime; // 0xdc0            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
+            source2sdk::entity2::GameTime_t m_tSlowStartTime; // 0xdc4            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
+            source2sdk::entity2::GameTime_t m_tSlowStopTime; // 0xdc8            
+            uint8_t _pad0dcc[0x84];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_LifeDrain because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_LifeDrain) == 0xe50);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_LifeDrain because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_LifeDrain) == 0xe50);
 };

@@ -1,35 +1,40 @@
 #pragma once
-#include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/server/CCitadelBaseAbility.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/ParticleIndex_t.hpp"
+#include "source2sdk/server/CCitadelBaseAbility.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xca8
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "bool m_bInFlight"
-    #pragma pack(push, 1)
-    class CCitadel_Ability_Tokamak_DyingStar : public server::CCitadelBaseAbility
+    namespace server
     {
-    public:
-        client::ParticleIndex_t m_nRollFXIndex; // 0xba0        
-        // metadata: MNetworkEnable
-        bool m_bInFlight; // 0xba4        
-        [[maybe_unused]] std::uint8_t pad_0xba5[0x103];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xca8
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "bool m_bInFlight"
+        #pragma pack(push, 1)
+        class CCitadel_Ability_Tokamak_DyingStar : public source2sdk::server::CCitadelBaseAbility
+        {
+        public:
+            source2sdk::client::ParticleIndex_t m_nRollFXIndex; // 0xba0            
+            // metadata: MNetworkEnable
+            bool m_bInFlight; // 0xba4            
+            uint8_t _pad0ba5[0x103];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_Tokamak_DyingStar because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Tokamak_DyingStar) == 0xca8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_Tokamak_DyingStar because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Tokamak_DyingStar) == 0xca8);
 };

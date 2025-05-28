@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,20 +9,23 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 4
-    // Alignment: 4
-    // Size: 0x4
-    enum class EFlinchType : std::uint32_t
+    namespace client
     {
-        // MAlternateSemanticName
-        NONE = 0x0,
-        // MAlternateSemanticName
-        BACK = 0x1,
-        // MAlternateSemanticName
-        RIGHT = 0x2,
-        // MAlternateSemanticName
-        LEFT = 0x3,
+        // Enumerator count: 4
+        // Alignment: 4
+        // Size: 0x4
+        enum class EFlinchType : std::uint32_t
+        {
+            // MAlternateSemanticName
+            NONE = 0x0,
+            // MAlternateSemanticName
+            BACK = 0x1,
+            // MAlternateSemanticName
+            RIGHT = 0x2,
+            // MAlternateSemanticName
+            LEFT = 0x3,
+        };
     };
 };

@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/client/CCitadelModifier.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadelModifier.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x180
-    // Has VTable
-    #pragma pack(push, 1)
-    class CModifier_Item_DPS_Aura_Active : public client::CCitadelModifier
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0xc0];
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x180
+        // Has VTable
+        #pragma pack(push, 1)
+        class CModifier_Item_DPS_Aura_Active : public source2sdk::client::CCitadelModifier
+        {
+        public:
+            uint8_t _pad00c0[0xc0];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CModifier_Item_DPS_Aura_Active) == 0x180);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CModifier_Item_DPS_Aura_Active) == 0x180);
 };

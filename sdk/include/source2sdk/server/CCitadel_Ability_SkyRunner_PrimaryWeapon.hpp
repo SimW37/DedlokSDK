@@ -1,28 +1,33 @@
 #pragma once
-#include "source2sdk/server/CCitadel_Ability_PrimaryWeapon.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadel_Ability_PrimaryWeapon.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xc60
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Ability_SkyRunner_PrimaryWeapon : public server::CCitadel_Ability_PrimaryWeapon
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xc60
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Ability_SkyRunner_PrimaryWeapon : public source2sdk::server::CCitadel_Ability_PrimaryWeapon
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_SkyRunner_PrimaryWeapon) == 0xc60);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_Ability_SkyRunner_PrimaryWeapon) == 0xc60);
 };

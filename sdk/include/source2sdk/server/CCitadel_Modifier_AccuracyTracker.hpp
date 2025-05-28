@@ -1,31 +1,36 @@
 #pragma once
-#include "source2sdk/server/CCitadelModifier.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelModifier.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xe0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_AccuracyTracker : public server::CCitadelModifier
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x18]; // 0xc0
-        float m_flInterval; // 0xd8        
-        float m_flProgress; // 0xdc        
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xe0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_AccuracyTracker : public source2sdk::server::CCitadelModifier
+        {
+        public:
+            uint8_t _pad00c0[0x18]; // 0xc0
+            float m_flInterval; // 0xd8            
+            float m_flProgress; // 0xdc            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Modifier_AccuracyTracker because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_AccuracyTracker) == 0xe0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Modifier_AccuracyTracker because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_AccuracyTracker) == 0xe0);
 };

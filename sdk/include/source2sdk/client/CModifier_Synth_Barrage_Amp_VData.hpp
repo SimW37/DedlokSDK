@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/client/CCitadelModifierVData.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadelModifierVData.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x660
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CModifier_Synth_Barrage_Amp_VData : public client::CCitadelModifierVData
+    namespace client
     {
-    public:
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x660
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CModifier_Synth_Barrage_Amp_VData : public source2sdk::client::CCitadelModifierVData
+        {
+        public:
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CModifier_Synth_Barrage_Amp_VData) == 0x660);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CModifier_Synth_Barrage_Amp_VData) == 0x660);
 };

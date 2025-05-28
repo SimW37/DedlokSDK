@@ -1,32 +1,37 @@
 #pragma once
-#include "source2sdk/server/CCitadel_BreakablePropPickupVData.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadel_BreakablePropPickupVData.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x348
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CCitadel_BreakablePropGoldPickupVData : public server::CCitadel_BreakablePropPickupVData
+    namespace server
     {
-    public:
-        float m_flGoldAmount; // 0x340        
-        float m_flGoldPerMinuteAmount; // 0x344        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x348
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CCitadel_BreakablePropGoldPickupVData : public source2sdk::server::CCitadel_BreakablePropPickupVData
+        {
+        public:
+            float m_flGoldAmount; // 0x340            
+            float m_flGoldPerMinuteAmount; // 0x344            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_BreakablePropGoldPickupVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_BreakablePropGoldPickupVData) == 0x348);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_BreakablePropGoldPickupVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_BreakablePropGoldPickupVData) == 0x348);
 };

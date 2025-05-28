@@ -1,34 +1,39 @@
 #pragma once
-#include "source2sdk/server/CCitadelModifier.hpp"
-#include "source2sdk/server/CCitadel_Modifier_ExplosiveShots__BulletEntityPair_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelModifier.hpp"
+#include "source2sdk/server/CCitadel_Modifier_ExplosiveShots_BulletEntityPair_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1a0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_ExplosiveShots : public server::CCitadelModifier
+    namespace server
     {
-    public:
-        // m_vecHitEnts has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<server::CCitadel_Modifier_ExplosiveShots__BulletEntityPair_t> m_vecHitEnts;
-        char m_vecHitEnts[0x18]; // 0xc0        
-        bool m_bExplosionCanHitMultipleTimes; // 0xd8        
-        [[maybe_unused]] std::uint8_t pad_0xd9[0xc7];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1a0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_ExplosiveShots : public source2sdk::server::CCitadelModifier
+        {
+        public:
+            // m_vecHitEnts has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<source2sdk::server::CCitadel_Modifier_ExplosiveShots_BulletEntityPair_t> m_vecHitEnts;
+            char m_vecHitEnts[0x18]; // 0xc0            
+            bool m_bExplosionCanHitMultipleTimes; // 0xd8            
+            uint8_t _pad00d9[0xc7];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Modifier_ExplosiveShots because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ExplosiveShots) == 0x1a0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Modifier_ExplosiveShots because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_ExplosiveShots) == 0x1a0);
 };

@@ -1,33 +1,38 @@
 #pragma once
-#include "source2sdk/server/CBaseModifier.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseModifier.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xc0
-    // Has VTable
-    // Is Abstract
-    #pragma pack(push, 1)
-    class CCitadelModifier : public server::CBaseModifier
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x88[0x38];
-        // Datamap fields:
-        // void m_pVecAbilityValues; // 0x98
-        // float m_flEffectiveness; // 0xa0
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xc0
+        // Has VTable
+        // Is Abstract
+        #pragma pack(push, 1)
+        class CCitadelModifier : public source2sdk::server::CBaseModifier
+        {
+        public:
+            uint8_t _pad0088[0x38];
+            // Datamap fields:
+            // void m_pVecAbilityValues; // 0x98
+            // float m_flEffectiveness; // 0xa0
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadelModifier) == 0xc0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadelModifier) == 0xc0);
 };

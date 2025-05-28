@@ -1,41 +1,46 @@
 #pragma once
-#include "source2sdk/server/CBaseTrigger.hpp"
-#include "source2sdk/server/CCitadelMinimapComponent.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseTrigger.hpp"
+#include "source2sdk/server/CCitadelMinimapComponent.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x9c0
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
-    // static metadata: MNetworkVarNames "string_t m_iszSoundName"
-    #pragma pack(push, 1)
-    class CTriggerItemShop : public server::CBaseTrigger
+    namespace server
     {
-    public:
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
-        // metadata: MNetworkAlias "CCitadelMinimapComponent"
-        // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-        server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x990        
-        // metadata: MNetworkEnable
-        CUtlSymbolLarge m_iszSoundName; // 0x9a8        
-        Vector m_vAudioOffset; // 0x9b0        
-        [[maybe_unused]] std::uint8_t pad_0x9bc[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x9c0
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
+        // static metadata: MNetworkVarNames "string_t m_iszSoundName"
+        #pragma pack(push, 1)
+        class CTriggerItemShop : public source2sdk::server::CBaseTrigger
+        {
+        public:
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
+            // metadata: MNetworkAlias "CCitadelMinimapComponent"
+            // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x990            
+            // metadata: MNetworkEnable
+            CUtlSymbolLarge m_iszSoundName; // 0x9a8            
+            Vector m_vAudioOffset; // 0x9b0            
+            uint8_t _pad09bc[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CTriggerItemShop because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CTriggerItemShop) == 0x9c0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CTriggerItemShop because it is not a standard-layout class
-    static_assert(sizeof(CTriggerItemShop) == 0x9c0);
 };

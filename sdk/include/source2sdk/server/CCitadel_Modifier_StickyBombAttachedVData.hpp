@@ -1,55 +1,60 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
 #include "source2sdk/server/CCitadelModifier.hpp"
 #include "source2sdk/server/CCitadelModifierVData.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xa28
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_StickyBombAttachedVData : public server::CCitadelModifierVData
+    namespace server
     {
-    public:
-        // metadata: MPropertyStartGroup "Visuals"
-        // m_BombAttachedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombAttachedParticle;
-        char m_BombAttachedParticle[0xe0]; // 0x660        
-        // m_StunAttachedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StunAttachedParticle;
-        char m_StunAttachedParticle[0xe0]; // 0x740        
-        // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-        char m_ExplodeParticle[0xe0]; // 0x820        
-        // m_BombAttachedVictimTeamParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombAttachedVictimTeamParticle;
-        char m_BombAttachedVictimTeamParticle[0xe0]; // 0x900        
-        // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strExplodeSound; // 0x9e0        
-        CSoundEventName m_strTickTockSound; // 0x9f0        
-        CSoundEventName m_strTickTockFastSound; // 0xa00        
-        // metadata: MPropertyGroupName "Modifiers"
-        // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<server::CCitadelModifier> m_DebuffModifier;
-        char m_DebuffModifier[0x10]; // 0xa10        
-        float m_DetonateWarningTime; // 0xa20        
-        [[maybe_unused]] std::uint8_t pad_0xa24[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xa28
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_StickyBombAttachedVData : public source2sdk::server::CCitadelModifierVData
+        {
+        public:
+            // metadata: MPropertyStartGroup "Visuals"
+            // m_BombAttachedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombAttachedParticle;
+            char m_BombAttachedParticle[0xe0]; // 0x660            
+            // m_StunAttachedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StunAttachedParticle;
+            char m_StunAttachedParticle[0xe0]; // 0x740            
+            // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
+            char m_ExplodeParticle[0xe0]; // 0x820            
+            // m_BombAttachedVictimTeamParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BombAttachedVictimTeamParticle;
+            char m_BombAttachedVictimTeamParticle[0xe0]; // 0x900            
+            // metadata: MPropertyStartGroup "Sounds"
+            CSoundEventName m_strExplodeSound; // 0x9e0            
+            CSoundEventName m_strTickTockSound; // 0x9f0            
+            CSoundEventName m_strTickTockFastSound; // 0xa00            
+            // metadata: MPropertyGroupName "Modifiers"
+            // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DebuffModifier;
+            char m_DebuffModifier[0x10]; // 0xa10            
+            float m_DetonateWarningTime; // 0xa20            
+            uint8_t _pad0a24[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Modifier_StickyBombAttachedVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_StickyBombAttachedVData) == 0xa28);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Modifier_StickyBombAttachedVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_StickyBombAttachedVData) == 0xa28);
 };

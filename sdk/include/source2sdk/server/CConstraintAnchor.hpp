@@ -1,30 +1,35 @@
 #pragma once
-#include "source2sdk/server/CBaseAnimGraph.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseAnimGraph.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xac0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CConstraintAnchor : public server::CBaseAnimGraph
+    namespace server
     {
-    public:
-        float m_massScale; // 0xab8        
-        [[maybe_unused]] std::uint8_t pad_0xabc[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xac0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CConstraintAnchor : public source2sdk::server::CBaseAnimGraph
+        {
+        public:
+            float m_massScale; // 0xab8            
+            uint8_t _pad0abc[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CConstraintAnchor because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CConstraintAnchor) == 0xac0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CConstraintAnchor because it is not a standard-layout class
-    static_assert(sizeof(CConstraintAnchor) == 0xac0);
 };

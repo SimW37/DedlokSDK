@@ -1,42 +1,46 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
-#include "source2sdk/server/TaskStatus_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/server/TaskStatus_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: true
-    // Size: 0x20
-    // Has Trivial Destructor
-    #pragma pack(push, 1)
-    struct AIScheduleState_t
+    namespace server
     {
-    public:
-        int32_t m_nCurTask; // 0x0        
-        server::TaskStatus_t m_nTaskStatus; // 0x4        
-        entity2::GameTime_t m_flTimeStarted; // 0x8        
-        entity2::GameTime_t m_flTimeCurTaskStarted; // 0xc        
-        int64_t m_taskFailureCode; // 0x10        
-        bool m_bScheduleWasInterrupted; // 0x18        
-        [[maybe_unused]] std::uint8_t pad_0x19[0x7];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: true
+        // Size: 0x20
+        // Has Trivial Destructor
+        #pragma pack(push, 1)
+        struct AIScheduleState_t
+        {
+        public:
+            std::int32_t m_nCurTask; // 0x0            
+            source2sdk::server::TaskStatus_t m_nTaskStatus; // 0x4            
+            source2sdk::entity2::GameTime_t m_flTimeStarted; // 0x8            
+            source2sdk::entity2::GameTime_t m_flTimeCurTaskStarted; // 0xc            
+            std::int64_t m_taskFailureCode; // 0x10            
+            bool m_bScheduleWasInterrupted; // 0x18            
+            uint8_t _pad0019[0x7];
+        };
+        #pragma pack(pop)
+        
+        static_assert(offsetof(source2sdk::server::AIScheduleState_t, m_nCurTask) == 0x0);
+        static_assert(offsetof(source2sdk::server::AIScheduleState_t, m_nTaskStatus) == 0x4);
+        static_assert(offsetof(source2sdk::server::AIScheduleState_t, m_flTimeStarted) == 0x8);
+        static_assert(offsetof(source2sdk::server::AIScheduleState_t, m_flTimeCurTaskStarted) == 0xc);
+        static_assert(offsetof(source2sdk::server::AIScheduleState_t, m_taskFailureCode) == 0x10);
+        static_assert(offsetof(source2sdk::server::AIScheduleState_t, m_bScheduleWasInterrupted) == 0x18);
+        
+        static_assert(sizeof(source2sdk::server::AIScheduleState_t) == 0x20);
     };
-    #pragma pack(pop)
-    
-    static_assert(offsetof(AIScheduleState_t, m_nCurTask) == 0x0);
-    static_assert(offsetof(AIScheduleState_t, m_nTaskStatus) == 0x4);
-    static_assert(offsetof(AIScheduleState_t, m_flTimeStarted) == 0x8);
-    static_assert(offsetof(AIScheduleState_t, m_flTimeCurTaskStarted) == 0xc);
-    static_assert(offsetof(AIScheduleState_t, m_taskFailureCode) == 0x10);
-    static_assert(offsetof(AIScheduleState_t, m_bScheduleWasInterrupted) == 0x18);
-    
-    static_assert(sizeof(AIScheduleState_t) == 0x20);
 };

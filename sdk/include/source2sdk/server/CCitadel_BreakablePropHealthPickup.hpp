@@ -1,28 +1,33 @@
 #pragma once
-#include "source2sdk/server/CCitadel_BreakablePropPickup.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadel_BreakablePropPickup.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xaf8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_BreakablePropHealthPickup : public server::CCitadel_BreakablePropPickup
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xaf8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_BreakablePropHealthPickup : public source2sdk::server::CCitadel_BreakablePropPickup
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_BreakablePropHealthPickup) == 0xaf8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_BreakablePropHealthPickup) == 0xaf8);
 };

@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/client/CCitadel_Item.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadel_Item.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xec0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_UtilityUpgrade_HealthNova : public client::CCitadel_Item
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xdc0[0x100];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xec0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_UtilityUpgrade_HealthNova : public source2sdk::client::CCitadel_Item
+        {
+        public:
+            uint8_t _pad0dc0[0x100];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_UtilityUpgrade_HealthNova) == 0xec0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_UtilityUpgrade_HealthNova) == 0xec0);
 };

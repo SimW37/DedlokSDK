@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/client/C_BasePlayerPawn.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_BasePlayerPawn.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1138
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadelPlayerPawnBase : public client::C_BasePlayerPawn
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x1120[0x18];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1138
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadelPlayerPawnBase : public source2sdk::client::C_BasePlayerPawn
+        {
+        public:
+            uint8_t _pad1120[0x18];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CCitadelPlayerPawnBase) == 0x1138);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadelPlayerPawnBase) == 0x1138);
 };

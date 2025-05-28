@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,15 +9,18 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 3
-    // Alignment: 1
-    // Size: 0x1
-    enum class EAbilitySpectatePriority : std::uint8_t
+    namespace client
     {
-        CITADELTV_ABILITY_SPECTATE_PRIORITY_NONE = 0,
-        CITADELTV_ABILITY_SPECTATE_PRIORITY_MEDIUM = 1,
-        CITADELTV_ABILITY_SPECTATE_PRIORITY_HIGH = 2,
+        // Enumerator count: 3
+        // Alignment: 1
+        // Size: 0x1
+        enum class EAbilitySpectatePriority : std::uint8_t
+        {
+            CITADELTV_ABILITY_SPECTATE_PRIORITY_NONE = 0x0,
+            CITADELTV_ABILITY_SPECTATE_PRIORITY_MEDIUM = 0x1,
+            CITADELTV_ABILITY_SPECTATE_PRIORITY_HIGH = 0x2,
+        };
     };
 };

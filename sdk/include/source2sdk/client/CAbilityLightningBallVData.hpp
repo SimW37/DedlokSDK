@@ -1,44 +1,52 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/client/CCitadelModifier.hpp"
 #include "source2sdk/client/CitadelAbilityVData.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1700
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CAbilityLightningBallVData : public client::CitadelAbilityVData
+    namespace client
     {
-    public:
-        // metadata: MPropertyStartGroup "Modifiers"
-        // m_ZapModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_ZapModifier;
-        char m_ZapModifier[0x10]; // 0x15f0        
-        // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strHitSound; // 0x1600        
-        // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strProjectileLoopingSound; // 0x1610        
-        // metadata: MPropertyStartGroup "Visuals"
-        // m_ZapParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapParticle;
-        char m_ZapParticle[0xe0]; // 0x1620        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1710
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CAbilityLightningBallVData : public source2sdk::client::CitadelAbilityVData
+        {
+        public:
+            // metadata: MPropertyStartGroup "Modifiers"
+            // m_ZapModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ZapModifier;
+            char m_ZapModifier[0x10]; // 0x15f0            
+            // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SlowModifier;
+            char m_SlowModifier[0x10]; // 0x1600            
+            // metadata: MPropertyStartGroup "Sounds"
+            CSoundEventName m_strHitSound; // 0x1610            
+            // metadata: MPropertyStartGroup "Sounds"
+            CSoundEventName m_strProjectileLoopingSound; // 0x1620            
+            // metadata: MPropertyStartGroup "Visuals"
+            // m_ZapParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapParticle;
+            char m_ZapParticle[0xe0]; // 0x1630            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CAbilityLightningBallVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CAbilityLightningBallVData) == 0x1710);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CAbilityLightningBallVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityLightningBallVData) == 0x1700);
 };

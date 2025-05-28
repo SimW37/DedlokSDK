@@ -1,28 +1,33 @@
 #pragma once
-#include "source2sdk/server/CLightDirectionalEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CLightDirectionalEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x7d8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CLightEnvironmentEntity : public server::CLightDirectionalEntity
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x7d8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CLightEnvironmentEntity : public source2sdk::server::CLightDirectionalEntity
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CLightEnvironmentEntity) == 0x7d8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CLightEnvironmentEntity) == 0x7d8);
 };

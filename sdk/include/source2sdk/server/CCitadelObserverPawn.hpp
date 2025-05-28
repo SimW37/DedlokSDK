@@ -1,45 +1,50 @@
 #pragma once
-#include "source2sdk/server/CCitadelPlayerPawnBase.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelPlayerPawnBase.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xdd8
-    // Has VTable
-    // 
-    // static metadata: MNetworkIncludeByName "m_iMaxHealth"
-    // static metadata: MNetworkExcludeByName "m_baseLayer.m_hSequence"
-    // static metadata: MNetworkExcludeByName "m_blinktoggle"
-    // static metadata: MNetworkExcludeByName "m_flAnimTime"
-    // static metadata: MNetworkExcludeByUserGroup "m_flCycle"
-    // static metadata: MNetworkExcludeByName "m_flEncodedController"
-    // static metadata: MNetworkExcludeByName "m_flPoseParameter"
-    // static metadata: MNetworkVarTypeOverride "CCitadelPlayer_ObserverServices m_pObserverServices"
-    // static metadata: MNetworkIncludeByName "m_pObserverServices"
-    // static metadata: MNetworkVarTypeOverride "CCitadelPlayer_CameraServices m_pCameraServices"
-    // static metadata: MNetworkIncludeByName "m_pCameraServices"
-    // static metadata: MNetworkVarTypeOverride "CCitadelObserver_MovementServices m_pMovementServices"
-    // static metadata: MNetworkIncludeByName "m_pMovementServices"
-    #pragma pack(push, 1)
-    class CCitadelObserverPawn : public server::CCitadelPlayerPawnBase
+    namespace server
     {
-    public:
-        // Datamap fields:
-        // CCitadelPlayer_ObserverServices m_pObserverServices; // 0xc28
-        // CCitadelPlayer_CameraServices m_pCameraServices; // 0xc48
-        // CCitadelObserver_MovementServices m_pMovementServices; // 0xc50
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xdd8
+        // Has VTable
+        // 
+        // static metadata: MNetworkIncludeByName "m_iMaxHealth"
+        // static metadata: MNetworkExcludeByName "m_baseLayer.m_hSequence"
+        // static metadata: MNetworkExcludeByName "m_blinktoggle"
+        // static metadata: MNetworkExcludeByName "m_flAnimTime"
+        // static metadata: MNetworkExcludeByUserGroup "m_flCycle"
+        // static metadata: MNetworkExcludeByName "m_flEncodedController"
+        // static metadata: MNetworkExcludeByName "m_flPoseParameter"
+        // static metadata: MNetworkVarTypeOverride "CCitadelPlayer_ObserverServices m_pObserverServices"
+        // static metadata: MNetworkIncludeByName "m_pObserverServices"
+        // static metadata: MNetworkVarTypeOverride "CCitadelPlayer_CameraServices m_pCameraServices"
+        // static metadata: MNetworkIncludeByName "m_pCameraServices"
+        // static metadata: MNetworkVarTypeOverride "CCitadelObserver_MovementServices m_pMovementServices"
+        // static metadata: MNetworkIncludeByName "m_pMovementServices"
+        #pragma pack(push, 1)
+        class CCitadelObserverPawn : public source2sdk::server::CCitadelPlayerPawnBase
+        {
+        public:
+            // Datamap fields:
+            // CCitadelPlayer_ObserverServices m_pObserverServices; // 0xc28
+            // CCitadelPlayer_CameraServices m_pCameraServices; // 0xc48
+            // CCitadelObserver_MovementServices m_pMovementServices; // 0xc50
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadelObserverPawn) == 0xdd8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadelObserverPawn) == 0xdd8);
 };

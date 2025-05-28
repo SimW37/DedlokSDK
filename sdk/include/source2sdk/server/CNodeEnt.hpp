@@ -1,38 +1,43 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/client/HullFlags_t.hpp"
 #include "source2sdk/server/CServerOnlyPointEntity.hpp"
 #include "source2sdk/server/HintNodeData.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x538
-    // Has VTable
-    #pragma pack(push, 1)
-    class CNodeEnt : public server::CServerOnlyPointEntity
+    namespace server
     {
-    public:
-        bool m_bDontDropNode; // 0x4e0        
-        client::HullFlags_t m_HullForceFlags; // 0x4e1        
-        [[maybe_unused]] std::uint8_t pad_0x4eb[0x5]; // 0x4eb
-        server::HintNodeData m_NodeData; // 0x4f0        
-        [[maybe_unused]] std::uint8_t pad_0x530[0x8];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x538
+        // Has VTable
+        #pragma pack(push, 1)
+        class CNodeEnt : public source2sdk::server::CServerOnlyPointEntity
+        {
+        public:
+            bool m_bDontDropNode; // 0x4e0            
+            source2sdk::client::HullFlags_t m_HullForceFlags; // 0x4e1            
+            uint8_t _pad04eb[0x5]; // 0x4eb
+            source2sdk::server::HintNodeData m_NodeData; // 0x4f0            
+            uint8_t _pad0530[0x8];
+            
+            // Datamap fields:
+            // void m_pKeyValuesCopy; // 0x530
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void m_pKeyValuesCopy; // 0x530
+        // Cannot assert offsets of fields in CNodeEnt because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CNodeEnt) == 0x538);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CNodeEnt because it is not a standard-layout class
-    static_assert(sizeof(CNodeEnt) == 0x538);
 };

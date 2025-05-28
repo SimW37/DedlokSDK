@@ -1,50 +1,55 @@
 #pragma once
-#include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
-#include "source2sdk/server/CCitadelModifierVData.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
+#include "source2sdk/server/CCitadelModifierVData.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xae0
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CModifier_Mirage_SandPhantom_WhirlwindEvasion_VData : public server::CCitadelModifierVData
+    namespace server
     {
-    public:
-        // metadata: MPropertyStartGroup "Visuals"
-        // m_AttackerHitFx has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackerHitFx;
-        char m_AttackerHitFx[0xe0]; // 0x660        
-        // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-        char m_ImpactParticle[0xe0]; // 0x740        
-        // m_playerBuffSelf has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_playerBuffSelf;
-        char m_playerBuffSelf[0xe0]; // 0x820        
-        // m_playerBuffEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_playerBuffEnemy;
-        char m_playerBuffEnemy[0xe0]; // 0x900        
-        // m_ReflectedBulletTracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReflectedBulletTracerParticle;
-        char m_ReflectedBulletTracerParticle[0xe0]; // 0x9e0        
-        // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strAttackerHitSound; // 0xac0        
-        CSoundEventName m_strVictimHitSound; // 0xad0        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xae0
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CModifier_Mirage_SandPhantom_WhirlwindEvasion_VData : public source2sdk::server::CCitadelModifierVData
+        {
+        public:
+            // metadata: MPropertyStartGroup "Visuals"
+            // m_AttackerHitFx has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackerHitFx;
+            char m_AttackerHitFx[0xe0]; // 0x660            
+            // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
+            char m_ImpactParticle[0xe0]; // 0x740            
+            // m_playerBuffSelf has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_playerBuffSelf;
+            char m_playerBuffSelf[0xe0]; // 0x820            
+            // m_playerBuffEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_playerBuffEnemy;
+            char m_playerBuffEnemy[0xe0]; // 0x900            
+            // m_ReflectedBulletTracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReflectedBulletTracerParticle;
+            char m_ReflectedBulletTracerParticle[0xe0]; // 0x9e0            
+            // metadata: MPropertyStartGroup "Sounds"
+            CSoundEventName m_strAttackerHitSound; // 0xac0            
+            CSoundEventName m_strVictimHitSound; // 0xad0            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CModifier_Mirage_SandPhantom_WhirlwindEvasion_VData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CModifier_Mirage_SandPhantom_WhirlwindEvasion_VData) == 0xae0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CModifier_Mirage_SandPhantom_WhirlwindEvasion_VData because it is not a standard-layout class
-    static_assert(sizeof(CModifier_Mirage_SandPhantom_WhirlwindEvasion_VData) == 0xae0);
 };

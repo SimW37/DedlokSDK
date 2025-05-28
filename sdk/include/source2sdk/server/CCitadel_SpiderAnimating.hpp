@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CCitadelAnimatingModelEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelAnimatingModelEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xc50
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_SpiderAnimating : public server::CCitadelAnimatingModelEntity
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xc38[0x18];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xc50
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_SpiderAnimating : public source2sdk::server::CCitadelAnimatingModelEntity
+        {
+        public:
+            uint8_t _pad0c38[0x18];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_SpiderAnimating) == 0xc50);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_SpiderAnimating) == 0xc50);
 };

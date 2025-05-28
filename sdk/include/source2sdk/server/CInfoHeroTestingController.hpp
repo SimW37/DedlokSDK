@@ -1,32 +1,37 @@
 #pragma once
-#include "source2sdk/server/CPointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CPointEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x5a8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CInfoHeroTestingController : public server::CPointEntity
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x4e0[0xc8];
-        // Datamap fields:
-        // void InputStartLaneTest; // 0x0
-        // void InputEndLaneTest; // 0x0
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x5a8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CInfoHeroTestingController : public source2sdk::server::CPointEntity
+        {
+        public:
+            uint8_t _pad04e0[0xc8];
+            // Datamap fields:
+            // void InputStartLaneTest; // 0x0
+            // void InputEndLaneTest; // 0x0
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CInfoHeroTestingController) == 0x5a8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CInfoHeroTestingController) == 0x5a8);
 };

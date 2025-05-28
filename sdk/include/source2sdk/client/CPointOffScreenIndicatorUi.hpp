@@ -1,38 +1,45 @@
 #pragma once
-#include "source2sdk/client/C_PointClientUIWorldPanel.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_PointClientUIWorldPanel.hpp"
+namespace source2sdk
+{
+    namespace client
+    {
+        struct C_PointClientUIWorldPanel;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    class C_PointClientUIWorldPanel;
-};
-
-namespace source2sdk::client
-{
-    // Registered alignment: 0x10
-    // Alignment: 0x10
-    // Standard-layout class: false
-    // Size: 0xc20
-    // Has VTable
-    #pragma pack(push, 1)
-    class CPointOffScreenIndicatorUi : public client::C_PointClientUIWorldPanel
+    namespace client
     {
-    public:
-        bool m_bBeenEnabled; // 0xc10        
-        bool m_bHide; // 0xc11        
-        [[maybe_unused]] std::uint8_t pad_0xc12[0x2]; // 0xc12
-        float m_flSeenTargetTime; // 0xc14        
-        client::C_PointClientUIWorldPanel* m_pTargetPanel; // 0xc18        
+        // Registered alignment: 0x10
+        // Alignment: 0x10
+        // Standard-layout class: false
+        // Size: 0xc20
+        // Has VTable
+        #pragma pack(push, 1)
+        class CPointOffScreenIndicatorUi : public source2sdk::client::C_PointClientUIWorldPanel
+        {
+        public:
+            bool m_bBeenEnabled; // 0xc10            
+            bool m_bHide; // 0xc11            
+            uint8_t _pad0c12[0x2]; // 0xc12
+            float m_flSeenTargetTime; // 0xc14            
+            source2sdk::client::C_PointClientUIWorldPanel* m_pTargetPanel; // 0xc18            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CPointOffScreenIndicatorUi because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CPointOffScreenIndicatorUi) == 0xc20);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CPointOffScreenIndicatorUi because it is not a standard-layout class
-    static_assert(sizeof(CPointOffScreenIndicatorUi) == 0xc20);
 };

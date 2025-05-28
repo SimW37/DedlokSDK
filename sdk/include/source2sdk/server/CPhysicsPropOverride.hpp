@@ -1,28 +1,33 @@
 #pragma once
-#include "source2sdk/server/CPhysicsProp.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CPhysicsProp.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xe28
-    // Has VTable
-    #pragma pack(push, 1)
-    class CPhysicsPropOverride : public server::CPhysicsProp
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xe28
+        // Has VTable
+        #pragma pack(push, 1)
+        class CPhysicsPropOverride : public source2sdk::server::CPhysicsProp
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CPhysicsPropOverride) == 0xe28);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CPhysicsPropOverride) == 0xe28);
 };

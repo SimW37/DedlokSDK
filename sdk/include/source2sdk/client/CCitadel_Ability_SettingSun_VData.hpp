@@ -1,47 +1,52 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/client/CBaseModifier.hpp"
 #include "source2sdk/client/CitadelAbilityVData.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x17d0
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CCitadel_Ability_SettingSun_VData : public client::CitadelAbilityVData
+    namespace client
     {
-    public:
-        // metadata: MPropertyStartGroup "Visuals"
-        // m_BeamTargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamTargetParticle;
-        char m_BeamTargetParticle[0xe0]; // 0x15f0        
-        // m_UnitTargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UnitTargetParticle;
-        char m_UnitTargetParticle[0xe0]; // 0x16d0        
-        // metadata: MPropertyStartGroup "Modifiers"
-        // m_SettingSunThinkerModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CBaseModifier> m_SettingSunThinkerModifier;
-        char m_SettingSunThinkerModifier[0x10]; // 0x17b0        
-        float m_flSSCameraPreviewOffset; // 0x17c0        
-        float m_flSSCameraPreviewSpeed; // 0x17c4        
-        float m_flSSCameraPreviewDistance; // 0x17c8        
-        [[maybe_unused]] std::uint8_t pad_0x17cc[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x17d0
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CCitadel_Ability_SettingSun_VData : public source2sdk::client::CitadelAbilityVData
+        {
+        public:
+            // metadata: MPropertyStartGroup "Visuals"
+            // m_BeamTargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamTargetParticle;
+            char m_BeamTargetParticle[0xe0]; // 0x15f0            
+            // m_UnitTargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_UnitTargetParticle;
+            char m_UnitTargetParticle[0xe0]; // 0x16d0            
+            // metadata: MPropertyStartGroup "Modifiers"
+            // m_SettingSunThinkerModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_SettingSunThinkerModifier;
+            char m_SettingSunThinkerModifier[0x10]; // 0x17b0            
+            float m_flSSCameraPreviewOffset; // 0x17c0            
+            float m_flSSCameraPreviewSpeed; // 0x17c4            
+            float m_flSSCameraPreviewDistance; // 0x17c8            
+            uint8_t _pad17cc[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_SettingSun_VData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_SettingSun_VData) == 0x17d0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_SettingSun_VData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_SettingSun_VData) == 0x17d0);
 };

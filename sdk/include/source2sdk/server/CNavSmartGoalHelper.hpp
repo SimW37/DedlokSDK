@@ -1,5 +1,6 @@
 #pragma once
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
 
@@ -8,30 +9,33 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x1
-    // Standard-layout class: true
-    // Size: 0x100
-    // Has VTable
-    #pragma pack(push, 1)
-    class CNavSmartGoalHelper
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x00[0xf8]; // 0x0
-        bool m_bExecuteQueuedGoal; // 0xf8        
-        [[maybe_unused]] std::uint8_t pad_0xf9[0x7];
+        // Registered alignment: unknown
+        // Alignment: 0x1
+        // Standard-layout class: true
+        // Size: 0x100
+        // Has VTable
+        #pragma pack(push, 1)
+        class CNavSmartGoalHelper
+        {
+        public:
+            uint8_t _pad0000[0xf8]; // 0x0
+            bool m_bExecuteQueuedGoal; // 0xf8            
+            uint8_t _pad00f9[0x7];
+            
+            // Datamap fields:
+            // void m_pNPC; // 0x8
+            // void m_pGoalAutoDoor; // 0x10
+            // void m_pGoalPrimary; // 0x20
+            // void m_pQueuedSmartGoal; // 0x30
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void m_pNPC; // 0x8
-        // void m_pGoalAutoDoor; // 0x10
-        // void m_pGoalPrimary; // 0x20
-        // void m_pQueuedSmartGoal; // 0x30
+        static_assert(offsetof(source2sdk::server::CNavSmartGoalHelper, m_bExecuteQueuedGoal) == 0xf8);
+        
+        static_assert(sizeof(source2sdk::server::CNavSmartGoalHelper) == 0x100);
     };
-    #pragma pack(pop)
-    
-    static_assert(offsetof(CNavSmartGoalHelper, m_bExecuteQueuedGoal) == 0xf8);
-    
-    static_assert(sizeof(CNavSmartGoalHelper) == 0x100);
 };

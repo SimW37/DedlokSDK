@@ -1,32 +1,37 @@
 #pragma once
-#include "source2sdk/client/C_CitadelBaseAbility.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_CitadelBaseAbility.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x10e0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Ability_Trapper_SpiderJar : public client::C_CitadelBaseAbility
+    namespace client
     {
-    public:
-        Vector m_vLaunchPosition; // 0xdc0        
-        QAngle m_qLaunchAngle; // 0xdcc        
-        bool m_bHasMadeSpiders; // 0xdd8        
-        [[maybe_unused]] std::uint8_t pad_0xdd9[0x307];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x10e0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Ability_Trapper_SpiderJar : public source2sdk::client::C_CitadelBaseAbility
+        {
+        public:
+            Vector m_vLaunchPosition; // 0xdc0            
+            QAngle m_qLaunchAngle; // 0xdcc            
+            bool m_bHasMadeSpiders; // 0xdd8            
+            uint8_t _pad0dd9[0x307];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_Trapper_SpiderJar because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Trapper_SpiderJar) == 0x10e0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_Trapper_SpiderJar because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Trapper_SpiderJar) == 0x10e0);
 };

@@ -1,37 +1,44 @@
 #pragma once
-#include "source2sdk/server/CCitadelBaseAbility.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelBaseAbility.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CBaseEntity;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xbe8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Ability_Rolling_FireBall : public server::CCitadelBaseAbility
+    namespace server
     {
-    public:
-        // m_hActiveProjectile has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseEntity> m_hActiveProjectile;
-        char m_hActiveProjectile[0x4]; // 0xba0        
-        [[maybe_unused]] std::uint8_t pad_0xba4[0x44];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xbe8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Ability_Rolling_FireBall : public source2sdk::server::CCitadelBaseAbility
+        {
+        public:
+            // m_hActiveProjectile has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_hActiveProjectile;
+            char m_hActiveProjectile[0x4]; // 0xba0            
+            uint8_t _pad0ba4[0x44];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_Rolling_FireBall because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Rolling_FireBall) == 0xbe8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_Rolling_FireBall because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Rolling_FireBall) == 0xbe8);
 };

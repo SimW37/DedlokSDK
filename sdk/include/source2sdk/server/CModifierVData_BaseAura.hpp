@@ -1,47 +1,52 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/client/AuraCenterType_t.hpp"
 #include "source2sdk/client/AuraShapeType_t.hpp"
 #include "source2sdk/client/CModifierLevelFloat.hpp"
 #include "source2sdk/server/CBaseModifier.hpp"
 #include "source2sdk/server/CCitadelModifierVData.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x6a0
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CModifierVData_BaseAura : public server::CCitadelModifierVData
+    namespace server
     {
-    public:
-        client::AuraShapeType_t m_nAuraShapeType; // 0x660        
-        client::AuraCenterType_t m_nCenterType; // 0x664        
-        // metadata: MPropertySuppressExpr "m_nAuraShapeType != eSphere"
-        client::CModifierLevelFloat m_flAuraRadius; // 0x668        
-        // metadata: MPropertySuppressExpr "m_nAuraShapeType != eEntityBased"
-        client::CModifierLevelFloat m_flAuraEntityBoundsScale; // 0x678        
-        int32_t m_nAmbientParticleRadiusControlPoint; // 0x688        
-        [[maybe_unused]] std::uint8_t pad_0x68c[0x4]; // 0x68c
-        // metadata: MPropertyDescription "Aura - Modifier to Apply"
-        // metadata: MPropertyFriendlyName "Modifier Provided By Aura"
-        // m_modifierProvidedByAura has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<server::CBaseModifier> m_modifierProvidedByAura;
-        char m_modifierProvidedByAura[0x10]; // 0x690        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x6a0
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CModifierVData_BaseAura : public source2sdk::server::CCitadelModifierVData
+        {
+        public:
+            source2sdk::client::AuraShapeType_t m_nAuraShapeType; // 0x660            
+            source2sdk::client::AuraCenterType_t m_nCenterType; // 0x664            
+            // metadata: MPropertySuppressExpr "m_nAuraShapeType != eSphere"
+            source2sdk::client::CModifierLevelFloat m_flAuraRadius; // 0x668            
+            // metadata: MPropertySuppressExpr "m_nAuraShapeType != eEntityBased"
+            source2sdk::client::CModifierLevelFloat m_flAuraEntityBoundsScale; // 0x678            
+            std::int32_t m_nAmbientParticleRadiusControlPoint; // 0x688            
+            uint8_t _pad068c[0x4]; // 0x68c
+            // metadata: MPropertyDescription "Aura - Modifier to Apply"
+            // metadata: MPropertyFriendlyName "Modifier Provided By Aura"
+            // m_modifierProvidedByAura has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_modifierProvidedByAura;
+            char m_modifierProvidedByAura[0x10]; // 0x690            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CModifierVData_BaseAura because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CModifierVData_BaseAura) == 0x6a0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CModifierVData_BaseAura because it is not a standard-layout class
-    static_assert(sizeof(CModifierVData_BaseAura) == 0x6a0);
 };

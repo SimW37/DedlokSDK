@@ -1,83 +1,88 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/client/CCitadelModifier.hpp"
 #include "source2sdk/client/CitadelAbilityVData.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1b38
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CCitadel_Ability_Bull_LeapVData : public client::CitadelAbilityVData
+    namespace client
     {
-    public:
-        CPiecewiseCurve m_CrashSpeedScaleCurve; // 0x15f0        
-        // metadata: MPropertyStartGroup "Modifiers"
-        // m_ActiveModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_ActiveModifier;
-        char m_ActiveModifier[0x10]; // 0x1630        
-        // m_BoostModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_BoostModifier;
-        char m_BoostModifier[0x10]; // 0x1640        
-        // m_CrashModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_CrashModifier;
-        char m_CrashModifier[0x10]; // 0x1650        
-        // m_ImmunityModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_ImmunityModifier;
-        char m_ImmunityModifier[0x10]; // 0x1660        
-        // m_LandingBonusesModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_LandingBonusesModifier;
-        char m_LandingBonusesModifier[0x10]; // 0x1670        
-        // metadata: MPropertyStartGroup "Visuals"
-        // m_TakeOffParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TakeOffParticle;
-        char m_TakeOffParticle[0xe0]; // 0x1680        
-        // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-        char m_ImpactParticle[0xe0]; // 0x1760        
-        // m_AoEPreviewParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle;
-        char m_AoEPreviewParticle[0xe0]; // 0x1840        
-        // m_HoverParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HoverParticle;
-        char m_HoverParticle[0xe0]; // 0x1920        
-        // m_DivingPreviewParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DivingPreviewParticle;
-        char m_DivingPreviewParticle[0xe0]; // 0x1a00        
-        // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strCrashingSound; // 0x1ae0        
-        CSoundEventName m_strImpactSound; // 0x1af0        
-        // metadata: MPropertyStartGroup "GamePlay"
-        float m_flStartupTime; // 0x1b00        
-        float m_flForwardBoostSpeed; // 0x1b04        
-        float m_flUpBoostSpeed; // 0x1b08        
-        float m_flBoostTurnRate; // 0x1b0c        
-        float m_flHoverTime; // 0x1b10        
-        float m_flMinAimAngle; // 0x1b14        
-        float m_flBoostGain; // 0x1b18        
-        float m_flBoostTime; // 0x1b1c        
-        float m_flLandingTime; // 0x1b20        
-        float m_flCrashSpeed; // 0x1b24        
-        float m_flCrashBraceAnimTime; // 0x1b28        
-        float m_flHoverInputSpeedMax; // 0x1b2c        
-        float m_flHoverInputAcceleration; // 0x1b30        
-        float m_flHoverSpeedDecay; // 0x1b34        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1b38
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CCitadel_Ability_Bull_LeapVData : public source2sdk::client::CitadelAbilityVData
+        {
+        public:
+            CPiecewiseCurve m_CrashSpeedScaleCurve; // 0x15f0            
+            // metadata: MPropertyStartGroup "Modifiers"
+            // m_ActiveModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ActiveModifier;
+            char m_ActiveModifier[0x10]; // 0x1630            
+            // m_BoostModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BoostModifier;
+            char m_BoostModifier[0x10]; // 0x1640            
+            // m_CrashModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_CrashModifier;
+            char m_CrashModifier[0x10]; // 0x1650            
+            // m_ImmunityModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ImmunityModifier;
+            char m_ImmunityModifier[0x10]; // 0x1660            
+            // m_LandingBonusesModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_LandingBonusesModifier;
+            char m_LandingBonusesModifier[0x10]; // 0x1670            
+            // metadata: MPropertyStartGroup "Visuals"
+            // m_TakeOffParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TakeOffParticle;
+            char m_TakeOffParticle[0xe0]; // 0x1680            
+            // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
+            char m_ImpactParticle[0xe0]; // 0x1760            
+            // m_AoEPreviewParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle;
+            char m_AoEPreviewParticle[0xe0]; // 0x1840            
+            // m_HoverParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HoverParticle;
+            char m_HoverParticle[0xe0]; // 0x1920            
+            // m_DivingPreviewParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DivingPreviewParticle;
+            char m_DivingPreviewParticle[0xe0]; // 0x1a00            
+            // metadata: MPropertyStartGroup "Sounds"
+            CSoundEventName m_strCrashingSound; // 0x1ae0            
+            CSoundEventName m_strImpactSound; // 0x1af0            
+            // metadata: MPropertyStartGroup "GamePlay"
+            float m_flStartupTime; // 0x1b00            
+            float m_flForwardBoostSpeed; // 0x1b04            
+            float m_flUpBoostSpeed; // 0x1b08            
+            float m_flBoostTurnRate; // 0x1b0c            
+            float m_flHoverTime; // 0x1b10            
+            float m_flMinAimAngle; // 0x1b14            
+            float m_flBoostGain; // 0x1b18            
+            float m_flBoostTime; // 0x1b1c            
+            float m_flLandingTime; // 0x1b20            
+            float m_flCrashSpeed; // 0x1b24            
+            float m_flCrashBraceAnimTime; // 0x1b28            
+            float m_flHoverInputSpeedMax; // 0x1b2c            
+            float m_flHoverInputAcceleration; // 0x1b30            
+            float m_flHoverSpeedDecay; // 0x1b34            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_Bull_LeapVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bull_LeapVData) == 0x1b38);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_Bull_LeapVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Bull_LeapVData) == 0x1b38);
 };

@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/animlib/CNmPoseTask.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/animlib/CNmPoseTask.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: animlib
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::animlib
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x38
-    // Has VTable
-    #pragma pack(push, 1)
-    class CNmCachedPoseReadTask : public animlib::CNmPoseTask
+    namespace animlib
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x30[0x8];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x38
+        // Has VTable
+        #pragma pack(push, 1)
+        class CNmCachedPoseReadTask : public source2sdk::animlib::CNmPoseTask
+        {
+        public:
+            uint8_t _pad0030[0x8];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::animlib::CNmCachedPoseReadTask) == 0x38);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CNmCachedPoseReadTask) == 0x38);
 };

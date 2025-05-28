@@ -1,33 +1,38 @@
 #pragma once
-#include "source2sdk/server/CCitadel_Ability_PrimaryWeaponVData.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadel_Ability_PrimaryWeaponVData.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1650
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CCitadel_Ability_ShivWeapon_VData : public server::CCitadel_Ability_PrimaryWeaponVData
+    namespace server
     {
-    public:
-        // metadata: MPropertyStartGroup "+Gun Properties"
-        float m_flPushForce; // 0x1648        
-        [[maybe_unused]] std::uint8_t pad_0x164c[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1650
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CCitadel_Ability_ShivWeapon_VData : public source2sdk::server::CCitadel_Ability_PrimaryWeaponVData
+        {
+        public:
+            // metadata: MPropertyStartGroup "+Gun Properties"
+            float m_flPushForce; // 0x1648            
+            uint8_t _pad164c[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_ShivWeapon_VData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ShivWeapon_VData) == 0x1650);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_ShivWeapon_VData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_ShivWeapon_VData) == 0x1650);
 };

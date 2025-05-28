@@ -1,28 +1,33 @@
 #pragma once
-#include "source2sdk/server/CDynamicProp.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CDynamicProp.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xd88
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_ShopProp : public server::CDynamicProp
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xd88
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_ShopProp : public source2sdk::server::CDynamicProp
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_ShopProp) == 0xd88);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_ShopProp) == 0xd88);
 };

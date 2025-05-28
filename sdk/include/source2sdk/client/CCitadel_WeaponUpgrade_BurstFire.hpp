@@ -1,34 +1,39 @@
 #pragma once
-#include "source2sdk/client/CCitadel_Item.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadel_Item.hpp"
+#include "source2sdk/entity2/GameTime_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xe08
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "GameTime_t m_nFastFireEndTime"
-    #pragma pack(push, 1)
-    class CCitadel_WeaponUpgrade_BurstFire : public client::CCitadel_Item
+    namespace client
     {
-    public:
-        // metadata: MNetworkEnable
-        entity2::GameTime_t m_nFastFireEndTime; // 0xdc0        
-        [[maybe_unused]] std::uint8_t pad_0xdc4[0x44];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xe08
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "GameTime_t m_nFastFireEndTime"
+        #pragma pack(push, 1)
+        class CCitadel_WeaponUpgrade_BurstFire : public source2sdk::client::CCitadel_Item
+        {
+        public:
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTime_t m_nFastFireEndTime; // 0xdc0            
+            uint8_t _pad0dc4[0x44];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_WeaponUpgrade_BurstFire because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_WeaponUpgrade_BurstFire) == 0xe08);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_WeaponUpgrade_BurstFire because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_WeaponUpgrade_BurstFire) == 0xe08);
 };

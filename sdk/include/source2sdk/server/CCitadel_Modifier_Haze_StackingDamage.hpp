@@ -1,31 +1,36 @@
 #pragma once
-#include "source2sdk/server/CCitadelModifier.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelModifier.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x188
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_Haze_StackingDamage : public server::CCitadelModifier
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0xc0]; // 0xc0
-        int32_t m_nTotalProcs; // 0x180        
-        [[maybe_unused]] std::uint8_t pad_0x184[0x4];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x188
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_Haze_StackingDamage : public source2sdk::server::CCitadelModifier
+        {
+        public:
+            uint8_t _pad00c0[0xc0]; // 0xc0
+            std::int32_t m_nTotalProcs; // 0x180            
+            uint8_t _pad0184[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Modifier_Haze_StackingDamage because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Haze_StackingDamage) == 0x188);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Modifier_Haze_StackingDamage because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Haze_StackingDamage) == 0x188);
 };

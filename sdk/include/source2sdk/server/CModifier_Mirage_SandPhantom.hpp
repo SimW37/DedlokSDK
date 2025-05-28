@@ -1,36 +1,41 @@
 #pragma once
-#include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/server/CCitadelModifier.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/ParticleIndex_t.hpp"
+#include "source2sdk/server/CCitadelModifier.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x168
-    // Has VTable
-    #pragma pack(push, 1)
-    class CModifier_Mirage_SandPhantom : public server::CCitadelModifier
+    namespace server
     {
-    public:
-        client::ParticleIndex_t m_particleStart; // 0xc0        
-        client::ParticleIndex_t m_particleEnd; // 0xc4        
-        client::ParticleIndex_t m_particleTrail; // 0xc8        
-        Vector m_vecStartPosition; // 0xcc        
-        float m_flStartDelay; // 0xd8        
-        Vector m_vecApplyOffset; // 0xdc        
-        [[maybe_unused]] std::uint8_t pad_0xe8[0x80];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x168
+        // Has VTable
+        #pragma pack(push, 1)
+        class CModifier_Mirage_SandPhantom : public source2sdk::server::CCitadelModifier
+        {
+        public:
+            source2sdk::client::ParticleIndex_t m_particleStart; // 0xc0            
+            source2sdk::client::ParticleIndex_t m_particleEnd; // 0xc4            
+            source2sdk::client::ParticleIndex_t m_particleTrail; // 0xc8            
+            Vector m_vecStartPosition; // 0xcc            
+            float m_flStartDelay; // 0xd8            
+            Vector m_vecApplyOffset; // 0xdc            
+            uint8_t _pad00e8[0x80];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CModifier_Mirage_SandPhantom because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CModifier_Mirage_SandPhantom) == 0x168);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CModifier_Mirage_SandPhantom because it is not a standard-layout class
-    static_assert(sizeof(CModifier_Mirage_SandPhantom) == 0x168);
 };

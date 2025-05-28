@@ -1,38 +1,43 @@
 #pragma once
-#include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
-#include "source2sdk/server/CitadelAbilityVData.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
+#include "source2sdk/server/CitadelAbilityVData.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x16d8
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CAbilityShivDeferDamageVData : public server::CitadelAbilityVData
+    namespace server
     {
-    public:
-        // metadata: MPropertyStartGroup "Visuals"
-        // m_ActiveCastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ActiveCastParticle;
-        char m_ActiveCastParticle[0xe0]; // 0x15f0        
-        // metadata: MPropertyStartGroup "+Defer Properties"
-        float m_flDeferredDamageApplicationInterval; // 0x16d0        
-        [[maybe_unused]] std::uint8_t pad_0x16d4[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x16d8
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CAbilityShivDeferDamageVData : public source2sdk::server::CitadelAbilityVData
+        {
+        public:
+            // metadata: MPropertyStartGroup "Visuals"
+            // m_ActiveCastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ActiveCastParticle;
+            char m_ActiveCastParticle[0xe0]; // 0x15f0            
+            // metadata: MPropertyStartGroup "+Defer Properties"
+            float m_flDeferredDamageApplicationInterval; // 0x16d0            
+            uint8_t _pad16d4[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CAbilityShivDeferDamageVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CAbilityShivDeferDamageVData) == 0x16d8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CAbilityShivDeferDamageVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityShivDeferDamageVData) == 0x16d8);
 };

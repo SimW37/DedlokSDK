@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/client/CCitadel_Modifier_Sleep.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadel_Modifier_Sleep.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x200
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_SleepDagger_Asleep : public client::CCitadel_Modifier_Sleep
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x140];
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x200
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_SleepDagger_Asleep : public source2sdk::client::CCitadel_Modifier_Sleep
+        {
+        public:
+            uint8_t _pad00c0[0x140];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_SleepDagger_Asleep) == 0x200);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_Modifier_SleepDagger_Asleep) == 0x200);
 };

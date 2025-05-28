@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CBaseAnimGraph.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseAnimGraph.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xac0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_PickupItemSpawner : public server::CBaseAnimGraph
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xab8[0x8];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xac0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_PickupItemSpawner : public source2sdk::server::CBaseAnimGraph
+        {
+        public:
+            uint8_t _pad0ab8[0x8];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_PickupItemSpawner) == 0xac0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_PickupItemSpawner) == 0xac0);
 };

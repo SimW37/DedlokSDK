@@ -1,41 +1,46 @@
 #pragma once
-#include "source2sdk/server/CCitadelModifier.hpp"
-#include "source2sdk/server/CCitadelModifierVData.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelModifier.hpp"
+#include "source2sdk/server/CCitadelModifierVData.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x680
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CCitadelModifierItemPickupTimerVData : public server::CCitadelModifierVData
+    namespace server
     {
-    public:
-        // metadata: MPropertyGroupName "Timers"
-        float m_TimerToSilence; // 0x660        
-        float m_SilenceDuration; // 0x664        
-        // metadata: MPropertyStartGroup "Modifiers"
-        // m_SilenceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<server::CCitadelModifier> m_SilenceModifier;
-        char m_SilenceModifier[0x10]; // 0x668        
-        // metadata: MPropertyStartGroup "Gameplay"
-        bool m_bIsIdolPickup; // 0x678        
-        [[maybe_unused]] std::uint8_t pad_0x679[0x7];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x680
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CCitadelModifierItemPickupTimerVData : public source2sdk::server::CCitadelModifierVData
+        {
+        public:
+            // metadata: MPropertyGroupName "Timers"
+            float m_TimerToSilence; // 0x660            
+            float m_SilenceDuration; // 0x664            
+            // metadata: MPropertyStartGroup "Modifiers"
+            // m_SilenceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SilenceModifier;
+            char m_SilenceModifier[0x10]; // 0x668            
+            // metadata: MPropertyStartGroup "Gameplay"
+            bool m_bIsIdolPickup; // 0x678            
+            uint8_t _pad0679[0x7];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadelModifierItemPickupTimerVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadelModifierItemPickupTimerVData) == 0x680);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadelModifierItemPickupTimerVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadelModifierItemPickupTimerVData) == 0x680);
 };

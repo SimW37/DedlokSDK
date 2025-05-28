@@ -1,39 +1,46 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
-#include "source2sdk/server/CCitadel_Modifier_Invis.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/server/CCitadel_Modifier_Invis.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CCitadelPlayerPawn;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CCitadelPlayerPawn;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x2c8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_LurkersAmbush_Invis : public server::CCitadel_Modifier_Invis
+    namespace server
     {
-    public:
-        // m_mapStartLookTime has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlOrderedMap<server::CCitadelPlayerPawn*,entity2::GameTime_t> m_mapStartLookTime;
-        char m_mapStartLookTime[0x28]; // 0x298        
-        entity2::GameTime_t m_flStartSpotted; // 0x2c0        
-        [[maybe_unused]] std::uint8_t pad_0x2c4[0x4];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x2c8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_LurkersAmbush_Invis : public source2sdk::server::CCitadel_Modifier_Invis
+        {
+        public:
+            // m_mapStartLookTime has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlOrderedMap<source2sdk::server::CCitadelPlayerPawn*,source2sdk::entity2::GameTime_t> m_mapStartLookTime;
+            char m_mapStartLookTime[0x28]; // 0x298            
+            source2sdk::entity2::GameTime_t m_flStartSpotted; // 0x2c0            
+            uint8_t _pad02c4[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Modifier_LurkersAmbush_Invis because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_LurkersAmbush_Invis) == 0x2c8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Modifier_LurkersAmbush_Invis because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_LurkersAmbush_Invis) == 0x2c8);
 };

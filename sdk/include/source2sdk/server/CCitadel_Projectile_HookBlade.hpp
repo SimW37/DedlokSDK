@@ -1,30 +1,35 @@
 #pragma once
-#include "source2sdk/server/CCitadelTrackedProjectile.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelTrackedProjectile.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x8b8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Projectile_HookBlade : public server::CCitadelTrackedProjectile
+    namespace server
     {
-    public:
-        bool bIsReturning; // 0x8b0        
-        [[maybe_unused]] std::uint8_t pad_0x8b1[0x7];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x8b8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Projectile_HookBlade : public source2sdk::server::CCitadelTrackedProjectile
+        {
+        public:
+            bool bIsReturning; // 0x8b0            
+            uint8_t _pad08b1[0x7];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Projectile_HookBlade because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_HookBlade) == 0x8b8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Projectile_HookBlade because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Projectile_HookBlade) == 0x8b8);
 };

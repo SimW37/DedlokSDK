@@ -1,43 +1,50 @@
 #pragma once
-#include "source2sdk/client/CCitadelAnimatingModelEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadelAnimatingModelEntity.hpp"
+namespace source2sdk
+{
+    namespace client
+    {
+        struct C_CitadelBaseAbility;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    class C_CitadelBaseAbility;
-};
-
-namespace source2sdk::client
-{
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xcc0
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "CHandle< CCitadelBaseAbility> m_hAbility"
-    // static metadata: MNetworkVarNames "bool m_bFloating"
-    #pragma pack(push, 1)
-    class CCitadel_MobileResupply : public client::CCitadelAnimatingModelEntity
+    namespace client
     {
-    public:
-        // metadata: MNetworkEnable
-        // m_hAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<client::C_CitadelBaseAbility> m_hAbility;
-        char m_hAbility[0x4]; // 0xcb8        
-        // metadata: MNetworkEnable
-        bool m_bFloating; // 0xcbc        
-        [[maybe_unused]] std::uint8_t pad_0xcbd[0x3];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xcc0
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "CHandle< CCitadelBaseAbility> m_hAbility"
+        // static metadata: MNetworkVarNames "bool m_bFloating"
+        #pragma pack(push, 1)
+        class CCitadel_MobileResupply : public source2sdk::client::CCitadelAnimatingModelEntity
+        {
+        public:
+            // metadata: MNetworkEnable
+            // m_hAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::client::C_CitadelBaseAbility> m_hAbility;
+            char m_hAbility[0x4]; // 0xcb8            
+            // metadata: MNetworkEnable
+            bool m_bFloating; // 0xcbc            
+            uint8_t _pad0cbd[0x3];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_MobileResupply because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_MobileResupply) == 0xcc0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_MobileResupply because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_MobileResupply) == 0xcc0);
 };

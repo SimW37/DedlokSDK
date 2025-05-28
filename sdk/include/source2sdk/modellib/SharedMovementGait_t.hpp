@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,24 +9,27 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::modellib
+namespace source2sdk
 {
-    // Enumerator count: 6
-    // Alignment: 1
-    // Size: 0x1
-    enum class SharedMovementGait_t : std::uint8_t
+    namespace modellib
     {
-        // MPropertyFriendlyName "None"
-        eInvalid = 255,
-        // MPropertyFriendlyName "Slow"
-        eSlow = 0,
-        // MPropertyFriendlyName "Medium"
-        eMedium = 1,
-        // MPropertyFriendlyName "Fast"
-        eFast = 2,
-        // MPropertyFriendlyName "VeryFast"
-        eVeryFast = 3,
-        // MPropertySuppressEnumerator
-        eCount = 4,
+        // Enumerator count: 6
+        // Alignment: 1
+        // Size: 0x1
+        enum class SharedMovementGait_t : std::uint8_t
+        {
+            // MPropertyFriendlyName "None"
+            eInvalid = 0xff,
+            // MPropertyFriendlyName "Slow"
+            eSlow = 0x0,
+            // MPropertyFriendlyName "Medium"
+            eMedium = 0x1,
+            // MPropertyFriendlyName "Fast"
+            eFast = 0x2,
+            // MPropertyFriendlyName "VeryFast"
+            eVeryFast = 0x3,
+            // MPropertySuppressEnumerator
+            eCount = 0x4,
+        };
     };
 };

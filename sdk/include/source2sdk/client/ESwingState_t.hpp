@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,15 +9,18 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 3
-    // Alignment: 1
-    // Size: 0x1
-    enum class ESwingState_t : std::uint8_t
+    namespace client
     {
-        ESwingState_None = 0,
-        ESwingState_StartupDelay = 1,
-        ESwingState_Swinging = 2,
+        // Enumerator count: 3
+        // Alignment: 1
+        // Size: 0x1
+        enum class ESwingState_t : std::uint8_t
+        {
+            ESwingState_None = 0x0,
+            ESwingState_StartupDelay = 0x1,
+            ESwingState_Swinging = 0x2,
+        };
     };
 };

@@ -1,37 +1,42 @@
 #pragma once
-#include "source2sdk/client/CCitadelModifier.hpp"
-#include "source2sdk/client/CitadelItemVData.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadelModifier.hpp"
+#include "source2sdk/client/CitadelItemVData.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1688
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CCitadel_Item_TechCleaveVData : public client::CitadelItemVData
+    namespace client
     {
-    public:
-        // metadata: MPropertyGroupName "Modifiers"
-        // m_TechCleaveModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_TechCleaveModifier;
-        char m_TechCleaveModifier[0x10]; // 0x1668        
-        // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_sCleaveProcSound; // 0x1678        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x16a0
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CCitadel_Item_TechCleaveVData : public source2sdk::client::CitadelItemVData
+        {
+        public:
+            // metadata: MPropertyGroupName "Modifiers"
+            // m_TechCleaveModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_TechCleaveModifier;
+            char m_TechCleaveModifier[0x10]; // 0x1680            
+            // metadata: MPropertyStartGroup "Sounds"
+            CSoundEventName m_sCleaveProcSound; // 0x1690            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Item_TechCleaveVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Item_TechCleaveVData) == 0x16a0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Item_TechCleaveVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Item_TechCleaveVData) == 0x1688);
 };

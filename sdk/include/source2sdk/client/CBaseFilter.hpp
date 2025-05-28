@@ -1,36 +1,41 @@
 #pragma once
-#include "source2sdk/client/CLogicalEntity.hpp"
-#include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CLogicalEntity.hpp"
+#include "source2sdk/entity2/CEntityIOOutput.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x638
-    // Has VTable
-    #pragma pack(push, 1)
-    class CBaseFilter : public client::CLogicalEntity
+    namespace client
     {
-    public:
-        bool m_bNegated; // 0x5e0        
-        [[maybe_unused]] std::uint8_t pad_0x5e1[0x7]; // 0x5e1
-        entity2::CEntityIOOutput m_OnPass; // 0x5e8        
-        entity2::CEntityIOOutput m_OnFail; // 0x610        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x638
+        // Has VTable
+        #pragma pack(push, 1)
+        class CBaseFilter : public source2sdk::client::CLogicalEntity
+        {
+        public:
+            bool m_bNegated; // 0x5e0            
+            uint8_t _pad05e1[0x7]; // 0x5e1
+            source2sdk::entity2::CEntityIOOutput m_OnPass; // 0x5e8            
+            source2sdk::entity2::CEntityIOOutput m_OnFail; // 0x610            
+            
+            // Datamap fields:
+            // void InputTestActivator; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void InputTestActivator; // 0x0
+        // Cannot assert offsets of fields in CBaseFilter because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CBaseFilter) == 0x638);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CBaseFilter because it is not a standard-layout class
-    static_assert(sizeof(CBaseFilter) == 0x638);
 };

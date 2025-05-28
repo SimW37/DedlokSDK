@@ -1,33 +1,38 @@
 #pragma once
-#include "source2sdk/pulse_runtime_lib/CPulseCell_BaseRequirement.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/pulse_runtime_lib/CPulseCell_BaseRequirement.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: pulse_runtime_lib
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::pulse_runtime_lib
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x48
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    // static metadata: MCellForDomain "BaseDomain"
-    // static metadata: MPulseCellMethodBindings
-    // static metadata: MPulseCellOutflowHookInfo "Äùí¯"
-    // static metadata: MPulseCellWithCustomDocNode
-    #pragma pack(push, 1)
-    class CPulseCell_IsRequirementValid : public pulse_runtime_lib::CPulseCell_BaseRequirement
+    namespace pulse_runtime_lib
     {
-    public:
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x48
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        // static metadata: MCellForDomain "BaseDomain"
+        // static metadata: MPulseCellMethodBindings
+        // static metadata: MPulseCellOutflowHookInfo "Ä≠òS¸"
+        // static metadata: MPulseCellWithCustomDocNode
+        #pragma pack(push, 1)
+        class CPulseCell_IsRequirementValid : public source2sdk::pulse_runtime_lib::CPulseCell_BaseRequirement
+        {
+        public:
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::pulse_runtime_lib::CPulseCell_IsRequirementValid) == 0x48);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CPulseCell_IsRequirementValid) == 0x48);
 };

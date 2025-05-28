@@ -1,32 +1,37 @@
 #pragma once
-#include "source2sdk/server/CServerOnlyPointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CServerOnlyPointEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x4f0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CInfoCoverPoint : public server::CServerOnlyPointEntity
+    namespace server
     {
-    public:
-        int32_t m_nGroupID; // 0x4e0        
-        int32_t m_nVisionRadius; // 0x4e4        
-        bool m_bAllowOffNav; // 0x4e8        
-        [[maybe_unused]] std::uint8_t pad_0x4e9[0x7];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x4f0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CInfoCoverPoint : public source2sdk::server::CServerOnlyPointEntity
+        {
+        public:
+            std::int32_t m_nGroupID; // 0x4e0            
+            std::int32_t m_nVisionRadius; // 0x4e4            
+            bool m_bAllowOffNav; // 0x4e8            
+            uint8_t _pad04e9[0x7];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CInfoCoverPoint because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CInfoCoverPoint) == 0x4f0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CInfoCoverPoint because it is not a standard-layout class
-    static_assert(sizeof(CInfoCoverPoint) == 0x4f0);
 };

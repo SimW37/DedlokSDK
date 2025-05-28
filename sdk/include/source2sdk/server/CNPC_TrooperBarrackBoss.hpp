@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CNPC_TrooperBoss.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CNPC_TrooperBoss.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1cc8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CNPC_TrooperBarrackBoss : public server::CNPC_TrooperBoss
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x1cc0[0x8];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1cd0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CNPC_TrooperBarrackBoss : public source2sdk::server::CNPC_TrooperBoss
+        {
+        public:
+            uint8_t _pad1cc0[0x10];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CNPC_TrooperBarrackBoss) == 0x1cd0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CNPC_TrooperBarrackBoss) == 0x1cc8);
 };

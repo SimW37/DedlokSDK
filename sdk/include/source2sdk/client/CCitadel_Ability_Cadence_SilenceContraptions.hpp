@@ -1,28 +1,33 @@
 #pragma once
-#include "source2sdk/client/CCitadelBaseDashCastAbility.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadelBaseDashCastAbility.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xe18
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Ability_Cadence_SilenceContraptions : public client::CCitadelBaseDashCastAbility
+    namespace client
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xe18
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Ability_Cadence_SilenceContraptions : public source2sdk::client::CCitadelBaseDashCastAbility
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Cadence_SilenceContraptions) == 0xe18);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_Ability_Cadence_SilenceContraptions) == 0xe18);
 };

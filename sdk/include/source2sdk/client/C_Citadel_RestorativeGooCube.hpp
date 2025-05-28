@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/client/CCitadelAnimatingModelEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadelAnimatingModelEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xcc0
-    // Has VTable
-    #pragma pack(push, 1)
-    class C_Citadel_RestorativeGooCube : public client::CCitadelAnimatingModelEntity
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xcb8[0x8];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xcc0
+        // Has VTable
+        #pragma pack(push, 1)
+        class C_Citadel_RestorativeGooCube : public source2sdk::client::CCitadelAnimatingModelEntity
+        {
+        public:
+            uint8_t _pad0cb8[0x8];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::C_Citadel_RestorativeGooCube) == 0xcc0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(C_Citadel_RestorativeGooCube) == 0xcc0);
 };

@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CCitadel_Ability_PrimaryWeapon.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadel_Ability_PrimaryWeapon.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xca0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Ability_Nano_PrimaryWeapon : public server::CCitadel_Ability_PrimaryWeapon
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xc60[0x40];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xca0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Ability_Nano_PrimaryWeapon : public source2sdk::server::CCitadel_Ability_PrimaryWeapon
+        {
+        public:
+            uint8_t _pad0c60[0x40];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Nano_PrimaryWeapon) == 0xca0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_Ability_Nano_PrimaryWeapon) == 0xca0);
 };

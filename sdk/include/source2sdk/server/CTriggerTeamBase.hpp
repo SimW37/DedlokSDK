@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CBaseTrigger.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseTrigger.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x9c8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CTriggerTeamBase : public server::CBaseTrigger
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x990[0x38];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x9c8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CTriggerTeamBase : public source2sdk::server::CBaseTrigger
+        {
+        public:
+            uint8_t _pad0990[0x38];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CTriggerTeamBase) == 0x9c8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CTriggerTeamBase) == 0x9c8);
 };

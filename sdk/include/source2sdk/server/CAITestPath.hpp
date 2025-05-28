@@ -1,30 +1,35 @@
 #pragma once
-#include "source2sdk/server/CPointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CPointEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x4f0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CAITestPath : public server::CPointEntity
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x4e0[0x8]; // 0x4e0
-        CUtlSymbolLarge m_strNextPath; // 0x4e8        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x4f0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CAITestPath : public source2sdk::server::CPointEntity
+        {
+        public:
+            uint8_t _pad04e0[0x8]; // 0x4e0
+            CUtlSymbolLarge m_strNextPath; // 0x4e8            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CAITestPath because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CAITestPath) == 0x4f0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CAITestPath because it is not a standard-layout class
-    static_assert(sizeof(CAITestPath) == 0x4f0);
 };

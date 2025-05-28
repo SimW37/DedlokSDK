@@ -1,30 +1,35 @@
 #pragma once
-#include "source2sdk/server/CCitadel_Modifier_Out_Of_Combat_Health_Regen.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadel_Modifier_Out_Of_Combat_Health_Regen.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x190
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_Apex_Watcher : public server::CCitadel_Modifier_Out_Of_Combat_Health_Regen
+    namespace server
     {
-    public:
-        bool m_bShouldEnableBuff; // 0x148        
-        [[maybe_unused]] std::uint8_t pad_0x149[0x47];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x190
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_Apex_Watcher : public source2sdk::server::CCitadel_Modifier_Out_Of_Combat_Health_Regen
+        {
+        public:
+            bool m_bShouldEnableBuff; // 0x148            
+            uint8_t _pad0149[0x47];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Modifier_Apex_Watcher because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Apex_Watcher) == 0x190);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Modifier_Apex_Watcher because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Apex_Watcher) == 0x190);
 };

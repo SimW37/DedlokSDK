@@ -1,34 +1,39 @@
 #pragma once
-#include "source2sdk/server/CBaseModelEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseModelEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x7d8
-    // Has VTable
-    // 
-    // static metadata: MNetworkIncludeByName "m_iTeamNum"
-    // static metadata: MNetworkVarNames "int m_iLane"
-    #pragma pack(push, 1)
-    class CAssignedLaneParticle : public server::CBaseModelEntity
+    namespace server
     {
-    public:
-        // metadata: MNetworkEnable
-        int32_t m_iLane; // 0x7d0        
-        [[maybe_unused]] std::uint8_t pad_0x7d4[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x7d8
+        // Has VTable
+        // 
+        // static metadata: MNetworkIncludeByName "m_iTeamNum"
+        // static metadata: MNetworkVarNames "int m_iLane"
+        #pragma pack(push, 1)
+        class CAssignedLaneParticle : public source2sdk::server::CBaseModelEntity
+        {
+        public:
+            // metadata: MNetworkEnable
+            std::int32_t m_iLane; // 0x7d0            
+            uint8_t _pad07d4[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CAssignedLaneParticle because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CAssignedLaneParticle) == 0x7d8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CAssignedLaneParticle because it is not a standard-layout class
-    static_assert(sizeof(CAssignedLaneParticle) == 0x7d8);
 };

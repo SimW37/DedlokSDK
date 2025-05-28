@@ -1,32 +1,37 @@
 #pragma once
-#include "source2sdk/client/C_CitadelBaseAbility.hpp"
-#include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_CitadelBaseAbility.hpp"
+#include "source2sdk/client/ParticleIndex_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xf08
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Ability_Lash_Flog : public client::C_CitadelBaseAbility
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xdc0[0x140]; // 0xdc0
-        client::ParticleIndex_t m_SandEffect; // 0xf00        
-        [[maybe_unused]] std::uint8_t pad_0xf04[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xf08
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Ability_Lash_Flog : public source2sdk::client::C_CitadelBaseAbility
+        {
+        public:
+            uint8_t _pad0dc0[0x140]; // 0xdc0
+            source2sdk::client::ParticleIndex_t m_SandEffect; // 0xf00            
+            uint8_t _pad0f04[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_Lash_Flog because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Lash_Flog) == 0xf08);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_Lash_Flog because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Lash_Flog) == 0xf08);
 };

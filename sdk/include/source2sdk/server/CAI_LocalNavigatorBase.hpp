@@ -1,30 +1,35 @@
 #pragma once
-#include "source2sdk/client/CAI_Component.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CAI_Component.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x4
-    // Standard-layout class: false
-    // Size: 0x50
-    // Has VTable
-    // Is Abstract
-    #pragma pack(push, 1)
-    class CAI_LocalNavigatorBase : public client::CAI_Component
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x40[0x10];
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x4
+        // Standard-layout class: false
+        // Size: 0x50
+        // Has VTable
+        // Is Abstract
+        #pragma pack(push, 1)
+        class CAI_LocalNavigatorBase : public source2sdk::client::CAI_Component
+        {
+        public:
+            uint8_t _pad0040[0x10];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CAI_LocalNavigatorBase) == 0x50);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CAI_LocalNavigatorBase) == 0x50);
 };

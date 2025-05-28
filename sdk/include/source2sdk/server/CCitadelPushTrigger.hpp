@@ -1,30 +1,35 @@
 #pragma once
-#include "source2sdk/server/CTriggerModifier.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CTriggerModifier.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x9b8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadelPushTrigger : public server::CTriggerModifier
+    namespace server
     {
-    public:
-        Vector m_vPush; // 0x9a0        
-        QAngle m_angPushEntitySpace; // 0x9ac        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x9b8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadelPushTrigger : public source2sdk::server::CTriggerModifier
+        {
+        public:
+            Vector m_vPush; // 0x9a0            
+            QAngle m_angPushEntitySpace; // 0x9ac            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadelPushTrigger because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadelPushTrigger) == 0x9b8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadelPushTrigger because it is not a standard-layout class
-    static_assert(sizeof(CCitadelPushTrigger) == 0x9b8);
 };

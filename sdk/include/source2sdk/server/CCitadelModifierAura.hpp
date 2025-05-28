@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CBaseModifierAura.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseModifierAura.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xe0
-    // Has VTable
-    // Is Abstract
-    #pragma pack(push, 1)
-    class CCitadelModifierAura : public server::CBaseModifierAura
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xe0
+        // Has VTable
+        // Is Abstract
+        #pragma pack(push, 1)
+        class CCitadelModifierAura : public source2sdk::server::CBaseModifierAura
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadelModifierAura) == 0xe0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadelModifierAura) == 0xe0);
 };

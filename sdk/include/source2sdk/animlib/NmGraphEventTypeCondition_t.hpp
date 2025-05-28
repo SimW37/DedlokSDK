@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,18 +9,21 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::animlib
+namespace source2sdk
 {
-    // Enumerator count: 6
-    // Alignment: 1
-    // Size: 0x1
-    enum class NmGraphEventTypeCondition_t : std::uint8_t
+    namespace animlib
     {
-        Entry = 0,
-        FullyInState = 1,
-        Exit = 2,
-        Timed = 3,
-        Generic = 4,
-        Any = 5,
+        // Enumerator count: 6
+        // Alignment: 1
+        // Size: 0x1
+        enum class NmGraphEventTypeCondition_t : std::uint8_t
+        {
+            Entry = 0x0,
+            FullyInState = 0x1,
+            Exit = 0x2,
+            Timed = 0x3,
+            Generic = 0x4,
+            Any = 0x5,
+        };
     };
 };

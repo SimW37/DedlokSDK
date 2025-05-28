@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,18 +9,21 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 5
-    // Alignment: 1
-    // Size: 0x1
-    enum class EAbilityUpgradeTier : std::uint8_t
+    namespace client
     {
-        EAbilityUpgradeTier_Invalid = 0,
-        EAbilityUpgradeTier_1 = 1,
-        EAbilityUpgradeTier_2 = 2,
-        EAbilityUpgradeTier_3 = 3,
-        // MPropertySuppressEnumerator
-        EMaxAbilityUpgradeTier = 4,
+        // Enumerator count: 5
+        // Alignment: 1
+        // Size: 0x1
+        enum class EAbilityUpgradeTier : std::uint8_t
+        {
+            EAbilityUpgradeTier_Invalid = 0x0,
+            EAbilityUpgradeTier_1 = 0x1,
+            EAbilityUpgradeTier_2 = 0x2,
+            EAbilityUpgradeTier_3 = 0x3,
+            // MPropertySuppressEnumerator
+            EMaxAbilityUpgradeTier = 0x4,
+        };
     };
 };

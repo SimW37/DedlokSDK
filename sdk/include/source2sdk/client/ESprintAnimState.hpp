@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,18 +9,21 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 3
-    // Alignment: 4
-    // Size: 0x4
-    enum class ESprintAnimState : std::uint32_t
+    namespace client
     {
-        // MAlternateSemanticName
-        IN_COMBAT_RUN = 0x0,
-        // MAlternateSemanticName
-        OUT_OF_COMBAT_RUN = 0x1,
-        // MAlternateSemanticName
-        OUT_OF_COMBAT_SPRINT = 0x2,
+        // Enumerator count: 3
+        // Alignment: 4
+        // Size: 0x4
+        enum class ESprintAnimState : std::uint32_t
+        {
+            // MAlternateSemanticName
+            IN_COMBAT_RUN = 0x0,
+            // MAlternateSemanticName
+            OUT_OF_COMBAT_RUN = 0x1,
+            // MAlternateSemanticName
+            OUT_OF_COMBAT_SPRINT = 0x2,
+        };
     };
 };

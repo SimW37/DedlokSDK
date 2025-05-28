@@ -1,30 +1,35 @@
 #pragma once
-#include "source2sdk/server/CCitadelBaseAbility.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelBaseAbility.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xba8
-    // Has VTable
-    // Is Abstract
-    #pragma pack(push, 1)
-    class CCitadelBaseYamatoAbility : public server::CCitadelBaseAbility
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xba0[0x8];
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xba8
+        // Has VTable
+        // Is Abstract
+        #pragma pack(push, 1)
+        class CCitadelBaseYamatoAbility : public source2sdk::server::CCitadelBaseAbility
+        {
+        public:
+            uint8_t _pad0ba0[0x8];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadelBaseYamatoAbility) == 0xba8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadelBaseYamatoAbility) == 0xba8);
 };

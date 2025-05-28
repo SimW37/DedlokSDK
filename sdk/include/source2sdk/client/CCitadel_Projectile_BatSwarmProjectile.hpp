@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/client/C_CitadelProjectile.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_CitadelProjectile.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xde0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Projectile_BatSwarmProjectile : public client::C_CitadelProjectile
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xaa0[0x340];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xde0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Projectile_BatSwarmProjectile : public source2sdk::client::C_CitadelProjectile
+        {
+        public:
+            uint8_t _pad0aa0[0x340];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Projectile_BatSwarmProjectile) == 0xde0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_Projectile_BatSwarmProjectile) == 0xde0);
 };

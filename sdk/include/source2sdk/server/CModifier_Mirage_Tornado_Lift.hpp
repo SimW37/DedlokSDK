@@ -1,31 +1,36 @@
 #pragma once
-#include "source2sdk/server/CCitadelModifier.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelModifier.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x158
-    // Has VTable
-    #pragma pack(push, 1)
-    class CModifier_Mirage_Tornado_Lift : public server::CCitadelModifier
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x80]; // 0xc0
-        Vector m_vecFloatDest; // 0x140        
-        Vector m_vecStartingPos; // 0x14c        
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x158
+        // Has VTable
+        #pragma pack(push, 1)
+        class CModifier_Mirage_Tornado_Lift : public source2sdk::server::CCitadelModifier
+        {
+        public:
+            uint8_t _pad00c0[0x80]; // 0xc0
+            Vector m_vecFloatDest; // 0x140            
+            Vector m_vecStartingPos; // 0x14c            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CModifier_Mirage_Tornado_Lift because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CModifier_Mirage_Tornado_Lift) == 0x158);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CModifier_Mirage_Tornado_Lift because it is not a standard-layout class
-    static_assert(sizeof(CModifier_Mirage_Tornado_Lift) == 0x158);
 };

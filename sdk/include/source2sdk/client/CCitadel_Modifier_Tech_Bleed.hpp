@@ -1,31 +1,36 @@
 #pragma once
-#include "source2sdk/client/CCitadelModifier.hpp"
-#include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadelModifier.hpp"
+#include "source2sdk/client/ParticleIndex_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x148
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_Tech_Bleed : public client::CCitadelModifier
+    namespace client
     {
-    public:
-        client::ParticleIndex_t m_hRingEffect; // 0xc0        
-        [[maybe_unused]] std::uint8_t pad_0xc4[0x84];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x148
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_Tech_Bleed : public source2sdk::client::CCitadelModifier
+        {
+        public:
+            source2sdk::client::ParticleIndex_t m_hRingEffect; // 0xc0            
+            uint8_t _pad00c4[0x84];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Modifier_Tech_Bleed because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Tech_Bleed) == 0x148);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Modifier_Tech_Bleed because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Tech_Bleed) == 0x148);
 };

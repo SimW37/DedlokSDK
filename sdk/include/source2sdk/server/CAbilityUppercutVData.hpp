@@ -1,48 +1,53 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/client/AttackData_t.hpp"
 #include "source2sdk/server/CAbilityMeleeVData.hpp"
 #include "source2sdk/server/CCitadelModifier.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1b88
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CAbilityUppercutVData : public server::CAbilityMeleeVData
+    namespace server
     {
-    public:
-        client::AttackData_t m_UppercutAttackData; // 0x1620        
-        // metadata: MPropertyStartGroup "Modifiers"
-        // m_UppercutModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<server::CCitadelModifier> m_UppercutModifier;
-        char m_UppercutModifier[0x10]; // 0x1b48        
-        // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<server::CCitadelModifier> m_BuffModifier;
-        char m_BuffModifier[0x10]; // 0x1b58        
-        // m_ClipModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<server::CCitadelModifier> m_ClipModifier;
-        char m_ClipModifier[0x10]; // 0x1b68        
-        // metadata: MPropertyStartGroup "Gameplay"
-        float m_flMaxPitchUp; // 0x1b78        
-        float m_flTossDurationEnemy; // 0x1b7c        
-        float m_flTossDurationFriendly; // 0x1b80        
-        [[maybe_unused]] std::uint8_t pad_0x1b84[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1b88
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CAbilityUppercutVData : public source2sdk::server::CAbilityMeleeVData
+        {
+        public:
+            source2sdk::client::AttackData_t m_UppercutAttackData; // 0x1620            
+            // metadata: MPropertyStartGroup "Modifiers"
+            // m_UppercutModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_UppercutModifier;
+            char m_UppercutModifier[0x10]; // 0x1b48            
+            // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BuffModifier;
+            char m_BuffModifier[0x10]; // 0x1b58            
+            // m_ClipModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ClipModifier;
+            char m_ClipModifier[0x10]; // 0x1b68            
+            // metadata: MPropertyStartGroup "Gameplay"
+            float m_flMaxPitchUp; // 0x1b78            
+            float m_flTossDurationEnemy; // 0x1b7c            
+            float m_flTossDurationFriendly; // 0x1b80            
+            uint8_t _pad1b84[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CAbilityUppercutVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CAbilityUppercutVData) == 0x1b88);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CAbilityUppercutVData because it is not a standard-layout class
-    static_assert(sizeof(CAbilityUppercutVData) == 0x1b88);
 };

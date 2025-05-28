@@ -1,37 +1,42 @@
 #pragma once
-#include "source2sdk/server/CAI_CitadelNPC_GraphController.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CAI_CitadelNPC_GraphController.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xfb8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CNPC_FlyingDrone_GraphController : public server::CAI_CitadelNPC_GraphController
+    namespace server
     {
-    public:
-        // m_flPanel1 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CAnimGraphParamOptionalRef<float> m_flPanel1;
-        char m_flPanel1[0x20]; // 0xf58        
-        // m_bUnpackInstant has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CAnimGraphParamOptionalRef<bool> m_bUnpackInstant;
-        char m_bUnpackInstant[0x20]; // 0xf78        
-        // m_flVelocity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CAnimGraphParamOptionalRef<float> m_flVelocity;
-        char m_flVelocity[0x20]; // 0xf98        
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xfb8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CNPC_FlyingDrone_GraphController : public source2sdk::server::CAI_CitadelNPC_GraphController
+        {
+        public:
+            // m_flPanel1 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CAnimGraphParamOptionalRef<float> m_flPanel1;
+            char m_flPanel1[0x20]; // 0xf58            
+            // m_bUnpackInstant has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CAnimGraphParamOptionalRef<bool> m_bUnpackInstant;
+            char m_bUnpackInstant[0x20]; // 0xf78            
+            // m_flVelocity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CAnimGraphParamOptionalRef<float> m_flVelocity;
+            char m_flVelocity[0x20]; // 0xf98            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CNPC_FlyingDrone_GraphController because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CNPC_FlyingDrone_GraphController) == 0xfb8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CNPC_FlyingDrone_GraphController because it is not a standard-layout class
-    static_assert(sizeof(CNPC_FlyingDrone_GraphController) == 0xfb8);
 };

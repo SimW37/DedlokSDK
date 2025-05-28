@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,20 +9,23 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 4
-    // Alignment: 2
-    // Size: 0x2
-    enum class EAbilityRequirements_t : std::uint16_t
+    namespace client
     {
-        // MPropertyFriendlyName "None"
-        ERequirementNone = 0x0,
-        // MPropertyFriendlyName "Requires Charges Ability"
-        ERequirementChargedAbility = 0x1,
-        // MPropertyFriendlyName "Requires Channelled Abillity"
-        ERequirementChannelledAbility = 0x2,
-        // MPropertyFriendlyName "Requires Non-Charges ULT"
-        ERequirementNonChargedULT = 0x4,
+        // Enumerator count: 4
+        // Alignment: 2
+        // Size: 0x2
+        enum class EAbilityRequirements_t : std::uint16_t
+        {
+            // MPropertyFriendlyName "None"
+            ERequirementNone = 0x0,
+            // MPropertyFriendlyName "Requires Charges Ability"
+            ERequirementChargedAbility = 0x1,
+            // MPropertyFriendlyName "Requires Channelled Abillity"
+            ERequirementChannelledAbility = 0x2,
+            // MPropertyFriendlyName "Requires Non-Charges ULT"
+            ERequirementNonChargedULT = 0x4,
+        };
     };
 };

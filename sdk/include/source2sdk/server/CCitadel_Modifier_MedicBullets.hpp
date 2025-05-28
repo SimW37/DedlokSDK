@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CCitadel_Modifier_BaseBulletPreRollProc.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadel_Modifier_BaseBulletPreRollProc.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x218
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_MedicBullets : public server::CCitadel_Modifier_BaseBulletPreRollProc
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x198[0x80];
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x218
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_MedicBullets : public source2sdk::server::CCitadel_Modifier_BaseBulletPreRollProc
+        {
+        public:
+            uint8_t _pad0198[0x80];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_MedicBullets) == 0x218);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_Modifier_MedicBullets) == 0x218);
 };

@@ -1,30 +1,35 @@
 #pragma once
-#include "source2sdk/server/CCitadelTrackedProjectile.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelTrackedProjectile.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x8c0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadelPositionHomingProjectile : public server::CCitadelTrackedProjectile
+    namespace server
     {
-    public:
-        Vector m_vecHomingPosition; // 0x8b0        
-        [[maybe_unused]] std::uint8_t pad_0x8bc[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x8c0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadelPositionHomingProjectile : public source2sdk::server::CCitadelTrackedProjectile
+        {
+        public:
+            Vector m_vecHomingPosition; // 0x8b0            
+            uint8_t _pad08bc[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadelPositionHomingProjectile because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadelPositionHomingProjectile) == 0x8c0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadelPositionHomingProjectile because it is not a standard-layout class
-    static_assert(sizeof(CCitadelPositionHomingProjectile) == 0x8c0);
 };

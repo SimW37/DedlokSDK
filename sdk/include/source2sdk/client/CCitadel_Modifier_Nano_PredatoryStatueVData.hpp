@@ -1,64 +1,69 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/client/CCitadelModifier.hpp"
 #include "source2sdk/client/CCitadelModifierVData.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x9a0
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_Nano_PredatoryStatueVData : public client::CCitadelModifierVData
+    namespace client
     {
-    public:
-        // metadata: MPropertyStartGroup "Visuals"
-        // m_AOEParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEParticle;
-        char m_AOEParticle[0xe0]; // 0x660        
-        // m_EnabledParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnabledParticle;
-        char m_EnabledParticle[0xe0]; // 0x740        
-        // m_DrainParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DrainParticle;
-        char m_DrainParticle[0xe0]; // 0x820        
-        // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strEnabledSound; // 0x900        
-        CSoundEventName m_strEnabledLoopSound; // 0x910        
-        CSoundEventName m_strDisabledSound; // 0x920        
-        CSoundEventName m_strLaserHitSound; // 0x930        
-        CSoundEventName m_strLaserStartSound; // 0x940        
-        CSoundEventName m_strLaserLoopSound; // 0x950        
-        // metadata: MPropertyStartGroup "Modifiers"
-        // m_TargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_TargetModifier;
-        char m_TargetModifier[0x10]; // 0x960        
-        // m_RevealModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_RevealModifier;
-        char m_RevealModifier[0x10]; // 0x970        
-        // m_StatueInvis has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<client::CCitadelModifier> m_StatueInvis;
-        char m_StatueInvis[0x10]; // 0x980        
-        // metadata: MPropertyStartGroup "GamePlay"
-        float m_flNewTargetAttackTime; // 0x990        
-        float m_flMinRevealTime; // 0x994        
-        float m_flMinDebuffTime; // 0x998        
-        [[maybe_unused]] std::uint8_t pad_0x99c[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x9a0
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_Nano_PredatoryStatueVData : public source2sdk::client::CCitadelModifierVData
+        {
+        public:
+            // metadata: MPropertyStartGroup "Visuals"
+            // m_AOEParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEParticle;
+            char m_AOEParticle[0xe0]; // 0x660            
+            // m_EnabledParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnabledParticle;
+            char m_EnabledParticle[0xe0]; // 0x740            
+            // m_DrainParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DrainParticle;
+            char m_DrainParticle[0xe0]; // 0x820            
+            // metadata: MPropertyStartGroup "Sounds"
+            CSoundEventName m_strEnabledSound; // 0x900            
+            CSoundEventName m_strEnabledLoopSound; // 0x910            
+            CSoundEventName m_strDisabledSound; // 0x920            
+            CSoundEventName m_strLaserHitSound; // 0x930            
+            CSoundEventName m_strLaserStartSound; // 0x940            
+            CSoundEventName m_strLaserLoopSound; // 0x950            
+            // metadata: MPropertyStartGroup "Modifiers"
+            // m_TargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_TargetModifier;
+            char m_TargetModifier[0x10]; // 0x960            
+            // m_RevealModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_RevealModifier;
+            char m_RevealModifier[0x10]; // 0x970            
+            // m_StatueInvis has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_StatueInvis;
+            char m_StatueInvis[0x10]; // 0x980            
+            // metadata: MPropertyStartGroup "GamePlay"
+            float m_flNewTargetAttackTime; // 0x990            
+            float m_flMinRevealTime; // 0x994            
+            float m_flMinDebuffTime; // 0x998            
+            uint8_t _pad099c[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Modifier_Nano_PredatoryStatueVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Nano_PredatoryStatueVData) == 0x9a0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Modifier_Nano_PredatoryStatueVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_Nano_PredatoryStatueVData) == 0x9a0);
 };

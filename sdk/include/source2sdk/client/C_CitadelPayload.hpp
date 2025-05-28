@@ -1,35 +1,40 @@
 #pragma once
-#include "source2sdk/client/CCitadelAnimatingModelEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadelAnimatingModelEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xcc0
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "float m_flProgress"
-    // static metadata: MNetworkVarNames "int m_nNumPushers"
-    #pragma pack(push, 1)
-    class C_CitadelPayload : public client::CCitadelAnimatingModelEntity
+    namespace client
     {
-    public:
-        // metadata: MNetworkEnable
-        float m_flProgress; // 0xcb8        
-        // metadata: MNetworkEnable
-        int32_t m_nNumPushers; // 0xcbc        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xcc0
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "float m_flProgress"
+        // static metadata: MNetworkVarNames "int m_nNumPushers"
+        #pragma pack(push, 1)
+        class C_CitadelPayload : public source2sdk::client::CCitadelAnimatingModelEntity
+        {
+        public:
+            // metadata: MNetworkEnable
+            float m_flProgress; // 0xcb8            
+            // metadata: MNetworkEnable
+            std::int32_t m_nNumPushers; // 0xcbc            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in C_CitadelPayload because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::C_CitadelPayload) == 0xcc0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in C_CitadelPayload because it is not a standard-layout class
-    static_assert(sizeof(C_CitadelPayload) == 0xcc0);
 };

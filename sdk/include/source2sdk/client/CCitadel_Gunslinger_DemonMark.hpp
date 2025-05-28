@@ -1,31 +1,36 @@
 #pragma once
-#include "source2sdk/client/C_CitadelBaseAbility.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_CitadelBaseAbility.hpp"
+#include "source2sdk/entity2/GameTime_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xec8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Gunslinger_DemonMark : public client::C_CitadelBaseAbility
+    namespace client
     {
-    public:
-        entity2::GameTime_t m_flNextSearchTime; // 0xdc0        
-        [[maybe_unused]] std::uint8_t pad_0xdc4[0x104];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xec8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Gunslinger_DemonMark : public source2sdk::client::C_CitadelBaseAbility
+        {
+        public:
+            source2sdk::entity2::GameTime_t m_flNextSearchTime; // 0xdc0            
+            uint8_t _pad0dc4[0x104];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Gunslinger_DemonMark because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Gunslinger_DemonMark) == 0xec8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Gunslinger_DemonMark because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Gunslinger_DemonMark) == 0xec8);
 };

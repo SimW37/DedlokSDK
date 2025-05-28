@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/client/CCitadel_Modifier_IceDome_AuraModifierBase.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadel_Modifier_IceDome_AuraModifierBase.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x140
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_IceDomeFriendly : public client::CCitadel_Modifier_IceDome_AuraModifierBase
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x80];
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x140
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_IceDomeFriendly : public source2sdk::client::CCitadel_Modifier_IceDome_AuraModifierBase
+        {
+        public:
+            uint8_t _pad00c0[0x80];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_IceDomeFriendly) == 0x140);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_Modifier_IceDomeFriendly) == 0x140);
 };

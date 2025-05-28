@@ -1,43 +1,48 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
 #include "source2sdk/server/CCitadelModifier.hpp"
 #include "source2sdk/server/CCitadelModifierVData.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x830
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CModifierQuarantineVData : public server::CCitadelModifierVData
+    namespace server
     {
-    public:
-        // metadata: MPropertyStartGroup "Visuals"
-        // m_BubbleParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BubbleParticle;
-        char m_BubbleParticle[0xe0]; // 0x660        
-        // m_BubbleExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CResourceNameTyped<CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BubbleExplodeParticle;
-        char m_BubbleExplodeParticle[0xe0]; // 0x740        
-        // metadata: MPropertyStartGroup "Modifiers"
-        // m_SilenceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEmbeddedSubclass<server::CCitadelModifier> m_SilenceModifier;
-        char m_SilenceModifier[0x10]; // 0x820        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x830
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CModifierQuarantineVData : public source2sdk::server::CCitadelModifierVData
+        {
+        public:
+            // metadata: MPropertyStartGroup "Visuals"
+            // m_BubbleParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BubbleParticle;
+            char m_BubbleParticle[0xe0]; // 0x660            
+            // m_BubbleExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BubbleExplodeParticle;
+            char m_BubbleExplodeParticle[0xe0]; // 0x740            
+            // metadata: MPropertyStartGroup "Modifiers"
+            // m_SilenceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SilenceModifier;
+            char m_SilenceModifier[0x10]; // 0x820            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CModifierQuarantineVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CModifierQuarantineVData) == 0x830);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CModifierQuarantineVData because it is not a standard-layout class
-    static_assert(sizeof(CModifierQuarantineVData) == 0x830);
 };

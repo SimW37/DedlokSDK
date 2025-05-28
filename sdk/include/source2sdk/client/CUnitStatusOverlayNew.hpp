@@ -1,31 +1,36 @@
 #pragma once
-#include "source2sdk/client/CUnitStatusOverlay.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CUnitStatusOverlay.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x10
-    // Alignment: 0x10
-    // Standard-layout class: false
-    // Size: 0xc80
-    // Has VTable
-    #pragma pack(push, 1)
-    class CUnitStatusOverlayNew : public client::CUnitStatusOverlay
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xc10[0x48]; // 0xc10
-        float m_flUIScale; // 0xc58        
-        [[maybe_unused]] std::uint8_t pad_0xc5c[0x24];
+        // Registered alignment: 0x10
+        // Alignment: 0x10
+        // Standard-layout class: false
+        // Size: 0xc80
+        // Has VTable
+        #pragma pack(push, 1)
+        class CUnitStatusOverlayNew : public source2sdk::client::CUnitStatusOverlay
+        {
+        public:
+            uint8_t _pad0c10[0x48]; // 0xc10
+            float m_flUIScale; // 0xc58            
+            uint8_t _pad0c5c[0x24];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CUnitStatusOverlayNew because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CUnitStatusOverlayNew) == 0xc80);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CUnitStatusOverlayNew because it is not a standard-layout class
-    static_assert(sizeof(CUnitStatusOverlayNew) == 0xc80);
 };

@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,13 +9,16 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::animationsystem
+namespace source2sdk
 {
-    // Enumerator count: 1
-    // Alignment: 4
-    // Size: 0x4
-    enum class RagdollPoseControl : std::uint32_t
+    namespace animationsystem
     {
-        Absolute = 0x0,
+        // Enumerator count: 1
+        // Alignment: 4
+        // Size: 0x4
+        enum class RagdollPoseControl : std::uint32_t
+        {
+            Absolute = 0x0,
+        };
     };
 };

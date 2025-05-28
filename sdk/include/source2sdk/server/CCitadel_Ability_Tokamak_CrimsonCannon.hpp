@@ -1,38 +1,43 @@
 #pragma once
-#include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/server/CCitadelBaseAbility.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/ParticleIndex_t.hpp"
+#include "source2sdk/server/CCitadelBaseAbility.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xe00
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "bool m_bAirCast"
-    #pragma pack(push, 1)
-    class CCitadel_Ability_Tokamak_CrimsonCannon : public server::CCitadelBaseAbility
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xba0[0x20]; // 0xba0
-        // m_TargetPreviews has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<client::ParticleIndex_t> m_TargetPreviews;
-        char m_TargetPreviews[0x18]; // 0xbc0        
-        // metadata: MNetworkEnable
-        bool m_bAirCast; // 0xbd8        
-        [[maybe_unused]] std::uint8_t pad_0xbd9[0x227];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xe00
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "bool m_bAirCast"
+        #pragma pack(push, 1)
+        class CCitadel_Ability_Tokamak_CrimsonCannon : public source2sdk::server::CCitadelBaseAbility
+        {
+        public:
+            uint8_t _pad0ba0[0x20]; // 0xba0
+            // m_TargetPreviews has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<source2sdk::client::ParticleIndex_t> m_TargetPreviews;
+            char m_TargetPreviews[0x18]; // 0xbc0            
+            // metadata: MNetworkEnable
+            bool m_bAirCast; // 0xbd8            
+            uint8_t _pad0bd9[0x227];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_Tokamak_CrimsonCannon because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Tokamak_CrimsonCannon) == 0xe00);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_Tokamak_CrimsonCannon because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Tokamak_CrimsonCannon) == 0xe00);
 };

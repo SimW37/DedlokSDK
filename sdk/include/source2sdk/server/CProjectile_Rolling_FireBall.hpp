@@ -1,31 +1,36 @@
 #pragma once
-#include "source2sdk/server/CCitadelProjectile.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelProjectile.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x890
-    // Has VTable
-    #pragma pack(push, 1)
-    class CProjectile_Rolling_FireBall : public server::CCitadelProjectile
+    namespace server
     {
-    public:
-        bool m_bHitWorld; // 0x880        
-        [[maybe_unused]] std::uint8_t pad_0x881[0x3]; // 0x881
-        Vector m_vInitialDirection; // 0x884        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x890
+        // Has VTable
+        #pragma pack(push, 1)
+        class CProjectile_Rolling_FireBall : public source2sdk::server::CCitadelProjectile
+        {
+        public:
+            bool m_bHitWorld; // 0x880            
+            uint8_t _pad0881[0x3]; // 0x881
+            Vector m_vInitialDirection; // 0x884            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CProjectile_Rolling_FireBall because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CProjectile_Rolling_FireBall) == 0x890);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CProjectile_Rolling_FireBall because it is not a standard-layout class
-    static_assert(sizeof(CProjectile_Rolling_FireBall) == 0x890);
 };

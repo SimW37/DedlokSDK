@@ -1,31 +1,36 @@
 #pragma once
-#include "source2sdk/client/C_CitadelBaseAbility.hpp"
-#include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_CitadelBaseAbility.hpp"
+#include "source2sdk/client/ParticleIndex_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xdc8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Ability_HornetMark : public client::C_CitadelBaseAbility
+    namespace client
     {
-    public:
-        client::ParticleIndex_t m_nFXIndex; // 0xdc0        
-        [[maybe_unused]] std::uint8_t pad_0xdc4[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xdc8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Ability_HornetMark : public source2sdk::client::C_CitadelBaseAbility
+        {
+        public:
+            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0xdc0            
+            uint8_t _pad0dc4[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_HornetMark because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_HornetMark) == 0xdc8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_HornetMark because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_HornetMark) == 0xdc8);
 };

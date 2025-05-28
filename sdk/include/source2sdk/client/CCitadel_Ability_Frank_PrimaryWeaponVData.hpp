@@ -1,34 +1,39 @@
 #pragma once
-#include "source2sdk/client/CCitadel_Ability_PrimaryWeaponVData.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadel_Ability_PrimaryWeaponVData.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1690
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CCitadel_Ability_Frank_PrimaryWeaponVData : public client::CCitadel_Ability_PrimaryWeaponVData
+    namespace client
     {
-    public:
-        // metadata: MPropertyStartGroup "Gameplay"
-        CPiecewiseCurve m_SpreadPenaltyScaleCurve; // 0x1640        
-        // metadata: MPropertyStartGroup "Sounds"
-        CSoundEventName m_strShootDelaySound; // 0x1680        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1690
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CCitadel_Ability_Frank_PrimaryWeaponVData : public source2sdk::client::CCitadel_Ability_PrimaryWeaponVData
+        {
+        public:
+            // metadata: MPropertyStartGroup "Gameplay"
+            CPiecewiseCurve m_SpreadPenaltyScaleCurve; // 0x1640            
+            // metadata: MPropertyStartGroup "Sounds"
+            CSoundEventName m_strShootDelaySound; // 0x1680            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_Frank_PrimaryWeaponVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Frank_PrimaryWeaponVData) == 0x1690);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_Frank_PrimaryWeaponVData because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_Frank_PrimaryWeaponVData) == 0x1690);
 };

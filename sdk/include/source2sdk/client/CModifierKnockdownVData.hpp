@@ -1,37 +1,42 @@
 #pragma once
-#include "source2sdk/client/CCitadel_Modifier_StunnedVData.hpp"
-#include "source2sdk/client/CitadelCameraOperationsSequence_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadel_Modifier_StunnedVData.hpp"
+#include "source2sdk/client/CitadelCameraOperationsSequence_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x7d8
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CModifierKnockdownVData : public client::CCitadel_Modifier_StunnedVData
+    namespace client
     {
-    public:
-        float m_flSatVolumeRadius; // 0x740        
-        float m_flSatVolumeFadeOut; // 0x744        
-        float m_flGravityScale; // 0x748        
-        // metadata: MPropertyStartGroup "Camera"
-        float m_flGetUpSeqDuration; // 0x74c        
-        client::CitadelCameraOperationsSequence_t m_cameraSequenceGetUp; // 0x750        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x7d8
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CModifierKnockdownVData : public source2sdk::client::CCitadel_Modifier_StunnedVData
+        {
+        public:
+            float m_flSatVolumeRadius; // 0x740            
+            float m_flSatVolumeFadeOut; // 0x744            
+            float m_flGravityScale; // 0x748            
+            // metadata: MPropertyStartGroup "Camera"
+            float m_flGetUpSeqDuration; // 0x74c            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceGetUp; // 0x750            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CModifierKnockdownVData because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CModifierKnockdownVData) == 0x7d8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CModifierKnockdownVData because it is not a standard-layout class
-    static_assert(sizeof(CModifierKnockdownVData) == 0x7d8);
 };

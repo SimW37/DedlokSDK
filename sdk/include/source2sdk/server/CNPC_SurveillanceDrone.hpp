@@ -1,35 +1,40 @@
 #pragma once
-#include "source2sdk/server/CNPC_FlyingDrone.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CNPC_FlyingDrone.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1a68
-    // Has VTable
-    #pragma pack(push, 1)
-    class CNPC_SurveillanceDrone : public server::CNPC_FlyingDrone
+    namespace server
     {
-    public:
-        int32_t m_iMinionHealth; // 0x1a08        
-        float m_flLifetime; // 0x1a0c        
-        [[maybe_unused]] std::uint8_t pad_0x1a10[0xc]; // 0x1a10
-        Vector m_vecHome; // 0x1a1c        
-        [[maybe_unused]] std::uint8_t pad_0x1a28[0x10]; // 0x1a28
-        int32_t m_nAbilityLevel; // 0x1a38        
-        [[maybe_unused]] std::uint8_t pad_0x1a3c[0x2c];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1a68
+        // Has VTable
+        #pragma pack(push, 1)
+        class CNPC_SurveillanceDrone : public source2sdk::server::CNPC_FlyingDrone
+        {
+        public:
+            std::int32_t m_iMinionHealth; // 0x1a08            
+            float m_flLifetime; // 0x1a0c            
+            uint8_t _pad1a10[0xc]; // 0x1a10
+            Vector m_vecHome; // 0x1a1c            
+            uint8_t _pad1a28[0x10]; // 0x1a28
+            std::int32_t m_nAbilityLevel; // 0x1a38            
+            uint8_t _pad1a3c[0x2c];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CNPC_SurveillanceDrone because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CNPC_SurveillanceDrone) == 0x1a68);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CNPC_SurveillanceDrone because it is not a standard-layout class
-    static_assert(sizeof(CNPC_SurveillanceDrone) == 0x1a68);
 };

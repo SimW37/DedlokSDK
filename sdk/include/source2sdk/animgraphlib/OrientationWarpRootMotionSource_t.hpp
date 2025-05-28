@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,18 +9,21 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::animgraphlib
+namespace source2sdk
 {
-    // Enumerator count: 3
-    // Alignment: 4
-    // Size: 0x4
-    enum class OrientationWarpRootMotionSource_t : std::uint32_t
+    namespace animgraphlib
     {
-        // MPropertyFriendlyName "Animation Or Procedural"
-        eAnimationOrProcedural = 0x0,
-        // MPropertyFriendlyName "Animation Only"
-        eAnimationOnly = 0x1,
-        // MPropertyFriendlyName "Procedural Only"
-        eProceduralOnly = 0x2,
+        // Enumerator count: 3
+        // Alignment: 4
+        // Size: 0x4
+        enum class OrientationWarpRootMotionSource_t : std::uint32_t
+        {
+            // MPropertyFriendlyName "Animation Or Procedural"
+            eAnimationOrProcedural = 0x0,
+            // MPropertyFriendlyName "Animation Only"
+            eAnimationOnly = 0x1,
+            // MPropertyFriendlyName "Procedural Only"
+            eProceduralOnly = 0x2,
+        };
     };
 };

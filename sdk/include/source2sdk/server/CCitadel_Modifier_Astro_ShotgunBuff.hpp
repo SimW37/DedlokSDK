@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CCitadelModifier.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelModifier.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x200
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_Astro_ShotgunBuff : public server::CCitadelModifier
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0xc0[0x140];
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x200
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_Astro_ShotgunBuff : public source2sdk::server::CCitadelModifier
+        {
+        public:
+            uint8_t _pad00c0[0x140];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Astro_ShotgunBuff) == 0x200);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_Modifier_Astro_ShotgunBuff) == 0x200);
 };

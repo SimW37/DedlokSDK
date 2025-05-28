@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,16 +9,19 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 4
-    // Alignment: 1
-    // Size: 0x1
-    enum class EJumpType_t : std::uint8_t
+    namespace client
     {
-        EJumpType_Ground = 0,
-        EJumpType_Air = 1,
-        EJumpType_Wall = 2,
-        EJumpType_DashJump = 3,
+        // Enumerator count: 4
+        // Alignment: 1
+        // Size: 0x1
+        enum class EJumpType_t : std::uint8_t
+        {
+            EJumpType_Ground = 0x0,
+            EJumpType_Air = 0x1,
+            EJumpType_Wall = 0x2,
+            EJumpType_DashJump = 0x3,
+        };
     };
 };

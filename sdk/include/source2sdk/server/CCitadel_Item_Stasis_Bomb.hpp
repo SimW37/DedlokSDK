@@ -1,28 +1,33 @@
 #pragma once
-#include "source2sdk/server/CCitadel_Item_Bubble.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadel_Item_Bubble.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xc70
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Item_Stasis_Bomb : public server::CCitadel_Item_Bubble
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xc70
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Item_Stasis_Bomb : public source2sdk::server::CCitadel_Item_Bubble
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Item_Stasis_Bomb) == 0xc70);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadel_Item_Stasis_Bomb) == 0xc70);
 };

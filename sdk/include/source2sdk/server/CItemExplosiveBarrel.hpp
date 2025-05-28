@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CCitadelProjectile.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelProjectile.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x8f8
-    // Has VTable
-    #pragma pack(push, 1)
-    class CItemExplosiveBarrel : public server::CCitadelProjectile
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x880[0x78];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x8f8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CItemExplosiveBarrel : public source2sdk::server::CCitadelProjectile
+        {
+        public:
+            uint8_t _pad0880[0x78];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CItemExplosiveBarrel) == 0x8f8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CItemExplosiveBarrel) == 0x8f8);
 };

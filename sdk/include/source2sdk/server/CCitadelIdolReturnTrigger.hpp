@@ -1,38 +1,43 @@
 #pragma once
-#include "source2sdk/server/CCitadelMinimapComponent.hpp"
-#include "source2sdk/server/CTriggerModifier.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelMinimapComponent.hpp"
+#include "source2sdk/server/CTriggerModifier.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x9d8
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
-    #pragma pack(push, 1)
-    class CCitadelIdolReturnTrigger : public server::CTriggerModifier
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x9a0[0x18]; // 0x9a0
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
-        // metadata: MNetworkAlias "CCitadelMinimapComponent"
-        // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-        server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x9b8        
-        [[maybe_unused]] std::uint8_t pad_0x9d0[0x8];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x9d8
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
+        #pragma pack(push, 1)
+        class CCitadelIdolReturnTrigger : public source2sdk::server::CTriggerModifier
+        {
+        public:
+            uint8_t _pad09a0[0x18]; // 0x9a0
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
+            // metadata: MNetworkAlias "CCitadelMinimapComponent"
+            // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x9b8            
+            uint8_t _pad09d0[0x8];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadelIdolReturnTrigger because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadelIdolReturnTrigger) == 0x9d8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadelIdolReturnTrigger because it is not a standard-layout class
-    static_assert(sizeof(CCitadelIdolReturnTrigger) == 0x9d8);
 };

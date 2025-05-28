@@ -1,32 +1,37 @@
 #pragma once
-#include "source2sdk/client/CCitadel_Modifier_BaseBulletPreRollProc.hpp"
-#include "source2sdk/client/ShotID_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadel_Modifier_BaseBulletPreRollProc.hpp"
+#include "source2sdk/client/ShotID_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x220
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadel_Modifier_SalvoBullet : public client::CCitadel_Modifier_BaseBulletPreRollProc
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x198[0x80]; // 0x198
-        client::ShotID_t m_BuffedShotId; // 0x218        
-        [[maybe_unused]] std::uint8_t pad_0x21c[0x4];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x220
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadel_Modifier_SalvoBullet : public source2sdk::client::CCitadel_Modifier_BaseBulletPreRollProc
+        {
+        public:
+            uint8_t _pad0198[0x80]; // 0x198
+            source2sdk::client::ShotID_t m_BuffedShotId; // 0x218            
+            uint8_t _pad021c[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Modifier_SalvoBullet because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_SalvoBullet) == 0x220);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Modifier_SalvoBullet because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Modifier_SalvoBullet) == 0x220);
 };

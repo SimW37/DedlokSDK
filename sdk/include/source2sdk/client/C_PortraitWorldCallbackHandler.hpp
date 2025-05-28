@@ -1,30 +1,35 @@
 #pragma once
-#include "source2sdk/client/C_BaseEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_BaseEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x5e8
-    // Has VTable
-    // 
-    // static metadata: MEntityAllowsPortraitWorldSpawn
-    #pragma pack(push, 1)
-    class C_PortraitWorldCallbackHandler : public client::C_BaseEntity
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x5e0[0x8];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x5e8
+        // Has VTable
+        // 
+        // static metadata: MEntityAllowsPortraitWorldSpawn
+        #pragma pack(push, 1)
+        class C_PortraitWorldCallbackHandler : public source2sdk::client::C_BaseEntity
+        {
+        public:
+            uint8_t _pad05e0[0x8];
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::C_PortraitWorldCallbackHandler) == 0x5e8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(C_PortraitWorldCallbackHandler) == 0x5e8);
 };

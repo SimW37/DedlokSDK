@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,18 +9,21 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Enumerator count: 4
-    // Alignment: 1
-    // Size: 0x1
-    enum class NavScopeFlags_t : std::uint8_t
+    namespace server
     {
-        eGround = 1,
-        eAir = 2,
-        // MEnumeratorIsNotAFlag
-        eAll = 3,
-        // MEnumeratorIsNotAFlag
-        eNone = 0,
+        // Enumerator count: 4
+        // Alignment: 1
+        // Size: 0x1
+        enum class NavScopeFlags_t : std::uint8_t
+        {
+            eGround = 0x1,
+            eAir = 0x2,
+            // MEnumeratorIsNotAFlag
+            eAll = 0x3,
+            // MEnumeratorIsNotAFlag
+            eNone = 0x0,
+        };
     };
 };

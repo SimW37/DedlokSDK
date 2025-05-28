@@ -1,5 +1,6 @@
 #pragma once
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
 
@@ -8,27 +9,30 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x4
-    // Standard-layout class: true
-    // Size: 0x14
-    // Has Trivial Destructor
-    #pragma pack(push, 1)
-    struct FootSweepPusher_t
+    namespace server
     {
-    public:
-        Vector m_vC; // 0x0        
-        float m_flR; // 0xc        
-        bool m_bIsForward; // 0x10        
-        [[maybe_unused]] std::uint8_t pad_0x11[0x3];
+        // Registered alignment: unknown
+        // Alignment: 0x4
+        // Standard-layout class: true
+        // Size: 0x14
+        // Has Trivial Destructor
+        #pragma pack(push, 1)
+        struct FootSweepPusher_t
+        {
+        public:
+            Vector m_vC; // 0x0            
+            float m_flR; // 0xc            
+            bool m_bIsForward; // 0x10            
+            uint8_t _pad0011[0x3];
+        };
+        #pragma pack(pop)
+        
+        static_assert(offsetof(source2sdk::server::FootSweepPusher_t, m_vC) == 0x0);
+        static_assert(offsetof(source2sdk::server::FootSweepPusher_t, m_flR) == 0xc);
+        static_assert(offsetof(source2sdk::server::FootSweepPusher_t, m_bIsForward) == 0x10);
+        
+        static_assert(sizeof(source2sdk::server::FootSweepPusher_t) == 0x14);
     };
-    #pragma pack(pop)
-    
-    static_assert(offsetof(FootSweepPusher_t, m_vC) == 0x0);
-    static_assert(offsetof(FootSweepPusher_t, m_flR) == 0xc);
-    static_assert(offsetof(FootSweepPusher_t, m_bIsForward) == 0x10);
-    
-    static_assert(sizeof(FootSweepPusher_t) == 0x14);
 };

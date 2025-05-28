@@ -1,28 +1,33 @@
 #pragma once
-#include "source2sdk/client/CCitadelItemPickupRejuv.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadelItemPickupRejuv.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xed0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CCitadelItemPickupRejuvHeroTest : public client::CCitadelItemPickupRejuv
+    namespace client
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xed0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCitadelItemPickupRejuvHeroTest : public source2sdk::client::CCitadelItemPickupRejuv
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CCitadelItemPickupRejuvHeroTest) == 0xed0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadelItemPickupRejuvHeroTest) == 0xed0);
 };

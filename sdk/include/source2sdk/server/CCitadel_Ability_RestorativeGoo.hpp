@@ -1,35 +1,40 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
-#include "source2sdk/server/CCitadelBaseAbility.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/server/CCitadelBaseAbility.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xba8
-    // Has VTable
-    // 
-    // static metadata: MNetworkVarNames "GameTime_t m_flSelfCastEndTime"
-    #pragma pack(push, 1)
-    class CCitadel_Ability_RestorativeGoo : public server::CCitadelBaseAbility
+    namespace server
     {
-    public:
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-        entity2::GameTime_t m_flSelfCastEndTime; // 0xba0        
-        [[maybe_unused]] std::uint8_t pad_0xba4[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xba8
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "GameTime_t m_flSelfCastEndTime"
+        #pragma pack(push, 1)
+        class CCitadel_Ability_RestorativeGoo : public source2sdk::server::CCitadelBaseAbility
+        {
+        public:
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            source2sdk::entity2::GameTime_t m_flSelfCastEndTime; // 0xba0            
+            uint8_t _pad0ba4[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCitadel_Ability_RestorativeGoo because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_RestorativeGoo) == 0xba8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCitadel_Ability_RestorativeGoo because it is not a standard-layout class
-    static_assert(sizeof(CCitadel_Ability_RestorativeGoo) == 0xba8);
 };

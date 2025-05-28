@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,18 +9,21 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 5
-    // Alignment: 4
-    // Size: 0x4
-    enum class EMeleeHold_AttackType : std::uint32_t
+    namespace client
     {
-        // MPropertySuppressEnumerator
-        EAttackType_None = 0x0,
-        EAttackType_Light = 0x1,
-        EAttackType_Heavy = 0x2,
-        EAttackType_HeavyAir = 0x3,
-        EAttackType_Slide = 0x4,
+        // Enumerator count: 5
+        // Alignment: 4
+        // Size: 0x4
+        enum class EMeleeHold_AttackType : std::uint32_t
+        {
+            // MPropertySuppressEnumerator
+            EAttackType_None = 0x0,
+            EAttackType_Light = 0x1,
+            EAttackType_Heavy = 0x2,
+            EAttackType_HeavyAir = 0x3,
+            EAttackType_Slide = 0x4,
+        };
     };
 };

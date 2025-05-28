@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CCitadelModifierAuraVData.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelModifierAuraVData.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x6b0
-    // Has VTable
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CModifierSleepBombAuraVData : public server::CCitadelModifierAuraVData
+    namespace server
     {
-    public:
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x6b0
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CModifierSleepBombAuraVData : public source2sdk::server::CCitadelModifierAuraVData
+        {
+        public:
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CModifierSleepBombAuraVData) == 0x6b0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CModifierSleepBombAuraVData) == 0x6b0);
 };

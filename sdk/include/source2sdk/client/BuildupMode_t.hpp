@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,17 +9,20 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 5
-    // Alignment: 4
-    // Size: 0x4
-    enum class BuildupMode_t : std::uint32_t
+    namespace client
     {
-        BUILDUP_MODE_ONE_AND_DONE = 0x0,
-        BUILDUP_MODE_RESTART_ON_FILL = 0x1,
-        BUILDUP_MODE_EXTEND_FILL_DURATION = 0x2,
-        BUILDUP_MODE_MAX_FILL_DURATION = 0x3,
-        BUILDUP_MODE_ADD_STACK = 0x4,
+        // Enumerator count: 5
+        // Alignment: 4
+        // Size: 0x4
+        enum class BuildupMode_t : std::uint32_t
+        {
+            BUILDUP_MODE_ONE_AND_DONE = 0x0,
+            BUILDUP_MODE_RESTART_ON_FILL = 0x1,
+            BUILDUP_MODE_EXTEND_FILL_DURATION = 0x2,
+            BUILDUP_MODE_MAX_FILL_DURATION = 0x3,
+            BUILDUP_MODE_ADD_STACK = 0x4,
+        };
     };
 };

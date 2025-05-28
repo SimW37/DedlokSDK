@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/server/CCitadelBaseAbility.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCitadelBaseAbility.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xba0
-    // Has VTable
-    // Is Abstract
-    #pragma pack(push, 1)
-    class CCitadelBaseAbilityServerOnly : public server::CCitadelBaseAbility
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xba0
+        // Has VTable
+        // Is Abstract
+        #pragma pack(push, 1)
+        class CCitadelBaseAbilityServerOnly : public source2sdk::server::CCitadelBaseAbility
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCitadelBaseAbilityServerOnly) == 0xba0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCitadelBaseAbilityServerOnly) == 0xba0);
 };
