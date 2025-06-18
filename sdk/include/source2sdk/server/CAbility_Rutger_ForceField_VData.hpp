@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1730
+        // Size: 0x1728
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,26 +31,26 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_AuraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_AuraModifier;
-            char m_AuraModifier[0x10]; // 0x15f0            
+            char m_AuraModifier[0x10]; // 0x15e8            
             // m_VictimPushModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_VictimPushModifier;
-            char m_VictimPushModifier[0x10]; // 0x1600            
+            char m_VictimPushModifier[0x10]; // 0x15f8            
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x1610            
+            char m_SlowModifier[0x10]; // 0x1608            
             // metadata: MPropertyGroupName "Sounds"
-            CSoundEventName m_strDomeCreated; // 0x1620            
-            CSoundEventName m_strChargeUpSound; // 0x1630            
-            CSoundEventName m_strPushAndDamage; // 0x1640            
+            CSoundEventName m_strDomeCreated; // 0x1618            
+            CSoundEventName m_strChargeUpSound; // 0x1628            
+            CSoundEventName m_strPushAndDamage; // 0x1638            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ChronoSphereChargeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChronoSphereChargeParticle;
-            char m_ChronoSphereChargeParticle[0xe0]; // 0x1650            
+            char m_ChronoSphereChargeParticle[0xe0]; // 0x1648            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Rutger_ForceField_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Rutger_ForceField_VData) == 0x1730);
+        static_assert(sizeof(source2sdk::server::CAbility_Rutger_ForceField_VData) == 0x1728);
     };
 };

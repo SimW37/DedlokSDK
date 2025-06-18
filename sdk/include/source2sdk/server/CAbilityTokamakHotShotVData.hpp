@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x19c0
+        // Size: 0x19b8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,30 +30,30 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_LaserModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_LaserModifier;
-            char m_LaserModifier[0x10]; // 0x15f0            
+            char m_LaserModifier[0x10]; // 0x15e8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strLaserStartSound; // 0x1600            
-            CSoundEventName m_strLaserEndSound; // 0x1610            
-            CSoundEventName m_strLaserLoopSound; // 0x1620            
-            CSoundEventName m_strLaserHitSound; // 0x1630            
+            CSoundEventName m_strLaserStartSound; // 0x15f8            
+            CSoundEventName m_strLaserEndSound; // 0x1608            
+            CSoundEventName m_strLaserLoopSound; // 0x1618            
+            CSoundEventName m_strLaserHitSound; // 0x1628            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ChargeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle;
-            char m_ChargeParticle[0xe0]; // 0x1640            
+            char m_ChargeParticle[0xe0]; // 0x1638            
             // m_BeamParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle;
-            char m_BeamParticle[0xe0]; // 0x1720            
+            char m_BeamParticle[0xe0]; // 0x1718            
             // m_HitParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle;
-            char m_HitParticle[0xe0]; // 0x1800            
+            char m_HitParticle[0xe0]; // 0x17f8            
             // m_GroundParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GroundParticle;
-            char m_GroundParticle[0xe0]; // 0x18e0            
+            char m_GroundParticle[0xe0]; // 0x18d8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityTokamakHotShotVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityTokamakHotShotVData) == 0x19c0);
+        static_assert(sizeof(source2sdk::server::CAbilityTokamakHotShotVData) == 0x19b8);
     };
 };

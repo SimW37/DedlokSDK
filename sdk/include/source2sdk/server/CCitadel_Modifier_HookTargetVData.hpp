@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7e0
+        // Size: 0x7e8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -38,23 +38,25 @@ namespace source2sdk
             float m_flReturnPositionForwardOffset; // 0x6b4            
             float m_flReturnSpeedFail; // 0x6b8            
             float m_flReturnStuckTime; // 0x6bc            
+            float m_flFailSafeMinTime; // 0x6c0            
+            float m_flFailSafeDurationMult; // 0x6c4            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_RestrictionModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_RestrictionModifier;
-            char m_RestrictionModifier[0x10]; // 0x6c0            
+            char m_RestrictionModifier[0x10]; // 0x6c8            
             // metadata: MPropertyStartGroup "Visuals"
             // m_HookRetrieveParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HookRetrieveParticle;
-            char m_HookRetrieveParticle[0xe0]; // 0x6d0            
+            char m_HookRetrieveParticle[0xe0]; // 0x6d8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strRetractSound; // 0x7b0            
-            CSoundEventName m_strRetractSoundEnd; // 0x7c0            
-            CSoundEventName m_strApproachingWhooshSound; // 0x7d0            
+            CSoundEventName m_strRetractSound; // 0x7b8            
+            CSoundEventName m_strRetractSoundEnd; // 0x7c8            
+            CSoundEventName m_strApproachingWhooshSound; // 0x7d8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_HookTargetVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_HookTargetVData) == 0x7e0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_HookTargetVData) == 0x7e8);
     };
 };

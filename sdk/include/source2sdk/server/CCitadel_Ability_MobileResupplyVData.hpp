@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18b8
+        // Size: 0x18b0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,29 +28,29 @@ namespace source2sdk
         class CCitadel_Ability_MobileResupplyVData : public source2sdk::server::CitadelAbilityVData
         {
         public:
-            float m_flResupplyForceScale; // 0x15f0            
-            float m_flResupplyUp; // 0x15f4            
+            float m_flResupplyForceScale; // 0x15e8            
+            float m_flResupplyUp; // 0x15ec            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strKilledSound; // 0x15f8            
+            CSoundEventName m_strKilledSound; // 0x15f0            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_AuraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_AuraModifier;
-            char m_AuraModifier[0x10]; // 0x1608            
+            char m_AuraModifier[0x10]; // 0x1600            
             // metadata: MPropertyStartGroup "Visuals"
             // m_DispenserModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_DispenserModel;
-            char m_DispenserModel[0xe0]; // 0x1618            
+            char m_DispenserModel[0xe0]; // 0x1610            
             // m_SprayParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SprayParticle;
-            char m_SprayParticle[0xe0]; // 0x16f8            
+            char m_SprayParticle[0xe0]; // 0x16f0            
             // m_DestroyedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DestroyedParticle;
-            char m_DestroyedParticle[0xe0]; // 0x17d8            
+            char m_DestroyedParticle[0xe0]; // 0x17d0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_MobileResupplyVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_MobileResupplyVData) == 0x18b8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_MobileResupplyVData) == 0x18b0);
     };
 };

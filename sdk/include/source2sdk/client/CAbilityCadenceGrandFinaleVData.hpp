@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16f0
+        // Size: 0x16e8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,20 +30,20 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_StageModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_StageModel;
-            char m_StageModel[0xe0]; // 0x15f0            
-            float m_flStageModelHeight; // 0x16d0            
-            float m_flStageModelWidth; // 0x16d4            
-            float m_flStageModelLength; // 0x16d8            
-            float m_flStageModelScale; // 0x16dc            
+            char m_StageModel[0xe0]; // 0x15e8            
+            float m_flStageModelHeight; // 0x16c8            
+            float m_flStageModelWidth; // 0x16cc            
+            float m_flStageModelLength; // 0x16d0            
+            float m_flStageModelScale; // 0x16d4            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_GrandFinaleAOEModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_GrandFinaleAOEModifier;
-            char m_GrandFinaleAOEModifier[0x10]; // 0x16e0            
+            char m_GrandFinaleAOEModifier[0x10]; // 0x16d8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityCadenceGrandFinaleVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityCadenceGrandFinaleVData) == 0x16f0);
+        static_assert(sizeof(source2sdk::client::CAbilityCadenceGrandFinaleVData) == 0x16e8);
     };
 };

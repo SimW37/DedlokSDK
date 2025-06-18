@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1690
+        // Size: 0x1688
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,12 +29,12 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_MetalSkinModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_MetalSkinModifier;
-            char m_MetalSkinModifier[0x10]; // 0x1680            
+            char m_MetalSkinModifier[0x10]; // 0x1678            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CItemMetalSkinVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CItemMetalSkinVData) == 0x1690);
+        static_assert(sizeof(source2sdk::client::CItemMetalSkinVData) == 0x1688);
     };
 };

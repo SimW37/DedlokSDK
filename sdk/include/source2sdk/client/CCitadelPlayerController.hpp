@@ -36,7 +36,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb80
+        // Size: 0xb88
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EPlayerPlayState m_ePlayState"
@@ -64,6 +64,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "EHANDLE m_vecLaneSwapRequests"
         // static metadata: MNetworkVarNames "EHANDLE m_vecLaneSwapRejects"
         // static metadata: MNetworkVarNames "int32 m_vecMutedPlayers"
+        // static metadata: MNetworkVarNames "bool m_bCommsRestricted"
         // static metadata: MNetworkVarNames "CHandle< CCitadelPlayerPawn> m_hHeroPawn"
         // static metadata: MNetworkVarNames "PlayerDataGlobal_t m_PlayerDataGlobal"
         // static metadata: MNetworkVarNames "int8 m_nDeathReplayAvailable"
@@ -136,26 +137,29 @@ namespace source2sdk
             // C_NetworkUtlVectorBase<std::int32_t> m_vecMutedPlayers;
             char m_vecMutedPlayers[0x18]; // 0x860            
             // metadata: MNetworkEnable
+            bool m_bCommsRestricted; // 0x878            
+            uint8_t _pad0879[0x3]; // 0x879
+            // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnHeroPawnChanged"
             // m_hHeroPawn has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_CitadelPlayerPawn> m_hHeroPawn;
-            char m_hHeroPawn[0x4]; // 0x878            
-            uint8_t _pad087c[0x3c]; // 0x87c
+            char m_hHeroPawn[0x4]; // 0x87c            
+            uint8_t _pad0880[0x40]; // 0x880
             // metadata: MNetworkEnable
-            source2sdk::client::PlayerDataGlobal_t m_PlayerDataGlobal; // 0x8b8            
+            source2sdk::client::PlayerDataGlobal_t m_PlayerDataGlobal; // 0x8c0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int8_t m_nDeathReplayAvailable; // 0xb70            
+            std::int8_t m_nDeathReplayAvailable; // 0xb78            
             // metadata: MNetworkEnable
-            source2sdk::client::CitadelLobbyPlayerSlot_t m_unLobbyPlayerSlot; // 0xb71            
-            bool m_bHasCheckedFriendName; // 0xb72            
-            uint8_t _pad0b73[0x5]; // 0xb73
-            CUtlString m_sFriendName; // 0xb78            
+            source2sdk::client::CitadelLobbyPlayerSlot_t m_unLobbyPlayerSlot; // 0xb79            
+            bool m_bHasCheckedFriendName; // 0xb7a            
+            uint8_t _pad0b7b[0x5]; // 0xb7b
+            CUtlString m_sFriendName; // 0xb80            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelPlayerController because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelPlayerController) == 0xb80);
+        static_assert(sizeof(source2sdk::client::CCitadelPlayerController) == 0xb88);
     };
 };

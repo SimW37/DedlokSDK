@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16d8
+        // Size: 0x16d0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ActiveCastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ActiveCastParticle;
-            char m_ActiveCastParticle[0xe0]; // 0x15f0            
+            char m_ActiveCastParticle[0xe0]; // 0x15e8            
             // metadata: MPropertyStartGroup "+Defer Properties"
-            float m_flDeferredDamageApplicationInterval; // 0x16d0            
-            uint8_t _pad16d4[0x4];
+            float m_flDeferredDamageApplicationInterval; // 0x16c8            
+            uint8_t _pad16cc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityShivDeferDamageVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityShivDeferDamageVData) == 0x16d8);
+        static_assert(sizeof(source2sdk::server::CAbilityShivDeferDamageVData) == 0x16d0);
     };
 };

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1618
+        // Size: 0x1610
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,16 +29,16 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_PulseAreaModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_PulseAreaModifier;
-            char m_PulseAreaModifier[0x10]; // 0x15f0            
+            char m_PulseAreaModifier[0x10]; // 0x15e8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strHitSound; // 0x1600            
+            CSoundEventName m_strHitSound; // 0x15f8            
             // metadata: MPropertyStartGroup "Misc"
-            CUtlString m_strDebuffStatName; // 0x1610            
+            CUtlString m_strDebuffStatName; // 0x1608            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Chrono_PulseGrenade_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Chrono_PulseGrenade_VData) == 0x1618);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Chrono_PulseGrenade_VData) == 0x1610);
     };
 };

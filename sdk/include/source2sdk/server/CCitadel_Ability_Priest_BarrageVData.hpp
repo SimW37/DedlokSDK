@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17f0
+        // Size: 0x17e8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,25 +30,25 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SelfModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SelfModifier;
-            char m_SelfModifier[0x10]; // 0x15f0            
+            char m_SelfModifier[0x10]; // 0x15e8            
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x1600            
+            char m_SlowModifier[0x10]; // 0x15f8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_ShootSound; // 0x1610            
-            CSoundEventName m_ExplodeSound; // 0x1620            
+            CSoundEventName m_ShootSound; // 0x1608            
+            CSoundEventName m_ExplodeSound; // 0x1618            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x1630            
+            char m_ExplodeParticle[0xe0]; // 0x1628            
             // m_ShootParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShootParticle;
-            char m_ShootParticle[0xe0]; // 0x1710            
+            char m_ShootParticle[0xe0]; // 0x1708            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Priest_BarrageVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_BarrageVData) == 0x17f0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_BarrageVData) == 0x17e8);
     };
 };

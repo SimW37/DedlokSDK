@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1968
+        // Size: 0x1960
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,33 +30,33 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x1680            
+            char m_DebuffModifier[0x10]; // 0x1678            
             // m_PullDownModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_PullDownModifier;
-            char m_PullDownModifier[0x10]; // 0x1690            
+            char m_PullDownModifier[0x10]; // 0x1688            
             // m_CasterModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_CasterModifier;
-            char m_CasterModifier[0x10]; // 0x16a0            
+            char m_CasterModifier[0x10]; // 0x1698            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strExplodeSound; // 0x16b0            
+            CSoundEventName m_strExplodeSound; // 0x16a8            
             // metadata: MPropertyGroupName "Visuals"
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x16c0            
+            char m_CastParticle[0xe0]; // 0x16b8            
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x17a0            
+            char m_ImpactParticle[0xe0]; // 0x1798            
             // m_BuffParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffParticle;
-            char m_BuffParticle[0xe0]; // 0x1880            
+            char m_BuffParticle[0xe0]; // 0x1878            
             // metadata: MPropertyGroupName "Gameplay"
-            float m_flTeleportDistance; // 0x1960            
-            float m_flVelocityScale; // 0x1964            
+            float m_flTeleportDistance; // 0x1958            
+            float m_flVelocityScale; // 0x195c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CItemPhantomStrike_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CItemPhantomStrike_VData) == 0x1968);
+        static_assert(sizeof(source2sdk::client::CItemPhantomStrike_VData) == 0x1960);
     };
 };

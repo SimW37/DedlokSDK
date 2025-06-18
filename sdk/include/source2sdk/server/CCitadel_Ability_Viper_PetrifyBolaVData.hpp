@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1700
+        // Size: 0x16f8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x15f0            
+            char m_ExplodeParticle[0xe0]; // 0x15e8            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x16d0            
+            char m_SlowModifier[0x10]; // 0x16c8            
             // m_PetrifyModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_PetrifyModifier;
-            char m_PetrifyModifier[0x10]; // 0x16e0            
+            char m_PetrifyModifier[0x10]; // 0x16d8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strBolaExplodeSound; // 0x16f0            
+            CSoundEventName m_strBolaExplodeSound; // 0x16e8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Viper_PetrifyBolaVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Viper_PetrifyBolaVData) == 0x1700);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Viper_PetrifyBolaVData) == 0x16f8);
     };
 };

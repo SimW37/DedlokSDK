@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1ac8
+        // Size: 0x1ac0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,43 +30,43 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_PortalParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PortalParticle;
-            char m_PortalParticle[0xe0]; // 0x15f0            
+            char m_PortalParticle[0xe0]; // 0x15e8            
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x16d0            
+            char m_CastParticle[0xe0]; // 0x16c8            
             // m_PunchParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PunchParticle;
-            char m_PunchParticle[0xe0]; // 0x17b0            
+            char m_PunchParticle[0xe0]; // 0x17a8            
             // m_WallPunchParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallPunchParticle;
-            char m_WallPunchParticle[0xe0]; // 0x1890            
+            char m_WallPunchParticle[0xe0]; // 0x1888            
             // m_CeilingPunchParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CeilingPunchParticle;
-            char m_CeilingPunchParticle[0xe0]; // 0x1970            
+            char m_CeilingPunchParticle[0xe0]; // 0x1968            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_EnemyPortalSound; // 0x1a50            
-            CSoundEventName m_SelfPortalSound; // 0x1a60            
-            CSoundEventName m_WindupSound; // 0x1a70            
-            CSoundEventName m_PunchSound; // 0x1a80            
+            CSoundEventName m_EnemyPortalSound; // 0x1a48            
+            CSoundEventName m_SelfPortalSound; // 0x1a58            
+            CSoundEventName m_WindupSound; // 0x1a68            
+            CSoundEventName m_PunchSound; // 0x1a78            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_PunchRollSlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_PunchRollSlowModifier;
-            char m_PunchRollSlowModifier[0x10]; // 0x1a90            
+            char m_PunchRollSlowModifier[0x10]; // 0x1a88            
             // m_ImpactModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ImpactModifier;
-            char m_ImpactModifier[0x10]; // 0x1aa0            
+            char m_ImpactModifier[0x10]; // 0x1a98            
             // metadata: MPropertyStartGroup "+Telepunch Parameters"
-            float m_flEnemyPortalTelegraphTime; // 0x1ab0            
-            float m_flSelfPortalTelegraphTime; // 0x1ab4            
-            float m_flWindupTime; // 0x1ab8            
-            float m_flAttackTime; // 0x1abc            
-            float m_flGroundTraceOnPlayerHitDistance; // 0x1ac0            
-            float m_flPlayerCheckSphereRadius; // 0x1ac4            
+            float m_flEnemyPortalTelegraphTime; // 0x1aa8            
+            float m_flSelfPortalTelegraphTime; // 0x1aac            
+            float m_flWindupTime; // 0x1ab0            
+            float m_flAttackTime; // 0x1ab4            
+            float m_flGroundTraceOnPlayerHitDistance; // 0x1ab8            
+            float m_flPlayerCheckSphereRadius; // 0x1abc            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Viscous_TelepunchVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Viscous_TelepunchVData) == 0x1ac8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Viscous_TelepunchVData) == 0x1ac0);
     };
 };

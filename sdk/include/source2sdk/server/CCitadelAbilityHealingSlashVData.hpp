@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x19b0
+        // Size: 0x19a8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,33 +28,33 @@ namespace source2sdk
         class CCitadelAbilityHealingSlashVData : public source2sdk::server::CCitadelYamatoBaseVData
         {
         public:
-            float m_flEffectSize; // 0x15f8            
-            float m_flMaxAttackAngle; // 0x15fc            
-            source2sdk::client::CRemapFloat m_remapAngleToTime; // 0x1600            
+            float m_flEffectSize; // 0x15f0            
+            float m_flMaxAttackAngle; // 0x15f4            
+            source2sdk::client::CRemapFloat m_remapAngleToTime; // 0x15f8            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x1610            
+            char m_DebuffModifier[0x10]; // 0x1608            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x1620            
+            char m_ImpactParticle[0xe0]; // 0x1618            
             // m_HealingSlashParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealingSlashParticle;
-            char m_HealingSlashParticle[0xe0]; // 0x1700            
+            char m_HealingSlashParticle[0xe0]; // 0x16f8            
             // m_HealingSlashSwordGlow has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealingSlashSwordGlow;
-            char m_HealingSlashSwordGlow[0xe0]; // 0x17e0            
+            char m_HealingSlashSwordGlow[0xe0]; // 0x17d8            
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x18c0            
+            char m_CastParticle[0xe0]; // 0x18b8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strDamageTarget; // 0x19a0            
+            CSoundEventName m_strDamageTarget; // 0x1998            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelAbilityHealingSlashVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelAbilityHealingSlashVData) == 0x19b0);
+        static_assert(sizeof(source2sdk::server::CCitadelAbilityHealingSlashVData) == 0x19a8);
     };
 };

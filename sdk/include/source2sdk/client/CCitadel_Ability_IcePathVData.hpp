@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1620
+        // Size: 0x1618
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,21 +29,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_IcePathModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_IcePathModifier;
-            char m_IcePathModifier[0x10]; // 0x15f0            
+            char m_IcePathModifier[0x10]; // 0x15e8            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flMomentumDecayRate; // 0x1600            
-            float m_flMomentumWeight; // 0x1604            
-            float m_flMaxPitchChange; // 0x1608            
-            float m_flMaxPitchUp; // 0x160c            
-            float m_flMaxPitchDown; // 0x1610            
-            float m_flMaxHeight; // 0x1614            
-            float m_flForwardAngleBias; // 0x1618            
-            uint8_t _pad161c[0x4];
+            float m_flMomentumDecayRate; // 0x15f8            
+            float m_flMomentumWeight; // 0x15fc            
+            float m_flMaxPitchChange; // 0x1600            
+            float m_flMaxPitchUp; // 0x1604            
+            float m_flMaxPitchDown; // 0x1608            
+            float m_flMaxHeight; // 0x160c            
+            float m_flForwardAngleBias; // 0x1610            
+            uint8_t _pad1614[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_IcePathVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_IcePathVData) == 0x1620);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_IcePathVData) == 0x1618);
     };
 };

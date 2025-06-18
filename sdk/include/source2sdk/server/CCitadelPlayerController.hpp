@@ -37,7 +37,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc98
+        // Size: 0xca0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EPlayerPlayState m_ePlayState"
@@ -65,6 +65,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "EHANDLE m_vecLaneSwapRequests"
         // static metadata: MNetworkVarNames "EHANDLE m_vecLaneSwapRejects"
         // static metadata: MNetworkVarNames "int32 m_vecMutedPlayers"
+        // static metadata: MNetworkVarNames "bool m_bCommsRestricted"
         // static metadata: MNetworkVarNames "CHandle< CCitadelPlayerPawn> m_hHeroPawn"
         // static metadata: MNetworkVarNames "PlayerDataGlobal_t m_PlayerDataGlobal"
         // static metadata: MNetworkVarNames "int8 m_nDeathReplayAvailable"
@@ -135,30 +136,32 @@ namespace source2sdk
             // m_vecMutedPlayers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<std::int32_t> m_vecMutedPlayers;
             char m_vecMutedPlayers[0x18]; // 0x858            
-            uint8_t _pad0870[0xd8]; // 0x870
+            // metadata: MNetworkEnable
+            bool m_bCommsRestricted; // 0x870            
+            uint8_t _pad0871[0xdb]; // 0x871
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnHeroPawnChanged"
             // m_hHeroPawn has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelPlayerPawn> m_hHeroPawn;
-            char m_hHeroPawn[0x4]; // 0x948            
-            uint8_t _pad094c[0x3c]; // 0x94c
+            char m_hHeroPawn[0x4]; // 0x94c            
+            uint8_t _pad0950[0x40]; // 0x950
             // metadata: MNetworkEnable
-            source2sdk::server::PlayerDataGlobal_t m_PlayerDataGlobal; // 0x988            
+            source2sdk::server::PlayerDataGlobal_t m_PlayerDataGlobal; // 0x990            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int8_t m_nDeathReplayAvailable; // 0xc40            
+            std::int8_t m_nDeathReplayAvailable; // 0xc48            
             // metadata: MNetworkEnable
-            source2sdk::client::CitadelLobbyPlayerSlot_t m_unLobbyPlayerSlot; // 0xc41            
-            uint8_t _pad0c42[0x2]; // 0xc42
-            source2sdk::entity2::GameTime_t m_flLastCommsTime; // 0xc44            
-            source2sdk::entity2::GameTime_t m_flLastFailedCommsTime; // 0xc48            
-            bool m_bLastCommsWasDoublePing; // 0xc4c            
-            uint8_t _pad0c4d[0x3]; // 0xc4d
-            std::int32_t m_nGuideBotNumTasksComplete; // 0xc50            
-            bool m_bHasBeenReportedAsCheater; // 0xc54            
-            bool m_bHasGCACKedCheaterReport; // 0xc55            
-            bool m_bHasBeenLoggedAsCheater; // 0xc56            
-            uint8_t _pad0c57[0x41];
+            source2sdk::client::CitadelLobbyPlayerSlot_t m_unLobbyPlayerSlot; // 0xc49            
+            uint8_t _pad0c4a[0x2]; // 0xc4a
+            source2sdk::entity2::GameTime_t m_flLastCommsTime; // 0xc4c            
+            source2sdk::entity2::GameTime_t m_flLastFailedCommsTime; // 0xc50            
+            bool m_bLastCommsWasDoublePing; // 0xc54            
+            uint8_t _pad0c55[0x3]; // 0xc55
+            std::int32_t m_nGuideBotNumTasksComplete; // 0xc58            
+            bool m_bHasBeenReportedAsCheater; // 0xc5c            
+            bool m_bHasGCACKedCheaterReport; // 0xc5d            
+            bool m_bHasBeenLoggedAsCheater; // 0xc5e            
+            uint8_t _pad0c5f[0x41];
             
             // Datamap fields:
             // void CCitadelPlayerControllerResourceDataThink; // 0x0
@@ -167,6 +170,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CCitadelPlayerController because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelPlayerController) == 0xc98);
+        static_assert(sizeof(source2sdk::server::CCitadelPlayerController) == 0xca0);
     };
 };

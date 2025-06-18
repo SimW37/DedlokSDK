@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18d0
+        // Size: 0x18c8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,28 +30,28 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_CurseModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_CurseModifier;
-            char m_CurseModifier[0x10]; // 0x15f0            
+            char m_CurseModifier[0x10]; // 0x15e8            
             // m_AirDampingModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_AirDampingModifier;
-            char m_AirDampingModifier[0x10]; // 0x1600            
+            char m_AirDampingModifier[0x10]; // 0x15f8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_TargetWarningSound; // 0x1610            
-            CSoundEventName m_ProjectileHitConfirm; // 0x1620            
+            CSoundEventName m_TargetWarningSound; // 0x1608            
+            CSoundEventName m_ProjectileHitConfirm; // 0x1618            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ProjectileImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProjectileImpactParticle;
-            char m_ProjectileImpactParticle[0xe0]; // 0x1630            
+            char m_ProjectileImpactParticle[0xe0]; // 0x1628            
             // m_TargetWarningParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetWarningParticle;
-            char m_TargetWarningParticle[0xe0]; // 0x1710            
+            char m_TargetWarningParticle[0xe0]; // 0x1708            
             // m_ProjectileExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProjectileExplodeParticle;
-            char m_ProjectileExplodeParticle[0xe0]; // 0x17f0            
+            char m_ProjectileExplodeParticle[0xe0]; // 0x17e8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Magician_AnimalCurseVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_AnimalCurseVData) == 0x18d0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_AnimalCurseVData) == 0x18c8);
     };
 };

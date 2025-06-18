@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1830
+        // Size: 0x1828
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -25,20 +25,20 @@ namespace source2sdk
         class CNPC_TrooperBossVData : public source2sdk::client::CAI_NPC_TrooperVData
         {
         public:
-            bool m_bMitigateDamageFromPlayers; // 0x17f0            
-            uint8_t _pad17f1[0x3]; // 0x17f1
-            float m_flPlayerAutoAttackRange; // 0x17f4            
-            float m_flMinMeleeAttackTime; // 0x17f8            
-            float m_flInvulRange; // 0x17fc            
+            bool m_bMitigateDamageFromPlayers; // 0x17e8            
+            uint8_t _pad17e9[0x3]; // 0x17e9
+            float m_flPlayerAutoAttackRange; // 0x17ec            
+            float m_flMinMeleeAttackTime; // 0x17f0            
+            float m_flInvulRange; // 0x17f4            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_sAngryStart; // 0x1800            
-            CSoundEventName m_sAngryLoop; // 0x1810            
-            CSoundEventName m_sAngryStop; // 0x1820            
+            CSoundEventName m_sAngryStart; // 0x17f8            
+            CSoundEventName m_sAngryLoop; // 0x1808            
+            CSoundEventName m_sAngryStop; // 0x1818            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_TrooperBossVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CNPC_TrooperBossVData) == 0x1830);
+        static_assert(sizeof(source2sdk::client::CNPC_TrooperBossVData) == 0x1828);
     };
 };

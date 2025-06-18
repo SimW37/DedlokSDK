@@ -24,7 +24,8 @@ namespace source2sdk
         {
         public:
             bool m_bPlayedStartSound; // 0xdc0            
-            uint8_t _pad0dc1[0x7];
+            bool m_bActiveReloadFailed; // 0xdc1            
+            uint8_t _pad0dc2[0x6];
         };
         #pragma pack(pop)
         

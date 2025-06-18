@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1610
+        // Size: 0x1608
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_WhirlwindEvasionModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_WhirlwindEvasionModifier;
-            char m_WhirlwindEvasionModifier[0x10]; // 0x15f0            
+            char m_WhirlwindEvasionModifier[0x10]; // 0x15e8            
             // m_SandPhantomModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SandPhantomModifier;
-            char m_SandPhantomModifier[0x10]; // 0x1600            
+            char m_SandPhantomModifier[0x10]; // 0x15f8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Mirage_SandPhantom_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbility_Mirage_SandPhantom_VData) == 0x1610);
+        static_assert(sizeof(source2sdk::client::CAbility_Mirage_SandPhantom_VData) == 0x1608);
     };
 };

@@ -21,7 +21,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1100
+        // Size: 0x10f8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -127,6 +127,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CAI_CitadelNPCVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAI_CitadelNPCVData) == 0x1100);
+        static_assert(sizeof(source2sdk::server::CAI_CitadelNPCVData) == 0x10f8);
     };
 };

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17c0
+        // Size: 0x17b8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,19 +30,19 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_ChargeUpParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeUpParticle;
-            char m_ChargeUpParticle[0xe0]; // 0x15f0            
+            char m_ChargeUpParticle[0xe0]; // 0x15e8            
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x16d0            
+            char m_CastParticle[0xe0]; // 0x16c8            
             // metadata: MPropertyGroupName "Modifiers"
             // m_WardenBuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_WardenBuffModifier;
-            char m_WardenBuffModifier[0x10]; // 0x17b0            
+            char m_WardenBuffModifier[0x10]; // 0x17a8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityRiotProtocolVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityRiotProtocolVData) == 0x17c0);
+        static_assert(sizeof(source2sdk::client::CAbilityRiotProtocolVData) == 0x17b8);
     };
 };

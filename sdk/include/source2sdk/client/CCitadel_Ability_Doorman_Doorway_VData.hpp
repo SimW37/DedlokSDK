@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1898
+        // Size: 0x1890
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,25 +29,25 @@ namespace source2sdk
         public:
             // m_hDoorModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_hDoorModel;
-            char m_hDoorModel[0xe0]; // 0x15f0            
+            char m_hDoorModel[0xe0]; // 0x15e8            
             // metadata: MPropertyStartGroup "Visuals"
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x16d0            
+            char m_CastParticle[0xe0]; // 0x16c8            
             // m_PlaceDoorParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PlaceDoorParticle;
-            char m_PlaceDoorParticle[0xe0]; // 0x17b0            
+            char m_PlaceDoorParticle[0xe0]; // 0x17a8            
             // metadata: MPropertyFriendlyName "Door Spawn Particle Color"
             // metadata: MPropertyDescription "Door Spawn Particle Color"
-            Color m_ColorStart; // 0x1890            
+            Color m_ColorStart; // 0x1888            
             // metadata: MPropertyFriendlyName "Door End Particle Color"
             // metadata: MPropertyDescription "Door End Particle Color"
-            Color m_ColorEnd; // 0x1894            
+            Color m_ColorEnd; // 0x188c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Doorman_Doorway_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Doorman_Doorway_VData) == 0x1898);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Doorman_Doorway_VData) == 0x1890);
     };
 };

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16f0
+        // Size: 0x16e8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,19 +30,19 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_AllySmokeAOEModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_AllySmokeAOEModifier;
-            char m_AllySmokeAOEModifier[0x10]; // 0x15f0            
+            char m_AllySmokeAOEModifier[0x10]; // 0x15e8            
             // m_EnemySmokeAOEModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_EnemySmokeAOEModifier;
-            char m_EnemySmokeAOEModifier[0x10]; // 0x1600            
+            char m_EnemySmokeAOEModifier[0x10]; // 0x15f8            
             // metadata: MPropertyStartGroup "Visuals"
             // m_PurgeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PurgeParticle;
-            char m_PurgeParticle[0xe0]; // 0x1610            
+            char m_PurgeParticle[0xe0]; // 0x1608            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityTokamakBreachVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityTokamakBreachVData) == 0x16f0);
+        static_assert(sizeof(source2sdk::client::CAbilityTokamakBreachVData) == 0x16e8);
     };
 };

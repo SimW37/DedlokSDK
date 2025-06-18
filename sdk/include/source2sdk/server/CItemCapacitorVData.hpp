@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1860
+        // Size: 0x1858
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x1680            
+            char m_DebuffModifier[0x10]; // 0x1678            
             // metadata: MPropertyStartGroup "Visuals"
             // m_DamageParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamageParticle;
-            char m_DamageParticle[0xe0]; // 0x1690            
+            char m_DamageParticle[0xe0]; // 0x1688            
             // m_PurgeCastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PurgeCastParticle;
-            char m_PurgeCastParticle[0xe0]; // 0x1770            
+            char m_PurgeCastParticle[0xe0]; // 0x1768            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_PurgeSound; // 0x1850            
+            CSoundEventName m_PurgeSound; // 0x1848            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CItemCapacitorVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CItemCapacitorVData) == 0x1860);
+        static_assert(sizeof(source2sdk::server::CItemCapacitorVData) == 0x1858);
     };
 };

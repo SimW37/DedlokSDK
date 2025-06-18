@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x15f0
+        // Size: 0x15e8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,6 +29,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CAbilityTargetdummy2VData) == 0x15f0);
+        static_assert(sizeof(source2sdk::server::CAbilityTargetdummy2VData) == 0x15e8);
     };
 };

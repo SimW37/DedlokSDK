@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xae8
+        // Size: 0xb00
         // Has VTable
         #pragma pack(push, 1)
         class C_Citadel_Projectile_Viscous_GooGrenade : public source2sdk::client::C_CitadelProjectile
@@ -33,15 +33,18 @@ namespace source2sdk
         public:
             std::int32_t m_nBounces; // 0xaa0            
             source2sdk::entity2::GameTime_t m_tNextDetonateTime; // 0xaa4            
+            // m_vecLastHitTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_vecLastHitTargets;
+            char m_vecLastHitTargets[0x18]; // 0xaa8            
             // m_vecProjectileHitTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_vecProjectileHitTargets;
-            char m_vecProjectileHitTargets[0x18]; // 0xaa8            
-            uint8_t _pad0ac0[0x28];
+            char m_vecProjectileHitTargets[0x18]; // 0xac0            
+            uint8_t _pad0ad8[0x28];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_Citadel_Projectile_Viscous_GooGrenade because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_Citadel_Projectile_Viscous_GooGrenade) == 0xae8);
+        static_assert(sizeof(source2sdk::client::C_Citadel_Projectile_Viscous_GooGrenade) == 0xb00);
     };
 };
