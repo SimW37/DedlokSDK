@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1a50
+        // Size: 0x1a90
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,31 +30,31 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_LandingParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LandingParticle;
-            char m_LandingParticle[0xe0]; // 0x1768            
+            char m_LandingParticle[0xe0]; // 0x17a8            
             // m_AoEPreviewParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle;
-            char m_AoEPreviewParticle[0xe0]; // 0x1848            
+            char m_AoEPreviewParticle[0xe0]; // 0x1888            
             // m_DropDownStartParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DropDownStartParticle;
-            char m_DropDownStartParticle[0xe0]; // 0x1928            
+            char m_DropDownStartParticle[0xe0]; // 0x1968            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_DropDownStartSound; // 0x1a08            
-            CSoundEventName m_LandingSound; // 0x1a18            
+            CSoundEventName m_DropDownStartSound; // 0x1a48            
+            CSoundEventName m_LandingSound; // 0x1a58            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x1a28            
+            char m_DebuffModifier[0x10]; // 0x1a68            
             // m_BarrierModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BarrierModifier;
-            char m_BarrierModifier[0x10]; // 0x1a38            
+            char m_BarrierModifier[0x10]; // 0x1a78            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flSlamEnabledTime; // 0x1a48            
-            uint8_t _pad1a4c[0x4];
+            float m_flSlamEnabledTime; // 0x1a88            
+            uint8_t _pad1a8c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_UtilityUpgrade_RocketBoosterVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_UtilityUpgrade_RocketBoosterVData) == 0x1a50);
+        static_assert(sizeof(source2sdk::client::CCitadel_UtilityUpgrade_RocketBoosterVData) == 0x1a90);
     };
 };

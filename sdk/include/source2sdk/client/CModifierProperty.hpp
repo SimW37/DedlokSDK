@@ -42,15 +42,13 @@ namespace source2sdk
             // m_hOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hOwner;
             char m_hOwner[0x4]; // 0x30            
-            uint8_t _pad0034[0x173]; // 0x34
-            bool m_bModifierStatesDirty; // 0x1a7            
-            bool m_bPredictedOwner; // 0x1a8            
+            uint8_t _pad0034[0x176]; // 0x34
+            bool m_bModifierStatesDirty; // 0x1aa            
+            bool m_bPredictedOwner; // 0x1ab            
             // metadata: MNetworkEnable
-            bool m_bAllowModifiersOnDeadEntities; // 0x1a9            
-            std::int8_t m_iLockRefCount; // 0x1aa            
-            uint8_t _pad01ab[0x1]; // 0x1ab
-            source2sdk::client::ModifierPropRuntimeHandle_t m_hHandle; // 0x1ac            
-            uint8_t _pad01ae[0x2]; // 0x1ae
+            bool m_bAllowModifiersOnDeadEntities; // 0x1ac            
+            std::int8_t m_iLockRefCount; // 0x1ad            
+            source2sdk::client::ModifierPropRuntimeHandle_t m_hHandle; // 0x1ae            
             std::uint32_t m_nBroadcastEventListenerMask; // 0x1b0            
             uint8_t _pad01b4[0xc]; // 0x1b4
             // metadata: MNetworkEnable
@@ -74,11 +72,11 @@ namespace source2sdk
         
         static_assert(offsetof(source2sdk::client::CModifierProperty, __m_pChainEntity) == 0x8);
         static_assert(offsetof(source2sdk::client::CModifierProperty, m_hOwner) == 0x30);
-        static_assert(offsetof(source2sdk::client::CModifierProperty, m_bModifierStatesDirty) == 0x1a7);
-        static_assert(offsetof(source2sdk::client::CModifierProperty, m_bPredictedOwner) == 0x1a8);
-        static_assert(offsetof(source2sdk::client::CModifierProperty, m_bAllowModifiersOnDeadEntities) == 0x1a9);
-        static_assert(offsetof(source2sdk::client::CModifierProperty, m_iLockRefCount) == 0x1aa);
-        static_assert(offsetof(source2sdk::client::CModifierProperty, m_hHandle) == 0x1ac);
+        static_assert(offsetof(source2sdk::client::CModifierProperty, m_bModifierStatesDirty) == 0x1aa);
+        static_assert(offsetof(source2sdk::client::CModifierProperty, m_bPredictedOwner) == 0x1ab);
+        static_assert(offsetof(source2sdk::client::CModifierProperty, m_bAllowModifiersOnDeadEntities) == 0x1ac);
+        static_assert(offsetof(source2sdk::client::CModifierProperty, m_iLockRefCount) == 0x1ad);
+        static_assert(offsetof(source2sdk::client::CModifierProperty, m_hHandle) == 0x1ae);
         static_assert(offsetof(source2sdk::client::CModifierProperty, m_nBroadcastEventListenerMask) == 0x1b0);
         static_assert(offsetof(source2sdk::client::CModifierProperty, m_nDisabledGroups) == 0x1c0);
         static_assert(offsetof(source2sdk::client::CModifierProperty, m_bvEnabledStateMask) == 0x1c4);

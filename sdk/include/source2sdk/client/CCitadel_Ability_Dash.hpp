@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xff0
+        // Size: 0xe30
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flDashAngle"
@@ -71,16 +71,17 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             bool m_bDownAirDash; // 0xdfa            
-            uint8_t _pad0dfb[0x1ed]; // 0xdfb
+            uint8_t _pad0dfb[0x29]; // 0xdfb
             // m_hJumpAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::CCitadel_Ability_Jump> m_hJumpAbility;
-            char m_hJumpAbility[0x4]; // 0xfe8            
-            source2sdk::entity2::GameTime_t m_flAirDashDelayedEffectsTime; // 0xfec            
+            char m_hJumpAbility[0x4]; // 0xe24            
+            source2sdk::entity2::GameTime_t m_flAirDashDelayedEffectsTime; // 0xe28            
+            uint8_t _pad0e2c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Dash because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Dash) == 0xff0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Dash) == 0xe30);
     };
 };

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16e8
+        // Size: 0x1720
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,19 +30,19 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x15e8            
+            char m_ImpactParticle[0xe0]; // 0x1620            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_TrapModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_TrapModifier;
-            char m_TrapModifier[0x10]; // 0x16c8            
+            char m_TrapModifier[0x10]; // 0x1700            
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x16d8            
+            char m_DebuffModifier[0x10]; // 0x1710            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityTrappersBoloVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityTrappersBoloVData) == 0x16e8);
+        static_assert(sizeof(source2sdk::client::CAbilityTrappersBoloVData) == 0x1720);
     };
 };

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17a8
+        // Size: 0x17e0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x15e8            
+            char m_ImpactParticle[0xe0]; // 0x1620            
             // m_ShootParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShootParticle;
-            char m_ShootParticle[0xe0]; // 0x16c8            
+            char m_ShootParticle[0xe0]; // 0x1700            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Rutger_RocketLauncher_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbility_Rutger_RocketLauncher_VData) == 0x17a8);
+        static_assert(sizeof(source2sdk::client::CAbility_Rutger_RocketLauncher_VData) == 0x17e0);
     };
 };

@@ -31,8 +31,8 @@ namespace source2sdk
             uint8_t _pad00d9[0x3]; // 0xd9
             source2sdk::entity2::GameTime_t m_flGetUpAnimTime; // 0xdc            
             bool m_bGetUpCamSeqStarted; // 0xe0            
-            bool m_bOnGroundDuration; // 0xe1            
-            uint8_t _pad00e2[0x6];
+            uint8_t _pad00e1[0x3]; // 0xe1
+            float m_flOnGroundDuration; // 0xe4            
         };
         #pragma pack(pop)
         

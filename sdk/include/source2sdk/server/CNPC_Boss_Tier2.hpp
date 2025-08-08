@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1a90
+        // Size: 0x1ae8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iLane"
@@ -60,7 +60,7 @@ namespace source2sdk
             std::int32_t m_nElectricBeamCasts; // 0x19fc            
             uint8_t _pad1a00[0x28]; // 0x1a00
             source2sdk::entity2::CEntityIOOutput m_eventOnBossKilled; // 0x1a28            
-            uint8_t _pad1a50[0x40];
+            uint8_t _pad1a50[0x98];
             
             // Datamap fields:
             // CUtlSymbolLarge m_strBossEntityName; // 0x1a58
@@ -69,6 +69,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CNPC_Boss_Tier2 because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_Boss_Tier2) == 0x1a90);
+        static_assert(sizeof(source2sdk::server::CNPC_Boss_Tier2) == 0x1ae8);
     };
 };

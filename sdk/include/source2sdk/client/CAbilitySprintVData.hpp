@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16e8
+        // Size: 0x1718
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,20 +29,17 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_SprintParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SprintParticle;
-            char m_SprintParticle[0xe0]; // 0x15e8            
+            char m_SprintParticle[0xe0]; // 0x1620            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strSprintSound; // 0x16c8            
+            CSoundEventName m_strSprintSound; // 0x1700            
             // metadata: MPropertyStartGroup "+Sprint Properties"
-            // metadata: MPropertyDescription "How longer after taking or dealing damage are we considered to be in combat?"
-            float m_flInCombatWithHeroDuration; // 0x16d8            
-            float m_flInCombatWithNonHeroDuration; // 0x16dc            
-            float m_flSprintAccMS; // 0x16e0            
-            uint8_t _pad16e4[0x4];
+            float m_flSprintAccMS; // 0x1710            
+            uint8_t _pad1714[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilitySprintVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilitySprintVData) == 0x16e8);
+        static_assert(sizeof(source2sdk::client::CAbilitySprintVData) == 0x1718);
     };
 };

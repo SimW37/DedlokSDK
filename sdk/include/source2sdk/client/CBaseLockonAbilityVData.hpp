@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1608
+        // Size: 0x1640
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,14 +29,14 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_TargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_TargetModifier;
-            char m_TargetModifier[0x10]; // 0x15e8            
+            char m_TargetModifier[0x10]; // 0x1620            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strApplyLockonStack; // 0x15f8            
+            CSoundEventName m_strApplyLockonStack; // 0x1630            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CBaseLockonAbilityVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CBaseLockonAbilityVData) == 0x1608);
+        static_assert(sizeof(source2sdk::client::CBaseLockonAbilityVData) == 0x1640);
     };
 };

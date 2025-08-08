@@ -25,7 +25,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "BaseDomain"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "€í¨ªÿ"
+        // static metadata: MPulseCellOutflowHookInfo "€M…ø"
         // static metadata: MPropertyFriendlyName "Interval Timer"
         // static metadata: MPropertyDescription "Wait for a duration, firing a child cursor at regular (or randomized) intervals"
         // static metadata: MPulseEditorHeaderIcon "tools/images/pulse_editor/node_timer.png"

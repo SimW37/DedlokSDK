@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1768
+        // Size: 0x17a0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,16 +30,16 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_StimPakModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_StimPakModifier;
-            char m_StimPakModifier[0x10]; // 0x1678            
+            char m_StimPakModifier[0x10]; // 0x16b0            
             // metadata: MPropertyGroupName "Visuals"
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x1688            
+            char m_CastParticle[0xe0]; // 0x16c0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CItemStimPakVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CItemStimPakVData) == 0x1768);
+        static_assert(sizeof(source2sdk::client::CItemStimPakVData) == 0x17a0);
     };
 };

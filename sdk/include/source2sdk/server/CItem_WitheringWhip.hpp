@@ -17,18 +17,17 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xbe8
+        // Size: 0xba8
         // Has VTable
         #pragma pack(push, 1)
         class CItem_WitheringWhip : public source2sdk::server::CCitadel_Item_TrackingProjectileApplyModifier
         {
         public:
-            uint8_t _pad0ba8[0x40];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CItem_WitheringWhip) == 0xbe8);
+        static_assert(sizeof(source2sdk::server::CItem_WitheringWhip) == 0xba8);
     };
 };

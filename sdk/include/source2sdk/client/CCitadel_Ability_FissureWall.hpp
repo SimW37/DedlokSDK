@@ -22,8 +22,8 @@ namespace source2sdk
         // Size: 0xef0
         // Has VTable
         // 
-        // static metadata: MNetworkVarNames "Vector m_vecStartPos"
         // static metadata: MNetworkVarNames "Vector m_vecPosition"
+        // static metadata: MNetworkVarNames "Vector m_vecTravellingPosition"
         // static metadata: MNetworkVarNames "Vector m_vecInitialPosition"
         // static metadata: MNetworkVarNames "GameTime_t m_CastTime"
         // static metadata: MNetworkVarNames "Vector m_vecDirection"
@@ -41,9 +41,9 @@ namespace source2sdk
             char m_vecWallPreviewParticles[0x18]; // 0xdd0            
             uint8_t _pad0de8[0xc0]; // 0xde8
             // metadata: MNetworkEnable
-            Vector m_vecStartPos; // 0xea8            
+            Vector m_vecPosition; // 0xea8            
             // metadata: MNetworkEnable
-            Vector m_vecPosition; // 0xeb4            
+            Vector m_vecTravellingPosition; // 0xeb4            
             // metadata: MNetworkEnable
             Vector m_vecInitialPosition; // 0xec0            
             // metadata: MNetworkEnable

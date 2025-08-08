@@ -3,7 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/server/CCitadelModifier.hpp"
+#include "source2sdk/server/CCitadel_Modifier_Knockdown.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x100
+        // Size: 0x128
         // Has VTable
         #pragma pack(push, 1)
-        class CCitadel_Modifier_ParriedStun : public source2sdk::server::CCitadelModifier
+        class CCitadel_Modifier_ParriedStun : public source2sdk::server::CCitadel_Modifier_Knockdown
         {
         public:
-            uint8_t _pad00c0[0x40];
+            uint8_t _pad00e8[0x40];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ParriedStun) == 0x100);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ParriedStun) == 0x128);
     };
 };

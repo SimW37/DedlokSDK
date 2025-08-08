@@ -28,7 +28,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1038
+        // Size: 0xff8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bActive"
@@ -64,15 +64,15 @@ namespace source2sdk
             uint8_t _pad0e04[0x18]; // 0xe04
             // metadata: MNetworkEnable
             source2sdk::entity2::GameTime_t m_flDrainSuppressEndTime; // 0xe1c            
-            uint8_t _pad0e20[0x200]; // 0xe20
+            uint8_t _pad0e20[0x1c0]; // 0xe20
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CModifierHandleTyped<source2sdk::server::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x18]; // 0x1020            
+            char m_BuffModifier[0x18]; // 0xfe0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Shiv_KillingBlow because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Shiv_KillingBlow) == 0x1038);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Shiv_KillingBlow) == 0xff8);
     };
 };

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18c8
+        // Size: 0x1900
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,28 +30,28 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x15e8            
+            char m_DebuffModifier[0x10]; // 0x1620            
             // m_SilenceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SilenceModifier;
-            char m_SilenceModifier[0x10]; // 0x15f8            
+            char m_SilenceModifier[0x10]; // 0x1630            
             // metadata: MPropertyStartGroup "Visuals"
             // m_WebWallParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WebWallParticle;
-            char m_WebWallParticle[0xe0]; // 0x1608            
+            char m_WebWallParticle[0xe0]; // 0x1640            
             // m_WebWallDestroyedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WebWallDestroyedParticle;
-            char m_WebWallDestroyedParticle[0xe0]; // 0x16e8            
+            char m_WebWallDestroyedParticle[0xe0]; // 0x1720            
             // m_WebWallHitParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WebWallHitParticle;
-            char m_WebWallHitParticle[0xe0]; // 0x17c8            
+            char m_WebWallHitParticle[0xe0]; // 0x1800            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strWebWallCreated; // 0x18a8            
-            CSoundEventName m_strWebWallDestroyed; // 0x18b8            
+            CSoundEventName m_strWebWallCreated; // 0x18e0            
+            CSoundEventName m_strWebWallDestroyed; // 0x18f0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Trapper_WebWallVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Trapper_WebWallVData) == 0x18c8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Trapper_WebWallVData) == 0x1900);
     };
 };

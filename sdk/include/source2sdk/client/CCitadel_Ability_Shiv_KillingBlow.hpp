@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1228
+        // Size: 0x11e8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bActive"
@@ -60,12 +60,12 @@ namespace source2sdk
             uint8_t _pad101c[0x4]; // 0x101c
             // metadata: MNetworkEnable
             source2sdk::entity2::GameTime_t m_flDrainSuppressEndTime; // 0x1020            
-            uint8_t _pad1024[0x204];
+            uint8_t _pad1024[0x1c4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Shiv_KillingBlow because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Shiv_KillingBlow) == 0x1228);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Shiv_KillingBlow) == 0x11e8);
     };
 };

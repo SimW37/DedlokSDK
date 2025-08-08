@@ -36,7 +36,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0xf58
+        // Size: 0xfa0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -164,53 +164,58 @@ namespace source2sdk
             float m_flMinHealthForThreshold; // 0xc78            
             // metadata: MPropertyDescription "Max Max Health for remapped value"
             float m_flMaxHealthForThreshold; // 0xc7c            
+            // metadata: MPropertyDescription "How long a player is deemed in combat taking or dealing damage to a player"
+            float m_flInCombatWithHeroDuration; // 0xc80            
+            // metadata: MPropertyDescription "How long a player is deemed in combat taking or dealing damage to a non-player"
+            float m_flInCombatWithNonHeroDuration; // 0xc84            
             // metadata: MPropertyStartGroup
             // m_mapStartingStats has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<source2sdk::client::EStatsType,float> m_mapStartingStats;
-            char m_mapStartingStats[0x28]; // 0xc80            
+            char m_mapStartingStats[0x28]; // 0xc88            
             // m_mapScalingStats has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<source2sdk::client::EStatsType,source2sdk::client::HeroScalingStat_t> m_mapScalingStats;
-            char m_mapScalingStats[0x28]; // 0xca8            
+            char m_mapScalingStats[0x28]; // 0xcb0            
+            CPiecewiseCurve m_groundDashPositionCurve; // 0xcd8            
             // m_mapModCostBonuses has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<source2sdk::client::EItemSlotTypes_t,CUtlVector<source2sdk::client::ModCostBonuses_t>> m_mapModCostBonuses;
-            char m_mapModCostBonuses[0x28]; // 0xcd0            
-            uint8_t _pad0cf8[0x18]; // 0xcf8
+            char m_mapModCostBonuses[0x28]; // 0xd18            
+            uint8_t _pad0d40[0x18]; // 0xd40
             // m_mapBoundAbilities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<source2sdk::client::EAbilitySlots_t,CSubclassName<4>> m_mapBoundAbilities;
-            char m_mapBoundAbilities[0x28]; // 0xd10            
+            char m_mapBoundAbilities[0x28]; // 0xd58            
             // m_mapWIPAbilities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<source2sdk::client::EAbilitySlots_t,CSubclassName<4>> m_mapWIPAbilities;
-            char m_mapWIPAbilities[0x28]; // 0xd38            
+            char m_mapWIPAbilities[0x28]; // 0xd80            
             // m_mapItemSlotInfo has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<source2sdk::client::EItemSlotTypes_t,source2sdk::client::ItemSlotInfo_t> m_mapItemSlotInfo;
-            char m_mapItemSlotInfo[0x28]; // 0xd60            
+            char m_mapItemSlotInfo[0x28]; // 0xda8            
             // m_mapRecommendedUpgradeHints has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<CUtlString,source2sdk::client::RecommendedUpgradeHints_t> m_mapRecommendedUpgradeHints;
-            char m_mapRecommendedUpgradeHints[0x28]; // 0xd88            
-            uint8_t _pad0db0[0x28]; // 0xdb0
+            char m_mapRecommendedUpgradeHints[0x28]; // 0xdd0            
+            uint8_t _pad0df8[0x28]; // 0xdf8
             // m_RecommendedUpgrades has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CSubclassName<4>> m_RecommendedUpgrades;
-            char m_RecommendedUpgrades[0x18]; // 0xdd8            
-            uint8_t _pad0df0[0x18]; // 0xdf0
+            char m_RecommendedUpgrades[0x18]; // 0xe20            
+            uint8_t _pad0e38[0x18]; // 0xe38
             // m_RecommendedUpgradeTags has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CUtlString> m_RecommendedUpgradeTags;
-            char m_RecommendedUpgradeTags[0x18]; // 0xe08            
-            uint8_t _pad0e20[0x70]; // 0xe20
+            char m_RecommendedUpgradeTags[0x18]; // 0xe50            
+            uint8_t _pad0e68[0x70]; // 0xe68
             // m_RecommendedAbilityOrder has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CSubclassName<4>> m_RecommendedAbilityOrder;
-            char m_RecommendedAbilityOrder[0x18]; // 0xe90            
-            uint8_t _pad0ea8[0x18]; // 0xea8
-            source2sdk::client::EAbilityResourceType m_eAbilityResourceType; // 0xec0            
-            uint8_t _pad0ec4[0x1c]; // 0xec4
+            char m_RecommendedAbilityOrder[0x18]; // 0xed8            
+            uint8_t _pad0ef0[0x18]; // 0xef0
+            source2sdk::client::EAbilityResourceType m_eAbilityResourceType; // 0xf08            
+            uint8_t _pad0f0c[0x1c]; // 0xf0c
             // m_mapStandardLevelUpUpgrades has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<source2sdk::client::EModifierValue,float> m_mapStandardLevelUpUpgrades;
-            char m_mapStandardLevelUpUpgrades[0x28]; // 0xee0            
+            char m_mapStandardLevelUpUpgrades[0x28]; // 0xf28            
             // m_mapLevelInfo has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<std::int32_t,source2sdk::client::HeroLevel_t> m_mapLevelInfo;
-            char m_mapLevelInfo[0x28]; // 0xf08            
+            char m_mapLevelInfo[0x28]; // 0xf50            
             // m_mapPurchaseBonuses has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<source2sdk::client::EItemSlotTypes_t,CUtlVector<source2sdk::client::HeroPurchaseBonus_t>> m_mapPurchaseBonuses;
-            char m_mapPurchaseBonuses[0x28]; // 0xf30            
+            char m_mapPurchaseBonuses[0x28]; // 0xf78            
         };
         #pragma pack(pop)
         
@@ -274,21 +279,24 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_flMaxMidHealthPercentage) == 0xc74);
         static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_flMinHealthForThreshold) == 0xc78);
         static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_flMaxHealthForThreshold) == 0xc7c);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapStartingStats) == 0xc80);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapScalingStats) == 0xca8);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapModCostBonuses) == 0xcd0);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapBoundAbilities) == 0xd10);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapWIPAbilities) == 0xd38);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapItemSlotInfo) == 0xd60);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapRecommendedUpgradeHints) == 0xd88);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_RecommendedUpgrades) == 0xdd8);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_RecommendedUpgradeTags) == 0xe08);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_RecommendedAbilityOrder) == 0xe90);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_eAbilityResourceType) == 0xec0);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapStandardLevelUpUpgrades) == 0xee0);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapLevelInfo) == 0xf08);
-        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapPurchaseBonuses) == 0xf30);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_flInCombatWithHeroDuration) == 0xc80);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_flInCombatWithNonHeroDuration) == 0xc84);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapStartingStats) == 0xc88);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapScalingStats) == 0xcb0);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_groundDashPositionCurve) == 0xcd8);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapModCostBonuses) == 0xd18);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapBoundAbilities) == 0xd58);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapWIPAbilities) == 0xd80);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapItemSlotInfo) == 0xda8);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapRecommendedUpgradeHints) == 0xdd0);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_RecommendedUpgrades) == 0xe20);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_RecommendedUpgradeTags) == 0xe50);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_RecommendedAbilityOrder) == 0xed8);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_eAbilityResourceType) == 0xf08);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapStandardLevelUpUpgrades) == 0xf28);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapLevelInfo) == 0xf50);
+        static_assert(offsetof(source2sdk::client::CitadelHeroData_t, m_mapPurchaseBonuses) == 0xf78);
         
-        static_assert(sizeof(source2sdk::client::CitadelHeroData_t) == 0xf58);
+        static_assert(sizeof(source2sdk::client::CitadelHeroData_t) == 0xfa0);
     };
 };

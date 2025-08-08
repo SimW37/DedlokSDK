@@ -32,10 +32,10 @@ namespace source2sdk
             uint8_t _pad00d9[0x3]; // 0xd9
             source2sdk::entity2::GameTime_t m_flGetUpAnimTime; // 0xdc            
             bool m_bGetUpCamSeqStarted; // 0xe0            
-            bool m_bOnGroundDuration; // 0xe1            
-            uint8_t _pad00e2[0x2]; // 0xe2
-            source2sdk::client::SatVolumeIndex_t m_satIndex; // 0xe4            
-            uint8_t _pad00e8[0x8];
+            uint8_t _pad00e1[0x3]; // 0xe1
+            float m_flOnGroundDuration; // 0xe4            
+            source2sdk::client::SatVolumeIndex_t m_satIndex; // 0xe8            
+            uint8_t _pad00ec[0x4];
         };
         #pragma pack(pop)
         

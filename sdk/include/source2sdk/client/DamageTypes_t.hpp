@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 27
+        // Enumerator count: 28
         // Alignment: 4
         // Size: 0x4
         enum class DamageTypes_t : std::uint32_t
@@ -47,6 +47,7 @@ namespace source2sdk
             DMG_BUFFED = 0x2000000,
             DMG_DOT = 0x4000000,
             DMG_GROUND_AURA = 0x8000000,
+            DMG_LETHAL = 0x10000000,
         };
     };
 };

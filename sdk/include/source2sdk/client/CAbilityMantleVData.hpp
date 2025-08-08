@@ -3,6 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCitadelModifier.hpp"
 #include "source2sdk/client/CitadelAbilityVData.hpp"
 #include "source2sdk/client/MantleType_t.hpp"
 
@@ -18,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1600
+        // Size: 0x1650
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,12 +29,18 @@ namespace source2sdk
         public:
             // m_vecMantleTypes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::MantleType_t> m_vecMantleTypes;
-            char m_vecMantleTypes[0x18]; // 0x15e8            
+            char m_vecMantleTypes[0x18]; // 0x1620            
+            // metadata: MPropertyStartGroup "Modifiers"
+            float m_flMantleSlowOnHitDuration; // 0x1638            
+            uint8_t _pad163c[0x4]; // 0x163c
+            // m_MantleSlowOnHitModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_MantleSlowOnHitModifier;
+            char m_MantleSlowOnHitModifier[0x10]; // 0x1640            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityMantleVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityMantleVData) == 0x1600);
+        static_assert(sizeof(source2sdk::client::CAbilityMantleVData) == 0x1650);
     };
 };

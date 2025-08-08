@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1b00
+        // Size: 0x1b38
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,35 +31,35 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_EscapeModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_EscapeModifier;
-            char m_EscapeModifier[0x10]; // 0x15e8            
+            char m_EscapeModifier[0x10]; // 0x1620            
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x15f8            
+            char m_DebuffModifier[0x10]; // 0x1630            
             // metadata: MPropertyStartGroup "Visuals"
             // m_StartAoEParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StartAoEParticle;
-            char m_StartAoEParticle[0xe0]; // 0x1608            
+            char m_StartAoEParticle[0xe0]; // 0x1640            
             // m_ExitAoEParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExitAoEParticle;
-            char m_ExitAoEParticle[0xe0]; // 0x16e8            
+            char m_ExitAoEParticle[0xe0]; // 0x1720            
             // m_EffectParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EffectParticle;
-            char m_EffectParticle[0xe0]; // 0x17c8            
+            char m_EffectParticle[0xe0]; // 0x1800            
             // m_HitParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle;
-            char m_HitParticle[0xe0]; // 0x18a8            
+            char m_HitParticle[0xe0]; // 0x18e0            
             // m_RadiusParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadiusParticle;
-            char m_RadiusParticle[0xe0]; // 0x1988            
+            char m_RadiusParticle[0xe0]; // 0x19c0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strExpireSound; // 0x1a68            
+            CSoundEventName m_strExpireSound; // 0x1aa0            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceInShadow; // 0x1a78            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceInShadow; // 0x1ab0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_ShadowPulse_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ShadowPulse_VData) == 0x1b00);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ShadowPulse_VData) == 0x1b38);
     };
 };

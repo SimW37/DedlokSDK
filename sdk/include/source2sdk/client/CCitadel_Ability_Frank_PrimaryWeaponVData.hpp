@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1688
+        // Size: 0x16c0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,14 +26,14 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Gameplay"
-            CPiecewiseCurve m_SpreadPenaltyScaleCurve; // 0x1638            
+            CPiecewiseCurve m_SpreadPenaltyScaleCurve; // 0x1670            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strShootDelaySound; // 0x1678            
+            CSoundEventName m_strShootDelaySound; // 0x16b0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Frank_PrimaryWeaponVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Frank_PrimaryWeaponVData) == 0x1688);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Frank_PrimaryWeaponVData) == 0x16c0);
     };
 };

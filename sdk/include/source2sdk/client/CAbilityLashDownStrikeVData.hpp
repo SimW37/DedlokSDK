@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1af8
+        // Size: 0x1b30
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,59 +30,59 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_TargetPreviewParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetPreviewParticle;
-            char m_TargetPreviewParticle[0xe0]; // 0x15e8            
+            char m_TargetPreviewParticle[0xe0]; // 0x1620            
             // metadata: MPropertyLeafSuggestionProviderFn
-            CGlobalSymbol m_strGroundCastAnimGraphParam; // 0x16c8            
+            CGlobalSymbol m_strGroundCastAnimGraphParam; // 0x1700            
             // metadata: MPropertyLeafSuggestionProviderFn
-            CGlobalSymbol m_strAirCastAnimGraphParam; // 0x16d0            
+            CGlobalSymbol m_strAirCastAnimGraphParam; // 0x1708            
             // m_StompParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompParticle;
-            char m_StompParticle[0xe0]; // 0x16d8            
+            char m_StompParticle[0xe0]; // 0x1710            
             // m_StompLineParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompLineParticle;
-            char m_StompLineParticle[0xe0]; // 0x17b8            
+            char m_StompLineParticle[0xe0]; // 0x17f0            
             // m_StompLineObstructedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompLineObstructedParticle;
-            char m_StompLineObstructedParticle[0xe0]; // 0x1898            
+            char m_StompLineObstructedParticle[0xe0]; // 0x18d0            
             // m_StompImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompImpactParticle;
-            char m_StompImpactParticle[0xe0]; // 0x1978            
+            char m_StompImpactParticle[0xe0]; // 0x19b0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_StompExplosionSound; // 0x1a58            
-            CSoundEventName m_StompEnemyImpactSound; // 0x1a68            
-            CSoundEventName m_strFallCollideImpactSound; // 0x1a78            
+            CSoundEventName m_StompExplosionSound; // 0x1a90            
+            CSoundEventName m_StompEnemyImpactSound; // 0x1aa0            
+            CSoundEventName m_strFallCollideImpactSound; // 0x1ab0            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DownStrikeModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_DownStrikeModifier;
-            char m_DownStrikeModifier[0x10]; // 0x1a88            
+            char m_DownStrikeModifier[0x10]; // 0x1ac0            
             // m_ImpactModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_ImpactModifier;
-            char m_ImpactModifier[0x10]; // 0x1a98            
+            char m_ImpactModifier[0x10]; // 0x1ad0            
             // m_DragModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_DragModifier;
-            char m_DragModifier[0x10]; // 0x1aa8            
+            char m_DragModifier[0x10]; // 0x1ae0            
             // metadata: MPropertyStartGroup "+Down Strike Params"
-            float m_flHeightUILingerTime; // 0x1ab8            
-            float m_flDamageFrustumHalfWidth; // 0x1abc            
-            float m_flDamageFrustumAngle; // 0x1ac0            
-            float m_flDamageWaveSpeed; // 0x1ac4            
-            float m_flDamageTraceProbeDamageRadius; // 0x1ac8            
-            float m_flDamageTraceProbeWorldRadius; // 0x1acc            
-            float m_flDamageTraceProbeStepUpHeight; // 0x1ad0            
-            float m_flDamageTraceProbeStepDownHeight; // 0x1ad4            
-            float m_flDamageTraceProbeDropDownRate; // 0x1ad8            
-            float m_flInitialDamageRadiusInMeters; // 0x1adc            
-            std::int32_t m_nGroundCrackGap; // 0x1ae0            
-            float m_flGroupLengthTolerance; // 0x1ae4            
-            float m_flDamageEffectScaleMin; // 0x1ae8            
-            float m_flDamageEffectScaleMax; // 0x1aec            
-            float m_flTrackAmount; // 0x1af0            
-            float m_flCollideRadius; // 0x1af4            
+            float m_flHeightUILingerTime; // 0x1af0            
+            float m_flDamageFrustumHalfWidth; // 0x1af4            
+            float m_flDamageFrustumAngle; // 0x1af8            
+            float m_flDamageWaveSpeed; // 0x1afc            
+            float m_flDamageTraceProbeDamageRadius; // 0x1b00            
+            float m_flDamageTraceProbeWorldRadius; // 0x1b04            
+            float m_flDamageTraceProbeStepUpHeight; // 0x1b08            
+            float m_flDamageTraceProbeStepDownHeight; // 0x1b0c            
+            float m_flDamageTraceProbeDropDownRate; // 0x1b10            
+            float m_flInitialDamageRadiusInMeters; // 0x1b14            
+            std::int32_t m_nGroundCrackGap; // 0x1b18            
+            float m_flGroupLengthTolerance; // 0x1b1c            
+            float m_flDamageEffectScaleMin; // 0x1b20            
+            float m_flDamageEffectScaleMax; // 0x1b24            
+            float m_flTrackAmount; // 0x1b28            
+            float m_flCollideRadius; // 0x1b2c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityLashDownStrikeVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityLashDownStrikeVData) == 0x1af8);
+        static_assert(sizeof(source2sdk::client::CAbilityLashDownStrikeVData) == 0x1b30);
     };
 };

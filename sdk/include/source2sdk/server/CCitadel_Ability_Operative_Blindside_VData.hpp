@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16e8
+        // Size: 0x1720
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,18 +30,18 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_EnemyDebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_EnemyDebuffModifier;
-            char m_EnemyDebuffModifier[0x10]; // 0x15e8            
+            char m_EnemyDebuffModifier[0x10]; // 0x1620            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x15f8            
+            char m_ExplodeParticle[0xe0]; // 0x1630            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_ExplosionSound; // 0x16d8            
+            CSoundEventName m_ExplosionSound; // 0x1710            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Operative_Blindside_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Operative_Blindside_VData) == 0x16e8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Operative_Blindside_VData) == 0x1720);
     };
 };

@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 49
+        // Enumerator count: 50
         // Alignment: 8
         // Size: 0x8
         enum class TakeDamageFlags_t : std::uint64_t
@@ -69,6 +69,7 @@ namespace source2sdk
             DFLAG_SKYRUNNER_RICOCHET = 0x100000000000,
             DFLAG_VAMPIREBAT_LOVEBITEPROC = 0x200000000000,
             DFLAG_ABILITY_DAMAGE_IGNORE_FALLOFF = 0x400000000000,
+            DFLAG_IGNORE_RESISTANCES = 0x800000000000,
         };
     };
 };

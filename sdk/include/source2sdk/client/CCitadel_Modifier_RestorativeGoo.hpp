@@ -32,7 +32,8 @@ namespace source2sdk
         {
         public:
             source2sdk::entity2::GameTime_t m_flEarliestBreakoutTime; // 0xc0            
-            uint8_t _pad00c4[0x344]; // 0xc4
+            float m_flTotalPendingHeal; // 0xc4            
+            uint8_t _pad00c8[0x340]; // 0xc8
             // m_hGooCube has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_Citadel_RestorativeGooCube> m_hGooCube;
             char m_hGooCube[0x4]; // 0x408            

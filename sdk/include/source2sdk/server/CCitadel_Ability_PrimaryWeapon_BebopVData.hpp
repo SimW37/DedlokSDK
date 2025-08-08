@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1778
+        // Size: 0x17b0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,23 +27,23 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strWindupSound; // 0x1640            
-            CSoundEventName m_strBeamStartSound; // 0x1650            
-            CSoundEventName m_strBeamLoopSound1; // 0x1660            
-            CSoundEventName m_strBeamLoopSound2; // 0x1670            
-            CSoundEventName m_strBeamStopSound; // 0x1680            
+            CSoundEventName m_strWindupSound; // 0x1678            
+            CSoundEventName m_strBeamStartSound; // 0x1688            
+            CSoundEventName m_strBeamLoopSound1; // 0x1698            
+            CSoundEventName m_strBeamLoopSound2; // 0x16a8            
+            CSoundEventName m_strBeamStopSound; // 0x16b8            
             // metadata: MPropertyStartGroup "Visuals"
             // m_szWeaponBeamParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szWeaponBeamParticle;
-            char m_szWeaponBeamParticle[0xe0]; // 0x1690            
+            char m_szWeaponBeamParticle[0xe0]; // 0x16c8            
             // metadata: MPropertyStartGroup "Misc"
-            float m_flWindupRepeatCycle; // 0x1770            
-            uint8_t _pad1774[0x4];
+            float m_flWindupRepeatCycle; // 0x17a8            
+            uint8_t _pad17ac[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_PrimaryWeapon_BebopVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_PrimaryWeapon_BebopVData) == 0x1778);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_PrimaryWeapon_BebopVData) == 0x17b0);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x138
+        // Size: 0x140
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,6 +29,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelItemPickupRejuvHeroTestVData) == 0x138);
+        static_assert(sizeof(source2sdk::server::CCitadelItemPickupRejuvHeroTestVData) == 0x140);
     };
 };

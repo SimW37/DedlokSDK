@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7d8
+        // Size: 0x7e8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,14 +29,18 @@ namespace source2sdk
             float m_flSatVolumeRadius; // 0x740            
             float m_flSatVolumeFadeOut; // 0x744            
             float m_flGravityScale; // 0x748            
+            float m_flDesatAmount; // 0x74c            
+            Color m_satColorDesat; // 0x750            
+            Color m_satColorSat; // 0x754            
+            Color m_satColorOutline; // 0x758            
             // metadata: MPropertyStartGroup "Camera"
-            float m_flGetUpSeqDuration; // 0x74c            
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceGetUp; // 0x750            
+            float m_flGetUpSeqDuration; // 0x75c            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceGetUp; // 0x760            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierKnockdownVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CModifierKnockdownVData) == 0x7d8);
+        static_assert(sizeof(source2sdk::client::CModifierKnockdownVData) == 0x7e8);
     };
 };

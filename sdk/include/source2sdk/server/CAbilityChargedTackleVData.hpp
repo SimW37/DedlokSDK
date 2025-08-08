@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1708
+        // Size: 0x1740
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,24 +30,24 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_ChargePreviewParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargePreviewParticle;
-            char m_ChargePreviewParticle[0xe0]; // 0x15e8            
+            char m_ChargePreviewParticle[0xe0]; // 0x1620            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_ChargePrepareModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ChargePrepareModifier;
-            char m_ChargePrepareModifier[0x10]; // 0x16c8            
+            char m_ChargePrepareModifier[0x10]; // 0x1700            
             // m_ChargeActiveModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ChargeActiveModifier;
-            char m_ChargeActiveModifier[0x10]; // 0x16d8            
+            char m_ChargeActiveModifier[0x10]; // 0x1710            
             // m_DragModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DragModifier;
-            char m_DragModifier[0x10]; // 0x16e8            
+            char m_DragModifier[0x10]; // 0x1720            
             // metadata: MPropertyGroupName "Sounds"
-            CSoundEventName m_strHitSound; // 0x16f8            
+            CSoundEventName m_strHitSound; // 0x1730            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityChargedTackleVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityChargedTackleVData) == 0x1708);
+        static_assert(sizeof(source2sdk::server::CAbilityChargedTackleVData) == 0x1740);
     };
 };

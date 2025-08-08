@@ -20,13 +20,18 @@ namespace source2sdk
         // Standard-layout class: false
         // Size: 0xd40
         // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "float m_flTotalPendingHeal"
         #pragma pack(push, 1)
         class CCitadel_Ability_PassiveBeefy : public source2sdk::server::CCitadelBaseAbility
         {
         public:
             uint8_t _pad0ba0[0x18]; // 0xba0
             source2sdk::entity2::GameTime_t m_flLastHealTime; // 0xbb8            
-            uint8_t _pad0bbc[0x184];
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            float m_flTotalPendingHeal; // 0xbbc            
+            uint8_t _pad0bc0[0x180];
         };
         #pragma pack(pop)
         

@@ -38,7 +38,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0x1108
+        // Size: 0x1110
         // 
         // static metadata: MVDataRoot
         // static metadata: MVDataSingleton
@@ -89,38 +89,37 @@ namespace source2sdk
             Color m_enemyObjectivesColor; // 0x6f4            
             source2sdk::client::NewPlayerMetrics_t m_NewPlayerMetrics[4]; // 0x6f8            
             std::int32_t m_nItemPricePerTier[6]; // 0x7b8            
-            float m_flLanePhaseGoldShareFrac[6]; // 0x7d0            
-            float m_flPostLanePhaseGoldShareFrac[6]; // 0x7e8            
+            float m_flTrooperKillGoldShareFrac[6]; // 0x7d0            
+            float m_flHeroKillGoldShareFrac[6]; // 0x7e8            
             // m_HeroTestingTargetDummyUpgrades has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CSubclassName<4>> m_HeroTestingTargetDummyUpgrades;
             char m_HeroTestingTargetDummyUpgrades[0x18]; // 0x800            
             uint8_t _pad0818[0x58]; // 0x818
             source2sdk::client::DOFDesc_t m_DefaultDOF; // 0x870            
             source2sdk::client::RejuvinatorParams_t m_RejuvParams; // 0x880            
-            source2sdk::client::IdolParams_t m_IdolParams; // 0x8d8            
-            source2sdk::client::TeleporterParams_t m_TeleporterParams; // 0xe30            
-            source2sdk::client::ObjectivesParams_t m_ObjectiveParams; // 0x1020            
-            uint8_t _pad104c[0x4]; // 0x104c
+            source2sdk::client::IdolParams_t m_IdolParams; // 0x8e0            
+            source2sdk::client::TeleporterParams_t m_TeleporterParams; // 0xe38            
+            source2sdk::client::ObjectivesParams_t m_ObjectiveParams; // 0x1028            
             // m_mapStatTypeImages has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<source2sdk::client::EStatsType,CUtlString> m_mapStatTypeImages;
-            char m_mapStatTypeImages[0x28]; // 0x1050            
+            char m_mapStatTypeImages[0x28]; // 0x1058            
             // metadata: MPropertyDescription "Remap camera angle delta to aim spring strength"
-            source2sdk::client::CRemapFloat m_AimSpringStrength; // 0x1078            
+            source2sdk::client::CRemapFloat m_AimSpringStrength; // 0x1080            
             // metadata: MPropertyDescription "Remap camera angle delta to ability targeting spring strength"
-            source2sdk::client::CRemapFloat m_TargetingSpringStrength; // 0x1088            
+            source2sdk::client::CRemapFloat m_TargetingSpringStrength; // 0x1090            
             // m_mapResourceTypes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<source2sdk::client::EAbilityResourceType,source2sdk::client::HeroAbilityResourceDef_t> m_mapResourceTypes;
-            char m_mapResourceTypes[0x28]; // 0x1098            
+            char m_mapResourceTypes[0x28]; // 0x10a0            
             // metadata: MPropertyStartGroup "New Shop Groups"
             // m_vecWeaponGroups has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::ShopGroups_t> m_vecWeaponGroups;
-            char m_vecWeaponGroups[0x18]; // 0x10c0            
+            char m_vecWeaponGroups[0x18]; // 0x10c8            
             // m_vecArmorGroups has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::ShopGroups_t> m_vecArmorGroups;
-            char m_vecArmorGroups[0x18]; // 0x10d8            
+            char m_vecArmorGroups[0x18]; // 0x10e0            
             // m_vecSpiritGroups has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::ShopGroups_t> m_vecSpiritGroups;
-            char m_vecSpiritGroups[0x18]; // 0x10f0            
+            char m_vecSpiritGroups[0x18]; // 0x10f8            
         };
         #pragma pack(pop)
         
@@ -145,22 +144,22 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_enemyObjectivesColor) == 0x6f4);
         static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_NewPlayerMetrics) == 0x6f8);
         static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_nItemPricePerTier) == 0x7b8);
-        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_flLanePhaseGoldShareFrac) == 0x7d0);
-        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_flPostLanePhaseGoldShareFrac) == 0x7e8);
+        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_flTrooperKillGoldShareFrac) == 0x7d0);
+        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_flHeroKillGoldShareFrac) == 0x7e8);
         static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_HeroTestingTargetDummyUpgrades) == 0x800);
         static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_DefaultDOF) == 0x870);
         static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_RejuvParams) == 0x880);
-        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_IdolParams) == 0x8d8);
-        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_TeleporterParams) == 0xe30);
-        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_ObjectiveParams) == 0x1020);
-        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_mapStatTypeImages) == 0x1050);
-        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_AimSpringStrength) == 0x1078);
-        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_TargetingSpringStrength) == 0x1088);
-        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_mapResourceTypes) == 0x1098);
-        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_vecWeaponGroups) == 0x10c0);
-        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_vecArmorGroups) == 0x10d8);
-        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_vecSpiritGroups) == 0x10f0);
+        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_IdolParams) == 0x8e0);
+        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_TeleporterParams) == 0xe38);
+        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_ObjectiveParams) == 0x1028);
+        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_mapStatTypeImages) == 0x1058);
+        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_AimSpringStrength) == 0x1080);
+        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_TargetingSpringStrength) == 0x1090);
+        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_mapResourceTypes) == 0x10a0);
+        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_vecWeaponGroups) == 0x10c8);
+        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_vecArmorGroups) == 0x10e0);
+        static_assert(offsetof(source2sdk::client::CitadelGenericData_t, m_vecSpiritGroups) == 0x10f8);
         
-        static_assert(sizeof(source2sdk::client::CitadelGenericData_t) == 0x1108);
+        static_assert(sizeof(source2sdk::client::CitadelGenericData_t) == 0x1110);
     };
 };

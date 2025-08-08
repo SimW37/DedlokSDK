@@ -17,18 +17,23 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf40
+        // Size: 0xf48
         // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "float m_flTotalPendingHeal"
         #pragma pack(push, 1)
         class CCitadel_Ability_PassiveBeefy : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0dc0[0x180];
-            // No schema binary for binding
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            float m_flTotalPendingHeal; // 0xdc0            
+            uint8_t _pad0dc4[0x184];
         };
         #pragma pack(pop)
         
+        // Cannot assert offsets of fields in CCitadel_Ability_PassiveBeefy because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_PassiveBeefy) == 0xf40);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_PassiveBeefy) == 0xf48);
     };
 };

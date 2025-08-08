@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x148
+        // Size: 0x188
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_CounterspellWatcher : public source2sdk::client::CCitadel_Modifier_Intrinsic_Base
@@ -25,12 +25,12 @@ namespace source2sdk
         public:
             bool m_bSpellBlockActivated; // 0xc0            
             bool m_bSpellBlocked; // 0xc1            
-            uint8_t _pad00c2[0x86];
+            uint8_t _pad00c2[0xc6];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_CounterspellWatcher because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_CounterspellWatcher) == 0x148);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_CounterspellWatcher) == 0x188);
     };
 };

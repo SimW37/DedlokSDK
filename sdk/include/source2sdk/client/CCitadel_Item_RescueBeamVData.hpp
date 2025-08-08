@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1698
+        // Size: 0x16d0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_DispelAndHealModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DispelAndHealModifier;
-            char m_DispelAndHealModifier[0x10]; // 0x1678            
+            char m_DispelAndHealModifier[0x10]; // 0x16b0            
             // m_PullModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_PullModifier;
-            char m_PullModifier[0x10]; // 0x1688            
+            char m_PullModifier[0x10]; // 0x16c0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item_RescueBeamVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Item_RescueBeamVData) == 0x1698);
+        static_assert(sizeof(source2sdk::client::CCitadel_Item_RescueBeamVData) == 0x16d0);
     };
 };

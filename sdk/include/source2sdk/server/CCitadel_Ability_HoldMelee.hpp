@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xca8
+        // Size: 0xcb8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_flParryWindowEndTime"
@@ -71,12 +71,13 @@ namespace source2sdk
             bool m_bCreatedChargeEffects; // 0xc80            
             uint8_t _pad0c81[0x3]; // 0xc81
             QAngle m_angForced; // 0xc84            
-            uint8_t _pad0c90[0x18];
+            Vector m_vGoalDir; // 0xc90            
+            uint8_t _pad0c9c[0x1c];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_HoldMelee because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_HoldMelee) == 0xca8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_HoldMelee) == 0xcb8);
     };
 };

@@ -3,7 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/server/CCitadelModifierAura.hpp"
+#include "source2sdk/server/CCitadel_Modifier_ItemPickupAura.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -17,10 +17,10 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe0
+        // Size: 0xe8
         // Has VTable
         #pragma pack(push, 1)
-        class CCitadel_Modifier_HeldItemPickupAura : public source2sdk::server::CCitadelModifierAura
+        class CCitadel_Modifier_HeldItemPickupAura : public source2sdk::server::CCitadel_Modifier_ItemPickupAura
         {
         public:
             // No schema binary for binding
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_HeldItemPickupAura) == 0xe0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_HeldItemPickupAura) == 0xe8);
     };
 };

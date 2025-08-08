@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1608
+        // Size: 0x1640
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,17 +26,17 @@ namespace source2sdk
         class CAbilityKobunVData : public source2sdk::server::CitadelAbilityVData
         {
         public:
-            Vector m_vSummonFollowOffset; // 0x15e8            
-            uint8_t _pad15f4[0x4]; // 0x15f4
+            Vector m_vSummonFollowOffset; // 0x1620            
+            uint8_t _pad162c[0x4]; // 0x162c
             // metadata: MPropertyStartGroup "Modifiers"
             // m_CloneModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_CloneModifier;
-            char m_CloneModifier[0x10]; // 0x15f8            
+            char m_CloneModifier[0x10]; // 0x1630            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityKobunVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityKobunVData) == 0x1608);
+        static_assert(sizeof(source2sdk::server::CAbilityKobunVData) == 0x1640);
     };
 };

@@ -20,14 +20,14 @@ namespace source2sdk
         {
             // MPropertyFriendlyName "Invalid"
             EFlexSlot_Invalid = 0x0,
-            // MPropertyFriendlyName "Kill 2 Tier 1"
-            EFlexSlot_Kill2Tier1 = 0x1,
-            // MPropertyFriendlyName "Kill 1 Tier 2"
-            EFlexSlot_Kill1Tier2 = 0x2,
+            // MPropertyFriendlyName "Kill 3 Tier 1"
+            EFlexSlot_Slot01 = 0x1,
             // MPropertyFriendlyName "Kill 2 Tier 2"
-            EFlexSlot_Kill2Tier2 = 0x4,
+            EFlexSlot_Slot02 = 0x2,
+            // MPropertyFriendlyName "Kill 3 Tier 2"
+            EFlexSlot_Slot03 = 0x4,
             // MPropertyFriendlyName "1 set of base guardians"
-            EFlexSlot_BaseGuardians = 0x8,
+            EFlexSlot_Slot04 = 0x8,
         };
     };
 };

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1a50
+        // Size: 0x1a48
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,43 +30,42 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_DashParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashParticle;
-            char m_DashParticle[0xe0]; // 0x15e8            
+            char m_DashParticle[0xe0]; // 0x1620            
             // m_DownDashParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DownDashParticle;
-            char m_DownDashParticle[0xe0]; // 0x16c8            
+            char m_DownDashParticle[0xe0]; // 0x1700            
             // m_WallJumpParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallJumpParticle;
-            char m_WallJumpParticle[0xe0]; // 0x17a8            
+            char m_WallJumpParticle[0xe0]; // 0x17e0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strArriveSound; // 0x1888            
-            CSoundEventName m_strStaminaDrainedSound; // 0x1898            
+            CSoundEventName m_strArriveSound; // 0x18c0            
+            CSoundEventName m_strStaminaDrainedSound; // 0x18d0            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceGroundDashActivate; // 0x18a8            
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAirDashActivate; // 0x1930            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceGroundDashActivate; // 0x18e0            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAirDashActivate; // 0x1968            
             // metadata: MPropertyStartGroup "Ground Dash Stuff"
-            float m_flMaxAngDiff; // 0x19b8            
-            float m_flDurationScaleForSpeed; // 0x19bc            
-            float m_flSlideEarlyOutWindow; // 0x19c0            
-            float m_flSlideLockoutTime; // 0x19c4            
-            float m_flGroundDashAirbornDrag; // 0x19c8            
-            float m_flGroundDashAirbornSpeedClamp; // 0x19cc            
-            CSoundEventName m_strGroundDashActivate; // 0x19d0            
-            CPiecewiseCurve m_curvePosition; // 0x19e0            
-            float m_flGroundDashDuration; // 0x1a20            
-            float m_flGroundDashDistanceInMeters; // 0x1a24            
+            float m_flMaxAngDiff; // 0x19f0            
+            float m_flSlideEarlyOutWindow; // 0x19f4            
+            float m_flSlideLockoutTime; // 0x19f8            
+            float m_flGroundDashAirbornDrag; // 0x19fc            
+            float m_flGroundDashAirbornSpeedClamp; // 0x1a00            
+            uint8_t _pad1a04[0x4]; // 0x1a04
+            CSoundEventName m_strGroundDashActivate; // 0x1a08            
             // metadata: MPropertyStartGroup "Air Dash Stuff"
-            float m_flAirDashEndVelocityScale; // 0x1a28            
-            float m_flAirDashAccPct; // 0x1a2c            
-            float m_flDuringDrag; // 0x1a30            
-            float m_flPostDrag; // 0x1a34            
-            float m_flPostDragDuration; // 0x1a38            
-            float m_flDownwardAirDashSpeed; // 0x1a3c            
-            CSoundEventName m_strDashActivate; // 0x1a40            
+            float m_flAirDashEndVelocityScale; // 0x1a18            
+            float m_flAirDashAccPct; // 0x1a1c            
+            float m_flDuringDrag; // 0x1a20            
+            float m_flAirSpeedForMaxDrag; // 0x1a24            
+            float m_flAirSpeedForMinDrag; // 0x1a28            
+            float m_flPostMaxDrag; // 0x1a2c            
+            float m_flPostDragDuration; // 0x1a30            
+            float m_flDownwardAirDashSpeed; // 0x1a34            
+            CSoundEventName m_strDashActivate; // 0x1a38            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityDashVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityDashVData) == 0x1a50);
+        static_assert(sizeof(source2sdk::server::CAbilityDashVData) == 0x1a48);
     };
 };

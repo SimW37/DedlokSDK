@@ -17,18 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1b8
+        // Size: 0x200
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_SpiritSnatch : public source2sdk::server::CCitadel_Modifier_BaseEventProc
         {
         public:
-            uint8_t _pad0178[0x40];
-            // No schema binary for binding
+            float m_flCooldownDuration; // 0x178            
+            uint8_t _pad017c[0x84];
         };
         #pragma pack(pop)
         
+        // Cannot assert offsets of fields in CCitadel_Modifier_SpiritSnatch because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_SpiritSnatch) == 0x1b8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_SpiritSnatch) == 0x200);
     };
 };

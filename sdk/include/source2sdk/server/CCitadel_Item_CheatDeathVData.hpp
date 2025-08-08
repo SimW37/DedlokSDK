@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1868
+        // Size: 0x18a0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,22 +30,22 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_DamagePulseParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamagePulseParticle;
-            char m_DamagePulseParticle[0xe0]; // 0x1678            
+            char m_DamagePulseParticle[0xe0]; // 0x16b0            
             // m_DamageTargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamageTargetParticle;
-            char m_DamageTargetParticle[0xe0]; // 0x1758            
+            char m_DamageTargetParticle[0xe0]; // 0x1790            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_sHealPulseSound; // 0x1838            
-            CSoundEventName m_sHealAndDamagePulseSound; // 0x1848            
+            CSoundEventName m_sHealPulseSound; // 0x1870            
+            CSoundEventName m_sHealAndDamagePulseSound; // 0x1880            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DeathImmuneModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DeathImmuneModifier;
-            char m_DeathImmuneModifier[0x10]; // 0x1858            
+            char m_DeathImmuneModifier[0x10]; // 0x1890            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item_CheatDeathVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Item_CheatDeathVData) == 0x1868);
+        static_assert(sizeof(source2sdk::server::CCitadel_Item_CheatDeathVData) == 0x18a0);
     };
 };

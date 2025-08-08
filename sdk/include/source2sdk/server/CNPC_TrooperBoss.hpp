@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1cc0
+        // Size: 0x1d18
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelPlayerClipComponent::Storage_t m_CCitadelPlayerClipComponent"
@@ -38,16 +38,16 @@ namespace source2sdk
             source2sdk::server::CCitadelPlayerClipComponent m_CCitadelPlayerClipComponent; // 0x1ac0            
             uint8_t _pad1ae0[0x8]; // 0x1ae0
             source2sdk::server::LaneSide_t m_LaneSide; // 0x1ae8            
-            uint8_t _pad1ae9[0x1cf]; // 0x1ae9
+            uint8_t _pad1ae9[0x227]; // 0x1ae9
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flFadeOutStart; // 0x1cb8            
+            source2sdk::entity2::GameTime_t m_flFadeOutStart; // 0x1d10            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x1cbc            
+            source2sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x1d14            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_TrooperBoss because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_TrooperBoss) == 0x1cc0);
+        static_assert(sizeof(source2sdk::server::CNPC_TrooperBoss) == 0x1d18);
     };
 };

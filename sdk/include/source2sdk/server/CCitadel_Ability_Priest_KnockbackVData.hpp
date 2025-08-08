@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18e0
+        // Size: 0x1918
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,34 +30,34 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SelfModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SelfModifier;
-            char m_SelfModifier[0x10]; // 0x15e8            
+            char m_SelfModifier[0x10]; // 0x1620            
             // m_KnockbackToWallModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_KnockbackToWallModifier;
-            char m_KnockbackToWallModifier[0x10]; // 0x15f8            
+            char m_KnockbackToWallModifier[0x10]; // 0x1630            
             // m_KnockbackModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_KnockbackModifier;
-            char m_KnockbackModifier[0x10]; // 0x1608            
+            char m_KnockbackModifier[0x10]; // 0x1640            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ShootParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShootParticle;
-            char m_ShootParticle[0xe0]; // 0x1618            
+            char m_ShootParticle[0xe0]; // 0x1650            
             // m_InitialImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InitialImpactParticle;
-            char m_InitialImpactParticle[0xe0]; // 0x16f8            
+            char m_InitialImpactParticle[0xe0]; // 0x1730            
             // m_WallImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactParticle;
-            char m_WallImpactParticle[0xe0]; // 0x17d8            
+            char m_WallImpactParticle[0xe0]; // 0x1810            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strWallSlamSound; // 0x18b8            
-            CSoundEventName m_strShootSound; // 0x18c8            
+            CSoundEventName m_strWallSlamSound; // 0x18f0            
+            CSoundEventName m_strShootSound; // 0x1900            
             // metadata: MPropertyStartGroup "GamePlay"
-            float m_flMinTravelTime; // 0x18d8            
-            float m_flTravelTimeFudge; // 0x18dc            
+            float m_flMinTravelTime; // 0x1910            
+            float m_flTravelTimeFudge; // 0x1914            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Priest_KnockbackVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_KnockbackVData) == 0x18e0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_KnockbackVData) == 0x1918);
     };
 };

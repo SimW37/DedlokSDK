@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17e8
+        // Size: 0x1820
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,25 +30,25 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ChargeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle;
-            char m_ChargeParticle[0xe0]; // 0x15e8            
+            char m_ChargeParticle[0xe0]; // 0x1620            
             // m_ShootDelayParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShootDelayParticle;
-            char m_ShootDelayParticle[0xe0]; // 0x16c8            
+            char m_ShootDelayParticle[0xe0]; // 0x1700            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_CasterModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_CasterModifier;
-            char m_CasterModifier[0x10]; // 0x17a8            
+            char m_CasterModifier[0x10]; // 0x17e0            
             // m_BoltHitModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BoltHitModifier;
-            char m_BoltHitModifier[0x10]; // 0x17b8            
+            char m_BoltHitModifier[0x10]; // 0x17f0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strBoltDelay; // 0x17c8            
-            CSoundEventName m_strBoltFire; // 0x17d8            
+            CSoundEventName m_strBoltDelay; // 0x1800            
+            CSoundEventName m_strBoltFire; // 0x1810            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Magician_BigBoltVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_BigBoltVData) == 0x17e8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_BigBoltVData) == 0x1820);
     };
 };

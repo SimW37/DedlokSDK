@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x19b8
+        // Size: 0x19f0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,35 +31,35 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x15e8            
+            char m_CastParticle[0xe0]; // 0x1620            
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x16c8            
+            char m_ImpactParticle[0xe0]; // 0x1700            
             // m_StoneFormParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StoneFormParticle;
-            char m_StoneFormParticle[0xe0]; // 0x17a8            
+            char m_StoneFormParticle[0xe0]; // 0x17e0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_CastTargetSound; // 0x1888            
-            CSoundEventName m_strImpactSound; // 0x1898            
-            CSoundEventName m_strFallCollideImpactSound; // 0x18a8            
+            CSoundEventName m_CastTargetSound; // 0x18c0            
+            CSoundEventName m_strImpactSound; // 0x18d0            
+            CSoundEventName m_strFallCollideImpactSound; // 0x18e0            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DragModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_DragModifier;
-            char m_DragModifier[0x10]; // 0x18b8            
+            char m_DragModifier[0x10]; // 0x18f0            
             // metadata: MPropertyDescription "Model"
             // m_strTrueFormModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_strTrueFormModel;
-            char m_strTrueFormModel[0xe0]; // 0x18c8            
+            char m_strTrueFormModel[0xe0]; // 0x1900            
             // metadata: MPropertyStartGroup "+Stone Form Params"
-            float m_flLandHoldTime; // 0x19a8            
-            float m_flRisingTime; // 0x19ac            
-            float m_flCollideRadius; // 0x19b0            
-            float m_flGroundDetectionFailsafeDelay; // 0x19b4            
+            float m_flLandHoldTime; // 0x19e0            
+            float m_flRisingTime; // 0x19e4            
+            float m_flCollideRadius; // 0x19e8            
+            float m_flGroundDetectionFailsafeDelay; // 0x19ec            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Tengu_StoneFormVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Tengu_StoneFormVData) == 0x19b8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Tengu_StoneFormVData) == 0x19f0);
     };
 };

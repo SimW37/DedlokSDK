@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xda8
+        // Size: 0xbe0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flDashAngle"
@@ -64,14 +64,13 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             bool m_bDownAirDash; // 0xbda            
-            uint8_t _pad0bdb[0x1c5]; // 0xbdb
-            source2sdk::entity2::GameTime_t m_flAirDashDelayedEffectsTime; // 0xda0            
-            uint8_t _pad0da4[0x4];
+            uint8_t _pad0bdb[0x1]; // 0xbdb
+            source2sdk::entity2::GameTime_t m_flAirDashDelayedEffectsTime; // 0xbdc            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Dash because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Dash) == 0xda8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Dash) == 0xbe0);
     };
 };

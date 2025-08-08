@@ -23,6 +23,7 @@ namespace source2sdk
         class CCitadel_PunchablePowerup : public source2sdk::server::CCitadel_BreakablePropModifierPickup
         {
         public:
+            uint8_t _pad0af0[0x8];
             // No schema binary for binding
         };
         #pragma pack(pop)

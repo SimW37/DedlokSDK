@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16c8
+        // Size: 0x1700
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,26 +29,26 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_RestoreEffectModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_RestoreEffectModifier;
-            char m_RestoreEffectModifier[0x10]; // 0x1678            
+            char m_RestoreEffectModifier[0x10]; // 0x16b0            
             // m_OnTakeDamageEffectModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_OnTakeDamageEffectModifier;
-            char m_OnTakeDamageEffectModifier[0x10]; // 0x1688            
+            char m_OnTakeDamageEffectModifier[0x10]; // 0x16c0            
             // m_OnBreakEffectModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_OnBreakEffectModifier;
-            char m_OnBreakEffectModifier[0x10]; // 0x1698            
+            char m_OnBreakEffectModifier[0x10]; // 0x16d0            
             // m_ResistBuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ResistBuffModifier;
-            char m_ResistBuffModifier[0x10]; // 0x16a8            
+            char m_ResistBuffModifier[0x10]; // 0x16e0            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flOnTakeDamageEffectDuration; // 0x16b8            
-            float m_flOnBreakEffectDuration; // 0x16bc            
-            float m_flOnRestoreEffectDuration; // 0x16c0            
-            uint8_t _pad16c4[0x4];
+            float m_flOnTakeDamageEffectDuration; // 0x16f0            
+            float m_flOnBreakEffectDuration; // 0x16f4            
+            float m_flOnRestoreEffectDuration; // 0x16f8            
+            uint8_t _pad16fc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_ArmorUpgrade_AblativeCoatVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_ArmorUpgrade_AblativeCoatVData) == 0x16c8);
+        static_assert(sizeof(source2sdk::server::CCitadel_ArmorUpgrade_AblativeCoatVData) == 0x1700);
     };
 };

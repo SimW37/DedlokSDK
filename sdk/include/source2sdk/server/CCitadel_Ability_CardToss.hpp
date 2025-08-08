@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe98
+        // Size: 0xed8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bCardIsFlying"
@@ -29,15 +29,15 @@ namespace source2sdk
             // m_vecCards has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::server::CCitadel_Ability_CardToss_Card_t> m_vecCards;
             char m_vecCards[0x18]; // 0xba0            
-            uint8_t _pad0bb8[0x2d8]; // 0xbb8
+            uint8_t _pad0bb8[0x318]; // 0xbb8
             // metadata: MNetworkEnable
-            bool m_bCardIsFlying; // 0xe90            
-            uint8_t _pad0e91[0x7];
+            bool m_bCardIsFlying; // 0xed0            
+            uint8_t _pad0ed1[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_CardToss because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_CardToss) == 0xe98);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_CardToss) == 0xed8);
     };
 };

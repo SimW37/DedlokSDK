@@ -3,7 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/client/CCitadelModifierAura.hpp"
+#include "source2sdk/client/CCitadel_Modifier_ItemPickupAura.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -20,7 +20,7 @@ namespace source2sdk
         // Size: 0xf8
         // Has VTable
         #pragma pack(push, 1)
-        class CCitadel_Modifier_HeldItemPickupAura : public source2sdk::client::CCitadelModifierAura
+        class CCitadel_Modifier_HeldItemPickupAura : public source2sdk::client::CCitadel_Modifier_ItemPickupAura
         {
         public:
             // No schema binary for binding

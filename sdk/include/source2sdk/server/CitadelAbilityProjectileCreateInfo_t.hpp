@@ -26,9 +26,8 @@ namespace source2sdk
             Vector m_vecVelocity; // 0x18            
             float m_flGravity; // 0x24            
             float m_flLifeTime; // 0x28            
-            bool m_bPrimaryAttack; // 0x2c            
-            bool m_bWantsInitialVelocity; // 0x2d            
-            uint8_t _pad002e[0x2]; // 0x2e
+            bool m_bWantsInitialVelocity; // 0x2c            
+            uint8_t _pad002d[0x3]; // 0x2d
             float m_flChargeAmount; // 0x30            
             uint8_t _pad0034[0x4]; // 0x34
             CUtlString m_sOverrideClassName; // 0x38            
@@ -45,8 +44,7 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::server::CitadelAbilityProjectileCreateInfo_t, m_vecVelocity) == 0x18);
         static_assert(offsetof(source2sdk::server::CitadelAbilityProjectileCreateInfo_t, m_flGravity) == 0x24);
         static_assert(offsetof(source2sdk::server::CitadelAbilityProjectileCreateInfo_t, m_flLifeTime) == 0x28);
-        static_assert(offsetof(source2sdk::server::CitadelAbilityProjectileCreateInfo_t, m_bPrimaryAttack) == 0x2c);
-        static_assert(offsetof(source2sdk::server::CitadelAbilityProjectileCreateInfo_t, m_bWantsInitialVelocity) == 0x2d);
+        static_assert(offsetof(source2sdk::server::CitadelAbilityProjectileCreateInfo_t, m_bWantsInitialVelocity) == 0x2c);
         static_assert(offsetof(source2sdk::server::CitadelAbilityProjectileCreateInfo_t, m_flChargeAmount) == 0x30);
         static_assert(offsetof(source2sdk::server::CitadelAbilityProjectileCreateInfo_t, m_sOverrideClassName) == 0x38);
         static_assert(offsetof(source2sdk::server::CitadelAbilityProjectileCreateInfo_t, m_bShouldHitThrower) == 0x40);

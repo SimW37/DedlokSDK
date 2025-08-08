@@ -68,7 +68,9 @@ namespace source2sdk
             CUtlString m_strConditionalLocTokenOverride; // 0x78            
             // metadata: MPropertyDescription "Do we round the value down? i.e. 2.8 will be 2"
             bool m_bRoundDown; // 0x80            
-            uint8_t _pad0081[0x3]; // 0x81
+            // metadata: MPropertyDescription "Is this value used to determine damage?"
+            bool m_bIsAbilityDamageProperty; // 0x81            
+            uint8_t _pad0082[0x2]; // 0x82
             source2sdk::client::StatsUsageFlags_t m_eStatsUsageFlags; // 0x84            
             uint8_t _pad0088[0x68];
         };
@@ -89,6 +91,7 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CitadelAbilityProperty_t, m_bCanSetTokenOverride) == 0x70);
         static_assert(offsetof(source2sdk::client::CitadelAbilityProperty_t, m_strConditionalLocTokenOverride) == 0x78);
         static_assert(offsetof(source2sdk::client::CitadelAbilityProperty_t, m_bRoundDown) == 0x80);
+        static_assert(offsetof(source2sdk::client::CitadelAbilityProperty_t, m_bIsAbilityDamageProperty) == 0x81);
         static_assert(offsetof(source2sdk::client::CitadelAbilityProperty_t, m_eStatsUsageFlags) == 0x84);
         
         static_assert(sizeof(source2sdk::client::CitadelAbilityProperty_t) == 0xf0);

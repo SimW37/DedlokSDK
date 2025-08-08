@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17e0
+        // Size: 0x1818
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,28 +30,28 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_MeleeSwingParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeSwingParticle;
-            char m_MeleeSwingParticle[0xe0]; // 0x15e8            
+            char m_MeleeSwingParticle[0xe0]; // 0x1620            
             // m_MeleeImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MeleeImpactParticle;
-            char m_MeleeImpactParticle[0xe0]; // 0x16c8            
+            char m_MeleeImpactParticle[0xe0]; // 0x1700            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SelfModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SelfModifier;
-            char m_SelfModifier[0x10]; // 0x17a8            
+            char m_SelfModifier[0x10]; // 0x17e0            
             // m_TargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_TargetModifier;
-            char m_TargetModifier[0x10]; // 0x17b8            
+            char m_TargetModifier[0x10]; // 0x17f0            
             // m_KillCheckModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_KillCheckModifier;
-            char m_KillCheckModifier[0x10]; // 0x17c8            
+            char m_KillCheckModifier[0x10]; // 0x1800            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flKillCheckWindow; // 0x17d8            
-            float m_flDamageInterval; // 0x17dc            
+            float m_flKillCheckWindow; // 0x1810            
+            float m_flDamageInterval; // 0x1814            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_UltComboVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_UltComboVData) == 0x17e0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_UltComboVData) == 0x1818);
     };
 };

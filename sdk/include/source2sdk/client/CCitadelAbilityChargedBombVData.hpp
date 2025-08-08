@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16f0
+        // Size: 0x1728
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_ChargeBombModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ChargeBombModifier;
-            char m_ChargeBombModifier[0x10]; // 0x15e8            
+            char m_ChargeBombModifier[0x10]; // 0x1620            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x15f8            
+            char m_ExplodeParticle[0xe0]; // 0x1630            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strExplodeSound; // 0x16d8            
+            CSoundEventName m_strExplodeSound; // 0x1710            
             // metadata: MPropertyStartGroup "GamePlay"
-            float m_flChargeForMaxDamage; // 0x16e8            
-            float m_flMinDamagePercent; // 0x16ec            
+            float m_flChargeForMaxDamage; // 0x1720            
+            float m_flMinDamagePercent; // 0x1724            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelAbilityChargedBombVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelAbilityChargedBombVData) == 0x16f0);
+        static_assert(sizeof(source2sdk::client::CCitadelAbilityChargedBombVData) == 0x1728);
     };
 };

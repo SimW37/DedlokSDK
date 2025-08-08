@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1600
+        // Size: 0x1638
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_ZipboostModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ZipboostModifier;
-            char m_ZipboostModifier[0x10]; // 0x15e8            
+            char m_ZipboostModifier[0x10]; // 0x1620            
             // metadata: MPropertyGroupName "Gameplay"
-            float m_flTimeToActivate; // 0x15f8            
-            float m_flTimeForHint; // 0x15fc            
+            float m_flTimeToActivate; // 0x1630            
+            float m_flTimeForHint; // 0x1634            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_ZipLineBoost_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_ZipLineBoost_VData) == 0x1600);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_ZipLineBoost_VData) == 0x1638);
     };
 };
