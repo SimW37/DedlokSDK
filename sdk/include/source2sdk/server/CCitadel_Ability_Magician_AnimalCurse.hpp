@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc28
+        // Size: 0xc20
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Magician_AnimalCurse : public source2sdk::server::CCitadelBaseAbility
@@ -32,13 +32,13 @@ namespace source2sdk
         public:
             // m_CachedTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_CachedTarget;
-            char m_CachedTarget[0x4]; // 0xba0            
-            uint8_t _pad0ba4[0x84];
+            char m_CachedTarget[0x4]; // 0xb98            
+            uint8_t _pad0b9c[0x84];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Magician_AnimalCurse because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_AnimalCurse) == 0xc28);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_AnimalCurse) == 0xc20);
     };
 };

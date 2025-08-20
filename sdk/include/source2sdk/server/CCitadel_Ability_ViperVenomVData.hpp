@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1830
+        // Size: 0x1828
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,26 +31,26 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_BuildUpModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadel_Modifier_Base_Buildup> m_BuildUpModifier;
-            char m_BuildUpModifier[0x10]; // 0x1620            
+            char m_BuildUpModifier[0x10]; // 0x1618            
             // m_VenomModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_VenomModifier;
-            char m_VenomModifier[0x10]; // 0x1630            
+            char m_VenomModifier[0x10]; // 0x1628            
             // metadata: MPropertyStartGroup "Visuals"
             // m_CastVenomParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastVenomParticle;
-            char m_CastVenomParticle[0xe0]; // 0x1640            
+            char m_CastVenomParticle[0xe0]; // 0x1638            
             // m_VenomExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_VenomExplodeParticle;
-            char m_VenomExplodeParticle[0xe0]; // 0x1720            
+            char m_VenomExplodeParticle[0xe0]; // 0x1718            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strVenomWeakExplode; // 0x1800            
-            CSoundEventName m_strVenomExplode; // 0x1810            
-            CSoundEventName m_strVenomStrongExplode; // 0x1820            
+            CSoundEventName m_strVenomWeakExplode; // 0x17f8            
+            CSoundEventName m_strVenomExplode; // 0x1808            
+            CSoundEventName m_strVenomStrongExplode; // 0x1818            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_ViperVenomVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ViperVenomVData) == 0x1830);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ViperVenomVData) == 0x1828);
     };
 };

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1650
+        // Size: 0x1648
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,18 +29,18 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SalvageEnemyModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SalvageEnemyModifier;
-            char m_SalvageEnemyModifier[0x10]; // 0x1620            
+            char m_SalvageEnemyModifier[0x10]; // 0x1618            
             // m_StunEnemyModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_StunEnemyModifier;
-            char m_StunEnemyModifier[0x10]; // 0x1630            
+            char m_StunEnemyModifier[0x10]; // 0x1628            
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x1640            
+            char m_BuffModifier[0x10]; // 0x1638            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityWreckerSalvageVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityWreckerSalvageVData) == 0x1650);
+        static_assert(sizeof(source2sdk::server::CAbilityWreckerSalvageVData) == 0x1648);
     };
 };

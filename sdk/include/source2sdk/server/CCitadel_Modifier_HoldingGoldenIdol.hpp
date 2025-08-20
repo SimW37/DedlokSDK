@@ -18,22 +18,22 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x150
+        // Size: 0x158
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_HoldingGoldenIdol : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x80]; // 0xc0
-            source2sdk::client::ParticleIndex_t m_iIdolParticle; // 0x140            
-            std::int32_t m_nGoldValue; // 0x144            
-            bool m_bRevealed; // 0x148            
-            uint8_t _pad0149[0x7];
+            uint8_t _pad00c8[0x80]; // 0xc8
+            source2sdk::client::ParticleIndex_t m_iIdolParticle; // 0x148            
+            std::int32_t m_nGoldValue; // 0x14c            
+            bool m_bRevealed; // 0x150            
+            uint8_t _pad0151[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_HoldingGoldenIdol because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_HoldingGoldenIdol) == 0x150);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_HoldingGoldenIdol) == 0x158);
     };
 };

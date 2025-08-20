@@ -17,72 +17,81 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x2d8
+        // Size: 0x320
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelPlayerPawn_GraphController2 : public source2sdk::client::CAnimGraphControllerBase
         {
         public:
             uint8_t _pad0080[0x28]; // 0x80
+            // m_flTimeScale has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CAnimGraph2ParamRef<float> m_flTimeScale;
+            char m_flTimeScale[0x18]; // 0xa8            
             // m_flForwardSpeed has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<float> m_flForwardSpeed;
-            char m_flForwardSpeed[0x18]; // 0xa8            
+            char m_flForwardSpeed[0x18]; // 0xc0            
             // m_flLookHeading has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<float> m_flLookHeading;
-            char m_flLookHeading[0x18]; // 0xc0            
+            char m_flLookHeading[0x18]; // 0xd8            
             // m_flLookPitch has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<float> m_flLookPitch;
-            char m_flLookPitch[0x18]; // 0xd8            
+            char m_flLookPitch[0x18]; // 0xf0            
             // m_flMoveSpeed has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<float> m_flMoveSpeed;
-            char m_flMoveSpeed[0x18]; // 0xf0            
+            char m_flMoveSpeed[0x18]; // 0x108            
             // m_flStrafeSpeed has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<float> m_flStrafeSpeed;
-            char m_flStrafeSpeed[0x18]; // 0x108            
+            char m_flStrafeSpeed[0x18]; // 0x120            
             // m_flVerticalSpeed has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<float> m_flVerticalSpeed;
-            char m_flVerticalSpeed[0x18]; // 0x120            
+            char m_flVerticalSpeed[0x18]; // 0x138            
+            // m_flRandomSeed has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CAnimGraph2ParamRef<float> m_flRandomSeed;
+            char m_flRandomSeed[0x18]; // 0x150            
             // m_vLocomotionFacing has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamOptionalRef<Vector> m_vLocomotionFacing;
-            char m_vLocomotionFacing[0x18]; // 0x138            
+            char m_vLocomotionFacing[0x18]; // 0x168            
             // m_vLookTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamOptionalRef<Vector> m_vLookTarget;
-            char m_vLookTarget[0x18]; // 0x150            
+            char m_vLookTarget[0x18]; // 0x180            
             // m_HeroActionSource has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<CGlobalSymbol> m_HeroActionSource;
-            char m_HeroActionSource[0x20]; // 0x168            
+            char m_HeroActionSource[0x20]; // 0x198            
             // m_HeroAction has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<CGlobalSymbol> m_HeroAction;
-            char m_HeroAction[0x20]; // 0x188            
+            char m_HeroAction[0x20]; // 0x1b8            
             // m_HeroState has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<CGlobalSymbol> m_HeroState;
-            char m_HeroState[0x20]; // 0x1a8            
+            char m_HeroState[0x20]; // 0x1d8            
+            // m_InstantCast has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CAnimGraph2ParamOptionalRef<bool> m_InstantCast;
+            char m_InstantCast[0x18]; // 0x1f8            
             // m_BaseAction has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<CGlobalSymbol> m_BaseAction;
-            char m_BaseAction[0x20]; // 0x1c8            
+            char m_BaseAction[0x20]; // 0x210            
             // m_BaseState has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<CGlobalSymbol> m_BaseState;
-            char m_BaseState[0x20]; // 0x1e8            
+            char m_BaseState[0x20]; // 0x230            
             // m_FlinchType has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<CGlobalSymbol> m_FlinchType;
-            char m_FlinchType[0x20]; // 0x208            
+            char m_FlinchType[0x20]; // 0x250            
             // m_CrouchFraction has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<float> m_CrouchFraction;
-            char m_CrouchFraction[0x18]; // 0x228            
+            char m_CrouchFraction[0x18]; // 0x270            
             // m_MoveType has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<CGlobalSymbol> m_MoveType;
-            char m_MoveType[0x20]; // 0x240            
+            char m_MoveType[0x20]; // 0x288            
             // m_CornerLean has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_CornerLean;
-            char m_CornerLean[0x20]; // 0x260            
-            uint8_t _pad0280[0x28]; // 0x280
-            bool m_bInGraphParamUpdateFlow; // 0x2a8            
-            uint8_t _pad02a9[0x2f];
+            char m_CornerLean[0x20]; // 0x2a8            
+            uint8_t _pad02c8[0x28]; // 0x2c8
+            bool m_bInGraphParamUpdateFlow; // 0x2f0            
+            uint8_t _pad02f1[0x2f];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelPlayerPawn_GraphController2 because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelPlayerPawn_GraphController2) == 0x2d8);
+        static_assert(sizeof(source2sdk::client::CCitadelPlayerPawn_GraphController2) == 0x320);
     };
 };

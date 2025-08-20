@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 27
+        // Enumerator count: 28
         // Alignment: 2
         // Size: 0x2
         enum class EAbilitySlots_t : std::uint16_t
@@ -29,6 +29,7 @@ namespace source2sdk
             ESlot_ActiveItem_2 = 0x5,
             ESlot_ActiveItem_3 = 0x6,
             ESlot_ActiveItem_4 = 0x7,
+            ESlot_ActiveItem_Last = 0x7,
             ESlot_Ability_Held = 0x8,
             ESlot_Ability_ZipLine = 0x9,
             ESlot_Ability_Mantle = 0xa,

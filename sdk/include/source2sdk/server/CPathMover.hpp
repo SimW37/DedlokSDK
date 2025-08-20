@@ -8,6 +8,13 @@ namespace source2sdk
 {
     namespace server
     {
+        struct CFuncMover;
+    };
+};
+namespace source2sdk
+{
+    namespace server
+    {
         struct CMoverPathNode;
     };
 };
@@ -24,7 +31,7 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0x640
+        // Size: 0x650
         // Has VTable
         #pragma pack(push, 1)
         class CPathMover : public source2sdk::server::CPathSimple
@@ -32,16 +39,16 @@ namespace source2sdk
         public:
             // m_vecPathNodes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CMoverPathNode>> m_vecPathNodes;
-            char m_vecPathNodes[0x18]; // 0x5f0            
-            uint8_t _pad0608[0x8]; // 0x608
-            CTransform m_xInitialPathWorldToLocal; // 0x610            
-            bool m_bClosedLoop; // 0x630            
-            uint8_t _pad0631[0xf];
+            char m_vecPathNodes[0x18]; // 0x600            
+            // m_vecMovers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<CHandle<source2sdk::server::CFuncMover>> m_vecMovers;
+            char m_vecMovers[0x18]; // 0x618            
+            CTransform m_xInitialPathWorldToLocal; // 0x630            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CPathMover because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPathMover) == 0x640);
+        static_assert(sizeof(source2sdk::server::CPathMover) == 0x650);
     };
 };

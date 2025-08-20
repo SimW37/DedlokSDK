@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xef8
+        // Size: 0xed8
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_bTakesDamage"
@@ -37,24 +37,24 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
             // metadata: MNetworkAlias "CCitadelAbilityComponent"
             // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
-            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xcb8            
+            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xca0            
             // metadata: MNetworkEnable
             // m_vecWeakPoints has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_UtlVectorEmbeddedNetworkVar<source2sdk::client::WeakPoint_t> m_vecWeakPoints;
-            char m_vecWeakPoints[0x68]; // 0xe88            
+            char m_vecWeakPoints[0x68]; // 0xe68            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "DestroyedChanged"
-            bool m_bDestroyed; // 0xef0            
+            bool m_bDestroyed; // 0xed0            
             // metadata: MNetworkEnable
-            bool m_bActive; // 0xef1            
+            bool m_bActive; // 0xed1            
             // metadata: MNetworkEnable
-            bool m_bFinal; // 0xef2            
-            uint8_t _pad0ef3[0x5];
+            bool m_bFinal; // 0xed2            
+            uint8_t _pad0ed3[0x5];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_Citadel_Destroyable_Building because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_Citadel_Destroyable_Building) == 0xef8);
+        static_assert(sizeof(source2sdk::client::C_Citadel_Destroyable_Building) == 0xed8);
     };
 };

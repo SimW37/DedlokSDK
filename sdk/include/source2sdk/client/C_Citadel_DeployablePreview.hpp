@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcb8
+        // Size: 0xca0
         // Has VTable
         #pragma pack(push, 1)
         class C_Citadel_DeployablePreview : public source2sdk::client::CBaseAnimGraph
         {
         public:
-            uint8_t _pad0cb0[0x8];
+            uint8_t _pad0c98[0x8];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::C_Citadel_DeployablePreview) == 0xcb8);
+        static_assert(sizeof(source2sdk::client::C_Citadel_DeployablePreview) == 0xca0);
     };
 };

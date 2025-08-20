@@ -18,17 +18,17 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x850
+        // Size: 0x888
         // Has VTable
         #pragma pack(push, 1)
         class CTriggerBrush : public source2sdk::server::CBaseModelEntity
         {
         public:
-            source2sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x7d0            
-            source2sdk::entity2::CEntityIOOutput m_OnEndTouch; // 0x7f8            
-            source2sdk::entity2::CEntityIOOutput m_OnUse; // 0x820            
-            std::int32_t m_iInputFilter; // 0x848            
-            std::int32_t m_iDontMessageParent; // 0x84c            
+            source2sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x808            
+            source2sdk::entity2::CEntityIOOutput m_OnEndTouch; // 0x830            
+            source2sdk::entity2::CEntityIOOutput m_OnUse; // 0x858            
+            std::int32_t m_iInputFilter; // 0x880            
+            std::int32_t m_iDontMessageParent; // 0x884            
             
             // Datamap fields:
             // void InputDisable; // 0x0
@@ -38,6 +38,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CTriggerBrush because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CTriggerBrush) == 0x850);
+        static_assert(sizeof(source2sdk::server::CTriggerBrush) == 0x888);
     };
 };

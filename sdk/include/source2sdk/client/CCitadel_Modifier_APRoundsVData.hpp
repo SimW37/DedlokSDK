@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x790
+        // Size: 0x890
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,6 +29,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_APRoundsVData) == 0x790);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_APRoundsVData) == 0x890);
     };
 };

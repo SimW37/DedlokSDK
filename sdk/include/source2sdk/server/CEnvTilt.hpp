@@ -18,16 +18,16 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x4f0
+        // Size: 0x500
         // Has VTable
         #pragma pack(push, 1)
         class CEnvTilt : public source2sdk::server::CPointEntity
         {
         public:
-            float m_Duration; // 0x4e0            
-            float m_Radius; // 0x4e4            
-            float m_TiltTime; // 0x4e8            
-            source2sdk::entity2::GameTime_t m_stopTime; // 0x4ec            
+            float m_Duration; // 0x4f0            
+            float m_Radius; // 0x4f4            
+            float m_TiltTime; // 0x4f8            
+            source2sdk::entity2::GameTime_t m_stopTime; // 0x4fc            
             
             // Datamap fields:
             // void InputStartTilt; // 0x0
@@ -37,6 +37,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CEnvTilt because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CEnvTilt) == 0x4f0);
+        static_assert(sizeof(source2sdk::server::CEnvTilt) == 0x500);
     };
 };

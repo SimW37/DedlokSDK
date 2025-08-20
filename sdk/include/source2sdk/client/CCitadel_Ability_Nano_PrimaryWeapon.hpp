@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xef0
+        // Size: 0xed0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Nano_PrimaryWeapon : public source2sdk::client::CCitadel_Ability_PrimaryWeapon
         {
         public:
-            uint8_t _pad0eb0[0x40];
+            uint8_t _pad0e90[0x40];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Nano_PrimaryWeapon) == 0xef0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Nano_PrimaryWeapon) == 0xed0);
     };
 };

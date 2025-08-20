@@ -17,22 +17,22 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc0
+        // Size: 0xc8
         // Has VTable
         // Is Abstract
         #pragma pack(push, 1)
         class CCitadelModifier : public source2sdk::server::CBaseModifier
         {
         public:
-            uint8_t _pad0088[0x38];
+            uint8_t _pad0090[0x38];
             // Datamap fields:
-            // void m_pVecAbilityValues; // 0x98
-            // float m_flEffectiveness; // 0xa0
+            // void m_pVecAbilityValues; // 0xa0
+            // float m_flEffectiveness; // 0xa8
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelModifier) == 0xc0);
+        static_assert(sizeof(source2sdk::server::CCitadelModifier) == 0xc8);
     };
 };

@@ -31,7 +31,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x4
         // Standard-layout class: true
-        // Size: 0x600
+        // Size: 0x5b8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_nActivateTime"
@@ -61,9 +61,9 @@ namespace source2sdk
             // m_hPlayerShooter has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_CitadelPlayerPawn> m_hPlayerShooter;
             char m_hPlayerShooter[0x4]; // 0x138            
-            uint8_t _pad013c[0x4bc]; // 0x13c
-            bool m_bEnforceLOSToShootPosition; // 0x5f8            
-            uint8_t _pad05f9[0x7];
+            uint8_t _pad013c[0x474]; // 0x13c
+            bool m_bEnforceLOSToShootPosition; // 0x5b0            
+            uint8_t _pad05b1[0x7];
         };
         #pragma pack(pop)
         
@@ -73,8 +73,8 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CCitadelAbilityBeam_t, m_bNeedsBeamReset) == 0x130);
         static_assert(offsetof(source2sdk::client::CCitadelAbilityBeam_t, m_hShooter) == 0x134);
         static_assert(offsetof(source2sdk::client::CCitadelAbilityBeam_t, m_hPlayerShooter) == 0x138);
-        static_assert(offsetof(source2sdk::client::CCitadelAbilityBeam_t, m_bEnforceLOSToShootPosition) == 0x5f8);
+        static_assert(offsetof(source2sdk::client::CCitadelAbilityBeam_t, m_bEnforceLOSToShootPosition) == 0x5b0);
         
-        static_assert(sizeof(source2sdk::client::CCitadelAbilityBeam_t) == 0x600);
+        static_assert(sizeof(source2sdk::client::CCitadelAbilityBeam_t) == 0x5b8);
     };
 };

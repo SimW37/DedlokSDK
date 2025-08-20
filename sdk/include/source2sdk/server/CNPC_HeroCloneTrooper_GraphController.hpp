@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf78
+        // Size: 0x1050
         // Has VTable
         #pragma pack(push, 1)
         class CNPC_HeroCloneTrooper_GraphController : public source2sdk::server::CAI_CitadelNPC_GraphController
@@ -25,12 +25,12 @@ namespace source2sdk
         public:
             // m_bAiming has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraphParamRef<bool> m_bAiming;
-            char m_bAiming[0x20]; // 0xf58            
+            char m_bAiming[0x20]; // 0x1030            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_HeroCloneTrooper_GraphController because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_HeroCloneTrooper_GraphController) == 0xf78);
+        static_assert(sizeof(source2sdk::server::CNPC_HeroCloneTrooper_GraphController) == 0x1050);
     };
 };

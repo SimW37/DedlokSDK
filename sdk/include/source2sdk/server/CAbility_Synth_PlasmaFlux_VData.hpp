@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18b8
+        // Size: 0x18b0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,26 +31,26 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_WeaponDamageBonusModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_WeaponDamageBonusModifier;
-            char m_WeaponDamageBonusModifier[0x10]; // 0x1620            
+            char m_WeaponDamageBonusModifier[0x10]; // 0x1618            
             // metadata: MPropertyStartGroup "Visuals"
             // m_TeleportTrailParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle;
-            char m_TeleportTrailParticle[0xe0]; // 0x1630            
+            char m_TeleportTrailParticle[0xe0]; // 0x1628            
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x1710            
+            char m_ImpactParticle[0xe0]; // 0x1708            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strCasterLoopingSound; // 0x17f0            
-            CSoundEventName m_strProjectileExpireSound; // 0x1800            
-            CSoundEventName m_strImpactSound; // 0x1810            
-            CSoundEventName m_strTimerSound; // 0x1820            
+            CSoundEventName m_strCasterLoopingSound; // 0x17e8            
+            CSoundEventName m_strProjectileExpireSound; // 0x17f8            
+            CSoundEventName m_strImpactSound; // 0x1808            
+            CSoundEventName m_strTimerSound; // 0x1818            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x1830            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x1828            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Synth_PlasmaFlux_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Synth_PlasmaFlux_VData) == 0x18b8);
+        static_assert(sizeof(source2sdk::server::CAbility_Synth_PlasmaFlux_VData) == 0x18b0);
     };
 };

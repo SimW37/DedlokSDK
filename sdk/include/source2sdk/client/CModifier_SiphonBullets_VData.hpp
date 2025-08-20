@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x880
+        // Size: 0x980
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,24 +30,24 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_StealWatcherModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_StealWatcherModifier;
-            char m_StealWatcherModifier[0x10]; // 0x690            
+            char m_StealWatcherModifier[0x10]; // 0x790            
             // m_HealModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_HealModifier;
-            char m_HealModifier[0x10]; // 0x6a0            
+            char m_HealModifier[0x10]; // 0x7a0            
             // metadata: MPropertyStartGroup "Visuals"
             // m_TracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle;
-            char m_TracerParticle[0xe0]; // 0x6b0            
+            char m_TracerParticle[0xe0]; // 0x7b0            
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x790            
+            char m_ExplodeParticle[0xe0]; // 0x890            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_ExplodeSound; // 0x870            
+            CSoundEventName m_ExplodeSound; // 0x970            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_SiphonBullets_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CModifier_SiphonBullets_VData) == 0x880);
+        static_assert(sizeof(source2sdk::client::CModifier_SiphonBullets_VData) == 0x980);
     };
 };

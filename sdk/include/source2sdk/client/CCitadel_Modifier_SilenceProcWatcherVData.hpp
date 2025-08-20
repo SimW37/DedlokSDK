@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7b8
+        // Size: 0x8b8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,26 +31,26 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_BuildUpModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadel_Modifier_Base_Buildup> m_BuildUpModifier;
-            char m_BuildUpModifier[0x10]; // 0x690            
+            char m_BuildUpModifier[0x10]; // 0x790            
             // m_TechDamageReductionModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_TechDamageReductionModifier;
-            char m_TechDamageReductionModifier[0x10]; // 0x6a0            
+            char m_TechDamageReductionModifier[0x10]; // 0x7a0            
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x6b0            
+            char m_DebuffModifier[0x10]; // 0x7b0            
             // m_ImmunityModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ImmunityModifier;
-            char m_ImmunityModifier[0x10]; // 0x6c0            
-            CUtlString m_sInstantProcIfCasterHasModifier; // 0x6d0            
+            char m_ImmunityModifier[0x10]; // 0x7c0            
+            CUtlString m_sInstantProcIfCasterHasModifier; // 0x7d0            
             // metadata: MPropertyGroupName "Visuals"
             // m_TracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle;
-            char m_TracerParticle[0xe0]; // 0x6d8            
+            char m_TracerParticle[0xe0]; // 0x7d8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_SilenceProcWatcherVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_SilenceProcWatcherVData) == 0x7b8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_SilenceProcWatcherVData) == 0x8b8);
     };
 };

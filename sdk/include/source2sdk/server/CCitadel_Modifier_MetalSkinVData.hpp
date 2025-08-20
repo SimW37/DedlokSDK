@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x830
+        // Size: 0x930
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,17 +29,17 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_BuffStartParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffStartParticle;
-            char m_BuffStartParticle[0xe0]; // 0x660            
+            char m_BuffStartParticle[0xe0]; // 0x760            
             // m_BuffEndParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffEndParticle;
-            char m_BuffEndParticle[0xe0]; // 0x740            
+            char m_BuffEndParticle[0xe0]; // 0x840            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strHitProcSound; // 0x820            
+            CSoundEventName m_strHitProcSound; // 0x920            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_MetalSkinVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_MetalSkinVData) == 0x830);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_MetalSkinVData) == 0x930);
     };
 };

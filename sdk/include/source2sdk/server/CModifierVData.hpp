@@ -28,7 +28,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x3f0
+        // Size: 0x3f8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -86,49 +86,49 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Scripted Settings"
             // m_nEnabledStateMask has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CBitVecEnum<source2sdk::client::EModifierState> m_nEnabledStateMask;
-            char m_nEnabledStateMask[0x1c]; // 0x350            
+            char m_nEnabledStateMask[0x20]; // 0x350            
             // metadata: MPropertyGroupName "Scripted Settings"
             // m_nDisabledStateMask has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CBitVecEnum<source2sdk::client::EModifierState> m_nDisabledStateMask;
-            char m_nDisabledStateMask[0x1c]; // 0x36c            
+            char m_nDisabledStateMask[0x20]; // 0x370            
             // metadata: MPropertyGroupName "Scripted Settings"
-            source2sdk::client::ModifierAttribute_t m_nAttributes; // 0x388            
-            uint8_t _pad038c[0x4]; // 0x38c
+            source2sdk::client::ModifierAttribute_t m_nAttributes; // 0x390            
+            uint8_t _pad0394[0x4]; // 0x394
             // metadata: MPropertyGroupName "Scripted Settings"
             // metadata: MPropertyDescription "Scripted Modifier Values"
             // m_vecScriptValues has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::ModifierScriptValue_t> m_vecScriptValues;
-            char m_vecScriptValues[0x18]; // 0x390            
+            char m_vecScriptValues[0x18]; // 0x398            
             // metadata: MPropertyGroupName "Scripted Settings"
             // metadata: MPropertyDescription "Scripted Event Handlers"
             // m_vecScriptEventHandlers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::ModifierScriptedEventHandler_t> m_vecScriptEventHandlers;
-            char m_vecScriptEventHandlers[0x18]; // 0x3a8            
-            source2sdk::client::ModifierDisableGroup_t m_nDisableGroupsMask; // 0x3c0            
+            char m_vecScriptEventHandlers[0x18]; // 0x3b0            
+            source2sdk::client::ModifierDisableGroup_t m_nDisableGroupsMask; // 0x3c8            
             // metadata: MPropertyGroupName "UI"
             // metadata: MPropertyDescription "When set, the modifier will not be visible to UI or visible modifier list."
-            bool m_bIsHidden; // 0x3c4            
-            uint8_t _pad03c5[0x3]; // 0x3c5
+            bool m_bIsHidden; // 0x3cc            
+            uint8_t _pad03cd[0x3]; // 0x3cd
             // metadata: MPropertyGroupName "UI"
             // metadata: MPropertySuppressExpr "m_bIsHidden != true"
-            source2sdk::client::ModifierHiddenType_t m_eHiddenType; // 0x3c8            
-            uint8_t _pad03cc[0x4]; // 0x3cc
+            source2sdk::client::ModifierHiddenType_t m_eHiddenType; // 0x3d0            
+            uint8_t _pad03d4[0x4]; // 0x3d4
             // metadata: MPropertyGroupName "UI"
             // metadata: MPropertyDescription "When set, use the value as localization key."
-            CUtlString m_sLocalizationName; // 0x3d0            
+            CUtlString m_sLocalizationName; // 0x3d8            
             // metadata: MPropertyDescription "When to consider the modifier a debuff."
-            source2sdk::client::ModifierDebuffType_t m_eDebuffType; // 0x3d8            
+            source2sdk::client::ModifierDebuffType_t m_eDebuffType; // 0x3e0            
             // metadata: MPropertyDescription "When set, stacks will automatically be decayed after a duration's worth of time has passed.  Only makes sense if adding a stack refreshed the modifier."
-            bool m_bAutomaticallyDecayStacks; // 0x3dc            
+            bool m_bAutomaticallyDecayStacks; // 0x3e4            
             // metadata: MPropertyStartGroup "Networking"
             // metadata: MPropertyDescription "If true, application of the modifier will be delayed on the server to match the client's latency."
-            bool m_bAllowApplicationPrediction; // 0x3dd            
-            uint8_t _pad03de[0x12];
+            bool m_bAllowApplicationPrediction; // 0x3e5            
+            uint8_t _pad03e6[0x12];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifierVData) == 0x3f0);
+        static_assert(sizeof(source2sdk::server::CModifierVData) == 0x3f8);
     };
 };

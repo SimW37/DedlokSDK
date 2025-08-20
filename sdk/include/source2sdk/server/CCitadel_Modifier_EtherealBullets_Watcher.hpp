@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x248
+        // Size: 0x250
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_EtherealBullets_Watcher : public source2sdk::server::CCitadel_Modifier_BaseEventProc
         {
         public:
-            uint8_t _pad0178[0xc4]; // 0x178
-            bool m_bProcNextHit; // 0x23c            
-            uint8_t _pad023d[0xb];
+            uint8_t _pad0180[0xc4]; // 0x180
+            bool m_bProcNextHit; // 0x244            
+            uint8_t _pad0245[0xb];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_EtherealBullets_Watcher because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_EtherealBullets_Watcher) == 0x248);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_EtherealBullets_Watcher) == 0x250);
     };
 };

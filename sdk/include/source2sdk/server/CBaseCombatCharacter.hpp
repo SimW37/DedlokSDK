@@ -43,11 +43,10 @@ namespace source2sdk
             // CNetworkUtlVectorBase<CHandle<source2sdk::server::CEconWearable>> m_hMyWearables;
             char m_hMyWearables[0x18]; // 0xb50            
             float m_impactEnergyScale; // 0xb68            
-            bool m_bApplyStressDamage; // 0xb6c            
-            bool m_bDeathEventsDispatched; // 0xb6d            
-            uint8_t _pad0b6e[0x42]; // 0xb6e
-            std::int32_t m_iDamageCount; // 0xbb0            
-            uint8_t _pad0bb4[0x4]; // 0xbb4
+            std::int32_t m_nMinVehicleDamageToTempRagdoll; // 0xb6c            
+            bool m_bApplyStressDamage; // 0xb70            
+            bool m_bDeathEventsDispatched; // 0xb71            
+            uint8_t _pad0b72[0x46]; // 0xb72
             // m_pVecRelationships has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::server::RelationshipOverride_t>* m_pVecRelationships;
             char m_pVecRelationships[0x8]; // 0xbb8            

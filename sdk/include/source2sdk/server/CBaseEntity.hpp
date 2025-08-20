@@ -43,6 +43,13 @@ namespace source2sdk
         struct CModifierProperty;
     };
 };
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CPulseGraphInstance_ServerEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -56,7 +63,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x4e0
+        // Size: 0x4f0
         // Has VTable
         // 
         // static metadata: MNetworkExcludeByName "m_bClientSideRagdoll"
@@ -78,6 +85,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "MoveCollide_t m_MoveCollide"
         // static metadata: MNetworkVarNames "MoveType_t m_MoveType"
         // static metadata: MNetworkVarNames "EntitySubclassID_t m_nSubclassID"
+        // static metadata: MNetworkUserGroupProxy "CBaseEntity"
         // static metadata: MNetworkVarNames "float32 m_flAnimTime"
         // static metadata: MNetworkVarNames "float32 m_flSimulationTime"
         // static metadata: MNetworkVarNames "GameTime_t m_flCreateTime"
@@ -100,6 +108,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "float32 m_flGravityScale"
         // static metadata: MNetworkVarNames "float32 m_flTimeScale"
         // static metadata: MNetworkVarNames "float m_flWaterLevel"
+        // static metadata: MNetworkVarNames "bool m_bGravityDisabled"
         // static metadata: MNetworkVarNames "bool m_bAnimatedEveryTick"
         // static metadata: MNetworkVarNames "GameTime_t m_flNavIgnoreUntilTime"
         #pragma pack(push, 1)
@@ -174,7 +183,7 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "0"
             // metadata: MNetworkSerializer "animTimeSerializer"
-            // metadata: MNetworkSendProxyRecipientsFilter
+            // metadata: MNetworkUserGroup "AnimTime"
             float m_flAnimTime; // 0x320            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "1"
@@ -253,7 +262,6 @@ namespace source2sdk
             // metadata: MNetworkEncoder "coord"
             float m_flElasticity; // 0x400            
             // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerExclusive"
             float m_flGravityScale; // 0x404            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
@@ -266,28 +274,34 @@ namespace source2sdk
             // metadata: MNetworkEncodeFlags "8"
             float m_flWaterLevel; // 0x40c            
             // metadata: MNetworkEnable
-            bool m_bAnimatedEveryTick; // 0x410            
-            bool m_bDisableLowViolence; // 0x411            
-            std::uint8_t m_nWaterType; // 0x412            
-            uint8_t _pad0413[0x1]; // 0x413
-            std::int32_t m_iEFlags; // 0x414            
-            source2sdk::entity2::CEntityIOOutput m_OnUser1; // 0x418            
-            source2sdk::entity2::CEntityIOOutput m_OnUser2; // 0x440            
-            source2sdk::entity2::CEntityIOOutput m_OnUser3; // 0x468            
-            source2sdk::entity2::CEntityIOOutput m_OnUser4; // 0x490            
-            std::int32_t m_iInitialTeamNum; // 0x4b8            
+            bool m_bGravityDisabled; // 0x410            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flNavIgnoreUntilTime; // 0x4bc            
-            QAngle m_vecAngVelocity; // 0x4c0            
-            bool m_bNetworkQuantizeOriginAndAngles; // 0x4cc            
-            bool m_bLagCompensate; // 0x4cd            
-            uint8_t _pad04ce[0x2]; // 0x4ce
+            bool m_bAnimatedEveryTick; // 0x411            
+            uint8_t _pad0412[0x2]; // 0x412
+            float m_flActualGravityScale; // 0x414            
+            bool m_bGravityActuallyDisabled; // 0x418            
+            bool m_bDisableLowViolence; // 0x419            
+            std::uint8_t m_nWaterType; // 0x41a            
+            uint8_t _pad041b[0x1]; // 0x41b
+            std::int32_t m_iEFlags; // 0x41c            
+            source2sdk::entity2::CEntityIOOutput m_OnUser1; // 0x420            
+            source2sdk::entity2::CEntityIOOutput m_OnUser2; // 0x448            
+            source2sdk::entity2::CEntityIOOutput m_OnUser3; // 0x470            
+            source2sdk::entity2::CEntityIOOutput m_OnUser4; // 0x498            
+            std::int32_t m_iInitialTeamNum; // 0x4c0            
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTime_t m_flNavIgnoreUntilTime; // 0x4c4            
+            QAngle m_vecAngVelocity; // 0x4c8            
+            bool m_bNetworkQuantizeOriginAndAngles; // 0x4d4            
+            bool m_bLagCompensate; // 0x4d5            
+            uint8_t _pad04d6[0x2]; // 0x4d6
             // m_pBlocker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_pBlocker;
-            char m_pBlocker[0x4]; // 0x4d0            
-            float m_flLocalTime; // 0x4d4            
-            float m_flVPhysicsUpdateLocalTime; // 0x4d8            
-            uint8_t _pad04dc[0x4];
+            char m_pBlocker[0x4]; // 0x4d8            
+            float m_flLocalTime; // 0x4dc            
+            float m_flVPhysicsUpdateLocalTime; // 0x4e0            
+            uint8_t _pad04e4[0x4]; // 0x4e4
+            source2sdk::server::CPulseGraphInstance_ServerEntity* m_pPulseGraphInstance; // 0x4e8            
             
             // Datamap fields:
             // CUtlSymbolLarge m_iszPrivateVScripts; // 0x8
@@ -330,6 +344,8 @@ namespace source2sdk
             // CUtlSymbolLarge InputChangeSubclass; // 0x0
             // void InputPlatformEnable; // 0x0
             // void InputPlatformDisable; // 0x0
+            // void InputPlatformFollowYaw; // 0x0
+            // void InputPlatformIgnoreYaw; // 0x0
             // void CBaseEntitySUB_Remove; // 0x0
             // void CBaseEntitySUB_RemoveIfUncarried; // 0x0
             // void CBaseEntitySUB_DoNothing; // 0x0
@@ -354,6 +370,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CBaseEntity because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CBaseEntity) == 0x4e0);
+        static_assert(sizeof(source2sdk::server::CBaseEntity) == 0x4f0);
     };
 };

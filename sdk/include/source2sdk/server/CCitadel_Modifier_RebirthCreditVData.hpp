@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x848
+        // Size: 0x948
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,21 +29,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_DeployParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeployParticle;
-            char m_DeployParticle[0xe0]; // 0x660            
+            char m_DeployParticle[0xe0]; // 0x760            
             // m_RespawnParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RespawnParticle;
-            char m_RespawnParticle[0xe0]; // 0x740            
+            char m_RespawnParticle[0xe0]; // 0x840            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_sDeploySound; // 0x820            
-            CSoundEventName m_sRespawnSound; // 0x830            
+            CSoundEventName m_sDeploySound; // 0x920            
+            CSoundEventName m_sRespawnSound; // 0x930            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flRespawnLifePct; // 0x840            
-            float m_flRespawnDelay; // 0x844            
+            float m_flRespawnLifePct; // 0x940            
+            float m_flRespawnDelay; // 0x944            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_RebirthCreditVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_RebirthCreditVData) == 0x848);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_RebirthCreditVData) == 0x948);
     };
 };

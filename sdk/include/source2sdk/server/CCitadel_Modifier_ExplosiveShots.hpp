@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1a0
+        // Size: 0x1a8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_ExplosiveShots : public source2sdk::server::CCitadelModifier
@@ -26,14 +26,14 @@ namespace source2sdk
         public:
             // m_vecHitEnts has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::server::CCitadel_Modifier_ExplosiveShots_BulletEntityPair_t> m_vecHitEnts;
-            char m_vecHitEnts[0x18]; // 0xc0            
-            bool m_bExplosionCanHitMultipleTimes; // 0xd8            
-            uint8_t _pad00d9[0xc7];
+            char m_vecHitEnts[0x18]; // 0xc8            
+            bool m_bExplosionCanHitMultipleTimes; // 0xe0            
+            uint8_t _pad00e1[0xc7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_ExplosiveShots because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ExplosiveShots) == 0x1a0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ExplosiveShots) == 0x1a8);
     };
 };

@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf48
+        // Size: 0xf10
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EHANDLE m_hDummyForCamera"
@@ -32,23 +32,23 @@ namespace source2sdk
         class CCitadel_Ability_Mirage_Teleport : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0dc0[0x14]; // 0xdc0
+            uint8_t _pad0d88[0x14]; // 0xd88
             // metadata: MNetworkEnable
             // m_hDummyForCamera has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hDummyForCamera;
-            char m_hDummyForCamera[0x4]; // 0xdd4            
+            char m_hDummyForCamera[0x4]; // 0xd9c            
             // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hTarget;
-            char m_hTarget[0x4]; // 0xdd8            
-            Vector m_vCastStartPosition; // 0xddc            
-            Vector m_vTargetPosition; // 0xde8            
-            QAngle m_vTargetAngles; // 0xdf4            
-            uint8_t _pad0e00[0x148];
+            char m_hTarget[0x4]; // 0xda0            
+            Vector m_vCastStartPosition; // 0xda4            
+            Vector m_vTargetPosition; // 0xdb0            
+            QAngle m_vTargetAngles; // 0xdbc            
+            uint8_t _pad0dc8[0x148];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Mirage_Teleport because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Mirage_Teleport) == 0xf48);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Mirage_Teleport) == 0xf10);
     };
 };

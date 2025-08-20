@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x108
+        // Size: 0x110
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_TargetPracticeSelf : public source2sdk::server::CCitadelModifier
         {
         public:
-            bool m_bFoundTarget; // 0xc0            
-            uint8_t _pad00c1[0x47];
+            bool m_bFoundTarget; // 0xc8            
+            uint8_t _pad00c9[0x47];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_TargetPracticeSelf because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TargetPracticeSelf) == 0x108);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TargetPracticeSelf) == 0x110);
     };
 };

@@ -18,25 +18,25 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x618
+        // Size: 0x628
         // Has VTable
         #pragma pack(push, 1)
         class CPhysSlideConstraint : public source2sdk::server::CPhysConstraint
         {
         public:
-            uint8_t _pad0550[0x8]; // 0x550
-            Vector m_axisEnd; // 0x558            
-            float m_slideFriction; // 0x564            
-            float m_systemLoadScale; // 0x568            
-            float m_initialOffset; // 0x56c            
-            bool m_bEnableLinearConstraint; // 0x570            
-            bool m_bEnableAngularConstraint; // 0x571            
-            uint8_t _pad0572[0x2]; // 0x572
-            float m_flMotorFrequency; // 0x574            
-            float m_flMotorDampingRatio; // 0x578            
-            bool m_bUseEntityPivot; // 0x57c            
-            uint8_t _pad057d[0x3]; // 0x57d
-            source2sdk::server::ConstraintSoundInfo m_soundInfo; // 0x580            
+            uint8_t _pad0560[0x8]; // 0x560
+            Vector m_axisEnd; // 0x568            
+            float m_slideFriction; // 0x574            
+            float m_systemLoadScale; // 0x578            
+            float m_initialOffset; // 0x57c            
+            bool m_bEnableLinearConstraint; // 0x580            
+            bool m_bEnableAngularConstraint; // 0x581            
+            uint8_t _pad0582[0x2]; // 0x582
+            float m_flMotorFrequency; // 0x584            
+            float m_flMotorDampingRatio; // 0x588            
+            bool m_bUseEntityPivot; // 0x58c            
+            uint8_t _pad058d[0x3]; // 0x58d
+            source2sdk::server::ConstraintSoundInfo m_soundInfo; // 0x590            
             
             // Datamap fields:
             // float InputSetOffset; // 0x0
@@ -48,6 +48,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPhysSlideConstraint because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPhysSlideConstraint) == 0x618);
+        static_assert(sizeof(source2sdk::server::CPhysSlideConstraint) == 0x628);
     };
 };

@@ -17,21 +17,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xfa0
+        // Size: 0xf68
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Thumper_1 : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            Vector m_vecAimPos; // 0xdc0            
-            Vector m_vecAimNormal; // 0xdcc            
-            float m_flPushForce; // 0xdd8            
-            uint8_t _pad0ddc[0x1c4];
+            Vector m_vecAimPos; // 0xd88            
+            Vector m_vecAimNormal; // 0xd94            
+            float m_flPushForce; // 0xda0            
+            uint8_t _pad0da4[0x1c4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Thumper_1 because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Thumper_1) == 0xfa0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Thumper_1) == 0xf68);
     };
 };

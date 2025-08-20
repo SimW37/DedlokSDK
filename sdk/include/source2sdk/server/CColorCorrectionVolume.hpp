@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xbb0
+        // Size: 0xbf8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float32 m_MaxWeight"
@@ -30,18 +30,18 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            float m_MaxWeight; // 0x990            
+            float m_MaxWeight; // 0x9d8            
             // metadata: MNetworkEnable
-            float m_FadeDuration; // 0x994            
+            float m_FadeDuration; // 0x9dc            
             // metadata: MNetworkEnable
-            float m_Weight; // 0x998            
+            float m_Weight; // 0x9e0            
             // metadata: MNetworkEnable
-            char m_lookupFilename[512]; // 0x99c            
-            float m_LastEnterWeight; // 0xb9c            
-            source2sdk::entity2::GameTime_t m_LastEnterTime; // 0xba0            
-            float m_LastExitWeight; // 0xba4            
-            source2sdk::entity2::GameTime_t m_LastExitTime; // 0xba8            
-            uint8_t _pad0bac[0x4];
+            char m_lookupFilename[512]; // 0x9e4            
+            float m_LastEnterWeight; // 0xbe4            
+            source2sdk::entity2::GameTime_t m_LastEnterTime; // 0xbe8            
+            float m_LastExitWeight; // 0xbec            
+            source2sdk::entity2::GameTime_t m_LastExitTime; // 0xbf0            
+            uint8_t _pad0bf4[0x4];
             
             // Datamap fields:
             // void CColorCorrectionVolumeThinkFunc; // 0x0
@@ -50,6 +50,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CColorCorrectionVolume because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CColorCorrectionVolume) == 0xbb0);
+        static_assert(sizeof(source2sdk::server::CColorCorrectionVolume) == 0xbf8);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf98
+        // Size: 0x1070
         // Has VTable
         #pragma pack(push, 1)
         class CNPC_Boss_Tier3_GraphController : public source2sdk::server::CAI_CitadelNPC_GraphController
@@ -25,13 +25,13 @@ namespace source2sdk
         public:
             // m_pszActivity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraphParamRef<char*> m_pszActivity;
-            char m_pszActivity[0x28]; // 0xf58            
-            CAnimGraphTagOptionalRef m_sDeathExplode; // 0xf80            
+            char m_pszActivity[0x28]; // 0x1030            
+            CAnimGraphTagOptionalRef m_sDeathExplode; // 0x1058            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_Boss_Tier3_GraphController because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_Boss_Tier3_GraphController) == 0xf98);
+        static_assert(sizeof(source2sdk::server::CNPC_Boss_Tier3_GraphController) == 0x1070);
     };
 };

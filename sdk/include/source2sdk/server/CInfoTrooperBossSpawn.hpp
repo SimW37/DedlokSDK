@@ -18,26 +18,26 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x598
+        // Size: 0x5a8
         // Has VTable
         #pragma pack(push, 1)
         class CInfoTrooperBossSpawn : public source2sdk::server::CServerOnlyPointEntity
         {
         public:
-            uint8_t _pad04e0[0x10]; // 0x4e0
-            CUtlSymbolLarge m_strBossEntityName; // 0x4f0            
-            std::int32_t m_iLane; // 0x4f8            
-            std::int32_t m_iCoverGroupID; // 0x4fc            
-            uint8_t _pad0500[0x8]; // 0x500
-            bool m_bReinforcementsOnly; // 0x508            
-            uint8_t _pad0509[0x17]; // 0x509
-            source2sdk::entity2::CEntityIOOutput m_eventOnTrooperKilled; // 0x520            
-            uint8_t _pad0548[0x50];
+            uint8_t _pad04f0[0x10]; // 0x4f0
+            CUtlSymbolLarge m_strBossEntityName; // 0x500            
+            std::int32_t m_iLane; // 0x508            
+            std::int32_t m_iCoverGroupID; // 0x50c            
+            uint8_t _pad0510[0x8]; // 0x510
+            bool m_bReinforcementsOnly; // 0x518            
+            uint8_t _pad0519[0x17]; // 0x519
+            source2sdk::entity2::CEntityIOOutput m_eventOnTrooperKilled; // 0x530            
+            uint8_t _pad0558[0x50];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CInfoTrooperBossSpawn because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CInfoTrooperBossSpawn) == 0x598);
+        static_assert(sizeof(source2sdk::server::CInfoTrooperBossSpawn) == 0x5a8);
     };
 };

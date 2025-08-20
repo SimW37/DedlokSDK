@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x690
+        // Size: 0x790
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,18 +29,18 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x660            
+            char m_SlowModifier[0x10]; // 0x760            
             // m_BulletResistModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BulletResistModifier;
-            char m_BulletResistModifier[0x10]; // 0x670            
+            char m_BulletResistModifier[0x10]; // 0x770            
             // m_EMPModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_EMPModifier;
-            char m_EMPModifier[0x10]; // 0x680            
+            char m_EMPModifier[0x10]; // 0x780            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_TargetPracticeDebuffVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TargetPracticeDebuffVData) == 0x690);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TargetPracticeDebuffVData) == 0x790);
     };
 };

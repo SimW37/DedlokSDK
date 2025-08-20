@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 8
+        // Enumerator count: 9
         // Alignment: 4
         // Size: 0x4
         enum class EAbilityTargetingLocation_t : std::uint32_t
@@ -25,8 +25,9 @@ namespace source2sdk
             CITADEL_ABILITY_TARGETING_LOCATION_FIXED_RANGE_GROUND = 0x4,
             CITADEL_ABILITY_TARGETING_LOCATION_MINIMAP_GROUND = 0x5,
             CITADEL_ABILITY_TARGETING_LOCATION_MINIMAP_UNIT = 0x6,
+            CITADEL_ABILITY_TARGETING_LOCATION_CUSTOM = 0x7,
             // MPropertySuppressEnumerator
-            CITADEL_ABILITY_TARGETING_LOCATION_COUNT = 0x7,
+            CITADEL_ABILITY_TARGETING_LOCATION_COUNT = 0x8,
         };
     };
 };

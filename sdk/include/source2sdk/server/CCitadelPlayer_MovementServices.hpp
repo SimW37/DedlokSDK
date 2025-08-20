@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x2a8
+        // Size: 0x310
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CNetworkVelocityVector m_vPositionDeltaVelocity"
@@ -30,26 +30,26 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
             // metadata: MNetworkPriority "32"
-            source2sdk::client::CNetworkVelocityVector m_vPositionDeltaVelocity; // 0x238            
-            uint8_t _pad0260[0x8]; // 0x260
+            source2sdk::client::CNetworkVelocityVector m_vPositionDeltaVelocity; // 0x2a0            
+            uint8_t _pad02c8[0x8]; // 0x2c8
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
             // metadata: MNetworkPriority "32"
-            bool m_bToggleDuckActive; // 0x268            
-            uint8_t _pad0269[0x3]; // 0x269
-            Vector m_vecPogoVelocity; // 0x26c            
-            Vector m_vecSupport; // 0x278            
-            bool m_bColliding; // 0x284            
-            bool m_bLandedOnGround; // 0x285            
-            bool m_bHasFreeCursor; // 0x286            
-            uint8_t _pad0287[0x1]; // 0x287
-            float m_flTurnSpringSpeed; // 0x288            
-            uint8_t _pad028c[0x1c];
+            bool m_bToggleDuckActive; // 0x2d0            
+            uint8_t _pad02d1[0x3]; // 0x2d1
+            Vector m_vecPogoVelocity; // 0x2d4            
+            Vector m_vecSupport; // 0x2e0            
+            bool m_bColliding; // 0x2ec            
+            bool m_bLandedOnGround; // 0x2ed            
+            bool m_bHasFreeCursor; // 0x2ee            
+            uint8_t _pad02ef[0x1]; // 0x2ef
+            float m_flTurnSpringSpeed; // 0x2f0            
+            uint8_t _pad02f4[0x1c];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelPlayer_MovementServices because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelPlayer_MovementServices) == 0x2a8);
+        static_assert(sizeof(source2sdk::server::CCitadelPlayer_MovementServices) == 0x310);
     };
 };

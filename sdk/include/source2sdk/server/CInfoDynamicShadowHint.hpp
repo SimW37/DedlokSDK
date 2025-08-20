@@ -24,21 +24,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x4f8
+        // Size: 0x508
         // Has VTable
         #pragma pack(push, 1)
         class CInfoDynamicShadowHint : public source2sdk::server::CPointEntity
         {
         public:
-            bool m_bDisabled; // 0x4e0            
-            uint8_t _pad04e1[0x3]; // 0x4e1
-            float m_flRange; // 0x4e4            
-            std::int32_t m_nImportance; // 0x4e8            
-            std::int32_t m_nLightChoice; // 0x4ec            
+            bool m_bDisabled; // 0x4f0            
+            uint8_t _pad04f1[0x3]; // 0x4f1
+            float m_flRange; // 0x4f4            
+            std::int32_t m_nImportance; // 0x4f8            
+            std::int32_t m_nLightChoice; // 0x4fc            
             // m_hLight has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hLight;
-            char m_hLight[0x4]; // 0x4f0            
-            uint8_t _pad04f4[0x4];
+            char m_hLight[0x4]; // 0x500            
+            uint8_t _pad0504[0x4];
             
             // Datamap fields:
             // void InputEnable; // 0x0
@@ -48,6 +48,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CInfoDynamicShadowHint because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CInfoDynamicShadowHint) == 0x4f8);
+        static_assert(sizeof(source2sdk::server::CInfoDynamicShadowHint) == 0x508);
     };
 };

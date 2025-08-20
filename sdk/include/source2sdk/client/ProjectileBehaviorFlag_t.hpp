@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 18
+        // Enumerator count: 19
         // Alignment: 4
         // Size: 0x4
         enum class ProjectileBehaviorFlag_t : std::uint32_t
@@ -58,6 +58,9 @@ namespace source2sdk
             PBF_OnlyTouchWorld = 0x8000,
             // MPropertyDescription "When set, tracked projectiles won't have their lifetime set to 2seconds upon IsDoneTracking().  ***YOU MUST MANUALLY REMOVE THEM***"
             PBF_DisableRemoveOnDoneTracking = 0x10000,
+            // MPropertyFriendlyName "Disable passing through portals"
+            // MPropertyDescription "When set, this projectile will not travel through portals and will never recive a OnPortalled() call, because it can't"
+            PBF_DontTravelThroughPortals = 0x20000,
         };
     };
 };

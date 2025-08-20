@@ -33,7 +33,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1d0
+        // Size: 0x1c8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CHandle<C_CitadelBaseAbility> m_vecAbilities"
@@ -52,70 +52,70 @@ namespace source2sdk
         class CCitadelAbilityComponent : public source2sdk::entity2::CEntityComponent
         {
         public:
-            uint8_t _pad0008[0x68]; // 0x8
+            uint8_t _pad0008[0x60]; // 0x8
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "Abilities"
             // metadata: MNetworkPriority "32"
             // m_vecAbilities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_NetworkUtlVectorBase<CHandle<source2sdk::client::C_CitadelBaseAbility>> m_vecAbilities;
-            char m_vecAbilities[0x18]; // 0x70            
+            char m_vecAbilities[0x18]; // 0x68            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "Abilities"
             // metadata: MNetworkPriority "32"
             // m_arPendingAsyncAbilityReservationSlots has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_NetworkUtlVectorBase<std::int32_t> m_arPendingAsyncAbilityReservationSlots;
-            char m_arPendingAsyncAbilityReservationSlots[0x18]; // 0x88            
+            char m_arPendingAsyncAbilityReservationSlots[0x18]; // 0x80            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "Abilities"
             // metadata: MNetworkPriority "32"
             // m_arPendingAsyncAbilityReservationAbilityIDs has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_NetworkUtlVectorBase<std::int32_t> m_arPendingAsyncAbilityReservationAbilityIDs;
-            char m_arPendingAsyncAbilityReservationAbilityIDs[0x18]; // 0xa0            
+            char m_arPendingAsyncAbilityReservationAbilityIDs[0x18]; // 0x98            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "AbiCompSelectedAbilityChanged"
             // m_hSelectedAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_CitadelBaseAbility> m_hSelectedAbility;
-            char m_hSelectedAbility[0x4]; // 0xb8            
+            char m_hSelectedAbility[0x4]; // 0xb0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
             // m_hPreviouslySelectedAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hPreviouslySelectedAbility;
-            char m_hPreviouslySelectedAbility[0x4]; // 0xbc            
+            char m_hPreviouslySelectedAbility[0x4]; // 0xb4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            bool m_bPreviousAbilityQueued; // 0xc0            
-            uint8_t _pad00c1[0x3]; // 0xc1
+            bool m_bPreviousAbilityQueued; // 0xb8            
+            uint8_t _pad00b9[0x3]; // 0xb9
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "AbiCompTimeScaleChanged"
-            float m_flTimeScale; // 0xc4            
+            float m_flTimeScale; // 0xbc            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "AbiCompParticleTimeScaleChanged"
-            float m_flParticleTimeScale; // 0xc8            
+            float m_flParticleTimeScale; // 0xc0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            bool m_bInInterruptState; // 0xcc            
-            uint8_t _pad00cd[0x3]; // 0xcd
+            bool m_bInInterruptState; // 0xc4            
+            uint8_t _pad00c5[0x3]; // 0xc5
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::client::AbilityResource_t m_ResourceStamina; // 0xd0            
+            source2sdk::client::AbilityResource_t m_ResourceStamina; // 0xc8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::client::AbilityResource_t m_ResourceAbility; // 0xf0            
+            source2sdk::client::AbilityResource_t m_ResourceAbility; // 0xe8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             // m_vecConsumedComponents has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_UtlVectorEmbeddedNetworkVar<source2sdk::client::ConsumedComponentState_t> m_vecConsumedComponents;
-            char m_vecConsumedComponents[0x68]; // 0x110            
-            uint8_t _pad0178[0x48]; // 0x178
-            std::uint32_t m_nExecuteAbilityMask; // 0x1c0            
-            uint8_t _pad01c4[0x4]; // 0x1c4
-            bool m_bSelectedEffectsStarted; // 0x1c8            
-            uint8_t _pad01c9[0x7];
+            char m_vecConsumedComponents[0x68]; // 0x108            
+            uint8_t _pad0170[0x48]; // 0x170
+            std::uint32_t m_nExecuteAbilityMask; // 0x1b8            
+            uint8_t _pad01bc[0x4]; // 0x1bc
+            bool m_bSelectedEffectsStarted; // 0x1c0            
+            uint8_t _pad01c1[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelAbilityComponent because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelAbilityComponent) == 0x1d0);
+        static_assert(sizeof(source2sdk::client::CCitadelAbilityComponent) == 0x1c8);
     };
 };

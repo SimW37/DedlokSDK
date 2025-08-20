@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x8d8
+        // Size: 0x910
         // Has VTable
         #pragma pack(push, 1)
         class CFuncTrackAuto : public source2sdk::server::CFuncTrackChange
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CFuncTrackAuto) == 0x8d8);
+        static_assert(sizeof(source2sdk::server::CFuncTrackAuto) == 0x910);
     };
 };

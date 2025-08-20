@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf40
+        // Size: 0x1008
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Priest_Knockback : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0dc0[0x180];
+            uint8_t _pad0d88[0x280];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Priest_Knockback) == 0xf40);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Priest_Knockback) == 0x1008);
     };
 };

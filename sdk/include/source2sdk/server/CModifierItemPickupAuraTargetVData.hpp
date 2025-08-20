@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x678
+        // Size: 0x778
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,17 +27,17 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyGroupName "Timers"
-            float m_PickupTimer; // 0x660            
-            uint8_t _pad0664[0x4]; // 0x664
+            float m_PickupTimer; // 0x760            
+            uint8_t _pad0764[0x4]; // 0x764
             // metadata: MPropertyGroupName "Modifiers"
             // m_PickupTimerModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_PickupTimerModifier;
-            char m_PickupTimerModifier[0x10]; // 0x668            
+            char m_PickupTimerModifier[0x10]; // 0x768            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierItemPickupAuraTargetVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifierItemPickupAuraTargetVData) == 0x678);
+        static_assert(sizeof(source2sdk::server::CModifierItemPickupAuraTargetVData) == 0x778);
     };
 };

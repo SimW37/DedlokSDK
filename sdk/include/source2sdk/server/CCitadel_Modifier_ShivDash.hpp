@@ -17,21 +17,21 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x108
+        // Size: 0x110
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_ShivDash : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x40]; // 0xc0
-            bool m_bUseTrail; // 0x100            
-            bool m_bUseEchoEffect; // 0x101            
-            uint8_t _pad0102[0x6];
+            uint8_t _pad00c8[0x40]; // 0xc8
+            bool m_bUseTrail; // 0x108            
+            bool m_bUseEchoEffect; // 0x109            
+            uint8_t _pad010a[0x6];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_ShivDash because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ShivDash) == 0x108);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ShivDash) == 0x110);
     };
 };

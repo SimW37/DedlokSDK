@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x668
+        // Size: 0x768
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,12 +26,12 @@ namespace source2sdk
         class CModifierVData_SetModelScale : public source2sdk::server::CCitadelModifierVData
         {
         public:
-            source2sdk::tier2::CRangeFloat m_flScale; // 0x660            
+            source2sdk::tier2::CRangeFloat m_flScale; // 0x760            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierVData_SetModelScale because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifierVData_SetModelScale) == 0x668);
+        static_assert(sizeof(source2sdk::server::CModifierVData_SetModelScale) == 0x768);
     };
 };

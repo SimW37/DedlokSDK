@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd0
+        // Size: 0xd8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Silence_Buildup : public source2sdk::server::CCitadel_Modifier_Base_Buildup
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Silence_Buildup) == 0xd0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Silence_Buildup) == 0xd8);
     };
 };

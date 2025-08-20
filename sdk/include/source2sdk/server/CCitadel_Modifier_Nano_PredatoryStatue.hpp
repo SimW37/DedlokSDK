@@ -18,24 +18,24 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x350
+        // Size: 0x360
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Nano_PredatoryStatue : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x2c]; // 0xc0
-            source2sdk::entity2::GameTime_t m_GameTimeEnabled; // 0xec            
-            source2sdk::entity2::GameTime_t m_LastCatInAreaTime; // 0xf0            
-            bool m_bIsAttacking; // 0xf4            
-            uint8_t _pad00f5[0x3]; // 0xf5
-            std::int32_t m_iTargetID; // 0xf8            
-            uint8_t _pad00fc[0x254];
+            uint8_t _pad00c8[0x34]; // 0xc8
+            source2sdk::entity2::GameTime_t m_GameTimeEnabled; // 0xfc            
+            source2sdk::entity2::GameTime_t m_LastCatInAreaTime; // 0x100            
+            bool m_bIsAttacking; // 0x104            
+            uint8_t _pad0105[0x3]; // 0x105
+            std::int32_t m_iTargetID; // 0x108            
+            uint8_t _pad010c[0x254];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Nano_PredatoryStatue because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Nano_PredatoryStatue) == 0x350);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Nano_PredatoryStatue) == 0x360);
     };
 };

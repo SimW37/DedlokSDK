@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x788
+        // Size: 0x888
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,21 +27,21 @@ namespace source2sdk
         class CCitadel_Modifier_TechBurst_ProcVData : public source2sdk::server::CCitadel_Modifier_BaseEventProcVData
         {
         public:
-            bool m_bIgnoreResists; // 0x690            
-            uint8_t _pad0691[0x7]; // 0x691
+            bool m_bIgnoreResists; // 0x790            
+            uint8_t _pad0791[0x7]; // 0x791
             // metadata: MPropertyGroupName "Visuals"
             // m_ProcParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcParticle;
-            char m_ProcParticle[0xe0]; // 0x698            
+            char m_ProcParticle[0xe0]; // 0x798            
             // metadata: MPropertyGroupName "Modifiers"
             // m_ProcNotificationModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_ProcNotificationModifier;
-            char m_ProcNotificationModifier[0x10]; // 0x778            
+            char m_ProcNotificationModifier[0x10]; // 0x878            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_TechBurst_ProcVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TechBurst_ProcVData) == 0x788);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TechBurst_ProcVData) == 0x888);
     };
 };

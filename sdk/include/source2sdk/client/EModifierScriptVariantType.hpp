@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 3
+        // Enumerator count: 5
         // Alignment: 4
         // Size: 0x4
         enum class EModifierScriptVariantType : std::uint32_t
@@ -24,6 +24,10 @@ namespace source2sdk
             MODIFIER_SCRIPT_VARIANT_MODEL = 0x1,
             // MPropertyFriendlyName "Particle"
             MODIFIER_SCRIPT_VARIANT_PARTICLE = 0x2,
+            // MPropertyFriendlyName "Bool"
+            MODIFIER_SCRIPT_VARIANT_MODIFIER_BOOLEAN = 0x3,
+            // MPropertyFriendlyName "Int"
+            MODIFIER_SCRIPT_VARIANT_MODIFIER_INTEGER = 0x4,
         };
     };
 };

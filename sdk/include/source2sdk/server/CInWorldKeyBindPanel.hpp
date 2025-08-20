@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9d8
+        // Size: 0xa10
         // Has VTable
         #pragma pack(push, 1)
         class CInWorldKeyBindPanel : public source2sdk::server::CPointClientUIWorldPanel
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CInWorldKeyBindPanel) == 0x9d8);
+        static_assert(sizeof(source2sdk::server::CInWorldKeyBindPanel) == 0xa10);
     };
 };

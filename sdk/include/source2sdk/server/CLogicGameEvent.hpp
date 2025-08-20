@@ -17,13 +17,13 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x4e8
+        // Size: 0x4f8
         // Has VTable
         #pragma pack(push, 1)
         class CLogicGameEvent : public source2sdk::server::CLogicalEntity
         {
         public:
-            CUtlSymbolLarge m_iszEventName; // 0x4e0            
+            CUtlSymbolLarge m_iszEventName; // 0x4f0            
             
             // Datamap fields:
             // void InputFireEvent; // 0x0
@@ -32,6 +32,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CLogicGameEvent because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CLogicGameEvent) == 0x4e8);
+        static_assert(sizeof(source2sdk::server::CLogicGameEvent) == 0x4f8);
     };
 };

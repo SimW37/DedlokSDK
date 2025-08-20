@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x148
+        // Size: 0x150
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Spiritburn_DOT : public source2sdk::server::CCitadel_Modifier_Burning
         {
         public:
-            source2sdk::entity2::GameTime_t m_flLastBurnTime; // 0xc0            
-            uint8_t _pad00c4[0x84];
+            source2sdk::entity2::GameTime_t m_flLastBurnTime; // 0xc8            
+            uint8_t _pad00cc[0x84];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Spiritburn_DOT because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Spiritburn_DOT) == 0x148);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Spiritburn_DOT) == 0x150);
     };
 };

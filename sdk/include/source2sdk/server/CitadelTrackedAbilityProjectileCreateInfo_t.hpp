@@ -24,20 +24,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x58
+        // Size: 0x68
         #pragma pack(push, 1)
         struct CitadelTrackedAbilityProjectileCreateInfo_t : public source2sdk::server::CitadelAbilityProjectileCreateInfo_t
         {
         public:
             // m_hTrackedTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hTrackedTarget;
-            char m_hTrackedTarget[0x4]; // 0x50            
-            uint8_t _pad0054[0x4];
+            char m_hTrackedTarget[0x4]; // 0x60            
+            uint8_t _pad0064[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CitadelTrackedAbilityProjectileCreateInfo_t because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CitadelTrackedAbilityProjectileCreateInfo_t) == 0x58);
+        static_assert(sizeof(source2sdk::server::CitadelTrackedAbilityProjectileCreateInfo_t) == 0x68);
     };
 };

@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x280
+        // Size: 0x288
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Spin : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x1c0];
+            uint8_t _pad00c8[0x1c0];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Spin) == 0x280);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Spin) == 0x288);
     };
 };

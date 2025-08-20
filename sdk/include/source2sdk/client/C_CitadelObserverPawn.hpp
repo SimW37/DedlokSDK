@@ -17,13 +17,12 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1150
+        // Size: 0x1138
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_iMaxHealth"
         // static metadata: MNetworkExcludeByName "m_baseLayer.m_hSequence"
         // static metadata: MNetworkExcludeByName "m_blinktoggle"
-        // static metadata: MNetworkExcludeByName "m_flAnimTime"
         // static metadata: MNetworkExcludeByUserGroup "m_flCycle"
         // static metadata: MNetworkExcludeByName "m_flEncodedController"
         // static metadata: MNetworkExcludeByName "m_flPoseParameter"
@@ -37,15 +36,15 @@ namespace source2sdk
         class C_CitadelObserverPawn : public source2sdk::client::CCitadelPlayerPawnBase
         {
         public:
-            uint8_t _pad1138[0x18];
+            uint8_t _pad1120[0x18];
             // Datamap fields:
-            // CCitadelPlayer_ObserverServices m_pObserverServices; // 0xf60
-            // CCitadelPlayer_CameraServices m_pCameraServices; // 0xf80
-            // CCitadelObserver_MovementServices m_pMovementServices; // 0xf88
+            // CCitadelPlayer_ObserverServices m_pObserverServices; // 0xf48
+            // CCitadelPlayer_CameraServices m_pCameraServices; // 0xf68
+            // CCitadelObserver_MovementServices m_pMovementServices; // 0xf70
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::C_CitadelObserverPawn) == 0x1150);
+        static_assert(sizeof(source2sdk::client::C_CitadelObserverPawn) == 0x1138);
     };
 };

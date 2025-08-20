@@ -32,7 +32,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xae8
+        // Size: 0xb10
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_spawnflags"
@@ -41,23 +41,23 @@ namespace source2sdk
         class C_BaseTrigger : public source2sdk::client::C_BaseToggle
         {
         public:
-            source2sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x9a8            
-            source2sdk::entity2::CEntityIOOutput m_OnStartTouchAll; // 0x9d0            
-            source2sdk::entity2::CEntityIOOutput m_OnEndTouch; // 0x9f8            
-            source2sdk::entity2::CEntityIOOutput m_OnEndTouchAll; // 0xa20            
-            source2sdk::entity2::CEntityIOOutput m_OnTouching; // 0xa48            
-            source2sdk::entity2::CEntityIOOutput m_OnTouchingEachEntity; // 0xa70            
-            source2sdk::entity2::CEntityIOOutput m_OnNotTouching; // 0xa98            
+            source2sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x9d0            
+            source2sdk::entity2::CEntityIOOutput m_OnStartTouchAll; // 0x9f8            
+            source2sdk::entity2::CEntityIOOutput m_OnEndTouch; // 0xa20            
+            source2sdk::entity2::CEntityIOOutput m_OnEndTouchAll; // 0xa48            
+            source2sdk::entity2::CEntityIOOutput m_OnTouching; // 0xa70            
+            source2sdk::entity2::CEntityIOOutput m_OnTouchingEachEntity; // 0xa98            
+            source2sdk::entity2::CEntityIOOutput m_OnNotTouching; // 0xac0            
             // m_hTouchingEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_hTouchingEntities;
-            char m_hTouchingEntities[0x18]; // 0xac0            
-            CUtlSymbolLarge m_iFilterName; // 0xad8            
+            char m_hTouchingEntities[0x18]; // 0xae8            
+            CUtlSymbolLarge m_iFilterName; // 0xb00            
             // m_hFilter has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::CBaseFilter> m_hFilter;
-            char m_hFilter[0x4]; // 0xae0            
+            char m_hFilter[0x4]; // 0xb08            
             // metadata: MNetworkEnable
-            bool m_bDisabled; // 0xae4            
-            uint8_t _pad0ae5[0x3];
+            bool m_bDisabled; // 0xb0c            
+            uint8_t _pad0b0d[0x3];
             
             // Datamap fields:
             // void InputEnable; // 0x0
@@ -73,6 +73,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in C_BaseTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_BaseTrigger) == 0xae8);
+        static_assert(sizeof(source2sdk::client::C_BaseTrigger) == 0xb10);
     };
 };

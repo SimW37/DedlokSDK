@@ -24,23 +24,23 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe88
+        // Size: 0xe80
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Magician_MagicBolt : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x8]; // 0xba0
+            uint8_t _pad0b98[0x8]; // 0xb98
             // m_vecDeployedProjectiles has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CCitadelProjectile>> m_vecDeployedProjectiles;
-            char m_vecDeployedProjectiles[0x18]; // 0xba8            
-            std::int32_t m_iCurrentRedirects; // 0xbc0            
-            uint8_t _pad0bc4[0x2c4];
+            char m_vecDeployedProjectiles[0x18]; // 0xba0            
+            std::int32_t m_iCurrentRedirects; // 0xbb8            
+            uint8_t _pad0bbc[0x2c4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Magician_MagicBolt because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_MagicBolt) == 0xe88);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_MagicBolt) == 0xe80);
     };
 };

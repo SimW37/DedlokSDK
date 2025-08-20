@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xbe0
+        // Size: 0xce0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,35 +30,35 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x660            
+            char m_SlowModifier[0x10]; // 0x760            
             // metadata: MPropertyStartGroup "Visuals"
             // m_DebuffStatusPlayerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffStatusPlayerParticle;
-            char m_DebuffStatusPlayerParticle[0xe0]; // 0x670            
+            char m_DebuffStatusPlayerParticle[0xe0]; // 0x770            
             // m_DebuffStatusVictimParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffStatusVictimParticle;
-            char m_DebuffStatusVictimParticle[0xe0]; // 0x750            
+            char m_DebuffStatusVictimParticle[0xe0]; // 0x850            
             // m_DebuffStatusNPCParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffStatusNPCParticle;
-            char m_DebuffStatusNPCParticle[0xe0]; // 0x830            
+            char m_DebuffStatusNPCParticle[0xe0]; // 0x930            
             // m_StackDamageParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackDamageParticle;
-            char m_StackDamageParticle[0xe0]; // 0x910            
+            char m_StackDamageParticle[0xe0]; // 0xa10            
             // m_StackReadyParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackReadyParticle;
-            char m_StackReadyParticle[0xe0]; // 0x9f0            
+            char m_StackReadyParticle[0xe0]; // 0xaf0            
             // m_StackAppliedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StackAppliedParticle;
-            char m_StackAppliedParticle[0xe0]; // 0xad0            
+            char m_StackAppliedParticle[0xe0]; // 0xbd0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_ConsumeMaxStacksSound; // 0xbb0            
-            CSoundEventName m_ConsumeMaxStacksNonHeroSound; // 0xbc0            
-            CSoundEventName m_ApplyStackSound; // 0xbd0            
+            CSoundEventName m_ConsumeMaxStacksSound; // 0xcb0            
+            CSoundEventName m_ConsumeMaxStacksNonHeroSound; // 0xcc0            
+            CSoundEventName m_ApplyStackSound; // 0xcd0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim_VData) == 0xbe0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim_VData) == 0xce0);
     };
 };

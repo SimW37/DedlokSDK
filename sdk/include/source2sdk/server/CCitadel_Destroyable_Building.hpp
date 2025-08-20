@@ -22,7 +22,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x10c8
+        // Size: 0x10a8
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_bTakesDamage"
@@ -41,47 +41,47 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
             // metadata: MNetworkAlias "CCitadelMinimapComponent"
             // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xc38            
-            source2sdk::entity2::CEntityIOOutput m_OnDestroyed; // 0xc50            
-            source2sdk::entity2::CEntityIOOutput m_OnRevitilized; // 0xc78            
-            source2sdk::entity2::CEntityIOOutput m_OnDamageTaken; // 0xca0            
-            source2sdk::entity2::CEntityIOOutput m_OnLifeChanged; // 0xcc8            
-            source2sdk::entity2::CEntityIOOutput m_OnBecomeActive; // 0xcf0            
-            source2sdk::entity2::CEntityIOOutput m_OnBecomeInvulnerable; // 0xd18            
-            source2sdk::entity2::CEntityIOOutput m_OnBecomeVulnerable; // 0xd40            
-            source2sdk::entity2::CEntityIOOutput m_OnUnderAttack; // 0xd68            
-            source2sdk::entity2::CEntityIOOutput m_OnAttackSubsided; // 0xd90            
-            std::int32_t m_nBuildingHealth; // 0xdb8            
-            uint8_t _pad0dbc[0x4]; // 0xdbc
-            std::int32_t m_iLane; // 0xdc0            
-            source2sdk::entity2::GameTime_t m_flDestroyedTime; // 0xdc4            
-            source2sdk::entity2::GameTime_t m_flLastDamagedTime; // 0xdc8            
-            QAngle m_angOriginal; // 0xdcc            
-            uint8_t _pad0dd8[0x20]; // 0xdd8
-            CUtlSymbolLarge m_backdoorProtectionTrigger; // 0xdf8            
-            uint8_t _pad0e00[0x18]; // 0xe00
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xc18            
+            source2sdk::entity2::CEntityIOOutput m_OnDestroyed; // 0xc30            
+            source2sdk::entity2::CEntityIOOutput m_OnRevitilized; // 0xc58            
+            source2sdk::entity2::CEntityIOOutput m_OnDamageTaken; // 0xc80            
+            source2sdk::entity2::CEntityIOOutput m_OnLifeChanged; // 0xca8            
+            source2sdk::entity2::CEntityIOOutput m_OnBecomeActive; // 0xcd0            
+            source2sdk::entity2::CEntityIOOutput m_OnBecomeInvulnerable; // 0xcf8            
+            source2sdk::entity2::CEntityIOOutput m_OnBecomeVulnerable; // 0xd20            
+            source2sdk::entity2::CEntityIOOutput m_OnUnderAttack; // 0xd48            
+            source2sdk::entity2::CEntityIOOutput m_OnAttackSubsided; // 0xd70            
+            std::int32_t m_nBuildingHealth; // 0xd98            
+            uint8_t _pad0d9c[0x4]; // 0xd9c
+            std::int32_t m_iLane; // 0xda0            
+            source2sdk::entity2::GameTime_t m_flDestroyedTime; // 0xda4            
+            source2sdk::entity2::GameTime_t m_flLastDamagedTime; // 0xda8            
+            QAngle m_angOriginal; // 0xdac            
+            uint8_t _pad0db8[0x20]; // 0xdb8
+            CUtlSymbolLarge m_backdoorProtectionTrigger; // 0xdd8            
+            uint8_t _pad0de0[0x18]; // 0xde0
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
             // metadata: MNetworkAlias "CCitadelAbilityComponent"
             // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
-            source2sdk::server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xe18            
+            source2sdk::server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xdf8            
             // metadata: MNetworkEnable
             // m_vecWeakPoints has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVectorEmbeddedNetworkVar<source2sdk::server::WeakPoint_t> m_vecWeakPoints;
-            char m_vecWeakPoints[0x68]; // 0x1058            
+            char m_vecWeakPoints[0x68]; // 0x1038            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "DestroyedChanged"
-            bool m_bDestroyed; // 0x10c0            
+            bool m_bDestroyed; // 0x10a0            
             // metadata: MNetworkEnable
-            bool m_bActive; // 0x10c1            
+            bool m_bActive; // 0x10a1            
             // metadata: MNetworkEnable
-            bool m_bFinal; // 0x10c2            
-            uint8_t _pad10c3[0x5];
+            bool m_bFinal; // 0x10a2            
+            uint8_t _pad10a3[0x5];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Destroyable_Building because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Destroyable_Building) == 0x10c8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Destroyable_Building) == 0x10a8);
     };
 };

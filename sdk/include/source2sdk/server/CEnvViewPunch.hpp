@@ -17,14 +17,14 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x4f0
+        // Size: 0x500
         // Has VTable
         #pragma pack(push, 1)
         class CEnvViewPunch : public source2sdk::server::CPointEntity
         {
         public:
-            float m_flRadius; // 0x4e0            
-            QAngle m_angViewPunch; // 0x4e4            
+            float m_flRadius; // 0x4f0            
+            QAngle m_angViewPunch; // 0x4f4            
             
             // Datamap fields:
             // void InputViewPunch; // 0x0
@@ -33,6 +33,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CEnvViewPunch because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CEnvViewPunch) == 0x4f0);
+        static_assert(sizeof(source2sdk::server::CEnvViewPunch) == 0x500);
     };
 };

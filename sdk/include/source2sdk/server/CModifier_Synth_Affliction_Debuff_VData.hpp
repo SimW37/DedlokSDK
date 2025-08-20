@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x820
+        // Size: 0x920
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_EffectParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EffectParticle;
-            char m_EffectParticle[0xe0]; // 0x660            
+            char m_EffectParticle[0xe0]; // 0x760            
             // m_DebuffParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffParticle;
-            char m_DebuffParticle[0xe0]; // 0x740            
+            char m_DebuffParticle[0xe0]; // 0x840            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Synth_Affliction_Debuff_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifier_Synth_Affliction_Debuff_VData) == 0x820);
+        static_assert(sizeof(source2sdk::server::CModifier_Synth_Affliction_Debuff_VData) == 0x920);
     };
 };

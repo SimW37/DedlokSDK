@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1740
+        // Size: 0x1738
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,23 +30,23 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_ZapModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ZapModifier;
-            char m_ZapModifier[0x10]; // 0x1620            
+            char m_ZapModifier[0x10]; // 0x1618            
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x1630            
+            char m_SlowModifier[0x10]; // 0x1628            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strHitSound; // 0x1640            
+            CSoundEventName m_strHitSound; // 0x1638            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strProjectileLoopingSound; // 0x1650            
+            CSoundEventName m_strProjectileLoopingSound; // 0x1648            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ZapParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapParticle;
-            char m_ZapParticle[0xe0]; // 0x1660            
+            char m_ZapParticle[0xe0]; // 0x1658            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityLightningBallVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityLightningBallVData) == 0x1740);
+        static_assert(sizeof(source2sdk::client::CAbilityLightningBallVData) == 0x1738);
     };
 };

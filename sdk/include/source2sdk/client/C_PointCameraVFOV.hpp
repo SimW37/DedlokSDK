@@ -17,24 +17,24 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x648
+        // Size: 0x650
         // Has VTable
         #pragma pack(push, 1)
         class C_PointCameraVFOV : public source2sdk::client::C_PointCamera
         {
         public:
-            float m_flVerticalFOV; // 0x640            
-            uint8_t _pad0644[0x4];
+            float m_flVerticalFOV; // 0x648            
+            uint8_t _pad064c[0x4];
             
             // Datamap fields:
-            // float m_flDofFarCrisp; // 0x620
-            // float m_flDofFarBlurry; // 0x624
-            // float m_flDofTiltToGround; // 0x628
+            // float m_flDofFarCrisp; // 0x628
+            // float m_flDofFarBlurry; // 0x62c
+            // float m_flDofTiltToGround; // 0x630
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_PointCameraVFOV because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_PointCameraVFOV) == 0x648);
+        static_assert(sizeof(source2sdk::client::C_PointCameraVFOV) == 0x650);
     };
 };

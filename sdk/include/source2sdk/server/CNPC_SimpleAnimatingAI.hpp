@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc50
+        // Size: 0xc30
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_iMaxHealth"
@@ -33,7 +33,6 @@ namespace source2sdk
         // static metadata: MNetworkIncludeByName "m_iTeam"
         // static metadata: MNetworkExcludeByName "m_flSimulationTime"
         // static metadata: MNetworkExcludeByName "m_blinktoggle"
-        // static metadata: MNetworkExcludeByName "m_flAnimTime"
         // static metadata: MNetworkExcludeByUserGroup "m_flCycle"
         // static metadata: MNetworkExcludeByName "m_flEncodedController"
         // static metadata: MNetworkExcludeByName "m_flPoseParameter"
@@ -61,6 +60,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CNPC_SimpleAnimatingAI because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_SimpleAnimatingAI) == 0xc50);
+        static_assert(sizeof(source2sdk::server::CNPC_SimpleAnimatingAI) == 0xc30);
     };
 };

@@ -27,7 +27,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xaf0
+        // Size: 0xb30
         // Has VTable
         // 
         // static metadata: MEntityAllowsPortraitWorldSpawn
@@ -39,6 +39,8 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "float m_flBrightnessScale"
         // static metadata: MNetworkVarNames "int m_nDirectLight"
         // static metadata: MNetworkVarNames "int m_nBakedShadowIndex"
+        // static metadata: MNetworkVarNames "int32 m_nLightPathUniqueId"
+        // static metadata: MNetworkVarNames "int32 m_nLightMapUniqueId"
         // static metadata: MNetworkVarNames "int m_nLuminaireShape"
         // static metadata: MNetworkVarNames "float m_flLuminaireSize"
         // static metadata: MNetworkVarNames "float m_flLuminaireAnisotropy"
@@ -109,245 +111,251 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            bool m_bEnabled; // 0x7d0            
-            uint8_t _pad07d1[0x3]; // 0x7d1
+            bool m_bEnabled; // 0x808            
+            uint8_t _pad0809[0x3]; // 0x809
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            std::int32_t m_nColorMode; // 0x7d4            
+            std::int32_t m_nColorMode; // 0x80c            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Color m_Color; // 0x7d8            
+            Color m_Color; // 0x810            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flColorTemperature; // 0x7dc            
+            float m_flColorTemperature; // 0x814            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flBrightness; // 0x7e0            
+            float m_flBrightness; // 0x818            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flBrightnessScale; // 0x7e4            
+            float m_flBrightnessScale; // 0x81c            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            std::int32_t m_nDirectLight; // 0x7e8            
+            std::int32_t m_nDirectLight; // 0x820            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            std::int32_t m_nBakedShadowIndex; // 0x7ec            
+            std::int32_t m_nBakedShadowIndex; // 0x824            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            std::int32_t m_nLuminaireShape; // 0x7f0            
+            std::int32_t m_nLightPathUniqueId; // 0x828            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flLuminaireSize; // 0x7f4            
+            std::int32_t m_nLightMapUniqueId; // 0x82c            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flLuminaireAnisotropy; // 0x7f8            
-            uint8_t _pad07fc[0x4]; // 0x7fc
+            std::int32_t m_nLuminaireShape; // 0x830            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "RenderingChanged"
+            float m_flLuminaireSize; // 0x834            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "RenderingChanged"
+            float m_flLuminaireAnisotropy; // 0x838            
+            uint8_t _pad083c[0x4]; // 0x83c
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "StyleChanged"
-            CUtlString m_LightStyleString; // 0x800            
+            CUtlString m_LightStyleString; // 0x840            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            source2sdk::entity2::GameTime_t m_flLightStyleStartTime; // 0x808            
-            uint8_t _pad080c[0x4]; // 0x80c
+            source2sdk::entity2::GameTime_t m_flLightStyleStartTime; // 0x848            
+            uint8_t _pad084c[0x4]; // 0x84c
             // metadata: MNetworkEnable
             // m_QueuedLightStyleStrings has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<CUtlString> m_QueuedLightStyleStrings;
-            char m_QueuedLightStyleStrings[0x18]; // 0x810            
+            char m_QueuedLightStyleStrings[0x18]; // 0x850            
             // metadata: MNetworkEnable
             // m_LightStyleEvents has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<CUtlString> m_LightStyleEvents;
-            char m_LightStyleEvents[0x18]; // 0x828            
+            char m_LightStyleEvents[0x18]; // 0x868            
             // metadata: MNetworkEnable
             // m_LightStyleTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<CHandle<source2sdk::server::CBaseModelEntity>> m_LightStyleTargets;
-            char m_LightStyleTargets[0x18]; // 0x840            
-            source2sdk::entity2::CEntityIOOutput m_StyleEvent[4]; // 0x858            
-            uint8_t _pad08f8[0x20]; // 0x8f8
+            char m_LightStyleTargets[0x18]; // 0x880            
+            source2sdk::entity2::CEntityIOOutput m_StyleEvent[4]; // 0x898            
+            uint8_t _pad0938[0x20]; // 0x938
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
             // m_hLightCookie has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CStrongHandle<source2sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hLightCookie;
-            char m_hLightCookie[0x8]; // 0x918            
+            char m_hLightCookie[0x8]; // 0x958            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flShape; // 0x920            
+            float m_flShape; // 0x960            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flSoftX; // 0x924            
+            float m_flSoftX; // 0x964            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flSoftY; // 0x928            
+            float m_flSoftY; // 0x968            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flSkirt; // 0x92c            
+            float m_flSkirt; // 0x96c            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flSkirtNear; // 0x930            
-            // metadata: MNetworkEnable
-            // metadata: MNetworkChangeCallback "RenderingChanged"
-            // metadata: MNetworkBitCount "32"
-            Vector m_vSizeParams; // 0x934            
+            float m_flSkirtNear; // 0x970            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
             // metadata: MNetworkBitCount "32"
-            float m_flRange; // 0x940            
+            Vector m_vSizeParams; // 0x974            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
             // metadata: MNetworkBitCount "32"
-            Vector m_vShear; // 0x944            
-            // metadata: MNetworkEnable
-            std::int32_t m_nBakeSpecularToCubemaps; // 0x950            
+            float m_flRange; // 0x980            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
             // metadata: MNetworkBitCount "32"
-            Vector m_vBakeSpecularToCubemapsSize; // 0x954            
+            Vector m_vShear; // 0x984            
+            // metadata: MNetworkEnable
+            std::int32_t m_nBakeSpecularToCubemaps; // 0x990            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            std::int32_t m_nCastShadows; // 0x960            
+            // metadata: MNetworkBitCount "32"
+            Vector m_vBakeSpecularToCubemapsSize; // 0x994            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            std::int32_t m_nShadowMapSize; // 0x964            
+            std::int32_t m_nCastShadows; // 0x9a0            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            std::int32_t m_nShadowPriority; // 0x968            
+            std::int32_t m_nShadowMapSize; // 0x9a4            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            bool m_bContactShadow; // 0x96c            
+            std::int32_t m_nShadowPriority; // 0x9a8            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            bool m_bForceShadowsEnabled; // 0x96d            
-            uint8_t _pad096e[0x2]; // 0x96e
-            // metadata: MNetworkEnable
-            std::int32_t m_nBounceLight; // 0x970            
-            // metadata: MNetworkEnable
-            float m_flBounceScale; // 0x974            
+            bool m_bContactShadow; // 0x9ac            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flMinRoughness; // 0x978            
+            bool m_bForceShadowsEnabled; // 0x9ad            
+            uint8_t _pad09ae[0x2]; // 0x9ae
+            // metadata: MNetworkEnable
+            std::int32_t m_nBounceLight; // 0x9b0            
+            // metadata: MNetworkEnable
+            float m_flBounceScale; // 0x9b4            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vAlternateColor; // 0x97c            
+            float m_flMinRoughness; // 0x9b8            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_fAlternateColorBrightness; // 0x988            
+            Vector m_vAlternateColor; // 0x9bc            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            std::int32_t m_nFog; // 0x98c            
+            float m_fAlternateColorBrightness; // 0x9c8            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flFogStrength; // 0x990            
+            std::int32_t m_nFog; // 0x9cc            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            std::int32_t m_nFogShadows; // 0x994            
+            float m_flFogStrength; // 0x9d0            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flFogScale; // 0x998            
+            std::int32_t m_nFogShadows; // 0x9d4            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            bool m_bFogMixedShadows; // 0x99c            
-            uint8_t _pad099d[0x3]; // 0x99d
+            float m_flFogScale; // 0x9d8            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flFadeSizeStart; // 0x9a0            
+            bool m_bFogMixedShadows; // 0x9dc            
+            uint8_t _pad09dd[0x3]; // 0x9dd
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flFadeSizeEnd; // 0x9a4            
+            float m_flFadeSizeStart; // 0x9e0            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flShadowFadeSizeStart; // 0x9a8            
+            float m_flFadeSizeEnd; // 0x9e4            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flShadowFadeSizeEnd; // 0x9ac            
+            float m_flShadowFadeSizeStart; // 0x9e8            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            bool m_bPrecomputedFieldsValid; // 0x9b0            
-            uint8_t _pad09b1[0x3]; // 0x9b1
+            float m_flShadowFadeSizeEnd; // 0x9ec            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedBoundsMins; // 0x9b4            
+            bool m_bPrecomputedFieldsValid; // 0x9f0            
+            uint8_t _pad09f1[0x3]; // 0x9f1
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedBoundsMaxs; // 0x9c0            
+            Vector m_vPrecomputedBoundsMins; // 0x9f4            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBOrigin; // 0x9cc            
+            Vector m_vPrecomputedBoundsMaxs; // 0xa00            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            QAngle m_vPrecomputedOBBAngles; // 0x9d8            
+            Vector m_vPrecomputedOBBOrigin; // 0xa0c            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBExtent; // 0x9e4            
+            QAngle m_vPrecomputedOBBAngles; // 0xa18            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            std::int32_t m_nPrecomputedSubFrusta; // 0x9f0            
+            Vector m_vPrecomputedOBBExtent; // 0xa24            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBOrigin0; // 0x9f4            
+            std::int32_t m_nPrecomputedSubFrusta; // 0xa30            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            QAngle m_vPrecomputedOBBAngles0; // 0xa00            
+            Vector m_vPrecomputedOBBOrigin0; // 0xa34            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBExtent0; // 0xa0c            
+            QAngle m_vPrecomputedOBBAngles0; // 0xa40            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBOrigin1; // 0xa18            
+            Vector m_vPrecomputedOBBExtent0; // 0xa4c            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            QAngle m_vPrecomputedOBBAngles1; // 0xa24            
+            Vector m_vPrecomputedOBBOrigin1; // 0xa58            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBExtent1; // 0xa30            
+            QAngle m_vPrecomputedOBBAngles1; // 0xa64            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBOrigin2; // 0xa3c            
+            Vector m_vPrecomputedOBBExtent1; // 0xa70            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            QAngle m_vPrecomputedOBBAngles2; // 0xa48            
+            Vector m_vPrecomputedOBBOrigin2; // 0xa7c            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBExtent2; // 0xa54            
+            QAngle m_vPrecomputedOBBAngles2; // 0xa88            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBOrigin3; // 0xa60            
+            Vector m_vPrecomputedOBBExtent2; // 0xa94            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            QAngle m_vPrecomputedOBBAngles3; // 0xa6c            
+            Vector m_vPrecomputedOBBOrigin3; // 0xaa0            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBExtent3; // 0xa78            
+            QAngle m_vPrecomputedOBBAngles3; // 0xaac            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBOrigin4; // 0xa84            
+            Vector m_vPrecomputedOBBExtent3; // 0xab8            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            QAngle m_vPrecomputedOBBAngles4; // 0xa90            
+            Vector m_vPrecomputedOBBOrigin4; // 0xac4            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBExtent4; // 0xa9c            
+            QAngle m_vPrecomputedOBBAngles4; // 0xad0            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBOrigin5; // 0xaa8            
+            Vector m_vPrecomputedOBBExtent4; // 0xadc            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            QAngle m_vPrecomputedOBBAngles5; // 0xab4            
+            Vector m_vPrecomputedOBBOrigin5; // 0xae8            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            Vector m_vPrecomputedOBBExtent5; // 0xac0            
-            bool m_bPvsModifyEntity; // 0xacc            
-            uint8_t _pad0acd[0x3]; // 0xacd
+            QAngle m_vPrecomputedOBBAngles5; // 0xaf4            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "RenderingChanged"
+            Vector m_vPrecomputedOBBExtent5; // 0xb00            
+            bool m_bPvsModifyEntity; // 0xb0c            
+            uint8_t _pad0b0d[0x3]; // 0xb0d
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
             // m_VisClusters has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<std::uint16_t> m_VisClusters;
-            char m_VisClusters[0x18]; // 0xad0            
-            uint8_t _pad0ae8[0x8];
+            char m_VisClusters[0x18]; // 0xb10            
+            uint8_t _pad0b28[0x8];
             
             // Datamap fields:
-            // void m_StyleEvent[0]; // 0x858
-            // void m_StyleEvent[1]; // 0x880
-            // void m_StyleEvent[2]; // 0x8a8
-            // void m_StyleEvent[3]; // 0x8d0
+            // void m_StyleEvent[0]; // 0x898
+            // void m_StyleEvent[1]; // 0x8c0
+            // void m_StyleEvent[2]; // 0x8e8
+            // void m_StyleEvent[3]; // 0x910
             // void CBarnLightThink_SetNextQueuedLightStyle; // 0x0
             // void CBarnLightThink_ApplyLightStylesToTargets; // 0x0
             // void CBarnLightThink_LightStyleEvent; // 0x0
@@ -356,6 +364,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CBarnLight because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CBarnLight) == 0xaf0);
+        static_assert(sizeof(source2sdk::server::CBarnLight) == 0xb30);
     };
 };

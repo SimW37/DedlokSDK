@@ -17,29 +17,29 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe8
+        // Size: 0xf0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_SettingSunThinker : public source2sdk::server::CCitadelModifier
         {
         public:
-            float m_flTickInterval; // 0xc0            
-            float m_flRadius; // 0xc4            
-            float m_CenterRadius; // 0xc8            
-            float m_CenterDamage; // 0xcc            
-            float m_OuterDamage; // 0xd0            
-            float m_StunDuration; // 0xd4            
-            float m_TargetingDuration; // 0xd8            
-            float m_ShootDuration; // 0xdc            
-            bool m_bTargetingCompleted; // 0xe0            
-            bool m_bSecondHit; // 0xe1            
-            bool m_bTwoHits; // 0xe2            
-            uint8_t _pad00e3[0x5];
+            float m_flTickInterval; // 0xc8            
+            float m_flRadius; // 0xcc            
+            float m_CenterRadius; // 0xd0            
+            float m_CenterDamage; // 0xd4            
+            float m_OuterDamage; // 0xd8            
+            float m_StunDuration; // 0xdc            
+            float m_TargetingDuration; // 0xe0            
+            float m_ShootDuration; // 0xe4            
+            bool m_bTargetingCompleted; // 0xe8            
+            bool m_bSecondHit; // 0xe9            
+            bool m_bTwoHits; // 0xea            
+            uint8_t _pad00eb[0x5];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_SettingSunThinker because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_SettingSunThinker) == 0xe8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_SettingSunThinker) == 0xf0);
     };
 };

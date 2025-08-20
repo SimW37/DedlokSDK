@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc8
+        // Size: 0xd0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_MidBossAggroEnemy : public source2sdk::server::CCitadelModifier
         {
         public:
-            source2sdk::entity2::GameTime_t m_flLastActiveTime; // 0xc0            
-            uint8_t _pad00c4[0x4];
+            source2sdk::entity2::GameTime_t m_flLastActiveTime; // 0xc8            
+            uint8_t _pad00cc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_MidBossAggroEnemy because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_MidBossAggroEnemy) == 0xc8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_MidBossAggroEnemy) == 0xd0);
     };
 };

@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe08
+        // Size: 0xdd0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Bull_Heal : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0dc0[0x48];
+            uint8_t _pad0d88[0x48];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bull_Heal) == 0xe08);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bull_Heal) == 0xdd0);
     };
 };

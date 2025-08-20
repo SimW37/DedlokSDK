@@ -42,19 +42,22 @@ namespace source2sdk
             float m_flTriggerRadius; // 0x24            
             // metadata: MPropertySuppressExpr "m_eProjectileShape != Sphere"
             float m_flPhysicsRadius; // 0x28            
+            // metadata: MPropertySuppressExpr "m_eProjectileShape != Sphere"
+            // metadata: MPropertyFriendlyName "Additional Bullet Only Trigger Radius"
+            // metadata: MPropertyDescription "When > 0, creates an additional trigger volume of this radius that bullets will touch and call OnBulletHit().  Useful when we want bullets to be more generous at hitting this projectile."
+            float m_flBulletOnlyTriggerRadius; // 0x2c            
             // metadata: MPropertySuppressExpr "m_eProjectileShape != Capsule"
-            Vector m_vecCapsulePhysicsCenter1; // 0x2c            
+            Vector m_vecCapsulePhysicsCenter1; // 0x30            
             // metadata: MPropertySuppressExpr "m_eProjectileShape != Capsule"
-            Vector m_vecCapsulePhysicsCenter2; // 0x38            
+            Vector m_vecCapsulePhysicsCenter2; // 0x3c            
             // metadata: MPropertySuppressExpr "m_eProjectileShape != Capsule"
-            float m_flCapsulePhysicsRadius; // 0x44            
+            float m_flCapsulePhysicsRadius; // 0x48            
             // metadata: MPropertySuppressExpr "m_eProjectileShape != Capsule"
-            Vector m_vecCapsuleTriggerCenter1; // 0x48            
+            Vector m_vecCapsuleTriggerCenter1; // 0x4c            
             // metadata: MPropertySuppressExpr "m_eProjectileShape != Capsule"
-            Vector m_vecCapsuleTriggerCenter2; // 0x54            
+            Vector m_vecCapsuleTriggerCenter2; // 0x58            
             // metadata: MPropertySuppressExpr "m_eProjectileShape != Capsule"
-            float m_flCapsuleTriggerRadius; // 0x60            
-            uint8_t _pad0064[0x4]; // 0x64
+            float m_flCapsuleTriggerRadius; // 0x64            
             // metadata: MPropertyStartGroup "Visuals"
             // metadata: MPropertyFriendlyName "Trail Particle"
             // m_particle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
@@ -111,12 +114,13 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_eProjectileShape) == 0x20);
         static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_flTriggerRadius) == 0x24);
         static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_flPhysicsRadius) == 0x28);
-        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_vecCapsulePhysicsCenter1) == 0x2c);
-        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_vecCapsulePhysicsCenter2) == 0x38);
-        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_flCapsulePhysicsRadius) == 0x44);
-        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_vecCapsuleTriggerCenter1) == 0x48);
-        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_vecCapsuleTriggerCenter2) == 0x54);
-        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_flCapsuleTriggerRadius) == 0x60);
+        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_flBulletOnlyTriggerRadius) == 0x2c);
+        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_vecCapsulePhysicsCenter1) == 0x30);
+        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_vecCapsulePhysicsCenter2) == 0x3c);
+        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_flCapsulePhysicsRadius) == 0x48);
+        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_vecCapsuleTriggerCenter1) == 0x4c);
+        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_vecCapsuleTriggerCenter2) == 0x58);
+        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_flCapsuleTriggerRadius) == 0x64);
         static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_particle) == 0x68);
         static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_bHideWarningParticle) == 0x148);
         static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_warningParticle) == 0x150);

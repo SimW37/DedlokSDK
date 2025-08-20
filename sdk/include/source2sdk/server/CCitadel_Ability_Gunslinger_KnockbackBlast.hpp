@@ -24,23 +24,23 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd88
+        // Size: 0xd80
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Gunslinger_KnockbackBlast : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            Vector m_vecKnockbackDirection; // 0xba0            
-            uint8_t _pad0bac[0x4]; // 0xbac
+            Vector m_vecKnockbackDirection; // 0xb98            
+            uint8_t _pad0ba4[0x4]; // 0xba4
             // m_vecKnockbackedUnits has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecKnockbackedUnits;
-            char m_vecKnockbackedUnits[0x18]; // 0xbb0            
-            uint8_t _pad0bc8[0x1c0];
+            char m_vecKnockbackedUnits[0x18]; // 0xba8            
+            uint8_t _pad0bc0[0x1c0];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Gunslinger_KnockbackBlast because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Gunslinger_KnockbackBlast) == 0xd88);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Gunslinger_KnockbackBlast) == 0xd80);
     };
 };

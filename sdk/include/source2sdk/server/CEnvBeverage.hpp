@@ -17,15 +17,15 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x4e8
+        // Size: 0x4f8
         // Has VTable
         #pragma pack(push, 1)
         class CEnvBeverage : public source2sdk::server::CBaseEntity
         {
         public:
-            bool m_CanInDispenser; // 0x4e0            
-            uint8_t _pad04e1[0x3]; // 0x4e1
-            std::int32_t m_nBeverageType; // 0x4e4            
+            bool m_CanInDispenser; // 0x4f0            
+            uint8_t _pad04f1[0x3]; // 0x4f1
+            std::int32_t m_nBeverageType; // 0x4f4            
             
             // Datamap fields:
             // void InputActivate; // 0x0
@@ -34,6 +34,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CEnvBeverage because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CEnvBeverage) == 0x4e8);
+        static_assert(sizeof(source2sdk::server::CEnvBeverage) == 0x4f8);
     };
 };

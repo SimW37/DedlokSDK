@@ -32,22 +32,22 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x8d8
+        // Size: 0x910
         // Has VTable
         #pragma pack(push, 1)
         class CFuncTrackChange : public source2sdk::server::CFuncPlatRot
         {
         public:
-            source2sdk::server::CPathTrack* m_trackTop; // 0x898            
-            source2sdk::server::CPathTrack* m_trackBottom; // 0x8a0            
-            source2sdk::server::CFuncTrackTrain* m_train; // 0x8a8            
-            CUtlSymbolLarge m_trackTopName; // 0x8b0            
-            CUtlSymbolLarge m_trackBottomName; // 0x8b8            
-            CUtlSymbolLarge m_trainName; // 0x8c0            
-            source2sdk::server::TRAIN_CODE m_code; // 0x8c8            
-            std::int32_t m_targetState; // 0x8cc            
-            std::int32_t m_use; // 0x8d0            
-            uint8_t _pad08d4[0x4];
+            source2sdk::server::CPathTrack* m_trackTop; // 0x8d0            
+            source2sdk::server::CPathTrack* m_trackBottom; // 0x8d8            
+            source2sdk::server::CFuncTrackTrain* m_train; // 0x8e0            
+            CUtlSymbolLarge m_trackTopName; // 0x8e8            
+            CUtlSymbolLarge m_trackBottomName; // 0x8f0            
+            CUtlSymbolLarge m_trainName; // 0x8f8            
+            source2sdk::server::TRAIN_CODE m_code; // 0x900            
+            std::int32_t m_targetState; // 0x904            
+            std::int32_t m_use; // 0x908            
+            uint8_t _pad090c[0x4];
             
             // Datamap fields:
             // void CFuncTrackChangeFind; // 0x0
@@ -56,6 +56,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CFuncTrackChange because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFuncTrackChange) == 0x8d8);
+        static_assert(sizeof(source2sdk::server::CFuncTrackChange) == 0x910);
     };
 };

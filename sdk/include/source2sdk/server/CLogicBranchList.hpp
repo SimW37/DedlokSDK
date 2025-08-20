@@ -26,21 +26,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x5f8
+        // Size: 0x608
         // Has VTable
         #pragma pack(push, 1)
         class CLogicBranchList : public source2sdk::server::CLogicalEntity
         {
         public:
-            CUtlSymbolLarge m_nLogicBranchNames[16]; // 0x4e0            
+            CUtlSymbolLarge m_nLogicBranchNames[16]; // 0x4f0            
             // m_LogicBranchList has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_LogicBranchList;
-            char m_LogicBranchList[0x18]; // 0x560            
-            source2sdk::server::CLogicBranchList_LogicBranchListenerLastState_t m_eLastState; // 0x578            
-            uint8_t _pad057c[0x4]; // 0x57c
-            source2sdk::entity2::CEntityIOOutput m_OnAllTrue; // 0x580            
-            source2sdk::entity2::CEntityIOOutput m_OnAllFalse; // 0x5a8            
-            source2sdk::entity2::CEntityIOOutput m_OnMixed; // 0x5d0            
+            char m_LogicBranchList[0x18]; // 0x570            
+            source2sdk::server::CLogicBranchList_LogicBranchListenerLastState_t m_eLastState; // 0x588            
+            uint8_t _pad058c[0x4]; // 0x58c
+            source2sdk::entity2::CEntityIOOutput m_OnAllTrue; // 0x590            
+            source2sdk::entity2::CEntityIOOutput m_OnAllFalse; // 0x5b8            
+            source2sdk::entity2::CEntityIOOutput m_OnMixed; // 0x5e0            
             
             // Datamap fields:
             // void InputTest; // 0x0
@@ -51,6 +51,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CLogicBranchList because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CLogicBranchList) == 0x5f8);
+        static_assert(sizeof(source2sdk::server::CLogicBranchList) == 0x608);
     };
 };

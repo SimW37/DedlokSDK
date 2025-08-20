@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe48
+        // Size: 0xe40
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EViscousChargedGunState m_ChargeState"
@@ -32,23 +32,23 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            source2sdk::client::EViscousChargedGunState m_ChargeState; // 0xba0            
+            source2sdk::client::EViscousChargedGunState m_ChargeState; // 0xb98            
             // metadata: MNetworkEnable
-            float m_nClipConsumed; // 0xba4            
+            float m_nClipConsumed; // 0xb9c            
             // metadata: MNetworkEnable
-            bool m_bIsCharging; // 0xba8            
+            bool m_bIsCharging; // 0xba0            
             // metadata: MNetworkEnable
-            bool m_bIsToggled; // 0xba9            
-            uint8_t _pad0baa[0x2]; // 0xbaa
-            source2sdk::client::ParticleIndex_t m_fxChargingParticle; // 0xbac            
-            uint8_t _pad0bb0[0x14]; // 0xbb0
-            source2sdk::entity2::GameTime_t m_flLastBulletConsumedTime; // 0xbc4            
-            uint8_t _pad0bc8[0x280];
+            bool m_bIsToggled; // 0xba1            
+            uint8_t _pad0ba2[0x2]; // 0xba2
+            source2sdk::client::ParticleIndex_t m_fxChargingParticle; // 0xba4            
+            uint8_t _pad0ba8[0x14]; // 0xba8
+            source2sdk::entity2::GameTime_t m_flLastBulletConsumedTime; // 0xbbc            
+            uint8_t _pad0bc0[0x280];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_ViscousWeapon_Alt because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ViscousWeapon_Alt) == 0xe48);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ViscousWeapon_Alt) == 0xe40);
     };
 };

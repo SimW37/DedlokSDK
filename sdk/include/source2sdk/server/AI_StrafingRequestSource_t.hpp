@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace server
     {
-        // Enumerator count: 7
+        // Enumerator count: 8
         // Alignment: 4
         // Size: 0x4
         enum class AI_StrafingRequestSource_t : std::uint32_t
@@ -25,6 +25,7 @@ namespace source2sdk
             eSchedule = 0x4,
             eDefault = 0x5,
             eCount = 0x6,
+            eNone = 0x6,
         };
     };
 };

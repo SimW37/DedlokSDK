@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1710
+        // Size: 0x17f8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,19 +27,25 @@ namespace source2sdk
         class CAbilityRestorativeGooVData : public source2sdk::client::CitadelAbilityVData
         {
         public:
-            // metadata: MPropertyGroupName "Visuals"
+            // metadata: MPropertyStartGroup "Visuals"
             // m_RestorativeGooParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RestorativeGooParticle;
-            char m_RestorativeGooParticle[0xe0]; // 0x1620            
-            // metadata: MPropertyGroupName "Modifiers"
+            char m_RestorativeGooParticle[0xe0]; // 0x1618            
+            // m_RestorativeGooSelfParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RestorativeGooSelfParticle;
+            char m_RestorativeGooSelfParticle[0xe0]; // 0x16f8            
+            // metadata: MPropertyStartGroup "Modifiers"
             // m_RestorativeGooModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_RestorativeGooModifier;
-            char m_RestorativeGooModifier[0x10]; // 0x1700            
+            char m_RestorativeGooModifier[0x10]; // 0x17d8            
+            // m_SelfCubeModelSwapModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SelfCubeModelSwapModifier;
+            char m_SelfCubeModelSwapModifier[0x10]; // 0x17e8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityRestorativeGooVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityRestorativeGooVData) == 0x1710);
+        static_assert(sizeof(source2sdk::client::CAbilityRestorativeGooVData) == 0x17f8);
     };
 };

@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x810
+        // Size: 0x848
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CUtlString m_targetCamera"
@@ -40,26 +40,26 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            CUtlString m_targetCamera; // 0x7f0            
+            CUtlString m_targetCamera; // 0x828            
             // metadata: MNetworkEnable
-            std::int32_t m_nResolutionEnum; // 0x7f8            
+            std::int32_t m_nResolutionEnum; // 0x830            
             // metadata: MNetworkEnable
-            bool m_bRenderShadows; // 0x7fc            
+            bool m_bRenderShadows; // 0x834            
             // metadata: MNetworkEnable
-            bool m_bUseUniqueColorTarget; // 0x7fd            
-            uint8_t _pad07fe[0x2]; // 0x7fe
+            bool m_bUseUniqueColorTarget; // 0x835            
+            uint8_t _pad0836[0x2]; // 0x836
             // metadata: MNetworkEnable
-            CUtlString m_brushModelName; // 0x800            
+            CUtlString m_brushModelName; // 0x838            
             // metadata: MNetworkEnable
             // m_hTargetCamera has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hTargetCamera;
-            char m_hTargetCamera[0x4]; // 0x808            
+            char m_hTargetCamera[0x4]; // 0x840            
             // metadata: MNetworkEnable
-            bool m_bEnabled; // 0x80c            
+            bool m_bEnabled; // 0x844            
             // metadata: MNetworkEnable
-            bool m_bDraw3DSkybox; // 0x80d            
-            bool m_bStartEnabled; // 0x80e            
-            uint8_t _pad080f[0x1];
+            bool m_bDraw3DSkybox; // 0x845            
+            bool m_bStartEnabled; // 0x846            
+            uint8_t _pad0847[0x1];
             
             // Datamap fields:
             // void InputToggle; // 0x0
@@ -71,6 +71,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CFuncMonitor because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFuncMonitor) == 0x810);
+        static_assert(sizeof(source2sdk::server::CFuncMonitor) == 0x848);
     };
 };

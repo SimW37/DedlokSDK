@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x830
+        // Size: 0x930
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,17 +29,17 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_InvisRevealedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisRevealedParticle;
-            char m_InvisRevealedParticle[0xe0]; // 0x660            
+            char m_InvisRevealedParticle[0xe0]; // 0x760            
             // m_AmbushParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmbushParticle;
-            char m_AmbushParticle[0xe0]; // 0x740            
+            char m_AmbushParticle[0xe0]; // 0x840            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strActivateAmbushSound; // 0x820            
+            CSoundEventName m_strActivateAmbushSound; // 0x920            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_CloakingDevice_Active_Ambush_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CModifier_CloakingDevice_Active_Ambush_VData) == 0x830);
+        static_assert(sizeof(source2sdk::client::CModifier_CloakingDevice_Active_Ambush_VData) == 0x930);
     };
 };

@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x19f0
+        // Size: 0x1a68
         // Has VTable
         #pragma pack(push, 1)
         class CNPC_PestilenceDrone : public source2sdk::server::CAI_CitadelNPC
         {
         public:
-            uint8_t _pad1990[0x60];
+            uint8_t _pad1a08[0x60];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CNPC_PestilenceDrone) == 0x19f0);
+        static_assert(sizeof(source2sdk::server::CNPC_PestilenceDrone) == 0x1a68);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf8
+        // Size: 0x110
         // Has VTable
         // Is Abstract
         #pragma pack(push, 1)
@@ -29,6 +29,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadelModifierAura) == 0xf8);
+        static_assert(sizeof(source2sdk::client::CCitadelModifierAura) == 0x110);
     };
 };

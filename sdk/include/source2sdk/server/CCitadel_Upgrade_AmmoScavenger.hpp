@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc30
+        // Size: 0xc28
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Upgrade_AmmoScavenger : public source2sdk::server::CCitadel_Item
@@ -32,13 +32,13 @@ namespace source2sdk
         public:
             // m_hLastOrbTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hLastOrbTarget;
-            char m_hLastOrbTarget[0x4]; // 0xba8            
-            uint8_t _pad0bac[0x84];
+            char m_hLastOrbTarget[0x4]; // 0xba0            
+            uint8_t _pad0ba4[0x84];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Upgrade_AmmoScavenger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Upgrade_AmmoScavenger) == 0xc30);
+        static_assert(sizeof(source2sdk::server::CCitadel_Upgrade_AmmoScavenger) == 0xc28);
     };
 };

@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf78
+        // Size: 0xf80
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "LockonTarget_t m_vecLockonTargets"
@@ -29,22 +29,22 @@ namespace source2sdk
         class CCitadelBaseLockonAbility : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0dc0[0x140]; // 0xdc0
+            uint8_t _pad0d88[0x180]; // 0xd88
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             // m_vecLockonTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_UtlVectorEmbeddedNetworkVar<source2sdk::client::LockonTarget_t> m_vecLockonTargets;
-            char m_vecLockonTargets[0x68]; // 0xf00            
+            char m_vecLockonTargets[0x68]; // 0xf08            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_LockOnStartTime; // 0xf68            
-            uint8_t _pad0f6c[0x4]; // 0xf6c
-            source2sdk::client::ParticleIndex_t m_nTargetingLightEffect; // 0xf70            
-            uint8_t _pad0f74[0x4];
+            source2sdk::entity2::GameTime_t m_LockOnStartTime; // 0xf70            
+            uint8_t _pad0f74[0x4]; // 0xf74
+            source2sdk::client::ParticleIndex_t m_nTargetingLightEffect; // 0xf78            
+            uint8_t _pad0f7c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelBaseLockonAbility because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelBaseLockonAbility) == 0xf78);
+        static_assert(sizeof(source2sdk::client::CCitadelBaseLockonAbility) == 0xf80);
     };
 };

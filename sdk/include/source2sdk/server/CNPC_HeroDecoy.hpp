@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x19d0
+        // Size: 0x1a48
         // Has VTable
         #pragma pack(push, 1)
         class CNPC_HeroDecoy : public source2sdk::server::CNPC_HeroCloneTrooper
         {
         public:
-            uint8_t _pad19b8[0x18];
+            uint8_t _pad1a30[0x18];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CNPC_HeroDecoy) == 0x19d0);
+        static_assert(sizeof(source2sdk::server::CNPC_HeroDecoy) == 0x1a48);
     };
 };

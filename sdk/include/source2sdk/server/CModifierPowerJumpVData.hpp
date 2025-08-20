@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x750
+        // Size: 0x850
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,17 +29,17 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_FloatParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FloatParticle;
-            char m_FloatParticle[0xe0]; // 0x660            
+            char m_FloatParticle[0xe0]; // 0x760            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flAirDrag; // 0x740            
-            float m_flVerticalCameraOffset; // 0x744            
-            float m_flVerticalCameraOffsetLerpTime; // 0x748            
-            float m_flVerticalCameraOffsetBias; // 0x74c            
+            float m_flAirDrag; // 0x840            
+            float m_flVerticalCameraOffset; // 0x844            
+            float m_flVerticalCameraOffsetLerpTime; // 0x848            
+            float m_flVerticalCameraOffsetBias; // 0x84c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierPowerJumpVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifierPowerJumpVData) == 0x750);
+        static_assert(sizeof(source2sdk::server::CModifierPowerJumpVData) == 0x850);
     };
 };

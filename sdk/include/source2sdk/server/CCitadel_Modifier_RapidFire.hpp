@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x248
+        // Size: 0x250
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_RapidFire : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x180]; // 0xc0
-            source2sdk::entity2::GameTime_t m_flNextAttackTime; // 0x240            
-            uint8_t _pad0244[0x4];
+            uint8_t _pad00c8[0x180]; // 0xc8
+            source2sdk::entity2::GameTime_t m_flNextAttackTime; // 0x248            
+            uint8_t _pad024c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_RapidFire because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_RapidFire) == 0x248);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_RapidFire) == 0x250);
     };
 };

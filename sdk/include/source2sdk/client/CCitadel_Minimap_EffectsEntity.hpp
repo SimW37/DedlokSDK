@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9a8
+        // Size: 0x9d0
         // Has VTable
         // 
         // static metadata: MEntityAllowsPortraitWorldSpawn
@@ -29,6 +29,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Minimap_EffectsEntity) == 0x9a8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Minimap_EffectsEntity) == 0x9d0);
     };
 };

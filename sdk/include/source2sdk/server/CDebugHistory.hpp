@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x3e94c8
+        // Size: 0x3e94d8
         // Has VTable
         #pragma pack(push, 1)
         class CDebugHistory : public source2sdk::server::CBaseEntity
         {
         public:
-            uint8_t _pad04e0[0x3e8040]; // 0x4e0
-            std::int32_t m_nNpcEvents; // 0x3e8520            
-            uint8_t _pad3e8524[0xfa4];
+            uint8_t _pad04f0[0x3e8040]; // 0x4f0
+            std::int32_t m_nNpcEvents; // 0x3e8530            
+            uint8_t _pad3e8534[0xfa4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CDebugHistory because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CDebugHistory) == 0x3e94c8);
+        static_assert(sizeof(source2sdk::server::CDebugHistory) == 0x3e94d8);
     };
 };

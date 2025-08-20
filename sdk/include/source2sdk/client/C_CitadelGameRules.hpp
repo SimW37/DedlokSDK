@@ -36,7 +36,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9ef0
+        // Size: 0x9ef8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bFreezePeriod"
@@ -63,6 +63,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "ECitadelMatchMode m_eMatchMode"
         // static metadata: MNetworkVarNames "ECitadelGameMode m_eGameMode"
         // static metadata: MNetworkVarNames "uint32 m_unSpectatorCount"
+        // static metadata: MNetworkVarNames "AccountID_t m_nHideoutOwner"
         // static metadata: MNetworkVarNames "CHandle<CCitadelTrooperMinimap> m_hTrooperMinimap"
         // static metadata: MNetworkVarNames "EHANDLE m_hCurrentHeroDrafterRebels"
         // static metadata: MNetworkVarNames "EHANDLE m_hCurrentHeroDrafterCombine"
@@ -137,71 +138,73 @@ namespace source2sdk
             // metadata: MNetworkEnable
             std::uint32_t m_unSpectatorCount; // 0xa0            
             // metadata: MNetworkEnable
+            std::uint32_t m_nHideoutOwner; // 0xa4            
+            // metadata: MNetworkEnable
             // m_hTrooperMinimap has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::CCitadelTrooperMinimap> m_hTrooperMinimap;
-            char m_hTrooperMinimap[0x4]; // 0xa4            
+            char m_hTrooperMinimap[0x4]; // 0xa8            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
             // metadata: MNetworkChangeCallback "playerDraftingChanged"
             // m_hCurrentHeroDrafterRebels has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hCurrentHeroDrafterRebels;
-            char m_hCurrentHeroDrafterRebels[0x4]; // 0xa8            
+            char m_hCurrentHeroDrafterRebels[0x4]; // 0xac            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
             // metadata: MNetworkChangeCallback "playerDraftingChanged"
             // m_hCurrentHeroDrafterCombine has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hCurrentHeroDrafterCombine;
-            char m_hCurrentHeroDrafterCombine[0x4]; // 0xac            
-            bool m_bDontUploadStats; // 0xb0            
-            uint8_t _pad00b1[0x3]; // 0xb1
+            char m_hCurrentHeroDrafterCombine[0x4]; // 0xb0            
+            bool m_bDontUploadStats; // 0xb4            
+            uint8_t _pad00b5[0x3]; // 0xb5
             // metadata: MNetworkEnable
-            std::int32_t m_iAmberRejuvCount; // 0xb4            
+            std::int32_t m_iAmberRejuvCount; // 0xb8            
             // metadata: MNetworkEnable
-            std::int32_t m_iSapphireRejuvCount; // 0xb8            
-            uint8_t _pad00bc[0x9d54]; // 0xbc
+            std::int32_t m_iSapphireRejuvCount; // 0xbc            
+            uint8_t _pad00c0[0x9d58]; // 0xc0
             // metadata: MNetworkEnable
-            bool m_bServerPaused; // 0x9e10            
-            uint8_t _pad9e11[0x3]; // 0x9e11
+            bool m_bServerPaused; // 0x9e18            
+            uint8_t _pad9e19[0x3]; // 0x9e19
             // metadata: MNetworkEnable
-            std::int32_t m_iPauseTeam; // 0x9e14            
+            std::int32_t m_iPauseTeam; // 0x9e1c            
             // metadata: MNetworkEnable
-            std::int32_t m_nMatchClockUpdateTick; // 0x9e18            
+            std::int32_t m_nMatchClockUpdateTick; // 0x9e20            
             // metadata: MNetworkEnable
-            float m_flMatchClockAtLastUpdate; // 0x9e1c            
-            double m_flPauseTime; // 0x9e20            
-            CPlayerSlot m_pausingPlayerId; // 0x9e28            
-            CPlayerSlot m_unpausingPlayerId; // 0x9e2c            
-            float m_fPauseRawTime; // 0x9e30            
-            float m_fPauseCurTime; // 0x9e34            
-            float m_fUnpauseRawTime; // 0x9e38            
-            float m_fUnpauseCurTime; // 0x9e3c            
-            uint8_t _pad9e40[0x50]; // 0x9e40
+            float m_flMatchClockAtLastUpdate; // 0x9e24            
+            double m_flPauseTime; // 0x9e28            
+            CPlayerSlot m_pausingPlayerId; // 0x9e30            
+            CPlayerSlot m_unpausingPlayerId; // 0x9e34            
+            float m_fPauseRawTime; // 0x9e38            
+            float m_fPauseCurTime; // 0x9e3c            
+            float m_fUnpauseRawTime; // 0x9e40            
+            float m_fUnpauseCurTime; // 0x9e44            
+            uint8_t _pad9e48[0x50]; // 0x9e48
             // metadata: MNetworkEnable
-            bool m_bRequiresReportCardDismissal; // 0x9e90            
-            uint8_t _pad9e91[0x3]; // 0x9e91
-            source2sdk::entity2::GameTime_t m_flPreGameWaitEndTime; // 0x9e94            
-            source2sdk::entity2::GameTime_t m_flReportCardDismissalWaitStart; // 0x9e98            
-            std::int32_t m_nLastPreGameCount; // 0x9e9c            
+            bool m_bRequiresReportCardDismissal; // 0x9e98            
+            uint8_t _pad9e99[0x3]; // 0x9e99
+            source2sdk::entity2::GameTime_t m_flPreGameWaitEndTime; // 0x9e9c            
+            source2sdk::entity2::GameTime_t m_flReportCardDismissalWaitStart; // 0x9ea0            
+            std::int32_t m_nLastPreGameCount; // 0x9ea4            
             // metadata: MNetworkEnable
-            std::int32_t m_eGGTeam; // 0x9ea0            
+            std::int32_t m_eGGTeam; // 0x9ea8            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flGGEndsAtTime; // 0x9ea4            
+            source2sdk::entity2::GameTime_t m_flGGEndsAtTime; // 0x9eac            
             // metadata: MNetworkEnable
-            source2sdk::client::MatchID_t m_unMatchID; // 0x9ea8            
+            source2sdk::client::MatchID_t m_unMatchID; // 0x9eb0            
             // metadata: MNetworkEnable
-            CUtlString m_sGameplayExperiment; // 0x9eb0            
-            std::int32_t m_nPlayerDeathEventID; // 0x9eb8            
-            std::int32_t m_nReplayChangedEvent; // 0x9ebc            
-            std::int32_t m_nGameOverEvent; // 0x9ec0            
-            uint8_t _pad9ec4[0x24]; // 0x9ec4
+            CUtlString m_sGameplayExperiment; // 0x9eb8            
+            std::int32_t m_nPlayerDeathEventID; // 0x9ec0            
+            std::int32_t m_nReplayChangedEvent; // 0x9ec4            
+            std::int32_t m_nGameOverEvent; // 0x9ec8            
+            uint8_t _pad9ecc[0x24]; // 0x9ecc
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flHeroDiedTime; // 0x9ee8            
-            uint8_t _pad9eec[0x4];
+            source2sdk::entity2::GameTime_t m_flHeroDiedTime; // 0x9ef0            
+            uint8_t _pad9ef4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_CitadelGameRules because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_CitadelGameRules) == 0x9ef0);
+        static_assert(sizeof(source2sdk::client::C_CitadelGameRules) == 0x9ef8);
     };
 };

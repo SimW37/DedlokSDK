@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1898
+        // Size: 0x1890
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,24 +30,24 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ReadyParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReadyParticle;
-            char m_ReadyParticle[0xe0]; // 0x16b0            
+            char m_ReadyParticle[0xe0]; // 0x16a8            
             // m_TracerAdditionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerAdditionParticle;
-            char m_TracerAdditionParticle[0xe0]; // 0x1790            
+            char m_TracerAdditionParticle[0xe0]; // 0x1788            
             // metadata: MPropertyGroupName "Gameplay"
-            float flShotDelay; // 0x1870            
-            uint8_t _pad1874[0x4]; // 0x1874
+            float flShotDelay; // 0x1868            
+            uint8_t _pad186c[0x4]; // 0x186c
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strOffCooldownSound; // 0x1878            
+            CSoundEventName m_strOffCooldownSound; // 0x1870            
             // metadata: MPropertyGroupName "Modifiers"
             // m_ProcNotificationModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ProcNotificationModifier;
-            char m_ProcNotificationModifier[0x10]; // 0x1888            
+            char m_ProcNotificationModifier[0x10]; // 0x1880            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_WeaponUpgrade_ExpressShot_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_WeaponUpgrade_ExpressShot_VData) == 0x1898);
+        static_assert(sizeof(source2sdk::server::CCitadel_WeaponUpgrade_ExpressShot_VData) == 0x1890);
     };
 };

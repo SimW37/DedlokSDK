@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7a0
+        // Size: 0x8a0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,22 +31,22 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_BuildUpModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadel_Modifier_Base_Buildup> m_BuildUpModifier;
-            char m_BuildUpModifier[0x10]; // 0x690            
+            char m_BuildUpModifier[0x10]; // 0x790            
             // m_DisarmProcModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DisarmProcModifier;
-            char m_DisarmProcModifier[0x10]; // 0x6a0            
+            char m_DisarmProcModifier[0x10]; // 0x7a0            
             // m_ImmunityModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ImmunityModifier;
-            char m_ImmunityModifier[0x10]; // 0x6b0            
+            char m_ImmunityModifier[0x10]; // 0x7b0            
             // metadata: MPropertyGroupName "Visuals"
             // m_TracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle;
-            char m_TracerParticle[0xe0]; // 0x6c0            
+            char m_TracerParticle[0xe0]; // 0x7c0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_DisarmProcWatcherVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_DisarmProcWatcherVData) == 0x7a0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_DisarmProcWatcherVData) == 0x8a0);
     };
 };

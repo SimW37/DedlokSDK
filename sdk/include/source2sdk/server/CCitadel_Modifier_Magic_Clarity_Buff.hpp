@@ -17,22 +17,22 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1d0
+        // Size: 0x1d8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Magic_Clarity_Buff : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0xc0]; // 0xc0
-            std::uint64_t m_iAbilityID; // 0x180            
-            uint8_t _pad0188[0x40]; // 0x188
-            bool m_bAbilityLocked; // 0x1c8            
-            uint8_t _pad01c9[0x7];
+            uint8_t _pad00c8[0xc0]; // 0xc8
+            std::uint64_t m_iAbilityID; // 0x188            
+            uint8_t _pad0190[0x40]; // 0x190
+            bool m_bAbilityLocked; // 0x1d0            
+            uint8_t _pad01d1[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Magic_Clarity_Buff because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Magic_Clarity_Buff) == 0x1d0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Magic_Clarity_Buff) == 0x1d8);
     };
 };

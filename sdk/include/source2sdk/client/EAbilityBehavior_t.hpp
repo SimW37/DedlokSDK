@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 71
+        // Enumerator count: 75
         // Alignment: 4
         // Size: 0x4
         enum class EAbilityBehavior_t : std::uint32_t
@@ -88,8 +88,12 @@ namespace source2sdk
             CITADEL_ABILITY_BEHAVIOR_CAN_CAST_WHILE_DEAD = 0x43,
             CITADEL_ABILITY_BEHAVIOR_CANCEL_ROPE_CLIMB_ON_CAST = 0x44,
             CITADEL_ABILITY_BEHAVIOR_INHIBIT_SOFT_CAMERA_COLLISION = 0x45,
+            CITADEL_ABILITY_BEHAVIOR_ALLOW_GUN_FIRE_AFTER_CAST = 0x46,
+            CITADEL_ABILITY_BEHAVIOR_ALTERNATIVE_WEAPON_USE_CAST = 0x47,
+            CITADEL_ABILITY_BEHAVIOR_CHARGES_ALWAYS_SHOW_PROGRESS = 0x48,
+            CITADEL_ABILITY_BEHAVIOR_HOLDS_AT_MAX_CHANNEL = 0x49,
             // MPropertySuppressEnumerator
-            CITADEL_ABILITY_BEHAVIOR_COUNT = 0x46,
+            CITADEL_ABILITY_BEHAVIOR_COUNT = 0x4a,
         };
     };
 };

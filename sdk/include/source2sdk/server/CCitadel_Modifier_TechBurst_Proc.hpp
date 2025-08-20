@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x2e0
+        // Size: 0x2e8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_TechBurst_Proc : public source2sdk::server::CCitadel_Modifier_BaseEventProc
@@ -32,17 +32,17 @@ namespace source2sdk
         public:
             // m_hProcAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hProcAbility;
-            char m_hProcAbility[0x4]; // 0x178            
-            uint8_t _pad017c[0x4]; // 0x17c
+            char m_hProcAbility[0x4]; // 0x180            
+            uint8_t _pad0184[0x4]; // 0x184
             // m_hitTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_hitTargets;
-            char m_hitTargets[0x18]; // 0x180            
-            uint8_t _pad0198[0x148];
+            char m_hitTargets[0x18]; // 0x188            
+            uint8_t _pad01a0[0x148];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_TechBurst_Proc because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TechBurst_Proc) == 0x2e0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TechBurst_Proc) == 0x2e8);
     };
 };

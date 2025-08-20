@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcc8
+        // Size: 0xcb0
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_bTakesDamage"
@@ -28,13 +28,13 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            Vector m_vecUnitStatusOffset; // 0xcb8            
-            uint8_t _pad0cc4[0x4];
+            Vector m_vecUnitStatusOffset; // 0xca0            
+            uint8_t _pad0cac[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_NPC_BaseDefenseSentry because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_NPC_BaseDefenseSentry) == 0xcc8);
+        static_assert(sizeof(source2sdk::client::C_NPC_BaseDefenseSentry) == 0xcb0);
     };
 };

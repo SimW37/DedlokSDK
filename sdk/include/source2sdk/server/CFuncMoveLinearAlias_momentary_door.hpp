@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x8f8
+        // Size: 0x930
         // Has VTable
         #pragma pack(push, 1)
         class CFuncMoveLinearAlias_momentary_door : public source2sdk::server::CFuncMoveLinear
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CFuncMoveLinearAlias_momentary_door) == 0x8f8);
+        static_assert(sizeof(source2sdk::server::CFuncMoveLinearAlias_momentary_door) == 0x930);
     };
 };

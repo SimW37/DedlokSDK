@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe50
+        // Size: 0xe18
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bFlying"
@@ -27,20 +27,20 @@ namespace source2sdk
         class CCitadel_Upgrade_MagicCarpet : public source2sdk::client::CCitadel_Item
         {
         public:
-            source2sdk::entity2::GameTime_t m_flFlyingStartTime; // 0xdc0            
-            uint8_t _pad0dc4[0x84]; // 0xdc4
+            source2sdk::entity2::GameTime_t m_flFlyingStartTime; // 0xd88            
+            uint8_t _pad0d8c[0x84]; // 0xd8c
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bFlying; // 0xe48            
+            bool m_bFlying; // 0xe10            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bSummoning; // 0xe49            
-            uint8_t _pad0e4a[0x6];
+            bool m_bSummoning; // 0xe11            
+            uint8_t _pad0e12[0x6];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Upgrade_MagicCarpet because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Upgrade_MagicCarpet) == 0xe50);
+        static_assert(sizeof(source2sdk::client::CCitadel_Upgrade_MagicCarpet) == 0xe18);
     };
 };

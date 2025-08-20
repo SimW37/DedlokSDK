@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x840
+        // Size: 0x940
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,22 +29,22 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x660            
+            char m_ExplodeParticle[0xe0]; // 0x760            
             // m_TracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle;
-            char m_TracerParticle[0xe0]; // 0x740            
+            char m_TracerParticle[0xe0]; // 0x840            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_ExplodeSound; // 0x820            
+            CSoundEventName m_ExplodeSound; // 0x920            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flAirDrag; // 0x830            
-            float m_flAirSpeed; // 0x834            
-            float m_flFallSpeed; // 0x838            
-            uint8_t _pad083c[0x4];
+            float m_flAirDrag; // 0x930            
+            float m_flAirSpeed; // 0x934            
+            float m_flFallSpeed; // 0x938            
+            uint8_t _pad093c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Operative_UmbrellaManeuver_AirHang_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifier_Operative_UmbrellaManeuver_AirHang_VData) == 0x840);
+        static_assert(sizeof(source2sdk::server::CModifier_Operative_UmbrellaManeuver_AirHang_VData) == 0x940);
     };
 };

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1888
+        // Size: 0x1880
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,20 +29,20 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_PulseParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PulseParticle;
-            char m_PulseParticle[0xe0]; // 0x16b0            
+            char m_PulseParticle[0xe0]; // 0x16a8            
             // m_TargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle;
-            char m_TargetParticle[0xe0]; // 0x1790            
+            char m_TargetParticle[0xe0]; // 0x1788            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strPulseTickSound; // 0x1870            
+            CSoundEventName m_strPulseTickSound; // 0x1868            
             // metadata: MPropertyStartGroup "Gameplay"
-            std::int32_t m_iMaxTargets; // 0x1880            
-            uint8_t _pad1884[0x4];
+            std::int32_t m_iMaxTargets; // 0x1878            
+            uint8_t _pad187c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item_TechDamagePulseVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Item_TechDamagePulseVData) == 0x1888);
+        static_assert(sizeof(source2sdk::client::CCitadel_Item_TechDamagePulseVData) == 0x1880);
     };
 };

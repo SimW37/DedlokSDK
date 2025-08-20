@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1b20
+        // Size: 0x1b98
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelPlayerBotNPCBrain : public source2sdk::server::CAI_CitadelNPC
         {
         public:
-            uint8_t _pad1990[0x190];
+            uint8_t _pad1a08[0x190];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelPlayerBotNPCBrain) == 0x1b20);
+        static_assert(sizeof(source2sdk::server::CCitadelPlayerBotNPCBrain) == 0x1b98);
     };
 };

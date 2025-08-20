@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x900
+        // Size: 0xa00
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,18 +29,18 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_EmpParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EmpParticle;
-            char m_EmpParticle[0xe0]; // 0x660            
+            char m_EmpParticle[0xe0]; // 0x760            
             // m_EmpPlayerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EmpPlayerParticle;
-            char m_EmpPlayerParticle[0xe0]; // 0x740            
+            char m_EmpPlayerParticle[0xe0]; // 0x840            
             // m_EmpStatusParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EmpStatusParticle;
-            char m_EmpStatusParticle[0xe0]; // 0x820            
+            char m_EmpStatusParticle[0xe0]; // 0x920            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_SilencedVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_SilencedVData) == 0x900);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_SilencedVData) == 0xa00);
     };
 };

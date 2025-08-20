@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe00
+        // Size: 0xdc8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_WeaponUpgrade_CooldownOnMiss : public source2sdk::client::CCitadel_Item
         {
         public:
-            uint8_t _pad0dc0[0x40];
+            uint8_t _pad0d88[0x40];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_WeaponUpgrade_CooldownOnMiss) == 0xe00);
+        static_assert(sizeof(source2sdk::client::CCitadel_WeaponUpgrade_CooldownOnMiss) == 0xdc8);
     };
 };

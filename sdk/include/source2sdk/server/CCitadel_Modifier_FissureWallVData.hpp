@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x860
+        // Size: 0x960
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,27 +30,27 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_DebrisParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebrisParticle;
-            char m_DebrisParticle[0xe0]; // 0x660            
+            char m_DebrisParticle[0xe0]; // 0x760            
             // m_SpikeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpikeParticle;
-            char m_SpikeParticle[0xe0]; // 0x740            
+            char m_SpikeParticle[0xe0]; // 0x840            
             // metadata: MPropertyGroupName "Sounds"
-            CSoundEventName m_WallSpawnSound; // 0x820            
+            CSoundEventName m_WallSpawnSound; // 0x920            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x830            
+            char m_DebuffModifier[0x10]; // 0x930            
             // m_EnemyVisionModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_EnemyVisionModifier;
-            char m_EnemyVisionModifier[0x10]; // 0x840            
+            char m_EnemyVisionModifier[0x10]; // 0x940            
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x850            
+            char m_SlowModifier[0x10]; // 0x950            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_FissureWallVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_FissureWallVData) == 0x860);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_FissureWallVData) == 0x960);
     };
 };

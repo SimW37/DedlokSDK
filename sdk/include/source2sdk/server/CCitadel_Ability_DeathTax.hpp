@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xce0
+        // Size: 0xcd8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_DeathTax : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x140];
+            uint8_t _pad0b98[0x140];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_DeathTax) == 0xce0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_DeathTax) == 0xcd8);
     };
 };

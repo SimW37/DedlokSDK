@@ -21,7 +21,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x208
+        // Size: 0x210
         // Has VTable
         #pragma pack(push, 1)
         class CAI_FacingServices : public source2sdk::client::CAI_Component
@@ -36,11 +36,13 @@ namespace source2sdk
             // m_vecChoreoEntityFacings has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::server::ChoreoEntityFacing_t> m_vecChoreoEntityFacings;
             char m_vecChoreoEntityFacings[0x18]; // 0x1f0            
+            bool m_bFailedTargetValidation; // 0x208            
+            uint8_t _pad0209[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAI_FacingServices because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAI_FacingServices) == 0x208);
+        static_assert(sizeof(source2sdk::server::CAI_FacingServices) == 0x210);
     };
 };

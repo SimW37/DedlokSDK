@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1a18
+        // Size: 0x1a90
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flForwardSpeed"
@@ -33,20 +33,20 @@ namespace source2sdk
         class CNPC_NanoRollermine : public source2sdk::server::CAI_CitadelNPC
         {
         public:
-            uint8_t _pad1990[0x38]; // 0x1990
+            uint8_t _pad1a08[0x38]; // 0x1a08
             // metadata: MNetworkEnable
-            float m_flForwardSpeed; // 0x19c8            
-            uint8_t _pad19cc[0x44]; // 0x19cc
+            float m_flForwardSpeed; // 0x1a40            
+            uint8_t _pad1a44[0x44]; // 0x1a44
             // metadata: MNetworkEnable
             // m_hOwnerPawn has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hOwnerPawn;
-            char m_hOwnerPawn[0x4]; // 0x1a10            
-            uint8_t _pad1a14[0x4];
+            char m_hOwnerPawn[0x4]; // 0x1a88            
+            uint8_t _pad1a8c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_NanoRollermine because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_NanoRollermine) == 0x1a18);
+        static_assert(sizeof(source2sdk::server::CNPC_NanoRollermine) == 0x1a90);
     };
 };

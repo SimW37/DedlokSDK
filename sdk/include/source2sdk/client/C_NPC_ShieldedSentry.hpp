@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe98
+        // Size: 0xe78
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelAbilityComponent::Storage_t m_CCitadelAbilityComponent"
@@ -32,18 +32,18 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
             // metadata: MNetworkAlias "CCitadelAbilityComponent"
             // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
-            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xcb8            
-            uint8_t _pad0e88[0x4]; // 0xe88
+            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xca0            
+            uint8_t _pad0e68[0x4]; // 0xe68
             // metadata: MNetworkEnable
-            float m_flAttackRange; // 0xe8c            
+            float m_flAttackRange; // 0xe6c            
             // metadata: MNetworkEnable
-            float m_flAimPitch; // 0xe90            
-            uint8_t _pad0e94[0x4];
+            float m_flAimPitch; // 0xe70            
+            uint8_t _pad0e74[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_NPC_ShieldedSentry because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_NPC_ShieldedSentry) == 0xe98);
+        static_assert(sizeof(source2sdk::client::C_NPC_ShieldedSentry) == 0xe78);
     };
 };

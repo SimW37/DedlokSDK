@@ -34,8 +34,8 @@ namespace source2sdk
             BotMatchMedium = 0xd,
             PrivateLobby = 0xe,
             RankedMatchmake = 0xf,
-            HeroLabsMatchmake = 0x10,
-            DashboardBuilds = 0x11,
+            DashboardBuilds = 0x10,
+            CalibrationMatch = 0x11,
         };
     };
 };

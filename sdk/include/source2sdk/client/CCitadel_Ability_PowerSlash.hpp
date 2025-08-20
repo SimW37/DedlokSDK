@@ -5,6 +5,13 @@
 #include <cstdint>
 #include "source2sdk/client/CCitadelBaseYamatoAbility.hpp"
 #include "source2sdk/client/ParticleIndex_t.hpp"
+namespace source2sdk
+{
+    namespace client
+    {
+        struct C_BaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -18,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x10e0
+        // Size: 0x10d8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_nPowerLevel"
@@ -26,17 +33,21 @@ namespace source2sdk
         class CCitadel_Ability_PowerSlash : public source2sdk::client::CCitadelBaseYamatoAbility
         {
         public:
-            uint8_t _pad0dc8[0xc]; // 0xdc8
+            uint8_t _pad0d90[0x20]; // 0xd90
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int32_t m_nPowerLevel; // 0xdd4            
-            source2sdk::client::ParticleIndex_t m_nCastParticle; // 0xdd8            
-            uint8_t _pad0ddc[0x304];
+            std::int32_t m_nPowerLevel; // 0xdb0            
+            uint8_t _pad0db4[0x4]; // 0xdb4
+            // m_vecHitTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_vecHitTargets;
+            char m_vecHitTargets[0x18]; // 0xdb8            
+            source2sdk::client::ParticleIndex_t m_nCastParticle; // 0xdd0            
+            uint8_t _pad0dd4[0x304];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_PowerSlash because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_PowerSlash) == 0x10e0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_PowerSlash) == 0x10d8);
     };
 };

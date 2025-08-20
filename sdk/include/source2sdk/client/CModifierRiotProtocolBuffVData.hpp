@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x830
+        // Size: 0x930
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,19 +30,19 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_LaserParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserParticle;
-            char m_LaserParticle[0xe0]; // 0x660            
+            char m_LaserParticle[0xe0]; // 0x760            
             // m_PulseHitEnemyParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PulseHitEnemyParticle;
-            char m_PulseHitEnemyParticle[0xe0]; // 0x740            
+            char m_PulseHitEnemyParticle[0xe0]; // 0x840            
             // metadata: MPropertyGroupName "Modifiers"
             // m_EnemyDebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_EnemyDebuffModifier;
-            char m_EnemyDebuffModifier[0x10]; // 0x820            
+            char m_EnemyDebuffModifier[0x10]; // 0x920            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierRiotProtocolBuffVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CModifierRiotProtocolBuffVData) == 0x830);
+        static_assert(sizeof(source2sdk::client::CModifierRiotProtocolBuffVData) == 0x930);
     };
 };

@@ -15,13 +15,12 @@ namespace source2sdk
 {
     namespace client
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xfb8
+        // Size: 0xfa0
         // Has VTable
         // 
-        // static metadata: MNetworkExcludeByName "m_flAnimTime"
         // static metadata: MNetworkExcludeByName "m_flexWeight"
         // static metadata: MNetworkExcludeByName "m_blinktoggle"
         // static metadata: MNetworkExcludeByUserGroup "m_flPoseParameter"
@@ -38,29 +37,29 @@ namespace source2sdk
         class C_BasePropDoor : public source2sdk::client::C_DynamicProp
         {
         public:
-            uint8_t _pad0f78[0x10]; // 0xf78
+            uint8_t _pad0f60[0x10]; // 0xf60
             // metadata: MNetworkEnable
-            source2sdk::client::DoorState_t m_eDoorState; // 0xf88            
-            bool m_modelChanged; // 0xf8c            
+            source2sdk::client::DoorState_t m_eDoorState; // 0xf70            
+            bool m_modelChanged; // 0xf74            
             // metadata: MNetworkEnable
-            bool m_bLocked; // 0xf8d            
+            bool m_bLocked; // 0xf75            
             // metadata: MNetworkEnable
-            bool m_bNoNPCs; // 0xf8e            
-            uint8_t _pad0f8f[0x1]; // 0xf8f
+            bool m_bNoNPCs; // 0xf76            
+            uint8_t _pad0f77[0x1]; // 0xf77
             // metadata: MNetworkEnable
-            Vector m_closedPosition; // 0xf90            
+            Vector m_closedPosition; // 0xf78            
             // metadata: MNetworkEnable
-            QAngle m_closedAngles; // 0xf9c            
+            QAngle m_closedAngles; // 0xf84            
             // metadata: MNetworkEnable
             // m_hMaster has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BasePropDoor> m_hMaster;
-            char m_hMaster[0x4]; // 0xfa8            
-            Vector m_vWhereToSetLightingOrigin; // 0xfac            
+            char m_hMaster[0x4]; // 0xf90            
+            Vector m_vWhereToSetLightingOrigin; // 0xf94            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_BasePropDoor because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_BasePropDoor) == 0xfb8);
+        static_assert(sizeof(source2sdk::client::C_BasePropDoor) == 0xfa0);
     };
 };

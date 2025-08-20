@@ -62,7 +62,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x5e0
+        // Size: 0x5e8
         // Has VTable
         // 
         // static metadata: MNetworkExcludeByName "m_bClientSideRagdoll"
@@ -107,6 +107,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "float32 m_flGravityScale"
         // static metadata: MNetworkVarNames "float32 m_flTimeScale"
         // static metadata: MNetworkVarNames "bool m_bAnimatedEveryTick"
+        // static metadata: MNetworkVarNames "bool m_bGravityDisabled"
         // static metadata: MNetworkVarNames "GameTime_t m_flNavIgnoreUntilTime"
         #pragma pack(push, 1)
         class C_BaseEntity : public source2sdk::entity2::CEntityInstance
@@ -268,7 +269,7 @@ namespace source2sdk
             // metadata: MNetworkEncoder "coord"
             float m_flElasticity; // 0x538            
             // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerExclusive"
+            // metadata: MNetworkChangeCallback "OnGravityUpdated"
             float m_flGravityScale; // 0x53c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
@@ -276,34 +277,40 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnInterpolationAmountChanged"
             bool m_bAnimatedEveryTick; // 0x544            
-            uint8_t _pad0545[0x3]; // 0x545
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "OnGravityUpdated"
+            bool m_bGravityDisabled; // 0x545            
+            uint8_t _pad0546[0x2]; // 0x546
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnNavIgnoreChanged"
             source2sdk::entity2::GameTime_t m_flNavIgnoreUntilTime; // 0x548            
             std::uint16_t m_hThink; // 0x54c            
             uint8_t _pad054e[0xa]; // 0x54e
             std::uint8_t m_fBBoxVisFlags; // 0x558            
-            bool m_bPredictable; // 0x559            
-            bool m_bRenderWithViewModels; // 0x55a            
-            uint8_t _pad055b[0x1]; // 0x55b
-            std::int32_t m_nFirstPredictableCommand; // 0x55c            
-            std::int32_t m_nLastPredictableCommand; // 0x560            
+            uint8_t _pad0559[0x3]; // 0x559
+            float m_flActualGravityScale; // 0x55c            
+            bool m_bGravityActuallyDisabled; // 0x560            
+            bool m_bPredictable; // 0x561            
+            bool m_bRenderWithViewModels; // 0x562            
+            uint8_t _pad0563[0x1]; // 0x563
+            std::int32_t m_nFirstPredictableCommand; // 0x564            
+            std::int32_t m_nLastPredictableCommand; // 0x568            
             // m_hOldMoveParent has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hOldMoveParent;
-            char m_hOldMoveParent[0x4]; // 0x564            
-            source2sdk::particleslib::CParticleProperty m_Particles; // 0x568            
-            uint8_t _pad0590[0x8]; // 0x590
-            QAngle m_vecAngVelocity; // 0x598            
-            std::int32_t m_DataChangeEventRef; // 0x5a4            
+            char m_hOldMoveParent[0x4]; // 0x56c            
+            source2sdk::particleslib::CParticleProperty m_Particles; // 0x570            
+            uint8_t _pad0598[0x8]; // 0x598
+            QAngle m_vecAngVelocity; // 0x5a0            
+            std::int32_t m_DataChangeEventRef; // 0x5ac            
             // m_dependencies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CEntityHandle> m_dependencies;
-            char m_dependencies[0x18]; // 0x5a8            
-            std::int32_t m_nCreationTick; // 0x5c0            
-            uint8_t _pad05c4[0x9]; // 0x5c4
-            bool m_bAnimTimeChanged; // 0x5cd            
-            bool m_bSimulationTimeChanged; // 0x5ce            
-            uint8_t _pad05cf[0x9]; // 0x5cf
-            CUtlString m_sUniqueHammerID; // 0x5d8            
+            char m_dependencies[0x18]; // 0x5b0            
+            std::int32_t m_nCreationTick; // 0x5c8            
+            uint8_t _pad05cc[0x9]; // 0x5cc
+            bool m_bAnimTimeChanged; // 0x5d5            
+            bool m_bSimulationTimeChanged; // 0x5d6            
+            uint8_t _pad05d7[0x9]; // 0x5d7
+            CUtlString m_sUniqueHammerID; // 0x5e0            
             
             // Datamap fields:
             // CUtlSymbolLarge m_iszPrivateVScripts; // 0x8
@@ -319,6 +326,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in C_BaseEntity because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_BaseEntity) == 0x5e0);
+        static_assert(sizeof(source2sdk::client::C_BaseEntity) == 0x5e8);
     };
 };

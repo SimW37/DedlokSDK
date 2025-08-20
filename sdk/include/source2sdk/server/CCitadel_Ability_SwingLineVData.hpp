@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1778
+        // Size: 0x1770
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,38 +30,38 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SwingModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SwingModifier;
-            char m_SwingModifier[0x10]; // 0x1620            
+            char m_SwingModifier[0x10]; // 0x1618            
             // metadata: MPropertyStartGroup "Visuals"
             // m_SwingAttachParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwingAttachParticle;
-            char m_SwingAttachParticle[0xe0]; // 0x1630            
+            char m_SwingAttachParticle[0xe0]; // 0x1628            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strDaggerHitSound; // 0x1710            
-            CSoundEventName m_strDaggerExplodeSound; // 0x1720            
+            CSoundEventName m_strDaggerHitSound; // 0x1708            
+            CSoundEventName m_strDaggerExplodeSound; // 0x1718            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flSwingStartDelay; // 0x1730            
-            float m_flSwingMaxDuration; // 0x1734            
-            float m_flMass; // 0x1738            
-            float m_flBodyForwardForce; // 0x173c            
-            float m_flCameraForwardForce; // 0x1740            
-            float m_flInputForce; // 0x1744            
-            float m_flPullForce; // 0x1748            
-            float m_flGravityForce; // 0x174c            
-            float m_flDampingConstant; // 0x1750            
-            float m_flIdealSpringLengthOverride; // 0x1754            
-            float m_flTensionSpringConstant; // 0x1758            
-            float m_flMaxSpringForce; // 0x175c            
-            float m_flMaxSpeed; // 0x1760            
-            float m_flWhiskerLength; // 0x1764            
-            float m_flWhiskerOffset; // 0x1768            
-            float m_flWhiskerForce; // 0x176c            
-            float m_flWhiskerPositionVerticalOffset; // 0x1770            
-            uint8_t _pad1774[0x4];
+            float m_flSwingStartDelay; // 0x1728            
+            float m_flSwingMaxDuration; // 0x172c            
+            float m_flMass; // 0x1730            
+            float m_flBodyForwardForce; // 0x1734            
+            float m_flCameraForwardForce; // 0x1738            
+            float m_flInputForce; // 0x173c            
+            float m_flPullForce; // 0x1740            
+            float m_flGravityForce; // 0x1744            
+            float m_flDampingConstant; // 0x1748            
+            float m_flIdealSpringLengthOverride; // 0x174c            
+            float m_flTensionSpringConstant; // 0x1750            
+            float m_flMaxSpringForce; // 0x1754            
+            float m_flMaxSpeed; // 0x1758            
+            float m_flWhiskerLength; // 0x175c            
+            float m_flWhiskerOffset; // 0x1760            
+            float m_flWhiskerForce; // 0x1764            
+            float m_flWhiskerPositionVerticalOffset; // 0x1768            
+            uint8_t _pad176c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_SwingLineVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_SwingLineVData) == 0x1778);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_SwingLineVData) == 0x1770);
     };
 };

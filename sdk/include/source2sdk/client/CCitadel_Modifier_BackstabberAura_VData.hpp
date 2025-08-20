@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x6d0
+        // Size: 0x7d0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,14 +29,14 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_GlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_GlowModifier;
-            char m_GlowModifier[0x10]; // 0x6b0            
+            char m_GlowModifier[0x10]; // 0x7b0            
             // metadata: MPropertyGroupName "Sounds"
-            CSoundEventName m_strDamageTickSound; // 0x6c0            
+            CSoundEventName m_strDamageTickSound; // 0x7c0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_BackstabberAura_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_BackstabberAura_VData) == 0x6d0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_BackstabberAura_VData) == 0x7d0);
     };
 };

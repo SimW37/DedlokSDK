@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1740
+        // Size: 0x1738
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,24 +30,24 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x1620            
+            char m_ExplodeParticle[0xe0]; // 0x1618            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_ExplodeSound; // 0x1700            
+            CSoundEventName m_ExplodeSound; // 0x16f8            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_ProgressBarModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ProgressBarModifier;
-            char m_ProgressBarModifier[0x10]; // 0x1710            
+            char m_ProgressBarModifier[0x10]; // 0x1708            
             // m_FireBombModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_FireBombModifier;
-            char m_FireBombModifier[0x10]; // 0x1720            
+            char m_FireBombModifier[0x10]; // 0x1718            
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x1730            
+            char m_DebuffModifier[0x10]; // 0x1728            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_FireBombVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_FireBombVData) == 0x1740);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_FireBombVData) == 0x1738);
     };
 };

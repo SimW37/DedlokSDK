@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x6a8
+        // Size: 0x7a8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,14 +26,14 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flMomentumMaintained; // 0x660            
-            uint8_t _pad0664[0x4]; // 0x664
-            CPiecewiseCurve m_flVelocityStrengthCurve; // 0x668            
+            float m_flMomentumMaintained; // 0x760            
+            uint8_t _pad0764[0x4]; // 0x764
+            CPiecewiseCurve m_flVelocityStrengthCurve; // 0x768            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_PriestKnockbackVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_PriestKnockbackVData) == 0x6a8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_PriestKnockbackVData) == 0x7a8);
     };
 };

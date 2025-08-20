@@ -25,25 +25,25 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x428
+        // Size: 0x430
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_RestorativeGoo : public source2sdk::server::CCitadelModifier
         {
         public:
-            source2sdk::entity2::GameTime_t m_flEarliestBreakoutTime; // 0xc0            
-            float m_flTotalPendingHeal; // 0xc4            
-            uint8_t _pad00c8[0x340]; // 0xc8
+            source2sdk::entity2::GameTime_t m_flEarliestBreakoutTime; // 0xc8            
+            float m_flTotalPendingHeal; // 0xcc            
+            uint8_t _pad00d0[0x340]; // 0xd0
             // m_hGooCube has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadel_RestorativeGooCube> m_hGooCube;
-            char m_hGooCube[0x4]; // 0x408            
-            float m_flBreakoutPercentage; // 0x40c            
-            uint8_t _pad0410[0x18];
+            char m_hGooCube[0x4]; // 0x410            
+            float m_flBreakoutPercentage; // 0x414            
+            uint8_t _pad0418[0x18];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_RestorativeGoo because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_RestorativeGoo) == 0x428);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_RestorativeGoo) == 0x430);
     };
 };

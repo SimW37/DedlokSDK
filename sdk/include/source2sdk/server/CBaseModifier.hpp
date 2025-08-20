@@ -35,7 +35,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0x88
+        // Size: 0x90
         // Has VTable
         // Is Abstract
         #pragma pack(push, 1)
@@ -54,26 +54,30 @@ namespace source2sdk
             // CHandle<source2sdk::server::CBaseEntity> m_hAbility;
             char m_hAbility[0x4]; // 0x3c            
             source2sdk::server::CModifierHandleBase m_hAuraProvider; // 0x40            
-            source2sdk::client::ModifierQueuedRefreshHandle_t m_nQueuedModifierRefreshHandle; // 0x58            
-            std::uint8_t m_iAttributes; // 0x5a            
-            std::uint8_t m_iTeam; // 0x5b            
-            std::int16_t m_iStackCount; // 0x5c            
-            std::int16_t m_iMaxStackCount; // 0x5e            
+            bool m_bInAuraRange; // 0x58            
+            uint8_t _pad0059[0x1]; // 0x59
+            source2sdk::client::ModifierQueuedRefreshHandle_t m_nQueuedModifierRefreshHandle; // 0x5a            
+            CUtlStringToken m_nAbilitySubclassID; // 0x5c            
+            std::uint8_t m_iAttributes; // 0x60            
+            std::uint8_t m_iTeam; // 0x61            
+            std::int16_t m_iStackCount; // 0x62            
+            std::int16_t m_iMaxStackCount; // 0x64            
+            uint8_t _pad0066[0x2]; // 0x66
             // m_pVecStackDecayTimes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::entity2::GameTime_t>* m_pVecStackDecayTimes;
-            char m_pVecStackDecayTimes[0x8]; // 0x60            
-            std::uint8_t m_eDestroyReason; // 0x68            
-            bool m_bDisabled; // 0x69            
-            bool m_bSuppressSendModifier; // 0x6a            
-            uint8_t _pad006b[0x1]; // 0x6b
-            float m_flThinkInterval; // 0x6c            
-            source2sdk::entity2::GameTime_t m_flThinkIntervalStartTime; // 0x70            
-            float m_flTimeScale; // 0x74            
+            char m_pVecStackDecayTimes[0x8]; // 0x68            
+            std::uint8_t m_eDestroyReason; // 0x70            
+            bool m_bDisabled; // 0x71            
+            bool m_bSuppressSendModifier; // 0x72            
+            uint8_t _pad0073[0x1]; // 0x73
+            float m_flThinkInterval; // 0x74            
+            source2sdk::entity2::GameTime_t m_flThinkIntervalStartTime; // 0x78            
+            float m_flTimeScale; // 0x7c            
             // m_pVecTrackedObjects has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::IModifierTrackedObject*>* m_pVecTrackedObjects;
-            char m_pVecTrackedObjects[0x8]; // 0x78            
-            source2sdk::client::ModifierRuntimeHandle_t m_hModifierListHandle; // 0x80            
-            std::int32_t m_iStringIndex; // 0x84            
+            char m_pVecTrackedObjects[0x8]; // 0x80            
+            source2sdk::client::ModifierRuntimeHandle_t m_hModifierListHandle; // 0x88            
+            std::int32_t m_iStringIndex; // 0x8c            
             
             // Datamap fields:
             // void m_pModifierProp; // 0x20
@@ -88,22 +92,24 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::server::CBaseModifier, m_hCaster) == 0x38);
         static_assert(offsetof(source2sdk::server::CBaseModifier, m_hAbility) == 0x3c);
         static_assert(offsetof(source2sdk::server::CBaseModifier, m_hAuraProvider) == 0x40);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_nQueuedModifierRefreshHandle) == 0x58);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_iAttributes) == 0x5a);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_iTeam) == 0x5b);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_iStackCount) == 0x5c);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_iMaxStackCount) == 0x5e);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_pVecStackDecayTimes) == 0x60);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_eDestroyReason) == 0x68);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_bDisabled) == 0x69);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_bSuppressSendModifier) == 0x6a);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_flThinkInterval) == 0x6c);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_flThinkIntervalStartTime) == 0x70);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_flTimeScale) == 0x74);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_pVecTrackedObjects) == 0x78);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_hModifierListHandle) == 0x80);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_iStringIndex) == 0x84);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_bInAuraRange) == 0x58);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_nQueuedModifierRefreshHandle) == 0x5a);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_nAbilitySubclassID) == 0x5c);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_iAttributes) == 0x60);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_iTeam) == 0x61);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_iStackCount) == 0x62);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_iMaxStackCount) == 0x64);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_pVecStackDecayTimes) == 0x68);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_eDestroyReason) == 0x70);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_bDisabled) == 0x71);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_bSuppressSendModifier) == 0x72);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_flThinkInterval) == 0x74);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_flThinkIntervalStartTime) == 0x78);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_flTimeScale) == 0x7c);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_pVecTrackedObjects) == 0x80);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_hModifierListHandle) == 0x88);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_iStringIndex) == 0x8c);
         
-        static_assert(sizeof(source2sdk::server::CBaseModifier) == 0x88);
+        static_assert(sizeof(source2sdk::server::CBaseModifier) == 0x90);
     };
 };

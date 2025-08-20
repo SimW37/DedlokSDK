@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x928
+        // Size: 0xa28
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,31 +29,31 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_InvisLoopParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisLoopParticle;
-            char m_InvisLoopParticle[0xe0]; // 0x660            
+            char m_InvisLoopParticle[0xe0]; // 0x760            
             // m_InvisDetectRadiusParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisDetectRadiusParticle;
-            char m_InvisDetectRadiusParticle[0xe0]; // 0x740            
+            char m_InvisDetectRadiusParticle[0xe0]; // 0x840            
             // m_InvisRevealedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_InvisRevealedParticle;
-            char m_InvisRevealedParticle[0xe0]; // 0x820            
-            float m_flDesatFactor; // 0x900            
-            uint8_t _pad0904[0x4]; // 0x904
+            char m_InvisRevealedParticle[0xe0]; // 0x920            
+            float m_flDesatFactor; // 0xa00            
+            uint8_t _pad0a04[0x4]; // 0xa04
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strInvisRevealedSound; // 0x908            
+            CSoundEventName m_strInvisRevealedSound; // 0xa08            
             // metadata: MPropertyStartGroup "Behavior"
-            bool m_bFadeInsteadOfRemoveOnBulletFire; // 0x918            
-            bool m_bFadeInsteadOfRemoveOnAbilityUse; // 0x919            
-            bool m_bBreakOnItemUse; // 0x91a            
+            bool m_bFadeInsteadOfRemoveOnBulletFire; // 0xa18            
+            bool m_bFadeInsteadOfRemoveOnAbilityUse; // 0xa19            
+            bool m_bBreakOnItemUse; // 0xa1a            
             // metadata: MPropertyDescription "Fade from hidden to fully visible as invis is about to expire. Does not work with Aura applied invis, since that has no duration."
-            bool m_bFadeToVisibleAtEndOfDuration; // 0x91b            
-            float m_flMinCloak; // 0x91c            
-            float m_flMaxCloak; // 0x920            
-            uint8_t _pad0924[0x4];
+            bool m_bFadeToVisibleAtEndOfDuration; // 0xa1b            
+            float m_flMinCloak; // 0xa1c            
+            float m_flMaxCloak; // 0xa20            
+            uint8_t _pad0a24[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_InvisVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_InvisVData) == 0x928);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_InvisVData) == 0xa28);
     };
 };

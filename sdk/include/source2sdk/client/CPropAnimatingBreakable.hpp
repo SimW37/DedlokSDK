@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd40
+        // Size: 0xd28
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_iMaxHealth"
@@ -28,10 +28,10 @@ namespace source2sdk
         class CPropAnimatingBreakable : public source2sdk::client::CBaseAnimGraph
         {
         public:
-            source2sdk::client::CBreakableStageHelper m_stages; // 0xcb0            
-            source2sdk::entity2::CEntityIOOutput m_OnTakeDamage; // 0xcc8            
-            source2sdk::entity2::CEntityIOOutput m_OnFinalBreak; // 0xcf0            
-            source2sdk::entity2::CEntityIOOutput m_OnStageAdvanced; // 0xd18            
+            source2sdk::client::CBreakableStageHelper m_stages; // 0xc98            
+            source2sdk::entity2::CEntityIOOutput m_OnTakeDamage; // 0xcb0            
+            source2sdk::entity2::CEntityIOOutput m_OnFinalBreak; // 0xcd8            
+            source2sdk::entity2::CEntityIOOutput m_OnStageAdvanced; // 0xd00            
             
             // Datamap fields:
             // void InputNextBreakStage; // 0x0
@@ -40,6 +40,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPropAnimatingBreakable because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CPropAnimatingBreakable) == 0xd40);
+        static_assert(sizeof(source2sdk::client::CPropAnimatingBreakable) == 0xd28);
     };
 };

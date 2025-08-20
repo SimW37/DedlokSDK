@@ -24,20 +24,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x510
+        // Size: 0x520
         // Has VTable
         #pragma pack(push, 1)
         class CPointProximitySensor : public source2sdk::server::CPointEntity
         {
         public:
-            bool m_bDisabled; // 0x4e0            
-            uint8_t _pad04e1[0x3]; // 0x4e1
+            bool m_bDisabled; // 0x4f0            
+            uint8_t _pad04f1[0x3]; // 0x4f1
             // m_hTargetEntity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hTargetEntity;
-            char m_hTargetEntity[0x4]; // 0x4e4            
+            char m_hTargetEntity[0x4]; // 0x4f4            
             // m_Distance has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<float> m_Distance;
-            char m_Distance[0x28]; // 0x4e8            
+            char m_Distance[0x28]; // 0x4f8            
             
             // Datamap fields:
             // void InputEnable; // 0x0
@@ -49,6 +49,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPointProximitySensor because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPointProximitySensor) == 0x510);
+        static_assert(sizeof(source2sdk::server::CPointProximitySensor) == 0x520);
     };
 };

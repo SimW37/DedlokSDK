@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x870
+        // Size: 0x970
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,22 +30,22 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_SwingParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwingParticle;
-            char m_SwingParticle[0xe0]; // 0x690            
+            char m_SwingParticle[0xe0]; // 0x790            
             // m_HitParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle;
-            char m_HitParticle[0xe0]; // 0x770            
+            char m_HitParticle[0xe0]; // 0x870            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_ReloadVisualModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ReloadVisualModifier;
-            char m_ReloadVisualModifier[0x10]; // 0x850            
+            char m_ReloadVisualModifier[0x10]; // 0x950            
             // m_AmmoAddedVisualModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_AmmoAddedVisualModifier;
-            char m_AmmoAddedVisualModifier[0x10]; // 0x860            
+            char m_AmmoAddedVisualModifier[0x10]; // 0x960            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_MeleeCharge_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_MeleeCharge_VData) == 0x870);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_MeleeCharge_VData) == 0x970);
     };
 };

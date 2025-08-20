@@ -32,7 +32,9 @@ namespace source2sdk
             // CUtlLeanVectorFixedGrowable<std::uint8_t,5> m_optionWeights;
             char m_optionWeights[0x10]; // 0x28            
             std::int16_t m_parameterNodeIdx; // 0x38            
-            uint8_t _pad003a[0x6];
+            bool m_bIgnoreInvalidOptions; // 0x3a            
+            bool m_bHasWeightsSet; // 0x3b            
+            uint8_t _pad003c[0x4];
         };
         #pragma pack(pop)
         

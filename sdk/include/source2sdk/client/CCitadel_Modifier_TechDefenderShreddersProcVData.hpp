@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x780
+        // Size: 0x880
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,16 +30,16 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_TechDebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_TechDebuffModifier;
-            char m_TechDebuffModifier[0x10]; // 0x690            
+            char m_TechDebuffModifier[0x10]; // 0x790            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x6a0            
+            char m_ImpactParticle[0xe0]; // 0x7a0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_TechDefenderShreddersProcVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_TechDefenderShreddersProcVData) == 0x780);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_TechDefenderShreddersProcVData) == 0x880);
     };
 };

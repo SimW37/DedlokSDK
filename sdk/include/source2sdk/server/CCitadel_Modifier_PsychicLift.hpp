@@ -17,21 +17,21 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x158
+        // Size: 0x160
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_PsychicLift : public source2sdk::server::CCitadel_Modifier_Stunned
         {
         public:
-            uint8_t _pad00c8[0x80]; // 0xc8
-            Vector m_vecFloatDest; // 0x148            
-            bool m_bImpacted; // 0x154            
-            uint8_t _pad0155[0x3];
+            uint8_t _pad00d0[0x80]; // 0xd0
+            Vector m_vecFloatDest; // 0x150            
+            bool m_bImpacted; // 0x15c            
+            uint8_t _pad015d[0x3];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_PsychicLift because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_PsychicLift) == 0x158);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_PsychicLift) == 0x160);
     };
 };

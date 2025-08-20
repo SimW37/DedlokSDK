@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9b8
+        // Size: 0x9e0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float32 m_flLightScale"
@@ -27,15 +27,15 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            float m_flLightScale; // 0x9a8            
+            float m_flLightScale; // 0x9d0            
             // metadata: MNetworkEnable
-            float m_Radius; // 0x9ac            
-            uint8_t _pad09b0[0x8];
+            float m_Radius; // 0x9d4            
+            uint8_t _pad09d8[0x8];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_SpotlightEnd because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_SpotlightEnd) == 0x9b8);
+        static_assert(sizeof(source2sdk::client::C_SpotlightEnd) == 0x9e0);
     };
 };

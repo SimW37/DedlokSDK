@@ -14,8 +14,8 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
         // Size: 0xb00
         // Has VTable
@@ -23,7 +23,7 @@ namespace source2sdk
         class CInfoTrooperNeutralMovementNode : public source2sdk::server::CBaseProp
         {
         public:
-            uint8_t _pad0af8[0x8];
+            uint8_t _pad0af0[0x10];
             // No schema binary for binding
         };
         #pragma pack(pop)

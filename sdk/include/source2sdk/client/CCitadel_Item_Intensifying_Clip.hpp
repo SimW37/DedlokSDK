@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe08
+        // Size: 0xdd0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Item_Intensifying_Clip : public source2sdk::client::CCitadel_Item
         {
         public:
-            uint8_t _pad0dc0[0x40]; // 0xdc0
-            float m_flSpinUpTime; // 0xe00            
-            uint8_t _pad0e04[0x4];
+            uint8_t _pad0d88[0x40]; // 0xd88
+            float m_flSpinUpTime; // 0xdc8            
+            uint8_t _pad0dcc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item_Intensifying_Clip because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Item_Intensifying_Clip) == 0xe08);
+        static_assert(sizeof(source2sdk::client::CCitadel_Item_Intensifying_Clip) == 0xdd0);
     };
 };

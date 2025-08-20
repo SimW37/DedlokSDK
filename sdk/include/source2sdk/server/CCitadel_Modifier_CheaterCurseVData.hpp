@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x748
+        // Size: 0x848
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_CursedModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_CursedModel;
-            char m_CursedModel[0xe0]; // 0x660            
+            char m_CursedModel[0xe0]; // 0x760            
             // metadata: MPropertyStartGroup "+Properties"
-            float m_flModelScale; // 0x740            
-            uint8_t _pad0744[0x4];
+            float m_flModelScale; // 0x840            
+            uint8_t _pad0844[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_CheaterCurseVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_CheaterCurseVData) == 0x748);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_CheaterCurseVData) == 0x848);
     };
 };

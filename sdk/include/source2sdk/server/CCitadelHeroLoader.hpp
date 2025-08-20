@@ -24,22 +24,22 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x4f0
+        // Size: 0x500
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelHeroLoader : public source2sdk::server::CBaseEntity
         {
         public:
-            CUtlSymbolLarge m_hero; // 0x4e0            
-            std::int32_t m_nLoadSeq; // 0x4e8            
+            CUtlSymbolLarge m_hero; // 0x4f0            
+            std::int32_t m_nLoadSeq; // 0x4f8            
             // m_hOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hOwner;
-            char m_hOwner[0x4]; // 0x4ec            
+            char m_hOwner[0x4]; // 0x4fc            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelHeroLoader because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelHeroLoader) == 0x4f0);
+        static_assert(sizeof(source2sdk::server::CCitadelHeroLoader) == 0x500);
     };
 };

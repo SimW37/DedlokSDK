@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7d8
+        // Size: 0x810
         // Has VTable
         #pragma pack(push, 1)
         class CPlatTrigger : public source2sdk::server::CBaseModelEntity
@@ -32,13 +32,13 @@ namespace source2sdk
         public:
             // m_pPlatform has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CFuncPlat> m_pPlatform;
-            char m_pPlatform[0x4]; // 0x7d0            
-            uint8_t _pad07d4[0x4];
+            char m_pPlatform[0x4]; // 0x808            
+            uint8_t _pad080c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CPlatTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPlatTrigger) == 0x7d8);
+        static_assert(sizeof(source2sdk::server::CPlatTrigger) == 0x810);
     };
 };

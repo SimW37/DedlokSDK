@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7d8
+        // Size: 0x810
         // Has VTable
         #pragma pack(push, 1)
         class CFuncWall : public source2sdk::server::CBaseModelEntity
         {
         public:
-            std::int32_t m_nState; // 0x7d0            
-            uint8_t _pad07d4[0x4];
+            std::int32_t m_nState; // 0x808            
+            uint8_t _pad080c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CFuncWall because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFuncWall) == 0x7d8);
+        static_assert(sizeof(source2sdk::server::CFuncWall) == 0x810);
     };
 };

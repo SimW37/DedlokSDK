@@ -25,7 +25,7 @@ namespace source2sdk
         struct PerSurfaceImpactEffects_t
         {
         public:
-            CUtlString m_strDecal; // 0x0            
+            CGlobalSymbol m_strDecal; // 0x0            
             // m_strParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strParticle;
             char m_strParticle[0xe0]; // 0x8            

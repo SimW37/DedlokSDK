@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x890
+        // Size: 0x990
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,12 +29,12 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_TechShieldModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_TechShieldModifier;
-            char m_TechShieldModifier[0x10]; // 0x880            
+            char m_TechShieldModifier[0x10]; // 0x980            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Galvanic_Storm_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Galvanic_Storm_VData) == 0x890);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Galvanic_Storm_VData) == 0x990);
     };
 };

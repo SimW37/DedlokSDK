@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x6c0
+        // Size: 0x7c0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,23 +26,23 @@ namespace source2sdk
         class CCitadel_Modifier_ApplyDebuff_ProcVData : public source2sdk::server::CCitadel_Modifier_BaseEventProcVData
         {
         public:
-            bool m_bUseNonEmbedded; // 0x690            
-            uint8_t _pad0691[0x7]; // 0x691
+            bool m_bUseNonEmbedded; // 0x790            
+            uint8_t _pad0791[0x7]; // 0x791
             // metadata: MPropertyGroupName "Time"
             // metadata: MPropertyDescription "If this is set, the modifier will use the value from this AbilityProperty as the duration, instead of AbilityDuration."
-            CUtlString m_DurationAbilityPropOverride; // 0x698            
+            CUtlString m_DurationAbilityPropOverride; // 0x798            
             // metadata: MPropertyGroupName "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x6a0            
+            char m_DebuffModifier[0x10]; // 0x7a0            
             // m_NonEmbeddedModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CSubclassName<2> m_NonEmbeddedModifier;
-            char m_NonEmbeddedModifier[0x10]; // 0x6b0            
+            char m_NonEmbeddedModifier[0x10]; // 0x7b0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_ApplyDebuff_ProcVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ApplyDebuff_ProcVData) == 0x6c0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ApplyDebuff_ProcVData) == 0x7c0);
     };
 };

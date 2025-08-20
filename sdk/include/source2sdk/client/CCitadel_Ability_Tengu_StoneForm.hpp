@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xfe0
+        // Size: 0xfa8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_flStartTime"
@@ -32,33 +32,33 @@ namespace source2sdk
         class CCitadel_Ability_Tengu_StoneForm : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0dc0[0x208]; // 0xdc0
+            uint8_t _pad0d88[0x208]; // 0xd88
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flStartTime; // 0xfc8            
+            source2sdk::entity2::GameTime_t m_flStartTime; // 0xf90            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flLandedTime; // 0xfcc            
+            source2sdk::entity2::GameTime_t m_flLandedTime; // 0xf94            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bLanded; // 0xfd0            
+            bool m_bLanded; // 0xf98            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bFalling; // 0xfd1            
+            bool m_bFalling; // 0xf99            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bInStoneForm; // 0xfd2            
-            uint8_t _pad0fd3[0x1]; // 0xfd3
+            bool m_bInStoneForm; // 0xf9a            
+            uint8_t _pad0f9b[0x1]; // 0xf9b
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            float m_flStartHeight; // 0xfd4            
-            source2sdk::client::ParticleIndex_t m_nStoneFormEffect; // 0xfd8            
-            uint8_t _pad0fdc[0x4];
+            float m_flStartHeight; // 0xf9c            
+            source2sdk::client::ParticleIndex_t m_nStoneFormEffect; // 0xfa0            
+            uint8_t _pad0fa4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Tengu_StoneForm because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Tengu_StoneForm) == 0xfe0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Tengu_StoneForm) == 0xfa8);
     };
 };

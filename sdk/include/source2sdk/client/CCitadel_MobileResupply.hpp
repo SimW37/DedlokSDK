@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcc0
+        // Size: 0xca8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CHandle< CCitadelBaseAbility> m_hAbility"
@@ -36,15 +36,15 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // m_hAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_CitadelBaseAbility> m_hAbility;
-            char m_hAbility[0x4]; // 0xcb8            
+            char m_hAbility[0x4]; // 0xca0            
             // metadata: MNetworkEnable
-            bool m_bFloating; // 0xcbc            
-            uint8_t _pad0cbd[0x3];
+            bool m_bFloating; // 0xca4            
+            uint8_t _pad0ca5[0x3];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_MobileResupply because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_MobileResupply) == 0xcc0);
+        static_assert(sizeof(source2sdk::client::CCitadel_MobileResupply) == 0xca8);
     };
 };

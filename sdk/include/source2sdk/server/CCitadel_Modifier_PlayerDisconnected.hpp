@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x59e0
+        // Size: 0x59e8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_PlayerDisconnected : public source2sdk::server::CCitadelModifier
         {
         public:
-            source2sdk::entity2::GameTime_t m_flTimePathUpdated; // 0xc0            
-            uint8_t _pad00c4[0x591c];
+            source2sdk::entity2::GameTime_t m_flTimePathUpdated; // 0xc8            
+            uint8_t _pad00cc[0x591c];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_PlayerDisconnected because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_PlayerDisconnected) == 0x59e0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_PlayerDisconnected) == 0x59e8);
     };
 };

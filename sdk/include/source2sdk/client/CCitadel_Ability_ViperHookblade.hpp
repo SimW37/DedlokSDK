@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1030
+        // Size: 0xff8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_ViperHookblade : public source2sdk::client::C_CitadelBaseAbility
@@ -32,16 +32,16 @@ namespace source2sdk
         public:
             // m_vecOutgoingHitList has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_vecOutgoingHitList;
-            char m_vecOutgoingHitList[0x18]; // 0xdc0            
+            char m_vecOutgoingHitList[0x18]; // 0xd88            
             // m_vecReturningHitList has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_vecReturningHitList;
-            char m_vecReturningHitList[0x18]; // 0xdd8            
-            uint8_t _pad0df0[0x240];
+            char m_vecReturningHitList[0x18]; // 0xda0            
+            uint8_t _pad0db8[0x240];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_ViperHookblade because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_ViperHookblade) == 0x1030);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_ViperHookblade) == 0xff8);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x30
+        // Size: 0x50
         // Has VTable
         #pragma pack(push, 1)
         class CNmZeroPoseTask : public source2sdk::animlib::CNmPoseTask
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::animlib::CNmZeroPoseTask) == 0x30);
+        static_assert(sizeof(source2sdk::animlib::CNmZeroPoseTask) == 0x50);
     };
 };

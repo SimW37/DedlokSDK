@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x840
+        // Size: 0x940
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,18 +29,18 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ShivOnlyDeathStatus has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShivOnlyDeathStatus;
-            char m_ShivOnlyDeathStatus[0xe0]; // 0x660            
+            char m_ShivOnlyDeathStatus[0xe0]; // 0x760            
             // m_ShivOnlyDeathTrail has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShivOnlyDeathTrail;
-            char m_ShivOnlyDeathTrail[0xe0]; // 0x740            
+            char m_ShivOnlyDeathTrail[0xe0]; // 0x840            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strShivOnlyActivateSound; // 0x820            
-            CSoundEventName m_strShivOnlyLoopSound; // 0x830            
+            CSoundEventName m_strShivOnlyActivateSound; // 0x920            
+            CSoundEventName m_strShivOnlyLoopSound; // 0x930            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Killing_Blow_GlowVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Killing_Blow_GlowVData) == 0x840);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Killing_Blow_GlowVData) == 0x940);
     };
 };

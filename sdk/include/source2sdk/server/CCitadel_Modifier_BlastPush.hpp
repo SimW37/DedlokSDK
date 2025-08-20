@@ -17,21 +17,21 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd8
+        // Size: 0xe0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_BlastPush : public source2sdk::server::CCitadelModifier
         {
         public:
-            Vector m_vPush; // 0xc0            
-            float m_flPushVelocity; // 0xcc            
-            float m_flMaxPushVelocity; // 0xd0            
-            float m_flMaxPushVelocitySqr; // 0xd4            
+            Vector m_vPush; // 0xc8            
+            float m_flPushVelocity; // 0xd4            
+            float m_flMaxPushVelocity; // 0xd8            
+            float m_flMaxPushVelocitySqr; // 0xdc            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_BlastPush because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_BlastPush) == 0xd8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_BlastPush) == 0xe0);
     };
 };

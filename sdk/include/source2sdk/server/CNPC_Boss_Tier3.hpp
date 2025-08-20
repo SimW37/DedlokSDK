@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1a88
+        // Size: 0x1b00
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iLane"
@@ -34,37 +34,37 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            std::int32_t m_iLane; // 0x1990            
-            uint8_t _pad1994[0x30]; // 0x1994
+            std::int32_t m_iLane; // 0x1a08            
+            uint8_t _pad1a0c[0x30]; // 0x1a0c
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "qangle"
-            QAngle m_angTargeting1; // 0x19c4            
+            QAngle m_angTargeting1; // 0x1a3c            
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "qangle"
-            QAngle m_angTargeting2; // 0x19d0            
+            QAngle m_angTargeting2; // 0x1a48            
             // metadata: MNetworkEnable
-            std::int32_t m_nElectricBeamCasts; // 0x19dc            
-            uint8_t _pad19e0[0x20]; // 0x19e0
-            source2sdk::entity2::CEntityIOOutput m_eventOnBossKilled; // 0x1a00            
-            source2sdk::entity2::CEntityIOOutput m_eventOnPhase1End; // 0x1a28            
-            CUtlSymbolLarge m_backdoorProtectionTrigger; // 0x1a50            
-            uint8_t _pad1a58[0x4]; // 0x1a58
+            std::int32_t m_nElectricBeamCasts; // 0x1a54            
+            uint8_t _pad1a58[0x20]; // 0x1a58
+            source2sdk::entity2::CEntityIOOutput m_eventOnBossKilled; // 0x1a78            
+            source2sdk::entity2::CEntityIOOutput m_eventOnPhase1End; // 0x1aa0            
+            CUtlSymbolLarge m_backdoorProtectionTrigger; // 0x1ac8            
+            uint8_t _pad1ad0[0x4]; // 0x1ad0
             // metadata: MNetworkEnable
-            source2sdk::client::ETier3State_t m_eAliveState; // 0x1a5c            
-            uint8_t _pad1a60[0x4]; // 0x1a60
+            source2sdk::client::ETier3State_t m_eAliveState; // 0x1ad4            
+            uint8_t _pad1ad8[0x4]; // 0x1ad8
             // metadata: MNetworkEnable
-            source2sdk::client::ETier3Phase_t m_ePhase; // 0x1a64            
-            uint8_t _pad1a68[0x20];
+            source2sdk::client::ETier3Phase_t m_ePhase; // 0x1adc            
+            uint8_t _pad1ae0[0x20];
             
             // Datamap fields:
-            // void m_vecStartingPosition; // 0x19a0
-            // int32_t m_nDyingEndCoverPointID; // 0x19ac
-            // int32_t m_nVulnerableCoverPointID; // 0x19b0
+            // void m_vecStartingPosition; // 0x1a18
+            // int32_t m_nDyingEndCoverPointID; // 0x1a24
+            // int32_t m_nVulnerableCoverPointID; // 0x1a28
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_Boss_Tier3 because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_Boss_Tier3) == 0x1a88);
+        static_assert(sizeof(source2sdk::server::CNPC_Boss_Tier3) == 0x1b00);
     };
 };

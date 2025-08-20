@@ -23,10 +23,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0x10b8
+        // Size: 0x10c0
         // Has VTable
         #pragma pack(push, 1)
         class CPropDoorRotating : public source2sdk::server::CBasePropDoor
@@ -52,7 +52,7 @@ namespace source2sdk
             // m_hEntityBlocker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CEntityBlocker> m_hEntityBlocker;
             char m_hEntityBlocker[0x4]; // 0x10b0            
-            uint8_t _pad10b4[0x4];
+            uint8_t _pad10b4[0xc];
             
             // Datamap fields:
             // float InputSetRotationDistance; // 0x0
@@ -62,6 +62,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPropDoorRotating because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPropDoorRotating) == 0x10b8);
+        static_assert(sizeof(source2sdk::server::CPropDoorRotating) == 0x10c0);
     };
 };

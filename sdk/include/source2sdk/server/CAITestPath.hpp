@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x4f0
+        // Size: 0x500
         // Has VTable
         #pragma pack(push, 1)
         class CAITestPath : public source2sdk::server::CPointEntity
         {
         public:
-            uint8_t _pad04e0[0x8]; // 0x4e0
-            CUtlSymbolLarge m_strNextPath; // 0x4e8            
+            uint8_t _pad04f0[0x8]; // 0x4f0
+            CUtlSymbolLarge m_strNextPath; // 0x4f8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAITestPath because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAITestPath) == 0x4f0);
+        static_assert(sizeof(source2sdk::server::CAITestPath) == 0x500);
     };
 };

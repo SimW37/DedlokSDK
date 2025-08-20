@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x288
+        // Size: 0x290
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Galvanic_Storm_Effect : public source2sdk::server::CCitadel_Modifier_ChainLightningEffect
         {
         public:
-            uint8_t _pad0248[0x40];
+            uint8_t _pad0250[0x40];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Galvanic_Storm_Effect) == 0x288);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Galvanic_Storm_Effect) == 0x290);
     };
 };

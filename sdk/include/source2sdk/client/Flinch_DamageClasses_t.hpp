@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 11
+        // Enumerator count: 13
         // Alignment: 4
         // Size: 0x4
         enum class Flinch_DamageClasses_t : std::uint32_t
@@ -29,6 +29,8 @@ namespace source2sdk
             AGE_DMG_SONIC_SECONDARY = 0x7,
             AGE_DMG_SONIC_PRIMARY = 0x8,
             AGE_DMG_NEWTON = 0x9,
+            AGE_DMG_FALL = 0xa,
+            AGE_DMG_THROWN = 0xb,
         };
     };
 };

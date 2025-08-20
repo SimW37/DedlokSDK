@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc48
+        // Size: 0xc40
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_tDrainLifeStopTime"
@@ -31,22 +31,22 @@ namespace source2sdk
         public:
             // m_vecModifiers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CModifierHandleTyped<source2sdk::server::CCitadelModifier>> m_vecModifiers;
-            char m_vecModifiers[0x18]; // 0xba0            
+            char m_vecModifiers[0x18]; // 0xb98            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_tDrainLifeStopTime; // 0xbb8            
+            source2sdk::entity2::GameTime_t m_tDrainLifeStopTime; // 0xbb0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-            source2sdk::entity2::GameTime_t m_tSlowStartTime; // 0xbbc            
+            source2sdk::entity2::GameTime_t m_tSlowStartTime; // 0xbb4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-            source2sdk::entity2::GameTime_t m_tSlowStopTime; // 0xbc0            
-            uint8_t _pad0bc4[0x84];
+            source2sdk::entity2::GameTime_t m_tSlowStopTime; // 0xbb8            
+            uint8_t _pad0bbc[0x84];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_LifeDrain because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_LifeDrain) == 0xc48);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_LifeDrain) == 0xc40);
     };
 };

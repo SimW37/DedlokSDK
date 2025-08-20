@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x148
+        // Size: 0x150
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_IntensifyingClip : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x80]; // 0xc0
-            source2sdk::entity2::GameTime_t m_LastThinkTime; // 0x140            
-            float m_flSpinUpTime; // 0x144            
+            uint8_t _pad00c8[0x80]; // 0xc8
+            source2sdk::entity2::GameTime_t m_LastThinkTime; // 0x148            
+            float m_flSpinUpTime; // 0x14c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_IntensifyingClip because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_IntensifyingClip) == 0x148);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_IntensifyingClip) == 0x150);
     };
 };

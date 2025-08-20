@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa60
+        // Size: 0xb60
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,25 +30,25 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x790            
+            char m_DebuffModifier[0x10]; // 0x890            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle;
-            char m_ExplosionParticle[0xe0]; // 0x7a0            
+            char m_ExplosionParticle[0xe0]; // 0x8a0            
             // m_ExplosionVictimParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionVictimParticle;
-            char m_ExplosionVictimParticle[0xe0]; // 0x880            
+            char m_ExplosionVictimParticle[0xe0]; // 0x980            
             // m_EmpowerWeaponParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EmpowerWeaponParticle;
-            char m_EmpowerWeaponParticle[0xe0]; // 0x960            
+            char m_EmpowerWeaponParticle[0xe0]; // 0xa60            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_ShotVictimSound; // 0xa40            
-            CSoundEventName m_ShotConfirmationSound; // 0xa50            
+            CSoundEventName m_ShotVictimSound; // 0xb40            
+            CSoundEventName m_ShotConfirmationSound; // 0xb50            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_EmpowerBulletVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_EmpowerBulletVData) == 0xa60);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_EmpowerBulletVData) == 0xb60);
     };
 };

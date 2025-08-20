@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x670
+        // Size: 0x778
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -25,15 +25,17 @@ namespace source2sdk
         class CCitadel_Modifier_PullDownToGroundVData : public source2sdk::client::CCitadelModifierVData
         {
         public:
-            float m_flMaxHeight; // 0x660            
-            float m_flPullDownSpeedMin; // 0x664            
-            float m_flPullDownSpeedScale; // 0x668            
-            float m_flFullPullDistance; // 0x66c            
+            float m_flMaxHeight; // 0x760            
+            float m_flPullDownSpeedMin; // 0x764            
+            float m_flPullDownSpeedScale; // 0x768            
+            float m_flFullPullDistance; // 0x76c            
+            float m_flDampenVelocityRate; // 0x770            
+            uint8_t _pad0774[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_PullDownToGroundVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_PullDownToGroundVData) == 0x670);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_PullDownToGroundVData) == 0x778);
     };
 };

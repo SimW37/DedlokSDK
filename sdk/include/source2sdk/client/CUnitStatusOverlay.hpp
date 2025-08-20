@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xc10
+        // Size: 0xc30
         // Has VTable
         #pragma pack(push, 1)
         class CUnitStatusOverlay : public source2sdk::client::C_PointClientUIWorldPanel
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CUnitStatusOverlay) == 0xc10);
+        static_assert(sizeof(source2sdk::client::CUnitStatusOverlay) == 0xc30);
     };
 };

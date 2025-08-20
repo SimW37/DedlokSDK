@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x680
+        // Size: 0x780
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,14 +28,14 @@ namespace source2sdk
         public:
             // m_vecModifierValues has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::ScalingPowerupDefinition_t> m_vecModifierValues;
-            char m_vecModifierValues[0x18]; // 0x660            
-            float m_flTimeMin; // 0x678            
-            float m_flTimeMax; // 0x67c            
+            char m_vecModifierValues[0x18]; // 0x760            
+            float m_flTimeMin; // 0x778            
+            float m_flTimeMax; // 0x77c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_ScalingPowerUpVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ScalingPowerUpVData) == 0x680);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ScalingPowerUpVData) == 0x780);
     };
 };

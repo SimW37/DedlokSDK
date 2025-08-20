@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x958
+        // Size: 0x970
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelViscousBall : public source2sdk::server::CCitadelModelEntity
@@ -32,13 +32,13 @@ namespace source2sdk
         public:
             // m_hAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelBaseAbility> m_hAbility;
-            char m_hAbility[0x4]; // 0x950            
-            uint8_t _pad0954[0x4];
+            char m_hAbility[0x4]; // 0x968            
+            uint8_t _pad096c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelViscousBall because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelViscousBall) == 0x958);
+        static_assert(sizeof(source2sdk::server::CCitadelViscousBall) == 0x970);
     };
 };

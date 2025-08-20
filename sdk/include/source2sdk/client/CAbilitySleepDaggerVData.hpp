@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1710
+        // Size: 0x1708
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,16 +30,16 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x1620            
+            char m_ImpactParticle[0xe0]; // 0x1618            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SleepModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SleepModifier;
-            char m_SleepModifier[0x10]; // 0x1700            
+            char m_SleepModifier[0x10]; // 0x16f8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilitySleepDaggerVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilitySleepDaggerVData) == 0x1710);
+        static_assert(sizeof(source2sdk::client::CAbilitySleepDaggerVData) == 0x1708);
     };
 };

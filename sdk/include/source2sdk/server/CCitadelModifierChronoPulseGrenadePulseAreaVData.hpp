@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x880
+        // Size: 0x980
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,27 +30,27 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x660            
+            char m_DebuffModifier[0x10]; // 0x760            
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x670            
+            char m_SlowModifier[0x10]; // 0x770            
             // metadata: MPropertyStartGroup "Visuals"
             // m_PreviewRingParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreviewRingParticle;
-            char m_PreviewRingParticle[0xe0]; // 0x680            
+            char m_PreviewRingParticle[0xe0]; // 0x780            
             // m_AreaEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaEffect;
-            char m_AreaEffect[0xe0]; // 0x760            
+            char m_AreaEffect[0xe0]; // 0x860            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strArmingSound; // 0x840            
-            CSoundEventName m_strArmedSound; // 0x850            
-            CSoundEventName m_strLoopingSound; // 0x860            
-            CSoundEventName m_strHitSound; // 0x870            
+            CSoundEventName m_strArmingSound; // 0x940            
+            CSoundEventName m_strArmedSound; // 0x950            
+            CSoundEventName m_strLoopingSound; // 0x960            
+            CSoundEventName m_strHitSound; // 0x970            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelModifierChronoPulseGrenadePulseAreaVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelModifierChronoPulseGrenadePulseAreaVData) == 0x880);
+        static_assert(sizeof(source2sdk::server::CCitadelModifierChronoPulseGrenadePulseAreaVData) == 0x980);
     };
 };

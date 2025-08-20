@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc50
+        // Size: 0xc48
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bIcePathing"
@@ -29,25 +29,25 @@ namespace source2sdk
         class CCitadel_Ability_IcePath : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x80]; // 0xba0
-            Vector m_vInitialPosition; // 0xc20            
+            uint8_t _pad0b98[0x80]; // 0xb98
+            Vector m_vInitialPosition; // 0xc18            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bIcePathing; // 0xc2c            
-            uint8_t _pad0c2d[0x3]; // 0xc2d
+            bool m_bIcePathing; // 0xc24            
+            uint8_t _pad0c25[0x3]; // 0xc25
             // metadata: MNetworkEnable
-            QAngle m_qLastAngles; // 0xc30            
+            QAngle m_qLastAngles; // 0xc28            
             // metadata: MNetworkEnable
-            Vector m_vLastVelocity; // 0xc3c            
+            Vector m_vLastVelocity; // 0xc34            
             // metadata: MNetworkEnable
-            bool m_bFirstMovementTick; // 0xc48            
-            uint8_t _pad0c49[0x3]; // 0xc49
-            source2sdk::entity2::GameTime_t m_tLingerMovementControlUntilTime; // 0xc4c            
+            bool m_bFirstMovementTick; // 0xc40            
+            uint8_t _pad0c41[0x3]; // 0xc41
+            source2sdk::entity2::GameTime_t m_tLingerMovementControlUntilTime; // 0xc44            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_IcePath because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_IcePath) == 0xc50);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_IcePath) == 0xc48);
     };
 };

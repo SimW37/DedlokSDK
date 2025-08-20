@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x5e8
+        // Size: 0x5f0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CHandle< CBaseEntity> m_Handle"
@@ -36,15 +36,15 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // m_Handle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_Handle;
-            char m_Handle[0x4]; // 0x5e0            
+            char m_Handle[0x4]; // 0x5e8            
             // metadata: MNetworkEnable
-            bool m_bSendHandle; // 0x5e4            
-            uint8_t _pad05e5[0x3];
+            bool m_bSendHandle; // 0x5ec            
+            uint8_t _pad05ed[0x3];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_HandleTest because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_HandleTest) == 0x5e8);
+        static_assert(sizeof(source2sdk::client::C_HandleTest) == 0x5f0);
     };
 };

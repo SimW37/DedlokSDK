@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x688
+        // Size: 0x788
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,17 +29,17 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x660            
+            char m_DebuffModifier[0x10]; // 0x760            
             // metadata: MPropertyGroupName "Gameplay"
-            float flDotResultMin; // 0x670            
-            uint8_t _pad0674[0x4]; // 0x674
+            float flDotResultMin; // 0x770            
+            uint8_t _pad0774[0x4]; // 0x774
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strHitConfirmSound; // 0x678            
+            CSoundEventName m_strHitConfirmSound; // 0x778            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Backstabber_Watcher_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Backstabber_Watcher_VData) == 0x688);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Backstabber_Watcher_VData) == 0x788);
     };
 };

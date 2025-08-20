@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x2d8
+        // Size: 0x2e0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_ArcticBlastAOE : public source2sdk::server::CCitadelModifier
@@ -32,13 +32,13 @@ namespace source2sdk
         public:
             // m_vecDamagedTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::server::CBaseEntity*> m_vecDamagedTargets;
-            char m_vecDamagedTargets[0x18]; // 0xc0            
-            uint8_t _pad00d8[0x200];
+            char m_vecDamagedTargets[0x18]; // 0xc8            
+            uint8_t _pad00e0[0x200];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_ArcticBlastAOE because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ArcticBlastAOE) == 0x2d8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ArcticBlastAOE) == 0x2e0);
     };
 };

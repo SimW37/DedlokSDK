@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1068
+        // Size: 0x1030
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EViscousChargedGunState m_ChargeState"
@@ -32,23 +32,23 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            source2sdk::client::EViscousChargedGunState m_ChargeState; // 0xdc0            
+            source2sdk::client::EViscousChargedGunState m_ChargeState; // 0xd88            
             // metadata: MNetworkEnable
-            float m_nClipConsumed; // 0xdc4            
+            float m_nClipConsumed; // 0xd8c            
             // metadata: MNetworkEnable
-            bool m_bIsCharging; // 0xdc8            
+            bool m_bIsCharging; // 0xd90            
             // metadata: MNetworkEnable
-            bool m_bIsToggled; // 0xdc9            
-            uint8_t _pad0dca[0x2]; // 0xdca
-            source2sdk::client::ParticleIndex_t m_fxChargingParticle; // 0xdcc            
-            uint8_t _pad0dd0[0x14]; // 0xdd0
-            source2sdk::entity2::GameTime_t m_flLastBulletConsumedTime; // 0xde4            
-            uint8_t _pad0de8[0x280];
+            bool m_bIsToggled; // 0xd91            
+            uint8_t _pad0d92[0x2]; // 0xd92
+            source2sdk::client::ParticleIndex_t m_fxChargingParticle; // 0xd94            
+            uint8_t _pad0d98[0x14]; // 0xd98
+            source2sdk::entity2::GameTime_t m_flLastBulletConsumedTime; // 0xdac            
+            uint8_t _pad0db0[0x280];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_ViscousWeapon_Alt because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_ViscousWeapon_Alt) == 0x1068);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_ViscousWeapon_Alt) == 0x1030);
     };
 };

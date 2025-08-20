@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x228
+        // Size: 0x248
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Nikuman : public source2sdk::server::CCitadelModifierAura
         {
         public:
-            uint8_t _pad00e0[0x140]; // 0xe0
-            std::int32_t m_nTotalSelfHeal; // 0x220            
-            std::int32_t m_nTotalTeammateHeal; // 0x224            
+            uint8_t _pad0100[0x140]; // 0x100
+            std::int32_t m_nTotalSelfHeal; // 0x240            
+            std::int32_t m_nTotalTeammateHeal; // 0x244            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Nikuman because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Nikuman) == 0x228);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Nikuman) == 0x248);
     };
 };

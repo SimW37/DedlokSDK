@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1800
+        // Size: 0x17f8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x1620            
+            char m_ImpactParticle[0xe0]; // 0x1618            
             // m_WallImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WallImpactParticle;
-            char m_WallImpactParticle[0xe0]; // 0x1700            
+            char m_WallImpactParticle[0xe0]; // 0x16f8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strWallSlamSound; // 0x17e0            
+            CSoundEventName m_strWallSlamSound; // 0x17d8            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x17f0            
+            char m_DebuffModifier[0x10]; // 0x17e8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Gunslinger_KnockbackBlastVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Gunslinger_KnockbackBlastVData) == 0x1800);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Gunslinger_KnockbackBlastVData) == 0x17f8);
     };
 };

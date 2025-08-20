@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 22
+        // Enumerator count: 26
         // Alignment: 4
         // Size: 0x4
         enum class EGCCitadelServerMessages : std::uint32_t
@@ -40,6 +40,10 @@ namespace source2sdk
             k_EMsgServerToGCUpdateMatchInfo = 0x2739,
             k_EMsgServerToGCReportCheater = 0x273a,
             k_EMsgServerToGCReportCheaterResponse = 0x273b,
+            k_EMsgServerToGCRequestPlayerHeroData = 0x273c,
+            k_EMsgServerToGCRequestPlayerHeroDataResponse = 0x273d,
+            k_EMsgGCToServerAllocateForHideout = 0x273e,
+            k_EMsgGCToServerAllocateForHideoutResponse = 0x273f,
         };
     };
 };

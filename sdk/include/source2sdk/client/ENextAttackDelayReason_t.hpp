@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 7
+        // Enumerator count: 8
         // Alignment: 4
         // Size: 0x4
         enum class ENextAttackDelayReason_t : std::uint32_t
@@ -24,7 +24,8 @@ namespace source2sdk
             EDelayReason_WraithSpinUp = 0x3,
             EDelayReason_Disarmed = 0x4,
             EDelayReason_Stunned = 0x5,
-            EDelayReasonCount = 0x6,
+            EDelayReason_FrankWindUp = 0x6,
+            EDelayReasonCount = 0x7,
         };
     };
 };

@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 7
+        // Enumerator count: 8
         // Alignment: 4
         // Size: 0x4
         enum class ECitadelDamageType : std::uint32_t
@@ -25,6 +25,7 @@ namespace source2sdk
             CITADEL_DAMAGETYPE_ENVIRONMENTAL = 0x4,
             CITADEL_DAMAGETYPE_POISON = 0x5,
             CITADEL_DAMAGETYPE_WEAKPOINT_BONUS = 0x6,
+            CITADEL_DAMAGETYPE_PURE = 0x7,
         };
     };
 };

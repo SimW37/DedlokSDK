@@ -16,7 +16,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0x20
+        // Size: 0x18
         // 
         // static metadata: MGetKV3ClassDefaults
         #pragma pack(push, 1)
@@ -32,6 +32,6 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::worldrenderer::AggregateInstanceStreamOnDiskData_t, m_DecodedSize) == 0x0);
         static_assert(offsetof(source2sdk::worldrenderer::AggregateInstanceStreamOnDiskData_t, m_BufferData) == 0x8);
         
-        static_assert(sizeof(source2sdk::worldrenderer::AggregateInstanceStreamOnDiskData_t) == 0x20);
+        static_assert(sizeof(source2sdk::worldrenderer::AggregateInstanceStreamOnDiskData_t) == 0x18);
     };
 };

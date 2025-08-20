@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18b0
+        // Size: 0x18a8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,35 +28,35 @@ namespace source2sdk
         class CCitadel_Ability_InfinitySlashVData : public source2sdk::client::CCitadelYamatoBaseVData
         {
         public:
-            float m_flRiseSpeed; // 0x1628            
-            float m_flRiseDuration; // 0x162c            
-            float m_flSpeedDecayScale; // 0x1630            
-            float m_flExplodeHoldTime; // 0x1634            
-            float m_flExplosionShakeAmplitude; // 0x1638            
-            float m_flExplosionShakeFrequency; // 0x163c            
-            float m_flExplosionShakeDuration; // 0x1640            
-            uint8_t _pad1644[0x4]; // 0x1644
+            float m_flRiseSpeed; // 0x1620            
+            float m_flRiseDuration; // 0x1624            
+            float m_flSpeedDecayScale; // 0x1628            
+            float m_flExplodeHoldTime; // 0x162c            
+            float m_flExplosionShakeAmplitude; // 0x1630            
+            float m_flExplosionShakeFrequency; // 0x1634            
+            float m_flExplosionShakeDuration; // 0x1638            
+            uint8_t _pad163c[0x4]; // 0x163c
             // metadata: MPropertyStartGroup "Visuals"
             // m_AOERangeEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOERangeEffect;
-            char m_AOERangeEffect[0xe0]; // 0x1648            
+            char m_AOERangeEffect[0xe0]; // 0x1640            
             // m_AnimCastEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AnimCastEffect;
-            char m_AnimCastEffect[0xe0]; // 0x1728            
+            char m_AnimCastEffect[0xe0]; // 0x1720            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceExplosion; // 0x1808            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceExplosion; // 0x1800            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x1890            
+            char m_BuffModifier[0x10]; // 0x1888            
             // m_BuffTimerModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BuffTimerModifier;
-            char m_BuffTimerModifier[0x10]; // 0x18a0            
+            char m_BuffTimerModifier[0x10]; // 0x1898            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_InfinitySlashVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_InfinitySlashVData) == 0x18b0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_InfinitySlashVData) == 0x18a8);
     };
 };

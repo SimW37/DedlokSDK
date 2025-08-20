@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x810
+        // Size: 0x848
         // Has VTable
         #pragma pack(push, 1)
         class CSimpleMarkupVolumeTagged : public source2sdk::server::CMarkupVolumeTagged
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CSimpleMarkupVolumeTagged) == 0x810);
+        static_assert(sizeof(source2sdk::server::CSimpleMarkupVolumeTagged) == 0x848);
     };
 };

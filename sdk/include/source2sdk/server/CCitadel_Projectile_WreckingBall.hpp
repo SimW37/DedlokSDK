@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x8d8
+        // Size: 0x940
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Projectile_WreckingBall : public source2sdk::server::CCitadelProjectile
         {
         public:
-            uint8_t _pad0880[0x10]; // 0x880
-            bool m_bBroken; // 0x890            
-            uint8_t _pad0891[0x47];
+            uint8_t _pad08e8[0x10]; // 0x8e8
+            bool m_bBroken; // 0x8f8            
+            uint8_t _pad08f9[0x47];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Projectile_WreckingBall because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_WreckingBall) == 0x8d8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_WreckingBall) == 0x940);
     };
 };

@@ -32,8 +32,8 @@ namespace source2sdk
         public:
             // m_hHitTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_hHitTargets;
-            char m_hHitTargets[0x18]; // 0x178            
-            uint8_t _pad0190[0x198];
+            char m_hHitTargets[0x18]; // 0x180            
+            uint8_t _pad0198[0x190];
         };
         #pragma pack(pop)
         

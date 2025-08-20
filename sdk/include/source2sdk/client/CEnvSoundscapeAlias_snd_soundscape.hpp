@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x680
+        // Size: 0x688
         // Has VTable
         #pragma pack(push, 1)
         class CEnvSoundscapeAlias_snd_soundscape : public source2sdk::client::CEnvSoundscape
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CEnvSoundscapeAlias_snd_soundscape) == 0x680);
+        static_assert(sizeof(source2sdk::client::CEnvSoundscapeAlias_snd_soundscape) == 0x688);
     };
 };

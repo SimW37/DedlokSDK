@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: unknown
         // Standard-layout class: false
-        // Size: 0x1e0
+        // Size: 0x200
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CGameSceneNode m_sceneNode"
@@ -34,6 +34,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CBodyComponentPoint because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CBodyComponentPoint) == 0x1e0);
+        static_assert(sizeof(source2sdk::client::CBodyComponentPoint) == 0x200);
     };
 };

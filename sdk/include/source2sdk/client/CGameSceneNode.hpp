@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: unknown
         // Standard-layout class: true
-        // Size: 0x160
+        // Size: 0x180
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CGameSceneNodeHandle m_hParent"
@@ -70,10 +70,13 @@ namespace source2sdk
             Vector m_vecAbsOrigin; // 0xd0            
             QAngle m_angAbsRotation; // 0xdc            
             float m_flAbsScale; // 0xe8            
-            std::int16_t m_nParentAttachmentOrBone; // 0xec            
-            bool m_bDebugAbsOriginChanges; // 0xee            
-            bool m_bDormant; // 0xef            
-            bool m_bForceParentToBeNetworked; // 0xf0            
+            Vector m_vecWrappedLocalOrigin; // 0xec            
+            QAngle m_angWrappedLocalRotation; // 0xf8            
+            float m_flWrappedScale; // 0x104            
+            std::int16_t m_nParentAttachmentOrBone; // 0x108            
+            bool m_bDebugAbsOriginChanges; // 0x10a            
+            bool m_bDormant; // 0x10b            
+            bool m_bForceParentToBeNetworked; // 0x10c            
             // start of bitfield block
             uint16_t m_bDirtyHierarchy: 1;
             uint16_t m_bDirtyBoneMergeInfo: 1;
@@ -85,20 +88,20 @@ namespace source2sdk
             uint16_t m_nLatchAbsOrigin: 2;
             uint16_t m_bDirtyBoneMergeBoneToRoot: 1;
             // end of bitfield block// 10 bits
-            std::uint8_t m_nHierarchicalDepth; // 0xf3            
-            std::uint8_t m_nHierarchyType; // 0xf4            
-            std::uint8_t m_nDoNotSetAnimTimeInInvalidatePhysicsCount; // 0xf5            
-            uint8_t _pad00f6[0x2]; // 0xf6
+            std::uint8_t m_nHierarchicalDepth; // 0x10f            
+            std::uint8_t m_nHierarchyType; // 0x110            
+            std::uint8_t m_nDoNotSetAnimTimeInInvalidatePhysicsCount; // 0x111            
+            uint8_t _pad0112[0x2]; // 0x112
             // metadata: MNetworkEnable
-            CUtlStringToken m_name; // 0xf8            
-            uint8_t _pad00fc[0x3c]; // 0xfc
+            CUtlStringToken m_name; // 0x114            
+            uint8_t _pad0118[0x40]; // 0x118
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "gameSceneNodeHierarchyAttachmentChanged"
-            CUtlStringToken m_hierarchyAttachName; // 0x138            
-            float m_flZOffset; // 0x13c            
-            float m_flClientLocalScale; // 0x140            
-            Vector m_vRenderOrigin; // 0x144            
-            uint8_t _pad0150[0x10];
+            CUtlStringToken m_hierarchyAttachName; // 0x158            
+            float m_flZOffset; // 0x15c            
+            float m_flClientLocalScale; // 0x160            
+            Vector m_vRenderOrigin; // 0x164            
+            uint8_t _pad0170[0x10];
             
             // Datamap fields:
             // void m_bDirtyHierarchy; // -0x1
@@ -132,10 +135,13 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CGameSceneNode, m_vecAbsOrigin) == 0xd0);
         static_assert(offsetof(source2sdk::client::CGameSceneNode, m_angAbsRotation) == 0xdc);
         static_assert(offsetof(source2sdk::client::CGameSceneNode, m_flAbsScale) == 0xe8);
-        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_nParentAttachmentOrBone) == 0xec);
-        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_bDebugAbsOriginChanges) == 0xee);
-        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_bDormant) == 0xef);
-        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_bForceParentToBeNetworked) == 0xf0);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_vecWrappedLocalOrigin) == 0xec);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_angWrappedLocalRotation) == 0xf8);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_flWrappedScale) == 0x104);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_nParentAttachmentOrBone) == 0x108);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_bDebugAbsOriginChanges) == 0x10a);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_bDormant) == 0x10b);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_bForceParentToBeNetworked) == 0x10c);
         // Cannot assert offset of bitfield CGameSceneNode::m_bDirtyHierarchy
         // Cannot assert offset of bitfield CGameSceneNode::m_bDirtyBoneMergeInfo
         // Cannot assert offset of bitfield CGameSceneNode::m_bNetworkedPositionChanged
@@ -145,15 +151,15 @@ namespace source2sdk
         // Cannot assert offset of bitfield CGameSceneNode::m_bBoneMergeFlex
         // Cannot assert offset of bitfield CGameSceneNode::m_nLatchAbsOrigin
         // Cannot assert offset of bitfield CGameSceneNode::m_bDirtyBoneMergeBoneToRoot
-        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_nHierarchicalDepth) == 0xf3);
-        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_nHierarchyType) == 0xf4);
-        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_nDoNotSetAnimTimeInInvalidatePhysicsCount) == 0xf5);
-        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_name) == 0xf8);
-        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_hierarchyAttachName) == 0x138);
-        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_flZOffset) == 0x13c);
-        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_flClientLocalScale) == 0x140);
-        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_vRenderOrigin) == 0x144);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_nHierarchicalDepth) == 0x10f);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_nHierarchyType) == 0x110);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_nDoNotSetAnimTimeInInvalidatePhysicsCount) == 0x111);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_name) == 0x114);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_hierarchyAttachName) == 0x158);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_flZOffset) == 0x15c);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_flClientLocalScale) == 0x160);
+        static_assert(offsetof(source2sdk::client::CGameSceneNode, m_vRenderOrigin) == 0x164);
         
-        static_assert(sizeof(source2sdk::client::CGameSceneNode) == 0x160);
+        static_assert(sizeof(source2sdk::client::CGameSceneNode) == 0x180);
     };
 };

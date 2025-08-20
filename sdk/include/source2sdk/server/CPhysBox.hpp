@@ -26,32 +26,32 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9c0
+        // Size: 0x9f8
         // Has VTable
         #pragma pack(push, 1)
         class CPhysBox : public source2sdk::server::CBreakable
         {
         public:
-            std::int32_t m_damageType; // 0x8a8            
-            std::int32_t m_damageToEnableMotion; // 0x8ac            
-            float m_flForceToEnableMotion; // 0x8b0            
-            Vector m_vHoverPosePosition; // 0x8b4            
-            QAngle m_angHoverPoseAngles; // 0x8c0            
-            bool m_bNotSolidToWorld; // 0x8cc            
-            bool m_bEnableUseOutput; // 0x8cd            
-            source2sdk::server::HoverPoseFlags_t m_nHoverPoseFlags; // 0x8ce            
-            uint8_t _pad08cf[0x1]; // 0x8cf
-            float m_flTouchOutputPerEntityDelay; // 0x8d0            
-            uint8_t _pad08d4[0x4]; // 0x8d4
-            source2sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x8d8            
-            source2sdk::entity2::CEntityIOOutput m_OnAwakened; // 0x900            
-            source2sdk::entity2::CEntityIOOutput m_OnMotionEnabled; // 0x928            
-            source2sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x950            
-            source2sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x978            
+            std::int32_t m_damageType; // 0x8e0            
+            std::int32_t m_damageToEnableMotion; // 0x8e4            
+            float m_flForceToEnableMotion; // 0x8e8            
+            Vector m_vHoverPosePosition; // 0x8ec            
+            QAngle m_angHoverPoseAngles; // 0x8f8            
+            bool m_bNotSolidToWorld; // 0x904            
+            bool m_bEnableUseOutput; // 0x905            
+            source2sdk::server::HoverPoseFlags_t m_nHoverPoseFlags; // 0x906            
+            uint8_t _pad0907[0x1]; // 0x907
+            float m_flTouchOutputPerEntityDelay; // 0x908            
+            uint8_t _pad090c[0x4]; // 0x90c
+            source2sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x910            
+            source2sdk::entity2::CEntityIOOutput m_OnAwakened; // 0x938            
+            source2sdk::entity2::CEntityIOOutput m_OnMotionEnabled; // 0x960            
+            source2sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x988            
+            source2sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0x9b0            
             // m_hCarryingPlayer has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBasePlayerPawn> m_hCarryingPlayer;
-            char m_hCarryingPlayer[0x4]; // 0x9a0            
-            uint8_t _pad09a4[0x1c];
+            char m_hCarryingPlayer[0x4]; // 0x9d8            
+            uint8_t _pad09dc[0x1c];
             
             // Datamap fields:
             // QAngle preferredcarryangles; // 0x7fffffff
@@ -65,6 +65,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPhysBox because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPhysBox) == 0x9c0);
+        static_assert(sizeof(source2sdk::server::CPhysBox) == 0x9f8);
     };
 };

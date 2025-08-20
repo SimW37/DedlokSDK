@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x350
+        // Size: 0x358
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Gravity_Lasso_Enemy : public source2sdk::server::CCitadel_Modifier_Stunned
         {
         public:
-            source2sdk::client::ELassoHoldPosition m_eHoldPosition; // 0xc8            
-            uint8_t _pad00c9[0x287];
+            source2sdk::client::ELassoHoldPosition m_eHoldPosition; // 0xd0            
+            uint8_t _pad00d1[0x287];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Gravity_Lasso_Enemy because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Gravity_Lasso_Enemy) == 0x350);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Gravity_Lasso_Enemy) == 0x358);
     };
 };

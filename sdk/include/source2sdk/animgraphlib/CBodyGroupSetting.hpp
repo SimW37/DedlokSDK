@@ -21,6 +21,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MPropertyFriendlyName "Body Group Setting"
         // static metadata: MPropertyElementNameFn
+        // static metadata: M_LEGACY_OptInToSchemaPropertyDomain
         #pragma pack(push, 1)
         class CBodyGroupSetting
         {
@@ -31,7 +32,6 @@ namespace source2sdk
             CUtlString m_BodyGroupName; // 0x0            
             // metadata: MPropertyFriendlyName "BodyGroup Option"
             // metadata: MPropertyAttributeChoiceName "BodyGroupOption"
-            // metadata: MPropertyAttrExtraInfoFn
             std::int32_t m_nBodyGroupOption; // 0x8            
             uint8_t _pad000c[0x4];
         };

@@ -24,24 +24,24 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x520
+        // Size: 0x530
         // Has VTable
         #pragma pack(push, 1)
         class CMultiLightProxy : public source2sdk::server::CLogicalEntity
         {
         public:
-            CUtlSymbolLarge m_iszLightNameFilter; // 0x4e0            
-            CUtlSymbolLarge m_iszLightClassFilter; // 0x4e8            
-            float m_flLightRadiusFilter; // 0x4f0            
-            float m_flBrightnessDelta; // 0x4f4            
-            bool m_bPerformScreenFade; // 0x4f8            
-            uint8_t _pad04f9[0x3]; // 0x4f9
-            float m_flTargetBrightnessMultiplier; // 0x4fc            
-            float m_flCurrentBrightnessMultiplier; // 0x500            
-            uint8_t _pad0504[0x4]; // 0x504
+            CUtlSymbolLarge m_iszLightNameFilter; // 0x4f0            
+            CUtlSymbolLarge m_iszLightClassFilter; // 0x4f8            
+            float m_flLightRadiusFilter; // 0x500            
+            float m_flBrightnessDelta; // 0x504            
+            bool m_bPerformScreenFade; // 0x508            
+            uint8_t _pad0509[0x3]; // 0x509
+            float m_flTargetBrightnessMultiplier; // 0x50c            
+            float m_flCurrentBrightnessMultiplier; // 0x510            
+            uint8_t _pad0514[0x4]; // 0x514
             // m_vecLights has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CLightEntity>> m_vecLights;
-            char m_vecLights[0x18]; // 0x508            
+            char m_vecLights[0x18]; // 0x518            
             
             // Datamap fields:
             // float InputFlickerLights; // 0x0
@@ -55,6 +55,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CMultiLightProxy because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CMultiLightProxy) == 0x520);
+        static_assert(sizeof(source2sdk::server::CMultiLightProxy) == 0x530);
     };
 };

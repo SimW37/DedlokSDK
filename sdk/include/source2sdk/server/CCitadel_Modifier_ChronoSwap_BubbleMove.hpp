@@ -25,30 +25,30 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x288
+        // Size: 0x290
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_ChronoSwap_BubbleMove : public source2sdk::server::CCitadelModifier
         {
         public:
-            bool m_bOtherIsInFrontAtStart; // 0xc0            
-            uint8_t _pad00c1[0x3]; // 0xc1
-            Vector m_vOtherToDest; // 0xc4            
-            Vector m_vStart; // 0xd0            
-            Vector m_vDest; // 0xdc            
+            bool m_bOtherIsInFrontAtStart; // 0xc8            
+            uint8_t _pad00c9[0x3]; // 0xc9
+            Vector m_vOtherToDest; // 0xcc            
+            Vector m_vStart; // 0xd8            
+            Vector m_vDest; // 0xe4            
             // m_hOther has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hOther;
-            char m_hOther[0x4]; // 0xe8            
-            Vector m_vLastSafePos; // 0xec            
-            std::int32_t m_nNumTicks; // 0xf8            
-            std::int32_t m_nTicksLeft; // 0xfc            
-            source2sdk::client::ParticleIndex_t m_nBeamIndex; // 0x100            
-            uint8_t _pad0104[0x184];
+            char m_hOther[0x4]; // 0xf0            
+            Vector m_vLastSafePos; // 0xf4            
+            std::int32_t m_nNumTicks; // 0x100            
+            std::int32_t m_nTicksLeft; // 0x104            
+            source2sdk::client::ParticleIndex_t m_nBeamIndex; // 0x108            
+            uint8_t _pad010c[0x184];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_ChronoSwap_BubbleMove because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ChronoSwap_BubbleMove) == 0x288);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ChronoSwap_BubbleMove) == 0x290);
     };
 };

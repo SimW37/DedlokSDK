@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc60
+        // Size: 0xc40
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flUpFactor"
@@ -37,25 +37,25 @@ namespace source2sdk
         public:
             // m_hAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelBaseAbility> m_hAbility;
-            char m_hAbility[0x4]; // 0xc38            
+            char m_hAbility[0x4]; // 0xc18            
             // metadata: MNetworkEnable
-            float m_flUpFactor; // 0xc3c            
+            float m_flUpFactor; // 0xc1c            
             // metadata: MNetworkEnable
-            float m_flBounceVelocity; // 0xc40            
+            float m_flBounceVelocity; // 0xc20            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_tDeactivationTime; // 0xc44            
-            bool m_bDeactivated; // 0xc48            
-            uint8_t _pad0c49[0x3]; // 0xc49
-            float m_flBarrelBounceVelocity; // 0xc4c            
-            float m_flBarrelUpFactor; // 0xc50            
-            bool m_bSpeedOnLand; // 0xc54            
-            bool m_bHasBouncedPlayerBefore; // 0xc55            
-            uint8_t _pad0c56[0xa];
+            source2sdk::entity2::GameTime_t m_tDeactivationTime; // 0xc24            
+            bool m_bDeactivated; // 0xc28            
+            uint8_t _pad0c29[0x3]; // 0xc29
+            float m_flBarrelBounceVelocity; // 0xc2c            
+            float m_flBarrelUpFactor; // 0xc30            
+            bool m_bSpeedOnLand; // 0xc34            
+            bool m_bHasBouncedPlayerBefore; // 0xc35            
+            uint8_t _pad0c36[0xa];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Bounce_Pad because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Bounce_Pad) == 0xc60);
+        static_assert(sizeof(source2sdk::server::CCitadel_Bounce_Pad) == 0xc40);
     };
 };

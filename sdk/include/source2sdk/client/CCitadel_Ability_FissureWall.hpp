@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xef0
+        // Size: 0xeb8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "Vector m_vecPosition"
@@ -35,37 +35,37 @@ namespace source2sdk
         class CCitadel_Ability_FissureWall : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0dc0[0x10]; // 0xdc0
+            uint8_t _pad0d88[0x10]; // 0xd88
             // m_vecWallPreviewParticles has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::ParticleIndex_t> m_vecWallPreviewParticles;
-            char m_vecWallPreviewParticles[0x18]; // 0xdd0            
-            uint8_t _pad0de8[0xc0]; // 0xde8
+            char m_vecWallPreviewParticles[0x18]; // 0xd98            
+            uint8_t _pad0db0[0xc0]; // 0xdb0
             // metadata: MNetworkEnable
-            Vector m_vecPosition; // 0xea8            
+            Vector m_vecPosition; // 0xe70            
             // metadata: MNetworkEnable
-            Vector m_vecTravellingPosition; // 0xeb4            
+            Vector m_vecTravellingPosition; // 0xe7c            
             // metadata: MNetworkEnable
-            Vector m_vecInitialPosition; // 0xec0            
+            Vector m_vecInitialPosition; // 0xe88            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_CastTime; // 0xecc            
+            source2sdk::entity2::GameTime_t m_CastTime; // 0xe94            
             // metadata: MNetworkEnable
-            Vector m_vecDirection; // 0xed0            
+            Vector m_vecDirection; // 0xe98            
             // metadata: MNetworkEnable
-            Vector m_vecLeft; // 0xedc            
+            Vector m_vecLeft; // 0xea4            
             // metadata: MNetworkEnable
-            float m_Length; // 0xee8            
-            // metadata: MNetworkEnable
-            // metadata: MNetworkChangeCallback "PreviewModeChanged"
-            bool m_bTraveling; // 0xeec            
+            float m_Length; // 0xeb0            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "PreviewModeChanged"
-            bool m_bPreview; // 0xeed            
-            uint8_t _pad0eee[0x2];
+            bool m_bTraveling; // 0xeb4            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "PreviewModeChanged"
+            bool m_bPreview; // 0xeb5            
+            uint8_t _pad0eb6[0x2];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_FissureWall because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_FissureWall) == 0xef0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_FissureWall) == 0xeb8);
     };
 };

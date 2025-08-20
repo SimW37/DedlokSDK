@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 19
+        // Enumerator count: 21
         // Alignment: 4
         // Size: 0x4
         enum class StatusEffectProperty_t : std::uint32_t
@@ -54,8 +54,12 @@ namespace source2sdk
             EStatusEffect_CustomDebuff = 0x10,
             // MPropertyFriendlyName "Shows Unstoppable Status Effect in the Important Box"
             EStatusEffect_Unstoppable = 0x11,
+            // MPropertyFriendlyName "Shows Displacement Status Effect in the Important Box"
+            EStatusEffect_Displacement = 0x12,
+            // MPropertyFriendlyName "Shows Displacement Status Effect in the Important Box"
+            EStatusEffect_Silence = 0x13,
             // MPropertySuppressEnumerator
-            EStatusEffect_Count = 0x12,
+            EStatusEffect_Count = 0x14,
         };
     };
 };

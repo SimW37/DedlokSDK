@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xfb8
+        // Size: 0x1090
         // Has VTable
         #pragma pack(push, 1)
         class CNPC_MortarSentry_GraphController : public source2sdk::server::CAI_CitadelNPC_GraphController
@@ -25,18 +25,18 @@ namespace source2sdk
         public:
             // m_flPanel1 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraphParamOptionalRef<float> m_flPanel1;
-            char m_flPanel1[0x20]; // 0xf58            
+            char m_flPanel1[0x20]; // 0x1030            
             // m_bUnpackInstant has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraphParamOptionalRef<bool> m_bUnpackInstant;
-            char m_bUnpackInstant[0x20]; // 0xf78            
+            char m_bUnpackInstant[0x20]; // 0x1050            
             // m_flVelocity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraphParamOptionalRef<float> m_flVelocity;
-            char m_flVelocity[0x20]; // 0xf98            
+            char m_flVelocity[0x20]; // 0x1070            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_MortarSentry_GraphController because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_MortarSentry_GraphController) == 0xfb8);
+        static_assert(sizeof(source2sdk::server::CNPC_MortarSentry_GraphController) == 0x1090);
     };
 };

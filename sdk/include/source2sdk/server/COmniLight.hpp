@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb00
+        // Size: 0xb40
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flInnerAngle"
@@ -29,19 +29,19 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flInnerAngle; // 0xaf0            
+            float m_flInnerAngle; // 0xb30            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            float m_flOuterAngle; // 0xaf4            
+            float m_flOuterAngle; // 0xb34            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            bool m_bShowLight; // 0xaf8            
-            uint8_t _pad0af9[0x7];
+            bool m_bShowLight; // 0xb38            
+            uint8_t _pad0b39[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in COmniLight because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::COmniLight) == 0xb00);
+        static_assert(sizeof(source2sdk::server::COmniLight) == 0xb40);
     };
 };

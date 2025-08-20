@@ -9,6 +9,7 @@
 #include "source2sdk/client/CSkeletonAnimationController.hpp"
 #include "source2sdk/client/SequenceFinishNotifyState_t.hpp"
 #include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/resourcesystem/InfoForResourceTypeCNmGraphDefinition.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -22,7 +23,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1860
+        // Size: 0x18e0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CAnimGraphNetworkedVariables m_animGraphNetworkedVars"
@@ -30,6 +31,12 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "GameTime_t m_flSeqStartTime"
         // static metadata: MNetworkVarNames "float m_flSeqFixedCycle"
         // static metadata: MNetworkVarNames "AnimLoopMode_t m_nAnimLoopMode"
+        // static metadata: MNetworkVarNames "HNmGraphDefinitionStrong m_hGraphDefinitionAG2"
+        // static metadata: MNetworkVarNames "bool m_bIsUsingAG2"
+        // static metadata: MNetworkVarNames "uint8 m_serializedPoseRecipeAG2"
+        // static metadata: MNetworkVarNames "int m_nSerializePoseRecipeSizeAG2"
+        // static metadata: MNetworkVarNames "uint8 m_nGraphCreationFlagsAG2"
+        // static metadata: MNetworkVarNames "int m_nServerGraphDefReloadCountAG2"
         #pragma pack(push, 1)
         class CBaseAnimGraphController : public source2sdk::client::CSkeletonAnimationController
         {
@@ -74,7 +81,28 @@ namespace source2sdk
             bool m_bLastUpdateSkipped; // 0x14d4            
             uint8_t _pad14d5[0x3]; // 0x14d5
             source2sdk::entity2::GameTime_t m_flPrevAnimUpdateTime; // 0x14d8            
-            uint8_t _pad14dc[0x384];
+            uint8_t _pad14dc[0x384]; // 0x14dc
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "AG2_OnAnimGraphDefinitionOrModeChanged"
+            // m_hGraphDefinitionAG2 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CStrongHandle<source2sdk::resourcesystem::InfoForResourceTypeCNmGraphDefinition> m_hGraphDefinitionAG2;
+            char m_hGraphDefinitionAG2[0x8]; // 0x1860            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "AG2_OnAnimGraphDefinitionOrModeChanged"
+            bool m_bIsUsingAG2; // 0x1868            
+            uint8_t _pad1869[0x7]; // 0x1869
+            // metadata: MNetworkEnable
+            // m_serializedPoseRecipeAG2 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // C_NetworkUtlVectorBase<std::uint8_t> m_serializedPoseRecipeAG2;
+            char m_serializedPoseRecipeAG2[0x18]; // 0x1870            
+            // metadata: MNetworkEnable
+            std::int32_t m_nSerializePoseRecipeSizeAG2; // 0x1888            
+            // metadata: MNetworkEnable
+            std::uint8_t m_nGraphCreationFlagsAG2; // 0x188c            
+            uint8_t _pad188d[0x47]; // 0x188d
+            // metadata: MNetworkEnable
+            std::int32_t m_nServerGraphDefReloadCountAG2; // 0x18d4            
+            uint8_t _pad18d8[0x8];
             
             // Datamap fields:
             // void m_pAnimGraphInstance; // 0x1778
@@ -85,6 +113,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CBaseAnimGraphController because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CBaseAnimGraphController) == 0x1860);
+        static_assert(sizeof(source2sdk::client::CBaseAnimGraphController) == 0x18e0);
     };
 };

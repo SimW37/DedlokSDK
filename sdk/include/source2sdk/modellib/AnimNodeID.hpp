@@ -20,7 +20,7 @@ namespace source2sdk
         // Has Trivial Destructor
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: MPropertyEditClassAsString
+        // static metadata: MPropertyEditClassAsString_LEGACY
         #pragma pack(push, 1)
         class AnimNodeID
         {

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x840
+        // Size: 0x940
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,19 +30,19 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_BlockerModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_BlockerModel;
-            char m_BlockerModel[0xe0]; // 0x660            
+            char m_BlockerModel[0xe0]; // 0x760            
             // m_BeamParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle;
-            char m_BeamParticle[0xe0]; // 0x740            
+            char m_BeamParticle[0xe0]; // 0x840            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strBeamEndSound; // 0x820            
+            CSoundEventName m_strBeamEndSound; // 0x920            
             // metadata: MPropertyGroupName "Sounds"
-            CSoundEventName m_strTargetLoopingSound; // 0x830            
+            CSoundEventName m_strTargetLoopingSound; // 0x930            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_MagicBeamVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_MagicBeamVData) == 0x840);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_MagicBeamVData) == 0x940);
     };
 };

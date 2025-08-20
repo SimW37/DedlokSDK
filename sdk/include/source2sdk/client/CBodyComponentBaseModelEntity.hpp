@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: unknown
         // Standard-layout class: false
-        // Size: 0x5a0
+        // Size: 0x5b0
         // Has VTable
         #pragma pack(push, 1)
         class CBodyComponentBaseModelEntity : public source2sdk::client::CBodyComponentSkeletonInstance
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CBodyComponentBaseModelEntity) == 0x5a0);
+        static_assert(sizeof(source2sdk::client::CBodyComponentBaseModelEntity) == 0x5b0);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe0
+        // Size: 0x100
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelModifierAura_Default : public source2sdk::server::CCitadelModifierAura
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelModifierAura_Default) == 0xe0);
+        static_assert(sizeof(source2sdk::server::CCitadelModifierAura_Default) == 0x100);
     };
 };

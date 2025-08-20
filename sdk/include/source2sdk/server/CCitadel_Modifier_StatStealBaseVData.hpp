@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x680
+        // Size: 0x780
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_StatStolenDebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_StatStolenDebuffModifier;
-            char m_StatStolenDebuffModifier[0x10]; // 0x660            
+            char m_StatStolenDebuffModifier[0x10]; // 0x760            
             // m_StatStolenBuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_StatStolenBuffModifier;
-            char m_StatStolenBuffModifier[0x10]; // 0x670            
+            char m_StatStolenBuffModifier[0x10]; // 0x770            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_StatStealBaseVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_StatStealBaseVData) == 0x680);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_StatStealBaseVData) == 0x780);
     };
 };

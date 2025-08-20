@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf08
+        // Size: 0xed0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bIsInCatform"
@@ -28,16 +28,16 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            bool m_bIsInCatform; // 0xdc0            
-            uint8_t _pad0dc1[0x3]; // 0xdc1
+            bool m_bIsInCatform; // 0xd88            
+            uint8_t _pad0d89[0x3]; // 0xd89
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flLastDamageTime; // 0xdc4            
-            uint8_t _pad0dc8[0x140];
+            source2sdk::entity2::GameTime_t m_flLastDamageTime; // 0xd8c            
+            uint8_t _pad0d90[0x140];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Nano_CatForm because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Nano_CatForm) == 0xf08);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Nano_CatForm) == 0xed0);
     };
 };

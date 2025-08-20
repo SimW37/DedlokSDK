@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x650
+        // Size: 0x660
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float32 m_flBaseObjectiveHealth"
@@ -43,41 +43,41 @@ namespace source2sdk
         class CCitadelTeam : public source2sdk::server::CTeam
         {
         public:
-            uint8_t _pad0598[0xc]; // 0x598
+            uint8_t _pad05a8[0xc]; // 0x5a8
             // metadata: MNetworkEnable
-            float m_flBaseObjectiveHealth; // 0x5a4            
+            float m_flBaseObjectiveHealth; // 0x5b4            
             // metadata: MNetworkEnable
-            std::int32_t m_vecBaseLocationX; // 0x5a8            
+            std::int32_t m_vecBaseLocationX; // 0x5b8            
             // metadata: MNetworkEnable
-            std::int32_t m_vecBaseLocationY; // 0x5ac            
+            std::int32_t m_vecBaseLocationY; // 0x5bc            
             // metadata: MNetworkEnable
-            bool m_bHasValidBaseLocation; // 0x5b0            
-            uint8_t _pad05b1[0x1f]; // 0x5b1
+            bool m_bHasValidBaseLocation; // 0x5c0            
+            uint8_t _pad05c1[0x1f]; // 0x5c1
             // metadata: MNetworkEnable
             // m_hPayload has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hPayload;
-            char m_hPayload[0x4]; // 0x5d0            
+            char m_hPayload[0x4]; // 0x5e0            
             // metadata: MNetworkEnable
-            std::int32_t m_nBossesAlive; // 0x5d4            
+            std::int32_t m_nBossesAlive; // 0x5e4            
             // metadata: MNetworkEnable
-            std::int32_t m_nBossesMax; // 0x5d8            
+            std::int32_t m_nBossesMax; // 0x5e8            
             // metadata: MNetworkEnable
-            source2sdk::client::EFlexSlotTypes_t m_nFlexSlotsUnlocked; // 0x5dc            
-            uint8_t _pad05de[0x2]; // 0x5de
+            source2sdk::client::EFlexSlotTypes_t m_nFlexSlotsUnlocked; // 0x5ec            
+            uint8_t _pad05ee[0x2]; // 0x5ee
             // metadata: MNetworkEnable
-            std::int32_t m_nBaseGuardianLanesCleared; // 0x5e0            
-            uint8_t _pad05e4[0x4]; // 0x5e4
+            std::int32_t m_nBaseGuardianLanesCleared; // 0x5f0            
+            uint8_t _pad05f4[0x4]; // 0x5f4
             // metadata: MNetworkEnable
             // metadata: MNetworkSendProxyRecipientsFilter
             // metadata: MNetworkPriority "32"
             // m_vecFOWEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVectorEmbeddedNetworkVar<source2sdk::server::STeamFOWEntity> m_vecFOWEntities;
-            char m_vecFOWEntities[0x68]; // 0x5e8            
+            char m_vecFOWEntities[0x68]; // 0x5f8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelTeam because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelTeam) == 0x650);
+        static_assert(sizeof(source2sdk::server::CCitadelTeam) == 0x660);
     };
 };

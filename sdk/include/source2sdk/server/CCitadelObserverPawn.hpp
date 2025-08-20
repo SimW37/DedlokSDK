@@ -23,7 +23,6 @@ namespace source2sdk
         // static metadata: MNetworkIncludeByName "m_iMaxHealth"
         // static metadata: MNetworkExcludeByName "m_baseLayer.m_hSequence"
         // static metadata: MNetworkExcludeByName "m_blinktoggle"
-        // static metadata: MNetworkExcludeByName "m_flAnimTime"
         // static metadata: MNetworkExcludeByUserGroup "m_flCycle"
         // static metadata: MNetworkExcludeByName "m_flEncodedController"
         // static metadata: MNetworkExcludeByName "m_flPoseParameter"

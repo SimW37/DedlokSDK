@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x228
+        // Size: 0x248
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_TrapperPoisonJar_Aura : public source2sdk::server::CCitadelModifierAura
         {
         public:
-            uint8_t _pad00e0[0x148];
+            uint8_t _pad0100[0x148];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TrapperPoisonJar_Aura) == 0x228);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TrapperPoisonJar_Aura) == 0x248);
     };
 };

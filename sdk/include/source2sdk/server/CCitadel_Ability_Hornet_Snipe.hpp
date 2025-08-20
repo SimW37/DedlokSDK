@@ -26,7 +26,7 @@ namespace source2sdk
         class CCitadel_Ability_Hornet_Snipe : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x314]; // 0xba0
+            uint8_t _pad0b98[0x31c]; // 0xb98
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             source2sdk::entity2::GameTime_t m_flScopeStartTime; // 0xeb4            

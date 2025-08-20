@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe90
+        // Size: 0xeb0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Shotgun_Astro : public source2sdk::server::CCitadel_Ability_PrimaryWeapon
         {
         public:
-            uint8_t _pad0c60[0x230];
+            uint8_t _pad0c70[0x240];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Shotgun_Astro) == 0xe90);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Shotgun_Astro) == 0xeb0);
     };
 };

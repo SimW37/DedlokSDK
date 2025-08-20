@@ -17,23 +17,23 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x70
+        // Size: 0x78
         // Has VTable
         #pragma pack(push, 1)
         class CAI_MotorNavLink : public source2sdk::server::CAI_MotorTransition
         {
         public:
             std::int32_t m_nNavLinkActiveType; // 0x68            
-            uint8_t _pad006c[0x4];
+            uint8_t _pad006c[0xc];
             
             // Datamap fields:
             // CHandle< CBaseEntity > m_hNavLinkEntity; // 0x6c
-            //  m_strMovementName; // 0x60
+            // int32_t m_nNavLinkIndex; // 0x70
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAI_MotorNavLink because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAI_MotorNavLink) == 0x70);
+        static_assert(sizeof(source2sdk::server::CAI_MotorNavLink) == 0x78);
     };
 };

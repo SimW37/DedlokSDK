@@ -14,8 +14,8 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
         // Size: 0xd90
         // Has VTable
@@ -23,7 +23,8 @@ namespace source2sdk
         class COrnamentProp : public source2sdk::server::CDynamicProp
         {
         public:
-            CUtlSymbolLarge m_initialOwner; // 0xd88            
+            CUtlSymbolLarge m_initialOwner; // 0xd80            
+            uint8_t _pad0d88[0x8];
             
             // Datamap fields:
             // CUtlSymbolLarge InputSetAttached; // 0x0

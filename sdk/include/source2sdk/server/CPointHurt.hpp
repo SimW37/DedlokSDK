@@ -25,21 +25,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x500
+        // Size: 0x510
         // Has VTable
         #pragma pack(push, 1)
         class CPointHurt : public source2sdk::server::CPointEntity
         {
         public:
-            std::int32_t m_nDamage; // 0x4e0            
-            source2sdk::client::DamageTypes_t m_bitsDamageType; // 0x4e4            
-            float m_flRadius; // 0x4e8            
-            float m_flDelay; // 0x4ec            
-            CUtlSymbolLarge m_strTarget; // 0x4f0            
+            std::int32_t m_nDamage; // 0x4f0            
+            source2sdk::client::DamageTypes_t m_bitsDamageType; // 0x4f4            
+            float m_flRadius; // 0x4f8            
+            float m_flDelay; // 0x4fc            
+            CUtlSymbolLarge m_strTarget; // 0x500            
             // m_pActivator has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_pActivator;
-            char m_pActivator[0x4]; // 0x4f8            
-            uint8_t _pad04fc[0x4];
+            char m_pActivator[0x4]; // 0x508            
+            uint8_t _pad050c[0x4];
             
             // Datamap fields:
             // void CPointHurtHurtThink; // 0x0
@@ -52,6 +52,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPointHurt because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPointHurt) == 0x500);
+        static_assert(sizeof(source2sdk::server::CPointHurt) == 0x510);
     };
 };

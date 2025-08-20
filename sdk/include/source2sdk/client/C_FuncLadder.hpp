@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa00
+        // Size: 0xa28
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "Vector m_vecLadderDir"
@@ -38,30 +38,30 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord"
-            Vector m_vecLadderDir; // 0x9a8            
-            uint8_t _pad09b4[0x4]; // 0x9b4
+            Vector m_vecLadderDir; // 0x9d0            
+            uint8_t _pad09dc[0x4]; // 0x9dc
             // m_Dismounts has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::client::C_InfoLadderDismount>> m_Dismounts;
-            char m_Dismounts[0x18]; // 0x9b8            
-            Vector m_vecLocalTop; // 0x9d0            
+            char m_Dismounts[0x18]; // 0x9e0            
+            Vector m_vecLocalTop; // 0x9f8            
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord"
-            Vector m_vecPlayerMountPositionTop; // 0x9dc            
+            Vector m_vecPlayerMountPositionTop; // 0xa04            
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord"
-            Vector m_vecPlayerMountPositionBottom; // 0x9e8            
+            Vector m_vecPlayerMountPositionBottom; // 0xa10            
             // metadata: MNetworkEnable
-            float m_flAutoRideSpeed; // 0x9f4            
-            bool m_bDisabled; // 0x9f8            
+            float m_flAutoRideSpeed; // 0xa1c            
+            bool m_bDisabled; // 0xa20            
             // metadata: MNetworkEnable
-            bool m_bFakeLadder; // 0x9f9            
-            bool m_bHasSlack; // 0x9fa            
-            uint8_t _pad09fb[0x5];
+            bool m_bFakeLadder; // 0xa21            
+            bool m_bHasSlack; // 0xa22            
+            uint8_t _pad0a23[0x5];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_FuncLadder because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_FuncLadder) == 0xa00);
+        static_assert(sizeof(source2sdk::client::C_FuncLadder) == 0xa28);
     };
 };

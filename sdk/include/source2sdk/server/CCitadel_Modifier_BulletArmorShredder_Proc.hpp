@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x178
+        // Size: 0x180
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_BulletArmorShredder_Proc : public source2sdk::server::CCitadel_Modifier_BaseEventProc
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_BulletArmorShredder_Proc) == 0x178);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_BulletArmorShredder_Proc) == 0x180);
     };
 };

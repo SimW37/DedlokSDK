@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xdc8
+        // Size: 0xd90
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Item_ActiveReload : public source2sdk::client::CCitadel_Item
         {
         public:
-            bool m_bPlayedStartSound; // 0xdc0            
-            bool m_bActiveReloadFailed; // 0xdc1            
-            uint8_t _pad0dc2[0x6];
+            bool m_bPlayedStartSound; // 0xd88            
+            bool m_bActiveReloadFailed; // 0xd89            
+            uint8_t _pad0d8a[0x6];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item_ActiveReload because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Item_ActiveReload) == 0xdc8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Item_ActiveReload) == 0xd90);
     };
 };

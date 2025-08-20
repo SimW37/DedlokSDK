@@ -4,7 +4,6 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/client/CPlayer_ObserverServices.hpp"
-#include "source2sdk/client/ObserverMode_t.hpp"
 namespace source2sdk
 {
     namespace client
@@ -25,50 +24,35 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x4
         // Standard-layout class: false
-        // Size: 0x198
+        // Size: 0x188
         // Has VTable
-        // 
-        // static metadata: MNetworkVarNames "CHandle< CBaseEntity> m_hOverrideObserverTarget"
-        // static metadata: MNetworkVarNames "ObserverMode_t m_iOverrideObserverMode"
-        // static metadata: MNetworkVarNames "int32 m_iSecondsAfterDeathToAllowObserving"
         #pragma pack(push, 1)
         class CCitadelPlayer_ObserverServices : public source2sdk::client::CPlayer_ObserverServices
         {
         public:
             std::int32_t m_nLastLocalPlayerObservedTeam; // 0x58            
-            std::int32_t m_nLastObservedTeam; // 0x5c            
-            std::int32_t m_nCurrentObservedTeam; // 0x60            
+            std::int32_t m_nCurrentObservedTeam; // 0x5c            
             // m_hLastObserverTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hLastObserverTarget;
-            char m_hLastObserverTarget[0x4]; // 0x64            
+            char m_hLastObserverTarget[0x4]; // 0x60            
             // m_hPreviousTeamTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hPreviousTeamTarget;
-            char m_hPreviousTeamTarget[0x4]; // 0x68            
-            // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            // m_hOverrideObserverTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CHandle<source2sdk::client::C_BaseEntity> m_hOverrideObserverTarget;
-            char m_hOverrideObserverTarget[0x4]; // 0x6c            
-            // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            source2sdk::client::ObserverMode_t m_iOverrideObserverMode; // 0x70            
-            // metadata: MNetworkEnable
-            std::int32_t m_iSecondsAfterDeathToAllowObserving; // 0x74            
+            char m_hPreviousTeamTarget[0x4]; // 0x64            
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "qangle"
             // metadata: MNetworkChangeCallback "OnTargetCameraAnglesChanged"
-            QAngle m_angTargetCamera; // 0x78            
-            uint8_t _pad0084[0x84]; // 0x84
+            QAngle m_angTargetCamera; // 0x68            
+            uint8_t _pad0074[0x84]; // 0x74
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord"
             // metadata: MNetworkChangeCallback "OnTargetCameraPositionChanged"
-            Vector m_vTargetCameraPos; // 0x108            
-            uint8_t _pad0114[0x84];
+            Vector m_vTargetCameraPos; // 0xf8            
+            uint8_t _pad0104[0x84];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelPlayer_ObserverServices because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelPlayer_ObserverServices) == 0x198);
+        static_assert(sizeof(source2sdk::client::CCitadelPlayer_ObserverServices) == 0x188);
     };
 };

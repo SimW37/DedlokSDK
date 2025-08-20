@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x158
+        // Size: 0x160
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Mirage_Tornado_Lift : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x80]; // 0xc0
-            Vector m_vecFloatDest; // 0x140            
-            Vector m_vecStartingPos; // 0x14c            
+            uint8_t _pad00c8[0x80]; // 0xc8
+            Vector m_vecFloatDest; // 0x148            
+            Vector m_vecStartingPos; // 0x154            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Mirage_Tornado_Lift because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifier_Mirage_Tornado_Lift) == 0x158);
+        static_assert(sizeof(source2sdk::server::CModifier_Mirage_Tornado_Lift) == 0x160);
     };
 };

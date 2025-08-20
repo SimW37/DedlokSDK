@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1a08
+        // Size: 0x1a80
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_iHealth"
@@ -26,11 +26,11 @@ namespace source2sdk
         class CNPC_FlyingDrone : public source2sdk::server::CAI_CitadelNPC
         {
         public:
-            uint8_t _pad1990[0x78];
+            uint8_t _pad1a08[0x78];
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CNPC_FlyingDrone) == 0x1a08);
+        static_assert(sizeof(source2sdk::server::CNPC_FlyingDrone) == 0x1a80);
     };
 };

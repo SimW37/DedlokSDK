@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x668
+        // Size: 0x768
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -25,14 +25,14 @@ namespace source2sdk
         class CCitadel_Modifier_ReloadSpeedVData : public source2sdk::server::CCitadelModifierVData
         {
         public:
-            float m_flReloadSpeedPercent; // 0x660            
-            bool m_bDestroyAfterReload; // 0x664            
-            uint8_t _pad0665[0x3];
+            float m_flReloadSpeedPercent; // 0x760            
+            bool m_bDestroyAfterReload; // 0x764            
+            uint8_t _pad0765[0x3];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_ReloadSpeedVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ReloadSpeedVData) == 0x668);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ReloadSpeedVData) == 0x768);
     };
 };

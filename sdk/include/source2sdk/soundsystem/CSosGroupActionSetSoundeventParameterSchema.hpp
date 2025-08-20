@@ -22,6 +22,7 @@ namespace source2sdk
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
+        // static metadata: M_LEGACY_OptInToSchemaPropertyDomain
         #pragma pack(push, 1)
         class CSosGroupActionSetSoundeventParameterSchema : public source2sdk::soundsystem::CSosGroupActionSchema
         {

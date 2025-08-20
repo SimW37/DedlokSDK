@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x240
+        // Size: 0x248
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Arcane_Eater_Proc : public source2sdk::server::CCitadel_Modifier_BaseEventProc
         {
         public:
-            uint8_t _pad0178[0xc8];
+            uint8_t _pad0180[0xc8];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Arcane_Eater_Proc) == 0x240);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Arcane_Eater_Proc) == 0x248);
     };
 };

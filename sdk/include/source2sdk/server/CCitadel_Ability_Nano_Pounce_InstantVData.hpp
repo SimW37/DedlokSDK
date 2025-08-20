@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1ae0
+        // Size: 0x1ad8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,42 +30,42 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_LeapModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_LeapModifier;
-            char m_LeapModifier[0x10]; // 0x1620            
+            char m_LeapModifier[0x10]; // 0x1618            
             // m_ActiveBuff has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ActiveBuff;
-            char m_ActiveBuff[0x10]; // 0x1630            
+            char m_ActiveBuff[0x10]; // 0x1628            
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x1640            
+            char m_SlowModifier[0x10]; // 0x1638            
             // metadata: MPropertyStartGroup "Visuals"
             // m_AttackParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AttackParticle;
-            char m_AttackParticle[0xe0]; // 0x1650            
+            char m_AttackParticle[0xe0]; // 0x1648            
             // m_FlashParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FlashParticle;
-            char m_FlashParticle[0xe0]; // 0x1730            
+            char m_FlashParticle[0xe0]; // 0x1728            
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x1810            
+            char m_CastParticle[0xe0]; // 0x1808            
             // m_ExplodeSlowParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeSlowParticle;
-            char m_ExplodeSlowParticle[0xe0]; // 0x18f0            
+            char m_ExplodeSlowParticle[0xe0]; // 0x18e8            
             // m_PrimaryHitParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PrimaryHitParticle;
-            char m_PrimaryHitParticle[0xe0]; // 0x19d0            
+            char m_PrimaryHitParticle[0xe0]; // 0x19c8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_AttackSound; // 0x1ab0            
-            CSoundEventName m_strExplodeSound; // 0x1ac0            
+            CSoundEventName m_AttackSound; // 0x1aa8            
+            CSoundEventName m_strExplodeSound; // 0x1ab8            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flAttackTimePhase01; // 0x1ad0            
-            float m_flAttackTimePhase02; // 0x1ad4            
-            float m_flAllyMinTargetRange; // 0x1ad8            
-            float m_flTargetVerticalOffset; // 0x1adc            
+            float m_flAttackTimePhase01; // 0x1ac8            
+            float m_flAttackTimePhase02; // 0x1acc            
+            float m_flAllyMinTargetRange; // 0x1ad0            
+            float m_flTargetVerticalOffset; // 0x1ad4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Nano_Pounce_InstantVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Nano_Pounce_InstantVData) == 0x1ae0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Nano_Pounce_InstantVData) == 0x1ad8);
     };
 };

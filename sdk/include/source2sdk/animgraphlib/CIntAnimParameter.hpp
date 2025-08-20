@@ -20,6 +20,7 @@ namespace source2sdk
         // Size: 0x90
         // Has VTable
         // 
+        // static metadata: M_LEGACY_OptInToSchemaPropertyDomain
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MPropertyFriendlyName "Int Parameter"
         #pragma pack(push, 1)

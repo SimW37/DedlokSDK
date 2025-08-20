@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xce8
+        // Size: 0xcd0
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_lifeState"
@@ -29,13 +29,13 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            std::int32_t m_nHitIndex; // 0xcb0            
-            uint8_t _pad0cb4[0x34];
+            std::int32_t m_nHitIndex; // 0xc98            
+            uint8_t _pad0c9c[0x34];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_Citadel_BreakableProp because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_Citadel_BreakableProp) == 0xce8);
+        static_assert(sizeof(source2sdk::client::C_Citadel_BreakableProp) == 0xcd0);
     };
 };

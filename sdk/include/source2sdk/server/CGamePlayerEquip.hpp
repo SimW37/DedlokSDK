@@ -17,13 +17,13 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7f8
+        // Size: 0x830
         // Has VTable
         #pragma pack(push, 1)
         class CGamePlayerEquip : public source2sdk::server::CRulePointEntity
         {
         public:
-            uint8_t _pad07e0[0x18];
+            uint8_t _pad0818[0x18];
             // Datamap fields:
             // CUtlString weapon%d[32]; // 0x7fffffff
             // void InputTriggerForAllPlayers; // 0x0
@@ -33,6 +33,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CGamePlayerEquip) == 0x7f8);
+        static_assert(sizeof(source2sdk::server::CGamePlayerEquip) == 0x830);
     };
 };

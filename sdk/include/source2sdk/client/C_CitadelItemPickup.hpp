@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcf8
+        // Size: 0xce0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int32 m_eLootType"
@@ -37,22 +37,22 @@ namespace source2sdk
         class C_CitadelItemPickup : public source2sdk::client::CCitadelAnimatingModelEntity
         {
         public:
-            uint8_t _pad0cb8[0x18]; // 0xcb8
+            uint8_t _pad0ca0[0x18]; // 0xca0
             // metadata: MNetworkEnable
-            std::int32_t m_eLootType; // 0xcd0            
+            std::int32_t m_eLootType; // 0xcb8            
             // metadata: MNetworkEnable
-            std::int32_t m_nCurrencyValue; // 0xcd4            
+            std::int32_t m_nCurrencyValue; // 0xcbc            
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_iszModelName; // 0xcd8            
+            CUtlSymbolLarge m_iszModelName; // 0xcc0            
             // metadata: MNetworkEnable
-            float m_flModelScale; // 0xce0            
+            float m_flModelScale; // 0xcc8            
             // metadata: MNetworkEnable
             // m_hTargetPlayer has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hTargetPlayer;
-            char m_hTargetPlayer[0x4]; // 0xce4            
+            char m_hTargetPlayer[0x4]; // 0xccc            
             // metadata: MNetworkEnable
-            float m_flFallRate; // 0xce8            
-            uint8_t _pad0cec[0xc];
+            float m_flFallRate; // 0xcd0            
+            uint8_t _pad0cd4[0xc];
             
             // Datamap fields:
             // bool from_crate; // 0x7fffffff
@@ -61,6 +61,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in C_CitadelItemPickup because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_CitadelItemPickup) == 0xcf8);
+        static_assert(sizeof(source2sdk::client::C_CitadelItemPickup) == 0xce0);
     };
 };

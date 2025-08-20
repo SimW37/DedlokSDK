@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x950
+        // Size: 0xa50
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,33 +30,33 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SilenceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SilenceModifier;
-            char m_SilenceModifier[0x10]; // 0x740            
+            char m_SilenceModifier[0x10]; // 0x840            
             // m_DisarmModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DisarmModifier;
-            char m_DisarmModifier[0x10]; // 0x750            
+            char m_DisarmModifier[0x10]; // 0x850            
             // metadata: MPropertyStartGroup "Visuals"
             // m_LiftParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LiftParticle;
-            char m_LiftParticle[0xe0]; // 0x760            
+            char m_LiftParticle[0xe0]; // 0x860            
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x840            
+            char m_ImpactParticle[0xe0]; // 0x940            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strImpactSound; // 0x920            
+            CSoundEventName m_strImpactSound; // 0xa20            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flRiseTime; // 0x930            
-            float m_flRiseAcc; // 0x934            
-            float m_flRiseMaxSpeed; // 0x938            
-            float m_flRiseDecayFracStart; // 0x93c            
-            float m_flRiseDecayFracEnd; // 0x940            
-            float m_flSlamAcc; // 0x944            
-            float m_flSlamMaxSpeed; // 0x948            
-            float m_flSlamImpactRadius; // 0x94c            
+            float m_flRiseTime; // 0xa30            
+            float m_flRiseAcc; // 0xa34            
+            float m_flRiseMaxSpeed; // 0xa38            
+            float m_flRiseDecayFracStart; // 0xa3c            
+            float m_flRiseDecayFracEnd; // 0xa40            
+            float m_flSlamAcc; // 0xa44            
+            float m_flSlamMaxSpeed; // 0xa48            
+            float m_flSlamImpactRadius; // 0xa4c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierPsychicLiftVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CModifierPsychicLiftVData) == 0x950);
+        static_assert(sizeof(source2sdk::client::CModifierPsychicLiftVData) == 0xa50);
     };
 };

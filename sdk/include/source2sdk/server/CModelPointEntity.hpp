@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7d0
+        // Size: 0x808
         // Has VTable
         #pragma pack(push, 1)
         class CModelPointEntity : public source2sdk::server::CBaseModelEntity
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CModelPointEntity) == 0x7d0);
+        static_assert(sizeof(source2sdk::server::CModelPointEntity) == 0x808);
     };
 };

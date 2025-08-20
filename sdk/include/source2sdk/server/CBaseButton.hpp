@@ -27,7 +27,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9a0
+        // Size: 0x9d8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CHandle< CBaseModelEntity> m_glowEntity"
@@ -37,45 +37,45 @@ namespace source2sdk
         class CBaseButton : public source2sdk::server::CBaseToggle
         {
         public:
-            QAngle m_angMoveEntitySpace; // 0x850            
-            bool m_fStayPushed; // 0x85c            
-            bool m_fRotating; // 0x85d            
-            uint8_t _pad085e[0x2]; // 0x85e
-            source2sdk::server::locksound_t m_ls; // 0x860            
-            CUtlSymbolLarge m_sUseSound; // 0x880            
-            CUtlSymbolLarge m_sLockedSound; // 0x888            
-            CUtlSymbolLarge m_sUnlockedSound; // 0x890            
-            CUtlSymbolLarge m_sOverrideAnticipationName; // 0x898            
-            bool m_bLocked; // 0x8a0            
-            bool m_bDisabled; // 0x8a1            
-            uint8_t _pad08a2[0x2]; // 0x8a2
-            source2sdk::entity2::GameTime_t m_flUseLockedTime; // 0x8a4            
-            bool m_bSolidBsp; // 0x8a8            
-            uint8_t _pad08a9[0x7]; // 0x8a9
-            source2sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x8b0            
-            source2sdk::entity2::CEntityIOOutput m_OnPressed; // 0x8d8            
-            source2sdk::entity2::CEntityIOOutput m_OnUseLocked; // 0x900            
-            source2sdk::entity2::CEntityIOOutput m_OnIn; // 0x928            
-            source2sdk::entity2::CEntityIOOutput m_OnOut; // 0x950            
-            std::int32_t m_nState; // 0x978            
-            CEntityHandle m_hConstraint; // 0x97c            
-            CEntityHandle m_hConstraintParent; // 0x980            
-            bool m_bForceNpcExclude; // 0x984            
-            uint8_t _pad0985[0x3]; // 0x985
-            CUtlSymbolLarge m_sGlowEntity; // 0x988            
+            QAngle m_angMoveEntitySpace; // 0x888            
+            bool m_fStayPushed; // 0x894            
+            bool m_fRotating; // 0x895            
+            uint8_t _pad0896[0x2]; // 0x896
+            source2sdk::server::locksound_t m_ls; // 0x898            
+            CUtlSymbolLarge m_sUseSound; // 0x8b8            
+            CUtlSymbolLarge m_sLockedSound; // 0x8c0            
+            CUtlSymbolLarge m_sUnlockedSound; // 0x8c8            
+            CUtlSymbolLarge m_sOverrideAnticipationName; // 0x8d0            
+            bool m_bLocked; // 0x8d8            
+            bool m_bDisabled; // 0x8d9            
+            uint8_t _pad08da[0x2]; // 0x8da
+            source2sdk::entity2::GameTime_t m_flUseLockedTime; // 0x8dc            
+            bool m_bSolidBsp; // 0x8e0            
+            uint8_t _pad08e1[0x7]; // 0x8e1
+            source2sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x8e8            
+            source2sdk::entity2::CEntityIOOutput m_OnPressed; // 0x910            
+            source2sdk::entity2::CEntityIOOutput m_OnUseLocked; // 0x938            
+            source2sdk::entity2::CEntityIOOutput m_OnIn; // 0x960            
+            source2sdk::entity2::CEntityIOOutput m_OnOut; // 0x988            
+            std::int32_t m_nState; // 0x9b0            
+            CEntityHandle m_hConstraint; // 0x9b4            
+            CEntityHandle m_hConstraintParent; // 0x9b8            
+            bool m_bForceNpcExclude; // 0x9bc            
+            uint8_t _pad09bd[0x3]; // 0x9bd
+            CUtlSymbolLarge m_sGlowEntity; // 0x9c0            
             // metadata: MNetworkEnable
             // m_glowEntity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseModelEntity> m_glowEntity;
-            char m_glowEntity[0x4]; // 0x990            
+            char m_glowEntity[0x4]; // 0x9c8            
             // metadata: MNetworkEnable
-            bool m_usable; // 0x994            
-            uint8_t _pad0995[0x3]; // 0x995
+            bool m_usable; // 0x9cc            
+            uint8_t _pad09cd[0x3]; // 0x9cd
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_szDisplayText; // 0x998            
+            CUtlSymbolLarge m_szDisplayText; // 0x9d0            
             
             // Datamap fields:
-            //  m_ls.sLockedSound; // 0x868
-            //  m_ls.sUnlockedSound; // 0x870
+            //  m_ls.sLockedSound; // 0x8a0
+            //  m_ls.sUnlockedSound; // 0x8a8
             // void CBaseButtonButtonTouch; // 0x0
             // void CBaseButtonButtonSpark; // 0x0
             // void CBaseButtonTriggerAndWait; // 0x0
@@ -96,6 +96,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CBaseButton because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CBaseButton) == 0x9a0);
+        static_assert(sizeof(source2sdk::server::CBaseButton) == 0x9d8);
     };
 };

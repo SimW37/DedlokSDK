@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/client/CNetworkViewOffsetVector.hpp"
+#include "source2sdk/client/DecalMode_t.hpp"
 #include "source2sdk/client/HitGroup_t.hpp"
 #include "source2sdk/client/RenderFx_t.hpp"
 #include "source2sdk/client/RenderMode_t.hpp"
@@ -18,7 +19,7 @@ namespace source2sdk
 {
     namespace server
     {
-        struct CDestructiblePartsSystemComponent;
+        struct CDestructiblePartsComponent;
     };
 };
 namespace source2sdk
@@ -41,12 +42,12 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7d0
+        // Size: 0x808
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CRenderComponent::Storage_t m_CRenderComponent"
         // static metadata: MNetworkVarNames "CHitboxComponent::Storage_t m_CHitboxComponent"
-        // static metadata: MNetworkVarNames "CDestructiblePartsSystemComponent * m_pDestructiblePartsSystemComponent"
+        // static metadata: MNetworkVarNames "CDestructiblePartsComponent * m_pDestructiblePartsSystemComponent"
         // static metadata: MNetworkVarNames "RenderMode_t m_nRenderMode"
         // static metadata: MNetworkVarNames "RenderFx_t m_nRenderFX"
         // static metadata: MNetworkVarNames "Color m_clrRender"
@@ -66,6 +67,8 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "Vector m_vDecalForwardAxis"
         // static metadata: MNetworkVarNames "float m_flDecalHealBloodRate"
         // static metadata: MNetworkVarNames "float m_flDecalHealHeightRate"
+        // static metadata: MNetworkVarNames "DecalMode_t m_nDecalMode"
+        // static metadata: MNetworkVarNames "DecalMode_t m_nRequiredDecalMode"
         // static metadata: MNetworkVarNames "CHandle< CBaseModelEntity > m_ConfigEntitiesToPropagateMaterialDecalsTo"
         // static metadata: MNetworkVarNames "CNetworkViewOffsetVector m_vecViewOffset"
         #pragma pack(push, 1)
@@ -76,94 +79,100 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CRenderComponent"
             // metadata: MNetworkAlias "CRenderComponent"
             // metadata: MNetworkTypeAlias "CRenderComponent"
-            source2sdk::server::CRenderComponent* m_CRenderComponent; // 0x4e0            
+            source2sdk::server::CRenderComponent* m_CRenderComponent; // 0x4f0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "CHitboxComponent"
             // metadata: MNetworkAlias "CHitboxComponent"
             // metadata: MNetworkTypeAlias "CHitboxComponent"
-            source2sdk::server::CHitboxComponent m_CHitboxComponent; // 0x4e8            
-            source2sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed0; // 0x510            
-            source2sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed1; // 0x514            
-            source2sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed2; // 0x518            
-            source2sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed3; // 0x51c            
-            source2sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed4; // 0x520            
-            std::int32_t m_nDestructiblePartInitialStateDestructed0_PartIndex; // 0x524            
-            std::int32_t m_nDestructiblePartInitialStateDestructed1_PartIndex; // 0x528            
-            std::int32_t m_nDestructiblePartInitialStateDestructed2_PartIndex; // 0x52c            
-            std::int32_t m_nDestructiblePartInitialStateDestructed3_PartIndex; // 0x530            
-            std::int32_t m_nDestructiblePartInitialStateDestructed4_PartIndex; // 0x534            
+            source2sdk::server::CHitboxComponent m_CHitboxComponent; // 0x4f8            
+            source2sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed0; // 0x520            
+            source2sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed1; // 0x524            
+            source2sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed2; // 0x528            
+            source2sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed3; // 0x52c            
+            source2sdk::client::HitGroup_t m_nDestructiblePartInitialStateDestructed4; // 0x530            
+            std::int32_t m_nDestructiblePartInitialStateDestructed0_PartIndex; // 0x534            
+            std::int32_t m_nDestructiblePartInitialStateDestructed1_PartIndex; // 0x538            
+            std::int32_t m_nDestructiblePartInitialStateDestructed2_PartIndex; // 0x53c            
+            std::int32_t m_nDestructiblePartInitialStateDestructed3_PartIndex; // 0x540            
+            std::int32_t m_nDestructiblePartInitialStateDestructed4_PartIndex; // 0x544            
             // metadata: MNetworkEnable
-            source2sdk::server::CDestructiblePartsSystemComponent* m_pDestructiblePartsSystemComponent; // 0x538            
-            source2sdk::client::HitGroup_t m_LastHitGroup; // 0x540            
-            uint8_t _pad0544[0x4]; // 0x544
-            CGlobalSymbol m_sLastDamageSourceName; // 0x548            
-            Vector m_vLastDamagePosition; // 0x550            
-            source2sdk::entity2::GameTime_t m_flDissolveStartTime; // 0x55c            
-            source2sdk::entity2::CEntityIOOutput m_OnIgnite; // 0x560            
+            source2sdk::server::CDestructiblePartsComponent* m_pDestructiblePartsSystemComponent; // 0x548            
+            source2sdk::client::HitGroup_t m_LastHitGroup; // 0x550            
+            uint8_t _pad0554[0x4]; // 0x554
+            CGlobalSymbol m_sLastDamageSourceName; // 0x558            
+            Vector m_vLastDamagePosition; // 0x560            
+            source2sdk::entity2::GameTime_t m_flDissolveStartTime; // 0x56c            
+            source2sdk::entity2::CEntityIOOutput m_OnIgnite; // 0x570            
             // metadata: MNetworkEnable
-            source2sdk::client::RenderMode_t m_nRenderMode; // 0x588            
+            source2sdk::client::RenderMode_t m_nRenderMode; // 0x598            
             // metadata: MNetworkEnable
-            source2sdk::client::RenderFx_t m_nRenderFX; // 0x589            
-            uint8_t _pad058a[0x6]; // 0x58a
-            CUtlString m_szAddModifier; // 0x590            
-            bool m_bAllowFadeInView; // 0x598            
-            uint8_t _pad0599[0x1f]; // 0x599
-            bool m_bHasCollision; // 0x5b8            
-            uint8_t _pad05b9[0x3]; // 0x5b9
-            Vector m_vSupport; // 0x5bc            
+            source2sdk::client::RenderFx_t m_nRenderFX; // 0x599            
+            uint8_t _pad059a[0x6]; // 0x59a
+            CUtlString m_szAddModifier; // 0x5a0            
+            bool m_bAllowFadeInView; // 0x5a8            
+            uint8_t _pad05a9[0x1f]; // 0x5a9
+            bool m_bHasCollision; // 0x5c8            
+            uint8_t _pad05c9[0x3]; // 0x5c9
+            Vector m_vSupport; // 0x5cc            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnColorChanged"
-            Color m_clrRender; // 0x5c8            
-            uint8_t _pad05cc[0x4]; // 0x5cc
+            Color m_clrRender; // 0x5d8            
+            uint8_t _pad05dc[0x4]; // 0x5dc
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnRenderAttributesChanged"
             // m_vecRenderAttributes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVectorEmbeddedNetworkVar<source2sdk::server::EntityRenderAttribute_t> m_vecRenderAttributes;
-            char m_vecRenderAttributes[0x68]; // 0x5d0            
+            char m_vecRenderAttributes[0x68]; // 0x5e0            
             // metadata: MNetworkEnable
-            bool m_bRenderToCubemaps; // 0x638            
+            bool m_bRenderToCubemaps; // 0x648            
             // metadata: MNetworkEnable
-            bool m_bNoInterpolate; // 0x639            
-            uint8_t _pad063a[0x6]; // 0x63a
+            bool m_bNoInterpolate; // 0x649            
+            uint8_t _pad064a[0x6]; // 0x64a
             // metadata: MNetworkEnable
-            source2sdk::server::CCollisionProperty m_Collision; // 0x640            
+            source2sdk::server::CCollisionProperty m_Collision; // 0x650            
             // metadata: MNetworkEnable
-            source2sdk::server::CGlowProperty m_Glow; // 0x6f0            
+            source2sdk::server::CGlowProperty m_Glow; // 0x700            
             // metadata: MNetworkEnable
-            float m_flGlowBackfaceMult; // 0x748            
+            float m_flGlowBackfaceMult; // 0x758            
             // metadata: MNetworkEnable
-            float m_fadeMinDist; // 0x74c            
+            float m_fadeMinDist; // 0x75c            
             // metadata: MNetworkEnable
-            float m_fadeMaxDist; // 0x750            
+            float m_fadeMaxDist; // 0x760            
             // metadata: MNetworkEnable
-            float m_flFadeScale; // 0x754            
+            float m_flFadeScale; // 0x764            
             // metadata: MNetworkEnable
-            float m_flShadowStrength; // 0x758            
+            float m_flShadowStrength; // 0x768            
             // metadata: MNetworkEnable
-            std::uint8_t m_nObjectCulling; // 0x75c            
-            uint8_t _pad075d[0x3]; // 0x75d
+            std::uint8_t m_nObjectCulling; // 0x76c            
+            uint8_t _pad076d[0x3]; // 0x76d
             // metadata: MNetworkEnable
-            std::int32_t m_nAddDecal; // 0x760            
+            std::int32_t m_nAddDecal; // 0x770            
             // metadata: MNetworkEnable
-            Vector m_vDecalPosition; // 0x764            
+            Vector m_vDecalPosition; // 0x774            
             // metadata: MNetworkEnable
-            Vector m_vDecalForwardAxis; // 0x770            
+            Vector m_vDecalForwardAxis; // 0x780            
             // metadata: MNetworkEnable
-            float m_flDecalHealBloodRate; // 0x77c            
+            float m_flDecalHealBloodRate; // 0x78c            
             // metadata: MNetworkEnable
-            float m_flDecalHealHeightRate; // 0x780            
-            uint8_t _pad0784[0x4]; // 0x784
+            float m_flDecalHealHeightRate; // 0x790            
+            // metadata: MNetworkEnable
+            source2sdk::client::DecalMode_t m_nDecalMode; // 0x794            
+            // metadata: MNetworkEnable
+            source2sdk::client::DecalMode_t m_nRequiredDecalMode; // 0x795            
+            uint8_t _pad0796[0x2]; // 0x796
             // metadata: MNetworkEnable
             // m_ConfigEntitiesToPropagateMaterialDecalsTo has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<CHandle<source2sdk::server::CBaseModelEntity>> m_ConfigEntitiesToPropagateMaterialDecalsTo;
-            char m_ConfigEntitiesToPropagateMaterialDecalsTo[0x18]; // 0x788            
+            char m_ConfigEntitiesToPropagateMaterialDecalsTo[0x18]; // 0x798            
+            uint8_t _pad07b0[0x28]; // 0x7b0
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
             // metadata: MNetworkUserGroup "Player"
-            source2sdk::client::CNetworkViewOffsetVector m_vecViewOffset; // 0x7a0            
-            uint8_t _pad07c8[0x8];
+            source2sdk::client::CNetworkViewOffsetVector m_vecViewOffset; // 0x7d8            
+            uint8_t _pad0800[0x8];
             
             // Datamap fields:
+            // void m_bodyGroupChoices; // 0x7b0
             // int32_t InputAlpha; // 0x0
             // Color InputColor; // 0x0
             // int32_t InputSkin; // 0x0
@@ -194,6 +203,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CBaseModelEntity because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CBaseModelEntity) == 0x7d0);
+        static_assert(sizeof(source2sdk::server::CBaseModelEntity) == 0x808);
     };
 };

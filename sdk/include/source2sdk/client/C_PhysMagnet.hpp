@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xce0
+        // Size: 0xcc8
         // Has VTable
         #pragma pack(push, 1)
         class C_PhysMagnet : public source2sdk::client::CBaseAnimGraph
@@ -32,15 +32,15 @@ namespace source2sdk
         public:
             // m_aAttachedObjectsFromServer has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<std::int32_t> m_aAttachedObjectsFromServer;
-            char m_aAttachedObjectsFromServer[0x18]; // 0xcb0            
+            char m_aAttachedObjectsFromServer[0x18]; // 0xc98            
             // m_aAttachedObjects has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_aAttachedObjects;
-            char m_aAttachedObjects[0x18]; // 0xcc8            
+            char m_aAttachedObjects[0x18]; // 0xcb0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_PhysMagnet because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_PhysMagnet) == 0xce0);
+        static_assert(sizeof(source2sdk::client::C_PhysMagnet) == 0xcc8);
     };
 };

@@ -24,22 +24,22 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7e0
+        // Size: 0x818
         // Has VTable
         #pragma pack(push, 1)
         class CTriggerVolume : public source2sdk::server::CBaseModelEntity
         {
         public:
-            CUtlSymbolLarge m_iFilterName; // 0x7d0            
+            CUtlSymbolLarge m_iFilterName; // 0x808            
             // m_hFilter has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseFilter> m_hFilter;
-            char m_hFilter[0x4]; // 0x7d8            
-            uint8_t _pad07dc[0x4];
+            char m_hFilter[0x4]; // 0x810            
+            uint8_t _pad0814[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CTriggerVolume because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CTriggerVolume) == 0x7e0);
+        static_assert(sizeof(source2sdk::server::CTriggerVolume) == 0x818);
     };
 };

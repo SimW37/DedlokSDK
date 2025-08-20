@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xaf8
+        // Size: 0xb38
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bShowLight"
@@ -27,13 +27,13 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RenderingChanged"
-            bool m_bShowLight; // 0xaf0            
-            uint8_t _pad0af1[0x7];
+            bool m_bShowLight; // 0xb30            
+            uint8_t _pad0b31[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CRectLight because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CRectLight) == 0xaf8);
+        static_assert(sizeof(source2sdk::server::CRectLight) == 0xb38);
     };
 };

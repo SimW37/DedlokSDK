@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x998
+        // Size: 0x9e0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bAlignCameraOnAutoDismount"
@@ -26,14 +26,14 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            bool m_bAlignCameraOnAutoDismount; // 0x990            
-            uint8_t _pad0991[0x3]; // 0x991
-            CUtlStringToken m_tModifier; // 0x994            
+            bool m_bAlignCameraOnAutoDismount; // 0x9d8            
+            uint8_t _pad09d9[0x3]; // 0x9d9
+            CUtlStringToken m_tModifier; // 0x9dc            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelClimbRopeTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelClimbRopeTrigger) == 0x998);
+        static_assert(sizeof(source2sdk::server::CCitadelClimbRopeTrigger) == 0x9e0);
     };
 };

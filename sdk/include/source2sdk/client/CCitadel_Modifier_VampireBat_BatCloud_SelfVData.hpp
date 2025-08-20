@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x750
+        // Size: 0x850
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,16 +30,16 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x660            
+            char m_DebuffModifier[0x10]; // 0x760            
             // metadata: MPropertyStartGroup "Visuals"
             // m_AuraParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AuraParticle;
-            char m_AuraParticle[0xe0]; // 0x670            
+            char m_AuraParticle[0xe0]; // 0x770            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_VampireBat_BatCloud_SelfVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_VampireBat_BatCloud_SelfVData) == 0x750);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_VampireBat_BatCloud_SelfVData) == 0x850);
     };
 };

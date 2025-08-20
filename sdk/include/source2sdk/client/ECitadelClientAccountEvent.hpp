@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 57
+        // Enumerator count: 61
         // Alignment: 4
         // Size: 0x4
         enum class ECitadelClientAccountEvent : std::uint32_t
@@ -75,6 +75,10 @@ namespace source2sdk
             k_eSandboxViaHeroPage = 0x37,
             k_eViewedSettings_SteamInput = 0x38,
             k_eViewedSettings_Social = 0x39,
+            k_eCalibrationMatch = 0x3a,
+            k_eSandboxViaPlayMenu = 0x3b,
+            k_eBotMatch_Medium = 0x3c,
+            k_eSandboxViaHideoutTeleport = 0x3d,
         };
     };
 };

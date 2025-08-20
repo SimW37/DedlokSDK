@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x668
+        // Size: 0x768
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,14 +28,14 @@ namespace source2sdk
         public:
             // metadata: MPropertyStartGroup "Fire User Entity IO"
             // metadata: MPropertyDescription "User Entity IO to fire when modifier added. 0 = don't fire."
-            source2sdk::client::FireUserEntityIO_t m_FireOnAdded; // 0x660            
+            source2sdk::client::FireUserEntityIO_t m_FireOnAdded; // 0x760            
             // metadata: MPropertyDescription "User Entity IO to fire when modifier removed. 0 = don't fire."
-            source2sdk::client::FireUserEntityIO_t m_FireOnRemoved; // 0x664            
+            source2sdk::client::FireUserEntityIO_t m_FireOnRemoved; // 0x764            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CGameModifier_FireUserEntityIOVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CGameModifier_FireUserEntityIOVData) == 0x668);
+        static_assert(sizeof(source2sdk::server::CGameModifier_FireUserEntityIOVData) == 0x768);
     };
 };

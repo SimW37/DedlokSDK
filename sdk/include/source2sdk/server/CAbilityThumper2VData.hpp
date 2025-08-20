@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1730
+        // Size: 0x1728
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_StompParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompParticle;
-            char m_StompParticle[0xe0]; // 0x1620            
+            char m_StompParticle[0xe0]; // 0x1618            
             // metadata: MPropertyGroupName "Sounds"
-            CSoundEventName m_strStompExplosionSound; // 0x1700            
+            CSoundEventName m_strStompExplosionSound; // 0x16f8            
             // metadata: MPropertyGroupName "Modifiers"
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x1710            
+            char m_BuffModifier[0x10]; // 0x1708            
             // m_BarbedWireAuraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BarbedWireAuraModifier;
-            char m_BarbedWireAuraModifier[0x10]; // 0x1720            
+            char m_BarbedWireAuraModifier[0x10]; // 0x1718            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityThumper2VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityThumper2VData) == 0x1730);
+        static_assert(sizeof(source2sdk::server::CAbilityThumper2VData) == 0x1728);
     };
 };

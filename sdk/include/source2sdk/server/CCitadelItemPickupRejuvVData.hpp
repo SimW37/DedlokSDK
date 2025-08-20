@@ -31,7 +31,7 @@ namespace source2sdk
             // CSubclassName<4> m_AbilityProjectile;
             char m_AbilityProjectile[0x10]; // 0x28            
             float m_flMaxDistForHeal; // 0x38            
-            uint8_t _pad003c[0x4]; // 0x3c
+            float m_flPhysicsRadius; // 0x3c            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_RebirthModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_RebirthModifier;

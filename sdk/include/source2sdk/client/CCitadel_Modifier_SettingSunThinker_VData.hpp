@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa00
+        // Size: 0xb00
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,24 +29,24 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_TargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle;
-            char m_TargetParticle[0xe0]; // 0x660            
+            char m_TargetParticle[0xe0]; // 0x760            
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x740            
+            char m_ExplodeParticle[0xe0]; // 0x840            
             // m_LingerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LingerParticle;
-            char m_LingerParticle[0xe0]; // 0x820            
+            char m_LingerParticle[0xe0]; // 0x920            
             // m_LayerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LayerParticle;
-            char m_LayerParticle[0xe0]; // 0x900            
+            char m_LayerParticle[0xe0]; // 0xa00            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strExplodeSound; // 0x9e0            
-            CSoundEventName m_strTargetingCompletedSound; // 0x9f0            
+            CSoundEventName m_strExplodeSound; // 0xae0            
+            CSoundEventName m_strTargetingCompletedSound; // 0xaf0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_SettingSunThinker_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_SettingSunThinker_VData) == 0xa00);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_SettingSunThinker_VData) == 0xb00);
     };
 };

@@ -14,10 +14,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xaf8
+        // Size: 0xaf0
         // Has VTable
         #pragma pack(push, 1)
         class CBaseProp : public source2sdk::server::CBaseAnimGraph
@@ -27,9 +27,8 @@ namespace source2sdk
             uint8_t _pad0ab9[0x3]; // 0xab9
             std::int32_t m_iShapeType; // 0xabc            
             bool m_bConformToCollisionBounds; // 0xac0            
-            uint8_t _pad0ac1[0x3]; // 0xac1
-            matrix3x4_t m_mPreferredCatchTransform; // 0xac4            
-            uint8_t _pad0af4[0x4];
+            uint8_t _pad0ac1[0xf]; // 0xac1
+            CTransform m_mPreferredCatchTransform; // 0xad0            
             
             // Datamap fields:
             // void health; // 0x7fffffff
@@ -39,6 +38,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CBaseProp because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CBaseProp) == 0xaf8);
+        static_assert(sizeof(source2sdk::server::CBaseProp) == 0xaf0);
     };
 };

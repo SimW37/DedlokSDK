@@ -128,6 +128,8 @@ namespace source2sdk
             // void m_ragdoll.list; // 0xac0
             // void m_ragdoll.hierarchyJoints; // 0xad8
             // bool m_ragdoll.allowStretch; // 0xb08
+            // float massScale; // 0x7fffffff
+            // float buoyancyscale; // 0x7fffffff
         };
         #pragma pack(pop)
         

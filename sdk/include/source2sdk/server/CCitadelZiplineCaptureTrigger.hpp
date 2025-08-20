@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9b0
+        // Size: 0x9f8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelZiplineCaptureTrigger : public source2sdk::server::CBaseTrigger
         {
         public:
-            uint8_t _pad0990[0x20];
+            uint8_t _pad09d8[0x20];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelZiplineCaptureTrigger) == 0x9b0);
+        static_assert(sizeof(source2sdk::server::CCitadelZiplineCaptureTrigger) == 0x9f8);
     };
 };

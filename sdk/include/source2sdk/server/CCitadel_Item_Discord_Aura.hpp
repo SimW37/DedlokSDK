@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1e0
+        // Size: 0x200
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Item_Discord_Aura : public source2sdk::server::CCitadelModifierAura
         {
         public:
-            uint8_t _pad00e0[0x100];
+            uint8_t _pad0100[0x100];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Item_Discord_Aura) == 0x1e0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Item_Discord_Aura) == 0x200);
     };
 };

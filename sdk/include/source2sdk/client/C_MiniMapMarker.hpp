@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x5e8
+        // Size: 0x5f0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EMiniMapMarkerType_t m_eType"
@@ -27,13 +27,13 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            source2sdk::client::EMiniMapMarkerType_t m_eType; // 0x5e0            
-            uint8_t _pad05e4[0x4];
+            source2sdk::client::EMiniMapMarkerType_t m_eType; // 0x5e8            
+            uint8_t _pad05ec[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_MiniMapMarker because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_MiniMapMarker) == 0x5e8);
+        static_assert(sizeof(source2sdk::client::C_MiniMapMarker) == 0x5f0);
     };
 };

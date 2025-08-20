@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcb0
+        // Size: 0xc98
         // Has VTable
         #pragma pack(push, 1)
         class C_WaterBullet : public source2sdk::client::CBaseAnimGraph
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::C_WaterBullet) == 0xcb0);
+        static_assert(sizeof(source2sdk::client::C_WaterBullet) == 0xc98);
     };
 };

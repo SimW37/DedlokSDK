@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x328
+        // Size: 0x320
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_UltimateBurst_Proc : public source2sdk::client::CCitadel_Modifier_BaseEventProc
@@ -33,12 +33,12 @@ namespace source2sdk
             // m_hHitTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_hHitTargets;
             char m_hHitTargets[0x18]; // 0x178            
-            uint8_t _pad0190[0x198];
+            uint8_t _pad0190[0x190];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_UltimateBurst_Proc because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_UltimateBurst_Proc) == 0x328);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_UltimateBurst_Proc) == 0x320);
     };
 };

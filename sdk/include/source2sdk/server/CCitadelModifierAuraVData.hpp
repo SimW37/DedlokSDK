@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x6b0
+        // Size: 0x7b0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,15 +28,15 @@ namespace source2sdk
         class CCitadelModifierAuraVData : public source2sdk::server::CModifierVData_BaseAura
         {
         public:
-            source2sdk::client::CITADEL_UNIT_TARGET_TYPE m_iAuraSearchType; // 0x6a0            
-            source2sdk::client::CITADEL_UNIT_TARGET_FLAGS m_iAuraSearchFlags; // 0x6a4            
-            source2sdk::client::ELOSCheck m_eLosCheck; // 0x6a8            
-            uint8_t _pad06ac[0x4];
+            source2sdk::client::CITADEL_UNIT_TARGET_TYPE m_iAuraSearchType; // 0x7a0            
+            source2sdk::client::CITADEL_UNIT_TARGET_FLAGS m_iAuraSearchFlags; // 0x7a4            
+            source2sdk::client::ELOSCheck m_eLosCheck; // 0x7a8            
+            uint8_t _pad07ac[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelModifierAuraVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelModifierAuraVData) == 0x6b0);
+        static_assert(sizeof(source2sdk::server::CCitadelModifierAuraVData) == 0x7b0);
     };
 };

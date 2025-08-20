@@ -25,24 +25,24 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x350
+        // Size: 0x358
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Chrono_KineticCarbine : public source2sdk::server::CCitadelModifier
         {
         public:
-            std::int32_t m_nBulletCount; // 0xc0            
-            float m_flElapsedPct; // 0xc4            
+            std::int32_t m_nBulletCount; // 0xc8            
+            float m_flElapsedPct; // 0xcc            
             // m_hTimeWarp has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelBulletTimeWarp> m_hTimeWarp;
-            char m_hTimeWarp[0x4]; // 0xc8            
-            source2sdk::client::ParticleIndex_t m_nFullyChargedParticle; // 0xcc            
-            uint8_t _pad00d0[0x280];
+            char m_hTimeWarp[0x4]; // 0xd0            
+            source2sdk::client::ParticleIndex_t m_nFullyChargedParticle; // 0xd4            
+            uint8_t _pad00d8[0x280];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Chrono_KineticCarbine because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Chrono_KineticCarbine) == 0x350);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Chrono_KineticCarbine) == 0x358);
     };
 };

@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa58
+        // Size: 0xac0
         // Has VTable
         #pragma pack(push, 1)
         class CProjectile_Perched_Predator : public source2sdk::server::CCitadelProjectile
@@ -32,13 +32,13 @@ namespace source2sdk
         public:
             // m_vecHitEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecHitEntities;
-            char m_vecHitEntities[0x18]; // 0x880            
-            uint8_t _pad0898[0x1c0];
+            char m_vecHitEntities[0x18]; // 0x8e8            
+            uint8_t _pad0900[0x1c0];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CProjectile_Perched_Predator because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CProjectile_Perched_Predator) == 0xa58);
+        static_assert(sizeof(source2sdk::server::CProjectile_Perched_Predator) == 0xac0);
     };
 };

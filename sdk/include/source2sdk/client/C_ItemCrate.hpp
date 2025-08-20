@@ -14,10 +14,10 @@ namespace source2sdk
 {
     namespace client
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xe70
+        // Size: 0xe60
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_iHealth"
@@ -28,13 +28,13 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            std::int32_t m_eLootType; // 0xe68            
-            uint8_t _pad0e6c[0x4];
+            std::int32_t m_eLootType; // 0xe50            
+            uint8_t _pad0e54[0xc];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_ItemCrate because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_ItemCrate) == 0xe70);
+        static_assert(sizeof(source2sdk::client::C_ItemCrate) == 0xe60);
     };
 };

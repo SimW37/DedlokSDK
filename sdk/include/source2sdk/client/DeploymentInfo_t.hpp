@@ -45,7 +45,9 @@ namespace source2sdk
             float m_flModelVerticalPlacementScaleOffset; // 0xc            
             // metadata: MPropertyDescription "If set, ignore LOS check if deploy target is below caster"
             bool m_bDownCheckIgnoreLos; // 0x10            
-            uint8_t _pad0011[0x7]; // 0x11
+            // metadata: MPropertyDescription "If set, uses wall placement rules"
+            bool m_bUseWallPlacement; // 0x11            
+            uint8_t _pad0012[0x6]; // 0x12
             // m_previewModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_previewModel;
             char m_previewModel[0xe0]; // 0x18            
@@ -74,6 +76,7 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::DeploymentInfo_t, m_bCheckPlayerFit) == 0xa);
         static_assert(offsetof(source2sdk::client::DeploymentInfo_t, m_flModelVerticalPlacementScaleOffset) == 0xc);
         static_assert(offsetof(source2sdk::client::DeploymentInfo_t, m_bDownCheckIgnoreLos) == 0x10);
+        static_assert(offsetof(source2sdk::client::DeploymentInfo_t, m_bUseWallPlacement) == 0x11);
         static_assert(offsetof(source2sdk::client::DeploymentInfo_t, m_previewModel) == 0x18);
         static_assert(offsetof(source2sdk::client::DeploymentInfo_t, m_previewParticle) == 0xf8);
         static_assert(offsetof(source2sdk::client::DeploymentInfo_t, m_strPreviewParticleEffectConfig) == 0x1d8);

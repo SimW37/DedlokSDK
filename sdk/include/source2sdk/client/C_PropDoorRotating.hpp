@@ -14,10 +14,10 @@ namespace source2sdk
 {
     namespace client
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xfb8
+        // Size: 0xfa0
         // Has VTable
         #pragma pack(push, 1)
         class C_PropDoorRotating : public source2sdk::client::C_BasePropDoor
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::C_PropDoorRotating) == 0xfb8);
+        static_assert(sizeof(source2sdk::client::C_PropDoorRotating) == 0xfa0);
     };
 };

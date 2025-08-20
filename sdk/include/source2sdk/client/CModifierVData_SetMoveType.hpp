@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x668
+        // Size: 0x768
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,13 +27,13 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyDescription "The move type to switch to.  Some move types will have weird behaviors when swapped to, ie: MOVETYPE_SYNC"
-            source2sdk::client::MoveType_t m_nMoveType; // 0x660            
-            uint8_t _pad0661[0x7];
+            source2sdk::client::MoveType_t m_nMoveType; // 0x760            
+            uint8_t _pad0761[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierVData_SetMoveType because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CModifierVData_SetMoveType) == 0x668);
+        static_assert(sizeof(source2sdk::client::CModifierVData_SetMoveType) == 0x768);
     };
 };

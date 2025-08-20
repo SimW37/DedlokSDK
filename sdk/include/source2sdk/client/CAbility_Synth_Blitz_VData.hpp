@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1730
+        // Size: 0x1728
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_BlitzModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BlitzModifier;
-            char m_BlitzModifier[0x10]; // 0x1620            
+            char m_BlitzModifier[0x10]; // 0x1618            
             // m_TechAmpModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_TechAmpModifier;
-            char m_TechAmpModifier[0x10]; // 0x1630            
+            char m_TechAmpModifier[0x10]; // 0x1628            
             // metadata: MPropertyStartGroup "Visuals"
             // m_SlowParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlowParticle;
-            char m_SlowParticle[0xe0]; // 0x1640            
+            char m_SlowParticle[0xe0]; // 0x1638            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strProcSound; // 0x1720            
+            CSoundEventName m_strProcSound; // 0x1718            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Synth_Blitz_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbility_Synth_Blitz_VData) == 0x1730);
+        static_assert(sizeof(source2sdk::client::CAbility_Synth_Blitz_VData) == 0x1728);
     };
 };

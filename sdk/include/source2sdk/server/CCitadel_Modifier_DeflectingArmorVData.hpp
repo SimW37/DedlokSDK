@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x760
+        // Size: 0x860
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x660            
+            char m_ImpactParticle[0xe0]; // 0x760            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strImpactSound; // 0x740            
-            CSoundEventName m_strProcDeflectionImpactSound; // 0x750            
+            CSoundEventName m_strImpactSound; // 0x840            
+            CSoundEventName m_strProcDeflectionImpactSound; // 0x850            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_DeflectingArmorVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_DeflectingArmorVData) == 0x760);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_DeflectingArmorVData) == 0x860);
     };
 };

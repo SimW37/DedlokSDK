@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcb8
+        // Size: 0xcb0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_IceGrenade : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            Vector m_vLaunchPosition; // 0xba0            
-            QAngle m_qLaunchAngle; // 0xbac            
-            uint8_t _pad0bb8[0x100];
+            Vector m_vLaunchPosition; // 0xb98            
+            QAngle m_qLaunchAngle; // 0xba4            
+            uint8_t _pad0bb0[0x100];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_IceGrenade because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_IceGrenade) == 0xcb8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_IceGrenade) == 0xcb0);
     };
 };

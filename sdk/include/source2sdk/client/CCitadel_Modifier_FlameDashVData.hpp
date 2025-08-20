@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x840
+        // Size: 0x940
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,22 +30,22 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_GroundAuraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_GroundAuraModifier;
-            char m_GroundAuraModifier[0x10]; // 0x660            
+            char m_GroundAuraModifier[0x10]; // 0x760            
             // m_ProgressModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ProgressModifier;
-            char m_ProgressModifier[0x10]; // 0x670            
+            char m_ProgressModifier[0x10]; // 0x770            
             // metadata: MPropertyStartGroup "Visuals"
             // m_FlameDashParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FlameDashParticle;
-            char m_FlameDashParticle[0xe0]; // 0x680            
+            char m_FlameDashParticle[0xe0]; // 0x780            
             // m_FlameAuraParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FlameAuraParticle;
-            char m_FlameAuraParticle[0xe0]; // 0x760            
+            char m_FlameAuraParticle[0xe0]; // 0x860            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_FlameDashVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_FlameDashVData) == 0x840);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_FlameDashVData) == 0x940);
     };
 };

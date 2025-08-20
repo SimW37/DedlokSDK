@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x6a0
+        // Size: 0x7a0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,22 +27,22 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyGroupName "Sounds"
-            CSoundEventName m_strSilenceTargetSound; // 0x660            
+            CSoundEventName m_strSilenceTargetSound; // 0x760            
             // metadata: MPropertyGroupName "Modifiers"
             // m_SilenceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SilenceModifier;
-            char m_SilenceModifier[0x10]; // 0x670            
+            char m_SilenceModifier[0x10]; // 0x770            
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x680            
+            char m_SlowModifier[0x10]; // 0x780            
             // m_BulletResistModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BulletResistModifier;
-            char m_BulletResistModifier[0x10]; // 0x690            
+            char m_BulletResistModifier[0x10]; // 0x790            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierAirLiftExplodeTargetVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CModifierAirLiftExplodeTargetVData) == 0x6a0);
+        static_assert(sizeof(source2sdk::client::CModifierAirLiftExplodeTargetVData) == 0x7a0);
     };
 };

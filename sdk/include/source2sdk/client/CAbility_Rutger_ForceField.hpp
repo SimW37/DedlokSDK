@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf80
+        // Size: 0xf48
         // Has VTable
         #pragma pack(push, 1)
         class CAbility_Rutger_ForceField : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0dc0[0x1c0];
+            uint8_t _pad0d88[0x1c0];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CAbility_Rutger_ForceField) == 0xf80);
+        static_assert(sizeof(source2sdk::client::CAbility_Rutger_ForceField) == 0xf48);
     };
 };

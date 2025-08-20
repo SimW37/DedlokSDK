@@ -23,12 +23,12 @@ namespace source2sdk
         {
         public:
             uint8_t _pad0000[0x5918]; // 0x0
-            float m_flNavMaxDetour; // 0x5918            
+            float m_flPathMaxDetour; // 0x5918            
             uint8_t _pad591c[0x14];
         };
         #pragma pack(pop)
         
-        static_assert(offsetof(source2sdk::server::CAI_Pathfinder, m_flNavMaxDetour) == 0x5918);
+        static_assert(offsetof(source2sdk::server::CAI_Pathfinder, m_flPathMaxDetour) == 0x5918);
         
         static_assert(sizeof(source2sdk::server::CAI_Pathfinder) == 0x5930);
     };

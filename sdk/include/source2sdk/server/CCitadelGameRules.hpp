@@ -37,7 +37,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x2898
+        // Size: 0x2840
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bFreezePeriod"
@@ -64,6 +64,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "ECitadelMatchMode m_eMatchMode"
         // static metadata: MNetworkVarNames "ECitadelGameMode m_eGameMode"
         // static metadata: MNetworkVarNames "uint32 m_unSpectatorCount"
+        // static metadata: MNetworkVarNames "AccountID_t m_nHideoutOwner"
         // static metadata: MNetworkVarNames "CHandle<CCitadelTrooperMinimap> m_hTrooperMinimap"
         // static metadata: MNetworkVarNames "EHANDLE m_hCurrentHeroDrafterRebels"
         // static metadata: MNetworkVarNames "EHANDLE m_hCurrentHeroDrafterCombine"
@@ -138,23 +139,25 @@ namespace source2sdk
             // metadata: MNetworkEnable
             std::uint32_t m_unSpectatorCount; // 0x118            
             // metadata: MNetworkEnable
+            std::uint32_t m_nHideoutOwner; // 0x11c            
+            // metadata: MNetworkEnable
             // m_hTrooperMinimap has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelTrooperMinimap> m_hTrooperMinimap;
-            char m_hTrooperMinimap[0x4]; // 0x11c            
+            char m_hTrooperMinimap[0x4]; // 0x120            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
             // m_hCurrentHeroDrafterRebels has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hCurrentHeroDrafterRebels;
-            char m_hCurrentHeroDrafterRebels[0x4]; // 0x120            
+            char m_hCurrentHeroDrafterRebels[0x4]; // 0x124            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
             // m_hCurrentHeroDrafterCombine has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hCurrentHeroDrafterCombine;
-            char m_hCurrentHeroDrafterCombine[0x4]; // 0x124            
-            bool m_bDontUploadStats; // 0x128            
-            uint8_t _pad0129[0x3]; // 0x129
-            std::int32_t m_iWinningTeam; // 0x12c            
-            uint8_t _pad0130[0x70]; // 0x130
+            char m_hCurrentHeroDrafterCombine[0x4]; // 0x128            
+            bool m_bDontUploadStats; // 0x12c            
+            uint8_t _pad012d[0x3]; // 0x12d
+            std::int32_t m_iWinningTeam; // 0x130            
+            uint8_t _pad0134[0x6c]; // 0x134
             bool m_bSpawnedBots; // 0x1a0            
             bool m_bGuideBotAssigned; // 0x1a1            
             uint8_t _pad01a2[0x2]; // 0x1a2
@@ -162,61 +165,61 @@ namespace source2sdk
             bool m_bNotifiedClientsOfNextCrateSpawn; // 0x1a8            
             bool m_bEarlyCratesSpawned; // 0x1a9            
             bool m_bIsEarlyCrateGamestate; // 0x1aa            
-            uint8_t _pad01ab[0x2a5]; // 0x1ab
-            source2sdk::entity2::GameTime_t m_flGameTimeAllPlayersDisconnected; // 0x450            
-            std::int32_t m_nNextHeroDraftPosition; // 0x454            
-            uint8_t _pad0458[0x1268]; // 0x458
-            source2sdk::server::CountdownTimer m_CheckIdleTimer; // 0x16c0            
-            source2sdk::server::CountdownTimer m_CheckCheatersTimer; // 0x16d8            
-            uint8_t _pad16f0[0x100]; // 0x16f0
+            uint8_t _pad01ab[0x26d]; // 0x1ab
+            source2sdk::entity2::GameTime_t m_flGameTimeAllPlayersDisconnected; // 0x418            
+            std::int32_t m_nNextHeroDraftPosition; // 0x41c            
+            uint8_t _pad0420[0x1248]; // 0x420
+            source2sdk::server::CountdownTimer m_CheckIdleTimer; // 0x1668            
+            source2sdk::server::CountdownTimer m_CheckCheatersTimer; // 0x1680            
+            uint8_t _pad1698[0x100]; // 0x1698
             // metadata: MNetworkEnable
-            std::int32_t m_iAmberRejuvCount; // 0x17f0            
+            std::int32_t m_iAmberRejuvCount; // 0x1798            
             // metadata: MNetworkEnable
-            std::int32_t m_iSapphireRejuvCount; // 0x17f4            
-            uint8_t _pad17f8[0xfc0]; // 0x17f8
+            std::int32_t m_iSapphireRejuvCount; // 0x179c            
+            uint8_t _pad17a0[0xfc0]; // 0x17a0
             // metadata: MNetworkEnable
-            bool m_bServerPaused; // 0x27b8            
-            uint8_t _pad27b9[0x3]; // 0x27b9
+            bool m_bServerPaused; // 0x2760            
+            uint8_t _pad2761[0x3]; // 0x2761
             // metadata: MNetworkEnable
-            std::int32_t m_iPauseTeam; // 0x27bc            
+            std::int32_t m_iPauseTeam; // 0x2764            
             // metadata: MNetworkEnable
-            std::int32_t m_nMatchClockUpdateTick; // 0x27c0            
+            std::int32_t m_nMatchClockUpdateTick; // 0x2768            
             // metadata: MNetworkEnable
-            float m_flMatchClockAtLastUpdate; // 0x27c4            
-            double m_flPauseTime; // 0x27c8            
-            CPlayerSlot m_pausingPlayerId; // 0x27d0            
-            CPlayerSlot m_unpausingPlayerId; // 0x27d4            
-            float m_fPauseRawTime; // 0x27d8            
-            float m_fPauseCurTime; // 0x27dc            
-            float m_fUnpauseRawTime; // 0x27e0            
-            float m_fUnpauseCurTime; // 0x27e4            
-            uint8_t _pad27e8[0x50]; // 0x27e8
+            float m_flMatchClockAtLastUpdate; // 0x276c            
+            double m_flPauseTime; // 0x2770            
+            CPlayerSlot m_pausingPlayerId; // 0x2778            
+            CPlayerSlot m_unpausingPlayerId; // 0x277c            
+            float m_fPauseRawTime; // 0x2780            
+            float m_fPauseCurTime; // 0x2784            
+            float m_fUnpauseRawTime; // 0x2788            
+            float m_fUnpauseCurTime; // 0x278c            
+            uint8_t _pad2790[0x50]; // 0x2790
             // metadata: MNetworkEnable
-            bool m_bRequiresReportCardDismissal; // 0x2838            
-            uint8_t _pad2839[0x3]; // 0x2839
-            source2sdk::entity2::GameTime_t m_flPreGameWaitEndTime; // 0x283c            
-            source2sdk::entity2::GameTime_t m_flReportCardDismissalWaitStart; // 0x2840            
-            std::int32_t m_nLastPreGameCount; // 0x2844            
+            bool m_bRequiresReportCardDismissal; // 0x27e0            
+            uint8_t _pad27e1[0x3]; // 0x27e1
+            source2sdk::entity2::GameTime_t m_flPreGameWaitEndTime; // 0x27e4            
+            source2sdk::entity2::GameTime_t m_flReportCardDismissalWaitStart; // 0x27e8            
+            std::int32_t m_nLastPreGameCount; // 0x27ec            
             // metadata: MNetworkEnable
-            std::int32_t m_eGGTeam; // 0x2848            
+            std::int32_t m_eGGTeam; // 0x27f0            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flGGEndsAtTime; // 0x284c            
+            source2sdk::entity2::GameTime_t m_flGGEndsAtTime; // 0x27f4            
             // metadata: MNetworkEnable
-            source2sdk::client::MatchID_t m_unMatchID; // 0x2850            
+            source2sdk::client::MatchID_t m_unMatchID; // 0x27f8            
             // metadata: MNetworkEnable
-            CUtlString m_sGameplayExperiment; // 0x2858            
-            std::int32_t m_nPlayerDeathEventID; // 0x2860            
-            std::int32_t m_nReplayChangedEvent; // 0x2864            
-            std::int32_t m_nGameOverEvent; // 0x2868            
-            uint8_t _pad286c[0x24]; // 0x286c
+            CUtlString m_sGameplayExperiment; // 0x2800            
+            std::int32_t m_nPlayerDeathEventID; // 0x2808            
+            std::int32_t m_nReplayChangedEvent; // 0x280c            
+            std::int32_t m_nGameOverEvent; // 0x2810            
+            uint8_t _pad2814[0x24]; // 0x2814
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flHeroDiedTime; // 0x2890            
-            uint8_t _pad2894[0x4];
+            source2sdk::entity2::GameTime_t m_flHeroDiedTime; // 0x2838            
+            uint8_t _pad283c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelGameRules because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelGameRules) == 0x2898);
+        static_assert(sizeof(source2sdk::server::CCitadelGameRules) == 0x2840);
     };
 };

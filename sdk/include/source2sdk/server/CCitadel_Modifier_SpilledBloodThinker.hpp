@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc8
+        // Size: 0xd0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_SpilledBloodThinker : public source2sdk::server::CCitadelModifier
         {
         public:
-            float m_flRadius; // 0xc0            
-            float m_flDPS; // 0xc4            
+            float m_flRadius; // 0xc8            
+            float m_flDPS; // 0xcc            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_SpilledBloodThinker because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_SpilledBloodThinker) == 0xc8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_SpilledBloodThinker) == 0xd0);
     };
 };

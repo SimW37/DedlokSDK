@@ -23,7 +23,7 @@ namespace source2sdk
         class CCitadel_Modifier_ItemWalkBack : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x5920];
+            uint8_t _pad00c8[0x5918];
             // No schema binary for binding
         };
         #pragma pack(pop)

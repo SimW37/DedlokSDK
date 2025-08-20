@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1708
+        // Size: 0x16c8
         // Has VTable
         #pragma pack(push, 1)
         class C_NPC_CarpetBombDrone : public source2sdk::client::C_AI_CitadelNPC
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::C_NPC_CarpetBombDrone) == 0x1708);
+        static_assert(sizeof(source2sdk::client::C_NPC_CarpetBombDrone) == 0x16c8);
     };
 };

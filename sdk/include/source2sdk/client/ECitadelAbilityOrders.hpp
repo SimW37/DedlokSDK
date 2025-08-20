@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 58
+        // Enumerator count: 63
         // Alignment: 4
         // Size: 0x4
         enum class ECitadelAbilityOrders : std::uint32_t
@@ -70,12 +70,17 @@ namespace source2sdk
             ECitadelAbilityOrder_Invalid_NothingToRefresh = 0x31,
             ECitadelAbilityOrder_Invalid_BeetleTarget = 0x32,
             ECitadelAbilityOrder_Invalid_ClipIsFull = 0x33,
-            ECitadelAbilityOrder_Invalid_DashJumpFailed = 0x34,
-            ECitadelAbilityOrder_DebugCommand_RequiresHeroTarget = 0x35,
-            ECitadelAbilityOrder_Invalid_NotEnoughAbilityResource = 0x36,
-            ECitadelAbilityOrder_Invalid_NotEnoughHeadRoom = 0x37,
-            ECitadelAbilityOrder_Invalid_NoDamageToClear = 0x38,
-            ECitadelAbilityOrder_Max = 0x39,
+            ECitadelAbilityOrder_Invalid_DashJumpFailed_NeedsStamina = 0x34,
+            ECitadelAbilityOrder_Invalid_DashJumpFailed_JumpedEarly = 0x35,
+            ECitadelAbilityOrder_Invalid_DashJumpFailed_JumpedLate = 0x36,
+            ECitadelAbilityOrder_Invalid_DashJumpFailed_AlreadyAttempted = 0x37,
+            ECitadelAbilityOrder_DebugCommand_RequiresHeroTarget = 0x38,
+            ECitadelAbilityOrder_Invalid_NotEnoughAbilityResource = 0x39,
+            ECitadelAbilityOrder_Invalid_NotEnoughHeadRoom = 0x3a,
+            ECitadelAbilityOrder_Invalid_NoDamageToClear = 0x3b,
+            ECitadelAbilityOrder_Invalid_OtherDoorTooFar = 0x3c,
+            ECitadelAbilityOrder_Invalid_UnableToTeleport = 0x3d,
+            ECitadelAbilityOrder_Max = 0x3e,
         };
     };
 };

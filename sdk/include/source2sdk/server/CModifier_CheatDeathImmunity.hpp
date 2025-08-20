@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd8
+        // Size: 0xe0
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_CheatDeathImmunity : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x18];
+            uint8_t _pad00c8[0x18];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CModifier_CheatDeathImmunity) == 0xd8);
+        static_assert(sizeof(source2sdk::server::CModifier_CheatDeathImmunity) == 0xe0);
     };
 };

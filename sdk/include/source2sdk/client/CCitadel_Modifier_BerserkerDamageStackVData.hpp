@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x820
+        // Size: 0x920
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_BuffStatusParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffStatusParticle;
-            char m_BuffStatusParticle[0xe0]; // 0x660            
+            char m_BuffStatusParticle[0xe0]; // 0x760            
             // m_BuffStatusParticleEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffStatusParticleEnemy;
-            char m_BuffStatusParticleEnemy[0xe0]; // 0x740            
+            char m_BuffStatusParticleEnemy[0xe0]; // 0x840            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_BerserkerDamageStackVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_BerserkerDamageStackVData) == 0x820);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_BerserkerDamageStackVData) == 0x920);
     };
 };

@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x500
+        // Size: 0x510
         // Has VTable
         #pragma pack(push, 1)
         class CInfoTrooperSpawn : public source2sdk::server::CServerOnlyPointEntity
         {
         public:
-            std::int32_t m_iLane; // 0x4e0            
-            uint8_t _pad04e4[0x1c];
+            std::int32_t m_iLane; // 0x4f0            
+            uint8_t _pad04f4[0x1c];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CInfoTrooperSpawn because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CInfoTrooperSpawn) == 0x500);
+        static_assert(sizeof(source2sdk::server::CInfoTrooperSpawn) == 0x510);
     };
 };

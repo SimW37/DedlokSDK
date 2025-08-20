@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1d8
+        // Size: 0x1e0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_ModDisruptor : public source2sdk::server::CCitadel_Modifier_Silenced
         {
         public:
-            uint8_t _pad00d8[0x100];
+            uint8_t _pad00e0[0x100];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ModDisruptor) == 0x1d8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ModDisruptor) == 0x1e0);
     };
 };

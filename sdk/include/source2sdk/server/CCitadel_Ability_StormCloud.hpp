@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd70
+        // Size: 0xd68
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flFloat"
@@ -27,17 +27,17 @@ namespace source2sdk
         class CCitadel_Ability_StormCloud : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            source2sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0xba0            
-            uint8_t _pad0ba4[0x1c4]; // 0xba4
+            source2sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0xb98            
+            uint8_t _pad0b9c[0x1c4]; // 0xb9c
             // metadata: MNetworkEnable
-            float m_flFloat; // 0xd68            
+            float m_flFloat; // 0xd60            
             // metadata: MNetworkEnable
-            std::int32_t m_nLightningStrikesRemaining; // 0xd6c            
+            std::int32_t m_nLightningStrikesRemaining; // 0xd64            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_StormCloud because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_StormCloud) == 0xd70);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_StormCloud) == 0xd68);
     };
 };

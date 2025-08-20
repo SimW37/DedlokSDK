@@ -15,10 +15,10 @@ namespace source2sdk
 {
     namespace client
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xef0
+        // Size: 0xee0
         // Has VTable
         // 
         // static metadata: MNetworkExcludeByName "m_hModel"
@@ -27,14 +27,15 @@ namespace source2sdk
         class C_ShatterGlassShardPhysics : public source2sdk::client::C_PhysicsProp
         {
         public:
-            uint8_t _pad0e68[0x8]; // 0xe68
+            uint8_t _pad0e50[0x8]; // 0xe50
             // metadata: MNetworkEnable
-            source2sdk::client::shard_model_desc_t m_ShardDesc; // 0xe70            
+            source2sdk::client::shard_model_desc_t m_ShardDesc; // 0xe58            
+            uint8_t _pad0ed8[0x8];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_ShatterGlassShardPhysics because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_ShatterGlassShardPhysics) == 0xef0);
+        static_assert(sizeof(source2sdk::client::C_ShatterGlassShardPhysics) == 0xee0);
     };
 };

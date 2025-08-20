@@ -24,7 +24,7 @@ namespace source2sdk
         class CCitadel_Modifier_StatStealBase : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0xd8];
+            uint8_t _pad00c8[0xd0];
             // No schema binary for binding
         };
         #pragma pack(pop)

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcc8
+        // Size: 0xca8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
@@ -31,20 +31,20 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
             // metadata: MNetworkAlias "CCitadelMinimapComponent"
             // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xc50            
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xc30            
             // metadata: MNetworkEnable
-            float m_flAttackRange; // 0xc68            
-            float m_flAttackCone; // 0xc6c            
-            float m_flLifeTime; // 0xc70            
-            float m_flTrackingSpeed; // 0xc74            
-            float m_flDeployTime; // 0xc78            
-            float m_flAttackDelay; // 0xc7c            
-            uint8_t _pad0c80[0x48];
+            float m_flAttackRange; // 0xc48            
+            float m_flAttackCone; // 0xc4c            
+            float m_flLifeTime; // 0xc50            
+            float m_flTrackingSpeed; // 0xc54            
+            float m_flDeployTime; // 0xc58            
+            float m_flAttackDelay; // 0xc5c            
+            uint8_t _pad0c60[0x48];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_ShieldedSentry because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_ShieldedSentry) == 0xcc8);
+        static_assert(sizeof(source2sdk::server::CNPC_ShieldedSentry) == 0xca8);
     };
 };

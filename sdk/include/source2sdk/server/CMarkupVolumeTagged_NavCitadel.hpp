@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x838
+        // Size: 0x870
         // Has VTable
         #pragma pack(push, 1)
         class CMarkupVolumeTagged_NavCitadel : public source2sdk::server::CMarkupVolumeWithRef
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CMarkupVolumeTagged_NavCitadel) == 0x838);
+        static_assert(sizeof(source2sdk::server::CMarkupVolumeTagged_NavCitadel) == 0x870);
     };
 };

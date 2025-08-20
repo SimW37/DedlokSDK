@@ -28,6 +28,8 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Visuals"
+            float m_LaunchAngle; // 0x1618            
+            uint8_t _pad161c[0x4]; // 0x161c
             // m_ExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle;
             char m_ExplosionParticle[0xe0]; // 0x1620            

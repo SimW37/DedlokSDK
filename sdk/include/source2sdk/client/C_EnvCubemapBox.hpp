@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x6c8
+        // Size: 0x6d0
         // Has VTable
         #pragma pack(push, 1)
         class C_EnvCubemapBox : public source2sdk::client::C_EnvCubemap
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::C_EnvCubemapBox) == 0x6c8);
+        static_assert(sizeof(source2sdk::client::C_EnvCubemapBox) == 0x6d0);
     };
 };

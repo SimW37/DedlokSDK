@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x6f0
+        // Size: 0x7f0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,33 +27,33 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_TetherSound; // 0x660            
-            CSoundEventName m_HealSound; // 0x670            
-            CSoundEventName m_HitIndicator; // 0x680            
-            CSoundEventName m_GrappleHitSound; // 0x690            
+            CSoundEventName m_TetherSound; // 0x760            
+            CSoundEventName m_HealSound; // 0x770            
+            CSoundEventName m_HitIndicator; // 0x780            
+            CSoundEventName m_GrappleHitSound; // 0x790            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x6a0            
+            char m_BuffModifier[0x10]; // 0x7a0            
             // m_DisconnectingModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DisconnectingModifier;
-            char m_DisconnectingModifier[0x10]; // 0x6b0            
+            char m_DisconnectingModifier[0x10]; // 0x7b0            
             // m_DisconnectedModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DisconnectedModifier;
-            char m_DisconnectedModifier[0x10]; // 0x6c0            
+            char m_DisconnectedModifier[0x10]; // 0x7c0            
             // m_LockedTargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_LockedTargetModifier;
-            char m_LockedTargetModifier[0x10]; // 0x6d0            
+            char m_LockedTargetModifier[0x10]; // 0x7d0            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flMinConnectTime; // 0x6e0            
-            float m_flDisconnectDistanceBuffer; // 0x6e4            
-            float m_flCandidateCloserDistance; // 0x6e8            
-            float m_flTargetAwayDistance; // 0x6ec            
+            float m_flMinConnectTime; // 0x7e0            
+            float m_flDisconnectDistanceBuffer; // 0x7e4            
+            float m_flCandidateCloserDistance; // 0x7e8            
+            float m_flTargetAwayDistance; // 0x7ec            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_TangoTether_TetherVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TangoTether_TetherVData) == 0x6f0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TangoTether_TetherVData) == 0x7f0);
     };
 };

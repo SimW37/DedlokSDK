@@ -17,22 +17,22 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x160
+        // Size: 0x168
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_FireBomb : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x80]; // 0xc0
-            float m_flSideMoveSpeed; // 0x140            
-            Vector m_vReturnPosition; // 0x144            
-            QAngle m_vReturnAngles; // 0x150            
-            uint8_t _pad015c[0x4];
+            uint8_t _pad00c8[0x80]; // 0xc8
+            float m_flSideMoveSpeed; // 0x148            
+            Vector m_vReturnPosition; // 0x14c            
+            QAngle m_vReturnAngles; // 0x158            
+            uint8_t _pad0164[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_FireBomb because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_FireBomb) == 0x160);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_FireBomb) == 0x168);
     };
 };

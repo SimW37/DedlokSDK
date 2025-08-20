@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1e0
+        // Size: 0x1e8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_CritShot : public source2sdk::server::CCitadel_Modifier_BaseBulletPreRollProc
         {
         public:
-            source2sdk::client::ShotID_t m_iShotID; // 0x198            
-            uint8_t _pad019c[0x44];
+            source2sdk::client::ShotID_t m_iShotID; // 0x1a0            
+            uint8_t _pad01a4[0x44];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_CritShot because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_CritShot) == 0x1e0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_CritShot) == 0x1e8);
     };
 };

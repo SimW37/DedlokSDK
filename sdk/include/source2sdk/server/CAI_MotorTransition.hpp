@@ -30,7 +30,8 @@ namespace source2sdk
             Vector m_vNavLinkStartPos; // 0x4c            
             source2sdk::entity2::GameTime_t m_flNavLinkFaceStartTime; // 0x58            
             bool m_bTransitionAnimgraphHasTicked; // 0x5c            
-            uint8_t _pad005d[0x3]; // 0x5d
+            bool m_bIsTurning; // 0x5d            
+            uint8_t _pad005e[0x2]; // 0x5e
             CGlobalSymbol m_strMovementName; // 0x60            
         };
         #pragma pack(pop)

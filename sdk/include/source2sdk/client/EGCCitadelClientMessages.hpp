@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 135
+        // Enumerator count: 152
         // Alignment: 4
         // Size: 0x4
         enum class EGCCitadelClientMessages : std::uint32_t
@@ -115,8 +115,6 @@ namespace source2sdk
             k_EMsgClientToGCGetFriendGameStatusResponse = 0x23fe,
             k_EMsgClientToGCUpdateHeroBuildPreference = 0x23ff,
             k_EMsgClientToGCUpdateHeroBuildPreferenceResponse = 0x2400,
-            k_EMsgClientToGCGetOldHeroBuildData = 0x2401,
-            k_EMsgClientToGCGetOldHeroBuildDataResponse = 0x2402,
             k_EMsgClientToGCUpdateSpectatorStatus = 0x2403,
             k_EMsgClientToGCCommendPlayerFromMatch = 0x2407,
             k_EMsgClientToGCCommendPlayerFromMatchResponse = 0x2408,
@@ -149,10 +147,29 @@ namespace source2sdk
             k_EMsgClientToGCTarotDevGenerateTestTilesResponse = 0x2428,
             k_EMsgClientToGCTarotDevModifyEnergy = 0x2429,
             k_EMsgClientToGCTarotDevModifyEnergyResponse = 0x242a,
+            k_EMsgClientToGCGenerateChallengeSet = 0x242b,
+            k_EMsgClientToGCGenerateChallengeSetResponse = 0x242c,
+            k_EMsgClientToGCChallengeActivate = 0x242d,
+            k_EMsgClientToGCChallengeActivateResponse = 0x242e,
+            k_EMsgClientToGCChallengeClaim = 0x242f,
+            k_EMsgClientToGCChallengeClaimResponse = 0x2430,
+            k_EMsgClientToGCChallengeCancel = 0x2431,
+            k_EMsgClientToGCChallengeCancelResponse = 0x2432,
             k_EMsgClientToGCGetSurveyQuestion = 0x2433,
             k_EMsgClientToGCGetSurveyQuestionResponse = 0x2434,
             k_EMsgClientToGCSubmitSurvey = 0x2435,
             k_EMsgClientToGCSubmitSurveyResponse = 0x2436,
+            k_EMsgClientToGCGetRankData = 0x2437,
+            k_EMsgGCToClientGetRankDataResponse = 0x2438,
+            k_EMsgGCToClientRankDataUpdate = 0x2439,
+            k_EMsgClientToGCGetHideoutSDRTicket = 0x243a,
+            k_EMsgClientToGCGetHideoutSDRTicketResponse = 0x243b,
+            k_EMsgClientToGCSubmitHeroReleaseVote = 0x243c,
+            k_EMsgClientToGCPartySendChatMsg = 0x243d,
+            k_EMsgClientToGCPartySendChatMsgResponse = 0x243e,
+            k_EMsgGCToClientPartyChatMsg = 0x243f,
+            k_EMsgClientToGCRequestHeroReleaseVoteStatus = 0x2440,
+            k_EMsgGCToClientUpdateHeroReleaseVoteStatus = 0x2441,
         };
     };
 };

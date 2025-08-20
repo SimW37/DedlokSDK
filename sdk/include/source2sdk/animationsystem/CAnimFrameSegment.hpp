@@ -16,7 +16,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0x28
+        // Size: 0x20
         // 
         // static metadata: MGetKV3ClassDefaults
         #pragma pack(push, 1)
@@ -36,6 +36,6 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::animationsystem::CAnimFrameSegment, m_nLocalChannel) == 0x8);
         static_assert(offsetof(source2sdk::animationsystem::CAnimFrameSegment, m_container) == 0x10);
         
-        static_assert(sizeof(source2sdk::animationsystem::CAnimFrameSegment) == 0x28);
+        static_assert(sizeof(source2sdk::animationsystem::CAnimFrameSegment) == 0x20);
     };
 };

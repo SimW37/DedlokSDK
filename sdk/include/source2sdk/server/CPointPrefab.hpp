@@ -17,27 +17,27 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x548
+        // Size: 0x558
         // Has VTable
         #pragma pack(push, 1)
         class CPointPrefab : public source2sdk::server::CServerOnlyPointEntity
         {
         public:
-            CUtlSymbolLarge m_targetMapName; // 0x4e0            
-            CUtlSymbolLarge m_forceWorldGroupID; // 0x4e8            
-            CUtlSymbolLarge m_associatedRelayTargetName; // 0x4f0            
-            bool m_fixupNames; // 0x4f8            
-            bool m_bLoadDynamic; // 0x4f9            
-            uint8_t _pad04fa[0x2]; // 0x4fa
+            CUtlSymbolLarge m_targetMapName; // 0x4f0            
+            CUtlSymbolLarge m_forceWorldGroupID; // 0x4f8            
+            CUtlSymbolLarge m_associatedRelayTargetName; // 0x500            
+            bool m_fixupNames; // 0x508            
+            bool m_bLoadDynamic; // 0x509            
+            uint8_t _pad050a[0x2]; // 0x50a
             // m_associatedRelayEntity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CPointPrefab> m_associatedRelayEntity;
-            char m_associatedRelayEntity[0x4]; // 0x4fc            
-            uint8_t _pad0500[0x48];
+            char m_associatedRelayEntity[0x4]; // 0x50c            
+            uint8_t _pad0510[0x48];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CPointPrefab because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPointPrefab) == 0x548);
+        static_assert(sizeof(source2sdk::server::CPointPrefab) == 0x558);
     };
 };

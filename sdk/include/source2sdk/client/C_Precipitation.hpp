@@ -18,29 +18,29 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb38
+        // Size: 0xb60
         // Has VTable
         #pragma pack(push, 1)
         class C_Precipitation : public source2sdk::client::C_BaseTrigger
         {
         public:
-            float m_flDensity; // 0xae8            
-            uint8_t _pad0aec[0xc]; // 0xaec
-            float m_flParticleInnerDist; // 0xaf8            
-            uint8_t _pad0afc[0x4]; // 0xafc
-            char* m_pParticleDef; // 0xb00            
-            uint8_t _pad0b08[0x20]; // 0xb08
-            source2sdk::client::TimedEvent m_tParticlePrecipTraceTimer[1]; // 0xb28            
-            bool m_bActiveParticlePrecipEmitter[1]; // 0xb30            
-            bool m_bParticlePrecipInitialized; // 0xb31            
-            bool m_bHasSimulatedSinceLastSceneObjectUpdate; // 0xb32            
-            uint8_t _pad0b33[0x1]; // 0xb33
-            std::int32_t m_nAvailableSheetSequencesMaxIndex; // 0xb34            
+            float m_flDensity; // 0xb10            
+            uint8_t _pad0b14[0xc]; // 0xb14
+            float m_flParticleInnerDist; // 0xb20            
+            uint8_t _pad0b24[0x4]; // 0xb24
+            char* m_pParticleDef; // 0xb28            
+            uint8_t _pad0b30[0x20]; // 0xb30
+            source2sdk::client::TimedEvent m_tParticlePrecipTraceTimer[1]; // 0xb50            
+            bool m_bActiveParticlePrecipEmitter[1]; // 0xb58            
+            bool m_bParticlePrecipInitialized; // 0xb59            
+            bool m_bHasSimulatedSinceLastSceneObjectUpdate; // 0xb5a            
+            uint8_t _pad0b5b[0x1]; // 0xb5b
+            std::int32_t m_nAvailableSheetSequencesMaxIndex; // 0xb5c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_Precipitation because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_Precipitation) == 0xb38);
+        static_assert(sizeof(source2sdk::client::C_Precipitation) == 0xb60);
     };
 };

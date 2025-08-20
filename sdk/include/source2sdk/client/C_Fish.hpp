@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xda0
+        // Size: 0xd88
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_nModelIndex"
@@ -33,38 +33,38 @@ namespace source2sdk
         class C_Fish : public source2sdk::client::CBaseAnimGraph
         {
         public:
-            Vector m_pos; // 0xcb0            
-            Vector m_vel; // 0xcbc            
-            QAngle m_angles; // 0xcc8            
-            std::int32_t m_localLifeState; // 0xcd4            
-            float m_deathDepth; // 0xcd8            
-            float m_deathAngle; // 0xcdc            
-            float m_buoyancy; // 0xce0            
-            uint8_t _pad0ce4[0x4]; // 0xce4
-            source2sdk::client::CountdownTimer m_wiggleTimer; // 0xce8            
-            float m_wigglePhase; // 0xd00            
-            float m_wiggleRate; // 0xd04            
-            Vector m_actualPos; // 0xd08            
-            QAngle m_actualAngles; // 0xd14            
+            Vector m_pos; // 0xc98            
+            Vector m_vel; // 0xca4            
+            QAngle m_angles; // 0xcb0            
+            std::int32_t m_localLifeState; // 0xcbc            
+            float m_deathDepth; // 0xcc0            
+            float m_deathAngle; // 0xcc4            
+            float m_buoyancy; // 0xcc8            
+            uint8_t _pad0ccc[0x4]; // 0xccc
+            source2sdk::client::CountdownTimer m_wiggleTimer; // 0xcd0            
+            float m_wigglePhase; // 0xce8            
+            float m_wiggleRate; // 0xcec            
+            Vector m_actualPos; // 0xcf0            
+            QAngle m_actualAngles; // 0xcfc            
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord"
-            Vector m_poolOrigin; // 0xd20            
+            Vector m_poolOrigin; // 0xd08            
             // metadata: MNetworkEnable
-            float m_waterLevel; // 0xd2c            
-            bool m_gotUpdate; // 0xd30            
-            uint8_t _pad0d31[0x3]; // 0xd31
+            float m_waterLevel; // 0xd14            
+            bool m_gotUpdate; // 0xd18            
+            uint8_t _pad0d19[0x3]; // 0xd19
             // metadata: MNetworkEnable
             // metadata: MNetworkSerializer "fish_pos_x"
             // metadata: MNetworkChangeCallback "OnPosChanged"
-            float m_x; // 0xd34            
+            float m_x; // 0xd1c            
             // metadata: MNetworkEnable
             // metadata: MNetworkSerializer "fish_pos_y"
             // metadata: MNetworkChangeCallback "OnPosChanged"
-            float m_y; // 0xd38            
+            float m_y; // 0xd20            
             // metadata: MNetworkEnable
             // metadata: MNetworkSerializer "fish_pos_z"
             // metadata: MNetworkChangeCallback "OnPosChanged"
-            float m_z; // 0xd3c            
+            float m_z; // 0xd24            
             // metadata: MNetworkEnable
             // metadata: MNetworkSerializer "angle_normalize_positive"
             // metadata: MNetworkBitCount "7"
@@ -72,16 +72,16 @@ namespace source2sdk
             // metadata: MNetworkMaxValue "360,000000"
             // metadata: MNetworkEncodeFlags "1"
             // metadata: MNetworkChangeCallback "OnAngChanged"
-            float m_angle; // 0xd40            
-            float m_errorHistory[20]; // 0xd44            
-            std::int32_t m_errorHistoryIndex; // 0xd94            
-            std::int32_t m_errorHistoryCount; // 0xd98            
-            float m_averageError; // 0xd9c            
+            float m_angle; // 0xd28            
+            float m_errorHistory[20]; // 0xd2c            
+            std::int32_t m_errorHistoryIndex; // 0xd7c            
+            std::int32_t m_errorHistoryCount; // 0xd80            
+            float m_averageError; // 0xd84            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_Fish because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_Fish) == 0xda0);
+        static_assert(sizeof(source2sdk::client::C_Fish) == 0xd88);
     };
 };

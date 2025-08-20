@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x5c8
+        // Size: 0x5d8
         // Has VTable
         #pragma pack(push, 1)
         class CSoundOpvarSetOBBWindEntity : public source2sdk::server::CSoundOpvarSetPointBase
         {
         public:
-            Vector m_vMins; // 0x588            
-            Vector m_vMaxs; // 0x594            
-            Vector m_vDistanceMins; // 0x5a0            
-            Vector m_vDistanceMaxs; // 0x5ac            
-            float m_flWindMin; // 0x5b8            
-            float m_flWindMax; // 0x5bc            
-            float m_flWindMapMin; // 0x5c0            
-            float m_flWindMapMax; // 0x5c4            
+            Vector m_vMins; // 0x598            
+            Vector m_vMaxs; // 0x5a4            
+            Vector m_vDistanceMins; // 0x5b0            
+            Vector m_vDistanceMaxs; // 0x5bc            
+            float m_flWindMin; // 0x5c8            
+            float m_flWindMax; // 0x5cc            
+            float m_flWindMapMin; // 0x5d0            
+            float m_flWindMapMax; // 0x5d4            
             
             // Datamap fields:
             // void CSoundOpvarSetOBBWindEntitySetOpvarThink; // 0x0
@@ -39,6 +39,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CSoundOpvarSetOBBWindEntity because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CSoundOpvarSetOBBWindEntity) == 0x5c8);
+        static_assert(sizeof(source2sdk::server::CSoundOpvarSetOBBWindEntity) == 0x5d8);
     };
 };

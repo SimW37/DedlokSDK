@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc30
+        // Size: 0xc28
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_nKillsEarned"
@@ -26,13 +26,13 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            std::int32_t m_nKillsEarned; // 0xba8            
-            uint8_t _pad0bac[0x84];
+            std::int32_t m_nKillsEarned; // 0xba0            
+            uint8_t _pad0ba4[0x84];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_WeaponUpgrade_GlassCannon because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_WeaponUpgrade_GlassCannon) == 0xc30);
+        static_assert(sizeof(source2sdk::server::CCitadel_WeaponUpgrade_GlassCannon) == 0xc28);
     };
 };

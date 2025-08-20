@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x740
+        // Size: 0x840
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,12 +29,12 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_SatchelParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SatchelParticle;
-            char m_SatchelParticle[0xe0]; // 0x660            
+            char m_SatchelParticle[0xe0]; // 0x760            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Synth_Pulse_Escape_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifier_Synth_Pulse_Escape_VData) == 0x740);
+        static_assert(sizeof(source2sdk::server::CModifier_Synth_Pulse_Escape_VData) == 0x840);
     };
 };

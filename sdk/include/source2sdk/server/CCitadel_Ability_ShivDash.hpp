@@ -38,30 +38,32 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vStartPosition; // 0xba0            
+            Vector m_vStartPosition; // 0xb98            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vDashDirection; // 0xbac            
+            Vector m_vDashDirection; // 0xba4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bIsDashing; // 0xbb8            
+            bool m_bIsDashing; // 0xbb0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bStartedInAir; // 0xbb9            
-            uint8_t _pad0bba[0x6]; // 0xbba
+            bool m_bStartedInAir; // 0xbb1            
+            uint8_t _pad0bb2[0x6]; // 0xbb2
             // m_vecHitEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CEntityIndex> m_vecHitEnemies;
-            char m_vecHitEnemies[0x18]; // 0xbc0            
-            Vector m_vecLastPosition; // 0xbd8            
-            std::int32_t m_nReductionsLeft; // 0xbe4            
-            uint8_t _pad0be8[0x280]; // 0xbe8
-            source2sdk::entity2::GameTime_t m_flStuckTime; // 0xe68            
+            char m_vecHitEnemies[0x18]; // 0xbb8            
+            Vector m_vecLastPosition; // 0xbd0            
+            std::int32_t m_nReductionsLeft; // 0xbdc            
+            uint8_t _pad0be0[0x280]; // 0xbe0
+            source2sdk::entity2::GameTime_t m_flStuckTime; // 0xe60            
             // m_hEchoThinker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CPointModifierThinker> m_hEchoThinker;
-            char m_hEchoThinker[0x4]; // 0xe6c            
-            source2sdk::entity2::GameTime_t m_EchoStartTime; // 0xe70            
-            bool m_bLetEchoPlay; // 0xe74            
-            uint8_t _pad0e75[0x1b];
+            char m_hEchoThinker[0x4]; // 0xe64            
+            source2sdk::entity2::GameTime_t m_EchoStartTime; // 0xe68            
+            bool m_bLetEchoPlay; // 0xe6c            
+            uint8_t _pad0e6d[0x1b]; // 0xe6d
+            bool m_bDiscontinuityInEcho; // 0xe88            
+            uint8_t _pad0e89[0x7];
         };
         #pragma pack(pop)
         

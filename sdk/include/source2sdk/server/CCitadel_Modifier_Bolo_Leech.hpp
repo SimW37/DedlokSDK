@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x100
+        // Size: 0x108
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Bolo_Leech : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x40];
+            uint8_t _pad00c8[0x40];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Bolo_Leech) == 0x100);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Bolo_Leech) == 0x108);
     };
 };

@@ -8,6 +8,7 @@
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
 #include "source2sdk/server/CAI_CitadelNPCVData.hpp"
 #include "source2sdk/server/CCitadelModifier.hpp"
+#include "source2sdk/server/CCitadel_Modifier_Base_Buildup.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -21,7 +22,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16f8
+        // Size: 0x17a0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -36,69 +37,101 @@ namespace source2sdk
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_strWIPModelName;
             char m_strWIPModelName[0xe0]; // 0x1100            
             // metadata: MPropertyStartGroup "Weak Points"
-            // m_vecWeakPoints has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CUtlVector<source2sdk::client::WeakPointParams_t> m_vecWeakPoints;
-            char m_vecWeakPoints[0x18]; // 0x11e0            
             // metadata: MPropertyStartGroup "Electric Beam (Laser)"
+            bool m_bBeamTurnToFire; // 0x11e0            
+            uint8_t _pad11e1[0x7]; // 0x11e1
             // m_BeamChargingEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamChargingEffect;
-            char m_BeamChargingEffect[0xe0]; // 0x11f8            
+            char m_BeamChargingEffect[0xe0]; // 0x11e8            
             // m_BeamPreviewEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamPreviewEffect;
-            char m_BeamPreviewEffect[0xe0]; // 0x12d8            
+            char m_BeamPreviewEffect[0xe0]; // 0x12c8            
             // m_BeamActiveEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamActiveEffect;
-            char m_BeamActiveEffect[0xe0]; // 0x13b8            
+            char m_BeamActiveEffect[0xe0]; // 0x13a8            
             // metadata: MPropertyStartGroup "Stomp"
             // m_StompImpactEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompImpactEffect;
-            char m_StompImpactEffect[0xe0]; // 0x1498            
+            char m_StompImpactEffect[0xe0]; // 0x1488            
             // m_StompWarningEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_StompWarningEffect;
-            char m_StompWarningEffect[0xe0]; // 0x1578            
-            float m_flTossSpeed; // 0x1658            
-            float m_flStompDamage; // 0x165c            
-            float m_flStompDamageMaxHealthPercent; // 0x1660            
-            float m_flStompTossUpMagnitude; // 0x1664            
-            float m_flStunDuration; // 0x1668            
-            float m_flStompImpactRadius; // 0x166c            
-            float m_flStompImpactHeight; // 0x1670            
+            char m_StompWarningEffect[0xe0]; // 0x1568            
+            float m_flTossSpeed; // 0x1648            
+            float m_flStompDamage; // 0x164c            
+            float m_flStompDamageMaxHealthPercent; // 0x1650            
+            float m_flStompTossUpMagnitude; // 0x1654            
+            float m_flStunDuration; // 0x1658            
+            float m_flStompImpactRadius; // 0x165c            
+            float m_flStompImpactHeight; // 0x1660            
+            float m_flStompParryRadius; // 0x1664            
+            float m_flStompParryImpulse; // 0x1668            
+            float m_flStompParryImpulseInAir; // 0x166c            
+            float m_flStompParryDamageMult; // 0x1670            
             float m_flSweepRadius; // 0x1674            
             float m_flSweepSpeed; // 0x1678            
             float m_flSweepZScale; // 0x167c            
             float m_flSweepMaxAngle; // 0x1680            
             float m_flSweepMaxRange; // 0x1684            
             float m_flSweepAdjustSpeed; // 0x1688            
+            uint8_t _pad168c[0x4]; // 0x168c
+            CSoundEventName m_StompParriedSound; // 0x1690            
+            CSoundEventName m_StompImpactSound; // 0x16a0            
             // metadata: MPropertyStartGroup "Gun"
-            float m_flBurstDuration; // 0x168c            
-            float m_flBurstCooldown; // 0x1690            
-            uint8_t _pad1694[0x4]; // 0x1694
+            float m_flBurstDuration; // 0x16b0            
+            float m_flBurstCooldown; // 0x16b4            
             // metadata: MPropertyStartGroup "Modifiers"
             // metadata: MPropertyDescription "Backdoor Protection Modifier"
             // m_BackdoorProtectionModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BackdoorProtectionModifier;
-            char m_BackdoorProtectionModifier[0x10]; // 0x1698            
-            float m_flBackDoorProtectionRange; // 0x16a8            
-            uint8_t _pad16ac[0x4]; // 0x16ac
+            char m_BackdoorProtectionModifier[0x10]; // 0x16b8            
+            float m_flBackDoorProtectionRange; // 0x16c8            
+            uint8_t _pad16cc[0x4]; // 0x16cc
             // m_InvulModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_InvulModifier;
-            char m_InvulModifier[0x10]; // 0x16b0            
-            float m_flInvulModifierRange; // 0x16c0            
-            uint8_t _pad16c4[0x4]; // 0x16c4
+            char m_InvulModifier[0x10]; // 0x16d0            
+            float m_flInvulModifierRange; // 0x16e0            
+            uint8_t _pad16e4[0x4]; // 0x16e4
             // m_RangedArmorModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_RangedArmorModifier;
-            char m_RangedArmorModifier[0x10]; // 0x16c8            
+            char m_RangedArmorModifier[0x10]; // 0x16e8            
             // m_FriendlyAuraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_FriendlyAuraModifier;
-            char m_FriendlyAuraModifier[0x10]; // 0x16d8            
+            char m_FriendlyAuraModifier[0x10]; // 0x16f8            
             // m_NearbyEnemyResist has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_NearbyEnemyResist;
-            char m_NearbyEnemyResist[0x10]; // 0x16e8            
+            char m_NearbyEnemyResist[0x10]; // 0x1708            
+            // m_StatTrackerAuraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_StatTrackerAuraModifier;
+            char m_StatTrackerAuraModifier[0x10]; // 0x1718            
+            // metadata: MPropertyStartGroup "Weakpoint"
+            // m_vecWeakPoints has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<source2sdk::client::WeakPointParams_t> m_vecWeakPoints;
+            char m_vecWeakPoints[0x18]; // 0x1728            
+            float m_flWeakPointCritMultiplier; // 0x1740            
+            float m_flWeakenedCritMultiplier; // 0x1744            
+            float m_flWeakpointAttentionThreshold; // 0x1748            
+            float m_flWeakpointAttentionHoldDuration; // 0x174c            
+            float m_flWeakpointAttentionDecayRate; // 0x1750            
+            float m_flReducedBuildupAfterWeakenedDuration; // 0x1754            
+            float m_flReducedBuildupAfterWeakenedFactor; // 0x1758            
+            uint8_t _pad175c[0x4]; // 0x175c
+            // m_WeakenedBuildupModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadel_Modifier_Base_Buildup> m_WeakenedBuildupModifier;
+            char m_WeakenedBuildupModifier[0x10]; // 0x1760            
+            // m_WeakenedModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_WeakenedModifier;
+            char m_WeakenedModifier[0x10]; // 0x1770            
+            // m_EmpoweredModifierLevel1 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_EmpoweredModifierLevel1;
+            char m_EmpoweredModifierLevel1[0x10]; // 0x1780            
+            // m_EmpoweredModifierLevel2 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_EmpoweredModifierLevel2;
+            char m_EmpoweredModifierLevel2[0x10]; // 0x1790            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_Boss_Tier2VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_Boss_Tier2VData) == 0x16f8);
+        static_assert(sizeof(source2sdk::server::CNPC_Boss_Tier2VData) == 0x17a0);
     };
 };

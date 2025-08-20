@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x108
+        // Size: 0x120
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Cadence_Crescendo_AOE : public source2sdk::client::CCitadelModifierAura
         {
         public:
-            uint8_t _pad00f8[0x8]; // 0xf8
-            std::int32_t m_nTicks; // 0x100            
-            uint8_t _pad0104[0x4];
+            uint8_t _pad0110[0x8]; // 0x110
+            std::int32_t m_nTicks; // 0x118            
+            uint8_t _pad011c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Cadence_Crescendo_AOE because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Cadence_Crescendo_AOE) == 0x108);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Cadence_Crescendo_AOE) == 0x120);
     };
 };

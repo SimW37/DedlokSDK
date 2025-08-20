@@ -20,6 +20,7 @@ namespace source2sdk
         // Size: 0xd8
         // Has VTable
         // 
+        // static metadata: M_LEGACY_OptInToSchemaPropertyDomain
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MPropertyFriendlyName "Enum Parameter"
         #pragma pack(push, 1)
@@ -31,11 +32,11 @@ namespace source2sdk
             std::uint8_t m_defaultValue; // 0x88            
             uint8_t _pad0089[0x7]; // 0x89
             // metadata: MPropertyFriendlyName "Values"
-            // metadata: MPropertyAttrChangeCallback
+            // metadata: MPropertyAttrChangeCallback_LEGACY
             // m_enumOptions has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CUtlString> m_enumOptions;
             char m_enumOptions[0x18]; // 0x90            
-            // metadata: MPropertyHideField
+            // metadata: MPropertySuppressField
             // m_vecEnumReferenced has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<std::uint64_t> m_vecEnumReferenced;
             char m_vecEnumReferenced[0x18]; // 0xa8            

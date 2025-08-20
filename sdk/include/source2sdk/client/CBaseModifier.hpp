@@ -53,12 +53,14 @@ namespace source2sdk
             // CHandle<source2sdk::client::C_BaseEntity> m_hAbility;
             char m_hAbility[0x4]; // 0x3c            
             source2sdk::client::CModifierHandleBase m_hAuraProvider; // 0x40            
-            CUtlStringToken m_nAbilitySubclassID; // 0x58            
-            std::uint8_t m_iAttributes; // 0x5c            
-            std::uint8_t m_iTeam; // 0x5d            
-            std::int16_t m_iStackCount; // 0x5e            
-            std::int16_t m_iMaxStackCount; // 0x60            
-            uint8_t _pad0062[0x6]; // 0x62
+            bool m_bInAuraRange; // 0x58            
+            uint8_t _pad0059[0x3]; // 0x59
+            CUtlStringToken m_nAbilitySubclassID; // 0x5c            
+            std::uint8_t m_iAttributes; // 0x60            
+            std::uint8_t m_iTeam; // 0x61            
+            std::int16_t m_iStackCount; // 0x62            
+            std::int16_t m_iMaxStackCount; // 0x64            
+            uint8_t _pad0066[0x2]; // 0x66
             // m_pVecStackDecayTimes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::entity2::GameTime_t>* m_pVecStackDecayTimes;
             char m_pVecStackDecayTimes[0x8]; // 0x68            
@@ -88,11 +90,12 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CBaseModifier, m_hCaster) == 0x38);
         static_assert(offsetof(source2sdk::client::CBaseModifier, m_hAbility) == 0x3c);
         static_assert(offsetof(source2sdk::client::CBaseModifier, m_hAuraProvider) == 0x40);
-        static_assert(offsetof(source2sdk::client::CBaseModifier, m_nAbilitySubclassID) == 0x58);
-        static_assert(offsetof(source2sdk::client::CBaseModifier, m_iAttributes) == 0x5c);
-        static_assert(offsetof(source2sdk::client::CBaseModifier, m_iTeam) == 0x5d);
-        static_assert(offsetof(source2sdk::client::CBaseModifier, m_iStackCount) == 0x5e);
-        static_assert(offsetof(source2sdk::client::CBaseModifier, m_iMaxStackCount) == 0x60);
+        static_assert(offsetof(source2sdk::client::CBaseModifier, m_bInAuraRange) == 0x58);
+        static_assert(offsetof(source2sdk::client::CBaseModifier, m_nAbilitySubclassID) == 0x5c);
+        static_assert(offsetof(source2sdk::client::CBaseModifier, m_iAttributes) == 0x60);
+        static_assert(offsetof(source2sdk::client::CBaseModifier, m_iTeam) == 0x61);
+        static_assert(offsetof(source2sdk::client::CBaseModifier, m_iStackCount) == 0x62);
+        static_assert(offsetof(source2sdk::client::CBaseModifier, m_iMaxStackCount) == 0x64);
         static_assert(offsetof(source2sdk::client::CBaseModifier, m_pVecStackDecayTimes) == 0x68);
         static_assert(offsetof(source2sdk::client::CBaseModifier, m_eDestroyReason) == 0x70);
         static_assert(offsetof(source2sdk::client::CBaseModifier, m_bDisabled) == 0x71);

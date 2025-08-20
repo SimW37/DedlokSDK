@@ -38,7 +38,8 @@ namespace source2sdk
             float m_duration; // 0x80            
             source2sdk::animgraphlib::AnimValueSource m_valueSource; // 0x84            
             source2sdk::animgraphlib::CAnimParamHandle m_paramIndex; // 0x88            
-            uint8_t _pad008a[0x6];
+            bool m_bLockWhenWaning; // 0x8a            
+            uint8_t _pad008b[0x5];
         };
         #pragma pack(pop)
         

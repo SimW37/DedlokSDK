@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xae8
+        // Size: 0xb40
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool bIsCloneProjectile"
@@ -26,13 +26,13 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            bool bIsCloneProjectile; // 0xaa0            
-            uint8_t _pad0aa1[0x47];
+            bool bIsCloneProjectile; // 0xaf8            
+            uint8_t _pad0af9[0x47];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Projectile_MagicBolt because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Projectile_MagicBolt) == 0xae8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Projectile_MagicBolt) == 0xb40);
     };
 };

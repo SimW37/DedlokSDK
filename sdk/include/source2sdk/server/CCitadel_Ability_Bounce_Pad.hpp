@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd00
+        // Size: 0xcf8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "QAngle m_angFacing"
@@ -25,19 +25,19 @@ namespace source2sdk
         class CCitadel_Ability_Bounce_Pad : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            Vector m_vForward; // 0xba0            
-            bool m_bShouldDeploy; // 0xbac            
-            bool m_bAnglesSet; // 0xbad            
-            bool m_bCanCancel; // 0xbae            
-            uint8_t _pad0baf[0x141]; // 0xbaf
+            Vector m_vForward; // 0xb98            
+            bool m_bShouldDeploy; // 0xba4            
+            bool m_bAnglesSet; // 0xba5            
+            bool m_bCanCancel; // 0xba6            
+            uint8_t _pad0ba7[0x141]; // 0xba7
             // metadata: MNetworkEnable
-            QAngle m_angFacing; // 0xcf0            
-            uint8_t _pad0cfc[0x4];
+            QAngle m_angFacing; // 0xce8            
+            uint8_t _pad0cf4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Bounce_Pad because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bounce_Pad) == 0xd00);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bounce_Pad) == 0xcf8);
     };
 };

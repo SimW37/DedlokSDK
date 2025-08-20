@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x2f8
+        // Size: 0x310
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -45,16 +45,24 @@ namespace source2sdk
             // m_vecPrimaryPickups has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::BreakablePowerupDropDefinition_t> m_vecPrimaryPickups;
             char m_vecPrimaryPickups[0x18]; // 0x2d0            
+            // metadata: MPropertyDescription "Ignore Primary Pickups and only spawn one type"
+            // m_sSinglePickupOverride has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CSubclassName<0> m_sSinglePickupOverride;
+            char m_sSinglePickupOverride[0x10]; // 0x2e8            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flInitialSpawnTime; // 0x2e8            
-            float m_flRespawnTime; // 0x2ec            
-            float m_flInitialSpawnTimeTest; // 0x2f0            
-            float m_flRespawnTimeTest; // 0x2f4            
+            // metadata: MPropertyDescription "Set to -1 to not spawn until invoked by another system"
+            float m_flInitialSpawnTime; // 0x2f8            
+            float m_flRespawnTime; // 0x2fc            
+            // metadata: MPropertyDescription "Set to -1 to not spawn until invoked by another system"
+            float m_flInitialSpawnTimeTest; // 0x300            
+            float m_flRespawnTimeTest; // 0x304            
+            bool m_bRespawnTimerStartsAfterPickup; // 0x308            
+            uint8_t _pad0309[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_PickupItemSpawnerVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_PickupItemSpawnerVData) == 0x2f8);
+        static_assert(sizeof(source2sdk::server::CCitadel_PickupItemSpawnerVData) == 0x310);
     };
 };

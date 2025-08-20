@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xaa8
+        // Size: 0xb00
         // Has VTable
         #pragma pack(push, 1)
         class C_Citadel_Projectile_Bebop_Hook : public source2sdk::client::C_CitadelProjectile
         {
         public:
-            source2sdk::client::ParticleIndex_t m_iChainEffect; // 0xaa0            
-            uint8_t _pad0aa4[0x4];
+            source2sdk::client::ParticleIndex_t m_iChainEffect; // 0xaf8            
+            uint8_t _pad0afc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_Citadel_Projectile_Bebop_Hook because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_Citadel_Projectile_Bebop_Hook) == 0xaa8);
+        static_assert(sizeof(source2sdk::client::C_Citadel_Projectile_Bebop_Hook) == 0xb00);
     };
 };

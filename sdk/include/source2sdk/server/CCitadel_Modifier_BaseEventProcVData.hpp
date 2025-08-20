@@ -21,7 +21,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x690
+        // Size: 0x790
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,23 +29,23 @@ namespace source2sdk
         class CCitadel_Modifier_BaseEventProcVData : public source2sdk::server::CCitadelModifierVData
         {
         public:
-            bool m_bProcChanceAffectedByEffectiveness; // 0x660            
-            bool m_bShouldApplyAbilityCooldown; // 0x661            
+            bool m_bProcChanceAffectedByEffectiveness; // 0x760            
+            bool m_bShouldApplyAbilityCooldown; // 0x761            
             // metadata: MPropertySuppressExpr "m_bCanProcMultipleTimesFromSameShot != true"
-            bool m_bCanProcMultipleTimesOnOneTarget; // 0x662            
-            bool m_bCanProcByOtherObjects; // 0x663            
-            source2sdk::client::CITADEL_UNIT_TARGET_TYPE m_nAbilityTargetTypes; // 0x664            
-            source2sdk::client::CITADEL_UNIT_TARGET_FLAGS m_nAbilityTargetFlags; // 0x668            
-            uint8_t _pad066c[0x4]; // 0x66c
+            bool m_bCanProcMultipleTimesOnOneTarget; // 0x762            
+            bool m_bCanProcByOtherObjects; // 0x763            
+            source2sdk::client::CITADEL_UNIT_TARGET_TYPE m_nAbilityTargetTypes; // 0x764            
+            source2sdk::client::CITADEL_UNIT_TARGET_FLAGS m_nAbilityTargetFlags; // 0x768            
+            uint8_t _pad076c[0x4]; // 0x76c
             // m_vecProcDamageTypes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::ECitadelDamageType> m_vecProcDamageTypes;
-            char m_vecProcDamageTypes[0x18]; // 0x670            
-            source2sdk::client::TakeDamageFlags_t m_nRequiredDamageFlags; // 0x688            
+            char m_vecProcDamageTypes[0x18]; // 0x770            
+            source2sdk::client::TakeDamageFlags_t m_nRequiredDamageFlags; // 0x788            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_BaseEventProcVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_BaseEventProcVData) == 0x690);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_BaseEventProcVData) == 0x790);
     };
 };

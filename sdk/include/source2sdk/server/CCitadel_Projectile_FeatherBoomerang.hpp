@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9b0
+        // Size: 0xa18
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Projectile_FeatherBoomerang : public source2sdk::server::CCitadelProjectile
         {
         public:
-            uint8_t _pad0880[0x130];
+            uint8_t _pad08e8[0x130];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_FeatherBoomerang) == 0x9b0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_FeatherBoomerang) == 0xa18);
     };
 };

@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x138
+        // Size: 0x150
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Tokamak_EnemySmokeAOE : public source2sdk::client::CCitadelModifierAura
         {
         public:
-            uint8_t _pad00f8[0x40];
+            uint8_t _pad0110[0x40];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Tokamak_EnemySmokeAOE) == 0x138);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Tokamak_EnemySmokeAOE) == 0x150);
     };
 };

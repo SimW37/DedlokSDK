@@ -18,18 +18,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x950
+        // Size: 0x988
         // Has VTable
         #pragma pack(push, 1)
         class CFuncTankTrain : public source2sdk::server::CFuncTrackTrain
         {
         public:
-            source2sdk::entity2::CEntityIOOutput m_OnDeath; // 0x928            
+            source2sdk::entity2::CEntityIOOutput m_OnDeath; // 0x960            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CFuncTankTrain because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFuncTankTrain) == 0x950);
+        static_assert(sizeof(source2sdk::server::CFuncTankTrain) == 0x988);
     };
 };

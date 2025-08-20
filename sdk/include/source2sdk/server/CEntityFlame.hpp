@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/server/AI_VolumetricEventHandle_t.hpp"
 #include "source2sdk/server/CBaseEntity.hpp"
 namespace source2sdk
 {
@@ -25,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x520
+        // Size: 0x538
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CHandle< CBaseEntity> m_hEntAttached"
@@ -37,32 +38,32 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // m_hEntAttached has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hEntAttached;
-            char m_hEntAttached[0x4]; // 0x4e0            
+            char m_hEntAttached[0x4]; // 0x4f0            
             // metadata: MNetworkEnable
-            bool m_bCheapEffect; // 0x4e4            
-            uint8_t _pad04e5[0x3]; // 0x4e5
-            float m_flSize; // 0x4e8            
-            bool m_bUseHitboxes; // 0x4ec            
-            uint8_t _pad04ed[0x3]; // 0x4ed
-            std::int32_t m_iNumHitboxFires; // 0x4f0            
-            float m_flHitboxFireScale; // 0x4f4            
-            source2sdk::entity2::GameTime_t m_flLifetime; // 0x4f8            
+            bool m_bCheapEffect; // 0x4f4            
+            uint8_t _pad04f5[0x3]; // 0x4f5
+            float m_flSize; // 0x4f8            
+            bool m_bUseHitboxes; // 0x4fc            
+            uint8_t _pad04fd[0x3]; // 0x4fd
+            std::int32_t m_iNumHitboxFires; // 0x500            
+            float m_flHitboxFireScale; // 0x504            
+            source2sdk::entity2::GameTime_t m_flLifetime; // 0x508            
             // m_hAttacker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hAttacker;
-            char m_hAttacker[0x4]; // 0x4fc            
-            std::int32_t m_iDangerSound; // 0x500            
-            float m_flDirectDamagePerSecond; // 0x504            
-            std::int32_t m_iCustomDamageType; // 0x508            
-            uint8_t _pad050c[0x14];
+            char m_hAttacker[0x4]; // 0x50c            
+            source2sdk::server::AI_VolumetricEventHandle_t m_iDangerSound; // 0x510            
+            float m_flDirectDamagePerSecond; // 0x518            
+            std::int32_t m_iCustomDamageType; // 0x51c            
+            uint8_t _pad0520[0x18];
             
             // Datamap fields:
-            // void m_hPlayingSound; // 0x50c
+            // void m_hPlayingSound; // 0x520
             // void CEntityFlameFlameThink; // 0x0
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CEntityFlame because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CEntityFlame) == 0x520);
+        static_assert(sizeof(source2sdk::server::CEntityFlame) == 0x538);
     };
 };

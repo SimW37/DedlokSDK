@@ -13,9 +13,10 @@
 #include "source2sdk/entity2/CEntityIOOutput.hpp"
 #include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/modellib/CNPCPhysicsHull.hpp"
-#include "source2sdk/server/CAI_NavLocation.hpp"
+#include "source2sdk/server/AI_VolumetricEventHandle_t.hpp"
 #include "source2sdk/server/CAI_Scheduler.hpp"
 #include "source2sdk/server/CBaseCombatCharacter.hpp"
+#include "source2sdk/server/CRelativeLocation.hpp"
 #include "source2sdk/server/CUnreachableTargetList.hpp"
 namespace source2sdk
 {
@@ -86,7 +87,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x13f0
+        // Size: 0x1400
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_lifeState"
@@ -103,7 +104,7 @@ namespace source2sdk
             bool m_bCheckContacts; // 0xc58            
             bool m_bForceDynamicHull; // 0xc59            
             uint8_t _pad0c5a[0x1e]; // 0xc5a
-            source2sdk::server::CAI_NavLocation m_lastNavLocation; // 0xc78            
+            source2sdk::server::CRelativeLocation m_lastNavLocation; // 0xc78            
             float m_flLastPositionTolerance; // 0xcb8            
             // m_hSynchronizedPrimaryNPC has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CAI_BaseNPC> m_hSynchronizedPrimaryNPC;
@@ -151,96 +152,99 @@ namespace source2sdk
             std::int32_t m_afCapability; // 0xdc4            
             uint8_t _pad0dc8[0x170]; // 0xdc8
             float m_flGroundSpeed; // 0xf38            
-            source2sdk::entity2::GameTime_t m_flMoveWaitFinished; // 0xf3c            
+            source2sdk::entity2::GameTime_t m_lastTimeBashedObstacle; // 0xf3c            
+            source2sdk::entity2::GameTime_t m_nextMantleTime; // 0xf40            
+            source2sdk::entity2::GameTime_t m_flMoveWaitFinished; // 0xf44            
             // m_hOpeningDoor has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hOpeningDoor;
-            char m_hOpeningDoor[0x4]; // 0xf40            
-            uint8_t _pad0f44[0x4]; // 0xf44
-            source2sdk::server::CUnreachableTargetList m_UnreachableTargets; // 0xf48            
+            char m_hOpeningDoor[0x4]; // 0xf48            
+            uint8_t _pad0f4c[0x4]; // 0xf4c
+            source2sdk::server::CUnreachableTargetList m_UnreachableTargets; // 0xf50            
             // m_hPathObstructor has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hPathObstructor;
-            char m_hPathObstructor[0x4]; // 0xf68            
-            float m_flJumpMaxRise; // 0xf6c            
-            float m_flJumpMaxDrop; // 0xf70            
-            float m_flJumpMaxDist; // 0xf74            
-            float m_flJumpMinDist; // 0xf78            
-            uint8_t _pad0f7c[0x4]; // 0xf7c
-            source2sdk::server::CAI_FacingServices* m_pFacingServices; // 0xf80            
-            source2sdk::server::CAI_AnimGraphServices* m_pAnimGraphServices; // 0xf88            
-            bool m_bAnimGraphIsAnimatingDeath; // 0xf90            
-            bool m_bDeferredNavigation; // 0xf91            
-            uint8_t _pad0f92[0x6]; // 0xf92
-            source2sdk::server::CAI_Scheduler m_Scheduler; // 0xf98            
-            source2sdk::server::CAI_Navigator* m_pNavigatorNavmesh; // 0x1040            
-            uint8_t _pad1048[0x18]; // 0x1048
-            source2sdk::server::CAI_Motor* m_pMotor; // 0x1060            
-            source2sdk::entity2::GameTime_t m_flTimeLastMovement; // 0x1068            
-            source2sdk::entity2::GameTime_t m_flTimeLastFootstep; // 0x106c            
-            source2sdk::client::CSimpleSimTimer m_CheckOnGroundTimer; // 0x1070            
-            CUtlSymbolLarge m_strNavRestrictionVolume; // 0x1078            
-            std::int32_t m_afMemory; // 0x1080            
-            source2sdk::entity2::GameTime_t m_flLastAttackTime; // 0x1084            
-            source2sdk::entity2::GameTime_t m_flLastTookDamageTime; // 0x1088            
-            source2sdk::entity2::GameTime_t m_flLastTookDamageFromPlayerTime; // 0x108c            
-            Vector m_vecLastTookDamageAttackVector; // 0x1090            
-            uint8_t _pad109c[0x4]; // 0x109c
-            CUtlSymbolLarge m_iszSquadName; // 0x10a0            
+            char m_hPathObstructor[0x4]; // 0xf70            
+            float m_flJumpMaxRise; // 0xf74            
+            float m_flJumpMaxDrop; // 0xf78            
+            float m_flJumpMaxDist; // 0xf7c            
+            float m_flJumpMinDist; // 0xf80            
+            uint8_t _pad0f84[0x4]; // 0xf84
+            source2sdk::server::CAI_FacingServices* m_pFacingServices; // 0xf88            
+            source2sdk::server::CAI_AnimGraphServices* m_pAnimGraphServices; // 0xf90            
+            bool m_bAnimGraphIsAnimatingDeath; // 0xf98            
+            bool m_bDeferredNavigation; // 0xf99            
+            uint8_t _pad0f9a[0x6]; // 0xf9a
+            source2sdk::server::CAI_Scheduler m_Scheduler; // 0xfa0            
+            source2sdk::server::CAI_Navigator* m_pNavigatorNavmesh; // 0x1048            
+            uint8_t _pad1050[0x18]; // 0x1050
+            source2sdk::server::CAI_Motor* m_pMotor; // 0x1068            
+            source2sdk::entity2::GameTime_t m_flTimeLastMovement; // 0x1070            
+            source2sdk::entity2::GameTime_t m_flTimeLastFootstep; // 0x1074            
+            source2sdk::server::AI_VolumetricEventHandle_t m_hFootstepEvent; // 0x1078            
+            source2sdk::client::CSimpleSimTimer m_CheckOnGroundTimer; // 0x1080            
+            CUtlSymbolLarge m_strNavRestrictionVolume; // 0x1088            
+            std::int32_t m_afMemory; // 0x1090            
+            source2sdk::entity2::GameTime_t m_flLastAttackTime; // 0x1094            
+            source2sdk::entity2::GameTime_t m_flLastTookDamageTime; // 0x1098            
+            source2sdk::entity2::GameTime_t m_flLastTookDamageFromPlayerTime; // 0x109c            
+            Vector m_vecLastTookDamageAttackVector; // 0x10a0            
+            uint8_t _pad10ac[0x4]; // 0x10ac
+            CUtlSymbolLarge m_iszSquadName; // 0x10b0            
             // m_vecMySquadSlots has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::SquadSlotNPCEntry_t> m_vecMySquadSlots;
-            char m_vecMySquadSlots[0x18]; // 0x10a8            
-            uint8_t _pad10c0[0x8]; // 0x10c0
-            std::int32_t m_nPrevHealthDuringModifyDamage; // 0x10c8            
-            uint8_t _pad10cc[0x4]; // 0x10cc
+            char m_vecMySquadSlots[0x18]; // 0x10b8            
+            uint8_t _pad10d0[0x8]; // 0x10d0
+            std::int32_t m_nPrevHealthDuringModifyDamage; // 0x10d8            
+            uint8_t _pad10dc[0x4]; // 0x10dc
             // metadata: MNetworkEnable
-            bool m_bFadeCorpse; // 0x10d0            
+            bool m_bFadeCorpse; // 0x10e0            
             // metadata: MNetworkEnable
-            bool m_bImportantRagdoll; // 0x10d1            
-            uint8_t _pad10d2[0x6]; // 0x10d2
-            source2sdk::client::CTakeDamageResult m_deathBlowResult; // 0x10d8            
-            bool m_bDidDeathCleanup; // 0x10f8            
-            bool m_bReceivedEnemyDeadNotification; // 0x10f9            
-            uint8_t _pad10fa[0x2]; // 0x10fa
-            source2sdk::entity2::GameTime_t m_flWaitFinished; // 0x10fc            
-            bool m_fNoDamageDecal; // 0x1100            
-            uint8_t _pad1101[0x7]; // 0x1101
+            bool m_bImportantRagdoll; // 0x10e1            
+            uint8_t _pad10e2[0x6]; // 0x10e2
+            source2sdk::client::CTakeDamageResult m_deathBlowResult; // 0x10e8            
+            bool m_bDidDeathCleanup; // 0x1108            
+            bool m_bReceivedEnemyDeadNotification; // 0x1109            
+            uint8_t _pad110a[0x2]; // 0x110a
+            source2sdk::entity2::GameTime_t m_flWaitFinished; // 0x110c            
+            bool m_fNoDamageDecal; // 0x1110            
+            uint8_t _pad1111[0x7]; // 0x1111
             // m_pVecAttachments has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>>* m_pVecAttachments;
-            char m_pVecAttachments[0x8]; // 0x1108            
-            source2sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x1110            
-            source2sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x1138            
-            source2sdk::entity2::CEntityIOOutput m_OnDeath; // 0x1160            
-            source2sdk::entity2::CEntityIOOutput m_OnQuarterHealth; // 0x1188            
-            source2sdk::entity2::CEntityIOOutput m_OnHalfHealth; // 0x11b0            
-            source2sdk::entity2::CEntityIOOutput m_OnThreeQuarterHealth; // 0x11d8            
+            char m_pVecAttachments[0x8]; // 0x1118            
+            source2sdk::entity2::CEntityIOOutput m_OnDamaged; // 0x1120            
+            source2sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x1148            
+            source2sdk::entity2::CEntityIOOutput m_OnDeath; // 0x1170            
+            source2sdk::entity2::CEntityIOOutput m_OnQuarterHealth; // 0x1198            
+            source2sdk::entity2::CEntityIOOutput m_OnHalfHealth; // 0x11c0            
+            source2sdk::entity2::CEntityIOOutput m_OnThreeQuarterHealth; // 0x11e8            
             // m_OnFoundEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<CHandle<source2sdk::server::CBaseEntity>> m_OnFoundEnemy;
-            char m_OnFoundEnemy[0x28]; // 0x1200            
-            source2sdk::entity2::CEntityIOOutput m_OnLostEnemy; // 0x1228            
-            source2sdk::entity2::CEntityIOOutput m_OnLostPlayer; // 0x1250            
-            source2sdk::entity2::CEntityIOOutput m_OnDamagedByPlayer; // 0x1278            
-            source2sdk::entity2::CEntityIOOutput m_OnDamagedByPlayerSquad; // 0x12a0            
-            source2sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x12c8            
-            source2sdk::entity2::CEntityIOOutput m_OnUse; // 0x12f0            
-            source2sdk::entity2::CEntityIOOutput m_OnStartTouchMaterial; // 0x1318            
-            source2sdk::entity2::CEntityIOOutput m_OnEndTouchMaterial; // 0x1340            
-            source2sdk::entity2::CEntityIOOutput m_OnLostEnemyLOS; // 0x1368            
-            source2sdk::entity2::CEntityIOOutput m_OnLostPlayerLOS; // 0x1390            
-            std::uint64_t m_nAITraceMask; // 0x13b8            
-            bool m_bDynamicAILOD; // 0x13c0            
-            uint8_t _pad13c1[0x3]; // 0x13c1
-            source2sdk::client::AILOD_t m_aiLOD; // 0x13c4            
-            float m_flThinkTime; // 0x13c8            
-            uint8_t _pad13cc[0x1c]; // 0x13cc
-            std::int32_t m_nDebugCurIndex; // 0x13e8            
-            uint8_t _pad13ec[0x4];
+            char m_OnFoundEnemy[0x28]; // 0x1210            
+            source2sdk::entity2::CEntityIOOutput m_OnLostEnemy; // 0x1238            
+            source2sdk::entity2::CEntityIOOutput m_OnLostPlayer; // 0x1260            
+            source2sdk::entity2::CEntityIOOutput m_OnDamagedByPlayer; // 0x1288            
+            source2sdk::entity2::CEntityIOOutput m_OnDamagedByPlayerSquad; // 0x12b0            
+            source2sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0x12d8            
+            source2sdk::entity2::CEntityIOOutput m_OnUse; // 0x1300            
+            source2sdk::entity2::CEntityIOOutput m_OnStartTouchMaterial; // 0x1328            
+            source2sdk::entity2::CEntityIOOutput m_OnEndTouchMaterial; // 0x1350            
+            source2sdk::entity2::CEntityIOOutput m_OnLostEnemyLOS; // 0x1378            
+            source2sdk::entity2::CEntityIOOutput m_OnLostPlayerLOS; // 0x13a0            
+            std::uint64_t m_nAITraceMask; // 0x13c8            
+            bool m_bDynamicAILOD; // 0x13d0            
+            uint8_t _pad13d1[0x3]; // 0x13d1
+            source2sdk::client::AILOD_t m_aiLOD; // 0x13d4            
+            float m_flThinkTime; // 0x13d8            
+            uint8_t _pad13dc[0x1c]; // 0x13dc
+            std::int32_t m_nDebugCurIndex; // 0x13f8            
+            uint8_t _pad13fc[0x4];
             
             // Datamap fields:
             // CAI_Senses m_pSenses; // 0xce8
-            // void m_pSquad; // 0x10c0
+            // void m_pSquad; // 0x10d0
             // void CAI_BaseNPCForceSelectedGoLoopThink; // 0x0
-            // void m_vecTaskThinkTimes; // 0x13d0
-            // CAI_Pathfinder m_pPathfinderNavmesh; // 0x1048
-            // void m_hDamagedFX; // 0x10cc
+            // void m_vecTaskThinkTimes; // 0x13e0
+            // CAI_Pathfinder m_pPathfinderNavmesh; // 0x1050
+            // void m_hDamagedFX; // 0x10dc
             // CUtlSymbolLarge InputSetEnemyFilter; // 0x0
             // int32_t InputOverrideHealth; // 0x0
             // int32_t InputSetHealth; // 0x0
@@ -261,6 +265,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CAI_BaseNPC because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAI_BaseNPC) == 0x13f0);
+        static_assert(sizeof(source2sdk::server::CAI_BaseNPC) == 0x1400);
     };
 };

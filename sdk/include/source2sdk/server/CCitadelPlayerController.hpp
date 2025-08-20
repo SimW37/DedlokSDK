@@ -6,7 +6,6 @@
 #include "source2sdk/client/CitadelLobbyPlayerSlot_t.hpp"
 #include "source2sdk/client/EGuidedBotMatchObjective.hpp"
 #include "source2sdk/client/EPlayerPlayState.hpp"
-#include "source2sdk/client/HeroBuildID_t.hpp"
 #include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/server/CBasePlayerController.hpp"
 #include "source2sdk/server/PlayerDataGlobal_t.hpp"
@@ -37,7 +36,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xca0
+        // Size: 0xce8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EPlayerPlayState m_ePlayState"
@@ -60,7 +59,6 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "bool m_bBotDisconnectTakeover"
         // static metadata: MNetworkVarNames "bool m_bInTeamChat"
         // static metadata: MNetworkVarNames "bool m_bInPartyChat"
-        // static metadata: MNetworkVarNames "HeroBuildID_t m_unHeroBuildID"
         // static metadata: MNetworkVarNames "bool m_bLaneSwapLocked"
         // static metadata: MNetworkVarNames "EHANDLE m_vecLaneSwapRequests"
         // static metadata: MNetworkVarNames "EHANDLE m_vecLaneSwapRejects"
@@ -75,93 +73,92 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            source2sdk::client::EPlayerPlayState m_ePlayState; // 0x7e0            
+            source2sdk::client::EPlayerPlayState m_ePlayState; // 0x800            
             // metadata: MNetworkEnable
-            std::int32_t m_iGuidedBotMatchLastHits; // 0x7e4            
+            std::int32_t m_iGuidedBotMatchLastHits; // 0x804            
             // metadata: MNetworkEnable
-            std::int32_t m_iGuidedBotMatchOrbsSecured; // 0x7e8            
+            std::int32_t m_iGuidedBotMatchOrbsSecured; // 0x808            
             // metadata: MNetworkEnable
-            std::int32_t m_iGuidedBotMatchOrbsDenied; // 0x7ec            
+            std::int32_t m_iGuidedBotMatchOrbsDenied; // 0x80c            
             // metadata: MNetworkEnable
-            std::int32_t m_iGuidedBotMatchDamageToGuardians; // 0x7f0            
+            std::int32_t m_iGuidedBotMatchDamageToGuardians; // 0x810            
             // metadata: MNetworkEnable
-            std::int32_t m_iGuidedBotMatchDamageToPlayers; // 0x7f4            
+            std::int32_t m_iGuidedBotMatchDamageToPlayers; // 0x814            
             // metadata: MNetworkEnable
-            std::int32_t m_iGuidedBotMatchDamageTaken; // 0x7f8            
+            std::int32_t m_iGuidedBotMatchDamageTaken; // 0x818            
             // metadata: MNetworkEnable
-            std::int32_t m_iGuidedBotMatchNetWorth; // 0x7fc            
+            std::int32_t m_iGuidedBotMatchNetWorth; // 0x81c            
             // metadata: MNetworkEnable
-            std::int32_t m_iGuidedBotMatchModsPurchased; // 0x800            
+            std::int32_t m_iGuidedBotMatchModsPurchased; // 0x820            
             // metadata: MNetworkEnable
-            std::int32_t m_iGuidedBotMatchAbilityUpgrades; // 0x804            
+            std::int32_t m_iGuidedBotMatchAbilityUpgrades; // 0x824            
             // metadata: MNetworkEnable
-            float m_flGuideBotMatchLastTaskNagVO; // 0x808            
+            float m_flGuideBotMatchLastTaskNagVO; // 0x828            
             // metadata: MNetworkEnable
-            float m_flGuideBotLastTimeTaskCompleted; // 0x80c            
+            float m_flGuideBotLastTimeTaskCompleted; // 0x82c            
             // metadata: MNetworkEnable
-            source2sdk::client::EGuidedBotMatchObjective m_eGuidedBotMatchObjective; // 0x810            
+            source2sdk::client::EGuidedBotMatchObjective m_eGuidedBotMatchObjective; // 0x830            
             // metadata: MNetworkEnable
-            std::int32_t m_nCurrentRank; // 0x814            
+            std::int32_t m_nCurrentRank; // 0x834            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "AssignedLaneChanged"
-            std::int8_t m_nAssignedLane; // 0x818            
+            std::int8_t m_nAssignedLane; // 0x838            
             // metadata: MNetworkEnable
-            std::int8_t m_nOriginalLaneAssignment; // 0x819            
+            std::int8_t m_nOriginalLaneAssignment; // 0x839            
             // metadata: MNetworkEnable
-            bool m_bIsKingPanda; // 0x81a            
+            bool m_bIsKingPanda; // 0x83a            
             // metadata: MNetworkEnable
-            bool m_bBotDisconnectTakeover; // 0x81b            
-            // metadata: MNetworkEnable
-            // metadata: MNetworkChangeCallback "ChatGroupsChanged"
-            bool m_bInTeamChat; // 0x81c            
+            bool m_bBotDisconnectTakeover; // 0x83b            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "ChatGroupsChanged"
-            bool m_bInPartyChat; // 0x81d            
-            uint8_t _pad081e[0x2]; // 0x81e
+            bool m_bInTeamChat; // 0x83c            
             // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::client::HeroBuildID_t m_unHeroBuildID; // 0x820            
+            // metadata: MNetworkChangeCallback "ChatGroupsChanged"
+            bool m_bInPartyChat; // 0x83d            
             // metadata: MNetworkEnable
-            bool m_bLaneSwapLocked; // 0x824            
-            uint8_t _pad0825[0x3]; // 0x825
+            bool m_bLaneSwapLocked; // 0x83e            
+            uint8_t _pad083f[0x1]; // 0x83f
             // metadata: MNetworkEnable
             // m_vecLaneSwapRequests has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<CHandle<source2sdk::server::CBaseEntity>> m_vecLaneSwapRequests;
-            char m_vecLaneSwapRequests[0x18]; // 0x828            
+            char m_vecLaneSwapRequests[0x18]; // 0x840            
             // metadata: MNetworkEnable
             // m_vecLaneSwapRejects has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<CHandle<source2sdk::server::CBaseEntity>> m_vecLaneSwapRejects;
-            char m_vecLaneSwapRejects[0x18]; // 0x840            
+            char m_vecLaneSwapRejects[0x18]; // 0x858            
             // metadata: MNetworkEnable
             // m_vecMutedPlayers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<std::int32_t> m_vecMutedPlayers;
-            char m_vecMutedPlayers[0x18]; // 0x858            
+            char m_vecMutedPlayers[0x18]; // 0x870            
             // metadata: MNetworkEnable
-            bool m_bCommsRestricted; // 0x870            
-            uint8_t _pad0871[0xdb]; // 0x871
+            bool m_bCommsRestricted; // 0x888            
+            uint8_t _pad0889[0xe3]; // 0x889
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnHeroPawnChanged"
             // m_hHeroPawn has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelPlayerPawn> m_hHeroPawn;
-            char m_hHeroPawn[0x4]; // 0x94c            
-            uint8_t _pad0950[0x40]; // 0x950
+            char m_hHeroPawn[0x4]; // 0x96c            
+            uint8_t _pad0970[0x40]; // 0x970
             // metadata: MNetworkEnable
-            source2sdk::server::PlayerDataGlobal_t m_PlayerDataGlobal; // 0x990            
+            source2sdk::server::PlayerDataGlobal_t m_PlayerDataGlobal; // 0x9b0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int8_t m_nDeathReplayAvailable; // 0xc48            
+            std::int8_t m_nDeathReplayAvailable; // 0xc70            
             // metadata: MNetworkEnable
-            source2sdk::client::CitadelLobbyPlayerSlot_t m_unLobbyPlayerSlot; // 0xc49            
-            uint8_t _pad0c4a[0x2]; // 0xc4a
-            source2sdk::entity2::GameTime_t m_flLastCommsTime; // 0xc4c            
-            source2sdk::entity2::GameTime_t m_flLastFailedCommsTime; // 0xc50            
-            bool m_bLastCommsWasDoublePing; // 0xc54            
-            uint8_t _pad0c55[0x3]; // 0xc55
-            std::int32_t m_nGuideBotNumTasksComplete; // 0xc58            
-            bool m_bHasBeenReportedAsCheater; // 0xc5c            
-            bool m_bHasGCACKedCheaterReport; // 0xc5d            
-            bool m_bHasBeenLoggedAsCheater; // 0xc5e            
-            uint8_t _pad0c5f[0x41];
+            source2sdk::client::CitadelLobbyPlayerSlot_t m_unLobbyPlayerSlot; // 0xc71            
+            uint8_t _pad0c72[0x2]; // 0xc72
+            source2sdk::entity2::GameTime_t m_flLastCommsTime; // 0xc74            
+            source2sdk::entity2::GameTime_t m_flNextAllowedCommsTime; // 0xc78            
+            source2sdk::entity2::GameTime_t m_flLastFailedCommsTime; // 0xc7c            
+            // m_vecRecentCommAttempts has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<source2sdk::entity2::GameTime_t> m_vecRecentCommAttempts;
+            char m_vecRecentCommAttempts[0x18]; // 0xc80            
+            std::int32_t m_nTotalCommsAttempted; // 0xc98            
+            std::int32_t m_nGuideBotNumTasksComplete; // 0xc9c            
+            bool m_bHasBeenReportedAsCheater; // 0xca0            
+            bool m_bHasGCACKedCheaterReport; // 0xca1            
+            bool m_bHasBeenLoggedAsCheater; // 0xca2            
+            uint8_t _pad0ca3[0x45];
             
             // Datamap fields:
             // void CCitadelPlayerControllerResourceDataThink; // 0x0
@@ -170,6 +167,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CCitadelPlayerController because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelPlayerController) == 0xca0);
+        static_assert(sizeof(source2sdk::server::CCitadelPlayerController) == 0xce8);
     };
 };

@@ -18,18 +18,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1a8
+        // Size: 0x290
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Nano_CatForm : public source2sdk::server::CCitadelModifier
         {
         public:
-            source2sdk::client::ModelChange_t m_ModelChange; // 0xc0            
+            source2sdk::client::ModelChange_t m_ModelChange; // 0xc8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Nano_CatForm because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Nano_CatForm) == 0x1a8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Nano_CatForm) == 0x290);
     };
 };

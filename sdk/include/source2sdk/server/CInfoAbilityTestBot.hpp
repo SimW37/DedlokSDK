@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x4e8
+        // Size: 0x500
         // Has VTable
         #pragma pack(push, 1)
         class CInfoAbilityTestBot : public source2sdk::server::CPointEntity
         {
         public:
-            uint8_t _pad04e0[0x8];
+            uint8_t _pad04f0[0x10];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CInfoAbilityTestBot) == 0x4e8);
+        static_assert(sizeof(source2sdk::server::CInfoAbilityTestBot) == 0x500);
     };
 };

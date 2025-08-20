@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x540
+        // Size: 0x550
         // Has VTable
         #pragma pack(push, 1)
         class FilterDamageType : public source2sdk::server::CBaseFilter
         {
         public:
-            std::int32_t m_iDamageType; // 0x538            
-            uint8_t _pad053c[0x4];
+            std::int32_t m_iDamageType; // 0x548            
+            uint8_t _pad054c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in FilterDamageType because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::FilterDamageType) == 0x540);
+        static_assert(sizeof(source2sdk::server::FilterDamageType) == 0x550);
     };
 };

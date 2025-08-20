@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb40
+        // Size: 0xb68
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flInitialRadius"
@@ -42,36 +42,36 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            float m_flInitialRadius; // 0xae8            
+            float m_flInitialRadius; // 0xb10            
             // metadata: MNetworkEnable
-            float m_flEndRadius; // 0xaec            
+            float m_flEndRadius; // 0xb14            
             // metadata: MNetworkEnable
-            float m_flProgress; // 0xaf0            
+            float m_flProgress; // 0xb18            
             // metadata: MNetworkEnable
-            float m_flCaptureTime; // 0xaf4            
+            float m_flCaptureTime; // 0xb1c            
             // metadata: MNetworkEnable
             // m_hUnlockPrereq has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hUnlockPrereq;
-            char m_hUnlockPrereq[0x4]; // 0xaf8            
+            char m_hUnlockPrereq[0x4]; // 0xb20            
             // metadata: MNetworkEnable
-            bool m_bAvailable; // 0xafc            
+            bool m_bAvailable; // 0xb24            
             // metadata: MNetworkEnable
-            bool m_bIsBeingCaptured; // 0xafd            
+            bool m_bIsBeingCaptured; // 0xb25            
             // metadata: MNetworkEnable
-            bool m_bIsBeingBlocked; // 0xafe            
-            uint8_t _pad0aff[0x9]; // 0xaff
-            source2sdk::entity2::GameTime_t m_flLastTouchedTime; // 0xb08            
-            Vector m_vecBeamTarget; // 0xb0c            
-            Vector m_vecBeamStart; // 0xb18            
-            source2sdk::client::ParticleIndex_t m_nFXProgressBeam; // 0xb24            
-            CUtlSymbolLarge m_strUnlockPrereq; // 0xb28            
-            CUtlSymbolLarge m_strBeamStart; // 0xb30            
-            CUtlSymbolLarge m_strBeamTarget; // 0xb38            
+            bool m_bIsBeingBlocked; // 0xb26            
+            uint8_t _pad0b27[0x9]; // 0xb27
+            source2sdk::entity2::GameTime_t m_flLastTouchedTime; // 0xb30            
+            Vector m_vecBeamTarget; // 0xb34            
+            Vector m_vecBeamStart; // 0xb40            
+            source2sdk::client::ParticleIndex_t m_nFXProgressBeam; // 0xb4c            
+            CUtlSymbolLarge m_strUnlockPrereq; // 0xb50            
+            CUtlSymbolLarge m_strBeamStart; // 0xb58            
+            CUtlSymbolLarge m_strBeamTarget; // 0xb60            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelControlPointTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelControlPointTrigger) == 0xb40);
+        static_assert(sizeof(source2sdk::client::CCitadelControlPointTrigger) == 0xb68);
     };
 };

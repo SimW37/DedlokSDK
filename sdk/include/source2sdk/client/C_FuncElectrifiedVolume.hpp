@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9c0
+        // Size: 0x9e8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "string_t m_EffectName"
@@ -27,18 +27,18 @@ namespace source2sdk
         class C_FuncElectrifiedVolume : public source2sdk::client::C_FuncBrush
         {
         public:
-            source2sdk::client::ParticleIndex_t m_nAmbientEffect; // 0x9a8            
-            uint8_t _pad09ac[0x4]; // 0x9ac
+            source2sdk::client::ParticleIndex_t m_nAmbientEffect; // 0x9d0            
+            uint8_t _pad09d4[0x4]; // 0x9d4
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_EffectName; // 0x9b0            
+            CUtlSymbolLarge m_EffectName; // 0x9d8            
             // metadata: MNetworkEnable
-            bool m_bState; // 0x9b8            
-            uint8_t _pad09b9[0x7];
+            bool m_bState; // 0x9e0            
+            uint8_t _pad09e1[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_FuncElectrifiedVolume because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_FuncElectrifiedVolume) == 0x9c0);
+        static_assert(sizeof(source2sdk::client::C_FuncElectrifiedVolume) == 0x9e8);
     };
 };

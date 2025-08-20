@@ -24,21 +24,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9c8
+        // Size: 0xa10
         // Has VTable
         #pragma pack(push, 1)
         class CTriggerPush : public source2sdk::server::CBaseTrigger
         {
         public:
-            QAngle m_angPushEntitySpace; // 0x990            
-            Vector m_vecPushDirEntitySpace; // 0x99c            
-            bool m_bTriggerOnStartTouch; // 0x9a8            
-            bool m_bUsePathSimple; // 0x9a9            
-            uint8_t _pad09aa[0x6]; // 0x9aa
-            CUtlSymbolLarge m_iszPathSimpleName; // 0x9b0            
-            source2sdk::server::CPathSimple* m_PathSimple; // 0x9b8            
-            std::uint32_t m_splinePushType; // 0x9c0            
-            uint8_t _pad09c4[0x4];
+            QAngle m_angPushEntitySpace; // 0x9d8            
+            Vector m_vecPushDirEntitySpace; // 0x9e4            
+            bool m_bTriggerOnStartTouch; // 0x9f0            
+            bool m_bUsePathSimple; // 0x9f1            
+            uint8_t _pad09f2[0x6]; // 0x9f2
+            CUtlSymbolLarge m_iszPathSimpleName; // 0x9f8            
+            source2sdk::server::CPathSimple* m_PathSimple; // 0xa00            
+            std::uint32_t m_splinePushType; // 0xa08            
+            uint8_t _pad0a0c[0x4];
             
             // Datamap fields:
             // Vector InputSetPushDirection; // 0x0
@@ -48,6 +48,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CTriggerPush because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CTriggerPush) == 0x9c8);
+        static_assert(sizeof(source2sdk::server::CTriggerPush) == 0xa10);
     };
 };

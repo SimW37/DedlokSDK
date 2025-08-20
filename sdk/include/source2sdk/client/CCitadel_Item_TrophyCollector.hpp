@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf58
+        // Size: 0xf20
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iTrophyCount"
@@ -25,19 +25,19 @@ namespace source2sdk
         class CCitadel_Item_TrophyCollector : public source2sdk::client::CCitadel_Item
         {
         public:
-            uint8_t _pad0dc0[0x180]; // 0xdc0
+            uint8_t _pad0d88[0x180]; // 0xd88
             // metadata: MNetworkEnable
-            std::int32_t m_iTrophyCount; // 0xf40            
-            std::int32_t m_iInitialKills; // 0xf44            
-            std::int32_t m_iInitialAssists; // 0xf48            
-            std::int32_t m_iPrevCount; // 0xf4c            
-            bool m_bMaxStacksReached; // 0xf50            
-            uint8_t _pad0f51[0x7];
+            std::int32_t m_iTrophyCount; // 0xf08            
+            std::int32_t m_iInitialKills; // 0xf0c            
+            std::int32_t m_iInitialAssists; // 0xf10            
+            std::int32_t m_iPrevCount; // 0xf14            
+            bool m_bMaxStacksReached; // 0xf18            
+            uint8_t _pad0f19[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item_TrophyCollector because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Item_TrophyCollector) == 0xf58);
+        static_assert(sizeof(source2sdk::client::CCitadel_Item_TrophyCollector) == 0xf20);
     };
 };

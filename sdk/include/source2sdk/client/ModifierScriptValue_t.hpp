@@ -30,7 +30,7 @@ namespace source2sdk
         public:
             source2sdk::client::EModifierValue m_eModifierValue; // 0x0            
             source2sdk::client::EModifierScriptVariantType m_eType; // 0x4            
-            // metadata: MPropertySuppressExpr "m_eType != MODIFIER_SCRIPT_VARIANT_MODIFIER_FLOAT"
+            // metadata: MPropertySuppressExpr "m_eType != MODIFIER_SCRIPT_VARIANT_MODIFIER_FLOAT && m_eType != MODIFIER_SCRIPT_VARIANT_MODIFIER_BOOLEAN && m_eType != MODIFIER_SCRIPT_VARIANT_MODIFIER_INTEGER"
             source2sdk::client::CModifierLevelFloat m_value; // 0x8            
             // metadata: MPropertySuppressExpr "m_eType != MODIFIER_SCRIPT_VARIANT_MODEL"
             // m_sModelValue has a template type with potentially unknown template parameters. You can try uncommenting the field below.

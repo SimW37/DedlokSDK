@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x390
+        // Size: 0x3a8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -74,44 +74,49 @@ namespace source2sdk
             char m_strDamagedEffect[0xe0]; // 0x1d0            
             // metadata: MPropertyDescription "Amount of health to grant to a ragdoll before the ragdoll is destroyed."
             std::int32_t m_nRagdollHealth; // 0x2b0            
+            // metadata: MPropertyDescription "If we take at least this much damage from a vehicle, we'll go into a temp ragdoll state if we're not dead."
+            std::int32_t m_nMinVehicleDamageToTempRagdoll; // 0x2b4            
+            // metadata: MPropertyDescription "Scale on the energy used to look up into the damage tables for physics impacts (including vehicle impacts)."
+            float m_flImpactEnergyScale; // 0x2b8            
             // metadata: MPropertyStartGroup "Navigation"
-            bool m_bAllowNonZUpMovement; // 0x2b4            
+            bool m_bAllowNonZUpMovement; // 0x2bc            
             // metadata: MPropertyDescription "If true, this NPC will use a dynamic collision hull that allows it to be pushed by heavy things and affected by constraints."
-            bool m_bUseDynamicCollisionHull; // 0x2b5            
+            bool m_bUseDynamicCollisionHull; // 0x2bd            
             // metadata: MPropertyDescription "If true, this NPC will use the capsule collision.  Capsule collision will also be used if m_bAllowNonZUpMovement is set."
-            bool m_bRequestCapsuleCollision; // 0x2b6            
-            uint8_t _pad02b7[0x1]; // 0x2b7
+            bool m_bRequestCapsuleCollision; // 0x2be            
+            uint8_t _pad02bf[0x1]; // 0x2bf
             // metadata: MPropertyDescription "Override the radius of the capsule. Requires m_bAllowNonZUpMovement or m_bRequestCapsuleCollision to be set. 0 to use collision prop OBB"
-            float m_flCapsuleRadiusOverride; // 0x2b8            
+            float m_flCapsuleRadiusOverride; // 0x2c0            
             // metadata: MPropertyDescription "Override the height of the capsule. Requires m_bAllowNonZUpMovement or m_bRequestCapsuleCollision to be set. 0 to use collision prop height."
-            float m_flCapsuleHeightOverride; // 0x2bc            
+            float m_flCapsuleHeightOverride; // 0x2c4            
             // metadata: MPropertyStartGroup "Animation"
             // metadata: MPropertyFriendlyName "Enabled Shared Actions"
             // metadata: MPropertyDescription "List of the shared BaseNPC actions this NPC supports"
-            // metadata: MPropertyAttributeEditor "VDataAnimGraphParamEnumValue( m_sModelName; literal; e_action_desired_shared )"
+            // metadata: MPropertyAttributeEditor "AnimGraphParamEnumValue()"
+            // metadata: MPropertyEditContextOverrideValue
             // m_vecActionDesiredShared has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CGlobalSymbol> m_vecActionDesiredShared;
-            char m_vecActionDesiredShared[0x18]; // 0x2c0            
+            char m_vecActionDesiredShared[0x18]; // 0x2c8            
             // metadata: MPropertyStartGroup "Sounds"
             // metadata: MPropertyDescription "Player Killed NPC Sound"
-            CSoundEventName m_sPlayerKilledNpcSound; // 0x2d8            
+            CSoundEventName m_sPlayerKilledNpcSound; // 0x2e0            
             // metadata: MPropertyStartGroup "Death"
-            CGlobalSymbol m_sCustomDeathHandshake; // 0x2e8            
+            CGlobalSymbol m_sCustomDeathHandshake; // 0x2f0            
             // metadata: MPropertyStartGroup "Movement"
             // metadata: MPropertyDescription "If true, this NPC will use code driven animgraph movement actions such as starts and stops"
-            bool m_bEnableCodeDrivenAnimgraphMovement; // 0x2f0            
+            bool m_bEnableCodeDrivenAnimgraphMovement; // 0x2f8            
             // metadata: MPropertyDescription "If true, the NPC will request strafing if it is supported by the animgraph. Can still be overriden by schedules."
-            bool m_bEnableAnimgraphTagDrivenStrafing; // 0x2f1            
-            uint8_t _pad02f2[0x2]; // 0x2f2
-            float m_flMassOverride; // 0x2f4            
-            source2sdk::client::AI_AdditionalMovementSettings m_defaultAdditionalMovementSettings; // 0x2f8            
-            float m_flThreatTemperature; // 0x388            
-            float m_flFlashpoint; // 0x38c            
+            bool m_bEnableAnimgraphTagDrivenStrafing; // 0x2f9            
+            uint8_t _pad02fa[0x2]; // 0x2fa
+            float m_flMassOverride; // 0x2fc            
+            source2sdk::client::AI_AdditionalMovementSettings m_defaultAdditionalMovementSettings; // 0x300            
+            float m_flThreatTemperature; // 0x3a0            
+            float m_flFlashpoint; // 0x3a4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAI_BaseNPCVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAI_BaseNPCVData) == 0x390);
+        static_assert(sizeof(source2sdk::server::CAI_BaseNPCVData) == 0x3a8);
     };
 };

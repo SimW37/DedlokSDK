@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9a8
+        // Size: 0x9f0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelInteriorTrigger : public source2sdk::server::CTriggerModifier
         {
         public:
-            std::int32_t m_nInteriorType; // 0x9a0            
-            CUtlStringToken m_tInteriorModifier; // 0x9a4            
+            std::int32_t m_nInteriorType; // 0x9e8            
+            CUtlStringToken m_tInteriorModifier; // 0x9ec            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelInteriorTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelInteriorTrigger) == 0x9a8);
+        static_assert(sizeof(source2sdk::server::CCitadelInteriorTrigger) == 0x9f0);
     };
 };

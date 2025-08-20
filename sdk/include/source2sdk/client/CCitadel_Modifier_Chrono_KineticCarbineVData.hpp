@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x840
+        // Size: 0x940
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,18 +29,18 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_TracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle;
-            char m_TracerParticle[0xe0]; // 0x660            
+            char m_TracerParticle[0xe0]; // 0x760            
             // m_FullyChargedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FullyChargedParticle;
-            char m_FullyChargedParticle[0xe0]; // 0x740            
+            char m_FullyChargedParticle[0xe0]; // 0x840            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strFullyCharged; // 0x820            
-            CSoundEventName m_strShotSound; // 0x830            
+            CSoundEventName m_strFullyCharged; // 0x920            
+            CSoundEventName m_strShotSound; // 0x930            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Chrono_KineticCarbineVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Chrono_KineticCarbineVData) == 0x840);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Chrono_KineticCarbineVData) == 0x940);
     };
 };

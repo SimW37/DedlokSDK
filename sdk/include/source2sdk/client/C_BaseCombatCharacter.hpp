@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf48
+        // Size: 0xf30
         // Has VTable
         // 
         // static metadata: MNetworkExcludeByUserGroup "LocalPlayerExclusive"
@@ -39,19 +39,19 @@ namespace source2sdk
             // metadata: MNetworkChangeCallback "OnWearablesChanged"
             // m_hMyWearables has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_NetworkUtlVectorBase<CHandle<source2sdk::client::C_EconWearable>> m_hMyWearables;
-            char m_hMyWearables[0x18]; // 0xec0            
-            source2sdk::modellib::AttachmentHandle_t m_leftFootAttachment; // 0xed8            
-            source2sdk::modellib::AttachmentHandle_t m_rightFootAttachment; // 0xed9            
-            uint8_t _pad0eda[0x2]; // 0xeda
-            source2sdk::client::C_BaseCombatCharacter_WaterWakeMode_t m_nWaterWakeMode; // 0xedc            
-            float m_flWaterWorldZ; // 0xee0            
-            float m_flWaterNextTraceTime; // 0xee4            
-            uint8_t _pad0ee8[0x60];
+            char m_hMyWearables[0x18]; // 0xea8            
+            source2sdk::modellib::AttachmentHandle_t m_leftFootAttachment; // 0xec0            
+            source2sdk::modellib::AttachmentHandle_t m_rightFootAttachment; // 0xec1            
+            uint8_t _pad0ec2[0x2]; // 0xec2
+            source2sdk::client::C_BaseCombatCharacter_WaterWakeMode_t m_nWaterWakeMode; // 0xec4            
+            float m_flWaterWorldZ; // 0xec8            
+            float m_flWaterNextTraceTime; // 0xecc            
+            uint8_t _pad0ed0[0x60];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_BaseCombatCharacter because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_BaseCombatCharacter) == 0xf48);
+        static_assert(sizeof(source2sdk::client::C_BaseCombatCharacter) == 0xf30);
     };
 };

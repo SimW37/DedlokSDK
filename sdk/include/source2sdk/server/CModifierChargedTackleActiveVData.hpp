@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x820
+        // Size: 0x920
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_TackleParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TackleParticle;
-            char m_TackleParticle[0xe0]; // 0x660            
+            char m_TackleParticle[0xe0]; // 0x760            
             // m_PullEnemiesParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PullEnemiesParticle;
-            char m_PullEnemiesParticle[0xe0]; // 0x740            
+            char m_PullEnemiesParticle[0xe0]; // 0x840            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierChargedTackleActiveVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifierChargedTackleActiveVData) == 0x820);
+        static_assert(sizeof(source2sdk::server::CModifierChargedTackleActiveVData) == 0x920);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x668
+        // Size: 0x768
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,13 +27,13 @@ namespace source2sdk
         public:
             // metadata: MPropertyDescription "How much should damage be reduced from players when enemy troopers are on your base? 0 is no reduction, 100 is complete reduction"
             // metadata: MPropertyAttributeRange "0 100"
-            float m_flDamageReductionForTroopers; // 0x660            
-            uint8_t _pad0664[0x4];
+            float m_flDamageReductionForTroopers; // 0x760            
+            uint8_t _pad0764[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Trooper_Damage_ReductionVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Trooper_Damage_ReductionVData) == 0x668);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Trooper_Damage_ReductionVData) == 0x768);
     };
 };

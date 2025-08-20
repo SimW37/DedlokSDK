@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17b8
+        // Size: 0x17b0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,24 +31,24 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_TornadoCastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TornadoCastParticle;
-            char m_TornadoCastParticle[0xe0]; // 0x1620            
+            char m_TornadoCastParticle[0xe0]; // 0x1618            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_WhirlwindEvasionModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_WhirlwindEvasionModifier;
-            char m_WhirlwindEvasionModifier[0x10]; // 0x1700            
+            char m_WhirlwindEvasionModifier[0x10]; // 0x16f8            
             // m_TornadoAura has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_TornadoAura;
-            char m_TornadoAura[0x10]; // 0x1710            
+            char m_TornadoAura[0x10]; // 0x1708            
             // m_GrenadeTrailModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_GrenadeTrailModifier;
-            char m_GrenadeTrailModifier[0x10]; // 0x1720            
+            char m_GrenadeTrailModifier[0x10]; // 0x1718            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTravelingInTornado; // 0x1730            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTravelingInTornado; // 0x1728            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Mirage_Tornado_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbility_Mirage_Tornado_VData) == 0x17b8);
+        static_assert(sizeof(source2sdk::client::CAbility_Mirage_Tornado_VData) == 0x17b0);
     };
 };

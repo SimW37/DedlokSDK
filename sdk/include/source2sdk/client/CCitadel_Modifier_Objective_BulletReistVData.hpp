@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x668
+        // Size: 0x768
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,14 +27,14 @@ namespace source2sdk
         public:
             // metadata: MPropertyStartGroup "Objective Bullet Resist"
             // metadata: MPropertyDescription "Bullet Resist with no Enemy Heroes around"
-            float m_BulletResist; // 0x660            
+            float m_BulletResist; // 0x760            
             // metadata: MPropertyDescription "Bullet Resist Reduced Per Enemy Hero (Max 0%)"
-            float m_BulletResistReductionPerHero; // 0x664            
+            float m_BulletResistReductionPerHero; // 0x764            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Objective_BulletReistVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Objective_BulletReistVData) == 0x668);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Objective_BulletReistVData) == 0x768);
     };
 };

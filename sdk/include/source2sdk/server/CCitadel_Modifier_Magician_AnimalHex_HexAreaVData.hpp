@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x870
+        // Size: 0x970
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,24 +30,24 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_HexModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_HexModifier;
-            char m_HexModifier[0x10]; // 0x660            
+            char m_HexModifier[0x10]; // 0x760            
             // metadata: MPropertyStartGroup "Visuals"
             // m_AreaWarningEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaWarningEffect;
-            char m_AreaWarningEffect[0xe0]; // 0x670            
+            char m_AreaWarningEffect[0xe0]; // 0x770            
             // m_ExplodeEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeEffect;
-            char m_ExplodeEffect[0xe0]; // 0x750            
+            char m_ExplodeEffect[0xe0]; // 0x850            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strArmingSound; // 0x830            
-            CSoundEventName m_strArmedSound; // 0x840            
-            CSoundEventName m_strLoopingSound; // 0x850            
-            CSoundEventName m_strHitSound; // 0x860            
+            CSoundEventName m_strArmingSound; // 0x930            
+            CSoundEventName m_strArmedSound; // 0x940            
+            CSoundEventName m_strLoopingSound; // 0x950            
+            CSoundEventName m_strHitSound; // 0x960            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Magician_AnimalHex_HexAreaVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Magician_AnimalHex_HexAreaVData) == 0x870);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Magician_AnimalHex_HexAreaVData) == 0x970);
     };
 };

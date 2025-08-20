@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xb70
+        // Size: 0xb90
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "Vector m_vFanOrigin"
@@ -45,39 +45,39 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            Vector m_vFanOrigin; // 0xae8            
+            Vector m_vFanOrigin; // 0xb10            
             // metadata: MNetworkEnable
-            Vector m_vFanOriginOffset; // 0xaf4            
+            Vector m_vFanOriginOffset; // 0xb1c            
             // metadata: MNetworkEnable
-            Vector m_vFanEnd; // 0xb00            
+            Vector m_vFanEnd; // 0xb28            
             // metadata: MNetworkEnable
-            Vector m_vNoiseDirectionTarget; // 0xb0c            
+            Vector m_vNoiseDirectionTarget; // 0xb34            
             // metadata: MNetworkEnable
-            Vector m_vDirection; // 0xb18            
+            Vector m_vDirection; // 0xb40            
             // metadata: MNetworkEnable
-            bool m_bPushTowardsInfoTarget; // 0xb24            
+            bool m_bPushTowardsInfoTarget; // 0xb4c            
             // metadata: MNetworkEnable
-            bool m_bPushAwayFromInfoTarget; // 0xb25            
-            uint8_t _pad0b26[0xa]; // 0xb26
+            bool m_bPushAwayFromInfoTarget; // 0xb4d            
+            uint8_t _pad0b4e[0x2]; // 0xb4e
             // metadata: MNetworkEnable
-            Quaternion m_qNoiseDelta; // 0xb30            
+            Quaternion m_qNoiseDelta; // 0xb50            
             // metadata: MNetworkEnable
             // m_hInfoFan has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::CInfoFan> m_hInfoFan;
-            char m_hInfoFan[0x4]; // 0xb40            
+            char m_hInfoFan[0x4]; // 0xb60            
             // metadata: MNetworkEnable
-            float m_flForce; // 0xb44            
+            float m_flForce; // 0xb64            
             // metadata: MNetworkEnable
-            bool m_bFalloff; // 0xb48            
-            uint8_t _pad0b49[0x7]; // 0xb49
+            bool m_bFalloff; // 0xb68            
+            uint8_t _pad0b69[0x7]; // 0xb69
             // metadata: MNetworkEnable
-            source2sdk::client::CountdownTimer m_RampTimer; // 0xb50            
-            uint8_t _pad0b68[0x8];
+            source2sdk::client::CountdownTimer m_RampTimer; // 0xb70            
+            uint8_t _pad0b88[0x8];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CTriggerFan because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CTriggerFan) == 0xb70);
+        static_assert(sizeof(source2sdk::client::CTriggerFan) == 0xb90);
     };
 };

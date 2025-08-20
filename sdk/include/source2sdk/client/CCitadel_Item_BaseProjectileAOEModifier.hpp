@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe18
+        // Size: 0xde0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Item_BaseProjectileAOEModifier : public source2sdk::client::CCitadel_Item
         {
         public:
-            Vector m_vLaunchPosition; // 0xdc0            
-            QAngle m_qLaunchAngle; // 0xdcc            
-            uint8_t _pad0dd8[0x40];
+            Vector m_vLaunchPosition; // 0xd88            
+            QAngle m_qLaunchAngle; // 0xd94            
+            uint8_t _pad0da0[0x40];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item_BaseProjectileAOEModifier because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Item_BaseProjectileAOEModifier) == 0xe18);
+        static_assert(sizeof(source2sdk::client::CCitadel_Item_BaseProjectileAOEModifier) == 0xde0);
     };
 };

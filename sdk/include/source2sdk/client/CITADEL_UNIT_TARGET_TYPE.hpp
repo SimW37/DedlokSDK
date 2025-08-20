@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 34
+        // Enumerator count: 35
         // Alignment: 4
         // Size: 0x4
         // 
@@ -42,6 +42,7 @@ namespace source2sdk
             CITADEL_UNIT_TARGET_BREAKABLE_PROP = 0x40000,
             CITADEL_UNIT_TARGET_ABILLITY_TRIGGER = 0x80000,
             CITADEL_UNIT_TARGET_HERO = 0x101,
+            CITADEL_UNIT_TARGET_TROOPER = 0x202,
             CITADEL_UNIT_TARGET_CREEP_FRIENDLY = 0x6,
             CITADEL_UNIT_TARGET_CREEP_ENEMY = 0x10600,
             CITADEL_UNIT_TARGET_CREEP = 0x10606,

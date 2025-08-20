@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x840
+        // Size: 0x940
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x660            
+            char m_DebuffModifier[0x10]; // 0x760            
             // metadata: MPropertyStartGroup "Visuals"
             // m_BuffParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffParticle;
-            char m_BuffParticle[0xe0]; // 0x670            
+            char m_BuffParticle[0xe0]; // 0x770            
             // m_DebuffParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffParticle;
-            char m_DebuffParticle[0xe0]; // 0x750            
+            char m_DebuffParticle[0xe0]; // 0x850            
             // metadata: MPropertyGroupName "Sounds"
-            CSoundEventName m_strDamageSound; // 0x830            
+            CSoundEventName m_strDamageSound; // 0x930            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Chrono_TimeWall_EffectVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Chrono_TimeWall_EffectVData) == 0x840);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Chrono_TimeWall_EffectVData) == 0x940);
     };
 };

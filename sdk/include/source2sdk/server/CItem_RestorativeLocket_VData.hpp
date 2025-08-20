@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1890
+        // Size: 0x1888
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,18 +29,18 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x16b0            
+            char m_CastParticle[0xe0]; // 0x16a8            
             // m_TrailParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TrailParticle;
-            char m_TrailParticle[0xe0]; // 0x1790            
+            char m_TrailParticle[0xe0]; // 0x1788            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strStackSound; // 0x1870            
-            CSoundEventName m_strTargetHealSound; // 0x1880            
+            CSoundEventName m_strStackSound; // 0x1868            
+            CSoundEventName m_strTargetHealSound; // 0x1878            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CItem_RestorativeLocket_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CItem_RestorativeLocket_VData) == 0x1890);
+        static_assert(sizeof(source2sdk::server::CItem_RestorativeLocket_VData) == 0x1888);
     };
 };

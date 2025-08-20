@@ -6,6 +6,7 @@
 #include "source2sdk/client/CCitadelModifier.hpp"
 #include "source2sdk/client/CitadelAbilityVData.hpp"
 #include "source2sdk/client/CitadelCameraOperationsSequence_t.hpp"
+#include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -19,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16e8
+        // Size: 0x18a0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,24 +31,31 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SelfModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SelfModifier;
-            char m_SelfModifier[0x10]; // 0x1620            
+            char m_SelfModifier[0x10]; // 0x1618            
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x1630            
+            char m_SlowModifier[0x10]; // 0x1628            
             // metadata: MPropertyStartGroup "Gameplay"
             // m_StartingWeaponAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CSubclassName<4> m_StartingWeaponAbility;
-            char m_StartingWeaponAbility[0x10]; // 0x1640            
+            char m_StartingWeaponAbility[0x10]; // 0x1638            
             // m_NewWeaponAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CSubclassName<4> m_NewWeaponAbility;
-            char m_NewWeaponAbility[0x10]; // 0x1650            
+            char m_NewWeaponAbility[0x10]; // 0x1648            
+            // metadata: MPropertyStartGroup "Visuals"
+            // m_CrossbowEntImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrossbowEntImpactParticle;
+            char m_CrossbowEntImpactParticle[0xe0]; // 0x1658            
+            // m_CrossbowImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrossbowImpactParticle;
+            char m_CrossbowImpactParticle[0xe0]; // 0x1738            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSwapWeapons; // 0x1660            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSwapWeapons; // 0x1818            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Priest_WeaponSwapVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Priest_WeaponSwapVData) == 0x16e8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Priest_WeaponSwapVData) == 0x18a0);
     };
 };

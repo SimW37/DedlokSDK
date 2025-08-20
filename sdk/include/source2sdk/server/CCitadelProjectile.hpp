@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x880
+        // Size: 0x8e8
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_flTimeScale"
@@ -43,49 +43,54 @@ namespace source2sdk
         class CCitadelProjectile : public source2sdk::server::CBaseModelEntity
         {
         public:
-            float m_flMaxDistance; // 0x7d0            
-            float m_flArmingTime; // 0x7d4            
-            float m_flChargeAmount; // 0x7d8            
-            bool m_bCollideWithThrower; // 0x7dc            
-            bool m_bNewCollideWithThrower; // 0x7dd            
-            uint8_t _pad07de[0xa]; // 0x7de
-            float m_flTickSoundInterval; // 0x7e8            
-            uint8_t _pad07ec[0x4]; // 0x7ec
-            Vector m_vLastAbsOrigin; // 0x7f0            
-            Vector m_vLastAbsVelocity; // 0x7fc            
-            uint8_t _pad0808[0x18]; // 0x808
+            uint8_t _pad0808[0x20]; // 0x808
+            float m_flMaxDistance; // 0x828            
+            uint8_t _pad082c[0x4]; // 0x82c
+            std::uint64_t m_nCachedExcludeFlags; // 0x830            
+            bool m_bInPortalEnvironment; // 0x838            
+            uint8_t _pad0839[0x3]; // 0x839
+            float m_flArmingTime; // 0x83c            
+            float m_flChargeAmount; // 0x840            
+            bool m_bCollideWithThrower; // 0x844            
+            bool m_bNewCollideWithThrower; // 0x845            
+            uint8_t _pad0846[0xa]; // 0x846
+            float m_flTickSoundInterval; // 0x850            
+            uint8_t _pad0854[0x4]; // 0x854
+            Vector m_vLastAbsOrigin; // 0x858            
+            Vector m_vLastAbsVelocity; // 0x864            
+            uint8_t _pad0870[0x18]; // 0x870
             // m_vecTargetToIgnore has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecTargetToIgnore;
-            char m_vecTargetToIgnore[0x18]; // 0x820            
-            bool m_bDetonateStarted; // 0x838            
-            bool m_bTouchDisabled; // 0x839            
-            uint8_t _pad083a[0x2]; // 0x83a
+            char m_vecTargetToIgnore[0x18]; // 0x888            
+            bool m_bDetonateStarted; // 0x8a0            
+            bool m_bTouchDisabled; // 0x8a1            
+            uint8_t _pad08a2[0x2]; // 0x8a2
             // metadata: MNetworkEnable
-            Vector m_vInitialVelocity; // 0x83c            
+            Vector m_vInitialVelocity; // 0x8a4            
             // metadata: MNetworkEnable
-            Vector m_vInitialPosition; // 0x848            
+            Vector m_vInitialPosition; // 0x8b0            
             // metadata: MNetworkEnable
-            CUtlStringToken m_abilityID; // 0x854            
+            CUtlStringToken m_abilityID; // 0x8bc            
             // metadata: MNetworkEnable
             // m_hThrower has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hThrower;
-            char m_hThrower[0x4]; // 0x858            
-            uint8_t _pad085c[0x4]; // 0x85c
+            char m_hThrower[0x4]; // 0x8c0            
+            uint8_t _pad08c4[0x4]; // 0x8c4
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_sParticleName; // 0x860            
+            CUtlSymbolLarge m_sParticleName; // 0x8c8            
             // metadata: MNetworkEnable
-            Vector m_vecSpawnPosition; // 0x868            
+            Vector m_vecSpawnPosition; // 0x8d0            
             // metadata: MNetworkEnable
-            float m_flProjectileSpeed; // 0x874            
+            float m_flProjectileSpeed; // 0x8dc            
             // metadata: MNetworkEnable
-            float m_flMaxLifetime; // 0x878            
+            float m_flMaxLifetime; // 0x8e0            
             // metadata: MNetworkEnable
-            float m_flParticleRadius; // 0x87c            
+            float m_flParticleRadius; // 0x8e4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelProjectile because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelProjectile) == 0x880);
+        static_assert(sizeof(source2sdk::server::CCitadelProjectile) == 0x8e8);
     };
 };

@@ -32,9 +32,9 @@ namespace source2sdk
             source2sdk::client::CTakeDamageInfo* m_pOriginatingInfo; // 0x0            
             std::int32_t m_nHealthLost; // 0x8            
             std::int32_t m_nDamageTaken; // 0xc            
-            std::int32_t m_nTotalledHealthLost; // 0x10            
-            std::int32_t m_nTotalledDamageTaken; // 0x14            
-            float m_flTotalledDamageAbsorbed; // 0x18            
+            float m_flPreModifiedDamage; // 0x10            
+            std::int32_t m_nTotalledHealthLost; // 0x14            
+            std::int32_t m_nTotalledDamageDealt; // 0x18            
             uint8_t _pad001c[0x4];
         };
         #pragma pack(pop)
@@ -42,9 +42,9 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CTakeDamageResult, m_pOriginatingInfo) == 0x0);
         static_assert(offsetof(source2sdk::client::CTakeDamageResult, m_nHealthLost) == 0x8);
         static_assert(offsetof(source2sdk::client::CTakeDamageResult, m_nDamageTaken) == 0xc);
-        static_assert(offsetof(source2sdk::client::CTakeDamageResult, m_nTotalledHealthLost) == 0x10);
-        static_assert(offsetof(source2sdk::client::CTakeDamageResult, m_nTotalledDamageTaken) == 0x14);
-        static_assert(offsetof(source2sdk::client::CTakeDamageResult, m_flTotalledDamageAbsorbed) == 0x18);
+        static_assert(offsetof(source2sdk::client::CTakeDamageResult, m_flPreModifiedDamage) == 0x10);
+        static_assert(offsetof(source2sdk::client::CTakeDamageResult, m_nTotalledHealthLost) == 0x14);
+        static_assert(offsetof(source2sdk::client::CTakeDamageResult, m_nTotalledDamageDealt) == 0x18);
         
         static_assert(sizeof(source2sdk::client::CTakeDamageResult) == 0x20);
     };

@@ -25,9 +25,14 @@ namespace source2sdk
         class CHitboxComponent : public source2sdk::entity2::CEntityComponent
         {
         public:
-            uint8_t _pad0008[0x1c]; // 0x8
+            uint8_t _pad0008[0x18]; // 0x8
+            float m_flBoundsExpandRadius; // 0x20            
             // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "OnDisabledHitgroupsChanged"
             std::uint32_t m_bvDisabledHitGroups[1]; // 0x24            
+            
+            // Datamap fields:
+            // void m_bvDisabledHitGroups; // 0x24
         };
         #pragma pack(pop)
         

@@ -17,17 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x990
+        // Size: 0x9e0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelHotelExitTrigger : public source2sdk::server::CBaseTrigger
         {
         public:
-            // No schema binary for binding
+            bool m_bIsSuccess; // 0x9d8            
+            uint8_t _pad09d9[0x7];
         };
         #pragma pack(pop)
         
+        // Cannot assert offsets of fields in CCitadelHotelExitTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelHotelExitTrigger) == 0x990);
+        static_assert(sizeof(source2sdk::server::CCitadelHotelExitTrigger) == 0x9e0);
     };
 };

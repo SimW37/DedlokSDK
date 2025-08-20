@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x8c8
+        // Size: 0x900
         // Has VTable
         // 
         // static metadata: MNetworkOverride "m_angRotation CGameSceneNode"
@@ -27,28 +27,28 @@ namespace source2sdk
         class CFuncRotating : public source2sdk::server::CBaseModelEntity
         {
         public:
-            source2sdk::entity2::CEntityIOOutput m_OnStopped; // 0x7d0            
-            source2sdk::entity2::CEntityIOOutput m_OnStarted; // 0x7f8            
-            source2sdk::entity2::CEntityIOOutput m_OnReachedStart; // 0x820            
-            RotationVector m_localRotationVector; // 0x848            
-            float m_flFanFriction; // 0x854            
-            float m_flAttenuation; // 0x858            
-            float m_flVolume; // 0x85c            
-            float m_flTargetSpeed; // 0x860            
-            float m_flMaxSpeed; // 0x864            
-            float m_flBlockDamage; // 0x868            
-            uint8_t _pad086c[0x4]; // 0x86c
-            CUtlSymbolLarge m_NoiseRunning; // 0x870            
-            bool m_bReversed; // 0x878            
-            bool m_bAccelDecel; // 0x879            
-            uint8_t _pad087a[0x16]; // 0x87a
-            QAngle m_prevLocalAngles; // 0x890            
-            QAngle m_angStart; // 0x89c            
-            bool m_bStopAtStartPos; // 0x8a8            
-            uint8_t _pad08a9[0x3]; // 0x8a9
-            Vector m_vecClientOrigin; // 0x8ac            
-            QAngle m_vecClientAngles; // 0x8b8            
-            uint8_t _pad08c4[0x4];
+            source2sdk::entity2::CEntityIOOutput m_OnStopped; // 0x808            
+            source2sdk::entity2::CEntityIOOutput m_OnStarted; // 0x830            
+            source2sdk::entity2::CEntityIOOutput m_OnReachedStart; // 0x858            
+            RotationVector m_localRotationVector; // 0x880            
+            float m_flFanFriction; // 0x88c            
+            float m_flAttenuation; // 0x890            
+            float m_flVolume; // 0x894            
+            float m_flTargetSpeed; // 0x898            
+            float m_flMaxSpeed; // 0x89c            
+            float m_flBlockDamage; // 0x8a0            
+            uint8_t _pad08a4[0x4]; // 0x8a4
+            CUtlSymbolLarge m_NoiseRunning; // 0x8a8            
+            bool m_bReversed; // 0x8b0            
+            bool m_bAccelDecel; // 0x8b1            
+            uint8_t _pad08b2[0x16]; // 0x8b2
+            QAngle m_prevLocalAngles; // 0x8c8            
+            QAngle m_angStart; // 0x8d4            
+            bool m_bStopAtStartPos; // 0x8e0            
+            uint8_t _pad08e1[0x3]; // 0x8e1
+            Vector m_vecClientOrigin; // 0x8e4            
+            QAngle m_vecClientAngles; // 0x8f0            
+            uint8_t _pad08fc[0x4];
             
             // Datamap fields:
             // bool movewithoutpushingblockers; // 0x7fffffff
@@ -70,7 +70,7 @@ namespace source2sdk
             // Vector InputSetStartPos; // 0x0
             // void InputEnableAccelDecel; // 0x0
             // void InputDisableAccelDecel; // 0x0
-            // void m_nNoiseRunningGuid; // 0x87c
+            // void m_nNoiseRunningGuid; // 0x8b4
             // int32_t fanfriction; // 0x7fffffff
             // int32_t Volume; // 0x7fffffff
         };
@@ -78,6 +78,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CFuncRotating because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFuncRotating) == 0x8c8);
+        static_assert(sizeof(source2sdk::server::CFuncRotating) == 0x900);
     };
 };

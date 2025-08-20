@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x998
+        // Size: 0x9e0
         // Has VTable
         #pragma pack(push, 1)
         class CTriggerRemoveModifier : public source2sdk::server::CBaseTrigger
         {
         public:
-            CUtlSymbolLarge m_strModifier; // 0x990            
+            CUtlSymbolLarge m_strModifier; // 0x9d8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CTriggerRemoveModifier because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CTriggerRemoveModifier) == 0x998);
+        static_assert(sizeof(source2sdk::server::CTriggerRemoveModifier) == 0x9e0);
     };
 };

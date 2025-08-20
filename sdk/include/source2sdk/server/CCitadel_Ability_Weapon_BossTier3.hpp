@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xba0
+        // Size: 0xb98
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Weapon_BossTier3 : public source2sdk::server::CTier3BossAbility
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Weapon_BossTier3) == 0xba0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Weapon_BossTier3) == 0xb98);
     };
 };

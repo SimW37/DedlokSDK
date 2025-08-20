@@ -27,7 +27,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x12d0
+        // Size: 0x1280
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bIsRolling"
@@ -42,45 +42,45 @@ namespace source2sdk
         class CCitadel_Ability_GooBowlingBall : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0dc0[0x380]; // 0xdc0
-            std::int32_t m_nAirJumpsLeft; // 0x1140            
+            uint8_t _pad0d88[0x380]; // 0xd88
+            std::int32_t m_nAirJumpsLeft; // 0x1108            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             // metadata: MNetworkChangeCallback "OnIsRollingChanged"
-            bool m_bIsRolling; // 0x1144            
-            uint8_t _pad1145[0x3]; // 0x1145
+            bool m_bIsRolling; // 0x110c            
+            uint8_t _pad110d[0x3]; // 0x110d
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             // m_hBall has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_CitadelViscousBall> m_hBall;
-            char m_hBall[0x4]; // 0x1148            
+            char m_hBall[0x4]; // 0x1110            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::client::EViscousBowlingBallState_t m_eRollingState; // 0x114c            
-            uint8_t _pad114d[0x3]; // 0x114d
+            source2sdk::client::EViscousBowlingBallState_t m_eRollingState; // 0x1114            
+            uint8_t _pad1115[0x3]; // 0x1115
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flNextStateTime; // 0x1150            
+            source2sdk::entity2::GameTime_t m_flNextStateTime; // 0x1118            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flNextWallCheck; // 0x1154            
+            source2sdk::entity2::GameTime_t m_flNextWallCheck; // 0x111c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flRollStartTime; // 0x1158            
+            source2sdk::entity2::GameTime_t m_flRollStartTime; // 0x1120            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flWallExitTime; // 0x115c            
+            source2sdk::entity2::GameTime_t m_flWallExitTime; // 0x1124            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vecWallExitVelocity; // 0x1160            
-            uint8_t _pad116c[0x8]; // 0x116c
-            source2sdk::client::ParticleIndex_t m_nDirectionParticleIndex; // 0x1174            
-            uint8_t _pad1178[0x158];
+            Vector m_vecWallExitVelocity; // 0x1128            
+            uint8_t _pad1134[0x8]; // 0x1134
+            source2sdk::client::ParticleIndex_t m_nDirectionParticleIndex; // 0x113c            
+            uint8_t _pad1140[0x140];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_GooBowlingBall because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_GooBowlingBall) == 0x12d0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_GooBowlingBall) == 0x1280);
     };
 };

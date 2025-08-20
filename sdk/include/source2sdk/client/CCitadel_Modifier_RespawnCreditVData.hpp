@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x690
+        // Size: 0x790
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,25 +27,25 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Respawn Settings"
-            source2sdk::client::ERejuvenatorRespawnMechanic m_eRespawnMechanic; // 0x660            
+            source2sdk::client::ERejuvenatorRespawnMechanic m_eRespawnMechanic; // 0x760            
             // metadata: MPropertySuppressExpr "m_eRespawnMechanic != RejuvenatorRespawnMechanic_FixedDelay"
             // metadata: MPropertyDescription "Respawn time is set to this fixed duration after dying."
-            float m_flRespawnDelay; // 0x664            
+            float m_flRespawnDelay; // 0x764            
             // metadata: MPropertyStartGroup "Buff Values"
-            float m_flBonusClipSize; // 0x668            
-            float m_flBonusFirerate; // 0x66c            
-            float m_flBonusHealth; // 0x670            
-            float m_flBonusMoveSpeedMeterPerSecond; // 0x674            
+            float m_flBonusClipSize; // 0x768            
+            float m_flBonusFirerate; // 0x76c            
+            float m_flBonusHealth; // 0x770            
+            float m_flBonusMoveSpeedMeterPerSecond; // 0x774            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_sExpireSound; // 0x678            
+            CSoundEventName m_sExpireSound; // 0x778            
             // metadata: MPropertyStartGroup "UI Messages"
-            std::int32_t m_iMaxMessages; // 0x688            
-            float m_flMessageInterval; // 0x68c            
+            std::int32_t m_iMaxMessages; // 0x788            
+            float m_flMessageInterval; // 0x78c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_RespawnCreditVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_RespawnCreditVData) == 0x690);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_RespawnCreditVData) == 0x790);
     };
 };

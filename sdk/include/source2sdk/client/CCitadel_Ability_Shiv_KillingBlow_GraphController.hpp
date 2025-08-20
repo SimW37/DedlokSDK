@@ -24,10 +24,10 @@ namespace source2sdk
         {
         public:
             // m_bSlashLeap has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CAnimGraphParamRef<bool> m_bSlashLeap;
+            // CAnimGraphParamOptionalRef<bool> m_bSlashLeap;
             char m_bSlashLeap[0x20]; // 0x368            
             // m_bSlashAttack has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CAnimGraphParamRef<bool> m_bSlashAttack;
+            // CAnimGraphParamOptionalRef<bool> m_bSlashAttack;
             char m_bSlashAttack[0x20]; // 0x388            
         };
         #pragma pack(pop)

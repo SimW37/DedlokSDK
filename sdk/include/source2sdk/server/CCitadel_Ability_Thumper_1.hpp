@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd98
+        // Size: 0xd90
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Thumper_1 : public source2sdk::server::CCitadelBaseAbility
@@ -32,16 +32,16 @@ namespace source2sdk
         public:
             // m_vecHitEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecHitEntities;
-            char m_vecHitEntities[0x18]; // 0xba0            
-            Vector m_vecAimPos; // 0xbb8            
-            Vector m_vecAimNormal; // 0xbc4            
-            float m_flPushForce; // 0xbd0            
-            uint8_t _pad0bd4[0x1c4];
+            char m_vecHitEntities[0x18]; // 0xb98            
+            Vector m_vecAimPos; // 0xbb0            
+            Vector m_vecAimNormal; // 0xbbc            
+            float m_flPushForce; // 0xbc8            
+            uint8_t _pad0bcc[0x1c4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Thumper_1 because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Thumper_1) == 0xd98);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Thumper_1) == 0xd90);
     };
 };

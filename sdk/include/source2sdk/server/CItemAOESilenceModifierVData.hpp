@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x680
+        // Size: 0x780
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,16 +27,16 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyGroupName "Sounds"
-            CSoundEventName m_strSilenceTargetSound; // 0x660            
+            CSoundEventName m_strSilenceTargetSound; // 0x760            
             // metadata: MPropertyGroupName "Modifiers"
             // m_SilenceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SilenceModifier;
-            char m_SilenceModifier[0x10]; // 0x670            
+            char m_SilenceModifier[0x10]; // 0x770            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CItemAOESilenceModifierVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CItemAOESilenceModifierVData) == 0x680);
+        static_assert(sizeof(source2sdk::server::CItemAOESilenceModifierVData) == 0x780);
     };
 };

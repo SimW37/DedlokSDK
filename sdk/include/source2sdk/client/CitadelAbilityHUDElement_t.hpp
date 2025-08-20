@@ -36,7 +36,9 @@ namespace source2sdk
             CUtlString m_Layout; // 0x20            
             // metadata: MPropertySuppressExpr "m_eType != CITADEL_ABILITY_HUD_ELEMENT_TYPE_PROGRESS"
             bool m_bReverseProgress; // 0x28            
-            uint8_t _pad0029[0x7];
+            // metadata: MPropertySuppressExpr "m_eType != CITADEL_ABILITY_HUD_ELEMENT_TYPE_PROGRESS"
+            bool m_bShowStacksOnProgress; // 0x29            
+            uint8_t _pad002a[0x6];
         };
         #pragma pack(pop)
         
@@ -45,6 +47,7 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CitadelAbilityHUDElement_t, m_strAdditionalClasses) == 0x18);
         static_assert(offsetof(source2sdk::client::CitadelAbilityHUDElement_t, m_Layout) == 0x20);
         static_assert(offsetof(source2sdk::client::CitadelAbilityHUDElement_t, m_bReverseProgress) == 0x28);
+        static_assert(offsetof(source2sdk::client::CitadelAbilityHUDElement_t, m_bShowStacksOnProgress) == 0x29);
         
         static_assert(sizeof(source2sdk::client::CitadelAbilityHUDElement_t) == 0x30);
     };

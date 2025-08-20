@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x2b8
+        // Size: 0x220
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_MagicBeam : public source2sdk::server::CCitadelModifier
@@ -34,18 +34,18 @@ namespace source2sdk
         public:
             // m_hBlocker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadel_Magic_Beam_Blocker> m_hBlocker;
-            char m_hBlocker[0x4]; // 0xc0            
-            source2sdk::client::ParticleIndex_t m_nParticleIndex; // 0xc4            
-            source2sdk::entity2::GameTime_t m_flStartTime; // 0xc8            
-            uint8_t _pad00cc[0x104]; // 0xcc
-            QAngle m_qAngle; // 0x1d0            
-            Vector m_vOrigin; // 0x1dc            
-            uint8_t _pad01e8[0xd0];
+            char m_hBlocker[0x4]; // 0xc8            
+            source2sdk::client::ParticleIndex_t m_nParticleIndex; // 0xcc            
+            source2sdk::entity2::GameTime_t m_flStartTime; // 0xd0            
+            uint8_t _pad00d4[0x104]; // 0xd4
+            QAngle m_qAngle; // 0x1d8            
+            Vector m_vOrigin; // 0x1e4            
+            uint8_t _pad01f0[0x30];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_MagicBeam because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_MagicBeam) == 0x2b8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_MagicBeam) == 0x220);
     };
 };

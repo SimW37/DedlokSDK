@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xea8
+        // Size: 0xe88
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelAbilityComponent::Storage_t m_CCitadelAbilityComponent"
@@ -30,19 +30,19 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
             // metadata: MNetworkAlias "CCitadelAbilityComponent"
             // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
-            source2sdk::server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xc50            
-            uint8_t _pad0e90[0x4]; // 0xe90
-            float m_flDeployTime; // 0xe94            
-            uint8_t _pad0e98[0x10];
+            source2sdk::server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xc30            
+            uint8_t _pad0e70[0x4]; // 0xe70
+            float m_flDeployTime; // 0xe74            
+            uint8_t _pad0e78[0x10];
             
             // Datamap fields:
-            // float m_flLifeTime; // 0xe9c
-            // void m_flSpawnTime; // 0xe98
+            // float m_flLifeTime; // 0xe7c
+            // void m_flSpawnTime; // 0xe78
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_TeslaCoil because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_TeslaCoil) == 0xea8);
+        static_assert(sizeof(source2sdk::server::CNPC_TeslaCoil) == 0xe88);
     };
 };

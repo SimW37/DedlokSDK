@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x898
+        // Size: 0x8d0
         // Has VTable
         #pragma pack(push, 1)
         class CFuncTrain : public source2sdk::server::CBasePlatTrain
@@ -33,16 +33,16 @@ namespace source2sdk
         public:
             // m_hCurrentTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hCurrentTarget;
-            char m_hCurrentTarget[0x4]; // 0x878            
-            bool m_activated; // 0x87c            
-            uint8_t _pad087d[0x3]; // 0x87d
+            char m_hCurrentTarget[0x4]; // 0x8b0            
+            bool m_activated; // 0x8b4            
+            uint8_t _pad08b5[0x3]; // 0x8b5
             // m_hEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hEnemy;
-            char m_hEnemy[0x4]; // 0x880            
-            float m_flBlockDamage; // 0x884            
-            source2sdk::entity2::GameTime_t m_flNextBlockTime; // 0x888            
-            uint8_t _pad088c[0x4]; // 0x88c
-            CUtlSymbolLarge m_iszLastTarget; // 0x890            
+            char m_hEnemy[0x4]; // 0x8b8            
+            float m_flBlockDamage; // 0x8bc            
+            source2sdk::entity2::GameTime_t m_flNextBlockTime; // 0x8c0            
+            uint8_t _pad08c4[0x4]; // 0x8c4
+            CUtlSymbolLarge m_iszLastTarget; // 0x8c8            
             
             // Datamap fields:
             // void CFuncTrainWait; // 0x0
@@ -55,6 +55,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CFuncTrain because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFuncTrain) == 0x898);
+        static_assert(sizeof(source2sdk::server::CFuncTrain) == 0x8d0);
     };
 };

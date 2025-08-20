@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1b8
+        // Size: 0x1c0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_SlowingTech_Proc : public source2sdk::server::CCitadel_Modifier_BaseEventProc
         {
         public:
-            uint8_t _pad0178[0x40];
+            uint8_t _pad0180[0x40];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_SlowingTech_Proc) == 0x1b8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_SlowingTech_Proc) == 0x1c0);
     };
 };

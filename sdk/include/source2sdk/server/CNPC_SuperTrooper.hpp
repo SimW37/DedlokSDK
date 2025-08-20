@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1aa8
+        // Size: 0x1b20
         // Has VTable
         #pragma pack(push, 1)
         class CNPC_SuperTrooper : public source2sdk::server::CNPC_Trooper
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CNPC_SuperTrooper) == 0x1aa8);
+        static_assert(sizeof(source2sdk::server::CNPC_SuperTrooper) == 0x1b20);
     };
 };

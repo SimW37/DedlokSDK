@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x880
+        // Size: 0x8b8
         // Has VTable
         #pragma pack(push, 1)
         class CFuncLadderAlias_func_useableladder : public source2sdk::server::CFuncLadder
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CFuncLadderAlias_func_useableladder) == 0x880);
+        static_assert(sizeof(source2sdk::server::CFuncLadderAlias_func_useableladder) == 0x8b8);
     };
 };

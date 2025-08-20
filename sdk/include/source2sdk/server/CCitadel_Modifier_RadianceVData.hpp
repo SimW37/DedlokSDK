@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x910
+        // Size: 0xa10
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,20 +29,20 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_RadianceFxParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadianceFxParticle;
-            char m_RadianceFxParticle[0xe0]; // 0x660            
+            char m_RadianceFxParticle[0xe0]; // 0x760            
             // m_RadianceDamageParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RadianceDamageParticle;
-            char m_RadianceDamageParticle[0xe0]; // 0x740            
+            char m_RadianceDamageParticle[0xe0]; // 0x840            
             // m_ClientsideDamageParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ClientsideDamageParticle;
-            char m_ClientsideDamageParticle[0xe0]; // 0x820            
+            char m_ClientsideDamageParticle[0xe0]; // 0x920            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strDamageRecievedSound; // 0x900            
+            CSoundEventName m_strDamageRecievedSound; // 0xa00            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_RadianceVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_RadianceVData) == 0x910);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_RadianceVData) == 0xa10);
     };
 };

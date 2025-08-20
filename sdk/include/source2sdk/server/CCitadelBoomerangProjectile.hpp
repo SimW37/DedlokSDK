@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa08
+        // Size: 0xa70
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelBoomerangProjectile : public source2sdk::server::CCitadelProjectile
         {
         public:
-            uint8_t _pad0880[0x180]; // 0x880
-            bool m_bReturning; // 0xa00            
-            uint8_t _pad0a01[0x7];
+            uint8_t _pad08e8[0x180]; // 0x8e8
+            bool m_bReturning; // 0xa68            
+            uint8_t _pad0a69[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelBoomerangProjectile because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelBoomerangProjectile) == 0xa08);
+        static_assert(sizeof(source2sdk::server::CCitadelBoomerangProjectile) == 0xa70);
     };
 };

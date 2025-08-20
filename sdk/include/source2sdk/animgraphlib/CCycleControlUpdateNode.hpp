@@ -29,7 +29,8 @@ namespace source2sdk
         public:
             source2sdk::animgraphlib::AnimValueSource m_valueSource; // 0x70            
             source2sdk::animgraphlib::CAnimParamHandle m_paramIndex; // 0x74            
-            uint8_t _pad0076[0x2];
+            bool m_bLockWhenWaning; // 0x76            
+            uint8_t _pad0077[0x1];
         };
         #pragma pack(pop)
         

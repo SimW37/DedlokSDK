@@ -22,6 +22,7 @@ namespace source2sdk
         // Size: 0x80
         // 
         // static metadata: MGetKV3ClassDefaults
+        // static metadata: M_LEGACY_OptInToSchemaPropertyDomain
         #pragma pack(push, 1)
         class CAnimDemoCaptureSettings
         {
@@ -65,7 +66,7 @@ namespace source2sdk
             std::int32_t m_nBaseSequenceFrame; // 0x48            
             // metadata: MPropertyFriendlyName "Bone Selection Mode"
             // metadata: MPropertyGroupName "+Bones"
-            // metadata: MPropertyAttrChangeCallback
+            // metadata: MPropertyAutoRebuildOnChange
             source2sdk::animgraphlib::EDemoBoneSelectionMode m_boneSelectionMode; // 0x4c            
             // metadata: MPropertyFriendlyName "Bones"
             // metadata: MPropertyGroupName "+Bones"

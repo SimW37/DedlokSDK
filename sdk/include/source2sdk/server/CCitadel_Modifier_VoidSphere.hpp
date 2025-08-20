@@ -18,26 +18,26 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x278
+        // Size: 0x280
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_VoidSphere : public source2sdk::server::CCitadelModifier
         {
         public:
-            bool m_bTeleported; // 0xc0            
-            uint8_t _pad00c1[0x3]; // 0xc1
-            source2sdk::client::ParticleIndex_t m_particleStart; // 0xc4            
-            source2sdk::client::ParticleIndex_t m_particleEnd; // 0xc8            
-            source2sdk::client::ParticleIndex_t m_particleTrail; // 0xcc            
-            Vector m_vecEndLocation; // 0xd0            
-            Vector m_vecStartPosition; // 0xdc            
-            Vector m_vecEndLocationCaster; // 0xe8            
-            uint8_t _pad00f4[0x184];
+            bool m_bTeleported; // 0xc8            
+            uint8_t _pad00c9[0x3]; // 0xc9
+            source2sdk::client::ParticleIndex_t m_particleStart; // 0xcc            
+            source2sdk::client::ParticleIndex_t m_particleEnd; // 0xd0            
+            source2sdk::client::ParticleIndex_t m_particleTrail; // 0xd4            
+            Vector m_vecEndLocation; // 0xd8            
+            Vector m_vecStartPosition; // 0xe4            
+            Vector m_vecEndLocationCaster; // 0xf0            
+            uint8_t _pad00fc[0x184];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_VoidSphere because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_VoidSphere) == 0x278);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_VoidSphere) == 0x280);
     };
 };

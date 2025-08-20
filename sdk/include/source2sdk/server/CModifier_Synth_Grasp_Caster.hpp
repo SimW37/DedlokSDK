@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc0
+        // Size: 0xc8
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Synth_Grasp_Caster : public source2sdk::server::CCitadelModifier
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CModifier_Synth_Grasp_Caster) == 0xc0);
+        static_assert(sizeof(source2sdk::server::CModifier_Synth_Grasp_Caster) == 0xc8);
     };
 };

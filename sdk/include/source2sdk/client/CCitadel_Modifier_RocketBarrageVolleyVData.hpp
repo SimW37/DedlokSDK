@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x830
+        // Size: 0x930
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,19 +27,19 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strFireSound; // 0x660            
+            CSoundEventName m_strFireSound; // 0x760            
             // metadata: MPropertyStartGroup "Visuals"
             // m_RocketLaunchParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RocketLaunchParticle;
-            char m_RocketLaunchParticle[0xe0]; // 0x670            
+            char m_RocketLaunchParticle[0xe0]; // 0x770            
             // m_RocketLaunchAmbientParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RocketLaunchAmbientParticle;
-            char m_RocketLaunchAmbientParticle[0xe0]; // 0x750            
+            char m_RocketLaunchAmbientParticle[0xe0]; // 0x850            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_RocketBarrageVolleyVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_RocketBarrageVolleyVData) == 0x830);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_RocketBarrageVolleyVData) == 0x930);
     };
 };

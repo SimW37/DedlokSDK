@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa68
+        // Size: 0xaa0
         // Has VTable
         #pragma pack(push, 1)
         class CRotDoor : public source2sdk::server::CBaseDoor
         {
         public:
-            bool m_bSolidBsp; // 0xa60            
-            uint8_t _pad0a61[0x7];
+            bool m_bSolidBsp; // 0xa98            
+            uint8_t _pad0a99[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CRotDoor because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CRotDoor) == 0xa68);
+        static_assert(sizeof(source2sdk::server::CRotDoor) == 0xaa0);
     };
 };

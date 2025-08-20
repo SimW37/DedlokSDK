@@ -88,20 +88,20 @@ namespace source2sdk
             uint8_t _pad01be[0x2]; // 0x1be
             std::int32_t m_nPreviousCollisionGroup; // 0x1c0            
             source2sdk::entity2::GameTime_t m_flLastNpcOverlapTime; // 0x1c4            
-            float m_flGoalTolerance; // 0x1c8            
-            float m_flWaypointTolerance; // 0x1cc            
+            float m_flGoalBlockedTolerance; // 0x1c8            
+            float m_flWaypointBlockedTolerance; // 0x1cc            
             Vector m_vGoalDirection; // 0x1d0            
             // m_hGoalDirectionTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hGoalDirectionTarget;
             char m_hGoalDirectionTarget[0x4]; // 0x1dc            
             float m_flGoalDirectionToleranceDot; // 0x1e0            
-            source2sdk::client::StanceType_t m_eGoalStance; // 0x1e4            
-            float m_flArrivalFlyingSpeedScale; // 0x1e8            
-            float m_flPathEndGoalRange; // 0x1ec            
-            float m_flPathEndGoalRange_Repathing; // 0x1f0            
-            float m_flGoalMaxPathLength; // 0x1f4            
-            float m_flGoalMaxTravelDist; // 0x1f8            
-            uint8_t _pad01fc[0x4]; // 0x1fc
+            float m_flGoalArrivalTolerance; // 0x1e4            
+            source2sdk::client::StanceType_t m_eGoalStance; // 0x1e8            
+            float m_flArrivalFlyingSpeedScale; // 0x1ec            
+            float m_flPathEndGoalRange; // 0x1f0            
+            float m_flPathEndGoalRange_Repathing; // 0x1f4            
+            float m_flGoalMaxPathLength; // 0x1f8            
+            float m_flGoalMaxTravelDist; // 0x1fc            
             CUtlString m_pathRestrictionTag; // 0x200            
             uint8_t _pad0208[0x18]; // 0x208
             source2sdk::server::CNavSmartGoalHelper m_smartGoalHelper; // 0x220            

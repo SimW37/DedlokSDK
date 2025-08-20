@@ -18,27 +18,37 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf30
+        // Size: 0x1100
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iBonusBats"
         // static metadata: MNetworkVarNames "int m_iBatCountOnCast"
+        // static metadata: MNetworkVarNames "float m_flChannelTime"
+        // static metadata: MNetworkVarNames "bool m_bPauseChannel"
+        // static metadata: MNetworkVarNames "float m_flLastRemainingChannelTime"
         #pragma pack(push, 1)
         class CCitadel_Ability_VampireBat_BatSwarm : public source2sdk::server::CCitadelBaseAbility
         {
         public:
             // metadata: MNetworkEnable
-            std::int32_t m_iBonusBats; // 0xba0            
+            std::int32_t m_iBonusBats; // 0xb98            
             // metadata: MNetworkEnable
-            std::int32_t m_iBatCountOnCast; // 0xba4            
-            uint8_t _pad0ba8[0x4]; // 0xba8
-            source2sdk::entity2::GameTime_t m_flNextBatTime; // 0xbac            
-            uint8_t _pad0bb0[0x380];
+            std::int32_t m_iBatCountOnCast; // 0xb9c            
+            // metadata: MNetworkEnable
+            float m_flChannelTime; // 0xba0            
+            // metadata: MNetworkEnable
+            bool m_bPauseChannel; // 0xba4            
+            uint8_t _pad0ba5[0x3]; // 0xba5
+            // metadata: MNetworkEnable
+            float m_flLastRemainingChannelTime; // 0xba8            
+            uint8_t _pad0bac[0x8]; // 0xbac
+            source2sdk::entity2::GameTime_t m_flNextBatTime; // 0xbb4            
+            uint8_t _pad0bb8[0x548];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_VampireBat_BatSwarm because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_VampireBat_BatSwarm) == 0xf30);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_VampireBat_BatSwarm) == 0x1100);
     };
 };

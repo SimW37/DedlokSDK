@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x750
+        // Size: 0x850
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,14 +29,14 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_BonusesParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BonusesParticle;
-            char m_BonusesParticle[0xe0]; // 0x660            
+            char m_BonusesParticle[0xe0]; // 0x760            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_ActivateBonusesSound; // 0x740            
+            CSoundEventName m_ActivateBonusesSound; // 0x840            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Fervor_Bonuses_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Fervor_Bonuses_VData) == 0x750);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Fervor_Bonuses_VData) == 0x850);
     };
 };

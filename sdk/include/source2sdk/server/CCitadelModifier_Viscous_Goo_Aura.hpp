@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe8
+        // Size: 0x108
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelModifier_Viscous_Goo_Aura : public source2sdk::server::CCitadelModifierAura
         {
         public:
-            source2sdk::client::ParticleIndex_t m_AuraParticle; // 0xe0            
-            uint8_t _pad00e4[0x4];
+            source2sdk::client::ParticleIndex_t m_AuraParticle; // 0x100            
+            uint8_t _pad0104[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelModifier_Viscous_Goo_Aura because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelModifier_Viscous_Goo_Aura) == 0xe8);
+        static_assert(sizeof(source2sdk::server::CCitadelModifier_Viscous_Goo_Aura) == 0x108);
     };
 };

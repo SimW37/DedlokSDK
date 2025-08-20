@@ -18,15 +18,15 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x800
+        // Size: 0x838
         // Has VTable
         #pragma pack(push, 1)
         class CGameText : public source2sdk::server::CRulePointEntity
         {
         public:
-            CUtlSymbolLarge m_iszMessage; // 0x7e0            
-            source2sdk::client::hudtextparms_t m_textParms; // 0x7e8            
-            uint8_t _pad07fc[0x4];
+            CUtlSymbolLarge m_iszMessage; // 0x818            
+            source2sdk::client::hudtextparms_t m_textParms; // 0x820            
+            uint8_t _pad0834[0x4];
             
             // Datamap fields:
             // void InputDisplay; // 0x0
@@ -38,6 +38,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CGameText because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CGameText) == 0x800);
+        static_assert(sizeof(source2sdk::server::CGameText) == 0x838);
     };
 };

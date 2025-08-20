@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe68
+        // Size: 0xe30
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bIcePathing"
@@ -29,25 +29,25 @@ namespace source2sdk
         class CCitadel_Ability_IcePath : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0dc0[0x80]; // 0xdc0
+            uint8_t _pad0d88[0x80]; // 0xd88
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bIcePathing; // 0xe40            
-            uint8_t _pad0e41[0x3]; // 0xe41
+            bool m_bIcePathing; // 0xe08            
+            uint8_t _pad0e09[0x3]; // 0xe09
             // metadata: MNetworkEnable
-            QAngle m_qLastAngles; // 0xe44            
+            QAngle m_qLastAngles; // 0xe0c            
             // metadata: MNetworkEnable
-            Vector m_vLastVelocity; // 0xe50            
+            Vector m_vLastVelocity; // 0xe18            
             // metadata: MNetworkEnable
-            bool m_bFirstMovementTick; // 0xe5c            
-            uint8_t _pad0e5d[0x3]; // 0xe5d
-            source2sdk::entity2::GameTime_t m_tLingerMovementControlUntilTime; // 0xe60            
-            uint8_t _pad0e64[0x4];
+            bool m_bFirstMovementTick; // 0xe24            
+            uint8_t _pad0e25[0x3]; // 0xe25
+            source2sdk::entity2::GameTime_t m_tLingerMovementControlUntilTime; // 0xe28            
+            uint8_t _pad0e2c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_IcePath because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_IcePath) == 0xe68);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_IcePath) == 0xe30);
     };
 };

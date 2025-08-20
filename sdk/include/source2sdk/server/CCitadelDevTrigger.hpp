@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x998
+        // Size: 0x9e0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelDevTrigger : public source2sdk::server::CBaseTrigger
         {
         public:
-            source2sdk::server::DevTriggerType_t m_eDevTriggerType; // 0x990            
-            uint8_t _pad0994[0x4];
+            source2sdk::server::DevTriggerType_t m_eDevTriggerType; // 0x9d8            
+            uint8_t _pad09dc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelDevTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelDevTrigger) == 0x998);
+        static_assert(sizeof(source2sdk::server::CCitadelDevTrigger) == 0x9e0);
     };
 };

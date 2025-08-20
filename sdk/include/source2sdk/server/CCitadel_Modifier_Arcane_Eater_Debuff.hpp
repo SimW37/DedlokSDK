@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc8
+        // Size: 0xd0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Arcane_Eater_Debuff : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x8];
+            uint8_t _pad00c8[0x8];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Arcane_Eater_Debuff) == 0xc8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Arcane_Eater_Debuff) == 0xd0);
     };
 };

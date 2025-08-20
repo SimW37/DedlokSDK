@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x5e8
+        // Size: 0x5f0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "C_CitadelGameRules * m_pGameRules"
@@ -35,12 +35,12 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // metadata: MNetworkTypeAlias "CCitadelGamerules*"
             // metadata: MNetworkPriority "32"
-            source2sdk::client::C_CitadelGameRules* m_pGameRules; // 0x5e0            
+            source2sdk::client::C_CitadelGameRules* m_pGameRules; // 0x5e8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_CitadelGameRulesProxy because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_CitadelGameRulesProxy) == 0x5e8);
+        static_assert(sizeof(source2sdk::client::C_CitadelGameRulesProxy) == 0x5f0);
     };
 };

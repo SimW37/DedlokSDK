@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd0
+        // Size: 0xd8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_PowerUp_Movement : public source2sdk::server::CCitadel_Modifier_ScalingPowerUp
         {
         public:
-            bool m_bFilled; // 0xc8            
-            uint8_t _pad00c9[0x7];
+            bool m_bFilled; // 0xd0            
+            uint8_t _pad00d1[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_PowerUp_Movement because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_PowerUp_Movement) == 0xd0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_PowerUp_Movement) == 0xd8);
     };
 };

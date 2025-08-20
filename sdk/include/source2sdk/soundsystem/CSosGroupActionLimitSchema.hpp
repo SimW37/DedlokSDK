@@ -23,6 +23,7 @@ namespace source2sdk
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
+        // static metadata: M_LEGACY_OptInToSchemaPropertyDomain
         #pragma pack(push, 1)
         class CSosGroupActionLimitSchema : public source2sdk::soundsystem::CSosGroupActionSchema
         {
@@ -33,7 +34,11 @@ namespace source2sdk
             source2sdk::soundsystem::SosActionStopType_t m_nStopType; // 0x1c            
             // metadata: MPropertyFriendlyName "Sort Type"
             source2sdk::soundsystem::SosActionSortType_t m_nSortType; // 0x20            
-            uint8_t _pad0024[0x4];
+            // metadata: MPropertyFriendlyName "Stop Immediate"
+            bool m_bStopImmediate; // 0x24            
+            // metadata: MPropertyFriendlyName "Count Stopped Events"
+            bool m_bCountStopped; // 0x25            
+            uint8_t _pad0026[0x2];
         };
         #pragma pack(pop)
         

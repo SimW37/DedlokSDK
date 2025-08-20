@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1730
+        // Size: 0x1728
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_GravityLassoSelf has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_GravityLassoSelf;
-            char m_GravityLassoSelf[0x10]; // 0x1620            
+            char m_GravityLassoSelf[0x10]; // 0x1618            
             // m_GravityLassoTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_GravityLassoTarget;
-            char m_GravityLassoTarget[0x10]; // 0x1630            
+            char m_GravityLassoTarget[0x10]; // 0x1628            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_TargetWarningSound; // 0x1640            
+            CSoundEventName m_TargetWarningSound; // 0x1638            
             // metadata: MPropertyStartGroup "Visuals"
             // m_PreCastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreCastParticle;
-            char m_PreCastParticle[0xe0]; // 0x1650            
+            char m_PreCastParticle[0xe0]; // 0x1648            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Gravity_Lasso_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Gravity_Lasso_VData) == 0x1730);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Gravity_Lasso_VData) == 0x1728);
     };
 };

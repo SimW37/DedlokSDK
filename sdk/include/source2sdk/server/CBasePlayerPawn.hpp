@@ -197,9 +197,9 @@ namespace source2sdk
             
             // Datamap fields:
             // void m_hPawnListEntry; // 0xd98
-            // void m_hLastValidNavArea; // 0xb80
-            // void m_hCurrentNavArea; // 0xb70
-            // void m_hCurrentNavAreaBlocked; // 0xb90
+            // void m_hLastValidNavArea; // 0xb88
+            // void m_hCurrentNavArea; // 0xb78
+            // void m_hCurrentNavAreaBlocked; // 0xb98
             // CHandle< CBaseEntity > controller; // 0x7fffffff
             // int32_t InputSetHealth; // 0x0
             // bool InputSetHUDVisibility; // 0x0

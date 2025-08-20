@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x828
+        // Size: 0x860
         // Has VTable
         #pragma pack(push, 1)
         class CRopeKeyframeAlias_move_rope : public source2sdk::server::CRopeKeyframe
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CRopeKeyframeAlias_move_rope) == 0x828);
+        static_assert(sizeof(source2sdk::server::CRopeKeyframeAlias_move_rope) == 0x860);
     };
 };

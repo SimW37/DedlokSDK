@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x840
+        // Size: 0x940
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,12 +29,12 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_BuffChainParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffChainParticle;
-            char m_BuffChainParticle[0xe0]; // 0x760            
+            char m_BuffChainParticle[0xe0]; // 0x860            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Galvanic_Storm_EffectVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Galvanic_Storm_EffectVData) == 0x840);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Galvanic_Storm_EffectVData) == 0x940);
     };
 };

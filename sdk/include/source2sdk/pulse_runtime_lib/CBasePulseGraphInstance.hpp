@@ -18,6 +18,7 @@ namespace source2sdk
         // Standard-layout class: true
         // Size: 0x110
         // Has VTable
+        // Is Abstract
         // 
         // static metadata: MPulseInstanceDomainInfo
         // static metadata: MPulseDomainHiddenInTool

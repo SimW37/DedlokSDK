@@ -17,21 +17,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x508
+        // Size: 0x518
         // Has VTable
         #pragma pack(push, 1)
         class CItemCrateSpawn : public source2sdk::server::CServerOnlyPointEntity
         {
         public:
-            uint8_t _pad04e0[0x28];
+            uint8_t _pad04f0[0x28];
             // Datamap fields:
-            // int32_t m_eLootType; // 0x4f8
-            // int32_t m_eObjectivePosition; // 0x4fc
+            // int32_t m_eLootType; // 0x508
+            // int32_t m_eObjectivePosition; // 0x50c
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CItemCrateSpawn) == 0x508);
+        static_assert(sizeof(source2sdk::server::CItemCrateSpawn) == 0x518);
     };
 };

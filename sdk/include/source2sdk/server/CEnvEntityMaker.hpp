@@ -25,29 +25,29 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x580
+        // Size: 0x590
         // Has VTable
         #pragma pack(push, 1)
         class CEnvEntityMaker : public source2sdk::server::CPointEntity
         {
         public:
-            Vector m_vecEntityMins; // 0x4e0            
-            Vector m_vecEntityMaxs; // 0x4ec            
+            Vector m_vecEntityMins; // 0x4f0            
+            Vector m_vecEntityMaxs; // 0x4fc            
             // m_hCurrentInstance has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hCurrentInstance;
-            char m_hCurrentInstance[0x4]; // 0x4f8            
+            char m_hCurrentInstance[0x4]; // 0x508            
             // m_hCurrentBlocker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hCurrentBlocker;
-            char m_hCurrentBlocker[0x4]; // 0x4fc            
-            Vector m_vecBlockerOrigin; // 0x500            
-            QAngle m_angPostSpawnDirection; // 0x50c            
-            float m_flPostSpawnDirectionVariance; // 0x518            
-            float m_flPostSpawnSpeed; // 0x51c            
-            bool m_bPostSpawnUseAngles; // 0x520            
-            uint8_t _pad0521[0x7]; // 0x521
-            CUtlSymbolLarge m_iszTemplate; // 0x528            
-            source2sdk::entity2::CEntityIOOutput m_pOutputOnSpawned; // 0x530            
-            source2sdk::entity2::CEntityIOOutput m_pOutputOnFailedSpawn; // 0x558            
+            char m_hCurrentBlocker[0x4]; // 0x50c            
+            Vector m_vecBlockerOrigin; // 0x510            
+            QAngle m_angPostSpawnDirection; // 0x51c            
+            float m_flPostSpawnDirectionVariance; // 0x528            
+            float m_flPostSpawnSpeed; // 0x52c            
+            bool m_bPostSpawnUseAngles; // 0x530            
+            uint8_t _pad0531[0x7]; // 0x531
+            CUtlSymbolLarge m_iszTemplate; // 0x538            
+            source2sdk::entity2::CEntityIOOutput m_pOutputOnSpawned; // 0x540            
+            source2sdk::entity2::CEntityIOOutput m_pOutputOnFailedSpawn; // 0x568            
             
             // Datamap fields:
             // void InputForceSpawn; // 0x0
@@ -58,6 +58,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CEnvEntityMaker because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CEnvEntityMaker) == 0x580);
+        static_assert(sizeof(source2sdk::server::CEnvEntityMaker) == 0x590);
     };
 };

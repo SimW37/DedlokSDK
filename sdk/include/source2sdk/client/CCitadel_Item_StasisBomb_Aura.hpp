@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x100
+        // Size: 0x118
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Item_StasisBomb_Aura : public source2sdk::client::CCitadelModifierAura
         {
         public:
-            float m_AuraRadius; // 0xf8            
-            uint8_t _pad00fc[0x4];
+            float m_AuraRadius; // 0x110            
+            uint8_t _pad0114[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item_StasisBomb_Aura because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Item_StasisBomb_Aura) == 0x100);
+        static_assert(sizeof(source2sdk::client::CCitadel_Item_StasisBomb_Aura) == 0x118);
     };
 };

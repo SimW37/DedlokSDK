@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1008
+        // Size: 0x10e0
         // Has VTable
         #pragma pack(push, 1)
         class CNPC_TrooperNeutral_GraphController : public source2sdk::server::CAI_CitadelNPC_GraphController
@@ -25,24 +25,24 @@ namespace source2sdk
         public:
             // m_bShielded has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraphParamOptionalRef<bool> m_bShielded;
-            char m_bShielded[0x20]; // 0xf58            
+            char m_bShielded[0x20]; // 0x1030            
             // m_bAlert has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraphParamOptionalRef<bool> m_bAlert;
-            char m_bAlert[0x20]; // 0xf78            
+            char m_bAlert[0x20]; // 0x1050            
             // m_pszAttackLeanPosition has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraphParamOptionalRef<char*> m_pszAttackLeanPosition;
-            char m_pszAttackLeanPosition[0x28]; // 0xf98            
+            char m_pszAttackLeanPosition[0x28]; // 0x1070            
             // m_pszOrbDrop has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraphParamOptionalRef<char*> m_pszOrbDrop;
-            char m_pszOrbDrop[0x28]; // 0xfc0            
+            char m_pszOrbDrop[0x28]; // 0x1098            
             // m_bHeavyMelee has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraphParamOptionalRef<bool> m_bHeavyMelee;
-            char m_bHeavyMelee[0x20]; // 0xfe8            
+            char m_bHeavyMelee[0x20]; // 0x10c0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_TrooperNeutral_GraphController because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_TrooperNeutral_GraphController) == 0x1008);
+        static_assert(sizeof(source2sdk::server::CNPC_TrooperNeutral_GraphController) == 0x10e0);
     };
 };

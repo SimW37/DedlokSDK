@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xaa0
+        // Size: 0xaf8
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_flTimeScale"
@@ -42,45 +42,49 @@ namespace source2sdk
         class C_CitadelProjectile : public source2sdk::client::C_BaseModelEntity
         {
         public:
-            uint8_t _pad09a8[0x18]; // 0x9a8
-            float m_flMaxDistance; // 0x9c0            
-            float m_flArmingTime; // 0x9c4            
-            float m_flChargeAmount; // 0x9c8            
-            bool m_bCollideWithThrower; // 0x9cc            
-            bool m_bNewCollideWithThrower; // 0x9cd            
-            uint8_t _pad09ce[0xa]; // 0x9ce
-            float m_flTickSoundInterval; // 0x9d8            
-            uint8_t _pad09dc[0x4]; // 0x9dc
+            uint8_t _pad09d0[0x38]; // 0x9d0
+            float m_flMaxDistance; // 0xa08            
+            uint8_t _pad0a0c[0x4]; // 0xa0c
+            std::uint64_t m_nCachedExcludeFlags; // 0xa10            
+            bool m_bInPortalEnvironment; // 0xa18            
+            uint8_t _pad0a19[0x3]; // 0xa19
+            float m_flArmingTime; // 0xa1c            
+            float m_flChargeAmount; // 0xa20            
+            bool m_bCollideWithThrower; // 0xa24            
+            bool m_bNewCollideWithThrower; // 0xa25            
+            uint8_t _pad0a26[0xa]; // 0xa26
+            float m_flTickSoundInterval; // 0xa30            
+            uint8_t _pad0a34[0x4]; // 0xa34
             // metadata: MNetworkEnable
-            Vector m_vInitialVelocity; // 0x9e0            
+            Vector m_vInitialVelocity; // 0xa38            
             // metadata: MNetworkEnable
-            Vector m_vInitialPosition; // 0x9ec            
+            Vector m_vInitialPosition; // 0xa44            
             // metadata: MNetworkEnable
-            CUtlStringToken m_abilityID; // 0x9f8            
+            CUtlStringToken m_abilityID; // 0xa50            
             // metadata: MNetworkEnable
             // m_hThrower has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hThrower;
-            char m_hThrower[0x4]; // 0x9fc            
+            char m_hThrower[0x4]; // 0xa54            
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_sParticleName; // 0xa00            
+            CUtlSymbolLarge m_sParticleName; // 0xa58            
             // metadata: MNetworkEnable
-            Vector m_vecSpawnPosition; // 0xa08            
+            Vector m_vecSpawnPosition; // 0xa60            
             // metadata: MNetworkEnable
-            float m_flProjectileSpeed; // 0xa14            
+            float m_flProjectileSpeed; // 0xa6c            
             // metadata: MNetworkEnable
-            float m_flMaxLifetime; // 0xa18            
-            uint8_t _pad0a1c[0x4]; // 0xa1c
+            float m_flMaxLifetime; // 0xa70            
+            uint8_t _pad0a74[0x4]; // 0xa74
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "ParticleRadiusChanged"
-            float m_flParticleRadius; // 0xa20            
-            uint8_t _pad0a24[0x74]; // 0xa24
-            float m_flPreviousTimeScale; // 0xa98            
-            uint8_t _pad0a9c[0x4];
+            float m_flParticleRadius; // 0xa78            
+            uint8_t _pad0a7c[0x74]; // 0xa7c
+            float m_flPreviousTimeScale; // 0xaf0            
+            uint8_t _pad0af4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_CitadelProjectile because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_CitadelProjectile) == 0xaa0);
+        static_assert(sizeof(source2sdk::client::C_CitadelProjectile) == 0xaf8);
     };
 };

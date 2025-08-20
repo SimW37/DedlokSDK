@@ -9,7 +9,6 @@
 #include "source2sdk/worldrenderer/BakedLightingInfo_t.hpp"
 #include "source2sdk/worldrenderer/ClutterSceneObject_t.hpp"
 #include "source2sdk/worldrenderer/ExtraVertexStreamOverride_t.hpp"
-#include "source2sdk/worldrenderer/InfoOverlayData_t.hpp"
 #include "source2sdk/worldrenderer/MaterialOverride_t.hpp"
 #include "source2sdk/worldrenderer/SceneObject_t.hpp"
 #include "source2sdk/worldrenderer/WorldNodeOnDiskBufferData_t.hpp"
@@ -26,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0x178
+        // Size: 0x160
         // 
         // static metadata: MGetKV3ClassDefaults
         #pragma pack(push, 1)
@@ -36,66 +35,58 @@ namespace source2sdk
             // m_sceneObjects has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::worldrenderer::SceneObject_t> m_sceneObjects;
             char m_sceneObjects[0x18]; // 0x0            
-            // m_infoOverlays has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CUtlVector<source2sdk::worldrenderer::InfoOverlayData_t> m_infoOverlays;
-            char m_infoOverlays[0x18]; // 0x18            
             // m_visClusterMembership has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<std::uint16_t> m_visClusterMembership;
-            char m_visClusterMembership[0x18]; // 0x30            
+            char m_visClusterMembership[0x18]; // 0x18            
             // m_aggregateSceneObjects has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::worldrenderer::AggregateSceneObject_t> m_aggregateSceneObjects;
-            char m_aggregateSceneObjects[0x18]; // 0x48            
+            char m_aggregateSceneObjects[0x18]; // 0x30            
             // m_clutterSceneObjects has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::worldrenderer::ClutterSceneObject_t> m_clutterSceneObjects;
-            char m_clutterSceneObjects[0x18]; // 0x60            
+            char m_clutterSceneObjects[0x18]; // 0x48            
             // m_extraVertexStreamOverrides has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::worldrenderer::ExtraVertexStreamOverride_t> m_extraVertexStreamOverrides;
-            char m_extraVertexStreamOverrides[0x18]; // 0x78            
+            char m_extraVertexStreamOverrides[0x18]; // 0x60            
             // m_materialOverrides has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::worldrenderer::MaterialOverride_t> m_materialOverrides;
-            char m_materialOverrides[0x18]; // 0x90            
+            char m_materialOverrides[0x18]; // 0x78            
             // m_extraVertexStreams has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::worldrenderer::WorldNodeOnDiskBufferData_t> m_extraVertexStreams;
-            char m_extraVertexStreams[0x18]; // 0xa8            
+            char m_extraVertexStreams[0x18]; // 0x90            
             // m_aggregateInstanceStreams has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::worldrenderer::AggregateInstanceStreamOnDiskData_t> m_aggregateInstanceStreams;
-            char m_aggregateInstanceStreams[0x18]; // 0xc0            
+            char m_aggregateInstanceStreams[0x18]; // 0xa8            
             // m_vertexAlbedoStreams has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::worldrenderer::AggregateVertexAlbedoStreamOnDiskData_t> m_vertexAlbedoStreams;
-            char m_vertexAlbedoStreams[0x18]; // 0xd8            
+            char m_vertexAlbedoStreams[0x18]; // 0xc0            
             // m_layerNames has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CUtlString> m_layerNames;
-            char m_layerNames[0x18]; // 0xf0            
+            char m_layerNames[0x18]; // 0xd8            
             // m_sceneObjectLayerIndices has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<std::uint8_t> m_sceneObjectLayerIndices;
-            char m_sceneObjectLayerIndices[0x18]; // 0x108            
-            // m_overlayLayerIndices has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CUtlVector<std::uint8_t> m_overlayLayerIndices;
-            char m_overlayLayerIndices[0x18]; // 0x120            
-            CUtlString m_grassFileName; // 0x138            
-            source2sdk::worldrenderer::BakedLightingInfo_t m_nodeLightingInfo; // 0x140            
-            bool m_bHasBakedGeometryFlag; // 0x170            
-            uint8_t _pad0171[0x7];
+            char m_sceneObjectLayerIndices[0x18]; // 0xf0            
+            CUtlString m_grassFileName; // 0x108            
+            source2sdk::worldrenderer::BakedLightingInfo_t m_nodeLightingInfo; // 0x110            
+            bool m_bHasBakedGeometryFlag; // 0x158            
+            uint8_t _pad0159[0x7];
         };
         #pragma pack(pop)
         
         static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_sceneObjects) == 0x0);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_infoOverlays) == 0x18);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_visClusterMembership) == 0x30);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_aggregateSceneObjects) == 0x48);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_clutterSceneObjects) == 0x60);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_extraVertexStreamOverrides) == 0x78);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_materialOverrides) == 0x90);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_extraVertexStreams) == 0xa8);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_aggregateInstanceStreams) == 0xc0);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_vertexAlbedoStreams) == 0xd8);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_layerNames) == 0xf0);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_sceneObjectLayerIndices) == 0x108);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_overlayLayerIndices) == 0x120);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_grassFileName) == 0x138);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_nodeLightingInfo) == 0x140);
-        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_bHasBakedGeometryFlag) == 0x170);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_visClusterMembership) == 0x18);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_aggregateSceneObjects) == 0x30);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_clutterSceneObjects) == 0x48);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_extraVertexStreamOverrides) == 0x60);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_materialOverrides) == 0x78);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_extraVertexStreams) == 0x90);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_aggregateInstanceStreams) == 0xa8);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_vertexAlbedoStreams) == 0xc0);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_layerNames) == 0xd8);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_sceneObjectLayerIndices) == 0xf0);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_grassFileName) == 0x108);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_nodeLightingInfo) == 0x110);
+        static_assert(offsetof(source2sdk::worldrenderer::WorldNode_t, m_bHasBakedGeometryFlag) == 0x158);
         
-        static_assert(sizeof(source2sdk::worldrenderer::WorldNode_t) == 0x178);
+        static_assert(sizeof(source2sdk::worldrenderer::WorldNode_t) == 0x160);
     };
 };

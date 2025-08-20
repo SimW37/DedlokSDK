@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe68
+        // Size: 0xe30
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_SettingSun : public source2sdk::client::C_CitadelBaseAbility
@@ -26,15 +26,15 @@ namespace source2sdk
         public:
             // m_TargetPreviews has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::ParticleIndex_t> m_TargetPreviews;
-            char m_TargetPreviews[0x18]; // 0xdc0            
-            uint8_t _pad0dd8[0x88]; // 0xdd8
-            bool m_bWasSelected; // 0xe60            
-            uint8_t _pad0e61[0x7];
+            char m_TargetPreviews[0x18]; // 0xd88            
+            uint8_t _pad0da0[0x88]; // 0xda0
+            bool m_bWasSelected; // 0xe28            
+            uint8_t _pad0e29[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_SettingSun because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_SettingSun) == 0xe68);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_SettingSun) == 0xe30);
     };
 };
