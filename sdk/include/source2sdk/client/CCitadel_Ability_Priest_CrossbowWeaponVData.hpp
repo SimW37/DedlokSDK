@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1920
+        // Size: 0x1a00
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,25 +28,25 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Gameplay"
-            CPiecewiseCurve m_SpreadPenaltyScaleCurve; // 0x1668            
+            CPiecewiseCurve m_SpreadPenaltyScaleCurve; // 0x1748            
             // metadata: MPropertyStartGroup "Visuals"
             // m_LaserSightParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserSightParticle;
-            char m_LaserSightParticle[0xe0]; // 0x16a8            
+            char m_LaserSightParticle[0xe0]; // 0x1788            
             // m_LaserSightParticleOwnerOnly has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserSightParticleOwnerOnly;
-            char m_LaserSightParticleOwnerOnly[0xe0]; // 0x1788            
+            char m_LaserSightParticleOwnerOnly[0xe0]; // 0x1868            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strBoltSound; // 0x1868            
-            CSoundEventName m_strReadySound; // 0x1878            
-            CSoundEventName m_strShootDelaySound; // 0x1888            
+            CSoundEventName m_strBoltSound; // 0x1948            
+            CSoundEventName m_strReadySound; // 0x1958            
+            CSoundEventName m_strShootDelaySound; // 0x1968            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceBolt; // 0x1898            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceBolt; // 0x1978            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Priest_CrossbowWeaponVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Priest_CrossbowWeaponVData) == 0x1920);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Priest_CrossbowWeaponVData) == 0x1a00);
     };
 };

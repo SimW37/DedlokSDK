@@ -26,7 +26,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "BaseDomain"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "°•^ëþ"
+        // static metadata: MPulseCellOutflowHookInfo "P’dø"
         // static metadata: MPulseFunctionHiddenInTool
         // static metadata: MPulseSelectorAllowRequirementCriteria
         // static metadata: MPulseSelectorAllowRequirementCriteria

@@ -32,7 +32,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1948
+        // Size: 0x1950
         // Has VTable
         // 
         // static metadata: MNetworkVarTypeOverride "CCitadelPlayer_CameraServices m_pCameraServices"
@@ -275,7 +275,7 @@ namespace source2sdk
             std::uint8_t m_nAudioEnclosure; // 0x1944            
             // metadata: MNetworkEnable
             bool m_bAudioHasSkyExposure; // 0x1945            
-            uint8_t _pad1946[0x2];
+            uint8_t _pad1946[0xa];
             
             // Datamap fields:
             // CCitadelPlayer_CameraServices m_pCameraServices; // 0xf68
@@ -285,6 +285,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in C_CitadelPlayerPawn because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_CitadelPlayerPawn) == 0x1948);
+        static_assert(sizeof(source2sdk::client::C_CitadelPlayerPawn) == 0x1950);
     };
 };

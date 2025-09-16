@@ -25,7 +25,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "ServerEntity"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "€mBÐþ"
+        // static metadata: MPulseCellOutflowHookInfo " êêÿ"
         // static metadata: MPropertyFriendlyName "Listen for Entity Output"
         // static metadata: MPropertyDescription "Waits for the entity to fire a specific output. By default, this listens once, but can be configured to listen until canceled."
         // static metadata: MPulseEditorSubHeaderText

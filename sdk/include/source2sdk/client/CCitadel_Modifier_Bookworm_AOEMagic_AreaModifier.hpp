@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/client/CCitadelModifier.hpp"
+#include "source2sdk/client/ParticleIndex_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -17,18 +18,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x240
+        // Size: 0x248
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Bookworm_AOEMagic_AreaModifier : public source2sdk::client::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x180];
-            // No schema binary for binding
+            uint8_t _pad00c0[0x180]; // 0xc0
+            source2sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0x240            
+            uint8_t _pad0244[0x4];
         };
         #pragma pack(pop)
         
+        // Cannot assert offsets of fields in CCitadel_Modifier_Bookworm_AOEMagic_AreaModifier because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Bookworm_AOEMagic_AreaModifier) == 0x240);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Bookworm_AOEMagic_AreaModifier) == 0x248);
     };
 };

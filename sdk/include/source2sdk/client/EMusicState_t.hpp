@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 62
+        // Enumerator count: 63
         // Alignment: 4
         // Size: 0x4
         enum class EMusicState_t : std::uint32_t
@@ -77,9 +77,10 @@ namespace source2sdk
             EStinger_RevealRank_09 = 0x37,
             EStinger_RevealRank_10 = 0x38,
             EStinger_RevealRank_11 = 0x39,
-            EMusicState_AssignedGameLobby = 0x3a,
-            EMusicState_PreMatchCountdown = 0x3b,
-            EMusicState_Count = 0x3c,
+            EStinger_RevealVote = 0x3a,
+            EMusicState_AssignedGameLobby = 0x3b,
+            EMusicState_PreMatchCountdown = 0x3c,
+            EMusicState_Count = 0x3d,
         };
     };
 };

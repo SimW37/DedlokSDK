@@ -17,17 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc0
+        // Size: 0x160
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Hunger_Target : public source2sdk::server::CCitadelModifier
         {
         public:
+            uint8_t _pad00c8[0x98];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Hunger_Target) == 0xc0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Hunger_Target) == 0x160);
     };
 };

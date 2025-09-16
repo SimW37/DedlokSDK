@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18b0
+        // Size: 0x1990
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,31 +30,31 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_CasterModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_CasterModifier;
-            char m_CasterModifier[0x10]; // 0x16a8            
+            char m_CasterModifier[0x10]; // 0x1788            
             // m_CasterDebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_CasterDebuffModifier;
-            char m_CasterDebuffModifier[0x10]; // 0x16b8            
+            char m_CasterDebuffModifier[0x10]; // 0x1798            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strExplodeSound; // 0x16c8            
+            CSoundEventName m_strExplodeSound; // 0x17a8            
             // metadata: MPropertyGroupName "Visuals"
             // m_CastDelayParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastDelayParticle;
-            char m_CastDelayParticle[0xe0]; // 0x16d8            
+            char m_CastDelayParticle[0xe0]; // 0x17b8            
             // m_TeleportTrailParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle;
-            char m_TeleportTrailParticle[0xe0]; // 0x17b8            
+            char m_TeleportTrailParticle[0xe0]; // 0x1898            
             // metadata: MPropertyGroupName "Gameplay"
-            float m_flGroundProbeSpeed; // 0x1898            
-            float m_flGroundStepDown; // 0x189c            
-            float m_flGroundStepUp; // 0x18a0            
-            std::int32_t m_iMaxGroundIterations; // 0x18a4            
-            float m_flVelocityScale; // 0x18a8            
-            uint8_t _pad18ac[0x4];
+            float m_flGroundProbeSpeed; // 0x1978            
+            float m_flGroundStepDown; // 0x197c            
+            float m_flGroundStepUp; // 0x1980            
+            std::int32_t m_iMaxGroundIterations; // 0x1984            
+            float m_flVelocityScale; // 0x1988            
+            uint8_t _pad198c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CItem_WarpStone_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CItem_WarpStone_VData) == 0x18b0);
+        static_assert(sizeof(source2sdk::server::CItem_WarpStone_VData) == 0x1990);
     };
 };

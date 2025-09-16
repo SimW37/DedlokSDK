@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc70
+        // Size: 0xd70
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Shotgun_Astro_Backwards : public source2sdk::server::CCitadel_Ability_PrimaryWeapon
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Shotgun_Astro_Backwards) == 0xc70);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Shotgun_Astro_Backwards) == 0xd70);
     };
 };

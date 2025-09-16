@@ -23,7 +23,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "BaseDomain"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "ðY€Íþ"
+        // static metadata: MPulseCellOutflowHookInfo "ðYVø"
         // static metadata: MPropertyFriendlyName "Choice Weight"
         // static metadata: MPropertyDescription "Specifies a weighting value which affects that likelyhood of selecting this element which picking a choice."
         #pragma pack(push, 1)

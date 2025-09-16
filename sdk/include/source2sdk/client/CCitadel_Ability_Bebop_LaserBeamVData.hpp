@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x19f0
+        // Size: 0x1ad0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,34 +30,34 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_RestrictionModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_RestrictionModifier;
-            char m_RestrictionModifier[0x10]; // 0x1618            
+            char m_RestrictionModifier[0x10]; // 0x16f8            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ChargeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle;
-            char m_ChargeParticle[0xe0]; // 0x1628            
+            char m_ChargeParticle[0xe0]; // 0x1708            
             // metadata: MPropertyStartGroup "GamePlay"
-            float m_flCancelCooldown; // 0x1708            
-            uint8_t _pad170c[0x4]; // 0x170c
+            float m_flCancelCooldown; // 0x17e8            
+            uint8_t _pad17ec[0x4]; // 0x17ec
             // metadata: MPropertyStartGroup "Visuals"
             // m_BeamParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle;
-            char m_BeamParticle[0xe0]; // 0x1710            
+            char m_BeamParticle[0xe0]; // 0x17f0            
             // m_BeamParticleLocal has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticleLocal;
-            char m_BeamParticleLocal[0xe0]; // 0x17f0            
+            char m_BeamParticleLocal[0xe0]; // 0x18d0            
             // m_BeamHitParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamHitParticle;
-            char m_BeamHitParticle[0xe0]; // 0x18d0            
+            char m_BeamHitParticle[0xe0]; // 0x19b0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strLaserStartSound; // 0x19b0            
-            CSoundEventName m_strLaserEndSound; // 0x19c0            
-            CSoundEventName m_strLaserLoopSound; // 0x19d0            
-            CSoundEventName m_strLaserHitSound; // 0x19e0            
+            CSoundEventName m_strLaserStartSound; // 0x1a90            
+            CSoundEventName m_strLaserEndSound; // 0x1aa0            
+            CSoundEventName m_strLaserLoopSound; // 0x1ab0            
+            CSoundEventName m_strLaserHitSound; // 0x1ac0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Bebop_LaserBeamVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bebop_LaserBeamVData) == 0x19f0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bebop_LaserBeamVData) == 0x1ad0);
     };
 };

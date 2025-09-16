@@ -36,7 +36,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xce8
+        // Size: 0xd00
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EPlayerPlayState m_ePlayState"
@@ -132,33 +132,33 @@ namespace source2sdk
             char m_vecMutedPlayers[0x18]; // 0x870            
             // metadata: MNetworkEnable
             bool m_bCommsRestricted; // 0x888            
-            uint8_t _pad0889[0xe3]; // 0x889
+            uint8_t _pad0889[0xfb]; // 0x889
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnHeroPawnChanged"
             // m_hHeroPawn has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelPlayerPawn> m_hHeroPawn;
-            char m_hHeroPawn[0x4]; // 0x96c            
-            uint8_t _pad0970[0x40]; // 0x970
+            char m_hHeroPawn[0x4]; // 0x984            
+            uint8_t _pad0988[0x40]; // 0x988
             // metadata: MNetworkEnable
-            source2sdk::server::PlayerDataGlobal_t m_PlayerDataGlobal; // 0x9b0            
+            source2sdk::server::PlayerDataGlobal_t m_PlayerDataGlobal; // 0x9c8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int8_t m_nDeathReplayAvailable; // 0xc70            
+            std::int8_t m_nDeathReplayAvailable; // 0xc88            
             // metadata: MNetworkEnable
-            source2sdk::client::CitadelLobbyPlayerSlot_t m_unLobbyPlayerSlot; // 0xc71            
-            uint8_t _pad0c72[0x2]; // 0xc72
-            source2sdk::entity2::GameTime_t m_flLastCommsTime; // 0xc74            
-            source2sdk::entity2::GameTime_t m_flNextAllowedCommsTime; // 0xc78            
-            source2sdk::entity2::GameTime_t m_flLastFailedCommsTime; // 0xc7c            
+            source2sdk::client::CitadelLobbyPlayerSlot_t m_unLobbyPlayerSlot; // 0xc89            
+            uint8_t _pad0c8a[0x2]; // 0xc8a
+            source2sdk::entity2::GameTime_t m_flLastCommsTime; // 0xc8c            
+            source2sdk::entity2::GameTime_t m_flNextAllowedCommsTime; // 0xc90            
+            source2sdk::entity2::GameTime_t m_flLastFailedCommsTime; // 0xc94            
             // m_vecRecentCommAttempts has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::entity2::GameTime_t> m_vecRecentCommAttempts;
-            char m_vecRecentCommAttempts[0x18]; // 0xc80            
-            std::int32_t m_nTotalCommsAttempted; // 0xc98            
-            std::int32_t m_nGuideBotNumTasksComplete; // 0xc9c            
-            bool m_bHasBeenReportedAsCheater; // 0xca0            
-            bool m_bHasGCACKedCheaterReport; // 0xca1            
-            bool m_bHasBeenLoggedAsCheater; // 0xca2            
-            uint8_t _pad0ca3[0x45];
+            char m_vecRecentCommAttempts[0x18]; // 0xc98            
+            std::int32_t m_nTotalCommsAttempted; // 0xcb0            
+            std::int32_t m_nGuideBotNumTasksComplete; // 0xcb4            
+            bool m_bHasBeenReportedAsCheater; // 0xcb8            
+            bool m_bHasGCACKedCheaterReport; // 0xcb9            
+            bool m_bHasBeenLoggedAsCheater; // 0xcba            
+            uint8_t _pad0cbb[0x45];
             
             // Datamap fields:
             // void CCitadelPlayerControllerResourceDataThink; // 0x0
@@ -167,6 +167,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CCitadelPlayerController because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelPlayerController) == 0xce8);
+        static_assert(sizeof(source2sdk::server::CCitadelPlayerController) == 0xd00);
     };
 };

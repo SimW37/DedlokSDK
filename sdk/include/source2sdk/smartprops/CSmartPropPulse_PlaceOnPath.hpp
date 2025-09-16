@@ -24,7 +24,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "SmartPropEval"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "Œ€Íþ"
+        // static metadata: MPulseCellOutflowHookInfo "ŒVø"
         // static metadata: MPropertyFriendlyName "Place On Path"
         // static metadata: MPulseCell_WithNoDefaultOutflow
         // static metadata: MPulseEditorHeaderIcon "tools/images/pulse_editor/requirements.png"

@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0x1f0
+        // Size: 0x2d0
         // 
         // static metadata: MModelGameData
         // static metadata: MGetKV3ClassDefaults
@@ -40,11 +40,14 @@ namespace source2sdk
             // m_vecAmbientParticleSettings has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::AmbientParticleSettings_t> m_vecAmbientParticleSettings;
             char m_vecAmbientParticleSettings[0x18]; // 0xf0            
+            // m_sAG2HeroPawnAnimGraph has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCNmGraphDefinition>> m_sAG2HeroPawnAnimGraph;
+            char m_sAG2HeroPawnAnimGraph[0xe0]; // 0x108            
             // m_sAG2UIAnimGraph has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCNmGraphDefinition>> m_sAG2UIAnimGraph;
-            char m_sAG2UIAnimGraph[0xe0]; // 0x108            
-            float m_flTurnThreshold; // 0x1e8            
-            float m_flTurnDuration; // 0x1ec            
+            char m_sAG2UIAnimGraph[0xe0]; // 0x1e8            
+            float m_flTurnThreshold; // 0x2c8            
+            float m_flTurnDuration; // 0x2cc            
         };
         #pragma pack(pop)
         
@@ -52,10 +55,11 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CCitadelHeroModelGameData_t, m_UIShopAnimGraph) == 0x8);
         static_assert(offsetof(source2sdk::client::CCitadelHeroModelGameData_t, m_hAmbientParticle) == 0x10);
         static_assert(offsetof(source2sdk::client::CCitadelHeroModelGameData_t, m_vecAmbientParticleSettings) == 0xf0);
-        static_assert(offsetof(source2sdk::client::CCitadelHeroModelGameData_t, m_sAG2UIAnimGraph) == 0x108);
-        static_assert(offsetof(source2sdk::client::CCitadelHeroModelGameData_t, m_flTurnThreshold) == 0x1e8);
-        static_assert(offsetof(source2sdk::client::CCitadelHeroModelGameData_t, m_flTurnDuration) == 0x1ec);
+        static_assert(offsetof(source2sdk::client::CCitadelHeroModelGameData_t, m_sAG2HeroPawnAnimGraph) == 0x108);
+        static_assert(offsetof(source2sdk::client::CCitadelHeroModelGameData_t, m_sAG2UIAnimGraph) == 0x1e8);
+        static_assert(offsetof(source2sdk::client::CCitadelHeroModelGameData_t, m_flTurnThreshold) == 0x2c8);
+        static_assert(offsetof(source2sdk::client::CCitadelHeroModelGameData_t, m_flTurnDuration) == 0x2cc);
         
-        static_assert(sizeof(source2sdk::client::CCitadelHeroModelGameData_t) == 0x1f0);
+        static_assert(sizeof(source2sdk::client::CCitadelHeroModelGameData_t) == 0x2d0);
     };
 };

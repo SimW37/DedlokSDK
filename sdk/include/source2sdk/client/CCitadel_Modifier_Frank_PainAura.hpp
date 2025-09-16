@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1c0
+        // Size: 0x248
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Frank_PainAura : public source2sdk::client::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x100];
+            uint8_t _pad00c0[0x188];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Frank_PainAura) == 0x1c0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Frank_PainAura) == 0x248);
     };
 };

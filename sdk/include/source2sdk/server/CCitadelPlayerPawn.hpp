@@ -52,7 +52,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x20a8
+        // Size: 0x20b0
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_iMaxHealth"
@@ -273,133 +273,133 @@ namespace source2sdk
             uint8_t _pad14b0[0x6c0]; // 0x14b0
             float m_flLastRegenThinkTime; // 0x1b70            
             float m_flCitadelDamageAccumulator; // 0x1b74            
-            uint8_t _pad1b78[0x30]; // 0x1b78
-            std::int32_t m_nBulletsFiredAtUs; // 0x1ba8            
-            std::int32_t m_nBulletsHitOnUs; // 0x1bac            
-            std::int32_t m_nHeadshotsOnUs; // 0x1bb0            
-            source2sdk::entity2::GameTime_t m_flLastGameStatsRecorded; // 0x1bb4            
-            float m_flUnusedGoldRemainder; // 0x1bb8            
-            float m_flUnusedAbilityRemainder; // 0x1bbc            
-            std::int32_t m_nBulletsFiredAtEnemyHeroes; // 0x1bc0            
-            std::int32_t m_nBulletsHitOnEnemyHeroes; // 0x1bc4            
-            std::int32_t m_nHeadshotsOnEnemyHeroes; // 0x1bc8            
-            std::int32_t m_nLuckyShotsOnEnemyHeroes; // 0x1bcc            
-            std::int32_t m_nBulletsHitOnImmobileEnemyHeroes; // 0x1bd0            
-            std::int32_t m_nHeadshotsOnImmobileEnemyHeroes; // 0x1bd4            
+            uint8_t _pad1b78[0x38]; // 0x1b78
+            std::int32_t m_nBulletsFiredAtUs; // 0x1bb0            
+            std::int32_t m_nBulletsHitOnUs; // 0x1bb4            
+            std::int32_t m_nHeadshotsOnUs; // 0x1bb8            
+            source2sdk::entity2::GameTime_t m_flLastGameStatsRecorded; // 0x1bbc            
+            float m_flUnusedGoldRemainder; // 0x1bc0            
+            float m_flUnusedAbilityRemainder; // 0x1bc4            
+            std::int32_t m_nBulletsFiredAtEnemyHeroes; // 0x1bc8            
+            std::int32_t m_nBulletsHitOnEnemyHeroes; // 0x1bcc            
+            std::int32_t m_nHeadshotsOnEnemyHeroes; // 0x1bd0            
+            std::int32_t m_nLuckyShotsOnEnemyHeroes; // 0x1bd4            
+            std::int32_t m_nBulletsHitOnImmobileEnemyHeroes; // 0x1bd8            
+            std::int32_t m_nHeadshotsOnImmobileEnemyHeroes; // 0x1bdc            
             // m_hEnemyHeroClientAimedAtAttackTime has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hEnemyHeroClientAimedAtAttackTime;
-            char m_hEnemyHeroClientAimedAtAttackTime[0x4]; // 0x1bd8            
-            bool m_bHasOverrideSpawnPos; // 0x1bdc            
-            uint8_t _pad1bdd[0x3]; // 0x1bdd
-            Vector m_vecOverrideSpawnPos; // 0x1be0            
-            std::int32_t m_iKillStreak; // 0x1bec            
-            std::int32_t m_iTrooperWaveEventCount; // 0x1bf0            
-            std::int32_t m_iTrooperWaveNumber; // 0x1bf4            
-            std::int32_t m_iPrevTrooperWaveEventCount; // 0x1bf8            
-            std::int32_t m_iPrevTrooperWaveNumber; // 0x1bfc            
-            bool m_bHasStartedPlaying; // 0x1c00            
-            uint8_t _pad1c01[0x3]; // 0x1c01
+            char m_hEnemyHeroClientAimedAtAttackTime[0x4]; // 0x1be0            
+            bool m_bHasOverrideSpawnPos; // 0x1be4            
+            uint8_t _pad1be5[0x3]; // 0x1be5
+            Vector m_vecOverrideSpawnPos; // 0x1be8            
+            std::int32_t m_iKillStreak; // 0x1bf4            
+            std::int32_t m_iTrooperWaveEventCount; // 0x1bf8            
+            std::int32_t m_iTrooperWaveNumber; // 0x1bfc            
+            std::int32_t m_iPrevTrooperWaveEventCount; // 0x1c00            
+            std::int32_t m_iPrevTrooperWaveNumber; // 0x1c04            
+            bool m_bHasStartedPlaying; // 0x1c08            
+            uint8_t _pad1c09[0x3]; // 0x1c09
             // m_hRevengeTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hRevengeTarget;
-            char m_hRevengeTarget[0x4]; // 0x1c04            
-            uint8_t _pad1c08[0xc]; // 0x1c08
-            source2sdk::entity2::GameTime_t m_flLastHurtTimeByEnemyHero; // 0x1c14            
-            source2sdk::entity2::GameTime_t m_flLastHurtByNeutral; // 0x1c18            
-            source2sdk::entity2::GameTime_t m_flLastHurtByEnemyNPC; // 0x1c1c            
-            source2sdk::entity2::GameTime_t m_flLastTimeLookedAtByDirector; // 0x1c20            
-            uint8_t _pad1c24[0x4]; // 0x1c24
-            source2sdk::client::CTakeDamageResult m_ragdollDamage; // 0x1c28            
+            char m_hRevengeTarget[0x4]; // 0x1c0c            
+            uint8_t _pad1c10[0xc]; // 0x1c10
+            source2sdk::entity2::GameTime_t m_flLastHurtTimeByEnemyHero; // 0x1c1c            
+            source2sdk::entity2::GameTime_t m_flLastHurtByNeutral; // 0x1c20            
+            source2sdk::entity2::GameTime_t m_flLastHurtByEnemyNPC; // 0x1c24            
+            source2sdk::entity2::GameTime_t m_flLastTimeLookedAtByDirector; // 0x1c28            
+            uint8_t _pad1c2c[0x4]; // 0x1c2c
+            source2sdk::client::CTakeDamageResult m_ragdollDamage; // 0x1c30            
             // m_vecThreats has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecThreats;
-            char m_vecThreats[0x18]; // 0x1c48            
-            uint8_t _pad1c60[0xa0]; // 0x1c60
+            char m_vecThreats[0x18]; // 0x1c50            
+            uint8_t _pad1c68[0xa0]; // 0x1c68
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelRecentDamage m_sInCombat; // 0x1d00            
+            source2sdk::server::CCitadelRecentDamage m_sInCombat; // 0x1d08            
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelRecentDamage m_sPlayerDamageTaken; // 0x1d18            
+            source2sdk::server::CCitadelRecentDamage m_sPlayerDamageTaken; // 0x1d20            
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelRecentDamage m_sPlayerDamageDealt; // 0x1d30            
-            uint8_t _pad1d48[0xbc]; // 0x1d48
-            // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            source2sdk::client::CMsgLaneColor m_eZipLineLaneColor; // 0x1e04            
-            bool m_bCanBecomeRagdoll; // 0x1e08            
-            uint8_t _pad1e09[0x3]; // 0x1e09
-            float m_blindUntilTime; // 0x1e0c            
-            float m_blindStartTime; // 0x1e10            
+            source2sdk::server::CCitadelRecentDamage m_sPlayerDamageDealt; // 0x1d38            
+            uint8_t _pad1d50[0xbc]; // 0x1d50
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            std::int8_t m_nSuccessiveDucks; // 0x1e14            
-            uint8_t _pad1e15[0x3]; // 0x1e15
+            source2sdk::client::CMsgLaneColor m_eZipLineLaneColor; // 0x1e0c            
+            bool m_bCanBecomeRagdoll; // 0x1e10            
+            uint8_t _pad1e11[0x3]; // 0x1e11
+            float m_blindUntilTime; // 0x1e14            
+            float m_blindStartTime; // 0x1e18            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            source2sdk::entity2::GameTime_t m_flLastDuckTime; // 0x1e18            
-            Vector m_vWallJumpFacingDir; // 0x1e1c            
-            source2sdk::client::EWallJumpFacing m_eWallJumpFacing; // 0x1e28            
-            uint8_t _pad1e2a[0x2]; // 0x1e2a
-            Vector m_vCurrentWallNormal; // 0x1e2c            
-            Vector m_vLastWallCollidedWithNormal; // 0x1e38            
-            Vector m_vLastValidWallJumpNormal; // 0x1e44            
-            Vector m_vLastValidWallJumpNormal_PlayerPosition; // 0x1e50            
-            source2sdk::entity2::GameTime_t m_flLastWallJumpTime; // 0x1e5c            
+            std::int8_t m_nSuccessiveDucks; // 0x1e1c            
+            uint8_t _pad1e1d[0x3]; // 0x1e1d
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            bool m_bAnimGraphMovementClipped; // 0x1e60            
+            source2sdk::entity2::GameTime_t m_flLastDuckTime; // 0x1e20            
+            Vector m_vWallJumpFacingDir; // 0x1e24            
+            source2sdk::client::EWallJumpFacing m_eWallJumpFacing; // 0x1e30            
+            uint8_t _pad1e32[0x2]; // 0x1e32
+            Vector m_vCurrentWallNormal; // 0x1e34            
+            Vector m_vLastWallCollidedWithNormal; // 0x1e40            
+            Vector m_vLastValidWallJumpNormal; // 0x1e4c            
+            Vector m_vLastValidWallJumpNormal_PlayerPosition; // 0x1e58            
+            source2sdk::entity2::GameTime_t m_flLastWallJumpTime; // 0x1e64            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            bool m_bAnimGraphMovementDisableGravity; // 0x1e61            
+            bool m_bAnimGraphMovementClipped; // 0x1e68            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            bool m_bAnimGraphMovementDirectAirControl; // 0x1e62            
-            uint8_t _pad1e63[0x1]; // 0x1e63
+            bool m_bAnimGraphMovementDisableGravity; // 0x1e69            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            source2sdk::entity2::GameTime_t m_flPredTimeSlowedStart; // 0x1e64            
+            bool m_bAnimGraphMovementDirectAirControl; // 0x1e6a            
+            uint8_t _pad1e6b[0x1]; // 0x1e6b
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            source2sdk::entity2::GameTime_t m_flPredTimeSlowedEnd; // 0x1e68            
+            source2sdk::entity2::GameTime_t m_flPredTimeSlowedStart; // 0x1e6c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            float m_flPredSlowSpeed; // 0x1e6c            
+            source2sdk::entity2::GameTime_t m_flPredTimeSlowedEnd; // 0x1e70            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            source2sdk::entity2::GameTime_t m_flTimeSlowedStart[4]; // 0x1e70            
+            float m_flPredSlowSpeed; // 0x1e74            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            source2sdk::entity2::GameTime_t m_flTimeSlowedEnd[4]; // 0x1e80            
+            source2sdk::entity2::GameTime_t m_flTimeSlowedStart[4]; // 0x1e78            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            float m_flSlowSpeed[4]; // 0x1e90            
+            source2sdk::entity2::GameTime_t m_flTimeSlowedEnd[4]; // 0x1e88            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            source2sdk::entity2::GameTime_t m_flSprintAnimSuppressEndTime; // 0x1ea0            
-            bool m_bPreventAbilityLearning; // 0x1ea4            
-            uint8_t _pad1ea5[0x3]; // 0x1ea5
-            std::int32_t m_iCurSlowSlot; // 0x1ea8            
-            uint8_t _pad1eac[0x4]; // 0x1eac
-            source2sdk::client::ParticleIndex_t m_nRespawnParticleIndex; // 0x1eb0            
-            source2sdk::client::ParticleIndex_t m_nShoppingParticle; // 0x1eb4            
-            uint8_t _pad1eb8[0x30]; // 0x1eb8
-            source2sdk::server::CCitadelPlayerBot* m_pBot; // 0x1ee8            
-            uint8_t _pad1ef0[0x140]; // 0x1ef0
-            bool m_bLocoLeanTriggeredForDirection; // 0x2030            
-            bool m_bLocoRunToStopCanTrigger; // 0x2031            
-            uint8_t _pad2032[0x2]; // 0x2032
-            float m_flCrouchFraction; // 0x2034            
-            float m_flCrouchSpeed; // 0x2038            
-            source2sdk::entity2::GameTime_t m_fidgetTime; // 0x203c            
-            Vector m_vShootTestOffsetStanding; // 0x2040            
-            Vector m_vShootTestOffsetCrouching; // 0x204c            
-            source2sdk::entity2::GameTime_t m_leanStartTime; // 0x2058            
-            source2sdk::entity2::GameTick_t m_nLastUnpredictableMovementTick; // 0x205c            
-            uint8_t _pad2060[0x40]; // 0x2060
+            float m_flSlowSpeed[4]; // 0x1e98            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerExclusive"
+            source2sdk::entity2::GameTime_t m_flSprintAnimSuppressEndTime; // 0x1ea8            
+            bool m_bPreventAbilityLearning; // 0x1eac            
+            uint8_t _pad1ead[0x3]; // 0x1ead
+            std::int32_t m_iCurSlowSlot; // 0x1eb0            
+            uint8_t _pad1eb4[0x4]; // 0x1eb4
+            source2sdk::client::ParticleIndex_t m_nRespawnParticleIndex; // 0x1eb8            
+            source2sdk::client::ParticleIndex_t m_nShoppingParticle; // 0x1ebc            
+            uint8_t _pad1ec0[0x30]; // 0x1ec0
+            source2sdk::server::CCitadelPlayerBot* m_pBot; // 0x1ef0            
+            uint8_t _pad1ef8[0x140]; // 0x1ef8
+            bool m_bLocoLeanTriggeredForDirection; // 0x2038            
+            bool m_bLocoRunToStopCanTrigger; // 0x2039            
+            uint8_t _pad203a[0x2]; // 0x203a
+            float m_flCrouchFraction; // 0x203c            
+            float m_flCrouchSpeed; // 0x2040            
+            source2sdk::entity2::GameTime_t m_fidgetTime; // 0x2044            
+            Vector m_vShootTestOffsetStanding; // 0x2048            
+            Vector m_vShootTestOffsetCrouching; // 0x2054            
+            source2sdk::entity2::GameTime_t m_leanStartTime; // 0x2060            
+            source2sdk::entity2::GameTick_t m_nLastUnpredictableMovementTick; // 0x2064            
+            uint8_t _pad2068[0x40]; // 0x2068
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "RemotePlayersOnly"
-            std::uint8_t m_nAudioEnclosure; // 0x20a0            
+            std::uint8_t m_nAudioEnclosure; // 0x20a8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "RemotePlayersOnly"
-            bool m_bAudioHasSkyExposure; // 0x20a1            
-            uint8_t _pad20a2[0x6];
+            bool m_bAudioHasSkyExposure; // 0x20a9            
+            uint8_t _pad20aa[0x6];
             
             // Datamap fields:
             // CCitadelPlayer_CameraServices m_pCameraServices; // 0xc48
@@ -409,6 +409,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CCitadelPlayerPawn because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelPlayerPawn) == 0x20a8);
+        static_assert(sizeof(source2sdk::server::CCitadelPlayerPawn) == 0x20b0);
     };
 };

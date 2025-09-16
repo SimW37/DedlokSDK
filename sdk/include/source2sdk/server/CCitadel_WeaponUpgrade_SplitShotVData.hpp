@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16d8
+        // Size: 0x17b8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,19 +27,19 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strWeaponShootSound; // 0x16a8            
+            CSoundEventName m_strWeaponShootSound; // 0x1788            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_BuffIndicatorModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BuffIndicatorModifier;
-            char m_BuffIndicatorModifier[0x10]; // 0x16b8            
+            char m_BuffIndicatorModifier[0x10]; // 0x1798            
             // m_WeaponDamageBuff has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_WeaponDamageBuff;
-            char m_WeaponDamageBuff[0x10]; // 0x16c8            
+            char m_WeaponDamageBuff[0x10]; // 0x17a8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_WeaponUpgrade_SplitShotVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_WeaponUpgrade_SplitShotVData) == 0x16d8);
+        static_assert(sizeof(source2sdk::server::CCitadel_WeaponUpgrade_SplitShotVData) == 0x17b8);
     };
 };

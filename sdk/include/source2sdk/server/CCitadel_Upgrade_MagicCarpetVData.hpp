@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17e0
+        // Size: 0x18c0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,32 +30,32 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_SummonParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonParticle;
-            char m_SummonParticle[0xe0]; // 0x16a8            
+            char m_SummonParticle[0xe0]; // 0x1788            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_FlyingCarpetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_FlyingCarpetModifier;
-            char m_FlyingCarpetModifier[0x10]; // 0x1788            
+            char m_FlyingCarpetModifier[0x10]; // 0x1868            
             // m_SummonFlyingCarpetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SummonFlyingCarpetModifier;
-            char m_SummonFlyingCarpetModifier[0x10]; // 0x1798            
+            char m_SummonFlyingCarpetModifier[0x10]; // 0x1878            
             // m_SummonFlyingCarpetVisualModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SummonFlyingCarpetVisualModifier;
-            char m_SummonFlyingCarpetVisualModifier[0x10]; // 0x17a8            
+            char m_SummonFlyingCarpetVisualModifier[0x10]; // 0x1888            
             // m_FlyingCarpetVisualModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_FlyingCarpetVisualModifier;
-            char m_FlyingCarpetVisualModifier[0x10]; // 0x17b8            
+            char m_FlyingCarpetVisualModifier[0x10]; // 0x1898            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flSummonVisualDuration; // 0x17c8            
-            float m_flBurstSpeedBonus; // 0x17cc            
-            float m_flBurstSpeedMin; // 0x17d0            
-            float m_flBurstSpeedDuration; // 0x17d4            
-            float m_flMinDistanceAboveGround; // 0x17d8            
-            uint8_t _pad17dc[0x4];
+            float m_flSummonVisualDuration; // 0x18a8            
+            float m_flBurstSpeedBonus; // 0x18ac            
+            float m_flBurstSpeedMin; // 0x18b0            
+            float m_flBurstSpeedDuration; // 0x18b4            
+            float m_flMinDistanceAboveGround; // 0x18b8            
+            uint8_t _pad18bc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Upgrade_MagicCarpetVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Upgrade_MagicCarpetVData) == 0x17e0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Upgrade_MagicCarpetVData) == 0x18c0);
     };
 };

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1838
+        // Size: 0x1918
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,27 +30,27 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_TetherModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_TetherModifier;
-            char m_TetherModifier[0x10]; // 0x1618            
+            char m_TetherModifier[0x10]; // 0x16f8            
             // m_GrappleTargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_GrappleTargetModifier;
-            char m_GrappleTargetModifier[0x10]; // 0x1628            
+            char m_GrappleTargetModifier[0x10]; // 0x1708            
             // metadata: MPropertyStartGroup "Visuals"
             // m_BulletGrappleTracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BulletGrappleTracerParticle;
-            char m_BulletGrappleTracerParticle[0xe0]; // 0x1638            
+            char m_BulletGrappleTracerParticle[0xe0]; // 0x1718            
             // m_EnemyGrappleParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyGrappleParticle;
-            char m_EnemyGrappleParticle[0xe0]; // 0x1718            
+            char m_EnemyGrappleParticle[0xe0]; // 0x17f8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strDamageTarget; // 0x17f8            
-            CSoundEventName m_strGrappleHitTarget; // 0x1808            
-            CSoundEventName m_strGrappleHitWorld; // 0x1818            
-            CSoundEventName m_strGrappleHitNothing; // 0x1828            
+            CSoundEventName m_strDamageTarget; // 0x18d8            
+            CSoundEventName m_strGrappleHitTarget; // 0x18e8            
+            CSoundEventName m_strGrappleHitWorld; // 0x18f8            
+            CSoundEventName m_strGrappleHitNothing; // 0x1908            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelAbilityTangoTetherVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelAbilityTangoTetherVData) == 0x1838);
+        static_assert(sizeof(source2sdk::server::CCitadelAbilityTangoTetherVData) == 0x1918);
     };
 };

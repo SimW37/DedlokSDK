@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1620
+        // Size: 0x1700
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,13 +26,13 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flShieldOffset; // 0x1618            
-            float m_flShieldScale; // 0x161c            
+            float m_flShieldOffset; // 0x16f8            
+            float m_flShieldScale; // 0x16fc            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_NPCAbility_Shield_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_NPCAbility_Shield_VData) == 0x1620);
+        static_assert(sizeof(source2sdk::server::CCitadel_NPCAbility_Shield_VData) == 0x1700);
     };
 };

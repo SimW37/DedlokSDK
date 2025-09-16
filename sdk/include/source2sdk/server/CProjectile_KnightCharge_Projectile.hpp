@@ -3,7 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/server/CCitadelMinimapComponent.hpp"
 #include "source2sdk/server/CCitadelProjectile.hpp"
 
 // /////////////////////////////////////////////////////////////
@@ -18,28 +18,25 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa98
+        // Size: 0xc18
         // Has VTable
         // 
-        // static metadata: MNetworkVarNames "float m_flWidth"
-        // static metadata: MNetworkVarNames "GameTime_t m_tDieTime"
+        // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
         #pragma pack(push, 1)
         class CProjectile_KnightCharge_Projectile : public source2sdk::server::CCitadelProjectile
         {
         public:
-            Vector m_vLastKnightChargePos; // 0x880            
-            bool m_bFinished; // 0x88c            
-            uint8_t _pad088d[0x3]; // 0x88d
             // metadata: MNetworkEnable
-            float m_flWidth; // 0x890            
-            // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_tDieTime; // 0x894            
-            uint8_t _pad0898[0x200];
+            // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
+            // metadata: MNetworkAlias "CCitadelMinimapComponent"
+            // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x8e8            
+            uint8_t _pad0900[0x318];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CProjectile_KnightCharge_Projectile because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CProjectile_KnightCharge_Projectile) == 0xa98);
+        static_assert(sizeof(source2sdk::server::CProjectile_KnightCharge_Projectile) == 0xc18);
     };
 };

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x920
+        // Size: 0x940
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -33,11 +33,14 @@ namespace source2sdk
             // m_BuffStatusParticleEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BuffStatusParticleEnemy;
             char m_BuffStatusParticleEnemy[0xe0]; // 0x840            
+            // metadata: MPropertyStartGroup "Sounds"
+            CSoundEventName m_strBerserkerStackSound; // 0x920            
+            CSoundEventName m_strMaxStackLayer; // 0x930            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_BerserkerDamageStackVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_BerserkerDamageStackVData) == 0x920);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_BerserkerDamageStackVData) == 0x940);
     };
 };

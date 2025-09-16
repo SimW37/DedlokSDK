@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 95
+        // Enumerator count: 97
         // Alignment: 4
         // Size: 0x4
         enum class Class_T : std::uint32_t
@@ -112,7 +112,9 @@ namespace source2sdk
             CLASS_NPC_FLYING_PIGEON = 0x5b,
             CLASS_NPC_HIDEOUT_CAT = 0x5c,
             CLASS_HIDEOUT_BALL = 0x5d,
-            NUM_CLASSIFY_CLASSES = 0x5e,
+            CLASS_SHIELD = 0x5e,
+            CLASS_TRIGGER_NO_PORTALS = 0x5f,
+            NUM_CLASSIFY_CLASSES = 0x60,
         };
     };
 };

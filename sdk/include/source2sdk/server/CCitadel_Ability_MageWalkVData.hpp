@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1718
+        // Size: 0x17f8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,19 +30,19 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_BubbleModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_BubbleModifier;
-            char m_BubbleModifier[0x10]; // 0x1618            
+            char m_BubbleModifier[0x10]; // 0x16f8            
             // m_TurretModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_TurretModifier;
-            char m_TurretModifier[0x10]; // 0x1628            
+            char m_TurretModifier[0x10]; // 0x1708            
             // metadata: MPropertyStartGroup "Visuals"
             // m_strCastEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strCastEffect;
-            char m_strCastEffect[0xe0]; // 0x1638            
+            char m_strCastEffect[0xe0]; // 0x1718            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_MageWalkVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_MageWalkVData) == 0x1718);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_MageWalkVData) == 0x17f8);
     };
 };

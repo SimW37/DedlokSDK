@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 242
+        // Enumerator count: 243
         // Alignment: 4
         // Size: 0x4
         enum class EModifierState : std::uint32_t
@@ -258,8 +258,9 @@ namespace source2sdk
             MODIFIER_STATE_PREDICTION_SMOOTHING_DISABLED = 0xed,
             MODIFIER_STATE_IGNORE_PORTALS = 0xee,
             MODIFIER_STATE_HIDEOUT_CHASE_TARGET = 0xef,
+            MODIFIER_STATE_DO_NOT_ADJUST_HEALTH_ON_MAXHEALTH_CHANGE = 0xf0,
             // MPropertySuppressEnumerator
-            MODIFIER_STATE_COUNT = 0xf0,
+            MODIFIER_STATE_COUNT = 0xf1,
             // MPropertySuppressEnumerator
             MODIFIER_STATE_INVALID = 0xff,
         };

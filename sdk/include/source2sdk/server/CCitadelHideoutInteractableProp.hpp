@@ -20,13 +20,15 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xe80
+        // Size: 0xee0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CUtlString m_strInteractLocString"
         // static metadata: MNetworkVarNames "EHideoutButtonInteractStyle m_eInteractStyle"
         // static metadata: MNetworkVarNames "EHideoutButtonAction m_eHideoutAction"
         // static metadata: MNetworkVarNames "float m_flInteractDistance"
+        // static metadata: MNetworkVarNames "CUtlString m_strWorldPanelEntity"
+        // static metadata: MNetworkVarNames "CUtlString m_strOpacityCurveString"
         #pragma pack(push, 1)
         class CCitadelHideoutInteractableProp : public source2sdk::server::CDynamicProp
         {
@@ -45,12 +47,17 @@ namespace source2sdk
             source2sdk::client::EHideoutButtonAction m_eHideoutAction; // 0xe74            
             // metadata: MNetworkEnable
             float m_flInteractDistance; // 0xe78            
-            uint8_t _pad0e7c[0x4];
+            uint8_t _pad0e7c[0x4]; // 0xe7c
+            // metadata: MNetworkEnable
+            CUtlString m_strWorldPanelEntity; // 0xe80            
+            // metadata: MNetworkEnable
+            CUtlString m_strOpacityCurveString; // 0xe88            
+            uint8_t _pad0e90[0x50];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelHideoutInteractableProp because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelHideoutInteractableProp) == 0xe80);
+        static_assert(sizeof(source2sdk::server::CCitadelHideoutInteractableProp) == 0xee0);
     };
 };

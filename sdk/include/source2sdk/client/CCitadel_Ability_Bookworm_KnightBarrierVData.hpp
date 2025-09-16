@@ -5,6 +5,7 @@
 #include <cstdint>
 #include "source2sdk/client/CCitadelModifier.hpp"
 #include "source2sdk/client/CitadelAbilityVData.hpp"
+#include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -18,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1630
+        // Size: 0x18c8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,15 +27,22 @@ namespace source2sdk
         class CCitadel_Ability_Bookworm_KnightBarrierVData : public source2sdk::client::CitadelAbilityVData
         {
         public:
+            // metadata: MPropertyGroupName "Visuals"
+            // m_ShoveParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShoveParticle;
+            char m_ShoveParticle[0xe0]; // 0x16f8            
+            // m_BarrierCastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrierCastParticle;
+            char m_BarrierCastParticle[0xe0]; // 0x17d8            
             // metadata: MPropertyGroupName "Modifiers"
             // m_BarrierModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BarrierModifier;
-            char m_BarrierModifier[0x10]; // 0x1620            
+            char m_BarrierModifier[0x10]; // 0x18b8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Bookworm_KnightBarrierVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bookworm_KnightBarrierVData) == 0x1630);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bookworm_KnightBarrierVData) == 0x18c8);
     };
 };

@@ -25,7 +25,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "BaseDomain"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "PrVëþ"
+        // static metadata: MPulseCellOutflowHookInfo "pk\ø"
         // static metadata: MPulseProvideFeatureTag "1"
         // static metadata: MPropertyFriendlyName "Play Sequence"
         // static metadata: MPropertyDescription "Play the specified animation sequence on a NON-ANIMGRAPH entity, and wait for it to complete."

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18d0
+        // Size: 0x19b0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,21 +29,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x1618            
+            char m_ExplodeParticle[0xe0]; // 0x16f8            
             // m_SummonParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonParticle;
-            char m_SummonParticle[0xe0]; // 0x16f8            
+            char m_SummonParticle[0xe0]; // 0x17d8            
             // m_SummonReadyParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SummonReadyParticle;
-            char m_SummonReadyParticle[0xe0]; // 0x17d8            
-            CUtlString m_SummonParticleAttachment; // 0x18b8            
+            char m_SummonReadyParticle[0xe0]; // 0x18b8            
+            CUtlString m_SummonParticleAttachment; // 0x1998            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_ExplodeSound; // 0x18c0            
+            CSoundEventName m_ExplodeSound; // 0x19a0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Wrecker_BoulderGrenadeVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Wrecker_BoulderGrenadeVData) == 0x18d0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Wrecker_BoulderGrenadeVData) == 0x19b0);
     };
 };

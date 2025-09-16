@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1108
+        // Size: 0x11e8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,18 +28,18 @@ namespace source2sdk
         public:
             // metadata: MPropertyStartGroup "Gameplay"
             // metadata: MPropertyDescription "How far to search for friendly players for deploying our shield and walking."
-            float m_flEscortFriendlyHeroSearchRadius; // 0x10f8            
+            float m_flEscortFriendlyHeroSearchRadius; // 0x11d8            
             // metadata: MPropertyDescription "Stop walking when we detect an objective this far away."
-            float m_flEscortEnemyObjectiveSearchRadius; // 0x10fc            
+            float m_flEscortEnemyObjectiveSearchRadius; // 0x11dc            
             // metadata: MPropertyDescription "How close is close enough for pathfinding to a node."
-            float m_flCloseEnoughToNode; // 0x1100            
+            float m_flCloseEnoughToNode; // 0x11e0            
             // metadata: MPropertyDescription "When we detect friendly players in front of us, apply this scale to our walking speed so we'll catch up to them."
-            float m_flCatchUpSpeed; // 0x1104            
+            float m_flCatchUpSpeed; // 0x11e4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_Escort_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CNPC_Escort_VData) == 0x1108);
+        static_assert(sizeof(source2sdk::client::CNPC_Escort_VData) == 0x11e8);
     };
 };

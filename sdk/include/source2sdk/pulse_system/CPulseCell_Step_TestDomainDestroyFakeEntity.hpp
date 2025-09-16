@@ -23,7 +23,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "TestDomain"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "¸ Óþ"
+        // static metadata: MPulseCellOutflowHookInfo "¸ ã!ø"
         // static metadata: MPropertyFriendlyName "Destroy Fake Entity"
         #pragma pack(push, 1)
         class CPulseCell_Step_TestDomainDestroyFakeEntity : public source2sdk::pulse_runtime_lib::CPulseCell_BaseFlow

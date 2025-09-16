@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1380
+        // Size: 0x1480
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_flStartWindUpTime"
@@ -28,19 +28,19 @@ namespace source2sdk
         class CCitadel_Ability_PrimaryWeapon_Bebop : public source2sdk::client::CCitadel_Ability_PrimaryWeapon_BeamWeapon
         {
         public:
-            uint8_t _pad0e90[0x390]; // 0xe90
+            uint8_t _pad0f90[0x390]; // 0xf90
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flStartWindUpTime; // 0x1220            
+            source2sdk::entity2::GameTime_t m_flStartWindUpTime; // 0x1320            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flStartFiringTime; // 0x1224            
+            source2sdk::entity2::GameTime_t m_flStartFiringTime; // 0x1324            
             // metadata: MNetworkEnable
-            bool m_bFiring; // 0x1228            
-            uint8_t _pad1229[0x157];
+            bool m_bFiring; // 0x1328            
+            uint8_t _pad1329[0x157];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_PrimaryWeapon_Bebop because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_PrimaryWeapon_Bebop) == 0x1380);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_PrimaryWeapon_Bebop) == 0x1480);
     };
 };

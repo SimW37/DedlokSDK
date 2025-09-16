@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1888
+        // Size: 0x1968
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,22 +31,22 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_StackNotificationModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_StackNotificationModifier;
-            char m_StackNotificationModifier[0x10]; // 0x16a8            
+            char m_StackNotificationModifier[0x10]; // 0x1788            
             // m_OnCastModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_OnCastModifier;
-            char m_OnCastModifier[0x10]; // 0x16b8            
+            char m_OnCastModifier[0x10]; // 0x1798            
             // metadata: MPropertyGroupName "Visuals"
             // m_RegenParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RegenParticle;
-            char m_RegenParticle[0xe0]; // 0x16c8            
+            char m_RegenParticle[0xe0]; // 0x17a8            
             // m_ProcParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcParticle;
-            char m_ProcParticle[0xe0]; // 0x17a8            
+            char m_ProcParticle[0xe0]; // 0x1888            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CItem_ResonantHealing_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CItem_ResonantHealing_VData) == 0x1888);
+        static_assert(sizeof(source2sdk::server::CItem_ResonantHealing_VData) == 0x1968);
     };
 };

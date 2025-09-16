@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x950
+        // Size: 0x870
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,16 +27,16 @@ namespace source2sdk
         {
         public:
             source2sdk::client::ModelChange_t m_ModelChange; // 0x760            
-            float m_flModelScale; // 0x928            
-            uint8_t _pad092c[0x4]; // 0x92c
+            float m_flModelScale; // 0x848            
+            uint8_t _pad084c[0x4]; // 0x84c
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_ExplodeSound; // 0x930            
-            CSoundEventName m_ImpactSound; // 0x940            
+            CSoundEventName m_ExplodeSound; // 0x850            
+            CSoundEventName m_ImpactSound; // 0x860            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Nano_CatFormVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Nano_CatFormVData) == 0x950);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Nano_CatFormVData) == 0x870);
     };
 };

@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1598
+        // Size: 0x1930
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelAbilityBeam_t m_beam"
@@ -38,15 +38,15 @@ namespace source2sdk
             source2sdk::entity2::GameTime_t m_flNextDamageTick; // 0xf8c            
             // metadata: MNetworkEnable
             source2sdk::client::CCitadelAbilityBeam_t m_beam; // 0xf90            
-            uint8_t _pad1548[0x38]; // 0x1548
+            uint8_t _pad18e0[0x38]; // 0x18e0
             // m_vecEntitiesHit has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_vecEntitiesHit;
-            char m_vecEntitiesHit[0x18]; // 0x1580            
+            char m_vecEntitiesHit[0x18]; // 0x1918            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_IceBeam because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_IceBeam) == 0x1598);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_IceBeam) == 0x1930);
     };
 };

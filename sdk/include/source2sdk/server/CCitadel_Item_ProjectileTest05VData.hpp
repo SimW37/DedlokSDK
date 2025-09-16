@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16c8
+        // Size: 0x17a8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,15 +26,15 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flMaxDrag; // 0x16b8            
-            float m_flMinDrag; // 0x16bc            
-            float m_flMinGravity; // 0x16c0            
-            float m_flMaxGravity; // 0x16c4            
+            float m_flMaxDrag; // 0x1798            
+            float m_flMinDrag; // 0x179c            
+            float m_flMinGravity; // 0x17a0            
+            float m_flMaxGravity; // 0x17a4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item_ProjectileTest05VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Item_ProjectileTest05VData) == 0x16c8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Item_ProjectileTest05VData) == 0x17a8);
     };
 };

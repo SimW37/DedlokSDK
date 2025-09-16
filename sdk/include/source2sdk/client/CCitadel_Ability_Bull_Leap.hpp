@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xfc0
+        // Size: 0xfc8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bBraceParamTriggered"
@@ -57,12 +57,13 @@ namespace source2sdk
             source2sdk::client::CCitadelAutoScaledTime m_flBoostEndTime; // 0xdc8            
             uint8_t _pad0de0[0x1cc]; // 0xde0
             Vector m_vecLastVel; // 0xfac            
-            uint8_t _pad0fb8[0x8];
+            Vector m_vecCrashDownLastPos; // 0xfb8            
+            uint8_t _pad0fc4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Bull_Leap because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bull_Leap) == 0xfc0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bull_Leap) == 0xfc8);
     };
 };

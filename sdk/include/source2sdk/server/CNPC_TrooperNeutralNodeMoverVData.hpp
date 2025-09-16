@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1488
+        // Size: 0x1568
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,19 +28,19 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Node Movement"
-            bool m_bEnableMovementToNodes; // 0x1460            
-            uint8_t _pad1461[0x3]; // 0x1461
-            source2sdk::tier2::CRangeFloat m_flExposedDuration; // 0x1464            
-            source2sdk::tier2::CRangeFloat m_flHideDuration; // 0x146c            
-            uint8_t _pad1474[0x4]; // 0x1474
+            bool m_bEnableMovementToNodes; // 0x1540            
+            uint8_t _pad1541[0x3]; // 0x1541
+            source2sdk::tier2::CRangeFloat m_flExposedDuration; // 0x1544            
+            source2sdk::tier2::CRangeFloat m_flHideDuration; // 0x154c            
+            uint8_t _pad1554[0x4]; // 0x1554
             // m_HidingModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_HidingModifier;
-            char m_HidingModifier[0x10]; // 0x1478            
+            char m_HidingModifier[0x10]; // 0x1558            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_TrooperNeutralNodeMoverVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_TrooperNeutralNodeMoverVData) == 0x1488);
+        static_assert(sizeof(source2sdk::server::CNPC_TrooperNeutralNodeMoverVData) == 0x1568);
     };
 };

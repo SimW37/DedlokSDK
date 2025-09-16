@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1818
+        // Size: 0x18f8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,28 +30,28 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_SwapParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SwapParticle;
-            char m_SwapParticle[0xe0]; // 0x1618            
+            char m_SwapParticle[0xe0]; // 0x16f8            
             // m_SilenceExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SilenceExplodeParticle;
-            char m_SilenceExplodeParticle[0xe0]; // 0x16f8            
+            char m_SilenceExplodeParticle[0xe0]; // 0x17d8            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SwapModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SwapModifier;
-            char m_SwapModifier[0x10]; // 0x17d8            
+            char m_SwapModifier[0x10]; // 0x18b8            
             // m_PreCastModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_PreCastModifier;
-            char m_PreCastModifier[0x10]; // 0x17e8            
+            char m_PreCastModifier[0x10]; // 0x18c8            
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x17f8            
+            char m_BuffModifier[0x10]; // 0x18d8            
             // m_SilenceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SilenceModifier;
-            char m_SilenceModifier[0x10]; // 0x1808            
+            char m_SilenceModifier[0x10]; // 0x18e8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_HealthSwapVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_HealthSwapVData) == 0x1818);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_HealthSwapVData) == 0x18f8);
     };
 };

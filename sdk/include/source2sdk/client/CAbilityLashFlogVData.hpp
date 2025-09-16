@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17f8
+        // Size: 0x18d8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,22 +30,22 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_FlogParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FlogParticle;
-            char m_FlogParticle[0xe0]; // 0x1618            
+            char m_FlogParticle[0xe0]; // 0x16f8            
             // metadata: MPropertyGroupName "Visuals"
             // m_FlogLifeLeachParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FlogLifeLeachParticle;
-            char m_FlogLifeLeachParticle[0xe0]; // 0x16f8            
+            char m_FlogLifeLeachParticle[0xe0]; // 0x17d8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strHitConfirmSound; // 0x17d8            
+            CSoundEventName m_strHitConfirmSound; // 0x18b8            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_FlogDebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_FlogDebuffModifier;
-            char m_FlogDebuffModifier[0x10]; // 0x17e8            
+            char m_FlogDebuffModifier[0x10]; // 0x18c8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityLashFlogVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityLashFlogVData) == 0x17f8);
+        static_assert(sizeof(source2sdk::client::CAbilityLashFlogVData) == 0x18d8);
     };
 };

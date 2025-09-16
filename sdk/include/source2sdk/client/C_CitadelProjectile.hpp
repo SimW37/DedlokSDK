@@ -47,7 +47,8 @@ namespace source2sdk
             uint8_t _pad0a0c[0x4]; // 0xa0c
             std::uint64_t m_nCachedExcludeFlags; // 0xa10            
             bool m_bInPortalEnvironment; // 0xa18            
-            uint8_t _pad0a19[0x3]; // 0xa19
+            bool m_bHandlingPortalResult; // 0xa19            
+            uint8_t _pad0a1a[0x2]; // 0xa1a
             float m_flArmingTime; // 0xa1c            
             float m_flChargeAmount; // 0xa20            
             bool m_bCollideWithThrower; // 0xa24            

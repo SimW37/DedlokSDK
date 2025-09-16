@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16c8
+        // Size: 0x17a8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_OverdriveClipModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_OverdriveClipModifier;
-            char m_OverdriveClipModifier[0x10]; // 0x16a8            
+            char m_OverdriveClipModifier[0x10]; // 0x1788            
             // m_ReloadModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ReloadModifier;
-            char m_ReloadModifier[0x10]; // 0x16b8            
+            char m_ReloadModifier[0x10]; // 0x1798            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Upgrade_OverdriveClip_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Upgrade_OverdriveClip_VData) == 0x16c8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Upgrade_OverdriveClip_VData) == 0x17a8);
     };
 };

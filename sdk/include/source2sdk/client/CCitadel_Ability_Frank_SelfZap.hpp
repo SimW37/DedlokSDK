@@ -17,18 +17,24 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xec8
+        // Size: 0xf20
         // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "float m_flTotalPendingHeal"
         #pragma pack(push, 1)
         class CCitadel_Ability_Frank_SelfZap : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0dc0[0x108];
-            // No schema binary for binding
+            uint8_t _pad0d88[0x10]; // 0xd88
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            float m_flTotalPendingHeal; // 0xd98            
+            uint8_t _pad0d9c[0x184];
         };
         #pragma pack(pop)
         
+        // Cannot assert offsets of fields in CCitadel_Ability_Frank_SelfZap because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Frank_SelfZap) == 0xec8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Frank_SelfZap) == 0xf20);
     };
 };

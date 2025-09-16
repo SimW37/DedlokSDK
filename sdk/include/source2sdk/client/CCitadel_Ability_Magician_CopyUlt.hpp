@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1060
+        // Size: 0xf80
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bHasUsedCopiedUlt"
@@ -59,6 +59,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CCitadel_Ability_Magician_CopyUlt because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Magician_CopyUlt) == 0x1060);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Magician_CopyUlt) == 0xf80);
     };
 };

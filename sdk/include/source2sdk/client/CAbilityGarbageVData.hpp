@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1718
+        // Size: 0x17f8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_GarbageAuraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_GarbageAuraModifier;
-            char m_GarbageAuraModifier[0x10]; // 0x1618            
+            char m_GarbageAuraModifier[0x10]; // 0x16f8            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x1628            
+            char m_ExplodeParticle[0xe0]; // 0x1708            
             // metadata: MPropertyStartGroup "+Vacuum Properties"
-            float m_flAirSpeedMax; // 0x1708            
-            float m_flFallSpeedMax; // 0x170c            
-            float m_flAirDrag; // 0x1710            
-            float m_flMaxMovespeed; // 0x1714            
+            float m_flAirSpeedMax; // 0x17e8            
+            float m_flFallSpeedMax; // 0x17ec            
+            float m_flAirDrag; // 0x17f0            
+            float m_flMaxMovespeed; // 0x17f4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityGarbageVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityGarbageVData) == 0x1718);
+        static_assert(sizeof(source2sdk::client::CAbilityGarbageVData) == 0x17f8);
     };
 };

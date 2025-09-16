@@ -4,7 +4,6 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/client/C_CitadelProjectile.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -18,25 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xca8
+        // Size: 0xe10
         // Has VTable
-        // 
-        // static metadata: MNetworkVarNames "float m_flWidth"
-        // static metadata: MNetworkVarNames "GameTime_t m_tDieTime"
         #pragma pack(push, 1)
         class C_Projectile_KnightCharge_Projectile : public source2sdk::client::C_CitadelProjectile
         {
         public:
-            // metadata: MNetworkEnable
-            float m_flWidth; // 0xaa0            
-            // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_tDieTime; // 0xaa4            
-            uint8_t _pad0aa8[0x200];
+            uint8_t _pad0af8[0x318];
+            // No schema binary for binding
         };
         #pragma pack(pop)
         
-        // Cannot assert offsets of fields in C_Projectile_KnightCharge_Projectile because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_Projectile_KnightCharge_Projectile) == 0xca8);
+        static_assert(sizeof(source2sdk::client::C_Projectile_KnightCharge_Projectile) == 0xe10);
     };
 };

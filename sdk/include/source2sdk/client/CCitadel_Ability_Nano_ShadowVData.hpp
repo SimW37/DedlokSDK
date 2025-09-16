@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1650
+        // Size: 0x1730
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,21 +29,21 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_ShadowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ShadowModifier;
-            char m_ShadowModifier[0x10]; // 0x1618            
+            char m_ShadowModifier[0x10]; // 0x16f8            
             // m_PurgeModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_PurgeModifier;
-            char m_PurgeModifier[0x10]; // 0x1628            
+            char m_PurgeModifier[0x10]; // 0x1708            
             // m_EnemyAura has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_EnemyAura;
-            char m_EnemyAura[0x10]; // 0x1638            
+            char m_EnemyAura[0x10]; // 0x1718            
             // metadata: MPropertyGroupName "GamePlay"
-            float m_flAuraRadius; // 0x1648            
-            uint8_t _pad164c[0x4];
+            float m_flAuraRadius; // 0x1728            
+            uint8_t _pad172c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Nano_ShadowVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Nano_ShadowVData) == 0x1650);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Nano_ShadowVData) == 0x1730);
     };
 };

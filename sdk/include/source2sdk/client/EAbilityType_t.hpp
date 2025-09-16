@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 6
+        // Enumerator count: 7
         // Alignment: 1
         // Size: 0x1
         enum class EAbilityType_t : std::uint8_t
@@ -24,6 +24,7 @@ namespace source2sdk
             EAbilityType_Ultimate = 0x2,
             EAbilityType_Item = 0x3,
             EAbilityType_Innate = 0x4,
+            EAbilityType_Melee = 0x5,
         };
     };
 };

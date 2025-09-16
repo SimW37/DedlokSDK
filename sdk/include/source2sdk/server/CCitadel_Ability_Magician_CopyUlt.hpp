@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe88
+        // Size: 0xda8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bHasUsedCopiedUlt"
@@ -54,12 +54,12 @@ namespace source2sdk
             source2sdk::client::HeroID_t m_nCopiedHeroID; // 0xca0            
             uint8_t _pad0ca4[0x4]; // 0xca4
             source2sdk::client::ModelChange_t m_ModelChange; // 0xca8            
-            uint8_t _pad0e70[0x18];
+            uint8_t _pad0d90[0x18];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Magician_CopyUlt because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_CopyUlt) == 0xe88);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_CopyUlt) == 0xda8);
     };
 };

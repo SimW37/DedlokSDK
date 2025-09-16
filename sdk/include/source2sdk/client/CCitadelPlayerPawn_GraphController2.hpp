@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x320
+        // Size: 0x338
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelPlayerPawn_GraphController2 : public source2sdk::client::CAnimGraphControllerBase
@@ -66,32 +66,35 @@ namespace source2sdk
             // m_InstantCast has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamOptionalRef<bool> m_InstantCast;
             char m_InstantCast[0x18]; // 0x1f8            
+            // m_AltCast has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CAnimGraph2ParamOptionalRef<bool> m_AltCast;
+            char m_AltCast[0x18]; // 0x210            
             // m_BaseAction has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<CGlobalSymbol> m_BaseAction;
-            char m_BaseAction[0x20]; // 0x210            
+            char m_BaseAction[0x20]; // 0x228            
             // m_BaseState has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<CGlobalSymbol> m_BaseState;
-            char m_BaseState[0x20]; // 0x230            
+            char m_BaseState[0x20]; // 0x248            
             // m_FlinchType has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<CGlobalSymbol> m_FlinchType;
-            char m_FlinchType[0x20]; // 0x250            
+            char m_FlinchType[0x20]; // 0x268            
             // m_CrouchFraction has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<float> m_CrouchFraction;
-            char m_CrouchFraction[0x18]; // 0x270            
+            char m_CrouchFraction[0x18]; // 0x288            
             // m_MoveType has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamRef<CGlobalSymbol> m_MoveType;
-            char m_MoveType[0x20]; // 0x288            
+            char m_MoveType[0x20]; // 0x2a0            
             // m_CornerLean has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_CornerLean;
-            char m_CornerLean[0x20]; // 0x2a8            
-            uint8_t _pad02c8[0x28]; // 0x2c8
-            bool m_bInGraphParamUpdateFlow; // 0x2f0            
-            uint8_t _pad02f1[0x2f];
+            char m_CornerLean[0x20]; // 0x2c0            
+            uint8_t _pad02e0[0x28]; // 0x2e0
+            bool m_bInGraphParamUpdateFlow; // 0x308            
+            uint8_t _pad0309[0x2f];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelPlayerPawn_GraphController2 because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelPlayerPawn_GraphController2) == 0x320);
+        static_assert(sizeof(source2sdk::client::CCitadelPlayerPawn_GraphController2) == 0x338);
     };
 };

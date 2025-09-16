@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf90
+        // Size: 0x1090
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Fortuna_PrimaryWeapon : public source2sdk::client::CCitadel_Ability_PrimaryWeapon
         {
         public:
-            uint8_t _pad0e90[0x100];
+            uint8_t _pad0f90[0x100];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Fortuna_PrimaryWeapon) == 0xf90);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Fortuna_PrimaryWeapon) == 0x1090);
     };
 };

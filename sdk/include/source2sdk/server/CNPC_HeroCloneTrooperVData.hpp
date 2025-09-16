@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1108
+        // Size: 0x11e8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -25,17 +25,17 @@ namespace source2sdk
         class CNPC_HeroCloneTrooperVData : public source2sdk::server::CAI_CitadelNPCVData
         {
         public:
-            bool m_bMeleeOnly; // 0x10f8            
-            bool m_bChargeForward; // 0x10f9            
-            uint8_t _pad10fa[0x2]; // 0x10fa
-            float m_flMeleeChargeRange; // 0x10fc            
-            bool m_bCloneOwnerWeapon; // 0x1100            
-            uint8_t _pad1101[0x7];
+            bool m_bMeleeOnly; // 0x11d8            
+            bool m_bChargeForward; // 0x11d9            
+            uint8_t _pad11da[0x2]; // 0x11da
+            float m_flMeleeChargeRange; // 0x11dc            
+            bool m_bCloneOwnerWeapon; // 0x11e0            
+            uint8_t _pad11e1[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_HeroCloneTrooperVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_HeroCloneTrooperVData) == 0x1108);
+        static_assert(sizeof(source2sdk::server::CNPC_HeroCloneTrooperVData) == 0x11e8);
     };
 };

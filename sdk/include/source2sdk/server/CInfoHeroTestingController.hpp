@@ -17,13 +17,13 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x5b8
+        // Size: 0x5d0
         // Has VTable
         #pragma pack(push, 1)
         class CInfoHeroTestingController : public source2sdk::server::CPointEntity
         {
         public:
-            uint8_t _pad04f0[0xc8];
+            uint8_t _pad04f0[0xe0];
             // Datamap fields:
             // void InputStartLaneTest; // 0x0
             // void InputEndLaneTest; // 0x0
@@ -32,6 +32,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CInfoHeroTestingController) == 0x5b8);
+        static_assert(sizeof(source2sdk::server::CInfoHeroTestingController) == 0x5d0);
     };
 };

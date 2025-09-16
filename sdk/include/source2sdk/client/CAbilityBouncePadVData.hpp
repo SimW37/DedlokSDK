@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1658
+        // Size: 0x1738
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,21 +29,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_BounceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BounceModifier;
-            char m_BounceModifier[0x10]; // 0x1618            
+            char m_BounceModifier[0x10]; // 0x16f8            
             // m_AllyBounceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_AllyBounceModifier;
-            char m_AllyBounceModifier[0x10]; // 0x1628            
+            char m_AllyBounceModifier[0x10]; // 0x1708            
             // m_SpeedOnLandModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SpeedOnLandModifier;
-            char m_SpeedOnLandModifier[0x10]; // 0x1638            
+            char m_SpeedOnLandModifier[0x10]; // 0x1718            
             // m_NoBounceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_NoBounceModifier;
-            char m_NoBounceModifier[0x10]; // 0x1648            
+            char m_NoBounceModifier[0x10]; // 0x1728            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityBouncePadVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityBouncePadVData) == 0x1658);
+        static_assert(sizeof(source2sdk::client::CAbilityBouncePadVData) == 0x1738);
     };
 };

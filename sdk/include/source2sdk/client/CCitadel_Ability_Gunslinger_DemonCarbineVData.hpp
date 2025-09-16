@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16c8
+        // Size: 0x17a8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,22 +27,22 @@ namespace source2sdk
         class CCitadel_Ability_Gunslinger_DemonCarbineVData : public source2sdk::client::CitadelAbilityVData
         {
         public:
-            float m_flShotTimeScaleLingerDuration; // 0x1618            
-            uint8_t _pad161c[0x4]; // 0x161c
+            float m_flShotTimeScaleLingerDuration; // 0x16f8            
+            uint8_t _pad16fc[0x4]; // 0x16fc
             // metadata: MPropertyStartGroup "Modifiers"
             // m_ChargingModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ChargingModifier;
-            char m_ChargingModifier[0x10]; // 0x1620            
+            char m_ChargingModifier[0x10]; // 0x1700            
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x1630            
+            char m_DebuffModifier[0x10]; // 0x1710            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraDemonCarbineShotFired; // 0x1640            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraDemonCarbineShotFired; // 0x1720            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Gunslinger_DemonCarbineVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Gunslinger_DemonCarbineVData) == 0x16c8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Gunslinger_DemonCarbineVData) == 0x17a8);
     };
 };

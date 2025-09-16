@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1b00
+        // Size: 0x1b08
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iLane"
@@ -54,7 +54,7 @@ namespace source2sdk
             uint8_t _pad1ad8[0x4]; // 0x1ad8
             // metadata: MNetworkEnable
             source2sdk::client::ETier3Phase_t m_ePhase; // 0x1adc            
-            uint8_t _pad1ae0[0x20];
+            uint8_t _pad1ae0[0x28];
             
             // Datamap fields:
             // void m_vecStartingPosition; // 0x1a18
@@ -65,6 +65,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CNPC_Boss_Tier3 because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_Boss_Tier3) == 0x1b00);
+        static_assert(sizeof(source2sdk::server::CNPC_Boss_Tier3) == 0x1b08);
     };
 };

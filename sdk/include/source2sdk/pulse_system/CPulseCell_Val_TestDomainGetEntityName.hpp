@@ -23,7 +23,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "TestDomain"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "ð Óþ"
+        // static metadata: MPulseCellOutflowHookInfo "ð ã!ø"
         // static metadata: MPropertyFriendlyName "Get Fake Entity Name"
         #pragma pack(push, 1)
         class CPulseCell_Val_TestDomainGetEntityName : public source2sdk::pulse_runtime_lib::CPulseCell_BaseValue

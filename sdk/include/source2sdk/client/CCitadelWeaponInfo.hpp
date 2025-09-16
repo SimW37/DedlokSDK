@@ -22,7 +22,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0x678
+        // Size: 0x758
         // 
         // static metadata: MGetKV3ClassDefaults
         #pragma pack(push, 1)
@@ -56,14 +56,13 @@ namespace source2sdk
             std::int32_t m_iClipSize; // 0x28            
             // metadata: MPropertyDescription "The time between shots. In burst it's the time between starting a new burst."
             float m_flCycleTime; // 0x2c            
+            // metadata: MPropertyDescription "A delay after triggering a shot when the bullets comes out."
+            float m_flBulletCreationDelay; // 0x30            
             // metadata: MPropertyDescription "How many shots to fire per burst"
-            std::int32_t m_iBurstShotCount; // 0x30            
+            std::int32_t m_iBurstShotCount; // 0x34            
             // metadata: MPropertyDescription "The time between shoots within a burst"
             // metadata: MPropertySuppressExpr "m_iBurstShotCount == 1"
-            float m_flIntraBurstCycleTime; // 0x34            
-            // metadata: MPropertyDescription "Does this gun fire backwards?"
-            bool m_bFiresBackwards; // 0x38            
-            uint8_t _pad0039[0x3]; // 0x39
+            float m_flIntraBurstCycleTime; // 0x38            
             // metadata: MPropertyDescription "How much ammo to consume to shoot this gun."
             std::int32_t m_iAmmoConsumedPerShot; // 0x3c            
             // metadata: MPropertyDescription "The maximum distance bullets will travel"
@@ -225,46 +224,49 @@ namespace source2sdk
             // m_szSelfBulletTravelTracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szSelfBulletTravelTracerParticle;
             char m_szSelfBulletTravelTracerParticle[0xe0]; // 0x288            
-            bool m_bUseDesatForFriendlyNonHeroTracer; // 0x368            
-            uint8_t _pad0369[0x3]; // 0x369
+            // m_szBulletLinkParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szBulletLinkParticle;
+            char m_szBulletLinkParticle[0xe0]; // 0x368            
+            bool m_bUseDesatForFriendlyNonHeroTracer; // 0x448            
+            uint8_t _pad0449[0x3]; // 0x449
             // metadata: MPropertyDescription "What attachments to use when shooting this weapon.  By default we use the gun muzzles of the model.  Change to 'Custom' to allow specifying a custom attachment."
-            source2sdk::client::EAttachmentSourceType m_eAttachmentSourceType; // 0x36c            
+            source2sdk::client::EAttachmentSourceType m_eAttachmentSourceType; // 0x44c            
             // metadata: MPropertySuppressExpr "m_eAttachmentSourceType != EAttachmentSource_Custom"
-            CUtlString m_strCustomAttachmentSource; // 0x370            
+            CUtlString m_strCustomAttachmentSource; // 0x450            
             // m_szMuzzleFlashEffectName has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_szMuzzleFlashEffectName;
-            char m_szMuzzleFlashEffectName[0xe0]; // 0x378            
+            char m_szMuzzleFlashEffectName[0xe0]; // 0x458            
             // metadata: MPropertyDescription "Bullet impact effect.  CP0=position & surface normal, CP1=position & reflect dir, CP2=position & bullet dir, CP3=damage CP4=normal CP5=explosion radius"
             // m_strWeaponImpactEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strWeaponImpactEffect;
-            char m_strWeaponImpactEffect[0xe0]; // 0x458            
+            char m_strWeaponImpactEffect[0xe0]; // 0x538            
             // metadata: MPropertyFriendlyName "Surface Impact Effects"
             // metadata: MPropertyDescription "Per surface impact effects.  CP0=position & surface normal, CP1=position & reflect dir, CP2=position & bullet dir, CP3=damage CP4=normal CP5=explosion radius"
             // m_mapImpactEffects has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<CUtlStringToken,source2sdk::client::PerSurfaceImpactEffects_t> m_mapImpactEffects;
-            char m_mapImpactEffects[0x28]; // 0x538            
+            char m_mapImpactEffects[0x28]; // 0x618            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strShootSound; // 0x560            
-            CSoundEventName m_strFirstShotSound; // 0x570            
-            CSoundEventName m_strShotReleaseSound; // 0x580            
-            CSoundEventName m_strBulletLoopingSound; // 0x590            
-            CSoundEventName m_strBulletWhizSound; // 0x5a0            
-            CSoundEventName m_strBulletImpactSound; // 0x5b0            
-            float m_flBulletWhizDistance; // 0x5c0            
-            uint8_t _pad05c4[0x4]; // 0x5c4
-            CSoundEventName m_strReloadSound; // 0x5c8            
-            CSoundEventName m_strReloadEndSound; // 0x5d8            
-            CSoundEventName m_strLocalPlayerBulletImpactSound; // 0x5e8            
-            CSoundEventName m_strLocalPlayerBulletImpactHeavySound; // 0x5f8            
-            CSoundEventName m_strZoomInSound; // 0x608            
-            CSoundEventName m_strZoomOutSound; // 0x618            
-            CSoundEventName m_strSpinUpSound; // 0x628            
-            CSoundEventName m_strSpinDownSound; // 0x638            
-            CSoundEventName m_strSpinUpLoopSound; // 0x648            
-            uint8_t _pad0658[0x1c]; // 0x658
+            CSoundEventName m_strShootSound; // 0x640            
+            CSoundEventName m_strFirstShotSound; // 0x650            
+            CSoundEventName m_strShotReleaseSound; // 0x660            
+            CSoundEventName m_strBulletLoopingSound; // 0x670            
+            CSoundEventName m_strBulletWhizSound; // 0x680            
+            CSoundEventName m_strBulletImpactSound; // 0x690            
+            float m_flBulletWhizDistance; // 0x6a0            
+            uint8_t _pad06a4[0x4]; // 0x6a4
+            CSoundEventName m_strReloadSound; // 0x6a8            
+            CSoundEventName m_strReloadEndSound; // 0x6b8            
+            CSoundEventName m_strLocalPlayerBulletImpactSound; // 0x6c8            
+            CSoundEventName m_strLocalPlayerBulletImpactHeavySound; // 0x6d8            
+            CSoundEventName m_strZoomInSound; // 0x6e8            
+            CSoundEventName m_strZoomOutSound; // 0x6f8            
+            CSoundEventName m_strSpinUpSound; // 0x708            
+            CSoundEventName m_strSpinDownSound; // 0x718            
+            CSoundEventName m_strSpinUpLoopSound; // 0x728            
+            uint8_t _pad0738[0x1c]; // 0x738
             // metadata: MPropertyStartGroup "Networking"
             // metadata: MPropertyDescription "Max Lag Compensation. Reduces favor-the-shooter is lower than sv_maxunlag"
-            float m_flMaxLagCompensation; // 0x674            
+            float m_flMaxLagCompensation; // 0x754            
         };
         #pragma pack(pop)
         
@@ -278,9 +280,9 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_bAllowExplosionToCollectGold) == 0x24);
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_iClipSize) == 0x28);
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flCycleTime) == 0x2c);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_iBurstShotCount) == 0x30);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flIntraBurstCycleTime) == 0x34);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_bFiresBackwards) == 0x38);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flBulletCreationDelay) == 0x30);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_iBurstShotCount) == 0x34);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flIntraBurstCycleTime) == 0x38);
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_iAmmoConsumedPerShot) == 0x3c);
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flRange) == 0x40);
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flRangeWhileZoomed) == 0x44);
@@ -350,30 +352,31 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_nRecoilSeed) == 0x1a0);
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_szBulletTravelTracerParticle) == 0x1a8);
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_szSelfBulletTravelTracerParticle) == 0x288);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_bUseDesatForFriendlyNonHeroTracer) == 0x368);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_eAttachmentSourceType) == 0x36c);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strCustomAttachmentSource) == 0x370);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_szMuzzleFlashEffectName) == 0x378);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strWeaponImpactEffect) == 0x458);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_mapImpactEffects) == 0x538);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strShootSound) == 0x560);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strFirstShotSound) == 0x570);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strShotReleaseSound) == 0x580);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strBulletLoopingSound) == 0x590);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strBulletWhizSound) == 0x5a0);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strBulletImpactSound) == 0x5b0);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flBulletWhizDistance) == 0x5c0);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strReloadSound) == 0x5c8);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strReloadEndSound) == 0x5d8);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strLocalPlayerBulletImpactSound) == 0x5e8);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strLocalPlayerBulletImpactHeavySound) == 0x5f8);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strZoomInSound) == 0x608);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strZoomOutSound) == 0x618);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strSpinUpSound) == 0x628);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strSpinDownSound) == 0x638);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strSpinUpLoopSound) == 0x648);
-        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flMaxLagCompensation) == 0x674);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_szBulletLinkParticle) == 0x368);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_bUseDesatForFriendlyNonHeroTracer) == 0x448);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_eAttachmentSourceType) == 0x44c);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strCustomAttachmentSource) == 0x450);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_szMuzzleFlashEffectName) == 0x458);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strWeaponImpactEffect) == 0x538);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_mapImpactEffects) == 0x618);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strShootSound) == 0x640);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strFirstShotSound) == 0x650);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strShotReleaseSound) == 0x660);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strBulletLoopingSound) == 0x670);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strBulletWhizSound) == 0x680);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strBulletImpactSound) == 0x690);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flBulletWhizDistance) == 0x6a0);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strReloadSound) == 0x6a8);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strReloadEndSound) == 0x6b8);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strLocalPlayerBulletImpactSound) == 0x6c8);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strLocalPlayerBulletImpactHeavySound) == 0x6d8);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strZoomInSound) == 0x6e8);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strZoomOutSound) == 0x6f8);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strSpinUpSound) == 0x708);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strSpinDownSound) == 0x718);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_strSpinUpLoopSound) == 0x728);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flMaxLagCompensation) == 0x754);
         
-        static_assert(sizeof(source2sdk::client::CCitadelWeaponInfo) == 0x678);
+        static_assert(sizeof(source2sdk::client::CCitadelWeaponInfo) == 0x758);
     };
 };

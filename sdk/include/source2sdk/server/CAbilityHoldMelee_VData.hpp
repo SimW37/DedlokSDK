@@ -23,7 +23,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1ac8
+        // Size: 0x1ba8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -33,46 +33,46 @@ namespace source2sdk
         public:
             // m_mapAttacks has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlOrderedMap<source2sdk::client::EMeleeHold_AttackType,source2sdk::client::AttackData_t> m_mapAttacks;
-            char m_mapAttacks[0x28]; // 0x1648            
-            float m_flLightMeleeAnimChainTime; // 0x1670            
-            float m_flNextAttackOnParry; // 0x1674            
-            float m_flParryWindow; // 0x1678            
-            float m_flParryStunTime; // 0x167c            
-            float m_flParryResistedStunTime; // 0x1680            
-            float m_flParryCooldown; // 0x1684            
-            float m_flMinDashTime; // 0x1688            
-            bool m_bUseCasterFacing; // 0x168c            
-            uint8_t _pad168d[0x3]; // 0x168d
-            source2sdk::client::CRemapFloat m_AirMeleeUpScale; // 0x1690            
-            CPiecewiseCurve m_HeavyTurnSpeedCurve; // 0x16a0            
-            float m_flCameraMaxTurnRate; // 0x16e0            
-            float m_flHeavyMeleeMaxTurnRate; // 0x16e4            
+            char m_mapAttacks[0x28]; // 0x1728            
+            float m_flLightMeleeAnimChainTime; // 0x1750            
+            float m_flNextAttackOnParry; // 0x1754            
+            float m_flParryWindow; // 0x1758            
+            float m_flParryStunTime; // 0x175c            
+            float m_flParryResistedStunTime; // 0x1760            
+            float m_flParryCooldown; // 0x1764            
+            float m_flMinDashTime; // 0x1768            
+            bool m_bUseCasterFacing; // 0x176c            
+            uint8_t _pad176d[0x3]; // 0x176d
+            source2sdk::client::CRemapFloat m_AirMeleeUpScale; // 0x1770            
+            CPiecewiseCurve m_HeavyTurnSpeedCurve; // 0x1780            
+            float m_flCameraMaxTurnRate; // 0x17c0            
+            float m_flHeavyMeleeMaxTurnRate; // 0x17c4            
             // metadata: MPropertyStartGroup "Visuals"
             // m_HoldBeginEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HoldBeginEffect;
-            char m_HoldBeginEffect[0xe0]; // 0x16e8            
+            char m_HoldBeginEffect[0xe0]; // 0x17c8            
             // m_SuccessfulParryParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessfulParryParticle;
-            char m_SuccessfulParryParticle[0xe0]; // 0x17c8            
+            char m_SuccessfulParryParticle[0xe0]; // 0x18a8            
             // m_ParryActivateParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ParryActivateParticle;
-            char m_ParryActivateParticle[0xe0]; // 0x18a8            
+            char m_ParryActivateParticle[0xe0]; // 0x1988            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceHoldStart; // 0x1988            
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceHitImpact; // 0x1a10            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceHoldStart; // 0x1a68            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceHitImpact; // 0x1af0            
             // metadata: MPropertyStartGroup "Sounds"
             // metadata: MPropertyDescription "Sound to play when starting the hold"
-            CSoundEventName m_strHoldBegin; // 0x1a98            
-            CSoundEventName m_strSuccessfulParrySound; // 0x1aa8            
+            CSoundEventName m_strHoldBegin; // 0x1b78            
+            CSoundEventName m_strSuccessfulParrySound; // 0x1b88            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_ParryVictimModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ParryVictimModifier;
-            char m_ParryVictimModifier[0x10]; // 0x1ab8            
+            char m_ParryVictimModifier[0x10]; // 0x1b98            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityHoldMelee_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityHoldMelee_VData) == 0x1ac8);
+        static_assert(sizeof(source2sdk::server::CAbilityHoldMelee_VData) == 0x1ba8);
     };
 };

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1750
+        // Size: 0x1ae8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bAirCast"
@@ -34,12 +34,12 @@ namespace source2sdk
             uint8_t _pad118a[0x6]; // 0x118a
             // metadata: MNetworkEnable
             source2sdk::client::CCitadelAbilityBeam_t m_beam; // 0x1190            
-            uint8_t _pad1748[0x8];
+            uint8_t _pad1ae0[0x8];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Bebop_LaserBeam because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bebop_LaserBeam) == 0x1750);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bebop_LaserBeam) == 0x1ae8);
     };
 };

@@ -23,7 +23,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "BaseDomain"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "m^ëþ"
+        // static metadata: MPulseCellOutflowHookInfo "°idø"
         // static metadata: MPulseCellWithCustomDocNode
         #pragma pack(push, 1)
         class CPulseCell_Inflow_EventHandler : public source2sdk::pulse_runtime_lib::CPulseCell_Inflow_BaseEntrypoint

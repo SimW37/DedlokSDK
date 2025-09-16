@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1718
+        // Size: 0x17f8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x1618            
+            char m_DebuffModifier[0x10]; // 0x16f8            
             // metadata: MPropertyStartGroup "Visuals"
             // m_PulseParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PulseParticle;
-            char m_PulseParticle[0xe0]; // 0x1628            
+            char m_PulseParticle[0xe0]; // 0x1708            
             // metadata: MPropertyStartGroup "+Psychic Pulse Properties"
-            float m_flCastEffectLifetime; // 0x1708            
-            float m_flConeAngle; // 0x170c            
-            float m_flConeHalfWidth; // 0x1710            
-            uint8_t _pad1714[0x4];
+            float m_flCastEffectLifetime; // 0x17e8            
+            float m_flConeAngle; // 0x17ec            
+            float m_flConeHalfWidth; // 0x17f0            
+            uint8_t _pad17f4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityPsychicPulseVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityPsychicPulseVData) == 0x1718);
+        static_assert(sizeof(source2sdk::client::CAbilityPsychicPulseVData) == 0x17f8);
     };
 };

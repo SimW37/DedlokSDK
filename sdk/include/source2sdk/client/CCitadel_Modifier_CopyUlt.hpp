@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x290
+        // Size: 0x1b0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_CopyUlt : public source2sdk::client::CCitadelModifier
@@ -32,6 +32,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CCitadel_Modifier_CopyUlt because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_CopyUlt) == 0x290);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_CopyUlt) == 0x1b0);
     };
 };

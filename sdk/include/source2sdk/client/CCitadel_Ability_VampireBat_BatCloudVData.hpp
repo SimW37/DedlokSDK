@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18a0
+        // Size: 0x1980
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,31 +31,31 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SelfModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SelfModifier;
-            char m_SelfModifier[0x10]; // 0x1618            
+            char m_SelfModifier[0x10]; // 0x16f8            
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x1628            
+            char m_DebuffModifier[0x10]; // 0x1708            
             // metadata: MPropertyStartGroup "Visuals"
             // m_AuraParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AuraParticle;
-            char m_AuraParticle[0xe0]; // 0x1638            
+            char m_AuraParticle[0xe0]; // 0x1718            
             // m_BatHitParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BatHitParticle;
-            char m_BatHitParticle[0xe0]; // 0x1718            
+            char m_BatHitParticle[0xe0]; // 0x17f8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strFireBatSound; // 0x17f8            
+            CSoundEventName m_strFireBatSound; // 0x18d8            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceBatCloud; // 0x1808            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceBatCloud; // 0x18e8            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flCameraForwardForce; // 0x1890            
-            float m_flInputForce; // 0x1894            
-            float m_flDampingConstant; // 0x1898            
-            uint8_t _pad189c[0x4];
+            float m_flCameraForwardForce; // 0x1970            
+            float m_flInputForce; // 0x1974            
+            float m_flDampingConstant; // 0x1978            
+            uint8_t _pad197c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_VampireBat_BatCloudVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_VampireBat_BatCloudVData) == 0x18a0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_VampireBat_BatCloudVData) == 0x1980);
     };
 };
