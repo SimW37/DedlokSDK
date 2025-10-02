@@ -23,7 +23,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "TestDomain"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "ð›ã!ø"
+        // static metadata: MPulseCellOutflowHookInfo "ð›Æ~ü"
         // static metadata: MPropertyFriendlyName "Fake Ent-Fire"
         // static metadata: MPulseEditorHeaderText
         #pragma pack(push, 1)

@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 225
+        // Enumerator count: 226
         // Alignment: 4
         // Size: 0x4
         enum class EModifierValue : std::uint32_t
@@ -309,60 +309,61 @@ namespace source2sdk
             // MPropertyFriendlyName "NonPlayerBonusWeaponPower"
             MODIFIER_NON_PLAYER_BONUS_BASE_DAMAGE_PERCENT = 0xb5,
             MODIFIER_VALUE_AIR_DRAG = 0xb6,
-            MODIFIER_VALUE_TECH_DAMAGE_TAKEN_HEALS_ATTACKER = 0xb7,
-            MODIFIER_VALUE_BULLET_DAMAGE_TAKEN_HEALS_ATTACKER = 0xb8,
+            MODIFIER_VALUE_FALLING_DRAG = 0xb7,
+            MODIFIER_VALUE_TECH_DAMAGE_TAKEN_HEALS_ATTACKER = 0xb8,
+            MODIFIER_VALUE_BULLET_DAMAGE_TAKEN_HEALS_ATTACKER = 0xb9,
             // MPropertyFriendlyName "AbilityLifestealPercentHero"
-            MODIFIER_VALUE_TECH_LIFESTEAL = 0xb9,
+            MODIFIER_VALUE_TECH_LIFESTEAL = 0xba,
             // MPropertyFriendlyName "BulletLifestealPercent"
-            MODIFIER_VALUE_BULLET_LIFESTEAL = 0xba,
-            MODIFIER_VALUE_OVERRIDE_BULLET_ATTACKER = 0xbb,
-            MODIFIER_VALUE_OVERRIDE_MELEE_HIT_SOUND = 0xbc,
-            MODIFIER_VALUE_OVERRIDE_MELEE_MISS_SOUND = 0xbd,
+            MODIFIER_VALUE_BULLET_LIFESTEAL = 0xbb,
+            MODIFIER_VALUE_OVERRIDE_BULLET_ATTACKER = 0xbc,
+            MODIFIER_VALUE_OVERRIDE_MELEE_HIT_SOUND = 0xbd,
+            MODIFIER_VALUE_OVERRIDE_MELEE_MISS_SOUND = 0xbe,
             // MPropertyFriendlyName "ImbuedBonusDamage"
-            MODIFIER_VALUE_IMBUED_BONUS_DAMAGE = 0xbe,
+            MODIFIER_VALUE_IMBUED_BONUS_DAMAGE = 0xbf,
             // MPropertyFriendlyName "ImbuedBonusDuration"
-            MODIFIER_VALUE_IMBUED_BONUS_DURATION = 0xbf,
+            MODIFIER_VALUE_IMBUED_BONUS_DURATION = 0xc0,
             // MPropertyFriendlyName "IntraBurstShotCycleTimeOverride"
-            MODIFIER_VALUE_INTRA_BURST_SHOT_CYCLE_TIME_OVERRIDE = 0xc0,
+            MODIFIER_VALUE_INTRA_BURST_SHOT_CYCLE_TIME_OVERRIDE = 0xc1,
             // MPropertyFriendlyName "BonusBurstShotPercent"
-            MODIFIER_VALUE_BONUS_BURST_SHOT_PERCENT = 0xc1,
+            MODIFIER_VALUE_BONUS_BURST_SHOT_PERCENT = 0xc2,
             // MPropertyFriendlyName "BonusBurstShotConstant"
-            MODIFIER_VALUE_BONUS_BURST_SHOT_CONSTANT = 0xc2,
+            MODIFIER_VALUE_BONUS_BURST_SHOT_CONSTANT = 0xc3,
             // MPropertyFriendlyName "SpinUpRateOverride"
-            MODIFIER_VALUE_SPIN_UP_RATE_OVERRIDE = 0xc3,
+            MODIFIER_VALUE_SPIN_UP_RATE_OVERRIDE = 0xc4,
             // MPropertyFriendlyName "SpinUpDecayOverride"
-            MODIFIER_VALUE_SPIN_UP_DECAY_OVERRIDE = 0xc4,
+            MODIFIER_VALUE_SPIN_UP_DECAY_OVERRIDE = 0xc5,
             // MPropertyFriendlyName "SpinUpMaxCycleTimeOverride"
-            MODIFIER_VALUE_SPIN_UP_MAX_CYCLE_TIME_OVERRIDE = 0xc5,
+            MODIFIER_VALUE_SPIN_UP_MAX_CYCLE_TIME_OVERRIDE = 0xc6,
             // MPropertyFriendlyName "SpinUpMaxBurstFireCooldownOverride"
-            MODIFIER_VALUE_SPIN_UP_MAX_BURST_FIRE_COOLDOWN_OVERRIDE = 0xc6,
-            MODIFIER_VALUE_SPIN_UP_SOUND_OVERRIDE = 0xc7,
-            MODIFIER_VALUE_SPIN_DOWN_SOUND_OVERRIDE = 0xc8,
-            MODIFIER_VALUE_SPIN_LOOP_SOUND_OVERRIDE = 0xc9,
+            MODIFIER_VALUE_SPIN_UP_MAX_BURST_FIRE_COOLDOWN_OVERRIDE = 0xc7,
+            MODIFIER_VALUE_SPIN_UP_SOUND_OVERRIDE = 0xc8,
+            MODIFIER_VALUE_SPIN_DOWN_SOUND_OVERRIDE = 0xc9,
+            MODIFIER_VALUE_SPIN_LOOP_SOUND_OVERRIDE = 0xca,
             // MPropertyFriendlyName "BonusChannelTimePercentage"
-            MODIFIER_VALUE_BONUS_CHANNEL_TIME_PERCENTAGE = 0xca,
-            MODIFIER_VALUE_ABILITY_RESOURCE_MAX_ADDITIVE = 0xcb,
-            MODIFIER_VALUE_ABILITY_RESOURCE_REGEN_PER_SECOND_ADDITIVE = 0xcc,
-            MODIFIER_VALUE_ABILITY_RESOURCE_REGEN_PER_SECOND_PERCENTAGE = 0xcd,
-            MODIFIER_VALUE_PENDING_INCOMING_DAMAGE = 0xce,
-            MODIFIER_VALUE_PENDING_INCOMING_HEAL = 0xcf,
-            MODIFIER_VALUE_CAMERA_WOBBLE_INTENSITY = 0xd0,
-            MODIFIER_VALUE_CAMERA_WOBBLE_SPEED = 0xd1,
-            MODIFIER_VALUE_RESPAWN_TIME_ADDITIVE = 0xd2,
-            MODIFIER_VALUE_RESPAWN_RAMP_TIME_REDUCTION_PERCENT = 0xd3,
-            MODIFIER_VALUE_BOON_COUNT = 0xd4,
-            MODIFIER_VALUE_FOOTSTEP_ADDITIONAL = 0xd5,
-            MODIFIER_VALUE_FOOTSTEP_OVERRIDE = 0xd6,
-            MODIFIER_VALUE_MODEL_SCALE = 0xd7,
-            MODIFIER_VALUE_MODEL_CHANGE = 0xd8,
-            MODIFIER_VALUE_HERO_BULLET_LIFESTEAL_EFFECTIVENESS = 0xd9,
-            MODIFIER_VALUE_HERO_SPIRIT_LIFESTEAL_EFFECTIVENESS = 0xda,
-            MODIFIER_VALUE_PARRY_FX_OVERRIDE = 0xdb,
-            MODIFIER_VALUE_CAMERA_ENTITY_OVERRIDE = 0xdc,
-            MODIFIER_VALUE_VISION_RADIUS = 0xdd,
-            MODIFIER_VALUE_MINIMAP_POSITION_OVERRIDE = 0xde,
+            MODIFIER_VALUE_BONUS_CHANNEL_TIME_PERCENTAGE = 0xcb,
+            MODIFIER_VALUE_ABILITY_RESOURCE_MAX_ADDITIVE = 0xcc,
+            MODIFIER_VALUE_ABILITY_RESOURCE_REGEN_PER_SECOND_ADDITIVE = 0xcd,
+            MODIFIER_VALUE_ABILITY_RESOURCE_REGEN_PER_SECOND_PERCENTAGE = 0xce,
+            MODIFIER_VALUE_PENDING_INCOMING_DAMAGE = 0xcf,
+            MODIFIER_VALUE_PENDING_INCOMING_HEAL = 0xd0,
+            MODIFIER_VALUE_CAMERA_WOBBLE_INTENSITY = 0xd1,
+            MODIFIER_VALUE_CAMERA_WOBBLE_SPEED = 0xd2,
+            MODIFIER_VALUE_RESPAWN_TIME_ADDITIVE = 0xd3,
+            MODIFIER_VALUE_RESPAWN_RAMP_TIME_REDUCTION_PERCENT = 0xd4,
+            MODIFIER_VALUE_BOON_COUNT = 0xd5,
+            MODIFIER_VALUE_FOOTSTEP_ADDITIONAL = 0xd6,
+            MODIFIER_VALUE_FOOTSTEP_OVERRIDE = 0xd7,
+            MODIFIER_VALUE_MODEL_SCALE = 0xd8,
+            MODIFIER_VALUE_MODEL_CHANGE = 0xd9,
+            MODIFIER_VALUE_HERO_BULLET_LIFESTEAL_EFFECTIVENESS = 0xda,
+            MODIFIER_VALUE_HERO_SPIRIT_LIFESTEAL_EFFECTIVENESS = 0xdb,
+            MODIFIER_VALUE_PARRY_FX_OVERRIDE = 0xdc,
+            MODIFIER_VALUE_CAMERA_ENTITY_OVERRIDE = 0xdd,
+            MODIFIER_VALUE_VISION_RADIUS = 0xde,
+            MODIFIER_VALUE_MINIMAP_POSITION_OVERRIDE = 0xdf,
             // MPropertySuppressEnumerator
-            MODIFIER_VALUE_COUNT = 0xdf,
+            MODIFIER_VALUE_COUNT = 0xe0,
             // MPropertySuppressEnumerator
             MODIFIER_VALUE_INVALID = 0xff,
         };

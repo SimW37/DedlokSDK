@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x338
+        // Size: 0x358
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelPlayerPawn_GraphController2 : public source2sdk::client::CAnimGraphControllerBase
@@ -87,14 +87,17 @@ namespace source2sdk
             // m_CornerLean has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_CornerLean;
             char m_CornerLean[0x20]; // 0x2c0            
-            uint8_t _pad02e0[0x28]; // 0x2e0
-            bool m_bInGraphParamUpdateFlow; // 0x308            
-            uint8_t _pad0309[0x2f];
+            // m_Environment has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CAnimGraph2ParamOptionalRef<CGlobalSymbol> m_Environment;
+            char m_Environment[0x20]; // 0x2e0            
+            uint8_t _pad0300[0x28]; // 0x300
+            bool m_bInGraphParamUpdateFlow; // 0x328            
+            uint8_t _pad0329[0x2f];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelPlayerPawn_GraphController2 because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelPlayerPawn_GraphController2) == 0x338);
+        static_assert(sizeof(source2sdk::client::CCitadelPlayerPawn_GraphController2) == 0x358);
     };
 };

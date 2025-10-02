@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xbd8
+        // Size: 0xc20
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Bookworm_AOEMagic : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x40];
+            uint8_t _pad0b98[0x88];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bookworm_AOEMagic) == 0xbd8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bookworm_AOEMagic) == 0xc20);
     };
 };

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1ad8
+        // Size: 0x1c68
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -40,29 +40,24 @@ namespace source2sdk
             // m_nHitParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_nHitParticle;
             char m_nHitParticle[0xe0]; // 0x1998            
+            // m_ElectricBulletImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ElectricBulletImpactParticle;
+            char m_ElectricBulletImpactParticle[0xe0]; // 0x1a78            
+            // m_ElectricBulletTracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ElectricBulletTracerParticle;
+            char m_ElectricBulletTracerParticle[0xe0]; // 0x1b58            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strTripSound; // 0x1a78            
+            CSoundEventName m_strTripSound; // 0x1c38            
+            CSoundEventName m_strElectricBulletHitSound; // 0x1c48            
             // metadata: MPropertyStartGroup "Modifiers"
-            // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x1a88            
             // m_RevivingModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_RevivingModifier;
-            char m_RevivingModifier[0x10]; // 0x1a98            
-            // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x1aa8            
-            // m_ZombieModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ZombieModifier;
-            char m_ZombieModifier[0x10]; // 0x1ab8            
-            // m_ElectricBulletBuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ElectricBulletBuffModifier;
-            char m_ElectricBulletBuffModifier[0x10]; // 0x1ac8            
+            char m_RevivingModifier[0x10]; // 0x1c58            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Frank_ReviveVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Frank_ReviveVData) == 0x1ad8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Frank_ReviveVData) == 0x1c68);
     };
 };

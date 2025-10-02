@@ -4,7 +4,7 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/client/CCitadelModifier.hpp"
-#include "source2sdk/client/CCitadelModifierVData.hpp"
+#include "source2sdk/client/CCitadel_Modifier_BaseBulletPreRollProcVData.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
 
 // /////////////////////////////////////////////////////////////
@@ -19,30 +19,30 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x860
+        // Size: 0x990
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
         #pragma pack(push, 1)
-        class CCitadel_Modifier_HollowPoint_ProcVData : public source2sdk::client::CCitadelModifierVData
+        class CCitadel_Modifier_HollowPoint_ProcVData : public source2sdk::client::CCitadel_Modifier_BaseBulletPreRollProcVData
         {
         public:
             // metadata: MPropertyGroupName "Visuals"
             // m_TracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle;
-            char m_TracerParticle[0xe0]; // 0x760            
+            char m_TracerParticle[0xe0]; // 0x890            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_ParticleModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ParticleModifier;
-            char m_ParticleModifier[0x10]; // 0x840            
+            char m_ParticleModifier[0x10]; // 0x970            
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x850            
+            char m_DebuffModifier[0x10]; // 0x980            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_HollowPoint_ProcVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_HollowPoint_ProcVData) == 0x860);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_HollowPoint_ProcVData) == 0x990);
     };
 };

@@ -8,7 +8,6 @@
 #include "source2sdk/client/CCitadelPlayerPawnBase.hpp"
 #include "source2sdk/client/CCitadelRecentDamage.hpp"
 #include "source2sdk/client/CMsgLaneColor.hpp"
-#include "source2sdk/client/EWallJumpFacing.hpp"
 #include "source2sdk/client/FullSellPriceAbilityUpgrades_t.hpp"
 #include "source2sdk/client/HeroBuildID_t.hpp"
 #include "source2sdk/entity2/GameTime_t.hpp"
@@ -32,7 +31,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1950
+        // Size: 0x1910
         // Has VTable
         // 
         // static metadata: MNetworkVarTypeOverride "CCitadelPlayer_CameraServices m_pCameraServices"
@@ -88,7 +87,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "GameTime_t m_flTimeSlowedStart"
         // static metadata: MNetworkVarNames "GameTime_t m_flTimeSlowedEnd"
         // static metadata: MNetworkVarNames "float32 m_flSlowSpeed"
-        // static metadata: MNetworkVarNames "GameTime_t m_flSprintAnimSuppressEndTime"
+        // static metadata: MNetworkVarNames "GameTime_t m_flForceInCombatAnimsUntilTime"
         // static metadata: MNetworkVarNames "uint8 m_nAudioEnclosure"
         // static metadata: MNetworkVarNames "bool m_bAudioHasSkyExposure"
         #pragma pack(push, 1)
@@ -211,71 +210,64 @@ namespace source2sdk
             uint8_t _pad1449[0x3]; // 0x1449
             // metadata: MNetworkEnable
             source2sdk::entity2::GameTime_t m_flLastDuckTime; // 0x144c            
-            Vector m_vWallJumpFacingDir; // 0x1450            
-            source2sdk::client::EWallJumpFacing m_eWallJumpFacing; // 0x145c            
-            uint8_t _pad145e[0x2]; // 0x145e
-            Vector m_vCurrentWallNormal; // 0x1460            
-            Vector m_vLastWallCollidedWithNormal; // 0x146c            
-            Vector m_vLastValidWallJumpNormal; // 0x1478            
-            Vector m_vLastValidWallJumpNormal_PlayerPosition; // 0x1484            
-            source2sdk::entity2::GameTime_t m_flLastWallJumpTime; // 0x1490            
             // metadata: MNetworkEnable
-            bool m_bDismissedReportCard; // 0x1494            
-            uint8_t _pad1495[0x3]; // 0x1495
+            bool m_bDismissedReportCard; // 0x1450            
+            uint8_t _pad1451[0x3]; // 0x1451
             // metadata: MNetworkEnable
-            float m_flCurrentHealingAmount; // 0x1498            
+            float m_flCurrentHealingAmount; // 0x1454            
             // metadata: MNetworkEnable
-            QAngle m_angLockedEyeAngles; // 0x149c            
+            QAngle m_angLockedEyeAngles; // 0x1458            
+            uint8_t _pad1464[0x4]; // 0x1464
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
             // metadata: MNetworkAlias "CCitadelAbilityComponent"
             // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
-            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x14a8            
+            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x1468            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "CCitadelHeroComponent"
             // metadata: MNetworkAlias "CCitadelHeroComponent"
             // metadata: MNetworkTypeAlias "CCitadelHeroComponent"
-            source2sdk::client::CCitadelHeroComponent m_CCitadelHeroComponent; // 0x1670            
-            uint8_t _pad16b0[0xa8]; // 0x16b0
-            float m_flRichPresenceUpdateInterval; // 0x1758            
-            uint8_t _pad175c[0xf4]; // 0x175c
+            source2sdk::client::CCitadelHeroComponent m_CCitadelHeroComponent; // 0x1630            
+            uint8_t _pad1670[0xa8]; // 0x1670
+            float m_flRichPresenceUpdateInterval; // 0x1718            
+            uint8_t _pad171c[0xf4]; // 0x171c
             // metadata: MNetworkEnable
-            bool m_bAnimGraphMovementClipped; // 0x1850            
+            bool m_bAnimGraphMovementClipped; // 0x1810            
             // metadata: MNetworkEnable
-            bool m_bAnimGraphMovementDisableGravity; // 0x1851            
+            bool m_bAnimGraphMovementDisableGravity; // 0x1811            
             // metadata: MNetworkEnable
-            bool m_bAnimGraphMovementDirectAirControl; // 0x1852            
-            uint8_t _pad1853[0x1]; // 0x1853
+            bool m_bAnimGraphMovementDirectAirControl; // 0x1812            
+            uint8_t _pad1813[0x1]; // 0x1813
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flPredTimeSlowedStart; // 0x1854            
+            source2sdk::entity2::GameTime_t m_flPredTimeSlowedStart; // 0x1814            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flPredTimeSlowedEnd; // 0x1858            
+            source2sdk::entity2::GameTime_t m_flPredTimeSlowedEnd; // 0x1818            
             // metadata: MNetworkEnable
-            float m_flPredSlowSpeed; // 0x185c            
+            float m_flPredSlowSpeed; // 0x181c            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flTimeSlowedStart[4]; // 0x1860            
+            source2sdk::entity2::GameTime_t m_flTimeSlowedStart[4]; // 0x1820            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flTimeSlowedEnd[4]; // 0x1870            
+            source2sdk::entity2::GameTime_t m_flTimeSlowedEnd[4]; // 0x1830            
             // metadata: MNetworkEnable
-            float m_flSlowSpeed[4]; // 0x1880            
+            float m_flSlowSpeed[4]; // 0x1840            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flSprintAnimSuppressEndTime; // 0x1890            
-            std::int32_t m_iCurSlowSlot; // 0x1894            
-            bool m_bLocoLeanTriggeredForDirection; // 0x1898            
-            bool m_bLocoRunToStopCanTrigger; // 0x1899            
-            uint8_t _pad189a[0x2]; // 0x189a
-            float m_flCrouchFraction; // 0x189c            
-            float m_flCrouchSpeed; // 0x18a0            
-            source2sdk::entity2::GameTime_t m_fidgetTime; // 0x18a4            
-            Vector m_vShootTestOffsetStanding; // 0x18a8            
-            Vector m_vShootTestOffsetCrouching; // 0x18b4            
-            source2sdk::entity2::GameTime_t m_leanStartTime; // 0x18c0            
-            uint8_t _pad18c4[0x80]; // 0x18c4
+            source2sdk::entity2::GameTime_t m_flForceInCombatAnimsUntilTime; // 0x1850            
+            std::int32_t m_iCurSlowSlot; // 0x1854            
+            bool m_bLocoLeanTriggeredForDirection; // 0x1858            
+            bool m_bLocoRunToStopCanTrigger; // 0x1859            
+            uint8_t _pad185a[0x2]; // 0x185a
+            float m_flCrouchFraction; // 0x185c            
+            float m_flCrouchSpeed; // 0x1860            
+            source2sdk::entity2::GameTime_t m_fidgetTime; // 0x1864            
+            Vector m_vShootTestOffsetStanding; // 0x1868            
+            Vector m_vShootTestOffsetCrouching; // 0x1874            
+            source2sdk::entity2::GameTime_t m_leanStartTime; // 0x1880            
+            uint8_t _pad1884[0x80]; // 0x1884
             // metadata: MNetworkEnable
-            std::uint8_t m_nAudioEnclosure; // 0x1944            
+            std::uint8_t m_nAudioEnclosure; // 0x1904            
             // metadata: MNetworkEnable
-            bool m_bAudioHasSkyExposure; // 0x1945            
-            uint8_t _pad1946[0xa];
+            bool m_bAudioHasSkyExposure; // 0x1905            
+            uint8_t _pad1906[0xa];
             
             // Datamap fields:
             // CCitadelPlayer_CameraServices m_pCameraServices; // 0xf68
@@ -285,6 +277,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in C_CitadelPlayerPawn because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_CitadelPlayerPawn) == 0x1950);
+        static_assert(sizeof(source2sdk::client::C_CitadelPlayerPawn) == 0x1910);
     };
 };

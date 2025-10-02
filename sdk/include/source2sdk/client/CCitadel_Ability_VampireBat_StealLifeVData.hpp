@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x19d8
+        // Size: 0x19e0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -45,11 +45,14 @@ namespace source2sdk
             CSoundEventName m_strSlashSound; // 0x19a8            
             CSoundEventName m_strHitConfirmSound; // 0x19b8            
             CSoundEventName m_strKillConfirmSound; // 0x19c8            
+            // metadata: MPropertyStartGroup "Gameplay"
+            bool m_bAllowFloating; // 0x19d8            
+            uint8_t _pad19d9[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_VampireBat_StealLifeVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_VampireBat_StealLifeVData) == 0x19d8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_VampireBat_StealLifeVData) == 0x19e0);
     };
 };

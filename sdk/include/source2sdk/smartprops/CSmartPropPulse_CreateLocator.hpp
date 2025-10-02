@@ -23,7 +23,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "SmartPropEval"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo " @Vø"
+        // static metadata: MPulseCellOutflowHookInfo " @ƒü"
         // static metadata: MPropertyFriendlyName "Create Locator"
         // static metadata: MPropertyDescription "Create a locator with the current transform. The locator may optionally be configurable, so that its transform can be modified in Hammer."
         // static metadata: MVDataClassGroup
