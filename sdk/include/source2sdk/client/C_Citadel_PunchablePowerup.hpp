@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcd0
+        // Size: 0xde8
         // Has VTable
         #pragma pack(push, 1)
         class C_Citadel_PunchablePowerup : public source2sdk::client::C_Citadel_BreakblePropModifierPickup
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::C_Citadel_PunchablePowerup) == 0xcd0);
+        static_assert(sizeof(source2sdk::client::C_Citadel_PunchablePowerup) == 0xde8);
     };
 };

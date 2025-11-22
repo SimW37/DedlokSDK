@@ -4,6 +4,13 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/server/CCitadel_Item.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -17,18 +24,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc68
+        // Size: 0xc40
         // Has VTable
         #pragma pack(push, 1)
         class CItemSilenceGlyph : public source2sdk::server::CCitadel_Item
         {
         public:
-            uint8_t _pad0ba8[0xc0];
-            // No schema binary for binding
+            // m_vHitEnts has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vHitEnts;
+            char m_vHitEnts[0x18]; // 0xba8            
+            uint8_t _pad0bc0[0x80];
         };
         #pragma pack(pop)
         
+        // Cannot assert offsets of fields in CItemSilenceGlyph because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CItemSilenceGlyph) == 0xc68);
+        static_assert(sizeof(source2sdk::server::CItemSilenceGlyph) == 0xc40);
     };
 };

@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xee0
+        // Size: 0xf20
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EHANDLE m_hAutoTarget"
@@ -44,12 +44,12 @@ namespace source2sdk
             source2sdk::entity2::GameTime_t m_flHookEndTime; // 0xd98            
             // metadata: MNetworkEnable
             float m_flBombBonus; // 0xd9c            
-            uint8_t _pad0da0[0x140];
+            uint8_t _pad0da0[0x180];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_StickyBomb because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_StickyBomb) == 0xee0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_StickyBomb) == 0xf20);
     };
 };

@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xde0
+        // Size: 0xdf0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flDashAngle"
@@ -33,6 +33,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "GameTime_t m_GroundDashCancelExecuteTime"
         // static metadata: MNetworkVarNames "int m_nLastGroundDashTick"
         // static metadata: MNetworkVarNames "GameTime_t m_flAirDashCastTime"
+        // static metadata: MNetworkVarNames "Vector m_flAirDashStartPos"
         // static metadata: MNetworkVarNames "GameTime_t m_flAirDashDragStartTime"
         // static metadata: MNetworkVarNames "int8 m_nConsecutiveAirDashes"
         // static metadata: MNetworkVarNames "int8 m_nConsecutiveDownDashes"
@@ -60,26 +61,30 @@ namespace source2sdk
             source2sdk::entity2::GameTime_t m_flAirDashCastTime; // 0xda4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flAirDashDragStartTime; // 0xda8            
+            Vector m_flAirDashStartPos; // 0xda8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int8_t m_nConsecutiveAirDashes; // 0xdac            
+            source2sdk::entity2::GameTime_t m_flAirDashDragStartTime; // 0xdb4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int8_t m_nConsecutiveDownDashes; // 0xdad            
+            std::int8_t m_nConsecutiveAirDashes; // 0xdb8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bDownAirDash; // 0xdae            
-            uint8_t _pad0daf[0x29]; // 0xdaf
+            std::int8_t m_nConsecutiveDownDashes; // 0xdb9            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            bool m_bDownAirDash; // 0xdba            
+            uint8_t _pad0dbb[0x29]; // 0xdbb
             // m_hJumpAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::CCitadel_Ability_Jump> m_hJumpAbility;
-            char m_hJumpAbility[0x4]; // 0xdd8            
-            source2sdk::entity2::GameTime_t m_flAirDashDelayedEffectsTime; // 0xddc            
+            char m_hJumpAbility[0x4]; // 0xde4            
+            source2sdk::entity2::GameTime_t m_flAirDashDelayedEffectsTime; // 0xde8            
+            uint8_t _pad0dec[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Dash because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Dash) == 0xde0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Dash) == 0xdf0);
     };
 };

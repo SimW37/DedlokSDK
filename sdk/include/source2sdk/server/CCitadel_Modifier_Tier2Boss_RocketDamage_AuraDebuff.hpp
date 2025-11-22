@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x188
+        // Size: 0x1c8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Tier2Boss_RocketDamage_AuraDebuff : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c8[0xc0];
+            uint8_t _pad00c8[0x100];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Tier2Boss_RocketDamage_AuraDebuff) == 0x188);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Tier2Boss_RocketDamage_AuraDebuff) == 0x1c8);
     };
 };

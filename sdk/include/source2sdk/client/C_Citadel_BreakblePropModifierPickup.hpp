@@ -3,7 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/client/C_Citadel_BreakblePropPickup.hpp"
+#include "source2sdk/client/C_Citadel_BreakablePropPickup.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -17,10 +17,10 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcd0
+        // Size: 0xde8
         // Has VTable
         #pragma pack(push, 1)
-        class C_Citadel_BreakblePropModifierPickup : public source2sdk::client::C_Citadel_BreakblePropPickup
+        class C_Citadel_BreakblePropModifierPickup : public source2sdk::client::C_Citadel_BreakablePropPickup
         {
         public:
             // No schema binary for binding
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::C_Citadel_BreakblePropModifierPickup) == 0xcd0);
+        static_assert(sizeof(source2sdk::client::C_Citadel_BreakblePropModifierPickup) == 0xde8);
     };
 };

@@ -24,7 +24,7 @@ namespace source2sdk
         {
         public:
             float m_flHealthRegen; // 0xc0            
-            uint8_t _pad00c4[0x4];
+            float m_flExternalHealthRegen; // 0xc4            
         };
         #pragma pack(pop)
         

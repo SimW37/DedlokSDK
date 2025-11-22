@@ -3,32 +3,31 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/server/CCitadel_Ability_PrimaryWeapon.hpp"
+#include "source2sdk/client/C_Citadel_BreakablePropPickup.hpp"
 
 // /////////////////////////////////////////////////////////////
-// Module: server
+// Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
 namespace source2sdk
 {
-    namespace server
+    namespace client
     {
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe80
+        // Size: 0xde8
         // Has VTable
         #pragma pack(push, 1)
-        class CCitadel_Ability_BookWorm_PrimaryWeapon : public source2sdk::server::CCitadel_Ability_PrimaryWeapon
+        class C_Citadel_BreakableDroppedGoldPickup : public source2sdk::client::C_Citadel_BreakablePropPickup
         {
         public:
-            uint8_t _pad0d80[0x100];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_BookWorm_PrimaryWeapon) == 0xe80);
+        static_assert(sizeof(source2sdk::client::C_Citadel_BreakableDroppedGoldPickup) == 0xde8);
     };
 };

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x840
+        // Size: 0x930
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,11 +30,15 @@ namespace source2sdk
             // m_DebuffParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DebuffParticle;
             char m_DebuffParticle[0xe0]; // 0x760            
+            // m_PurgeCastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PurgeCastParticle;
+            char m_PurgeCastParticle[0xe0]; // 0x840            
+            CSoundEventName m_PurgeSound; // 0x920            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierGlitchVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CModifierGlitchVData) == 0x840);
+        static_assert(sizeof(source2sdk::client::CModifierGlitchVData) == 0x930);
     };
 };

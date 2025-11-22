@@ -59,21 +59,21 @@ namespace source2sdk
             float m_flTossSpeed; // 0x1728            
             float m_flStompDamage; // 0x172c            
             float m_flStompDamageMaxHealthPercent; // 0x1730            
-            float m_flStompTossUpMagnitude; // 0x1734            
-            float m_flStunDuration; // 0x1738            
-            float m_flStompImpactRadius; // 0x173c            
-            float m_flStompImpactHeight; // 0x1740            
-            float m_flStompParryRadius; // 0x1744            
-            float m_flStompParryImpulse; // 0x1748            
-            float m_flStompParryImpulseInAir; // 0x174c            
-            float m_flStompParryDamageMult; // 0x1750            
-            float m_flSweepRadius; // 0x1754            
-            float m_flSweepSpeed; // 0x1758            
-            float m_flSweepZScale; // 0x175c            
-            float m_flSweepMaxAngle; // 0x1760            
-            float m_flSweepMaxRange; // 0x1764            
-            float m_flSweepAdjustSpeed; // 0x1768            
-            uint8_t _pad176c[0x4]; // 0x176c
+            float m_flStompDamageTrooperRate; // 0x1734            
+            float m_flStompTossUpMagnitude; // 0x1738            
+            float m_flStunDuration; // 0x173c            
+            float m_flStompImpactRadius; // 0x1740            
+            float m_flStompImpactHeight; // 0x1744            
+            float m_flStompParryRadius; // 0x1748            
+            float m_flStompParryImpulse; // 0x174c            
+            float m_flStompParryImpulseInAir; // 0x1750            
+            float m_flStompParryDamageMult; // 0x1754            
+            float m_flSweepRadius; // 0x1758            
+            float m_flSweepSpeed; // 0x175c            
+            float m_flSweepZScale; // 0x1760            
+            float m_flSweepMaxAngle; // 0x1764            
+            float m_flSweepMaxRange; // 0x1768            
+            float m_flSweepAdjustSpeed; // 0x176c            
             CSoundEventName m_StompParriedSound; // 0x1770            
             CSoundEventName m_StompImpactSound; // 0x1780            
             // metadata: MPropertyStartGroup "Gun"

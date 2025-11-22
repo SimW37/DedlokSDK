@@ -3,7 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/server/CCitadel_Ability_PrimaryWeapon.hpp"
+#include "source2sdk/server/CCitadel_BreakablePropPickup.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe80
+        // Size: 0xb68
         // Has VTable
         #pragma pack(push, 1)
-        class CCitadel_Ability_BookWorm_PrimaryWeapon : public source2sdk::server::CCitadel_Ability_PrimaryWeapon
+        class CCitadel_BreakableDroppedGoldPickup : public source2sdk::server::CCitadel_BreakablePropPickup
         {
         public:
-            uint8_t _pad0d80[0x100];
+            uint8_t _pad0b50[0x18];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_BookWorm_PrimaryWeapon) == 0xe80);
+        static_assert(sizeof(source2sdk::server::CCitadel_BreakableDroppedGoldPickup) == 0xb68);
     };
 };

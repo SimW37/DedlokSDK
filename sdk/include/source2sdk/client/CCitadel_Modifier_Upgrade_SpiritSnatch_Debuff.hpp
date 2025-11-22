@@ -17,17 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc0
+        // Size: 0x180
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Upgrade_SpiritSnatch_Debuff : public source2sdk::client::CCitadelModifier
         {
         public:
+            uint8_t _pad00c0[0xc0];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Upgrade_SpiritSnatch_Debuff) == 0xc0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Upgrade_SpiritSnatch_Debuff) == 0x180);
     };
 };
