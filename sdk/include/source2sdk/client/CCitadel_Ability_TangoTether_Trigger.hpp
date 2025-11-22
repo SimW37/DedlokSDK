@@ -24,21 +24,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xda0
+        // Size: 0xda8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_TangoTether_Trigger : public source2sdk::client::CCitadelBaseTriggerAbility
         {
         public:
-            uint8_t _pad0d98[0x4]; // 0xd98
+            uint8_t _pad0da0[0x4]; // 0xda0
             // m_hBaseAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_CitadelBaseAbility> m_hBaseAbility;
-            char m_hBaseAbility[0x4]; // 0xd9c            
+            char m_hBaseAbility[0x4]; // 0xda4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_TangoTether_Trigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_TangoTether_Trigger) == 0xda0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_TangoTether_Trigger) == 0xda8);
     };
 };

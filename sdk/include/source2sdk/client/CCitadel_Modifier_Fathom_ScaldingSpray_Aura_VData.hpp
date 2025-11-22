@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7c8
+        // Size: 0x7d0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,12 +29,12 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x7b8            
+            char m_BuffModifier[0x10]; // 0x7c0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Fathom_ScaldingSpray_Aura_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Fathom_ScaldingSpray_Aura_VData) == 0x7c8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Fathom_ScaldingSpray_Aura_VData) == 0x7d0);
     };
 };

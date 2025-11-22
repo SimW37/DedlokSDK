@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd38
+        // Size: 0xd40
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Kobun : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            bool m_bFlipOffset; // 0xb98            
-            uint8_t _pad0b99[0x19f];
+            bool m_bFlipOffset; // 0xba0            
+            uint8_t _pad0ba1[0x19f];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Kobun because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Kobun) == 0xd38);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Kobun) == 0xd40);
     };
 };

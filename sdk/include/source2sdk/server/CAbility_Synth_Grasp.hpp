@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xbf0
+        // Size: 0xbf8
         // Has VTable
         #pragma pack(push, 1)
         class CAbility_Synth_Grasp : public source2sdk::server::CCitadelBaseAbility
@@ -32,13 +32,13 @@ namespace source2sdk
         public:
             // m_vecTetheredEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecTetheredEnemies;
-            char m_vecTetheredEnemies[0x18]; // 0xb98            
-            uint8_t _pad0bb0[0x40];
+            char m_vecTetheredEnemies[0x18]; // 0xba0            
+            uint8_t _pad0bb8[0x40];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Synth_Grasp because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Synth_Grasp) == 0xbf0);
+        static_assert(sizeof(source2sdk::server::CAbility_Synth_Grasp) == 0xbf8);
     };
 };

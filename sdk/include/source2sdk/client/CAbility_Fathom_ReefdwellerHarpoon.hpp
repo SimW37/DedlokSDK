@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xef8
+        // Size: 0xf00
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bBulletFlying"
@@ -33,32 +33,32 @@ namespace source2sdk
         class CAbility_Fathom_ReefdwellerHarpoon : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            bool m_bHitTarget; // 0xd88            
-            uint8_t _pad0d89[0x3]; // 0xd89
-            Vector m_vPrevPos; // 0xd8c            
+            bool m_bHitTarget; // 0xd90            
+            uint8_t _pad0d91[0x3]; // 0xd91
+            Vector m_vPrevPos; // 0xd94            
             // metadata: MNetworkEnable
-            bool m_bBulletFlying; // 0xd98            
+            bool m_bBulletFlying; // 0xda0            
             // metadata: MNetworkEnable
-            bool m_bHasLatchedOnce; // 0xd99            
+            bool m_bHasLatchedOnce; // 0xda1            
             // metadata: MNetworkEnable
-            bool m_bLatched; // 0xd9a            
-            uint8_t _pad0d9b[0x1]; // 0xd9b
+            bool m_bLatched; // 0xda2            
+            uint8_t _pad0da3[0x1]; // 0xda3
             // metadata: MNetworkEnable
-            Vector m_vHarpoonTarget; // 0xd9c            
+            Vector m_vHarpoonTarget; // 0xda4            
             // metadata: MNetworkEnable
-            float m_flLatchedYaw; // 0xda8            
+            float m_flLatchedYaw; // 0xdb0            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flCloseEnoughStartTime; // 0xdac            
+            source2sdk::entity2::GameTime_t m_flCloseEnoughStartTime; // 0xdb4            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flStuckStartTime; // 0xdb0            
+            source2sdk::entity2::GameTime_t m_flStuckStartTime; // 0xdb8            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flReelStartTime; // 0xdb4            
-            uint8_t _pad0db8[0x140];
+            source2sdk::entity2::GameTime_t m_flReelStartTime; // 0xdbc            
+            uint8_t _pad0dc0[0x140];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Fathom_ReefdwellerHarpoon because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbility_Fathom_ReefdwellerHarpoon) == 0xef8);
+        static_assert(sizeof(source2sdk::client::CAbility_Fathom_ReefdwellerHarpoon) == 0xf00);
     };
 };

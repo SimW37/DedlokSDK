@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xbf8
+        // Size: 0xc00
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Item_ProjectileTest04 : public source2sdk::server::CCitadel_Item_ProjectileTest
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Item_ProjectileTest04) == 0xbf8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Item_ProjectileTest04) == 0xc00);
     };
 };

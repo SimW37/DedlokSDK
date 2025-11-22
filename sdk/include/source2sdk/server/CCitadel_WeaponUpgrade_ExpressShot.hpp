@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd10
+        // Size: 0xd18
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iShotsToCreate"
@@ -27,21 +27,21 @@ namespace source2sdk
         class CCitadel_WeaponUpgrade_ExpressShot : public source2sdk::server::CCitadel_Item
         {
         public:
-            uint8_t _pad0ba0[0x140]; // 0xba0
+            uint8_t _pad0ba8[0x140]; // 0xba8
             // metadata: MNetworkEnable
-            std::int32_t m_iShotsToCreate; // 0xce0            
+            std::int32_t m_iShotsToCreate; // 0xce8            
             // metadata: MNetworkEnable
-            bool m_bIsInExpressShot; // 0xce4            
-            uint8_t _pad0ce5[0x3]; // 0xce5
-            source2sdk::entity2::GameTime_t m_tNextShotTime; // 0xce8            
-            uint8_t _pad0cec[0x1c]; // 0xcec
-            bool m_bIsPrimaryProc; // 0xd08            
-            uint8_t _pad0d09[0x7];
+            bool m_bIsInExpressShot; // 0xcec            
+            uint8_t _pad0ced[0x3]; // 0xced
+            source2sdk::entity2::GameTime_t m_tNextShotTime; // 0xcf0            
+            uint8_t _pad0cf4[0x1c]; // 0xcf4
+            bool m_bIsPrimaryProc; // 0xd10            
+            uint8_t _pad0d11[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_WeaponUpgrade_ExpressShot because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_WeaponUpgrade_ExpressShot) == 0xd10);
+        static_assert(sizeof(source2sdk::server::CCitadel_WeaponUpgrade_ExpressShot) == 0xd18);
     };
 };

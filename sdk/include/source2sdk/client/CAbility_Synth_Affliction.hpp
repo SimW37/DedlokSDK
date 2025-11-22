@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe98
+        // Size: 0xea0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_nBonusTechPower"
@@ -27,15 +27,15 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            std::int32_t m_nBonusTechPower; // 0xd88            
-            uint8_t _pad0d8c[0x104]; // 0xd8c
-            source2sdk::client::ParticleIndex_t m_hAOEParticle; // 0xe90            
-            uint8_t _pad0e94[0x4];
+            std::int32_t m_nBonusTechPower; // 0xd90            
+            uint8_t _pad0d94[0x104]; // 0xd94
+            source2sdk::client::ParticleIndex_t m_hAOEParticle; // 0xe98            
+            uint8_t _pad0e9c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Synth_Affliction because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbility_Synth_Affliction) == 0xe98);
+        static_assert(sizeof(source2sdk::client::CAbility_Synth_Affliction) == 0xea0);
     };
 };

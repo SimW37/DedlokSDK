@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xed0
+        // Size: 0xed8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Lash_Flog : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d88[0x140]; // 0xd88
-            source2sdk::client::ParticleIndex_t m_SandEffect; // 0xec8            
-            uint8_t _pad0ecc[0x4];
+            uint8_t _pad0d90[0x140]; // 0xd90
+            source2sdk::client::ParticleIndex_t m_SandEffect; // 0xed0            
+            uint8_t _pad0ed4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Lash_Flog because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Lash_Flog) == 0xed0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Lash_Flog) == 0xed8);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc58
+        // Size: 0xc60
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iRegenStacks"
@@ -25,18 +25,18 @@ namespace source2sdk
         class CCitadel_Item_Mystic_Regeneration : public source2sdk::server::CCitadel_Item
         {
         public:
-            uint8_t _pad0ba0[0x2c]; // 0xba0
-            bool m_bForceModUpdate; // 0xbcc            
-            uint8_t _pad0bcd[0x3]; // 0xbcd
+            uint8_t _pad0ba8[0x2c]; // 0xba8
+            bool m_bForceModUpdate; // 0xbd4            
+            uint8_t _pad0bd5[0x3]; // 0xbd5
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int32_t m_iRegenStacks; // 0xbd0            
-            uint8_t _pad0bd4[0x84];
+            std::int32_t m_iRegenStacks; // 0xbd8            
+            uint8_t _pad0bdc[0x84];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item_Mystic_Regeneration because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Item_Mystic_Regeneration) == 0xc58);
+        static_assert(sizeof(source2sdk::server::CCitadel_Item_Mystic_Regeneration) == 0xc60);
     };
 };

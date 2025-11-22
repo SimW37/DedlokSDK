@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf50
+        // Size: 0xf58
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Priest_WeaponSwap : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d88[0x1c8];
+            uint8_t _pad0d90[0x1c8];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Priest_WeaponSwap) == 0xf50);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Priest_WeaponSwap) == 0xf58);
     };
 };

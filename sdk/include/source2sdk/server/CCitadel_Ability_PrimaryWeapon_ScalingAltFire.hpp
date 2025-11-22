@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd70
+        // Size: 0xd78
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_PrimaryWeapon_ScalingAltFire : public source2sdk::server::CCitadel_Ability_PrimaryWeapon
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_PrimaryWeapon_ScalingAltFire) == 0xd70);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_PrimaryWeapon_ScalingAltFire) == 0xd78);
     };
 };

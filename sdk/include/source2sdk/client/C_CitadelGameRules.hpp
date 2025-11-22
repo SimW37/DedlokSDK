@@ -78,6 +78,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "GameTime_t m_flGGEndsAtTime"
         // static metadata: MNetworkVarNames "MatchID_t m_unMatchID"
         // static metadata: MNetworkVarNames "CUtlString m_sGameplayExperiment"
+        // static metadata: MNetworkVarNames "uint32 m_ExperimentTokenHashCode"
         // static metadata: MNetworkVarNames "GameTime_t m_flHeroDiedTime"
         #pragma pack(push, 1)
         class C_CitadelGameRules : public source2sdk::client::C_TeamplayRules
@@ -193,10 +194,12 @@ namespace source2sdk
             source2sdk::client::MatchID_t m_unMatchID; // 0x9eb0            
             // metadata: MNetworkEnable
             CUtlString m_sGameplayExperiment; // 0x9eb8            
-            std::int32_t m_nPlayerDeathEventID; // 0x9ec0            
-            std::int32_t m_nReplayChangedEvent; // 0x9ec4            
-            std::int32_t m_nGameOverEvent; // 0x9ec8            
-            uint8_t _pad9ecc[0x24]; // 0x9ecc
+            // metadata: MNetworkEnable
+            std::uint32_t m_ExperimentTokenHashCode; // 0x9ec0            
+            std::int32_t m_nPlayerDeathEventID; // 0x9ec4            
+            std::int32_t m_nReplayChangedEvent; // 0x9ec8            
+            std::int32_t m_nGameOverEvent; // 0x9ecc            
+            uint8_t _pad9ed0[0x20]; // 0x9ed0
             // metadata: MNetworkEnable
             source2sdk::entity2::GameTime_t m_flHeroDiedTime; // 0x9ef0            
             uint8_t _pad9ef4[0x4];

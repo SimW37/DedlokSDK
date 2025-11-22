@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17f0
+        // Size: 0x17f8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bAirCast"
@@ -28,22 +28,22 @@ namespace source2sdk
         class CCitadel_Ability_Bebop_LaserBeam : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x400]; // 0xb98
-            bool m_bZoomed; // 0xf98            
+            uint8_t _pad0ba0[0x400]; // 0xba0
+            bool m_bZoomed; // 0xfa0            
             // metadata: MNetworkEnable
-            bool m_bAirCast; // 0xf99            
-            uint8_t _pad0f9a[0x6]; // 0xf9a
+            bool m_bAirCast; // 0xfa1            
+            uint8_t _pad0fa2[0x6]; // 0xfa2
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelAbilityBeam_t m_beam; // 0xfa0            
-            uint8_t _pad17e0[0x4]; // 0x17e0
-            float m_flAngleBetweenTrace; // 0x17e4            
-            std::int32_t m_nTotalDamage; // 0x17e8            
-            source2sdk::entity2::GameTime_t m_flNextDamageTime; // 0x17ec            
+            source2sdk::server::CCitadelAbilityBeam_t m_beam; // 0xfa8            
+            uint8_t _pad17e8[0x4]; // 0x17e8
+            float m_flAngleBetweenTrace; // 0x17ec            
+            std::int32_t m_nTotalDamage; // 0x17f0            
+            source2sdk::entity2::GameTime_t m_flNextDamageTime; // 0x17f4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Bebop_LaserBeam because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bebop_LaserBeam) == 0x17f0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bebop_LaserBeam) == 0x17f8);
     };
 };

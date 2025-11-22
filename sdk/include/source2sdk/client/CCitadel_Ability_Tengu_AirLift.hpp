@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1028
+        // Size: 0x1030
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EHANDLE m_hGrabTarget"
@@ -41,24 +41,24 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // m_hGrabTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hGrabTarget;
-            char m_hGrabTarget[0x4]; // 0xd88            
-            source2sdk::client::ParticleIndex_t m_nHoldBombEffect; // 0xd8c            
-            uint8_t _pad0d90[0x280]; // 0xd90
+            char m_hGrabTarget[0x4]; // 0xd90            
+            source2sdk::client::ParticleIndex_t m_nHoldBombEffect; // 0xd94            
+            uint8_t _pad0d98[0x280]; // 0xd98
             // metadata: MNetworkEnable
-            source2sdk::client::EFlightState m_eFlightState; // 0x1010            
+            source2sdk::client::EFlightState m_eFlightState; // 0x1018            
             // metadata: MNetworkEnable
-            bool m_bIsGrabbing; // 0x1011            
+            bool m_bIsGrabbing; // 0x1019            
             // metadata: MNetworkEnable
-            bool m_bIsHoldingBomb; // 0x1012            
-            uint8_t _pad1013[0x1]; // 0x1013
+            bool m_bIsHoldingBomb; // 0x101a            
+            uint8_t _pad101b[0x1]; // 0x101b
             // metadata: MNetworkEnable
-            float m_flCurrentSpeed; // 0x1014            
-            uint8_t _pad1018[0x10];
+            float m_flCurrentSpeed; // 0x101c            
+            uint8_t _pad1020[0x10];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Tengu_AirLift because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Tengu_AirLift) == 0x1028);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Tengu_AirLift) == 0x1030);
     };
 };

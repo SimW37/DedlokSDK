@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf00
+        // Size: 0xf08
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "uint8 m_nSlamTravelType"
@@ -28,22 +28,22 @@ namespace source2sdk
         class CCitadel_Ability_PunkGoat_Ult : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            source2sdk::client::ParticleIndex_t m_nBatChargingFX; // 0xb98            
-            uint8_t _pad0b9c[0x14]; // 0xb9c
+            source2sdk::client::ParticleIndex_t m_nBatChargingFX; // 0xba0            
+            uint8_t _pad0ba4[0x14]; // 0xba4
             // metadata: MNetworkEnable
-            std::uint8_t m_nSlamTravelType; // 0xbb0            
-            uint8_t _pad0bb1[0x3]; // 0xbb1
+            std::uint8_t m_nSlamTravelType; // 0xbb8            
+            uint8_t _pad0bb9[0x3]; // 0xbb9
             // metadata: MNetworkEnable
-            float m_flDistanceToTravel; // 0xbb4            
+            float m_flDistanceToTravel; // 0xbbc            
             // metadata: MNetworkEnable
-            bool m_bHoldingAbilityButton; // 0xbb8            
-            bool m_bFirstFrameGoingDown; // 0xbb9            
-            uint8_t _pad0bba[0x346];
+            bool m_bHoldingAbilityButton; // 0xbc0            
+            bool m_bFirstFrameGoingDown; // 0xbc1            
+            uint8_t _pad0bc2[0x346];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_PunkGoat_Ult because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_PunkGoat_Ult) == 0xf00);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_PunkGoat_Ult) == 0xf08);
     };
 };

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xee8
+        // Size: 0xef0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flBlastedCurrentDuration"
@@ -26,17 +26,17 @@ namespace source2sdk
         class CCitadel_Ability_PunkGoat_Blasted : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            source2sdk::entity2::GameTime_t m_tTimeOfLastBulletHit; // 0xb98            
-            float m_flPendingBlastedTimeToAdd; // 0xb9c            
-            float m_flDeferredHealingFromBlasted; // 0xba0            
+            source2sdk::entity2::GameTime_t m_tTimeOfLastBulletHit; // 0xba0            
+            float m_flPendingBlastedTimeToAdd; // 0xba4            
+            float m_flDeferredHealingFromBlasted; // 0xba8            
             // metadata: MNetworkEnable
-            float m_flBlastedCurrentDuration; // 0xba4            
-            uint8_t _pad0ba8[0x340];
+            float m_flBlastedCurrentDuration; // 0xbac            
+            uint8_t _pad0bb0[0x340];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_PunkGoat_Blasted because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_PunkGoat_Blasted) == 0xee8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_PunkGoat_Blasted) == 0xef0);
     };
 };

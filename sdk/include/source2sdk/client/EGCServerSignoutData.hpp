@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 14
+        // Enumerator count: 13
         // Alignment: 4
         // Size: 0x4
         enum class EGCServerSignoutData : std::uint32_t
@@ -26,7 +26,6 @@ namespace source2sdk
             k_EServerSignoutData_PlayerChat = 0x7,
             k_EServerSignoutData_BookRewards = 0x8,
             k_EServerSignoutData_PenalizedPlayers = 0x9,
-            k_EServerSignoutData_ReportCheaters = 0xa,
             k_EServerSignoutData_MatchDevStats = 0xb,
             k_EServerSignoutData_ChallengeProgress = 0xc,
             k_EServerSignoutData_HeroXPGrant = 0xd,

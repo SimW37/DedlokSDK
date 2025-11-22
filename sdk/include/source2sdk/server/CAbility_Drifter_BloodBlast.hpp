@@ -25,23 +25,23 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xef8
+        // Size: 0xf00
         // Has VTable
         #pragma pack(push, 1)
         class CAbility_Drifter_BloodBlast : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x340]; // 0xb98
-            source2sdk::client::ParticleIndex_t m_SandEffect; // 0xed8            
-            uint8_t _pad0edc[0x4]; // 0xedc
+            uint8_t _pad0ba0[0x340]; // 0xba0
+            source2sdk::client::ParticleIndex_t m_SandEffect; // 0xee0            
+            uint8_t _pad0ee4[0x4]; // 0xee4
             // m_vecHitTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecHitTargets;
-            char m_vecHitTargets[0x18]; // 0xee0            
+            char m_vecHitTargets[0x18]; // 0xee8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Drifter_BloodBlast because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Drifter_BloodBlast) == 0xef8);
+        static_assert(sizeof(source2sdk::server::CAbility_Drifter_BloodBlast) == 0xf00);
     };
 };

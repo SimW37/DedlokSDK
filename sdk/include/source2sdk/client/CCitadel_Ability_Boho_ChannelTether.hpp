@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xea8
+        // Size: 0xeb0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Boho_ChannelTether : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d88[0x120];
+            uint8_t _pad0d90[0x120];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Boho_ChannelTether) == 0xea8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Boho_ChannelTether) == 0xeb0);
     };
 };

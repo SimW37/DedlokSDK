@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd90
+        // Size: 0xd98
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_WeaponUpgrade_InstantReload : public source2sdk::client::CCitadel_Item
         {
         public:
-            bool m_bIsManualReloading; // 0xd88            
-            uint8_t _pad0d89[0x7];
+            bool m_bIsManualReloading; // 0xd90            
+            uint8_t _pad0d91[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_WeaponUpgrade_InstantReload because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_WeaponUpgrade_InstantReload) == 0xd90);
+        static_assert(sizeof(source2sdk::client::CCitadel_WeaponUpgrade_InstantReload) == 0xd98);
     };
 };

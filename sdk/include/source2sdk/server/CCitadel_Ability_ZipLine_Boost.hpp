@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xba0
+        // Size: 0xba8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_ZipLine_Boost : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x8];
+            uint8_t _pad0ba0[0x8];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ZipLine_Boost) == 0xba0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ZipLine_Boost) == 0xba8);
     };
 };

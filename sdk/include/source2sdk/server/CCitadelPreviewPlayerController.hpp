@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd00
+        // Size: 0xce8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelPreviewPlayerController : public source2sdk::server::CCitadelPlayerController
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelPreviewPlayerController) == 0xd00);
+        static_assert(sizeof(source2sdk::server::CCitadelPreviewPlayerController) == 0xce8);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd88
+        // Size: 0xd90
         // Has VTable
         #pragma pack(push, 1)
         class CNPCAbility_Tier2_Beam : public source2sdk::client::C_CitadelBaseAbility
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CNPCAbility_Tier2_Beam) == 0xd88);
+        static_assert(sizeof(source2sdk::client::CNPCAbility_Tier2_Beam) == 0xd90);
     };
 };

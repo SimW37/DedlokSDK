@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xde0
+        // Size: 0xde8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Cadence_SilenceContraptions : public source2sdk::client::CCitadelBaseDashCastAbility
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Cadence_SilenceContraptions) == 0xde0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Cadence_SilenceContraptions) == 0xde8);
     };
 };

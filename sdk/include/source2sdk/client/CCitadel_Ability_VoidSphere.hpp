@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe20
+        // Size: 0xe28
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_VoidSphere : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d88[0x98];
+            uint8_t _pad0d90[0x98];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_VoidSphere) == 0xe20);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_VoidSphere) == 0xe28);
     };
 };

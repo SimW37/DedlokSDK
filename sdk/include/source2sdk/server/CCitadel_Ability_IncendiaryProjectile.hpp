@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcb0
+        // Size: 0xcb8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_IncendiaryProjectile : public source2sdk::server::CCitadelBaseAbility
@@ -32,13 +32,13 @@ namespace source2sdk
         public:
             // m_vecHitEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecHitEnemies;
-            char m_vecHitEnemies[0x18]; // 0xb98            
-            uint8_t _pad0bb0[0x100];
+            char m_vecHitEnemies[0x18]; // 0xba0            
+            uint8_t _pad0bb8[0x100];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_IncendiaryProjectile because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_IncendiaryProjectile) == 0xcb0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_IncendiaryProjectile) == 0xcb8);
     };
 };

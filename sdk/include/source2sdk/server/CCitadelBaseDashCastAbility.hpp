@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xbf0
+        // Size: 0xbf8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_flDashCastStartTime"
@@ -36,19 +36,19 @@ namespace source2sdk
         public:
             // m_hAbilityToTrigger has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelBaseAbility> m_hAbilityToTrigger;
-            char m_hAbilityToTrigger[0x4]; // 0xb98            
+            char m_hAbilityToTrigger[0x4]; // 0xba0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flDashCastStartTime; // 0xb9c            
+            source2sdk::entity2::GameTime_t m_flDashCastStartTime; // 0xba4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vDashCastDir; // 0xba0            
-            uint8_t _pad0bac[0x44];
+            Vector m_vDashCastDir; // 0xba8            
+            uint8_t _pad0bb4[0x44];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelBaseDashCastAbility because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelBaseDashCastAbility) == 0xbf0);
+        static_assert(sizeof(source2sdk::server::CCitadelBaseDashCastAbility) == 0xbf8);
     };
 };

@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xdd0
+        // Size: 0xdd8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Priest_AntiSpiritVest : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d88[0x40]; // 0xd88
-            source2sdk::entity2::GameTime_t m_tBuffRechargeTime; // 0xdc8            
-            uint8_t _pad0dcc[0x4];
+            uint8_t _pad0d90[0x40]; // 0xd90
+            source2sdk::entity2::GameTime_t m_tBuffRechargeTime; // 0xdd0            
+            uint8_t _pad0dd4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Priest_AntiSpiritVest because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Priest_AntiSpiritVest) == 0xdd0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Priest_AntiSpiritVest) == 0xdd8);
     };
 };

@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf50
+        // Size: 0xf58
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Uppercut : public source2sdk::server::CCitadel_Ability_Melee_Base
         {
         public:
-            CUtlStringToken m_TypeIDStickyBombAttached; // 0xc48            
-            uint8_t _pad0c4c[0x304];
+            CUtlStringToken m_TypeIDStickyBombAttached; // 0xc50            
+            uint8_t _pad0c54[0x304];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Uppercut because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Uppercut) == 0xf50);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Uppercut) == 0xf58);
     };
 };

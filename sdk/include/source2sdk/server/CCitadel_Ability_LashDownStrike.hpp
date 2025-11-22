@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf20
+        // Size: 0xf28
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "Vector m_vStrikeVel"
@@ -35,31 +35,31 @@ namespace source2sdk
         class CCitadel_Ability_LashDownStrike : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0xc0]; // 0xb98
-            source2sdk::entity2::GameTime_t m_ImpactTime; // 0xc58            
-            Vector m_vDamagePos; // 0xc5c            
-            Vector m_vDamageDir; // 0xc68            
-            uint8_t _pad0c74[0x4]; // 0xc74
+            uint8_t _pad0ba0[0xc0]; // 0xba0
+            source2sdk::entity2::GameTime_t m_ImpactTime; // 0xc60            
+            Vector m_vDamagePos; // 0xc64            
+            Vector m_vDamageDir; // 0xc70            
+            uint8_t _pad0c7c[0x4]; // 0xc7c
             // m_vHitEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vHitEnemies;
-            char m_vHitEnemies[0x18]; // 0xc78            
-            uint8_t _pad0c90[0x20]; // 0xc90
+            char m_vHitEnemies[0x18]; // 0xc80            
+            uint8_t _pad0c98[0x20]; // 0xc98
             // m_vecHitEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecHitEntities;
-            char m_vecHitEntities[0x18]; // 0xcb0            
-            source2sdk::client::ParticleIndex_t m_PreviewEffect; // 0xcc8            
-            uint8_t _pad0ccc[0x244]; // 0xccc
+            char m_vecHitEntities[0x18]; // 0xcb8            
+            source2sdk::client::ParticleIndex_t m_PreviewEffect; // 0xcd0            
+            uint8_t _pad0cd4[0x244]; // 0xcd4
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vStrikeVel; // 0xf10            
+            Vector m_vStrikeVel; // 0xf18            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            float m_flStartHeight; // 0xf1c            
+            float m_flStartHeight; // 0xf24            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_LashDownStrike because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_LashDownStrike) == 0xf20);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_LashDownStrike) == 0xf28);
     };
 };

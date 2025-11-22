@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xdf8
+        // Size: 0xe00
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bWantsSlow"
@@ -32,28 +32,28 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bWantsSlow; // 0xb98            
-            uint8_t _pad0b99[0x3]; // 0xb99
+            bool m_bWantsSlow; // 0xba0            
+            uint8_t _pad0ba1[0x3]; // 0xba1
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flLatchedTimeScaleFracChangeTime; // 0xb9c            
+            source2sdk::entity2::GameTime_t m_flLatchedTimeScaleFracChangeTime; // 0xba4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            float m_flLatchedTimeScaleFrac; // 0xba0            
+            float m_flLatchedTimeScaleFrac; // 0xba8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flSpeedBoostEndTime; // 0xba4            
+            source2sdk::entity2::GameTime_t m_flSpeedBoostEndTime; // 0xbac            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flShotTimeScaleEndTime; // 0xba8            
-            uint8_t _pad0bac[0x4]; // 0xbac
-            float m_flStoredPowerPct; // 0xbb0            
-            uint8_t _pad0bb4[0x244];
+            source2sdk::entity2::GameTime_t m_flShotTimeScaleEndTime; // 0xbb0            
+            uint8_t _pad0bb4[0x8]; // 0xbb4
+            float m_flStoredPowerPct; // 0xbbc            
+            uint8_t _pad0bc0[0x240];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Chrono_KineticCarbine because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Chrono_KineticCarbine) == 0xdf8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Chrono_KineticCarbine) == 0xe00);
     };
 };

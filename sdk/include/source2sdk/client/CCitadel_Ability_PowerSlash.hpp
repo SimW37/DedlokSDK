@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x10d8
+        // Size: 0x10e0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_nPowerLevel"
@@ -33,21 +33,21 @@ namespace source2sdk
         class CCitadel_Ability_PowerSlash : public source2sdk::client::CCitadelBaseYamatoAbility
         {
         public:
-            uint8_t _pad0d90[0x20]; // 0xd90
+            uint8_t _pad0d98[0x20]; // 0xd98
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int32_t m_nPowerLevel; // 0xdb0            
-            uint8_t _pad0db4[0x4]; // 0xdb4
+            std::int32_t m_nPowerLevel; // 0xdb8            
+            uint8_t _pad0dbc[0x4]; // 0xdbc
             // m_vecHitTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_vecHitTargets;
-            char m_vecHitTargets[0x18]; // 0xdb8            
-            source2sdk::client::ParticleIndex_t m_nCastParticle; // 0xdd0            
-            uint8_t _pad0dd4[0x304];
+            char m_vecHitTargets[0x18]; // 0xdc0            
+            source2sdk::client::ParticleIndex_t m_nCastParticle; // 0xdd8            
+            uint8_t _pad0ddc[0x304];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_PowerSlash because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_PowerSlash) == 0x10d8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_PowerSlash) == 0x10e0);
     };
 };

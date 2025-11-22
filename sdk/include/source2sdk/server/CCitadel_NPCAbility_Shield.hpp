@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb98
+        // Size: 0xba0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_NPCAbility_Shield : public source2sdk::server::CCitadelBaseAbility
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_NPCAbility_Shield) == 0xb98);
+        static_assert(sizeof(source2sdk::server::CCitadel_NPCAbility_Shield) == 0xba0);
     };
 };

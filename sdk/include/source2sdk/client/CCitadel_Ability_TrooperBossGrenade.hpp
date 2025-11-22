@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf08
+        // Size: 0xf10
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_TrooperBossGrenade : public source2sdk::client::CCitadel_Ability_TrooperGrenade
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_TrooperBossGrenade) == 0xf08);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_TrooperBossGrenade) == 0xf10);
     };
 };

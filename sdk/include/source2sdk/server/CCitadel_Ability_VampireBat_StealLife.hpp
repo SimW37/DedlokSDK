@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xfc8
+        // Size: 0xfd0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bFloating"
@@ -25,15 +25,15 @@ namespace source2sdk
         class CCitadel_Ability_VampireBat_StealLife : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x2e8]; // 0xb98
+            uint8_t _pad0ba0[0x2e8]; // 0xba0
             // metadata: MNetworkEnable
-            bool m_bFloating; // 0xe80            
-            uint8_t _pad0e81[0x147];
+            bool m_bFloating; // 0xe88            
+            uint8_t _pad0e89[0x147];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_VampireBat_StealLife because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_VampireBat_StealLife) == 0xfc8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_VampireBat_StealLife) == 0xfd0);
     };
 };

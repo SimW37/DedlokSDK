@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7c8
+        // Size: 0x7d0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -25,15 +25,15 @@ namespace source2sdk
         class CCitadel_Modifier_ItemPunchable_GoldVData : public source2sdk::server::CCitadelModifierAuraVData
         {
         public:
-            float m_flPhysicsRadius; // 0x7b0            
-            uint8_t _pad07b4[0x4]; // 0x7b4
+            float m_flPhysicsRadius; // 0x7b8            
+            uint8_t _pad07bc[0x4]; // 0x7bc
             // metadata: MPropertyGroupName "Audio"
-            CSoundEventName m_sHitSound; // 0x7b8            
+            CSoundEventName m_sHitSound; // 0x7c0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_ItemPunchable_GoldVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ItemPunchable_GoldVData) == 0x7c8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ItemPunchable_GoldVData) == 0x7d0);
     };
 };

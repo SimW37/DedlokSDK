@@ -25,22 +25,22 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xbe0
+        // Size: 0xbe8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_BaseHeldItem : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x40]; // 0xb98
+            uint8_t _pad0ba0[0x40]; // 0xba0
             // m_hProjectile has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hProjectile;
-            char m_hProjectile[0x4]; // 0xbd8            
-            source2sdk::entity2::GameTime_t m_tFirstPickupTime; // 0xbdc            
+            char m_hProjectile[0x4]; // 0xbe0            
+            source2sdk::entity2::GameTime_t m_tFirstPickupTime; // 0xbe4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_BaseHeldItem because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_BaseHeldItem) == 0xbe0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_BaseHeldItem) == 0xbe8);
     };
 };

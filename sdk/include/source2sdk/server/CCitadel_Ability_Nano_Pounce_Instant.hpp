@@ -27,7 +27,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe88
+        // Size: 0xe90
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bActive"
@@ -43,40 +43,40 @@ namespace source2sdk
         class CCitadel_Ability_Nano_Pounce_Instant : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x280]; // 0xb98
+            uint8_t _pad0ba0[0x280]; // 0xba0
             // metadata: MNetworkEnable
-            bool m_bActive; // 0xe18            
-            uint8_t _pad0e19[0x3]; // 0xe19
+            bool m_bActive; // 0xe20            
+            uint8_t _pad0e21[0x3]; // 0xe21
             // metadata: MNetworkEnable
             // m_hCurrentTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hCurrentTarget;
-            char m_hCurrentTarget[0x4]; // 0xe1c            
+            char m_hCurrentTarget[0x4]; // 0xe24            
             // metadata: MNetworkEnable
             // m_hLastCastTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hLastCastTarget;
-            char m_hLastCastTarget[0x4]; // 0xe20            
+            char m_hLastCastTarget[0x4]; // 0xe28            
             // metadata: MNetworkEnable
-            Vector m_vStartPosition; // 0xe24            
+            Vector m_vStartPosition; // 0xe2c            
             // metadata: MNetworkEnable
-            Vector m_vDeparturePosition; // 0xe30            
-            uint8_t _pad0e3c[0x4]; // 0xe3c
+            Vector m_vDeparturePosition; // 0xe38            
+            uint8_t _pad0e44[0x4]; // 0xe44
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelAutoScaledTime m_flDepartureTime; // 0xe40            
+            source2sdk::server::CCitadelAutoScaledTime m_flDepartureTime; // 0xe48            
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelAutoScaledTime m_flArrivalTime; // 0xe58            
-            Vector m_vLastKnownSafePos; // 0xe70            
-            uint8_t _pad0e7c[0x2]; // 0xe7c
+            source2sdk::server::CCitadelAutoScaledTime m_flArrivalTime; // 0xe60            
+            Vector m_vLastKnownSafePos; // 0xe78            
+            uint8_t _pad0e84[0x2]; // 0xe84
             // metadata: MNetworkEnable
-            bool m_bIsFirstCastCompleted; // 0xe7e            
-            uint8_t _pad0e7f[0x1]; // 0xe7f
+            bool m_bIsFirstCastCompleted; // 0xe86            
+            uint8_t _pad0e87[0x1]; // 0xe87
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_tDoubleCastWindow; // 0xe80            
-            source2sdk::client::ParticleIndex_t m_CastStartParticle; // 0xe84            
+            source2sdk::entity2::GameTime_t m_tDoubleCastWindow; // 0xe88            
+            source2sdk::client::ParticleIndex_t m_CastStartParticle; // 0xe8c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Nano_Pounce_Instant because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Nano_Pounce_Instant) == 0xe88);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Nano_Pounce_Instant) == 0xe90);
     };
 };

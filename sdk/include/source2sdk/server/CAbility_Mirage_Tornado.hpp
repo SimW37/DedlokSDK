@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd68
+        // Size: 0xd70
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "QAngle m_anglesCharging"
@@ -27,17 +27,17 @@ namespace source2sdk
         class CAbility_Mirage_Tornado : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x1c0]; // 0xb98
+            uint8_t _pad0ba0[0x1c0]; // 0xba0
             // metadata: MNetworkEnable
-            QAngle m_anglesCharging; // 0xd58            
+            QAngle m_anglesCharging; // 0xd60            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnMirageTornadoStateChanged"
-            source2sdk::entity2::GameTime_t m_flChargeStartTime; // 0xd64            
+            source2sdk::entity2::GameTime_t m_flChargeStartTime; // 0xd6c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Mirage_Tornado because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Mirage_Tornado) == 0xd68);
+        static_assert(sizeof(source2sdk::server::CAbility_Mirage_Tornado) == 0xd70);
     };
 };

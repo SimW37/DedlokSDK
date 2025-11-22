@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc48
+        // Size: 0xc50
         // Has VTable
         // Is Abstract
         // 
@@ -32,34 +32,34 @@ namespace source2sdk
         class CCitadel_Ability_Melee_Base : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x18]; // 0xb98
-            std::int32_t m_nHitNumber; // 0xbb0            
-            std::int32_t m_nPlayerKillNumber; // 0xbb4            
+            uint8_t _pad0ba0[0x18]; // 0xba0
+            std::int32_t m_nHitNumber; // 0xbb8            
+            std::int32_t m_nPlayerKillNumber; // 0xbbc            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bUsingThisMelee; // 0xbb8            
+            bool m_bUsingThisMelee; // 0xbc0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bUsingMeleeTagActive; // 0xbb9            
+            bool m_bUsingMeleeTagActive; // 0xbc1            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bHitWithThisAttack; // 0xbba            
-            uint8_t _pad0bbb[0x1]; // 0xbbb
+            bool m_bHitWithThisAttack; // 0xbc2            
+            uint8_t _pad0bc3[0x1]; // 0xbc3
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flLastActivateTime; // 0xbbc            
+            source2sdk::entity2::GameTime_t m_flLastActivateTime; // 0xbc4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flNextAttackAllowedTime; // 0xbc0            
+            source2sdk::entity2::GameTime_t m_flNextAttackAllowedTime; // 0xbc8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flAttackTriggeredTime; // 0xbc4            
-            uint8_t _pad0bc8[0x80];
+            source2sdk::entity2::GameTime_t m_flAttackTriggeredTime; // 0xbcc            
+            uint8_t _pad0bd0[0x80];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Melee_Base because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Melee_Base) == 0xc48);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Melee_Base) == 0xc50);
     };
 };

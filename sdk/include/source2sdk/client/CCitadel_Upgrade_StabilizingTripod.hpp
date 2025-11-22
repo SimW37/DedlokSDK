@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf88
+        // Size: 0xf90
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Upgrade_StabilizingTripod : public source2sdk::client::CCitadel_Item
         {
         public:
-            uint8_t _pad0d88[0x200];
+            uint8_t _pad0d90[0x200];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Upgrade_StabilizingTripod) == 0xf88);
+        static_assert(sizeof(source2sdk::client::CCitadel_Upgrade_StabilizingTripod) == 0xf90);
     };
 };

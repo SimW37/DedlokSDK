@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe50
+        // Size: 0xe58
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_ArmorUpgrade_DoubleJump : public source2sdk::client::CCitadel_Item
         {
         public:
-            std::int32_t m_nTickJumped; // 0xd88            
-            uint8_t _pad0d8c[0xc4];
+            std::int32_t m_nTickJumped; // 0xd90            
+            uint8_t _pad0d94[0xc4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_ArmorUpgrade_DoubleJump because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_ArmorUpgrade_DoubleJump) == 0xe50);
+        static_assert(sizeof(source2sdk::client::CCitadel_ArmorUpgrade_DoubleJump) == 0xe58);
     };
 };

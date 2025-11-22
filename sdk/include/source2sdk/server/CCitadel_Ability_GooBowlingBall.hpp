@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1090
+        // Size: 0x1098
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bIsRolling"
@@ -41,43 +41,43 @@ namespace source2sdk
         class CCitadel_Ability_GooBowlingBall : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x380]; // 0xb98
-            std::int32_t m_nAirJumpsLeft; // 0xf18            
+            uint8_t _pad0ba0[0x380]; // 0xba0
+            std::int32_t m_nAirJumpsLeft; // 0xf20            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             // metadata: MNetworkChangeCallback "OnIsRollingChanged"
-            bool m_bIsRolling; // 0xf1c            
-            uint8_t _pad0f1d[0x3]; // 0xf1d
+            bool m_bIsRolling; // 0xf24            
+            uint8_t _pad0f25[0x3]; // 0xf25
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             // m_hBall has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelViscousBall> m_hBall;
-            char m_hBall[0x4]; // 0xf20            
+            char m_hBall[0x4]; // 0xf28            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::client::EViscousBowlingBallState_t m_eRollingState; // 0xf24            
-            uint8_t _pad0f25[0x3]; // 0xf25
+            source2sdk::client::EViscousBowlingBallState_t m_eRollingState; // 0xf2c            
+            uint8_t _pad0f2d[0x3]; // 0xf2d
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flNextStateTime; // 0xf28            
+            source2sdk::entity2::GameTime_t m_flNextStateTime; // 0xf30            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flNextWallCheck; // 0xf2c            
+            source2sdk::entity2::GameTime_t m_flNextWallCheck; // 0xf34            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flRollStartTime; // 0xf30            
+            source2sdk::entity2::GameTime_t m_flRollStartTime; // 0xf38            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flWallExitTime; // 0xf34            
+            source2sdk::entity2::GameTime_t m_flWallExitTime; // 0xf3c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vecWallExitVelocity; // 0xf38            
-            uint8_t _pad0f44[0x14c];
+            Vector m_vecWallExitVelocity; // 0xf40            
+            uint8_t _pad0f4c[0x14c];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_GooBowlingBall because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_GooBowlingBall) == 0x1090);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_GooBowlingBall) == 0x1098);
     };
 };

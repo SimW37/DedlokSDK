@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe88
+        // Size: 0xe90
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_flCastTime"
@@ -32,33 +32,33 @@ namespace source2sdk
         class CCitadel_UtilityUpgrade_RocketBooster : public source2sdk::server::CCitadel_UtilityUpgrade_RocketBoots
         {
         public:
-            source2sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0xc20            
+            source2sdk::client::ParticleIndex_t m_nTargetingParticleIndex; // 0xc28            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnCanSlamDownChanged"
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flCastTime; // 0xc24            
+            source2sdk::entity2::GameTime_t m_flCastTime; // 0xc2c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bCrashingDown; // 0xc28            
+            bool m_bCrashingDown; // 0xc30            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bImpulseApplied; // 0xc29            
+            bool m_bImpulseApplied; // 0xc31            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bCanCrash; // 0xc2a            
-            uint8_t _pad0c2b[0x1]; // 0xc2b
+            bool m_bCanCrash; // 0xc32            
+            uint8_t _pad0c33[0x1]; // 0xc33
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vecCrashPosition; // 0xc2c            
+            Vector m_vecCrashPosition; // 0xc34            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vecCrashDirection; // 0xc38            
-            uint8_t _pad0c44[0x244];
+            Vector m_vecCrashDirection; // 0xc40            
+            uint8_t _pad0c4c[0x244];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_UtilityUpgrade_RocketBooster because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_UtilityUpgrade_RocketBooster) == 0xe88);
+        static_assert(sizeof(source2sdk::server::CCitadel_UtilityUpgrade_RocketBooster) == 0xe90);
     };
 };

@@ -18,21 +18,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd38
+        // Size: 0xd40
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Priest_Flashbang : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            source2sdk::client::ShotID_t m_tInitialShotID; // 0xb98            
-            Vector m_vLaunchPosition; // 0xb9c            
-            QAngle m_qLaunchAngle; // 0xba8            
-            uint8_t _pad0bb4[0x184];
+            source2sdk::client::ShotID_t m_tInitialShotID; // 0xba0            
+            Vector m_vLaunchPosition; // 0xba4            
+            QAngle m_qLaunchAngle; // 0xbb0            
+            uint8_t _pad0bbc[0x184];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Priest_Flashbang because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_Flashbang) == 0xd38);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_Flashbang) == 0xd40);
     };
 };

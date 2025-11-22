@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf10
+        // Size: 0xf18
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_NPCAbility_HealthNova : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d88[0x180]; // 0xd88
-            source2sdk::entity2::GameTime_t m_timeNextCast; // 0xf08            
-            uint8_t _pad0f0c[0x4];
+            uint8_t _pad0d90[0x180]; // 0xd90
+            source2sdk::entity2::GameTime_t m_timeNextCast; // 0xf10            
+            uint8_t _pad0f14[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_NPCAbility_HealthNova because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_NPCAbility_HealthNova) == 0xf10);
+        static_assert(sizeof(source2sdk::client::CCitadel_NPCAbility_HealthNova) == 0xf18);
     };
 };

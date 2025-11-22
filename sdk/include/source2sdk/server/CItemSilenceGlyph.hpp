@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc60
+        // Size: 0xc68
         // Has VTable
         #pragma pack(push, 1)
         class CItemSilenceGlyph : public source2sdk::server::CCitadel_Item
         {
         public:
-            uint8_t _pad0ba0[0xc0];
+            uint8_t _pad0ba8[0xc0];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CItemSilenceGlyph) == 0xc60);
+        static_assert(sizeof(source2sdk::server::CItemSilenceGlyph) == 0xc68);
     };
 };

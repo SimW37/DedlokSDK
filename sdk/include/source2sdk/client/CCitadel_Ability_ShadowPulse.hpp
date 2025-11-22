@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xed0
+        // Size: 0xed8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_ShadowPulse : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d88[0x148];
+            uint8_t _pad0d90[0x148];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_ShadowPulse) == 0xed0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_ShadowPulse) == 0xed8);
     };
 };

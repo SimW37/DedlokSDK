@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xda8
+        // Size: 0xdb0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bHasUsedCopiedUlt"
@@ -38,28 +38,28 @@ namespace source2sdk
         class CCitadel_Ability_Magician_CopyUlt : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x100]; // 0xb98
+            uint8_t _pad0ba0[0x100]; // 0xba0
             // metadata: MNetworkEnable
-            bool m_bHasUsedCopiedUlt; // 0xc98            
+            bool m_bHasUsedCopiedUlt; // 0xca0            
             // metadata: MNetworkEnable
-            bool m_bHasCopiedUlt; // 0xc99            
+            bool m_bHasCopiedUlt; // 0xca1            
             // metadata: MNetworkEnable
-            bool m_bIsModelSwapped; // 0xc9a            
-            uint8_t _pad0c9b[0x1]; // 0xc9b
+            bool m_bIsModelSwapped; // 0xca2            
+            uint8_t _pad0ca3[0x1]; // 0xca3
             // metadata: MNetworkEnable
             // m_pCopyUltimateAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelBaseAbility> m_pCopyUltimateAbility;
-            char m_pCopyUltimateAbility[0x4]; // 0xc9c            
+            char m_pCopyUltimateAbility[0x4]; // 0xca4            
             // metadata: MNetworkEnable
-            source2sdk::client::HeroID_t m_nCopiedHeroID; // 0xca0            
-            uint8_t _pad0ca4[0x4]; // 0xca4
-            source2sdk::client::ModelChange_t m_ModelChange; // 0xca8            
-            uint8_t _pad0d90[0x18];
+            source2sdk::client::HeroID_t m_nCopiedHeroID; // 0xca8            
+            uint8_t _pad0cac[0x4]; // 0xcac
+            source2sdk::client::ModelChange_t m_ModelChange; // 0xcb0            
+            uint8_t _pad0d98[0x18];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Magician_CopyUlt because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_CopyUlt) == 0xda8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_CopyUlt) == 0xdb0);
     };
 };

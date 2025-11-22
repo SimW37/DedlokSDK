@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc98
+        // Size: 0xca0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Vandal_Pillar : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x100];
+            uint8_t _pad0ba0[0x100];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Vandal_Pillar) == 0xc98);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Vandal_Pillar) == 0xca0);
     };
 };

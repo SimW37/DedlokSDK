@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xdd8
+        // Size: 0xde0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bBraceParamTriggered"
@@ -37,33 +37,33 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bBraceParamTriggered; // 0xb98            
-            uint8_t _pad0b99[0x3]; // 0xb99
+            bool m_bBraceParamTriggered; // 0xba0            
+            uint8_t _pad0ba1[0x3]; // 0xba1
             // metadata: MNetworkEnable
-            float m_flBoostYaw; // 0xb9c            
+            float m_flBoostYaw; // 0xba4            
             // metadata: MNetworkEnable
-            Vector m_vecCrashPosition; // 0xba0            
+            Vector m_vecCrashPosition; // 0xba8            
             // metadata: MNetworkEnable
-            Vector m_vecCrashDirection; // 0xbac            
+            Vector m_vecCrashDirection; // 0xbb4            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnLeapStateChanged"
-            source2sdk::client::ELeapState_t m_eLeapState; // 0xbb8            
-            uint8_t _pad0bb9[0x3]; // 0xbb9
+            source2sdk::client::ELeapState_t m_eLeapState; // 0xbc0            
+            uint8_t _pad0bc1[0x3]; // 0xbc1
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flStateEnterTime; // 0xbbc            
+            source2sdk::entity2::GameTime_t m_flStateEnterTime; // 0xbc4            
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelAutoScaledTime m_flNextStateTime; // 0xbc0            
+            source2sdk::server::CCitadelAutoScaledTime m_flNextStateTime; // 0xbc8            
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelAutoScaledTime m_flBoostEndTime; // 0xbd8            
-            uint8_t _pad0bf0[0x1cc]; // 0xbf0
-            Vector m_vecLastVel; // 0xdbc            
-            Vector m_vecCrashDownLastPos; // 0xdc8            
-            uint8_t _pad0dd4[0x4];
+            source2sdk::server::CCitadelAutoScaledTime m_flBoostEndTime; // 0xbe0            
+            uint8_t _pad0bf8[0x1cc]; // 0xbf8
+            Vector m_vecLastVel; // 0xdc4            
+            Vector m_vecCrashDownLastPos; // 0xdd0            
+            uint8_t _pad0ddc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Bull_Leap because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bull_Leap) == 0xdd8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bull_Leap) == 0xde0);
     };
 };

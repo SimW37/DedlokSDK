@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf00
+        // Size: 0xf08
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_nKillsEarned"
@@ -35,18 +35,18 @@ namespace source2sdk
         public:
             // m_vecCurrentTargets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecCurrentTargets;
-            char m_vecCurrentTargets[0x18]; // 0xb98            
-            uint8_t _pad0bb0[0x4]; // 0xbb0
+            char m_vecCurrentTargets[0x18]; // 0xba0            
+            uint8_t _pad0bb8[0x4]; // 0xbb8
             // metadata: MNetworkEnable
-            std::int32_t m_nKillsEarned; // 0xbb4            
+            std::int32_t m_nKillsEarned; // 0xbbc            
             // metadata: MNetworkEnable
-            std::int32_t m_nAssistsEarned; // 0xbb8            
-            uint8_t _pad0bbc[0x344];
+            std::int32_t m_nAssistsEarned; // 0xbc0            
+            uint8_t _pad0bc4[0x344];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Drifter_Hunger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Drifter_Hunger) == 0xf00);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Drifter_Hunger) == 0xf08);
     };
 };

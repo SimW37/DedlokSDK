@@ -18,21 +18,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xda8
+        // Size: 0xdb0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Bookworm_KnightBarrier : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x200]; // 0xb98
-            source2sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0xd98            
-            std::int32_t m_iPendingBonusTargets; // 0xd9c            
-            uint8_t _pad0da0[0x8];
+            uint8_t _pad0ba0[0x200]; // 0xba0
+            source2sdk::client::ParticleIndex_t m_nCastParticleIndex; // 0xda0            
+            std::int32_t m_iPendingBonusTargets; // 0xda4            
+            uint8_t _pad0da8[0x8];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Bookworm_KnightBarrier because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bookworm_KnightBarrier) == 0xda8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bookworm_KnightBarrier) == 0xdb0);
     };
 };

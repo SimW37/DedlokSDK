@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe58
+        // Size: 0xe60
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "Vector m_vLookTarget"
@@ -26,13 +26,13 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            Vector m_vLookTarget; // 0xd88            
-            uint8_t _pad0d94[0xc4];
+            Vector m_vLookTarget; // 0xd90            
+            uint8_t _pad0d9c[0xc4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Doorman_Hotel because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Doorman_Hotel) == 0xe58);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Doorman_Hotel) == 0xe60);
     };
 };

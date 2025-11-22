@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe30
+        // Size: 0xe38
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bLeaping"
@@ -28,21 +28,21 @@ namespace source2sdk
         class CCitadel_Ability_HornetLeap : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x2]; // 0xb98
+            uint8_t _pad0ba0[0x2]; // 0xba0
             // metadata: MNetworkEnable
-            bool m_bLeaping; // 0xb9a            
-            uint8_t _pad0b9b[0x1]; // 0xb9b
+            bool m_bLeaping; // 0xba2            
+            uint8_t _pad0ba3[0x1]; // 0xba3
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flLeapStartTime; // 0xb9c            
-            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0xba0            
-            uint8_t _pad0ba4[0x284]; // 0xba4
-            source2sdk::client::ParticleIndex_t m_TrailFX; // 0xe28            
-            uint8_t _pad0e2c[0x4];
+            source2sdk::entity2::GameTime_t m_flLeapStartTime; // 0xba4            
+            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0xba8            
+            uint8_t _pad0bac[0x284]; // 0xbac
+            source2sdk::client::ParticleIndex_t m_TrailFX; // 0xe30            
+            uint8_t _pad0e34[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_HornetLeap because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_HornetLeap) == 0xe30);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_HornetLeap) == 0xe38);
     };
 };

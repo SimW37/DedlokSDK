@@ -17,21 +17,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x10a8
+        // Size: 0x10b0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Trapper_SpiderJar : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            Vector m_vLaunchPosition; // 0xd88            
-            QAngle m_qLaunchAngle; // 0xd94            
-            bool m_bHasMadeSpiders; // 0xda0            
-            uint8_t _pad0da1[0x307];
+            Vector m_vLaunchPosition; // 0xd90            
+            QAngle m_qLaunchAngle; // 0xd9c            
+            bool m_bHasMadeSpiders; // 0xda8            
+            uint8_t _pad0da9[0x307];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Trapper_SpiderJar because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Trapper_SpiderJar) == 0x10a8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Trapper_SpiderJar) == 0x10b0);
     };
 };

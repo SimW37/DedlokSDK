@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc38
+        // Size: 0xc40
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bHasVictims"
@@ -28,17 +28,17 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bHasVictims; // 0xb98            
-            uint8_t _pad0b99[0x7]; // 0xb99
+            bool m_bHasVictims; // 0xba0            
+            uint8_t _pad0ba1[0x7]; // 0xba1
             // m_vecVictimModifiers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CModifierHandleTyped<source2sdk::server::CCitadelModifier>> m_vecVictimModifiers;
-            char m_vecVictimModifiers[0x18]; // 0xba0            
-            uint8_t _pad0bb8[0x80];
+            char m_vecVictimModifiers[0x18]; // 0xba8            
+            uint8_t _pad0bc0[0x80];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Mirage_SandPhantom because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Mirage_SandPhantom) == 0xc38);
+        static_assert(sizeof(source2sdk::server::CAbility_Mirage_SandPhantom) == 0xc40);
     };
 };

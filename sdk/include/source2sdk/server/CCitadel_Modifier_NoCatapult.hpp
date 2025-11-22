@@ -3,32 +3,31 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/client/CCitadelModifier.hpp"
+#include "source2sdk/server/CCitadelModifier.hpp"
 
 // /////////////////////////////////////////////////////////////
-// Module: client
+// Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
 namespace source2sdk
 {
-    namespace client
+    namespace server
     {
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x100
+        // Size: 0xc8
         // Has VTable
         #pragma pack(push, 1)
-        class CCitadel_Modifier_Frank_ElectricBulletBuff : public source2sdk::client::CCitadelModifier
+        class CCitadel_Modifier_NoCatapult : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x40];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Frank_ElectricBulletBuff) == 0x100);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_NoCatapult) == 0xc8);
     };
 };

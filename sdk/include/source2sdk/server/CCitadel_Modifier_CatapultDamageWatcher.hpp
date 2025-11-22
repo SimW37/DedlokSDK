@@ -17,18 +17,17 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x108
+        // Size: 0xc8
         // Has VTable
         #pragma pack(push, 1)
-        class CCitadel_Modifier_Frank_ElectricBulletBuff : public source2sdk::server::CCitadelModifier
+        class CCitadel_Modifier_CatapultDamageWatcher : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c8[0x40];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Frank_ElectricBulletBuff) == 0x108);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_CatapultDamageWatcher) == 0xc8);
     };
 };

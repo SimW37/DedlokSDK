@@ -27,7 +27,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1080
+        // Size: 0x1088
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bShadowFormCast"
@@ -52,78 +52,78 @@ namespace source2sdk
         class CCitadel_Ability_FlyingStrike : public source2sdk::client::CCitadelBaseYamatoAbility
         {
         public:
-            uint8_t _pad0d90[0x28]; // 0xd90
-            source2sdk::client::SatVolumeIndex_t m_desatVolIdx; // 0xdb8            
+            uint8_t _pad0d98[0x28]; // 0xd98
+            source2sdk::client::SatVolumeIndex_t m_desatVolIdx; // 0xdc0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bShadowFormCast; // 0xdbc            
-            uint8_t _pad0dbd[0x3]; // 0xdbd
-            // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            // metadata: MNetworkEncoder "coord"
-            Vector m_vYamatoCastPos; // 0xdc0            
+            bool m_bShadowFormCast; // 0xdc4            
+            uint8_t _pad0dc5[0x3]; // 0xdc5
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             // metadata: MNetworkEncoder "coord"
-            Vector m_vTargetCastPos; // 0xdcc            
+            Vector m_vYamatoCastPos; // 0xdc8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flFlyingToTargetStartTime; // 0xdd8            
+            // metadata: MNetworkEncoder "coord"
+            Vector m_vTargetCastPos; // 0xdd4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flEndAttackTime; // 0xddc            
-            // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flGrappleStartTime; // 0xde0            
-            // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flGrappleArriveTime; // 0xde4            
+            source2sdk::entity2::GameTime_t m_flFlyingToTargetStartTime; // 0xde0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flAttackLatchTime; // 0xde8            
+            source2sdk::entity2::GameTime_t m_flEndAttackTime; // 0xde4            
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTime_t m_flGrappleStartTime; // 0xde8            
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTime_t m_flGrappleArriveTime; // 0xdec            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vAttackLatchPos; // 0xdec            
+            source2sdk::entity2::GameTime_t m_flAttackLatchTime; // 0xdf0            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            Vector m_vAttackLatchPos; // 0xdf4            
             // metadata: MNetworkEnable
             // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hTarget;
-            char m_hTarget[0x4]; // 0xdf8            
+            char m_hTarget[0x4]; // 0xe00            
             // metadata: MNetworkEnable
-            bool m_bIsTargetAlly; // 0xdfc            
-            uint8_t _pad0dfd[0x3]; // 0xdfd
+            bool m_bIsTargetAlly; // 0xe04            
+            uint8_t _pad0e05[0x3]; // 0xe05
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flGrappleShotAttackTime; // 0xe00            
-            uint8_t _pad0e04[0x4]; // 0xe04
+            source2sdk::entity2::GameTime_t m_flGrappleShotAttackTime; // 0xe08            
+            uint8_t _pad0e0c[0x4]; // 0xe0c
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             // metadata: MNetworkEncoder "coord"
             // metadata: MNetworkChangeCallback "OnPathChanged"
-            Vector m_rgPath[20]; // 0xe08            
+            Vector m_rgPath[20]; // 0xe10            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int32_t m_nPathIdx; // 0xef8            
+            std::int32_t m_nPathIdx; // 0xf00            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int32_t m_nPathSize; // 0xefc            
+            std::int32_t m_nPathSize; // 0xf04            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            float m_flPathLength; // 0xf00            
+            float m_flPathLength; // 0xf08            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vFlyingInitialOffsetToPath; // 0xf04            
+            Vector m_vFlyingInitialOffsetToPath; // 0xf0c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            float flDistFlown; // 0xf10            
-            Vector m_vLastSafePos; // 0xf14            
-            uint8_t _pad0f20[0x100]; // 0xf20
-            source2sdk::client::ParticleIndex_t m_nGrappleTravelEffect; // 0x1020            
-            uint8_t _pad1024[0x54]; // 0x1024
-            bool m_bPathDirty; // 0x1078            
-            uint8_t _pad1079[0x7];
+            float flDistFlown; // 0xf18            
+            Vector m_vLastSafePos; // 0xf1c            
+            uint8_t _pad0f28[0x100]; // 0xf28
+            source2sdk::client::ParticleIndex_t m_nGrappleTravelEffect; // 0x1028            
+            uint8_t _pad102c[0x54]; // 0x102c
+            bool m_bPathDirty; // 0x1080            
+            uint8_t _pad1081[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_FlyingStrike because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_FlyingStrike) == 0x1080);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_FlyingStrike) == 0x1088);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1100
+        // Size: 0x1108
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_TrooperZipLine : public source2sdk::server::CCitadel_Ability_ZipLine
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_TrooperZipLine) == 0x1100);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_TrooperZipLine) == 0x1108);
     };
 };

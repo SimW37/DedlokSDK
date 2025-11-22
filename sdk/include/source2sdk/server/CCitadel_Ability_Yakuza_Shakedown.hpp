@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xba0
+        // Size: 0xba8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Yakuza_Shakedown : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            std::int32_t m_IgnoreChannelSlow; // 0xb98            
-            uint8_t _pad0b9c[0x4];
+            std::int32_t m_IgnoreChannelSlow; // 0xba0            
+            uint8_t _pad0ba4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Yakuza_Shakedown because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Yakuza_Shakedown) == 0xba0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Yakuza_Shakedown) == 0xba8);
     };
 };

@@ -27,7 +27,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe38
+        // Size: 0xe40
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bHasTurretReady"
@@ -38,27 +38,27 @@ namespace source2sdk
         class CCitadel_Ability_TurretClone : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0b98[0x140]; // 0xb98
+            uint8_t _pad0ba0[0x140]; // 0xba0
             // metadata: MNetworkEnable
-            bool m_bHasTurretReady; // 0xcd8            
-            uint8_t _pad0cd9[0x3]; // 0xcd9
+            bool m_bHasTurretReady; // 0xce0            
+            uint8_t _pad0ce1[0x3]; // 0xce1
             // metadata: MNetworkEnable
-            std::int32_t m_iCurrentSwapCount; // 0xcdc            
+            std::int32_t m_iCurrentSwapCount; // 0xce4            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flTurretExpireTime; // 0xce0            
-            uint8_t _pad0ce4[0x4]; // 0xce4
-            source2sdk::client::ShotID_t m_nLastBulletShotID; // 0xce8            
+            source2sdk::entity2::GameTime_t m_flTurretExpireTime; // 0xce8            
+            uint8_t _pad0cec[0x4]; // 0xcec
+            source2sdk::client::ShotID_t m_nLastBulletShotID; // 0xcf0            
             // metadata: MNetworkEnable
             // m_pActiveTurret has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_pActiveTurret;
-            char m_pActiveTurret[0x4]; // 0xcec            
-            source2sdk::client::ParticleIndex_t m_nTurretFXIndex; // 0xcf0            
-            uint8_t _pad0cf4[0x144];
+            char m_pActiveTurret[0x4]; // 0xcf4            
+            source2sdk::client::ParticleIndex_t m_nTurretFXIndex; // 0xcf8            
+            uint8_t _pad0cfc[0x144];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_TurretClone because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_TurretClone) == 0xe38);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_TurretClone) == 0xe40);
     };
 };
