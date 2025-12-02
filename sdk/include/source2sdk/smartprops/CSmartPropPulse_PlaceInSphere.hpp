@@ -24,7 +24,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "SmartPropEval"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "@çŸ§˛"
+        // static metadata: MPulseCellOutflowHookInfo "@çø„¯"
         // static metadata: MPropertyFriendlyName "Place In Radius"
         // static metadata: MPropertyDescription "An element which places multiple instances of its child elements within a radius."
         #pragma pack(push, 1)

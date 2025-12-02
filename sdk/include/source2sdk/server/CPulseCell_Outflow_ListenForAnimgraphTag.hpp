@@ -24,7 +24,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "ServerEntity"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "XžË¶þ"
+        // static metadata: MPulseCellOutflowHookInfo "È½3Dø"
         // static metadata: MPropertyFriendlyName "Listen for AnimGraph Tag"
         // static metadata: MPropertyDescription "Creates new cursors for when an animgraph tag is handled. Will listen until canceled."
         // static metadata: MPulseEditorSubHeaderText

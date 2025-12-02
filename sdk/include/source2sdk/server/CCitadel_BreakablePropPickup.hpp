@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb50
+        // Size: 0xb48
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
@@ -64,18 +64,16 @@ namespace source2sdk
             // m_hVacuumTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelPlayerPawn> m_hVacuumTarget;
             char m_hVacuumTarget[0x4]; // 0xb08            
-            bool m_bPlayersCanTouch; // 0xb0c            
-            uint8_t _pad0b0d[0x1f]; // 0xb0d
-            source2sdk::entity2::GameTime_t m_flVacuumStartTime; // 0xb2c            
-            Vector m_vImpactVel; // 0xb30            
-            Vector m_vImpactPos; // 0xb3c            
-            source2sdk::entity2::GameTime_t m_flImpactTime; // 0xb48            
-            uint8_t _pad0b4c[0x4];
+            uint8_t _pad0b0c[0x1c]; // 0xb0c
+            source2sdk::entity2::GameTime_t m_flVacuumStartTime; // 0xb28            
+            Vector m_vImpactVel; // 0xb2c            
+            Vector m_vImpactPos; // 0xb38            
+            source2sdk::entity2::GameTime_t m_flImpactTime; // 0xb44            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_BreakablePropPickup because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_BreakablePropPickup) == 0xb50);
+        static_assert(sizeof(source2sdk::server::CCitadel_BreakablePropPickup) == 0xb48);
     };
 };

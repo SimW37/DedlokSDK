@@ -24,7 +24,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "ServerEntity"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "0 Ë¶þ"
+        // static metadata: MPulseCellOutflowHookInfo " ¿3Dø"
         // static metadata: MPropertyFriendlyName "Start Sound Event"
         // static metadata: MPropertyDescription "Starts a sound event, returns a handle that can be used to stop it."
         #pragma pack(push, 1)

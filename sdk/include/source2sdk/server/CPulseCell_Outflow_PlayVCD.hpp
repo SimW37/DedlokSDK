@@ -23,7 +23,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "ServerEntity"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "ð¡Ë¶þ"
+        // static metadata: MPulseCellOutflowHookInfo "`Á3Dø"
         // static metadata: MPulseCellWithCustomDocNode
         #pragma pack(push, 1)
         class CPulseCell_Outflow_PlayVCD : public source2sdk::server::CPulseCell_Outflow_PlaySceneBase
