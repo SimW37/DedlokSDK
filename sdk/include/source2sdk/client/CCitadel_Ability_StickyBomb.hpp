@@ -25,12 +25,13 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf20
+        // Size: 0xfa8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EHANDLE m_hAutoTarget"
         // static metadata: MNetworkVarNames "GameTime_t m_flHookEndTime"
-        // static metadata: MNetworkVarNames "float m_flBombBonus"
+        // static metadata: MNetworkVarNames "float m_flBombBonusHits"
+        // static metadata: MNetworkVarNames "float m_flBombBonusKills"
         #pragma pack(push, 1)
         class CCitadel_Ability_StickyBomb : public source2sdk::client::C_CitadelBaseAbility
         {
@@ -43,13 +44,15 @@ namespace source2sdk
             // metadata: MNetworkEnable
             source2sdk::entity2::GameTime_t m_flHookEndTime; // 0xd98            
             // metadata: MNetworkEnable
-            float m_flBombBonus; // 0xd9c            
-            uint8_t _pad0da0[0x180];
+            float m_flBombBonusHits; // 0xd9c            
+            // metadata: MNetworkEnable
+            float m_flBombBonusKills; // 0xda0            
+            uint8_t _pad0da4[0x204];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_StickyBomb because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_StickyBomb) == 0xf20);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_StickyBomb) == 0xfa8);
     };
 };

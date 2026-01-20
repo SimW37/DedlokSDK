@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1700
+        // Size: 0x1708
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -25,13 +25,13 @@ namespace source2sdk
         class CCitadelYamatoBaseVData : public source2sdk::server::CitadelAbilityVData
         {
         public:
-            float m_flShadowFormSpeed; // 0x16f8            
-            uint8_t _pad16fc[0x4];
+            float m_flShadowFormSpeed; // 0x1700            
+            uint8_t _pad1704[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelYamatoBaseVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelYamatoBaseVData) == 0x1700);
+        static_assert(sizeof(source2sdk::server::CCitadelYamatoBaseVData) == 0x1708);
     };
 };

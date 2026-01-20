@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1980
+        // Size: 0x1988
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,31 +31,31 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SelfModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SelfModifier;
-            char m_SelfModifier[0x10]; // 0x16f8            
+            char m_SelfModifier[0x10]; // 0x1700            
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x1708            
+            char m_SlowModifier[0x10]; // 0x1710            
             // metadata: MPropertyStartGroup "Gameplay"
             // m_StartingWeaponAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CSubclassName<4> m_StartingWeaponAbility;
-            char m_StartingWeaponAbility[0x10]; // 0x1718            
+            char m_StartingWeaponAbility[0x10]; // 0x1720            
             // m_NewWeaponAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CSubclassName<4> m_NewWeaponAbility;
-            char m_NewWeaponAbility[0x10]; // 0x1728            
+            char m_NewWeaponAbility[0x10]; // 0x1730            
             // metadata: MPropertyStartGroup "Visuals"
             // m_CrossbowEntImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrossbowEntImpactParticle;
-            char m_CrossbowEntImpactParticle[0xe0]; // 0x1738            
+            char m_CrossbowEntImpactParticle[0xe0]; // 0x1740            
             // m_CrossbowImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrossbowImpactParticle;
-            char m_CrossbowImpactParticle[0xe0]; // 0x1818            
+            char m_CrossbowImpactParticle[0xe0]; // 0x1820            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSwapWeapons; // 0x18f8            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSwapWeapons; // 0x1900            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Priest_WeaponSwapVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_WeaponSwapVData) == 0x1980);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_WeaponSwapVData) == 0x1988);
     };
 };

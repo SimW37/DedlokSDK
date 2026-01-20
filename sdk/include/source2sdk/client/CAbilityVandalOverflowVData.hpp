@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17f8
+        // Size: 0x1800
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,18 +30,18 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_LiftModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_LiftModifier;
-            char m_LiftModifier[0x10]; // 0x16f8            
+            char m_LiftModifier[0x10]; // 0x1700            
             // metadata: MPropertyStartGroup "Visuals"
             // m_TargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle;
-            char m_TargetParticle[0xe0]; // 0x1708            
+            char m_TargetParticle[0xe0]; // 0x1710            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_TargetCastSound; // 0x17e8            
+            CSoundEventName m_TargetCastSound; // 0x17f0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityVandalOverflowVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityVandalOverflowVData) == 0x17f8);
+        static_assert(sizeof(source2sdk::client::CAbilityVandalOverflowVData) == 0x1800);
     };
 };

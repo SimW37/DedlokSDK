@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 89
+        // Enumerator count: 90
         // Alignment: 4
         // Size: 0x4
         enum class EModifierEvent : std::uint32_t
@@ -105,8 +105,9 @@ namespace source2sdk
             MODIFIER_EVENT_CANCEL_ROPE_CLIMB = 0x53,
             MODIFIER_EVENT_PORTALLED = 0x54,
             MODIFIER_EVENT_TELEPORTED = 0x55,
+            MODIFIER_EVENT_REPLICATED_HEAL = 0x56,
             // MPropertySuppressEnumerator
-            MODIFIER_EVENT_COUNT = 0x56,
+            MODIFIER_EVENT_COUNT = 0x57,
             // MPropertySuppressEnumerator
             MODIFIER_EVENT_INVALID = 0xff,
         };

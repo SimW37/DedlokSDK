@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1938
+        // Size: 0x1940
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,31 +31,31 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_BeamParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BeamParticle;
-            char m_BeamParticle[0xe0]; // 0x16f8            
+            char m_BeamParticle[0xe0]; // 0x1700            
             // m_HitParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HitParticle;
-            char m_HitParticle[0xe0]; // 0x17d8            
+            char m_HitParticle[0xe0]; // 0x17e0            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x18b8            
+            char m_SlowModifier[0x10]; // 0x18c0            
             // m_BuildupModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadel_Modifier_Base_Buildup> m_BuildupModifier;
-            char m_BuildupModifier[0x10]; // 0x18c8            
+            char m_BuildupModifier[0x10]; // 0x18d0            
             // m_BuildupProcModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BuildupProcModifier;
-            char m_BuildupProcModifier[0x10]; // 0x18d8            
+            char m_BuildupProcModifier[0x10]; // 0x18e0            
             // metadata: MPropertyStartGroup "Sound"
-            CSoundEventName m_BeamStartSound; // 0x18e8            
-            CSoundEventName m_BeamStopSound; // 0x18f8            
-            CSoundEventName m_BeamPointStartLoopSound; // 0x1908            
-            CSoundEventName m_BeamPointEndLoopSound; // 0x1918            
-            CSoundEventName m_BeamPointClosestLoopSound; // 0x1928            
+            CSoundEventName m_BeamStartSound; // 0x18f0            
+            CSoundEventName m_BeamStopSound; // 0x1900            
+            CSoundEventName m_BeamPointStartLoopSound; // 0x1910            
+            CSoundEventName m_BeamPointEndLoopSound; // 0x1920            
+            CSoundEventName m_BeamPointClosestLoopSound; // 0x1930            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_IceBeamVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_IceBeamVData) == 0x1938);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_IceBeamVData) == 0x1940);
     };
 };

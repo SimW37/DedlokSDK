@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1980
+        // Size: 0x1988
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,63 +31,63 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_NoDrawModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_NoDrawModifier;
-            char m_NoDrawModifier[0x10]; // 0x16f8            
+            char m_NoDrawModifier[0x10]; // 0x1700            
             // m_FreezeModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_FreezeModifier;
-            char m_FreezeModifier[0x10]; // 0x1708            
+            char m_FreezeModifier[0x10]; // 0x1710            
             // m_HotelModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_HotelModifier;
-            char m_HotelModifier[0x10]; // 0x1718            
+            char m_HotelModifier[0x10]; // 0x1720            
             // m_DamageModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DamageModifier;
-            char m_DamageModifier[0x10]; // 0x1728            
+            char m_DamageModifier[0x10]; // 0x1730            
             // m_TeleportFXModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_TeleportFXModifier;
-            char m_TeleportFXModifier[0x10]; // 0x1738            
+            char m_TeleportFXModifier[0x10]; // 0x1740            
             // m_PreTeleportModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_PreTeleportModifier;
-            char m_PreTeleportModifier[0x10]; // 0x1748            
+            char m_PreTeleportModifier[0x10]; // 0x1750            
             // m_UnstoppableWhileChannelingModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_UnstoppableWhileChannelingModifier;
-            char m_UnstoppableWhileChannelingModifier[0x10]; // 0x1758            
+            char m_UnstoppableWhileChannelingModifier[0x10]; // 0x1760            
             // m_ImposterModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadel_Modifier_Doorman_Hotel_Imposter> m_ImposterModifier;
-            char m_ImposterModifier[0x10]; // 0x1768            
+            char m_ImposterModifier[0x10]; // 0x1770            
             // metadata: MPropertyStartGroup "Visuals"
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x1778            
+            char m_CastParticle[0xe0]; // 0x1780            
             // m_ChannelStartParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChannelStartParticle;
-            char m_ChannelStartParticle[0xe0]; // 0x1858            
+            char m_ChannelStartParticle[0xe0]; // 0x1860            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strLateHitConfirmSound; // 0x1938            
-            CSoundEventName m_strEscapeHitConfirmSound; // 0x1948            
+            CSoundEventName m_strLateHitConfirmSound; // 0x1940            
+            CSoundEventName m_strEscapeHitConfirmSound; // 0x1950            
             // metadata: MPropertyStartGroup "Gameplay"
             // metadata: MPropertyDescription "How long to delay triggering the relay in the hotel after cast on a target"
-            float m_flSequenceTriggerOffset; // 0x1958            
+            float m_flSequenceTriggerOffset; // 0x1960            
             // metadata: MPropertyDescription "Delay after casting before teleporting to the hotel"
-            float m_flTeleportToHotelDelay; // 0x195c            
+            float m_flTeleportToHotelDelay; // 0x1964            
             // metadata: MPropertyDescription "Delay after reaching the exit (or failing to) before teleporting back to source"
-            float m_flTeleportToSourceDelay; // 0x1960            
+            float m_flTeleportToSourceDelay; // 0x1968            
             // metadata: MPropertyDescription "Delay after teleporting to the source before control is given back to the player. This period is for the player to get their bearings"
-            float m_flPostSourceTeleportHold; // 0x1964            
+            float m_flPostSourceTeleportHold; // 0x196c            
             // metadata: MPropertyDescription "How long the face to black should be for the teleports"
-            float m_flFadeToBlackDuration; // 0x1968            
+            float m_flFadeToBlackDuration; // 0x1970            
             // metadata: MPropertyDescription "Doorman's max speed while channeling.  The victim's is specified in the pre-teleport modifier."
-            float m_flDoormanGroundSpeedMax; // 0x196c            
+            float m_flDoormanGroundSpeedMax; // 0x1974            
             // metadata: MPropertyDescription "Doorman's max air speed while channeling.  The victim's is specified in the pre-teleport modifier."
-            float m_flDoormanAirSpeedMax; // 0x1970            
+            float m_flDoormanAirSpeedMax; // 0x1978            
             // metadata: MPropertyDescription "Doorman's fall speed while channeling.  The victim's is specified in the pre-teleport modifier."
-            float m_flDoormanFallSpeedMax; // 0x1974            
+            float m_flDoormanFallSpeedMax; // 0x197c            
             // metadata: MPropertyDescription "Doorman's air drag while channeling.  The victim's is specified in the pre-teleport modifier."
-            float m_flDoormanAirDrag; // 0x1978            
-            uint8_t _pad197c[0x4];
+            float m_flDoormanAirDrag; // 0x1980            
+            uint8_t _pad1984[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Doorman_Hotel_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Doorman_Hotel_VData) == 0x1980);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Doorman_Hotel_VData) == 0x1988);
     };
 };

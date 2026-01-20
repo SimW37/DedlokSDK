@@ -69,7 +69,7 @@ namespace source2sdk
             k_EUserMsg_CallCheaterVote = 0x162,
             k_EUserMsg_MeleeHit = 0x163,
             k_EUserMsg_FlexSlotUnlocked = 0x164,
-            k_EUserMsg_SeasonalAchievementUnlocked = 0x165,
+            k_EUserMsg_SeasonalKill = 0x165,
             k_EUserMsg_MusicQueue = 0x166,
             k_EUserMsg_AG2ParamTrigger = 0x167,
             k_EUserMsg_ItemPurchaseNotification = 0x168,

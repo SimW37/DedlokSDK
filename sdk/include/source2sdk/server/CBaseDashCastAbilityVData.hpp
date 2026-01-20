@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1780
+        // Size: 0x1788
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,31 +27,31 @@ namespace source2sdk
         public:
             // m_AbilityToTrigger has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CSubclassName<4> m_AbilityToTrigger;
-            char m_AbilityToTrigger[0x10]; // 0x16f8            
+            char m_AbilityToTrigger[0x10]; // 0x1700            
             // metadata: MPropertyDescription "How big of a trigger to use when tracing for targets"
-            float m_flDashCastTriggerRadius; // 0x1708            
+            float m_flDashCastTriggerRadius; // 0x1710            
             // metadata: MPropertyDescription "How fast the dash should go.  When using the curve, the dash will travel this speen when y=1"
-            float m_flDashSpeed; // 0x170c            
+            float m_flDashSpeed; // 0x1714            
             // metadata: MPropertyDescription "When true, speed will be set to 0 when the dash cast ends"
-            bool m_bSnapToZeroSpeedOnEnd; // 0x1710            
+            bool m_bSnapToZeroSpeedOnEnd; // 0x1718            
             // metadata: MPropertyDescription "When true, use the curve below to scale the speed of the dash across the distance."
-            bool m_bUseCurveToDefineSpeed; // 0x1711            
-            uint8_t _pad1712[0x6]; // 0x1712
+            bool m_bUseCurveToDefineSpeed; // 0x1719            
+            uint8_t _pad171a[0x6]; // 0x171a
             // metadata: MPropertySuppressExpr "m_bUseCurveToDefineSpeed == false"
-            CPiecewiseCurve m_MovementSpeedCurve; // 0x1718            
+            CPiecewiseCurve m_MovementSpeedCurve; // 0x1720            
             // metadata: MPropertySuppressField
-            float m_flMovementSpeedCurveAvgSpeed; // 0x1758            
-            uint8_t _pad175c[0x4]; // 0x175c
+            float m_flMovementSpeedCurveAvgSpeed; // 0x1760            
+            uint8_t _pad1764[0x4]; // 0x1764
             // metadata: MPropertyStartGroup "Sounds"
             // metadata: MPropertyDescription "Sound to play if we hit a target."
-            CSoundEventName m_strTargetHitSound; // 0x1760            
+            CSoundEventName m_strTargetHitSound; // 0x1768            
             // metadata: MPropertyDescription "Sound to play if miss entirely.  Only the caster hears it."
-            CSoundEventName m_strMissSound; // 0x1770            
+            CSoundEventName m_strMissSound; // 0x1778            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CBaseDashCastAbilityVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CBaseDashCastAbilityVData) == 0x1780);
+        static_assert(sizeof(source2sdk::server::CBaseDashCastAbilityVData) == 0x1788);
     };
 };

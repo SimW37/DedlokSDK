@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18d8
+        // Size: 0x18e0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_TargetDebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_TargetDebuffModifier;
-            char m_TargetDebuffModifier[0x10]; // 0x16f8            
+            char m_TargetDebuffModifier[0x10]; // 0x1700            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x1708            
+            char m_ExplodeParticle[0xe0]; // 0x1710            
             // m_RetargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RetargetParticle;
-            char m_RetargetParticle[0xe0]; // 0x17e8            
+            char m_RetargetParticle[0xe0]; // 0x17f0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strRedirect; // 0x18c8            
+            CSoundEventName m_strRedirect; // 0x18d0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Magician_MagicBoltVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_MagicBoltVData) == 0x18d8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_MagicBoltVData) == 0x18e0);
     };
 };

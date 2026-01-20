@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18f8
+        // Size: 0x1900
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,27 +30,27 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_CasterModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_CasterModifier;
-            char m_CasterModifier[0x10]; // 0x16f8            
+            char m_CasterModifier[0x10]; // 0x1700            
             // m_TargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_TargetModifier;
-            char m_TargetModifier[0x10]; // 0x1708            
+            char m_TargetModifier[0x10]; // 0x1710            
             // m_TargetRevealModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_TargetRevealModifier;
-            char m_TargetRevealModifier[0x10]; // 0x1718            
+            char m_TargetRevealModifier[0x10]; // 0x1720            
             // metadata: MPropertyStartGroup "Visuals"
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x1728            
+            char m_CastParticle[0xe0]; // 0x1730            
             // m_CastDelayParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastDelayParticle;
-            char m_CastDelayParticle[0xe0]; // 0x1808            
+            char m_CastDelayParticle[0xe0]; // 0x1810            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_HitConfirmSound; // 0x18e8            
+            CSoundEventName m_HitConfirmSound; // 0x18f0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Drifter_Darkness_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Drifter_Darkness_VData) == 0x18f8);
+        static_assert(sizeof(source2sdk::server::CAbility_Drifter_Darkness_VData) == 0x1900);
     };
 };

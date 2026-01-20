@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1848
+        // Size: 0x1850
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,31 +30,31 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_FireRateSlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_FireRateSlowModifier;
-            char m_FireRateSlowModifier[0x10]; // 0x16f8            
+            char m_FireRateSlowModifier[0x10]; // 0x1700            
             // m_TetheredModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_TetheredModifier;
-            char m_TetheredModifier[0x10]; // 0x1708            
+            char m_TetheredModifier[0x10]; // 0x1710            
             // m_PullModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_PullModifier;
-            char m_PullModifier[0x10]; // 0x1718            
+            char m_PullModifier[0x10]; // 0x1720            
             // m_WaitingToPullModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_WaitingToPullModifier;
-            char m_WaitingToPullModifier[0x10]; // 0x1728            
+            char m_WaitingToPullModifier[0x10]; // 0x1730            
             // m_UnstoppableModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_UnstoppableModifier;
-            char m_UnstoppableModifier[0x10]; // 0x1738            
+            char m_UnstoppableModifier[0x10]; // 0x1740            
             // metadata: MPropertyStartGroup "Visual"
             // m_RopeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_RopeParticle;
-            char m_RopeParticle[0xe0]; // 0x1748            
+            char m_RopeParticle[0xe0]; // 0x1750            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strPullSound; // 0x1828            
-            CSoundEventName m_strTimerSound; // 0x1838            
+            CSoundEventName m_strPullSound; // 0x1830            
+            CSoundEventName m_strTimerSound; // 0x1840            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityPunkgoatTetherVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityPunkgoatTetherVData) == 0x1848);
+        static_assert(sizeof(source2sdk::server::CAbilityPunkgoatTetherVData) == 0x1850);
     };
 };

@@ -23,7 +23,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "SmartPropEval"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "Ðh¿ãø"
+        // static metadata: MPulseCellOutflowHookInfo "àh¤ù"
         // static metadata: MPropertyFriendlyName "Create Sizer"
         // static metadata: MPropertyDescription "Create a sizer that will be displayed at the current location, allowing the user to manipulate the specified set of size values."
         // static metadata: MVDataClassGroup

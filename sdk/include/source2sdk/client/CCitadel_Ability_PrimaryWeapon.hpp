@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xfa0
+        // Size: 0xf98
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_flLastReloadStartTime"
@@ -174,13 +174,12 @@ namespace source2sdk
             source2sdk::entity2::GameTime_t m_flSecondaryMuzzleResetTime; // 0xf58            
             std::int32_t m_nRandomStreak; // 0xf5c            
             std::int32_t m_nLastUsedMuzzleIndex; // 0xf60            
-            float m_flZoomFraction; // 0xf64            
-            uint8_t _pad0f68[0x38];
+            uint8_t _pad0f64[0x34];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_PrimaryWeapon because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_PrimaryWeapon) == 0xfa0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_PrimaryWeapon) == 0xf98);
     };
 };

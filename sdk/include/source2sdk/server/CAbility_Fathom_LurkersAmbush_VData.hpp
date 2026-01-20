@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1818
+        // Size: 0x1820
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,24 +31,24 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_ChargeUpParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeUpParticle;
-            char m_ChargeUpParticle[0xe0]; // 0x16f8            
+            char m_ChargeUpParticle[0xe0]; // 0x1700            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_InvisModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadel_Modifier_LurkersAmbush_Invis> m_InvisModifier;
-            char m_InvisModifier[0x10]; // 0x17d8            
+            char m_InvisModifier[0x10]; // 0x17e0            
             // m_RegenModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_RegenModifier;
-            char m_RegenModifier[0x10]; // 0x17e8            
+            char m_RegenModifier[0x10]; // 0x17f0            
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x17f8            
+            char m_DebuffModifier[0x10]; // 0x1800            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strSwapStarted; // 0x1808            
+            CSoundEventName m_strSwapStarted; // 0x1810            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Fathom_LurkersAmbush_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Fathom_LurkersAmbush_VData) == 0x1818);
+        static_assert(sizeof(source2sdk::server::CAbility_Fathom_LurkersAmbush_VData) == 0x1820);
     };
 };

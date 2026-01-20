@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x19c8
+        // Size: 0x19d0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,25 +30,25 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_TargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_TargetModifier;
-            char m_TargetModifier[0x10]; // 0x16f8            
+            char m_TargetModifier[0x10]; // 0x1700            
             // metadata: MPropertyStartGroup "Visuals"
             // m_AreaParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaParticle;
-            char m_AreaParticle[0xe0]; // 0x1708            
+            char m_AreaParticle[0xe0]; // 0x1710            
             // m_ChargeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeParticle;
-            char m_ChargeParticle[0xe0]; // 0x17e8            
+            char m_ChargeParticle[0xe0]; // 0x17f0            
             // m_TargetDamageParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetDamageParticle;
-            char m_TargetDamageParticle[0xe0]; // 0x18c8            
+            char m_TargetDamageParticle[0xe0]; // 0x18d0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strHitConfirmSound; // 0x19a8            
-            CSoundEventName m_strPointBlankSweetenerSound; // 0x19b8            
+            CSoundEventName m_strHitConfirmSound; // 0x19b0            
+            CSoundEventName m_strPointBlankSweetenerSound; // 0x19c0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Drifter_BloodBlast_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbility_Drifter_BloodBlast_VData) == 0x19c8);
+        static_assert(sizeof(source2sdk::client::CAbility_Drifter_BloodBlast_VData) == 0x19d0);
     };
 };

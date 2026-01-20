@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1858
+        // Size: 0x1860
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,25 +30,25 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x16f8            
+            char m_DebuffModifier[0x10]; // 0x1700            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x1708            
+            char m_ImpactParticle[0xe0]; // 0x1710            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_TargetCastSound; // 0x17e8            
-            CSoundEventName m_strImpactSound; // 0x17f8            
+            CSoundEventName m_TargetCastSound; // 0x17f0            
+            CSoundEventName m_strImpactSound; // 0x1800            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flMinProjectileTravelTime; // 0x1808            
-            float m_flDistanceBiasForCaster; // 0x180c            
-            float m_flDistanceBiasForHeroes; // 0x1810            
-            uint8_t _pad1814[0x4]; // 0x1814
-            CPiecewiseCurve m_bouncePositionCurve; // 0x1818            
+            float m_flMinProjectileTravelTime; // 0x1810            
+            float m_flDistanceBiasForCaster; // 0x1814            
+            float m_flDistanceBiasForHeroes; // 0x1818            
+            uint8_t _pad181c[0x4]; // 0x181c
+            CPiecewiseCurve m_bouncePositionCurve; // 0x1820            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Boho_BouncyProjectileVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Boho_BouncyProjectileVData) == 0x1858);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Boho_BouncyProjectileVData) == 0x1860);
     };
 };

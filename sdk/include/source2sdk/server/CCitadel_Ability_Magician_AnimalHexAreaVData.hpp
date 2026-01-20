@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1808
+        // Size: 0x1810
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,19 +30,19 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_HexAreaModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_HexAreaModifier;
-            char m_HexAreaModifier[0x10]; // 0x16f8            
+            char m_HexAreaModifier[0x10]; // 0x1700            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_TargetWarningSound; // 0x1708            
-            CSoundEventName m_ProjectileHitConfirm; // 0x1718            
+            CSoundEventName m_TargetWarningSound; // 0x1710            
+            CSoundEventName m_ProjectileHitConfirm; // 0x1720            
             // metadata: MPropertyStartGroup "Visuals"
             // m_AreaWarningEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AreaWarningEffect;
-            char m_AreaWarningEffect[0xe0]; // 0x1728            
+            char m_AreaWarningEffect[0xe0]; // 0x1730            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Magician_AnimalHexAreaVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_AnimalHexAreaVData) == 0x1808);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Magician_AnimalHexAreaVData) == 0x1810);
     };
 };

@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1b18
+        // Size: 0x1b30
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -91,38 +91,43 @@ namespace source2sdk
             // m_EnemyTrooperDamageReduction has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_EnemyTrooperDamageReduction;
             char m_EnemyTrooperDamageReduction[0x10]; // 0x1750            
+            // m_DefenderInPitInvulnerable has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_DefenderInPitInvulnerable;
+            char m_DefenderInPitInvulnerable[0x10]; // 0x1760            
             // metadata: MPropertyStartGroup "Laser"
             // m_LaserChargingParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserChargingParticle;
-            char m_LaserChargingParticle[0xe0]; // 0x1760            
+            char m_LaserChargingParticle[0xe0]; // 0x1770            
             // m_LaserBeamEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserBeamEffect;
-            char m_LaserBeamEffect[0xe0]; // 0x1840            
+            char m_LaserBeamEffect[0xe0]; // 0x1850            
             // m_LaserPreviewEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserPreviewEffect;
-            char m_LaserPreviewEffect[0xe0]; // 0x1920            
+            char m_LaserPreviewEffect[0xe0]; // 0x1930            
             // m_LaserDamageEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserDamageEffect;
-            char m_LaserDamageEffect[0xe0]; // 0x1a00            
-            float m_flLaserTargetingZOffset; // 0x1ae0            
-            float m_flLaserTrackingSpeed; // 0x1ae4            
-            float m_flLaserTrackingMaxSpeed; // 0x1ae8            
-            float m_flLaserCastingTrackSpeed; // 0x1aec            
-            float m_flLaserCastingTrackMaxSpeed; // 0x1af0            
-            float m_flLaserDPSToPlayers; // 0x1af4            
-            float m_flLaserDPSToNPCs; // 0x1af8            
-            float m_flLaserDPSMaxHealth; // 0x1afc            
-            float m_flNoShieldLaserTrackingSpeed; // 0x1b00            
-            float m_flNoShieldLaserTrackingMaxSpeed; // 0x1b04            
-            float m_flNoShieldLaserCastingTrackSpeed; // 0x1b08            
-            float m_flNoShieldLaserCastingTrackMaxSpeed; // 0x1b0c            
-            float m_flNoShieldLaserDPSToPlayers; // 0x1b10            
-            float m_flNoShieldLaserDPSToNPCs; // 0x1b14            
+            char m_LaserDamageEffect[0xe0]; // 0x1a10            
+            float m_flLaserTargetingZOffset; // 0x1af0            
+            float m_flLaserTrackingSpeed; // 0x1af4            
+            float m_flLaserTrackingMaxSpeed; // 0x1af8            
+            float m_flLaserCastingTrackSpeed; // 0x1afc            
+            float m_flLaserCastingTrackMaxSpeed; // 0x1b00            
+            float m_flLaserDPSToPlayers; // 0x1b04            
+            float m_flLaserDPSToNPCs; // 0x1b08            
+            float m_flLaserDPSMaxHealth; // 0x1b0c            
+            float m_flNoShieldLaserTrackingSpeed; // 0x1b10            
+            float m_flNoShieldLaserTrackingMaxSpeed; // 0x1b14            
+            float m_flNoShieldLaserCastingTrackSpeed; // 0x1b18            
+            float m_flNoShieldLaserCastingTrackMaxSpeed; // 0x1b1c            
+            float m_flNoShieldLaserDPSToPlayers; // 0x1b20            
+            float m_flNoShieldLaserDPSToNPCs; // 0x1b24            
+            float m_flAllyPitTimeMin; // 0x1b28            
+            uint8_t _pad1b2c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_Boss_Tier3VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_Boss_Tier3VData) == 0x1b18);
+        static_assert(sizeof(source2sdk::server::CNPC_Boss_Tier3VData) == 0x1b30);
     };
 };

@@ -23,7 +23,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xae0
+        // Size: 0xae8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -59,31 +59,35 @@ namespace source2sdk
             uint8_t _pad0ab1[0x3]; // 0xab1
             // metadata: MPropertyDescription "How long to apply total regen (HPS dynamically calculated)"
             float m_flRegenDuration; // 0xab4            
+            // metadata: MPropertyDescription "How long to apply total regen (HPS dynamically calculated) for troopers"
+            float m_flRegenDurationTroopers; // 0xab8            
+            // metadata: MPropertyDescription "Amount to increase regen for troopers"
+            float m_flRegenTrooperMulti; // 0xabc            
             // metadata: MPropertyDescription "How much HPS to provide (duration dynamically calculated)"
-            float m_flRegenHPS; // 0xab8            
-            uint8_t _pad0abc[0x4]; // 0xabc
+            float m_flRegenHPS; // 0xac0            
+            uint8_t _pad0ac4[0x4]; // 0xac4
             // m_RegenModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_RegenModifier;
-            char m_RegenModifier[0x10]; // 0xac0            
+            char m_RegenModifier[0x10]; // 0xac8            
             // metadata: MPropertyStartGroup
             // metadata: MPropertyFriendlyName "Heal AOE Radius"
             // metadata: MPropertyDescription "When > 0, applies the heal to units within the radius"
-            float m_flAOERadius; // 0xad0            
+            float m_flAOERadius; // 0xad8            
             // metadata: MPropertyStartGroup "AOE Heal Settings"
             // metadata: MPropertySuppressExpr "m_flAOERadius == 0"
             // metadata: MPropertyFriendlyName "Target Types"
-            source2sdk::client::CITADEL_UNIT_TARGET_TYPE m_AOETargetTypes; // 0xad4            
+            source2sdk::client::CITADEL_UNIT_TARGET_TYPE m_AOETargetTypes; // 0xadc            
             // metadata: MPropertySuppressExpr "m_flAOERadius == 0"
             // metadata: MPropertyFriendlyName "Targeting Flags"
-            source2sdk::client::CITADEL_UNIT_TARGET_FLAGS m_AOETargetFlags; // 0xad8            
+            source2sdk::client::CITADEL_UNIT_TARGET_FLAGS m_AOETargetFlags; // 0xae0            
             // metadata: MPropertySuppressExpr "m_flAOERadius == 0"
             // metadata: MPropertyFriendlyName "LOS Method"
-            source2sdk::client::ELOSCheck m_AOELOSCheckType; // 0xadc            
+            source2sdk::client::ELOSCheck m_AOELOSCheckType; // 0xae4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_BreakablePropHealthPickupVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_BreakablePropHealthPickupVData) == 0xae0);
+        static_assert(sizeof(source2sdk::server::CCitadel_BreakablePropHealthPickupVData) == 0xae8);
     };
 };

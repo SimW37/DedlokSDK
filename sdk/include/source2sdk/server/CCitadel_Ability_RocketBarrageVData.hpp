@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18b8
+        // Size: 0x18c0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,28 +31,28 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_BarrageModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BarrageModifier;
-            char m_BarrageModifier[0x10]; // 0x16f8            
+            char m_BarrageModifier[0x10]; // 0x1700            
             // m_MoveSlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_MoveSlowModifier;
-            char m_MoveSlowModifier[0x10]; // 0x1708            
+            char m_MoveSlowModifier[0x10]; // 0x1710            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x1718            
+            char m_ImpactParticle[0xe0]; // 0x1720            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strExplodeSound; // 0x17f8            
-            CSoundEventName m_strBarrageSound; // 0x1808            
-            CSoundEventName m_strBarrageLoop; // 0x1818            
+            CSoundEventName m_strExplodeSound; // 0x1800            
+            CSoundEventName m_strBarrageSound; // 0x1810            
+            CSoundEventName m_strBarrageLoop; // 0x1820            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSelected; // 0x1828            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSelected; // 0x1830            
             // metadata: MPropertyStartGroup "+Rocket Barrage Properties"
-            float m_flMoveSpeedReductionPct; // 0x18b0            
-            float m_flHeightTestDistance; // 0x18b4            
+            float m_flMoveSpeedReductionPct; // 0x18b8            
+            float m_flHeightTestDistance; // 0x18bc            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_RocketBarrageVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_RocketBarrageVData) == 0x18b8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_RocketBarrageVData) == 0x18c0);
     };
 };

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1900
+        // Size: 0x1908
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,28 +30,28 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_GooGrenadeImpactModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_GooGrenadeImpactModifier;
-            char m_GooGrenadeImpactModifier[0x10]; // 0x16f8            
+            char m_GooGrenadeImpactModifier[0x10]; // 0x1700            
             // m_GooGrenadePuddleAuraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_GooGrenadePuddleAuraModifier;
-            char m_GooGrenadePuddleAuraModifier[0x10]; // 0x1708            
+            char m_GooGrenadePuddleAuraModifier[0x10]; // 0x1710            
             // metadata: MPropertyStartGroup "Particles"
             // m_GooGrenadeSkipParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GooGrenadeSkipParticle;
-            char m_GooGrenadeSkipParticle[0xe0]; // 0x1718            
+            char m_GooGrenadeSkipParticle[0xe0]; // 0x1720            
             // m_GooGrenadeExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_GooGrenadeExplodeParticle;
-            char m_GooGrenadeExplodeParticle[0xe0]; // 0x17f8            
+            char m_GooGrenadeExplodeParticle[0xe0]; // 0x1800            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_GrenadeHitImpactSound; // 0x18d8            
-            CSoundEventName m_GrenadeMissImpactSound; // 0x18e8            
+            CSoundEventName m_GrenadeHitImpactSound; // 0x18e0            
+            CSoundEventName m_GrenadeMissImpactSound; // 0x18f0            
             // metadata: MPropertyStartGroup "BounceSettings"
-            float m_flMinRestitution; // 0x18f8            
-            float m_flMaxRestitution; // 0x18fc            
+            float m_flMinRestitution; // 0x1900            
+            float m_flMaxRestitution; // 0x1904            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityGooGrenadeVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityGooGrenadeVData) == 0x1900);
+        static_assert(sizeof(source2sdk::client::CAbilityGooGrenadeVData) == 0x1908);
     };
 };

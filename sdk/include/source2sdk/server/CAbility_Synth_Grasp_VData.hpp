@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1728
+        // Size: 0x1730
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,18 +29,18 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_CasterModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_CasterModifier;
-            char m_CasterModifier[0x10]; // 0x16f8            
+            char m_CasterModifier[0x10]; // 0x1700            
             // m_VictimModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_VictimModifier;
-            char m_VictimModifier[0x10]; // 0x1708            
+            char m_VictimModifier[0x10]; // 0x1710            
             // m_BulletShieldModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BulletShieldModifier;
-            char m_BulletShieldModifier[0x10]; // 0x1718            
+            char m_BulletShieldModifier[0x10]; // 0x1720            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Synth_Grasp_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Synth_Grasp_VData) == 0x1728);
+        static_assert(sizeof(source2sdk::server::CAbility_Synth_Grasp_VData) == 0x1730);
     };
 };

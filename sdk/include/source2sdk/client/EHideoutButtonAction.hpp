@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 10
+        // Enumerator count: 11
         // Alignment: 4
         // Size: 0x4
         enum class EHideoutButtonAction : std::uint32_t
@@ -28,6 +28,7 @@ namespace source2sdk
             k_eNews = 0x7,
             k_eHeroReleaseVote = 0x8,
             k_eFireEntityOutput = 0x9,
+            k_eSeasonalEvent = 0xa,
         };
     };
 };

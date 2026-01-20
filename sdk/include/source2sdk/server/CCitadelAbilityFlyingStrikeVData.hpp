@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1d90
+        // Size: 0x1d98
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,66 +29,66 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "+Cast Properties"
-            float m_flJumpFallSpeedMax; // 0x1700            
-            float m_flJumpAirDrag; // 0x1704            
-            float m_flJumpAirSpeedMax; // 0x1708            
+            float m_flJumpFallSpeedMax; // 0x1708            
+            float m_flJumpAirDrag; // 0x170c            
+            float m_flJumpAirSpeedMax; // 0x1710            
             // metadata: MPropertyStartGroup "+Flying to Target Properties"
             // metadata: MPropertyDescription "When cancelling flying strike while flying, how much extra vertical speed to add"
-            float m_flOnCancelVerticalSpeedBonus; // 0x170c            
-            float m_flFlyingCloseEnoughToTarget; // 0x1710            
-            uint8_t _pad1714[0x4]; // 0x1714
-            CPiecewiseCurve m_curveSpeedScale; // 0x1718            
+            float m_flOnCancelVerticalSpeedBonus; // 0x1714            
+            float m_flFlyingCloseEnoughToTarget; // 0x1718            
+            uint8_t _pad171c[0x4]; // 0x171c
+            CPiecewiseCurve m_curveSpeedScale; // 0x1720            
             // metadata: MPropertyStartGroup "+Attack Properties"
-            float m_flAnimToStrikePointTime; // 0x1758            
-            float m_flAnimToStrikeArrivalBias; // 0x175c            
+            float m_flAnimToStrikePointTime; // 0x1760            
+            float m_flAnimToStrikeArrivalBias; // 0x1764            
             // metadata: MPropertyStartGroup "+Grapple Properties"
-            float m_flGrappleShotFloatTime; // 0x1760            
-            float m_flGrappleShotDelayToFlyOnHit; // 0x1764            
-            float m_flGrappleSpeed; // 0x1768            
-            uint8_t _pad176c[0x4]; // 0x176c
+            float m_flGrappleShotFloatTime; // 0x1768            
+            float m_flGrappleShotDelayToFlyOnHit; // 0x176c            
+            float m_flGrappleSpeed; // 0x1770            
+            uint8_t _pad1774[0x4]; // 0x1774
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x1770            
+            char m_SlowModifier[0x10]; // 0x1778            
             // m_GrappleTargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_GrappleTargetModifier;
-            char m_GrappleTargetModifier[0x10]; // 0x1780            
+            char m_GrappleTargetModifier[0x10]; // 0x1788            
             // m_WeaponBuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_WeaponBuffModifier;
-            char m_WeaponBuffModifier[0x10]; // 0x1790            
+            char m_WeaponBuffModifier[0x10]; // 0x1798            
             // metadata: MPropertyStartGroup "Visuals"
             // m_LeapParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LeapParticle;
-            char m_LeapParticle[0xe0]; // 0x17a0            
+            char m_LeapParticle[0xe0]; // 0x17a8            
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x1880            
+            char m_ImpactParticle[0xe0]; // 0x1888            
             // m_SlashParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashParticle;
-            char m_SlashParticle[0xe0]; // 0x1960            
+            char m_SlashParticle[0xe0]; // 0x1968            
             // m_BulletGrappleTracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BulletGrappleTracerParticle;
-            char m_BulletGrappleTracerParticle[0xe0]; // 0x1a40            
+            char m_BulletGrappleTracerParticle[0xe0]; // 0x1a48            
             // m_EnemyGrappleParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyGrappleParticle;
-            char m_EnemyGrappleParticle[0xe0]; // 0x1b20            
+            char m_EnemyGrappleParticle[0xe0]; // 0x1b28            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strDamageTarget; // 0x1c00            
-            CSoundEventName m_strStartFlyingToTarget; // 0x1c10            
-            CSoundEventName m_strStartAttack; // 0x1c20            
-            CSoundEventName m_strGrappleHitTarget; // 0x1c30            
-            CSoundEventName m_strGrappleHitWorld; // 0x1c40            
-            CSoundEventName m_strGrappleHitNothing; // 0x1c50            
-            CSoundEventName m_strGrappleLoop; // 0x1c60            
-            CSoundEventName m_strFlyingLoop; // 0x1c70            
+            CSoundEventName m_strDamageTarget; // 0x1c08            
+            CSoundEventName m_strStartFlyingToTarget; // 0x1c18            
+            CSoundEventName m_strStartAttack; // 0x1c28            
+            CSoundEventName m_strGrappleHitTarget; // 0x1c38            
+            CSoundEventName m_strGrappleHitWorld; // 0x1c48            
+            CSoundEventName m_strGrappleHitNothing; // 0x1c58            
+            CSoundEventName m_strGrappleLoop; // 0x1c68            
+            CSoundEventName m_strFlyingLoop; // 0x1c78            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceFlying; // 0x1c80            
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAttacking; // 0x1d08            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceFlying; // 0x1c88            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceAttacking; // 0x1d10            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelAbilityFlyingStrikeVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelAbilityFlyingStrikeVData) == 0x1d90);
+        static_assert(sizeof(source2sdk::server::CCitadelAbilityFlyingStrikeVData) == 0x1d98);
     };
 };

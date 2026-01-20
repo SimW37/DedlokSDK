@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 28
+        // Enumerator count: 29
         // Alignment: 2
         // Size: 0x2
         enum class EAbilitySlots_t : std::uint16_t
@@ -44,8 +44,9 @@ namespace source2sdk
             ESlot_Weapon_Secondary = 0x13,
             ESlot_Weapon_Primary = 0x14,
             ESlot_Weapon_Melee = 0x15,
-            ESlot_None = 0x16,
-            EMaxAbilitySlots = 0x16,
+            ESlot_Cosmetic_1 = 0x16,
+            ESlot_None = 0x17,
+            EMaxAbilitySlots = 0x17,
         };
     };
 };

@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/client/AbilityCastEvent_t.hpp"
+#include "source2sdk/client/AbilityCosmeticInfo_t.hpp"
 #include "source2sdk/client/AbilityTooltipDetails_t.hpp"
 #include "source2sdk/client/AbilityUpgrade_t.hpp"
 #include "source2sdk/client/AdditionalAbilities_t.hpp"
@@ -43,7 +44,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16f8
+        // Size: 0x1700
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -248,11 +249,14 @@ namespace source2sdk
             // m_AutoIntrinsicModifiers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CEmbeddedSubclass<source2sdk::client::CBaseModifier>> m_AutoIntrinsicModifiers;
             char m_AutoIntrinsicModifiers[0x18]; // 0x16e0            
+            // metadata: MPropertySuppressExpr "m_eAbilityType != EAbilityType_Cosmetic"
+            source2sdk::client::AbilityCosmeticInfo_t m_cosmeticInfo; // 0x16f8            
+            uint8_t _pad16f9[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CitadelAbilityVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CitadelAbilityVData) == 0x16f8);
+        static_assert(sizeof(source2sdk::client::CitadelAbilityVData) == 0x1700);
     };
 };

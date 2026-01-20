@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1710
+        // Size: 0x1718
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,17 +29,17 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Sounds"
             // metadata: MPropertyStartGroup "Modifiers"
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flBallLifetime; // 0x16f8            
-            float m_flBallStepUpHeight; // 0x16fc            
-            float m_flBallDistAboveGround; // 0x1700            
-            float m_flBallFloatDownRate; // 0x1704            
-            float m_flBallSpeed; // 0x1708            
-            float m_flBallTraceRadius; // 0x170c            
+            float m_flBallLifetime; // 0x1700            
+            float m_flBallStepUpHeight; // 0x1704            
+            float m_flBallDistAboveGround; // 0x1708            
+            float m_flBallFloatDownRate; // 0x170c            
+            float m_flBallSpeed; // 0x1710            
+            float m_flBallTraceRadius; // 0x1714            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityRollingFireBallVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityRollingFireBallVData) == 0x1710);
+        static_assert(sizeof(source2sdk::server::CAbilityRollingFireBallVData) == 0x1718);
     };
 };

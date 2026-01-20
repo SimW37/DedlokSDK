@@ -71,7 +71,6 @@ namespace source2sdk
         // static metadata: MNetworkOverride "m_flTimeScale"
         // static metadata: MNetworkVarNames "bool m_bChanneling"
         // static metadata: MNetworkVarNames "bool m_bInCastDelay"
-        // static metadata: MNetworkVarNames "EntitySubclassID_t m_vecImbuedByAbilitiyIDs"
         // static metadata: MNetworkVarNames "bool m_bCanBeUpgraded"
         // static metadata: MNetworkVarNames "CitadelStolenAbilitySlot_t m_eStolenInSlot"
         // static metadata: MNetworkVarNames "int m_nUpgradeBits"
@@ -92,7 +91,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "GameTime_t m_flAltCastHoldStartTime"
         // static metadata: MNetworkVarNames "GameTime_t m_flAltCastDoubleTapStartTime"
         // static metadata: MNetworkVarNames "bool m_bCanBeImbued"
-        // static metadata: MNetworkVarNames "AbilityID_t m_nImbuedAbilityID"
+        // static metadata: MNetworkVarNames "EntitySubclassID_t m_vecImbuedAbilities"
         // static metadata: MNetworkVarNames "bool m_bSelectionModeIsAltMode"
         #pragma pack(push, 1)
         class CCitadelBaseAbility : public source2sdk::server::CBaseEntity
@@ -122,78 +121,76 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnInCastDelayChanged"
             bool m_bInCastDelay; // 0x649            
-            uint8_t _pad064a[0x6]; // 0x64a
-            // metadata: MNetworkEnable
-            // metadata: MNetworkChangeCallback "OnAbilityImbuedChanged"
-            // m_vecImbuedByAbilitiyIDs has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CNetworkUtlVectorBase<CUtlStringToken> m_vecImbuedByAbilitiyIDs;
-            char m_vecImbuedByAbilitiyIDs[0x18]; // 0x650            
+            uint8_t _pad064a[0x2]; // 0x64a
             // m_hSupportedAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelBaseAbility> m_hSupportedAbility;
-            char m_hSupportedAbility[0x4]; // 0x668            
+            char m_hSupportedAbility[0x4]; // 0x64c            
             // metadata: MNetworkEnable
-            bool m_bCanBeUpgraded; // 0x66c            
-            uint8_t _pad066d[0x3]; // 0x66d
+            bool m_bCanBeUpgraded; // 0x650            
+            uint8_t _pad0651[0x7]; // 0x651
             // metadata: MNetworkEnable
-            source2sdk::server::CitadelStolenAbilitySlot_t m_eStolenInSlot; // 0x670            
+            source2sdk::server::CitadelStolenAbilitySlot_t m_eStolenInSlot; // 0x658            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnUpgradeBitsChanged"
             // metadata: MNetworkPriority "32"
-            std::int32_t m_nUpgradeBits; // 0x680            
+            std::int32_t m_nUpgradeBits; // 0x668            
             // metadata: MNetworkEnable
-            source2sdk::client::EAbilityBucketType m_iBucketID; // 0x684            
+            source2sdk::client::EAbilityBucketType m_iBucketID; // 0x66c            
             // metadata: MNetworkEnable
-            bool m_bToggleState; // 0x688            
-            uint8_t _pad0689[0x3]; // 0x689
+            bool m_bToggleState; // 0x670            
+            uint8_t _pad0671[0x3]; // 0x671
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
-            source2sdk::entity2::GameTime_t m_flCooldownStart; // 0x68c            
+            source2sdk::entity2::GameTime_t m_flCooldownStart; // 0x674            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
             // metadata: MNetworkChangeCallback "OnAbilityCooldownEndChanged"
-            source2sdk::entity2::GameTime_t m_flCooldownEnd; // 0x690            
+            source2sdk::entity2::GameTime_t m_flCooldownEnd; // 0x678            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flCastCompletedTime; // 0x694            
+            source2sdk::entity2::GameTime_t m_flCastCompletedTime; // 0x67c            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flChannelStartTime; // 0x698            
+            source2sdk::entity2::GameTime_t m_flChannelStartTime; // 0x680            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flCastDelayStartTime; // 0x69c            
+            source2sdk::entity2::GameTime_t m_flCastDelayStartTime; // 0x684            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnAbilitySlotChanged"
-            source2sdk::client::EAbilitySlots_t m_eAbilitySlot; // 0x6a0            
-            uint8_t _pad06a2[0x2]; // 0x6a2
+            source2sdk::client::EAbilitySlots_t m_eAbilitySlot; // 0x688            
+            uint8_t _pad068a[0x2]; // 0x68a
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flPostCastDelayEndTime; // 0x6a4            
+            source2sdk::entity2::GameTime_t m_flPostCastDelayEndTime; // 0x68c            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
-            std::int32_t m_iRemainingCharges; // 0x6a8            
+            std::int32_t m_iRemainingCharges; // 0x690            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
-            source2sdk::entity2::GameTime_t m_flChargeRechargeStart; // 0x6ac            
+            source2sdk::entity2::GameTime_t m_flChargeRechargeStart; // 0x694            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
-            source2sdk::entity2::GameTime_t m_flChargeRechargeEnd; // 0x6b0            
+            source2sdk::entity2::GameTime_t m_flChargeRechargeEnd; // 0x698            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flMovementControlActiveTime; // 0x6b4            
-            // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flSelectedChangedTime; // 0x6b8            
+            source2sdk::entity2::GameTime_t m_flMovementControlActiveTime; // 0x69c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flAltCastHoldStartTime; // 0x6bc            
+            source2sdk::entity2::GameTime_t m_flSelectedChangedTime; // 0x6a0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flAltCastDoubleTapStartTime; // 0x6c0            
-            // metadata: MNetworkEnable
-            bool m_bCanBeImbued; // 0x6c4            
-            uint8_t _pad06c5[0x3]; // 0x6c5
-            // metadata: MNetworkEnable
-            CUtlStringToken m_nImbuedAbilityID; // 0x6c8            
+            source2sdk::entity2::GameTime_t m_flAltCastHoldStartTime; // 0x6a4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bSelectionModeIsAltMode; // 0x6cc            
-            uint8_t _pad06cd[0x3]; // 0x6cd
+            source2sdk::entity2::GameTime_t m_flAltCastDoubleTapStartTime; // 0x6a8            
+            // metadata: MNetworkEnable
+            bool m_bCanBeImbued; // 0x6ac            
+            uint8_t _pad06ad[0x3]; // 0x6ad
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "OnAbilityImbuedChanged"
+            // m_vecImbuedAbilities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CNetworkUtlVectorBase<CUtlStringToken> m_vecImbuedAbilities;
+            char m_vecImbuedAbilities[0x18]; // 0x6b0            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            bool m_bSelectionModeIsAltMode; // 0x6c8            
+            uint8_t _pad06c9[0x7]; // 0x6c9
             // m_vecEnemyHeroesDamaged has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecEnemyHeroesDamaged;
             char m_vecEnemyHeroesDamaged[0x18]; // 0x6d0            

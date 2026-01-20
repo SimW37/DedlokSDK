@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x19a0
+        // Size: 0x19a8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,33 +31,33 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ImpactParticle;
-            char m_ImpactParticle[0xe0]; // 0x16f8            
+            char m_ImpactParticle[0xe0]; // 0x1700            
             // m_TeleportTrailParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportTrailParticle;
-            char m_TeleportTrailParticle[0xe0]; // 0x17d8            
+            char m_TeleportTrailParticle[0xe0]; // 0x17e0            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_TargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_TargetModifier;
-            char m_TargetModifier[0x10]; // 0x18b8            
+            char m_TargetModifier[0x10]; // 0x18c0            
             // m_TargetTeleportModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_TargetTeleportModifier;
-            char m_TargetTeleportModifier[0x10]; // 0x18c8            
+            char m_TargetTeleportModifier[0x10]; // 0x18d0            
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x18d8            
+            char m_BuffModifier[0x10]; // 0x18e0            
             // m_PostTeleportModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_PostTeleportModifier;
-            char m_PostTeleportModifier[0x10]; // 0x18e8            
+            char m_PostTeleportModifier[0x10]; // 0x18f0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strHitHeroSound; // 0x18f8            
-            CSoundEventName m_strHitNPCSound; // 0x1908            
+            CSoundEventName m_strHitHeroSound; // 0x1900            
+            CSoundEventName m_strHitNPCSound; // 0x1910            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x1918            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x1920            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Drifter_ShadowMark_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Drifter_ShadowMark_VData) == 0x19a0);
+        static_assert(sizeof(source2sdk::server::CAbility_Drifter_ShadowMark_VData) == 0x19a8);
     };
 };

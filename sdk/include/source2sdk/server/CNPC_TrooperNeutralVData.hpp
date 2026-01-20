@@ -22,7 +22,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1540
+        // Size: 0x1550
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -91,11 +91,14 @@ namespace source2sdk
             source2sdk::client::ENeutralFlyingWeakPointType m_iWeakPointType; // 0x1538            
             uint8_t _pad1539[0x3]; // 0x1539
             float m_flWeakPointRespawnAtHealthPct; // 0x153c            
+            // m_NeutralDamageGrowth has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_NeutralDamageGrowth;
+            char m_NeutralDamageGrowth[0x10]; // 0x1540            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_TrooperNeutralVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_TrooperNeutralVData) == 0x1540);
+        static_assert(sizeof(source2sdk::server::CNPC_TrooperNeutralVData) == 0x1550);
     };
 };

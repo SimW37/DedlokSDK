@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1a80
+        // Size: 0x1a88
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,32 +31,32 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_BlinkStartParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BlinkStartParticle;
-            char m_BlinkStartParticle[0xe0]; // 0x16f8            
+            char m_BlinkStartParticle[0xe0]; // 0x1700            
             // m_BlinkEndParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BlinkEndParticle;
-            char m_BlinkEndParticle[0xe0]; // 0x17d8            
+            char m_BlinkEndParticle[0xe0]; // 0x17e0            
             // m_BlinkTravelParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BlinkTravelParticle;
-            char m_BlinkTravelParticle[0xe0]; // 0x18b8            
+            char m_BlinkTravelParticle[0xe0]; // 0x18c0            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SelfBuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SelfBuffModifier;
-            char m_SelfBuffModifier[0x10]; // 0x1998            
+            char m_SelfBuffModifier[0x10]; // 0x19a0            
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x19a8            
+            char m_BuffModifier[0x10]; // 0x19b0            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x19b8            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceTeleport; // 0x19c0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_BlinkStartSound; // 0x1a40            
-            CSoundEventName m_BlinkEndSound; // 0x1a50            
-            CSoundEventName m_BlinkEndFinalSound; // 0x1a60            
-            CSoundEventName m_strWhizbySound; // 0x1a70            
+            CSoundEventName m_BlinkStartSound; // 0x1a48            
+            CSoundEventName m_BlinkEndSound; // 0x1a58            
+            CSoundEventName m_BlinkEndFinalSound; // 0x1a68            
+            CSoundEventName m_strWhizbySound; // 0x1a78            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_VampireBat_BatBlinkVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_VampireBat_BatBlinkVData) == 0x1a80);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_VampireBat_BatBlinkVData) == 0x1a88);
     };
 };

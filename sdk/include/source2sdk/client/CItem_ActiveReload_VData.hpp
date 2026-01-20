@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1990
+        // Size: 0x1998
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,26 +30,26 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SuccessModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SuccessModifier;
-            char m_SuccessModifier[0x10]; // 0x1788            
+            char m_SuccessModifier[0x10]; // 0x1790            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strSuccessSound; // 0x1798            
-            CSoundEventName m_strFailureSound; // 0x17a8            
-            CSoundEventName m_strWindowEnteredSound; // 0x17b8            
+            CSoundEventName m_strSuccessSound; // 0x17a0            
+            CSoundEventName m_strFailureSound; // 0x17b0            
+            CSoundEventName m_strWindowEnteredSound; // 0x17c0            
             // metadata: MPropertyStartGroup "Visuals"
             // m_SuccessParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SuccessParticle;
-            char m_SuccessParticle[0xe0]; // 0x17c8            
+            char m_SuccessParticle[0xe0]; // 0x17d0            
             // m_FailureParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FailureParticle;
-            char m_FailureParticle[0xe0]; // 0x18a8            
+            char m_FailureParticle[0xe0]; // 0x18b0            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flGraceTime; // 0x1988            
-            uint8_t _pad198c[0x4];
+            float m_flGraceTime; // 0x1990            
+            uint8_t _pad1994[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CItem_ActiveReload_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CItem_ActiveReload_VData) == 0x1990);
+        static_assert(sizeof(source2sdk::client::CItem_ActiveReload_VData) == 0x1998);
     };
 };

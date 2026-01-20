@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1800
+        // Size: 0x1808
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,22 +30,22 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x16f8            
+            char m_CastParticle[0xe0]; // 0x1700            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_StaticChargeModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_StaticChargeModifier;
-            char m_StaticChargeModifier[0x10]; // 0x17d8            
+            char m_StaticChargeModifier[0x10]; // 0x17e0            
             // m_StaticChargeWorldModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_StaticChargeWorldModifier;
-            char m_StaticChargeWorldModifier[0x10]; // 0x17e8            
+            char m_StaticChargeWorldModifier[0x10]; // 0x17f0            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flWorldTraceRadius; // 0x17f8            
-            float m_flUnitTraceRadius; // 0x17fc            
+            float m_flWorldTraceRadius; // 0x1800            
+            float m_flUnitTraceRadius; // 0x1804            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_StaticCharge_V2_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_StaticCharge_V2_VData) == 0x1800);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_StaticCharge_V2_VData) == 0x1808);
     };
 };

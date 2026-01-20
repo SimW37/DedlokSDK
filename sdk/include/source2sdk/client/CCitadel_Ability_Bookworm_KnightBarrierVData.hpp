@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18c8
+        // Size: 0x18d0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,19 +30,19 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_ShoveParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShoveParticle;
-            char m_ShoveParticle[0xe0]; // 0x16f8            
+            char m_ShoveParticle[0xe0]; // 0x1700            
             // m_BarrierCastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrierCastParticle;
-            char m_BarrierCastParticle[0xe0]; // 0x17d8            
+            char m_BarrierCastParticle[0xe0]; // 0x17e0            
             // metadata: MPropertyGroupName "Modifiers"
             // m_BarrierModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BarrierModifier;
-            char m_BarrierModifier[0x10]; // 0x18b8            
+            char m_BarrierModifier[0x10]; // 0x18c0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Bookworm_KnightBarrierVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bookworm_KnightBarrierVData) == 0x18c8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bookworm_KnightBarrierVData) == 0x18d0);
     };
 };

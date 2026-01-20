@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 4
+        // Enumerator count: 5
         // Alignment: 4
         // Size: 0x4
         enum class EGCServerLobbyData : std::uint32_t
@@ -22,6 +22,7 @@ namespace source2sdk
             k_EServerLobbyData_PlayerInfo = 0x2,
             k_EServerLobbyData_PostMatchSurvey = 0x3,
             k_EServerLobbyData_AutoTest = 0x4,
+            k_EServerLobbyData_PlayerStatValues = 0x5,
         };
     };
 };

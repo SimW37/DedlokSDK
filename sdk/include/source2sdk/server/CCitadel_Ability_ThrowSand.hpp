@@ -4,6 +4,13 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/server/CCitadelBaseAbility.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -17,18 +24,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xbe0
+        // Size: 0xc38
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_ThrowSand : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x40];
-            // No schema binary for binding
+            uint8_t _pad0ba0[0x80]; // 0xba0
+            // m_vHitEnts has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vHitEnts;
+            char m_vHitEnts[0x18]; // 0xc20            
         };
         #pragma pack(pop)
         
+        // Cannot assert offsets of fields in CCitadel_Ability_ThrowSand because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ThrowSand) == 0xbe0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ThrowSand) == 0xc38);
     };
 };

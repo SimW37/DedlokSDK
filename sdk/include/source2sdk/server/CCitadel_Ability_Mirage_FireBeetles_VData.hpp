@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1838
+        // Size: 0x1840
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,28 +30,28 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x16f8            
+            char m_ExplodeParticle[0xe0]; // 0x1700            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_CasterModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_CasterModifier;
-            char m_CasterModifier[0x10]; // 0x17d8            
+            char m_CasterModifier[0x10]; // 0x17e0            
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x17e8            
+            char m_DebuffModifier[0x10]; // 0x17f0            
             // m_StatStealModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_StatStealModifier;
-            char m_StatStealModifier[0x10]; // 0x17f8            
+            char m_StatStealModifier[0x10]; // 0x1800            
             // m_StealWatcherModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_StealWatcherModifier;
-            char m_StealWatcherModifier[0x10]; // 0x1808            
+            char m_StealWatcherModifier[0x10]; // 0x1810            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_ExplosionSound; // 0x1818            
-            CSoundEventName m_strHitConfirm; // 0x1828            
+            CSoundEventName m_ExplosionSound; // 0x1820            
+            CSoundEventName m_strHitConfirm; // 0x1830            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Mirage_FireBeetles_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Mirage_FireBeetles_VData) == 0x1838);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Mirage_FireBeetles_VData) == 0x1840);
     };
 };

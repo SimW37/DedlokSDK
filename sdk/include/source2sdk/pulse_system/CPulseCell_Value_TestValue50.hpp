@@ -23,7 +23,7 @@ namespace source2sdk
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MCellForDomain "TestDomain"
         // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "À±s¿ø"
+        // static metadata: MPulseCellOutflowHookInfo "À±&þø"
         // static metadata: MPropertyFriendlyName "[Test] Int Value 50"
         // static metadata: MPropertyDescription "Test node that just generates the integer 50. Nothing to see here!"
         #pragma pack(push, 1)

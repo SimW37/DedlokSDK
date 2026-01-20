@@ -82,7 +82,9 @@ namespace source2sdk
             float m_flDamageFalloffEndScale; // 0x58            
             // metadata: MPropertyDescription "If true, this bullet will not pass through portals.  It will impact them instead"
             bool m_bDontPassThroughPortals; // 0x5c            
-            uint8_t _pad005d[0x3]; // 0x5d
+            // metadata: MPropertyDescription "If true and the bullet impacted a teammate, should we play an impact effect?"
+            bool m_bPlayImpactEffectsOnTeammates; // 0x5d            
+            uint8_t _pad005e[0x2]; // 0x5e
             // metadata: MPropertyDescription "If > 0, bullets will continue through thin surfaces with their damage scaled by this amount"
             float m_flPenetrationPercent; // 0x60            
             // metadata: MPropertyDescription "How long does it takes to aim down sights. "
@@ -292,6 +294,7 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flDamageFalloffStartScale) == 0x54);
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flDamageFalloffEndScale) == 0x58);
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_bDontPassThroughPortals) == 0x5c);
+        static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_bPlayImpactEffectsOnTeammates) == 0x5d);
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flPenetrationPercent) == 0x60);
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_flIronSightsTime) == 0x64);
         static_assert(offsetof(source2sdk::client::CCitadelWeaponInfo, m_reloadDuration) == 0x68);

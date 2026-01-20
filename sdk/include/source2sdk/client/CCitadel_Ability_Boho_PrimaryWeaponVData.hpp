@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1750
+        // Size: 0x1758
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,13 +26,13 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flBeadRadius; // 0x1748            
-            float m_flBeadCount; // 0x174c            
+            float m_flBeadRadius; // 0x1750            
+            float m_flBeadCount; // 0x1754            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Boho_PrimaryWeaponVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Boho_PrimaryWeaponVData) == 0x1750);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Boho_PrimaryWeaponVData) == 0x1758);
     };
 };

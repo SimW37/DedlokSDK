@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1c68
+        // Size: 0x1c70
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,34 +30,34 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_PreExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PreExplodeParticle;
-            char m_PreExplodeParticle[0xe0]; // 0x16f8            
+            char m_PreExplodeParticle[0xe0]; // 0x1700            
             // m_ExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplodeParticle;
-            char m_ExplodeParticle[0xe0]; // 0x17d8            
+            char m_ExplodeParticle[0xe0]; // 0x17e0            
             // m_nDeathMarkParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_nDeathMarkParticle;
-            char m_nDeathMarkParticle[0xe0]; // 0x18b8            
+            char m_nDeathMarkParticle[0xe0]; // 0x18c0            
             // m_nHitParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_nHitParticle;
-            char m_nHitParticle[0xe0]; // 0x1998            
+            char m_nHitParticle[0xe0]; // 0x19a0            
             // m_ElectricBulletImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ElectricBulletImpactParticle;
-            char m_ElectricBulletImpactParticle[0xe0]; // 0x1a78            
+            char m_ElectricBulletImpactParticle[0xe0]; // 0x1a80            
             // m_ElectricBulletTracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ElectricBulletTracerParticle;
-            char m_ElectricBulletTracerParticle[0xe0]; // 0x1b58            
+            char m_ElectricBulletTracerParticle[0xe0]; // 0x1b60            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strTripSound; // 0x1c38            
-            CSoundEventName m_strElectricBulletHitSound; // 0x1c48            
+            CSoundEventName m_strTripSound; // 0x1c40            
+            CSoundEventName m_strElectricBulletHitSound; // 0x1c50            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_RevivingModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_RevivingModifier;
-            char m_RevivingModifier[0x10]; // 0x1c58            
+            char m_RevivingModifier[0x10]; // 0x1c60            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Frank_ReviveVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Frank_ReviveVData) == 0x1c68);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Frank_ReviveVData) == 0x1c70);
     };
 };

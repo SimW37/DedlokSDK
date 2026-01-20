@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18b8
+        // Size: 0x18c0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,18 +28,18 @@ namespace source2sdk
         public:
             // m_SilenceModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SilenceModifier;
-            char m_SilenceModifier[0x10]; // 0x1888            
+            char m_SilenceModifier[0x10]; // 0x1890            
             // m_DamageModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DamageModifier;
-            char m_DamageModifier[0x10]; // 0x1898            
+            char m_DamageModifier[0x10]; // 0x18a0            
             // m_ResistReductionModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_ResistReductionModifier;
-            char m_ResistReductionModifier[0x10]; // 0x18a8            
+            char m_ResistReductionModifier[0x10]; // 0x18b0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item_FocusLens_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Item_FocusLens_VData) == 0x18b8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Item_FocusLens_VData) == 0x18c0);
     };
 };

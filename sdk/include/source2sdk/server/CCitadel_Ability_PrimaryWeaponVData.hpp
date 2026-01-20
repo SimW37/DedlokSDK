@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1750
+        // Size: 0x1758
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,31 +26,31 @@ namespace source2sdk
         class CCitadel_Ability_PrimaryWeaponVData : public source2sdk::server::CitadelAbilityVData
         {
         public:
-            uint8_t _pad16f8[0x8]; // 0x16f8
+            uint8_t _pad1700[0x8]; // 0x1700
             // metadata: MPropertyDescription "The DOF settings to apply while zoomed in."
-            source2sdk::client::DOFDesc_t m_DOFWhileZoomed; // 0x1700            
+            source2sdk::client::DOFDesc_t m_DOFWhileZoomed; // 0x1708            
             // metadata: MPropertyDescription "When true, the 'Far Crisp' and 'Far Blurry' are added on top of the gun's range.  When false, use the values directly."
-            bool m_bDOFFarSettingsAreOffsetByGunRange; // 0x1710            
-            uint8_t _pad1711[0x7]; // 0x1711
+            bool m_bDOFFarSettingsAreOffsetByGunRange; // 0x1718            
+            uint8_t _pad1719[0x7]; // 0x1719
             // metadata: MPropertyStartGroup "Sounds"
             // metadata: MPropertyFriendlyName "Fire while disarmed sound"
-            CSoundEventName m_sDisarmedSound; // 0x1718            
-            float m_flMinDisarmedSoundInterval; // 0x1728            
-            uint8_t _pad172c[0x4]; // 0x172c
-            CSoundEventName m_sObstructedShotSound; // 0x1730            
+            CSoundEventName m_sDisarmedSound; // 0x1720            
+            float m_flMinDisarmedSoundInterval; // 0x1730            
+            uint8_t _pad1734[0x4]; // 0x1734
+            CSoundEventName m_sObstructedShotSound; // 0x1738            
             // metadata: MPropertyStartGroup "Action Reload"
             // metadata: MPropertyAttributeRange "0 1"
             // metadata: MPropertyDescription "If we have action reloads, at what fraction of our reload progress does the timing window start.  The window is centered on this time."
-            float m_flActionReloadTimingStart; // 0x1740            
+            float m_flActionReloadTimingStart; // 0x1748            
             // metadata: MPropertyDescription "If we have action reloads, how long is the window"
-            float m_flActionReloadTimingDuration; // 0x1744            
+            float m_flActionReloadTimingDuration; // 0x174c            
             // metadata: MPropertyStartGroup "UI"
-            CUtlString m_strCrosshairCSSClass; // 0x1748            
+            CUtlString m_strCrosshairCSSClass; // 0x1750            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_PrimaryWeaponVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_PrimaryWeaponVData) == 0x1750);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_PrimaryWeaponVData) == 0x1758);
     };
 };

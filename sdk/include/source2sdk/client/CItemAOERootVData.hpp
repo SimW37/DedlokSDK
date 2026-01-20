@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1898
+        // Size: 0x18a0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_AOEParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AOEParticle;
-            char m_AOEParticle[0xe0]; // 0x1788            
+            char m_AOEParticle[0xe0]; // 0x1790            
             // metadata: MPropertyGroupName "Sounds"
-            CSoundEventName m_strRootTargetSound; // 0x1868            
+            CSoundEventName m_strRootTargetSound; // 0x1870            
             // metadata: MPropertyGroupName "Modifiers"
             // m_TargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_TargetModifier;
-            char m_TargetModifier[0x10]; // 0x1878            
+            char m_TargetModifier[0x10]; // 0x1880            
             // m_TetherModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_TetherModifier;
-            char m_TetherModifier[0x10]; // 0x1888            
+            char m_TetherModifier[0x10]; // 0x1890            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CItemAOERootVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CItemAOERootVData) == 0x1898);
+        static_assert(sizeof(source2sdk::client::CItemAOERootVData) == 0x18a0);
     };
 };

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18e8
+        // Size: 0x18f0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,26 +30,26 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_FriendlyWallParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_FriendlyWallParticle;
-            char m_FriendlyWallParticle[0xe0]; // 0x16f8            
+            char m_FriendlyWallParticle[0xe0]; // 0x1700            
             // m_EnemyWallParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_EnemyWallParticle;
-            char m_EnemyWallParticle[0xe0]; // 0x17d8            
+            char m_EnemyWallParticle[0xe0]; // 0x17e0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_WallTravelSoundLoop; // 0x18b8            
+            CSoundEventName m_WallTravelSoundLoop; // 0x18c0            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_WallModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_WallModifier;
-            char m_WallModifier[0x10]; // 0x18c8            
+            char m_WallModifier[0x10]; // 0x18d0            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flWallPreviewDropdownRate; // 0x18d8            
-            float m_flWallStepHeight; // 0x18dc            
-            float m_flWallTraceRadius; // 0x18e0            
-            uint8_t _pad18e4[0x4];
+            float m_flWallPreviewDropdownRate; // 0x18e0            
+            float m_flWallStepHeight; // 0x18e4            
+            float m_flWallTraceRadius; // 0x18e8            
+            uint8_t _pad18ec[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_FissureWallVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_FissureWallVData) == 0x18e8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_FissureWallVData) == 0x18f0);
     };
 };

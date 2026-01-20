@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xfb0
+        // Size: 0xfa8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Priest_CrossbowWeapon : public source2sdk::client::CCitadel_Ability_PrimaryWeapon
         {
         public:
-            uint8_t _pad0fa0[0x10];
+            uint8_t _pad0f98[0x10];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Priest_CrossbowWeapon) == 0xfb0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Priest_CrossbowWeapon) == 0xfa8);
     };
 };

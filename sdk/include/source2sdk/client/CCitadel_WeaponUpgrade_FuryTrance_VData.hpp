@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1878
+        // Size: 0x1880
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,16 +30,16 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x1788            
+            char m_BuffModifier[0x10]; // 0x1790            
             // metadata: MPropertyStartGroup "Visuals"
             // m_CastTargetEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastTargetEffect;
-            char m_CastTargetEffect[0xe0]; // 0x1798            
+            char m_CastTargetEffect[0xe0]; // 0x17a0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_WeaponUpgrade_FuryTrance_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_WeaponUpgrade_FuryTrance_VData) == 0x1878);
+        static_assert(sizeof(source2sdk::client::CCitadel_WeaponUpgrade_FuryTrance_VData) == 0x1880);
     };
 };

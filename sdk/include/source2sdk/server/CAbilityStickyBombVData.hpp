@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1828
+        // Size: 0x1830
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,31 +30,31 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_BombAttachedModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BombAttachedModifier;
-            char m_BombAttachedModifier[0x10]; // 0x16f8            
+            char m_BombAttachedModifier[0x10]; // 0x1700            
             // m_SelfBuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SelfBuffModifier;
-            char m_SelfBuffModifier[0x10]; // 0x1708            
+            char m_SelfBuffModifier[0x10]; // 0x1710            
             // m_KillCheckModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_KillCheckModifier;
-            char m_KillCheckModifier[0x10]; // 0x1718            
+            char m_KillCheckModifier[0x10]; // 0x1720            
             // metadata: MPropertyStartGroup "Visuals"
             // m_CastBombParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastBombParticle;
-            char m_CastBombParticle[0xe0]; // 0x1728            
+            char m_CastBombParticle[0xe0]; // 0x1730            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flPostRangeGravityScale; // 0x1808            
-            float m_flAllyCollideRadius; // 0x180c            
-            float m_flBombDragStartRange; // 0x1810            
-            float m_flBombDragStartValue; // 0x1814            
-            float m_flBombDragEndValue; // 0x1818            
-            float m_flAllyTargetRangeMult; // 0x181c            
-            float m_flHookTargetOnlyWindow; // 0x1820            
-            uint8_t _pad1824[0x4];
+            float m_flPostRangeGravityScale; // 0x1810            
+            float m_flAllyCollideRadius; // 0x1814            
+            float m_flBombDragStartRange; // 0x1818            
+            float m_flBombDragStartValue; // 0x181c            
+            float m_flBombDragEndValue; // 0x1820            
+            float m_flAllyTargetRangeMult; // 0x1824            
+            float m_flHookTargetOnlyWindow; // 0x1828            
+            uint8_t _pad182c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityStickyBombVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityStickyBombVData) == 0x1828);
+        static_assert(sizeof(source2sdk::server::CAbilityStickyBombVData) == 0x1830);
     };
 };

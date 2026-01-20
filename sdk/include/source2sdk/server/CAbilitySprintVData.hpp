@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17f0
+        // Size: 0x17f8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,17 +29,17 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_SprintParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SprintParticle;
-            char m_SprintParticle[0xe0]; // 0x16f8            
+            char m_SprintParticle[0xe0]; // 0x1700            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strSprintSound; // 0x17d8            
+            CSoundEventName m_strSprintSound; // 0x17e0            
             // metadata: MPropertyStartGroup "+Sprint Properties"
-            float m_flSprintAccMS; // 0x17e8            
-            uint8_t _pad17ec[0x4];
+            float m_flSprintAccMS; // 0x17f0            
+            uint8_t _pad17f4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilitySprintVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilitySprintVData) == 0x17f0);
+        static_assert(sizeof(source2sdk::server::CAbilitySprintVData) == 0x17f8);
     };
 };

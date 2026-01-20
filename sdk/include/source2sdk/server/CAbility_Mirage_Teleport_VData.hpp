@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1928
+        // Size: 0x1930
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,32 +30,32 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x16f8            
+            char m_BuffModifier[0x10]; // 0x1700            
             // m_ImmunityModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ImmunityModifier;
-            char m_ImmunityModifier[0x10]; // 0x1708            
+            char m_ImmunityModifier[0x10]; // 0x1710            
             // m_FireRateModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_FireRateModifier;
-            char m_FireRateModifier[0x10]; // 0x1718            
+            char m_FireRateModifier[0x10]; // 0x1720            
             // m_DummyCameraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DummyCameraModifier;
-            char m_DummyCameraModifier[0x10]; // 0x1728            
+            char m_DummyCameraModifier[0x10]; // 0x1730            
             // metadata: MPropertyStartGroup "Visuals"
             // m_TeleportStartParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportStartParticle;
-            char m_TeleportStartParticle[0xe0]; // 0x1738            
+            char m_TeleportStartParticle[0xe0]; // 0x1740            
             // m_TeleportEndParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportEndParticle;
-            char m_TeleportEndParticle[0xe0]; // 0x1818            
+            char m_TeleportEndParticle[0xe0]; // 0x1820            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strArriveSound; // 0x18f8            
-            CSoundEventName m_strDepartSound; // 0x1908            
-            CSoundEventName m_strChannelDestinationSound; // 0x1918            
+            CSoundEventName m_strArriveSound; // 0x1900            
+            CSoundEventName m_strDepartSound; // 0x1910            
+            CSoundEventName m_strChannelDestinationSound; // 0x1920            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Mirage_Teleport_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Mirage_Teleport_VData) == 0x1928);
+        static_assert(sizeof(source2sdk::server::CAbility_Mirage_Teleport_VData) == 0x1930);
     };
 };

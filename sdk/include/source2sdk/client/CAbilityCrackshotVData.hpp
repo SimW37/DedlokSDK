@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x19e8
+        // Size: 0x19f0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,29 +30,29 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionParticle;
-            char m_ExplosionParticle[0xe0]; // 0x16f8            
+            char m_ExplosionParticle[0xe0]; // 0x1700            
             // m_ExplosionVictimParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ExplosionVictimParticle;
-            char m_ExplosionVictimParticle[0xe0]; // 0x17d8            
+            char m_ExplosionVictimParticle[0xe0]; // 0x17e0            
             // m_ReadyParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ReadyParticle;
-            char m_ReadyParticle[0xe0]; // 0x18b8            
+            char m_ReadyParticle[0xe0]; // 0x18c0            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x1998            
+            char m_DebuffModifier[0x10]; // 0x19a0            
             // m_CrackshotImmuneModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_CrackshotImmuneModifier;
-            char m_CrackshotImmuneModifier[0x10]; // 0x19a8            
+            char m_CrackshotImmuneModifier[0x10]; // 0x19b0            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_HeadShotVictimSound; // 0x19b8            
-            CSoundEventName m_HeadShotConfirmationSound; // 0x19c8            
-            CSoundEventName m_ReadySound; // 0x19d8            
+            CSoundEventName m_HeadShotVictimSound; // 0x19c0            
+            CSoundEventName m_HeadShotConfirmationSound; // 0x19d0            
+            CSoundEventName m_ReadySound; // 0x19e0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityCrackshotVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityCrackshotVData) == 0x19e8);
+        static_assert(sizeof(source2sdk::client::CAbilityCrackshotVData) == 0x19f0);
     };
 };

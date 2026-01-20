@@ -49,6 +49,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "int32 m_iDeaths"
         // static metadata: MNetworkVarNames "int32 m_iDenies"
         // static metadata: MNetworkVarNames "int32 m_iLastHits"
+        // static metadata: MNetworkVarNames "int32 m_iKillStreak"
         // static metadata: MNetworkVarNames "bool m_bAlive"
         // static metadata: MNetworkVarNames "int32 m_nHeroDraftPosition"
         // static metadata: MNetworkVarNames "bool m_bUltimateTrained"
@@ -124,38 +125,39 @@ namespace source2sdk
             // metadata: MNetworkEnable
             std::int32_t m_iLastHits; // 0x60            
             // metadata: MNetworkEnable
-            bool m_bAlive; // 0x64            
-            uint8_t _pad0065[0x3]; // 0x65
+            std::int32_t m_iKillStreak; // 0x64            
+            // metadata: MNetworkEnable
+            bool m_bAlive; // 0x68            
+            uint8_t _pad0069[0x3]; // 0x69
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "HeroDraftPositionChanged"
-            std::int32_t m_nHeroDraftPosition; // 0x68            
+            std::int32_t m_nHeroDraftPosition; // 0x6c            
             // metadata: MNetworkEnable
-            bool m_bUltimateTrained; // 0x6c            
-            uint8_t _pad006d[0x3]; // 0x6d
+            bool m_bUltimateTrained; // 0x70            
+            uint8_t _pad0071[0x3]; // 0x71
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flUltimateCooldownStart; // 0x70            
+            source2sdk::entity2::GameTime_t m_flUltimateCooldownStart; // 0x74            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flUltimateCooldownEnd; // 0x74            
+            source2sdk::entity2::GameTime_t m_flUltimateCooldownEnd; // 0x78            
             // metadata: MNetworkEnable
-            bool m_bHasRejuvenator; // 0x78            
+            bool m_bHasRejuvenator; // 0x7c            
             // metadata: MNetworkEnable
-            bool m_bHasRebirth; // 0x79            
+            bool m_bHasRebirth; // 0x7d            
             // metadata: MNetworkEnable
-            bool m_bFlaggedAsCheater; // 0x7a            
-            uint8_t _pad007b[0x1]; // 0x7b
+            bool m_bFlaggedAsCheater; // 0x7e            
+            uint8_t _pad007f[0x1]; // 0x7f
             // metadata: MNetworkEnable
-            std::int32_t m_iHeroDamage; // 0x7c            
+            std::int32_t m_iHeroDamage; // 0x80            
             // metadata: MNetworkEnable
-            std::int32_t m_iHeroHealing; // 0x80            
+            std::int32_t m_iHeroHealing; // 0x84            
             // metadata: MNetworkEnable
-            std::int32_t m_iSelfHealing; // 0x84            
+            std::int32_t m_iSelfHealing; // 0x88            
             // metadata: MNetworkEnable
-            std::int32_t m_iObjectiveDamage; // 0x88            
+            std::int32_t m_iObjectiveDamage; // 0x8c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "Abilities"
             // metadata: MNetworkChangeCallback "pdgAbilitiesChanged"
-            std::int32_t m_nHeroAbilityUpgradeBits[4]; // 0x8c            
-            uint8_t _pad009c[0x4]; // 0x9c
+            std::int32_t m_nHeroAbilityUpgradeBits[4]; // 0x90            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "Abilities"
             // metadata: MNetworkChangeCallback "pdgUpgradesChanged"
@@ -231,19 +233,20 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_iDeaths) == 0x58);
         static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_iDenies) == 0x5c);
         static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_iLastHits) == 0x60);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_bAlive) == 0x64);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_nHeroDraftPosition) == 0x68);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_bUltimateTrained) == 0x6c);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_flUltimateCooldownStart) == 0x70);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_flUltimateCooldownEnd) == 0x74);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_bHasRejuvenator) == 0x78);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_bHasRebirth) == 0x79);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_bFlaggedAsCheater) == 0x7a);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_iHeroDamage) == 0x7c);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_iHeroHealing) == 0x80);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_iSelfHealing) == 0x84);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_iObjectiveDamage) == 0x88);
-        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_nHeroAbilityUpgradeBits) == 0x8c);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_iKillStreak) == 0x64);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_bAlive) == 0x68);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_nHeroDraftPosition) == 0x6c);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_bUltimateTrained) == 0x70);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_flUltimateCooldownStart) == 0x74);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_flUltimateCooldownEnd) == 0x78);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_bHasRejuvenator) == 0x7c);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_bHasRebirth) == 0x7d);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_bFlaggedAsCheater) == 0x7e);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_iHeroDamage) == 0x80);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_iHeroHealing) == 0x84);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_iSelfHealing) == 0x88);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_iObjectiveDamage) == 0x8c);
+        static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_nHeroAbilityUpgradeBits) == 0x90);
         static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_vecUpgrades) == 0xa0);
         static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_vecBonusCounterAbilities) == 0xb8);
         static_assert(offsetof(source2sdk::client::PlayerDataGlobal_t, m_vecBonusCounterValues) == 0xd0);

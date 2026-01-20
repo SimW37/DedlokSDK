@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1720
+        // Size: 0x1728
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,12 +26,12 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strCastStartSound; // 0x1710            
+            CSoundEventName m_strCastStartSound; // 0x1718            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Drifter_StalkersMark_Teleport_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Drifter_StalkersMark_Teleport_VData) == 0x1720);
+        static_assert(sizeof(source2sdk::server::CAbility_Drifter_StalkersMark_Teleport_VData) == 0x1728);
     };
 };

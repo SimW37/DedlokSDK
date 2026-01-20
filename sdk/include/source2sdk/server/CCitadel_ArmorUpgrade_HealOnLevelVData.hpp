@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1788
+        // Size: 0x1790
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,6 +29,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_ArmorUpgrade_HealOnLevelVData) == 0x1788);
+        static_assert(sizeof(source2sdk::server::CCitadel_ArmorUpgrade_HealOnLevelVData) == 0x1790);
     };
 };

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1c88
+        // Size: 0x1c90
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,25 +27,25 @@ namespace source2sdk
         class CAbilityUppercutVData : public source2sdk::server::CAbilityMeleeVData
         {
         public:
-            source2sdk::client::AttackData_t m_UppercutAttackData; // 0x1728            
+            source2sdk::client::AttackData_t m_UppercutAttackData; // 0x1730            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_UppercutModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_UppercutModifier;
-            char m_UppercutModifier[0x10]; // 0x1c50            
+            char m_UppercutModifier[0x10]; // 0x1c58            
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x1c60            
+            char m_BuffModifier[0x10]; // 0x1c68            
             // m_ClipModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ClipModifier;
-            char m_ClipModifier[0x10]; // 0x1c70            
+            char m_ClipModifier[0x10]; // 0x1c78            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flMaxPitchUp; // 0x1c80            
-            float m_flDamageTriggerTime; // 0x1c84            
+            float m_flMaxPitchUp; // 0x1c88            
+            float m_flDamageTriggerTime; // 0x1c8c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityUppercutVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityUppercutVData) == 0x1c88);
+        static_assert(sizeof(source2sdk::server::CAbilityUppercutVData) == 0x1c90);
     };
 };

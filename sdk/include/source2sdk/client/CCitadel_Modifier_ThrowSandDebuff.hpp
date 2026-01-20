@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x108
+        // Size: 0x188
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_ThrowSandDebuff : public source2sdk::client::CCitadel_Modifier_Disarmed
         {
         public:
-            uint8_t _pad00c0[0x48];
+            uint8_t _pad00c0[0xc8];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_ThrowSandDebuff) == 0x108);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_ThrowSandDebuff) == 0x188);
     };
 };
