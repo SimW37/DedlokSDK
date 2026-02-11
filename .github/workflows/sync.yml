@@ -3,12 +3,15 @@ on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
-
 jobs:
-  sync:
+  mirror:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          git clone --bare -b deadlock --single-branch https://github.com/neverlosecc/source2sdk.git repo
+      - name: Check and Sync Source2SDK
+        run: |
+          UPSTREAM=$(git ls-remote https://github.com/neverlosecc/source2sdk.git deadlock | cut -f1)
+          LOCAL=$(git ls-remote https://github.com/${{ github.repository }}.git deadlock | cut -f1)
+          [ "$UPSTREAM" = "$LOCAL" ] && echo "Up to date." && exit 0
+          git clone --bare --single-branch -b deadlock https://github.com/neverlosecc/source2sdk.git repo
           cd repo
-          git push -f https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git deadlock
+          git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git deadlock:deadlock
