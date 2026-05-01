@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xca0
+        // Size: 0x1150
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iRegenStacks"
@@ -25,18 +25,18 @@ namespace source2sdk
         class CItem_ResonantHealing : public source2sdk::server::CCitadel_Item
         {
         public:
-            uint8_t _pad0ba8[0x2c]; // 0xba8
-            bool m_bForceModUpdate; // 0xbd4            
-            uint8_t _pad0bd5[0x3]; // 0xbd5
+            uint8_t _pad0f98[0x2c]; // 0xf98
+            bool m_bForceModUpdate; // 0xfc4            
+            uint8_t _pad0fc5[0x3]; // 0xfc5
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int32_t m_iRegenStacks; // 0xbd8            
-            uint8_t _pad0bdc[0xc4];
+            std::int32_t m_iRegenStacks; // 0xfc8            
+            uint8_t _pad0fcc[0x184];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CItem_ResonantHealing because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CItem_ResonantHealing) == 0xca0);
+        static_assert(sizeof(source2sdk::server::CItem_ResonantHealing) == 0x1150);
     };
 };

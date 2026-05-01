@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1708
+        // Size: 0x1c08
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bPlayingIdle"
@@ -28,16 +28,16 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnPlayingIdleChanged"
-            bool m_bPlayingIdle; // 0x16c8            
+            bool m_bPlayingIdle; // 0x1bc8            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnShieldActiveChanged"
-            bool m_bShieldActive; // 0x16c9            
-            uint8_t _pad16ca[0x3e];
+            bool m_bShieldActive; // 0x1bc9            
+            uint8_t _pad1bca[0x3e];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_NPC_TrooperNeutral because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_NPC_TrooperNeutral) == 0x1708);
+        static_assert(sizeof(source2sdk::client::C_NPC_TrooperNeutral) == 0x1c08);
     };
 };

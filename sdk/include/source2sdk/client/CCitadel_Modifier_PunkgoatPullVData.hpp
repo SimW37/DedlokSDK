@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7a8
+        // Size: 0x798
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,14 +26,14 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Gameplay"
-            CPiecewiseCurve m_PullForceFracByDistanceCurve; // 0x760            
-            float m_flPullToCasterLocationDuration; // 0x7a0            
-            uint8_t _pad07a4[0x4];
+            CPiecewiseCurve m_PullForceFracByDistanceCurve; // 0x750            
+            float m_flPullToCasterLocationDuration; // 0x790            
+            uint8_t _pad0794[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_PunkgoatPullVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_PunkgoatPullVData) == 0x7a8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_PunkgoatPullVData) == 0x798);
     };
 };

@@ -15,10 +15,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xac0
+        // Size: 0xa90
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_flTurnSolidTime"
@@ -27,13 +27,13 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flTurnSolidTime; // 0xab8            
-            uint8_t _pad0abc[0x4];
+            source2sdk::entity2::GameTime_t m_flTurnSolidTime; // 0xa80            
+            uint8_t _pad0a84[0xc];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_SmokeGrenade_Blocker because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_SmokeGrenade_Blocker) == 0xac0);
+        static_assert(sizeof(source2sdk::server::CCitadel_SmokeGrenade_Blocker) == 0xa90);
     };
 };

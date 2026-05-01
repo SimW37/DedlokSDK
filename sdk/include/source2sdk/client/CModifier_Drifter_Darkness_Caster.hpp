@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x180
+        // Size: 0x1c0
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Drifter_Darkness_Caster : public source2sdk::client::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0xc0];
+            uint8_t _pad00c0[0x100];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CModifier_Drifter_Darkness_Caster) == 0x180);
+        static_assert(sizeof(source2sdk::client::CModifier_Drifter_Darkness_Caster) == 0x1c0);
     };
 };

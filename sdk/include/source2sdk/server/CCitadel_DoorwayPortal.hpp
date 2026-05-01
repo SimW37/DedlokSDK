@@ -15,10 +15,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xbe8
+        // Size: 0xbc0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
@@ -31,13 +31,14 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
             // metadata: MNetworkAlias "CCitadelMinimapComponent"
             // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xab8            
-            uint8_t _pad0ad0[0xf8]; // 0xad0
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xa80            
+            uint8_t _pad0aa0[0xf8]; // 0xaa0
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             // m_hLinkedDoorway has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadel_DoorwayPortal> m_hLinkedDoorway;
-            char m_hLinkedDoorway[0x4]; // 0xbc8            
-            uint8_t _pad0bcc[0x1c];
+            char m_hLinkedDoorway[0x4]; // 0xb98            
+            uint8_t _pad0b9c[0x24];
             
             // Datamap fields:
             // CHandle< CBaseEntity > other_door; // 0x7fffffff
@@ -48,6 +49,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CCitadel_DoorwayPortal because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_DoorwayPortal) == 0xbe8);
+        static_assert(sizeof(source2sdk::server::CCitadel_DoorwayPortal) == 0xbc0);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1d8
+        // Size: 0x2d8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_PunkgoatPull : public source2sdk::client::CCitadelModifier
@@ -27,12 +27,12 @@ namespace source2sdk
             bool m_bAllowTrackTarget; // 0xcc            
             uint8_t _pad00cd[0x3]; // 0xcd
             float m_flCurrentVerticalSpeed; // 0xd0            
-            uint8_t _pad00d4[0x104];
+            uint8_t _pad00d4[0x204];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_PunkgoatPull because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_PunkgoatPull) == 0x1d8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_PunkgoatPull) == 0x2d8);
     };
 };

@@ -3,7 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/client/CitadelMusicCueData_t.hpp"
+#include "source2sdk/client/CitadelMusicCueOverrides_t.hpp"
 #include "source2sdk/client/EMusicState_t.hpp"
 
 // /////////////////////////////////////////////////////////////
@@ -26,7 +26,7 @@ namespace source2sdk
         {
         public:
             // m_MusicStateData has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CUtlOrderedMap<source2sdk::client::EMusicState_t,source2sdk::client::CitadelMusicCueData_t> m_MusicStateData;
+            // CUtlOrderedMap<source2sdk::client::EMusicState_t,source2sdk::client::CitadelMusicCueOverrides_t> m_MusicStateData;
             char m_MusicStateData[0x28]; // 0x0            
         };
         #pragma pack(pop)

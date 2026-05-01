@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x320
+        // Size: 0x348
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,12 +27,12 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyFriendlyName "freeze time"
-            source2sdk::particleslib::CParticleCollectionFloatInput m_flFreezeTime; // 0x1c0            
+            source2sdk::particleslib::CParticleCollectionFloatInput m_flFreezeTime; // 0x1d8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_OP_EndCapTimedFreeze because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::particles::C_OP_EndCapTimedFreeze) == 0x320);
+        static_assert(sizeof(source2sdk::particles::C_OP_EndCapTimedFreeze) == 0x348);
     };
 };

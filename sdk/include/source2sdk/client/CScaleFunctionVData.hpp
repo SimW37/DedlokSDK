@@ -30,9 +30,11 @@ namespace source2sdk
         {
         public:
             source2sdk::client::EStatsType m_eSpecificStatScaleType; // 0x28            
-            float m_flStatScale; // 0x2c            
-            bool m_bFunctionDisabled; // 0x30            
-            uint8_t _pad0031[0xf];
+            bool m_bFunctionDisabled; // 0x2c            
+            uint8_t _pad002d[0x3]; // 0x2d
+            float m_flStatScale; // 0x30            
+            float m_flStreetBrawlStatScale; // 0x34            
+            uint8_t _pad0038[0x8];
         };
         #pragma pack(pop)
         

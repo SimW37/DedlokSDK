@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa88
+        // Size: 0x970
         // Has VTable
         #pragma pack(push, 1)
         class CScriptTriggerHurt : public source2sdk::server::CTriggerHurt
         {
         public:
-            Vector m_vExtent; // 0xa78            
-            uint8_t _pad0a84[0x4];
+            Vector m_vExtent; // 0x960            
+            uint8_t _pad096c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CScriptTriggerHurt because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CScriptTriggerHurt) == 0xa88);
+        static_assert(sizeof(source2sdk::server::CScriptTriggerHurt) == 0x970);
     };
 };

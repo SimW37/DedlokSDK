@@ -14,10 +14,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xc88
+        // Size: 0xbd0
         // Has VTable
         #pragma pack(push, 1)
         class CRagdollPropAlias_physics_prop_ragdoll : public source2sdk::server::CRagdollProp
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CRagdollPropAlias_physics_prop_ragdoll) == 0xc88);
+        static_assert(sizeof(source2sdk::server::CRagdollPropAlias_physics_prop_ragdoll) == 0xbd0);
     };
 };

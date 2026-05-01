@@ -17,22 +17,22 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x260
+        // Size: 0x3e8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy : public source2sdk::server::CCitadelModifier
         {
         public:
-            bool m_bAddedStasisParticle; // 0xc8            
-            uint8_t _pad00c9[0x3]; // 0xc9
-            Vector m_vHoldOffset; // 0xcc            
-            float m_flLastTouchTime; // 0xd8            
-            uint8_t _pad00dc[0x184];
+            bool m_bAddedStasisParticle; // 0xd0            
+            uint8_t _pad00d1[0x3]; // 0xd1
+            Vector m_vHoldOffset; // 0xd4            
+            float m_flLastTouchTime; // 0xe0            
+            uint8_t _pad00e4[0x304];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy) == 0x260);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Wrecker_Ultimate_GrabEnemy) == 0x3e8);
     };
 };

@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 5
+        // Enumerator count: 6
         // Alignment: 4
         // Size: 0x4
         enum class ChatMsgPingMarkerInfo : std::uint32_t
@@ -28,6 +28,8 @@ namespace source2sdk
             k_EPingMarkerInfo_OnlyShowMarker = 0x3,
             // MPropertyFriendlyName "Only Play Ping Sound (and VO)"
             k_EPingMarkerInfo_OnlyPlaySound = 0x4,
+            // MPropertyFriendlyName "Only show on Minimap, no world, no sound"
+            k_EPingMarkerInfo_OnlyMiniMap = 0x5,
         };
     };
 };

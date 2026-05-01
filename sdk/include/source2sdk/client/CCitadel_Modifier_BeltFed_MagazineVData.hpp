@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x790
+        // Size: 0x780
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,14 +26,14 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_SpinUpSound; // 0x760            
-            CSoundEventName m_SpinDownSound; // 0x770            
-            CSoundEventName m_SpinLoopSound; // 0x780            
+            CSoundEventName m_SpinUpSound; // 0x750            
+            CSoundEventName m_SpinDownSound; // 0x760            
+            CSoundEventName m_SpinLoopSound; // 0x770            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_BeltFed_MagazineVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_BeltFed_MagazineVData) == 0x790);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_BeltFed_MagazineVData) == 0x780);
     };
 };

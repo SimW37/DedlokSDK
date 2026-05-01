@@ -22,7 +22,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xda0
+        // Size: 0x12d0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelAutoScaledTime m_flGroundDashJumpStartTime"
@@ -39,64 +39,64 @@ namespace source2sdk
         class CCitadel_Ability_Jump : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            source2sdk::entity2::GameTime_t m_flLastTimeOnZipLine; // 0xba0            
-            source2sdk::entity2::GameTime_t m_flLastOnGroundTime; // 0xba4            
-            source2sdk::entity2::GameTime_t m_flPhaseStartTime; // 0xba8            
-            source2sdk::entity2::GameTime_t m_flJumpTime; // 0xbac            
-            source2sdk::entity2::GameTime_t m_flWallJumpFatigueStartTime; // 0xbb0            
-            source2sdk::entity2::GameTime_t m_flLastThinkTime; // 0xbb4            
-            Vector m_vCurrentWallNormal; // 0xbb8            
-            Vector m_vLastWallCollidedWithNormal; // 0xbc4            
-            Vector m_vLastValidWallJumpNormal; // 0xbd0            
-            Vector m_vLastValidWallJumpNormal_PlayerPosition; // 0xbdc            
-            source2sdk::entity2::GameTime_t m_flLastWallJumpTime; // 0xbe8            
-            Vector m_vWallJumpFacingDir; // 0xbec            
-            source2sdk::client::EWallJumpFacing m_eWallJumpFacing; // 0xbf8            
-            uint8_t _pad0bfa[0x2]; // 0xbfa
-            float m_flLastWallJumpFatigueStrength; // 0xbfc            
-            source2sdk::client::EJumpType_t m_LastJumpType; // 0xc00            
-            bool m_bShouldCreateAirJumpEffects; // 0xc01            
-            uint8_t _pad0c02[0x2]; // 0xc02
-            source2sdk::entity2::GameTime_t m_flDoubleJumpFailTime; // 0xc04            
-            source2sdk::client::ECitadelAbilityOrders m_eDoubleJumpFailReason; // 0xc08            
-            Vector m_vWallJumpNormalUsed; // 0xc0c            
-            uint8_t _pad0c18[0x140]; // 0xc18
+            source2sdk::entity2::GameTime_t m_flLastTimeOnZipLine; // 0xf90            
+            source2sdk::entity2::GameTime_t m_flLastOnGroundTime; // 0xf94            
+            source2sdk::entity2::GameTime_t m_flPhaseStartTime; // 0xf98            
+            source2sdk::entity2::GameTime_t m_flJumpTime; // 0xf9c            
+            source2sdk::entity2::GameTime_t m_flWallJumpFatigueStartTime; // 0xfa0            
+            source2sdk::entity2::GameTime_t m_flLastThinkTime; // 0xfa4            
+            Vector m_vCurrentWallNormal; // 0xfa8            
+            Vector m_vLastWallCollidedWithNormal; // 0xfb4            
+            Vector m_vLastValidWallJumpNormal; // 0xfc0            
+            Vector m_vLastValidWallJumpNormal_PlayerPosition; // 0xfcc            
+            source2sdk::entity2::GameTime_t m_flLastWallJumpTime; // 0xfd8            
+            Vector m_vWallJumpFacingDir; // 0xfdc            
+            source2sdk::client::EWallJumpFacing m_eWallJumpFacing; // 0xfe8            
+            uint8_t _pad0fea[0x2]; // 0xfea
+            float m_flLastWallJumpFatigueStrength; // 0xfec            
+            source2sdk::client::EJumpType_t m_LastJumpType; // 0xff0            
+            bool m_bShouldCreateAirJumpEffects; // 0xff1            
+            uint8_t _pad0ff2[0x2]; // 0xff2
+            source2sdk::entity2::GameTime_t m_flDoubleJumpFailTime; // 0xff4            
+            source2sdk::client::ECitadelAbilityOrders m_eDoubleJumpFailReason; // 0xff8            
+            Vector m_vWallJumpNormalUsed; // 0xffc            
+            uint8_t _pad1008[0x280]; // 0x1008
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelAutoScaledTime m_flGroundDashJumpStartTime; // 0xd58            
+            source2sdk::server::CCitadelAutoScaledTime m_flGroundDashJumpStartTime; // 0x1288            
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelAutoScaledTime m_flGroundDashJumpEndTime; // 0xd70            
-            // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bJumped; // 0xd88            
+            source2sdk::server::CCitadelAutoScaledTime m_flGroundDashJumpEndTime; // 0x12a0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bCanDashJump; // 0xd89            
-            uint8_t _pad0d8a[0x2]; // 0xd8a
+            bool m_bJumped; // 0x12b8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int32_t m_nDesiredAirJumpCount; // 0xd8c            
+            bool m_bCanDashJump; // 0x12b9            
+            uint8_t _pad12ba[0x2]; // 0x12ba
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int32_t m_nExecutedAirJumpCount; // 0xd90            
+            std::int32_t m_nDesiredAirJumpCount; // 0x12bc            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bInSlideJump; // 0xd94            
+            std::int32_t m_nExecutedAirJumpCount; // 0x12c0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int8_t m_nConsecutiveAirJumps; // 0xd95            
+            bool m_bInSlideJump; // 0x12c4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            std::int8_t m_nConsecutiveWallJumps; // 0xd96            
-            uint8_t _pad0d97[0x1]; // 0xd97
+            std::int8_t m_nConsecutiveAirJumps; // 0x12c5            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flLateralInputSuppressEndTime; // 0xd98            
-            uint8_t _pad0d9c[0x4];
+            std::int8_t m_nConsecutiveWallJumps; // 0x12c6            
+            uint8_t _pad12c7[0x1]; // 0x12c7
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            source2sdk::entity2::GameTime_t m_flLateralInputSuppressEndTime; // 0x12c8            
+            uint8_t _pad12cc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Jump because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Jump) == 0xda0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Jump) == 0x12d0);
     };
 };

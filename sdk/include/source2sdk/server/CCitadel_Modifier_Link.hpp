@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe8
+        // Size: 0xf0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Link : public source2sdk::server::CCitadelModifier
@@ -33,17 +33,17 @@ namespace source2sdk
         public:
             // m_hPortalToCaster has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelPortalTrigger> m_hPortalToCaster;
-            char m_hPortalToCaster[0x4]; // 0xc8            
-            source2sdk::entity2::GameTime_t m_flPortalStartTime; // 0xcc            
-            source2sdk::entity2::GameTime_t m_flPortalEndTime; // 0xd0            
-            uint8_t _pad00d4[0x4]; // 0xd4
-            CUtlString m_sCasterAttachment; // 0xd8            
-            CUtlString m_sParentAttachment; // 0xe0            
+            char m_hPortalToCaster[0x4]; // 0xd0            
+            source2sdk::entity2::GameTime_t m_flPortalStartTime; // 0xd4            
+            source2sdk::entity2::GameTime_t m_flPortalEndTime; // 0xd8            
+            uint8_t _pad00dc[0x4]; // 0xdc
+            CUtlString m_sCasterAttachment; // 0xe0            
+            CUtlString m_sParentAttachment; // 0xe8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Link because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Link) == 0xe8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Link) == 0xf0);
     };
 };

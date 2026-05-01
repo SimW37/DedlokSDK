@@ -18,26 +18,26 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x5d0
+        // Size: 0x538
         // Has VTable
         #pragma pack(push, 1)
         class CMathRemap : public source2sdk::server::CLogicalEntity
         {
         public:
-            float m_flInMin; // 0x4f0            
-            float m_flInMax; // 0x4f4            
-            float m_flOut1; // 0x4f8            
-            float m_flOut2; // 0x4fc            
-            float m_flOldInValue; // 0x500            
-            bool m_bEnabled; // 0x504            
-            uint8_t _pad0505[0x3]; // 0x505
+            float m_flInMin; // 0x4a0            
+            float m_flInMax; // 0x4a4            
+            float m_flOut1; // 0x4a8            
+            float m_flOut2; // 0x4ac            
+            float m_flOldInValue; // 0x4b0            
+            bool m_bEnabled; // 0x4b4            
+            uint8_t _pad04b5[0x3]; // 0x4b5
             // m_OutValue has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<float> m_OutValue;
-            char m_OutValue[0x28]; // 0x508            
-            source2sdk::entity2::CEntityIOOutput m_OnRoseAboveMin; // 0x530            
-            source2sdk::entity2::CEntityIOOutput m_OnRoseAboveMax; // 0x558            
-            source2sdk::entity2::CEntityIOOutput m_OnFellBelowMin; // 0x580            
-            source2sdk::entity2::CEntityIOOutput m_OnFellBelowMax; // 0x5a8            
+            char m_OutValue[0x20]; // 0x4b8            
+            source2sdk::entity2::CEntityIOOutput m_OnRoseAboveMin; // 0x4d8            
+            source2sdk::entity2::CEntityIOOutput m_OnRoseAboveMax; // 0x4f0            
+            source2sdk::entity2::CEntityIOOutput m_OnFellBelowMin; // 0x508            
+            source2sdk::entity2::CEntityIOOutput m_OnFellBelowMax; // 0x520            
             
             // Datamap fields:
             // float InputValue; // 0x0
@@ -48,6 +48,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CMathRemap because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CMathRemap) == 0x5d0);
+        static_assert(sizeof(source2sdk::server::CMathRemap) == 0x538);
     };
 };

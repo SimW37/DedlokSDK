@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x180
+        // Size: 0x208
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Operative_Revelation_Aura : public source2sdk::server::CCitadelModifierAura
         {
         public:
-            uint8_t _pad0100[0x80];
+            uint8_t _pad0108[0x100];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CModifier_Operative_Revelation_Aura) == 0x180);
+        static_assert(sizeof(source2sdk::server::CModifier_Operative_Revelation_Aura) == 0x208);
     };
 };

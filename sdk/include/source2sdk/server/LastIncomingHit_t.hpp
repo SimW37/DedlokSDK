@@ -16,7 +16,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x4
         // Standard-layout class: true
-        // Size: 0x24
+        // Size: 0x20
         // Has Trivial Constructor
         // Has Trivial Destructor
         #pragma pack(push, 1)
@@ -27,7 +27,6 @@ namespace source2sdk
             Vector vecBoneLocalPos; // 0xc            
             std::int32_t nHitboxBoneIndex; // 0x18            
             float flHitStrength; // 0x1c            
-            std::int32_t nDamageType; // 0x20            
         };
         #pragma pack(pop)
         
@@ -35,8 +34,7 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::server::LastIncomingHit_t, vecBoneLocalPos) == 0xc);
         static_assert(offsetof(source2sdk::server::LastIncomingHit_t, nHitboxBoneIndex) == 0x18);
         static_assert(offsetof(source2sdk::server::LastIncomingHit_t, flHitStrength) == 0x1c);
-        static_assert(offsetof(source2sdk::server::LastIncomingHit_t, nDamageType) == 0x20);
         
-        static_assert(sizeof(source2sdk::server::LastIncomingHit_t) == 0x24);
+        static_assert(sizeof(source2sdk::server::LastIncomingHit_t) == 0x20);
     };
 };

@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xdd0
+        // Size: 0x1340
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_flStartTime"
@@ -39,36 +39,36 @@ namespace source2sdk
         class CCitadel_Ability_Tengu_StoneForm : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x200]; // 0xba0
+            uint8_t _pad0f90[0x380]; // 0xf90
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flStartTime; // 0xda0            
+            source2sdk::entity2::GameTime_t m_flStartTime; // 0x1310            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flLandedTime; // 0xda4            
+            source2sdk::entity2::GameTime_t m_flLandedTime; // 0x1314            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bLanded; // 0xda8            
+            bool m_bLanded; // 0x1318            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bFalling; // 0xda9            
+            bool m_bFalling; // 0x1319            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bInStoneForm; // 0xdaa            
-            uint8_t _pad0dab[0x1]; // 0xdab
+            bool m_bInStoneForm; // 0x131a            
+            uint8_t _pad131b[0x1]; // 0x131b
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            float m_flStartHeight; // 0xdac            
-            source2sdk::client::ParticleIndex_t m_nStoneFormEffect; // 0xdb0            
-            uint8_t _pad0db4[0x4]; // 0xdb4
+            float m_flStartHeight; // 0x131c            
+            source2sdk::client::ParticleIndex_t m_nStoneFormEffect; // 0x1320            
+            uint8_t _pad1324[0x4]; // 0x1324
             // m_vecHitEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecHitEntities;
-            char m_vecHitEntities[0x18]; // 0xdb8            
+            char m_vecHitEntities[0x18]; // 0x1328            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Tengu_StoneForm because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Tengu_StoneForm) == 0xdd0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Tengu_StoneForm) == 0x1340);
     };
 };

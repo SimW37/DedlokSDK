@@ -31,6 +31,7 @@ namespace source2sdk
         class CBaseModifierAura : public source2sdk::client::CCitadelModifier
         {
         public:
+            // metadata: MNotSaved
             // m_hAuraUnits has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_hAuraUnits;
             char m_hAuraUnits[0x18]; // 0xc0            

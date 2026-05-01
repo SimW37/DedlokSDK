@@ -15,10 +15,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xc78
+        // Size: 0xc50
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flAimPitch"
@@ -27,30 +27,37 @@ namespace source2sdk
         class CNPC_FieldSentry : public source2sdk::server::CNPC_SimpleAnimatingAI
         {
         public:
-            uint8_t _pad0c30[0xc]; // 0xc30
+            uint8_t _pad0c00[0xc]; // 0xc00
             // metadata: MNetworkEnable
-            float m_flAimPitch; // 0xc3c            
-            source2sdk::entity2::GameTime_t m_flNextAttackTime; // 0xc40            
-            float m_flAttackCone; // 0xc44            
-            float m_flAttackDelay; // 0xc48            
-            source2sdk::entity2::GameTime_t m_flLastAlertSound; // 0xc4c            
-            float m_flTrackingSpeed; // 0xc50            
-            float m_flDeployTime; // 0xc54            
-            uint8_t _pad0c58[0xa]; // 0xc58
-            bool m_bHadEnemy; // 0xc62            
-            bool m_bLockedOn; // 0xc63            
-            uint8_t _pad0c64[0x10]; // 0xc64
+            // metadata: MNotSaved
+            float m_flAimPitch; // 0xc0c            
+            // metadata: MNotSaved
+            source2sdk::entity2::GameTime_t m_flNextAttackTime; // 0xc10            
+            float m_flAttackCone; // 0xc14            
+            float m_flAttackDelay; // 0xc18            
+            // metadata: MNotSaved
+            source2sdk::entity2::GameTime_t m_flLastAlertSound; // 0xc1c            
+            float m_flTrackingSpeed; // 0xc20            
+            float m_flDeployTime; // 0xc24            
+            uint8_t _pad0c28[0x4]; // 0xc28
+            float m_flLifeTime; // 0xc2c            
+            uint8_t _pad0c30[0x2]; // 0xc30
+            // metadata: MNotSaved
+            bool m_bHadEnemy; // 0xc32            
+            bool m_bLockedOn; // 0xc33            
+            uint8_t _pad0c34[0x10]; // 0xc34
             // metadata: MNetworkEnable
-            float m_flAttackRange; // 0xc74            
+            // metadata: MNotSaved
+            float m_flAttackRange; // 0xc44            
+            uint8_t _pad0c48[0x8];
             
             // Datamap fields:
-            // float m_flLifeTime; // 0xc5c
-            // void m_flSpawnTime; // 0xc58
+            // void m_flSpawnTime; // 0xc28
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_FieldSentry because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_FieldSentry) == 0xc78);
+        static_assert(sizeof(source2sdk::server::CNPC_FieldSentry) == 0xc50);
     };
 };

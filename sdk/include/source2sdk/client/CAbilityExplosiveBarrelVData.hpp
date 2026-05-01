@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1af0
+        // Size: 0x1c08
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,29 +29,29 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_BarrelExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrelExplodeParticle;
-            char m_BarrelExplodeParticle[0xe0]; // 0x1700            
+            char m_BarrelExplodeParticle[0xe0]; // 0x1818            
             // m_MirvExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_MirvExplodeParticle;
-            char m_MirvExplodeParticle[0xe0]; // 0x17e0            
+            char m_MirvExplodeParticle[0xe0]; // 0x18f8            
             // m_BarrelArmedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrelArmedParticle;
-            char m_BarrelArmedParticle[0xe0]; // 0x18c0            
+            char m_BarrelArmedParticle[0xe0]; // 0x19d8            
             // m_BarrelReadyToExplodeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BarrelReadyToExplodeParticle;
-            char m_BarrelReadyToExplodeParticle[0xe0]; // 0x19a0            
+            char m_BarrelReadyToExplodeParticle[0xe0]; // 0x1ab8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strExplodeSound; // 0x1a80            
-            CSoundEventName m_strMirvExplodeSound; // 0x1a90            
-            CSoundEventName m_strRiccochetSound; // 0x1aa0            
-            CSoundEventName m_strBarrelSoundLp; // 0x1ab0            
-            CSoundEventName m_strBarrelLaunchSound; // 0x1ac0            
-            CSoundEventName m_strBarrelMeleedSound; // 0x1ad0            
-            CSoundEventName m_strBarrelArmedSound; // 0x1ae0            
+            CSoundEventName m_strExplodeSound; // 0x1b98            
+            CSoundEventName m_strMirvExplodeSound; // 0x1ba8            
+            CSoundEventName m_strRiccochetSound; // 0x1bb8            
+            CSoundEventName m_strBarrelSoundLp; // 0x1bc8            
+            CSoundEventName m_strBarrelLaunchSound; // 0x1bd8            
+            CSoundEventName m_strBarrelMeleedSound; // 0x1be8            
+            CSoundEventName m_strBarrelArmedSound; // 0x1bf8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityExplosiveBarrelVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbilityExplosiveBarrelVData) == 0x1af0);
+        static_assert(sizeof(source2sdk::client::CAbilityExplosiveBarrelVData) == 0x1c08);
     };
 };

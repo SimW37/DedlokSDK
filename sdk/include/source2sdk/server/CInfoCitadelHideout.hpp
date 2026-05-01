@@ -18,14 +18,14 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x540
+        // Size: 0x4d0
         // Has VTable
         #pragma pack(push, 1)
         class CInfoCitadelHideout : public source2sdk::server::CPointEntity
         {
         public:
-            source2sdk::entity2::CEntityIOOutput m_OnFastCooldownsEnabled; // 0x4f0            
-            source2sdk::entity2::CEntityIOOutput m_OnFastCooldownsDisabled; // 0x518            
+            source2sdk::entity2::CEntityIOOutput m_OnFastCooldownsEnabled; // 0x4a0            
+            source2sdk::entity2::CEntityIOOutput m_OnFastCooldownsDisabled; // 0x4b8            
             
             // Datamap fields:
             // void InputToggleFastCooldowns; // 0x0
@@ -34,6 +34,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CInfoCitadelHideout because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CInfoCitadelHideout) == 0x540);
+        static_assert(sizeof(source2sdk::server::CInfoCitadelHideout) == 0x4d0);
     };
 };

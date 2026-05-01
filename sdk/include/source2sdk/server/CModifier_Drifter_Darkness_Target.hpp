@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x290
+        // Size: 0x418
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Drifter_Darkness_Target : public source2sdk::server::CCitadelModifierAura
         {
         public:
-            uint8_t _pad0100[0x190];
+            uint8_t _pad0108[0x310];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CModifier_Drifter_Darkness_Target) == 0x290);
+        static_assert(sizeof(source2sdk::server::CModifier_Drifter_Darkness_Target) == 0x418);
     };
 };

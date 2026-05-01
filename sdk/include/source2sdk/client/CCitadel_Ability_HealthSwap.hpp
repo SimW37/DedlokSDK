@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xfa0
+        // Size: 0x15e8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_flPostCastHoldEndTime"
@@ -27,16 +27,16 @@ namespace source2sdk
         class CCitadel_Ability_HealthSwap : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0xd90            
-            uint8_t _pad0d94[0x1c4]; // 0xd94
+            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0x11d8            
+            uint8_t _pad11dc[0x384]; // 0x11dc
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flPostCastHoldEndTime; // 0xf58            
-            uint8_t _pad0f5c[0x44];
+            source2sdk::entity2::GameTime_t m_flPostCastHoldEndTime; // 0x1560            
+            uint8_t _pad1564[0x84];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_HealthSwap because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_HealthSwap) == 0xfa0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_HealthSwap) == 0x15e8);
     };
 };

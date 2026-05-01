@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1100
+        // Size: 0x1888
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "QAngle m_anglesCharging"
@@ -30,29 +30,29 @@ namespace source2sdk
         class CCitadel_Ability_Bull_Charge : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d90[0x340]; // 0xd90
+            uint8_t _pad11d8[0x680]; // 0x11d8
             // metadata: MNetworkEnable
-            QAngle m_anglesCharging; // 0x10d0            
+            QAngle m_anglesCharging; // 0x1858            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnChargingStateChanged"
-            source2sdk::entity2::GameTime_t m_flChargeStartTime; // 0x10dc            
+            source2sdk::entity2::GameTime_t m_flChargeStartTime; // 0x1864            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flFastChargeStartTime; // 0x10e0            
+            source2sdk::entity2::GameTime_t m_flFastChargeStartTime; // 0x1868            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flFastChargeEndTime; // 0x10e4            
+            source2sdk::entity2::GameTime_t m_flFastChargeEndTime; // 0x186c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bHitAPlayer; // 0x10e8            
-            uint8_t _pad10e9[0x3]; // 0x10e9
-            bool m_bFirstTick; // 0x10ec            
-            uint8_t _pad10ed[0x3]; // 0x10ed
-            Vector m_vGoalDir; // 0x10f0            
-            uint8_t _pad10fc[0x4];
+            bool m_bHitAPlayer; // 0x1870            
+            uint8_t _pad1871[0x3]; // 0x1871
+            bool m_bFirstTick; // 0x1874            
+            uint8_t _pad1875[0x3]; // 0x1875
+            Vector m_vGoalDir; // 0x1878            
+            uint8_t _pad1884[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Bull_Charge because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bull_Charge) == 0x1100);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Bull_Charge) == 0x1888);
     };
 };

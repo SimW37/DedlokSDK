@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x48
+        // Size: 0x58
         // Has VTable
         #pragma pack(push, 1)
         class CAI_MoveProbe : public source2sdk::client::CAI_Component
@@ -32,13 +32,13 @@ namespace source2sdk
         public:
             // m_hLastBlockingEnt has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hLastBlockingEnt;
-            char m_hLastBlockingEnt[0x4]; // 0x40            
-            uint8_t _pad0044[0x4];
+            char m_hLastBlockingEnt[0x4]; // 0x50            
+            uint8_t _pad0054[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAI_MoveProbe because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAI_MoveProbe) == 0x48);
+        static_assert(sizeof(source2sdk::server::CAI_MoveProbe) == 0x58);
     };
 };

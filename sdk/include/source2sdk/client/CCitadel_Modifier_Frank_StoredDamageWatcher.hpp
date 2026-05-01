@@ -25,21 +25,21 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x110
+        // Size: 0x140
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Frank_StoredDamageWatcher : public source2sdk::client::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x40]; // 0xc0
-            source2sdk::client::CCitadel_Ability_Frank_ShockTarget* pShockTarget; // 0x100            
-            source2sdk::client::ParticleIndex_t m_nStoredDamageFXIndex; // 0x108            
-            uint8_t _pad010c[0x4];
+            uint8_t _pad00c0[0x70]; // 0xc0
+            source2sdk::client::CCitadel_Ability_Frank_ShockTarget* pShockTarget; // 0x130            
+            source2sdk::client::ParticleIndex_t m_nStoredDamageFXIndex; // 0x138            
+            uint8_t _pad013c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Frank_StoredDamageWatcher because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Frank_StoredDamageWatcher) == 0x110);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Frank_StoredDamageWatcher) == 0x140);
     };
 };

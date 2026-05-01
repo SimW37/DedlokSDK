@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1e0
+        // Size: 0x2a0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_CritShot : public source2sdk::client::CCitadel_Modifier_BaseBulletPreRollProc
         {
         public:
-            uint8_t _pad0198[0x48];
+            uint8_t _pad0218[0x88];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_CritShot) == 0x1e0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_CritShot) == 0x2a0);
     };
 };

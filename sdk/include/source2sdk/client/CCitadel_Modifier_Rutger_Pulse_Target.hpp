@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1d0
+        // Size: 0x2d0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Rutger_Pulse_Target : public source2sdk::client::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x100]; // 0xc0
-            Vector m_vAuraCenter; // 0x1c0            
-            uint8_t _pad01cc[0x4];
+            uint8_t _pad00c0[0x200]; // 0xc0
+            Vector m_vAuraCenter; // 0x2c0            
+            uint8_t _pad02cc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Rutger_Pulse_Target because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Rutger_Pulse_Target) == 0x1d0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Rutger_Pulse_Target) == 0x2d0);
     };
 };

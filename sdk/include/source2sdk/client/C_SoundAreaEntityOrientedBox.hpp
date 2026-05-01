@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x628
+        // Size: 0x630
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "Vector m_vMin"
@@ -27,14 +27,14 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            Vector m_vMin; // 0x610            
+            Vector m_vMin; // 0x618            
             // metadata: MNetworkEnable
-            Vector m_vMax; // 0x61c            
+            Vector m_vMax; // 0x624            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_SoundAreaEntityOrientedBox because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_SoundAreaEntityOrientedBox) == 0x628);
+        static_assert(sizeof(source2sdk::client::C_SoundAreaEntityOrientedBox) == 0x630);
     };
 };

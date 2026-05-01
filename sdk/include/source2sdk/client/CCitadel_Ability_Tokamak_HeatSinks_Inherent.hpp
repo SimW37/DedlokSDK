@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf18
+        // Size: 0x14a0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flDissipationRate"
@@ -30,29 +30,29 @@ namespace source2sdk
         class CCitadel_Ability_Tokamak_HeatSinks_Inherent : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            std::int32_t m_nIntervalsElapsed; // 0xd90            
-            source2sdk::entity2::GameTime_t m_NextShotTime; // 0xd94            
+            std::int32_t m_nIntervalsElapsed; // 0x11d8            
+            source2sdk::entity2::GameTime_t m_NextShotTime; // 0x11dc            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            float m_flDissipationRate; // 0xd98            
+            float m_flDissipationRate; // 0x11e0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flDissipationTime; // 0xd9c            
+            source2sdk::entity2::GameTime_t m_flDissipationTime; // 0x11e4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flHeatTime; // 0xda0            
+            source2sdk::entity2::GameTime_t m_flHeatTime; // 0x11e8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flOverheatSoundTime; // 0xda4            
+            source2sdk::entity2::GameTime_t m_flOverheatSoundTime; // 0x11ec            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bOverheating; // 0xda8            
-            uint8_t _pad0da9[0x16f];
+            bool m_bOverheating; // 0x11f0            
+            uint8_t _pad11f1[0x2af];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Tokamak_HeatSinks_Inherent because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Tokamak_HeatSinks_Inherent) == 0xf18);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Tokamak_HeatSinks_Inherent) == 0x14a0);
     };
 };

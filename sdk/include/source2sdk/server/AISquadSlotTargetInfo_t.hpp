@@ -32,9 +32,11 @@ namespace source2sdk
             // hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> hTarget;
             char hTarget[0x4]; // 0x0            
+            // metadata: MNotSaved
             // slots has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CBitVec<48> slots;
             char slots[0x8]; // 0x4            
+            // metadata: MNotSaved
             // inactive_slots_by_mode has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CBitVec<48> inactive_slots_by_mode;
             char inactive_slots_by_mode[0x8]; // 0xc            

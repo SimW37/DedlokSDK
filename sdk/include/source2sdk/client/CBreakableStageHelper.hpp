@@ -23,6 +23,7 @@ namespace source2sdk
         public:
             uint8_t _pad0000[0x8]; // 0x0
             std::int32_t m_nCurrentStage; // 0x8            
+            // metadata: MNotSaved
             std::int32_t m_nStageCount; // 0xc            
             uint8_t _pad0010[0x8];
         };

@@ -19,6 +19,7 @@ namespace source2sdk
         // Standard-layout class: true
         // Size: 0x10
         // 
+        // static metadata: MNetworkStructNotInNetworkUtlVectorEmbedded
         // static metadata: MGetKV3ClassDefaults
         #pragma pack(push, 1)
         struct FullSellPriceAbilityUpgrades_t

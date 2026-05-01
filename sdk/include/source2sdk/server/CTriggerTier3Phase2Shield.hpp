@@ -17,17 +17,22 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa08
+        // Size: 0x910
         // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "int8 m_nNumEnemyPlayers"
         #pragma pack(push, 1)
         class CTriggerTier3Phase2Shield : public source2sdk::server::CTriggerNeutralShield
         {
         public:
-            // No schema binary for binding
+            // metadata: MNetworkEnable
+            std::int8_t m_nNumEnemyPlayers; // 0x908            
+            uint8_t _pad0909[0x7];
         };
         #pragma pack(pop)
         
+        // Cannot assert offsets of fields in CTriggerTier3Phase2Shield because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CTriggerTier3Phase2Shield) == 0xa08);
+        static_assert(sizeof(source2sdk::server::CTriggerTier3Phase2Shield) == 0x910);
     };
 };

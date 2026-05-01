@@ -25,31 +25,34 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x528
+        // Size: 0x4d8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelBotTestNode : public source2sdk::server::CServerOnlyPointEntity
         {
         public:
-            source2sdk::server::EBotTestNodeType m_eNodeType; // 0x4f0            
-            uint8_t _pad04f4[0x4]; // 0x4f4
-            CUtlSymbolLarge m_sNextNode; // 0x4f8            
-            CUtlSymbolLarge m_sShootTarget; // 0x500            
+            source2sdk::server::EBotTestNodeType m_eNodeType; // 0x4a0            
+            uint8_t _pad04a4[0x4]; // 0x4a4
+            CUtlSymbolLarge m_sNextNode; // 0x4a8            
+            CUtlSymbolLarge m_sShootTarget; // 0x4b0            
+            // metadata: MNotSaved
             // m_hNextNode has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelBotTestNode> m_hNextNode;
-            char m_hNextNode[0x4]; // 0x508            
+            char m_hNextNode[0x4]; // 0x4b8            
+            // metadata: MNotSaved
             // m_hShootTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelBotTestNode> m_hShootTarget;
-            char m_hShootTarget[0x4]; // 0x50c            
+            char m_hShootTarget[0x4]; // 0x4bc            
+            // metadata: MNotSaved
             // m_hLockingEntity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelPlayerPawn> m_hLockingEntity;
-            char m_hLockingEntity[0x4]; // 0x510            
-            uint8_t _pad0514[0x14];
+            char m_hLockingEntity[0x4]; // 0x4c0            
+            uint8_t _pad04c4[0x14];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelBotTestNode because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelBotTestNode) == 0x528);
+        static_assert(sizeof(source2sdk::server::CCitadelBotTestNode) == 0x4d8);
     };
 };

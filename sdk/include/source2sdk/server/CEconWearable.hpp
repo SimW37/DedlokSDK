@@ -14,10 +14,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xcc0
+        // Size: 0xc50
         // Has VTable
         // 
         // static metadata: MEntityAllowsPortraitWorldSpawn
@@ -25,11 +25,11 @@ namespace source2sdk
         class CEconWearable : public source2sdk::server::CEconEntity
         {
         public:
-            uint8_t _pad0cb8[0x8];
+            uint8_t _pad0c40[0x10];
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CEconWearable) == 0xcc0);
+        static_assert(sizeof(source2sdk::server::CEconWearable) == 0xc50);
     };
 };

@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x200
+        // Size: 0x308
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_EscalatingExposureProcWatcher : public source2sdk::server::CCitadel_Modifier_BaseEventProc
         {
         public:
-            uint8_t _pad0180[0x80];
+            uint8_t _pad0208[0x100];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_EscalatingExposureProcWatcher) == 0x200);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_EscalatingExposureProcWatcher) == 0x308);
     };
 };

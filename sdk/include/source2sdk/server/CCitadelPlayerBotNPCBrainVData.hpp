@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1248
+        // Size: 0x13a8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,39 +26,39 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Movement"
-            float m_flJumpMaxRise; // 0x11d8            
-            float m_flAirJumpMin; // 0x11dc            
-            float m_flJumpMaxDrop; // 0x11e0            
-            float m_flJumpMaxDist; // 0x11e4            
-            float m_flJumpMinDist; // 0x11e8            
-            float m_flClimbUpCostBase; // 0x11ec            
-            float m_flClimbUpCostScalar; // 0x11f0            
-            float m_flFaceTargetDistance; // 0x11f4            
-            float m_flNavGoalTolerance; // 0x11f8            
-            float m_flVerticalAttachOffset; // 0x11fc            
-            float m_flStuckTime; // 0x1200            
-            float m_flStuckTimeAir; // 0x1204            
-            float m_flMajorStuckTime; // 0x1208            
-            std::int32_t m_unMajorStuckAttemptCount; // 0x120c            
-            float m_flStuckDistance; // 0x1210            
-            float m_flMaxPathDistance; // 0x1214            
-            float m_flMinLanePathDistance; // 0x1218            
-            float m_flEnemyDistanceForReload; // 0x121c            
-            float m_flReloadEnemyFarPct; // 0x1220            
-            float m_flReloadEnemyLoSPct; // 0x1224            
-            float m_flReloadEnemyLosTime; // 0x1228            
-            float m_flMinShootTimeToReload; // 0x122c            
-            float m_flDashDamageThreshold; // 0x1230            
-            float m_flDashDamageTickDown; // 0x1234            
-            float m_flMinDesiredDashDist; // 0x1238            
-            float m_flMinAbilityAimTime; // 0x123c            
-            float m_flDisengageFromEnemyToLaneDist; // 0x1240            
-            float m_flDefendBaseSearchRadius; // 0x1244            
+            float m_flJumpMaxRise; // 0x1338            
+            float m_flAirJumpMin; // 0x133c            
+            float m_flJumpMaxDrop; // 0x1340            
+            float m_flJumpMaxDist; // 0x1344            
+            float m_flJumpMinDist; // 0x1348            
+            float m_flClimbUpCostBase; // 0x134c            
+            float m_flClimbUpCostScalar; // 0x1350            
+            float m_flFaceTargetDistance; // 0x1354            
+            float m_flNavGoalTolerance; // 0x1358            
+            float m_flVerticalAttachOffset; // 0x135c            
+            float m_flStuckTime; // 0x1360            
+            float m_flStuckTimeAir; // 0x1364            
+            float m_flMajorStuckTime; // 0x1368            
+            std::int32_t m_unMajorStuckAttemptCount; // 0x136c            
+            float m_flStuckDistance; // 0x1370            
+            float m_flMaxPathDistance; // 0x1374            
+            float m_flMinLanePathDistance; // 0x1378            
+            float m_flEnemyDistanceForReload; // 0x137c            
+            float m_flReloadEnemyFarPct; // 0x1380            
+            float m_flReloadEnemyLoSPct; // 0x1384            
+            float m_flReloadEnemyLosTime; // 0x1388            
+            float m_flMinShootTimeToReload; // 0x138c            
+            float m_flDashDamageThreshold; // 0x1390            
+            float m_flDashDamageTickDown; // 0x1394            
+            float m_flMinDesiredDashDist; // 0x1398            
+            float m_flMinAbilityAimTime; // 0x139c            
+            float m_flDisengageFromEnemyToLaneDist; // 0x13a0            
+            float m_flDefendBaseSearchRadius; // 0x13a4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelPlayerBotNPCBrainVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelPlayerBotNPCBrainVData) == 0x1248);
+        static_assert(sizeof(source2sdk::server::CCitadelPlayerBotNPCBrainVData) == 0x13a8);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x4
         // Standard-layout class: false
-        // Size: 0x40
+        // Size: 0x48
         // Has VTable
         #pragma pack(push, 1)
         class CPlayer_UseServices : public source2sdk::client::CPlayerPawnComponent
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CPlayer_UseServices) == 0x40);
+        static_assert(sizeof(source2sdk::client::CPlayer_UseServices) == 0x48);
     };
 };

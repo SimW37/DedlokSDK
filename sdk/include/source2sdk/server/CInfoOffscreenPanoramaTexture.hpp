@@ -24,12 +24,14 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x568
+        // Size: 0x520
         // Has VTable
         // 
+        // static metadata: MEntityAllowsPortraitWorldSpawn
         // static metadata: MNetworkVarNames "bool m_bDisabled"
         // static metadata: MNetworkVarNames "int m_nResolutionX"
         // static metadata: MNetworkVarNames "int m_nResolutionY"
+        // static metadata: MNetworkVarNames "string_t m_szPanelType"
         // static metadata: MNetworkVarNames "string_t m_szLayoutFileName"
         // static metadata: MNetworkVarNames "string_t m_RenderAttrName"
         // static metadata: MNetworkVarNames "CHandle< CBaseModelEntity > m_TargetEntities"
@@ -40,32 +42,34 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            bool m_bDisabled; // 0x4f0            
-            uint8_t _pad04f1[0x3]; // 0x4f1
+            bool m_bDisabled; // 0x4a0            
+            uint8_t _pad04a1[0x3]; // 0x4a1
             // metadata: MNetworkEnable
-            std::int32_t m_nResolutionX; // 0x4f4            
+            std::int32_t m_nResolutionX; // 0x4a4            
             // metadata: MNetworkEnable
-            std::int32_t m_nResolutionY; // 0x4f8            
-            uint8_t _pad04fc[0x4]; // 0x4fc
+            std::int32_t m_nResolutionY; // 0x4a8            
+            uint8_t _pad04ac[0x4]; // 0x4ac
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_szLayoutFileName; // 0x500            
+            CUtlSymbolLarge m_szPanelType; // 0x4b0            
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_RenderAttrName; // 0x508            
+            CUtlSymbolLarge m_szLayoutFileName; // 0x4b8            
+            // metadata: MNetworkEnable
+            CUtlSymbolLarge m_RenderAttrName; // 0x4c0            
             // metadata: MNetworkEnable
             // m_TargetEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<CHandle<source2sdk::server::CBaseModelEntity>> m_TargetEntities;
-            char m_TargetEntities[0x18]; // 0x510            
+            char m_TargetEntities[0x18]; // 0x4c8            
             // metadata: MNetworkEnable
-            std::int32_t m_nTargetChangeCount; // 0x528            
-            uint8_t _pad052c[0x4]; // 0x52c
+            std::int32_t m_nTargetChangeCount; // 0x4e0            
+            uint8_t _pad04e4[0x4]; // 0x4e4
             // metadata: MNetworkEnable
             // m_vecCSSClasses has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses;
-            char m_vecCSSClasses[0x18]; // 0x530            
-            CUtlSymbolLarge m_szTargetsName; // 0x548            
+            char m_vecCSSClasses[0x18]; // 0x4e8            
+            CUtlSymbolLarge m_szTargetsName; // 0x500            
             // m_AdditionalTargetEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseModelEntity>> m_AdditionalTargetEntities;
-            char m_AdditionalTargetEntities[0x18]; // 0x550            
+            char m_AdditionalTargetEntities[0x18]; // 0x508            
             
             // Datamap fields:
             // void InputEnable; // 0x0
@@ -77,6 +81,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CInfoOffscreenPanoramaTexture because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CInfoOffscreenPanoramaTexture) == 0x568);
+        static_assert(sizeof(source2sdk::server::CInfoOffscreenPanoramaTexture) == 0x520);
     };
 };

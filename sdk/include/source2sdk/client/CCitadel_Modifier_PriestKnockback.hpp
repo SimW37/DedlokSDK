@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x120
+        // Size: 0x160
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_PriestKnockback : public source2sdk::client::CCitadelModifier
@@ -27,12 +27,12 @@ namespace source2sdk
             source2sdk::entity2::GameTime_t m_StartTime; // 0xc0            
             Vector m_vecPushDirection; // 0xc4            
             Vector m_vecFinalPosition; // 0xd0            
-            uint8_t _pad00dc[0x44];
+            uint8_t _pad00dc[0x84];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_PriestKnockback because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_PriestKnockback) == 0x120);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_PriestKnockback) == 0x160);
     };
 };

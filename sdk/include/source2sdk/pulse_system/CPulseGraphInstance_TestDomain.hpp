@@ -17,39 +17,31 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x148
+        // Size: 0x160
         // Has VTable
-        // 
-        // static metadata: MPulseInstanceDomainInfo
-        // static metadata: MPulseDomainHookInfo
-        // static metadata: MPulseDomainScopeInfo
-        // static metadata: MPulseLibraryBindings
-        // static metadata: MPulseDomainOptInFeatureTag
-        // static metadata: MPulseDomainOptInVariableKeysSource
-        // static metadata: MPulseDomainDebuggerCanCreateInstance
         #pragma pack(push, 1)
         class CPulseGraphInstance_TestDomain : public source2sdk::pulse_runtime_lib::CBasePulseGraphInstance
         {
         public:
-            uint8_t _pad0110[0x8]; // 0x110
-            bool m_bIsRunningUnitTests; // 0x118            
-            bool m_bExplicitTimeStepping; // 0x119            
-            bool m_bExpectingToDestroyWithYieldedCursors; // 0x11a            
-            bool m_bQuietTracepoints; // 0x11b            
-            bool m_bExpectingCursorTerminatedDueToMaxInstructions; // 0x11c            
-            uint8_t _pad011d[0x3]; // 0x11d
-            std::int32_t m_nCursorsTerminatedDueToMaxInstructions; // 0x120            
-            std::int32_t m_nNextValidateIndex; // 0x124            
+            uint8_t _pad0118[0x18]; // 0x118
+            bool m_bIsRunningUnitTests; // 0x130            
+            bool m_bExplicitTimeStepping; // 0x131            
+            bool m_bExpectingToDestroyWithYieldedCursors; // 0x132            
+            bool m_bQuietTracepoints; // 0x133            
+            bool m_bExpectingCursorTerminatedDueToMaxInstructions; // 0x134            
+            uint8_t _pad0135[0x3]; // 0x135
+            std::int32_t m_nCursorsTerminatedDueToMaxInstructions; // 0x138            
+            std::int32_t m_nNextValidateIndex; // 0x13c            
             // m_Tracepoints has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CUtlString> m_Tracepoints;
-            char m_Tracepoints[0x18]; // 0x128            
-            bool m_bTestYesOrNoPath; // 0x140            
-            uint8_t _pad0141[0x7];
+            char m_Tracepoints[0x18]; // 0x140            
+            bool m_bTestYesOrNoPath; // 0x158            
+            uint8_t _pad0159[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CPulseGraphInstance_TestDomain because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::pulse_system::CPulseGraphInstance_TestDomain) == 0x148);
+        static_assert(sizeof(source2sdk::pulse_system::CPulseGraphInstance_TestDomain) == 0x160);
     };
 };

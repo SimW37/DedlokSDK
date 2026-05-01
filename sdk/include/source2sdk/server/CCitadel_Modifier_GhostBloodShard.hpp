@@ -17,22 +17,22 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1e0
+        // Size: 0x2e8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_GhostBloodShard : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c8[0xc0]; // 0xc8
-            float m_flMinSlowAmount; // 0x188            
-            float m_flMoveSpeedPenaltyPerStack; // 0x18c            
-            float m_flSlowDuration; // 0x190            
-            uint8_t _pad0194[0x4c];
+            uint8_t _pad00d0[0x180]; // 0xd0
+            float m_flMinSlowAmount; // 0x250            
+            float m_flMoveSpeedPenaltyPerStack; // 0x254            
+            float m_flSlowDuration; // 0x258            
+            uint8_t _pad025c[0x8c];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_GhostBloodShard because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_GhostBloodShard) == 0x1e0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_GhostBloodShard) == 0x2e8);
     };
 };

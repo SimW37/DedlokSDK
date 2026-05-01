@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x8d0
+        // Size: 0x840
         // Has VTable
         #pragma pack(push, 1)
         class CFuncPlatRot : public source2sdk::server::CFuncPlat
         {
         public:
-            QAngle m_end; // 0x8b8            
-            QAngle m_start; // 0x8c4            
+            QAngle m_end; // 0x828            
+            QAngle m_start; // 0x834            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CFuncPlatRot because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFuncPlatRot) == 0x8d0);
+        static_assert(sizeof(source2sdk::server::CFuncPlatRot) == 0x840);
     };
 };

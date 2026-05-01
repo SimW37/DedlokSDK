@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x860
+        // Size: 0x840
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,18 +30,16 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_ProcNotificationModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ProcNotificationModifier;
-            char m_ProcNotificationModifier[0x10]; // 0x760            
+            char m_ProcNotificationModifier[0x10]; // 0x750            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ProcNotificationEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ProcNotificationEffect;
-            char m_ProcNotificationEffect[0xe0]; // 0x770            
-            // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strStunSound; // 0x850            
+            char m_ProcNotificationEffect[0xe0]; // 0x760            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_CrushingFistsDebuff_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_CrushingFistsDebuff_VData) == 0x860);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_CrushingFistsDebuff_VData) == 0x840);
     };
 };

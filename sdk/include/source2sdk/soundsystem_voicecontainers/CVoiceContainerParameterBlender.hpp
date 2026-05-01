@@ -29,9 +29,9 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyFriendlyName "First Sound"
-            source2sdk::soundsystem_voicecontainers::CSoundContainerReference m_firstSound; // 0xb8            
+            source2sdk::soundsystem_voicecontainers::CSoundContainerReference m_firstSound; // 0xa8            
             // metadata: MPropertyFriendlyName "Second Sound"
-            source2sdk::soundsystem_voicecontainers::CSoundContainerReference m_secondSound; // 0xd0            
+            source2sdk::soundsystem_voicecontainers::CSoundContainerReference m_secondSound; // 0xc8            
             // metadata: MPropertyStartGroup "Occlusion"
             // metadata: MPropertyFriendlyName "Enable Occlusion Blend"
             bool m_bEnableOcclusionBlend; // 0xe8            

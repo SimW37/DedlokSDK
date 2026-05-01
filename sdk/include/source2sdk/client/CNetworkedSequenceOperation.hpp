@@ -24,6 +24,7 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "HSequence m_hSequence"
         // static metadata: MNetworkVarNames "float32 m_flPrevCycle"
         // static metadata: MNetworkVarNames "float32 m_flCycle"
+        // static metadata: MNetworkVarNames "CNetworkedQuantizedFloat m_flWeight"
         #pragma pack(push, 1)
         class CNetworkedSequenceOperation
         {

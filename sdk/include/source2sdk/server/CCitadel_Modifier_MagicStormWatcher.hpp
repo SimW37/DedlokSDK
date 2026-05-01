@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x108
+        // Size: 0x150
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_MagicStormWatcher : public source2sdk::server::CCitadel_Modifier_Intrinsic_Base
         {
         public:
-            uint8_t _pad00c8[0x40];
+            uint8_t _pad00d0[0x80];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_MagicStormWatcher) == 0x108);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_MagicStormWatcher) == 0x150);
     };
 };

@@ -24,12 +24,7 @@ namespace source2sdk
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: MCellForDomain "BaseDomain"
-        // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "›nÖø"
         // static metadata: MPulseFunctionHiddenInTool
-        // static metadata: MPulseSelectorAllowRequirementCriteria
-        // static metadata: MPulseSelectorAllowRequirementCriteria
         #pragma pack(push, 1)
         class CPulseCell_InlineNodeSkipSelector : public source2sdk::pulse_runtime_lib::CPulseCell_BaseFlow
         {

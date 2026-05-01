@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x110
+        // Size: 0x158
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Hero_Clone : public source2sdk::server::CCitadelModifier
         {
         public:
-            bool m_bMimicOwner; // 0xc8            
-            uint8_t _pad00c9[0x47];
+            bool m_bMimicOwner; // 0xd0            
+            uint8_t _pad00d1[0x87];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Hero_Clone because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Hero_Clone) == 0x110);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Hero_Clone) == 0x158);
     };
 };

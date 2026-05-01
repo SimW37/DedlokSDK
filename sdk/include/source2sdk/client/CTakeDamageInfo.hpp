@@ -5,6 +5,7 @@
 #include <cstdint>
 #include "source2sdk/client/AmmoIndex_t.hpp"
 #include "source2sdk/client/DamageTypes_t.hpp"
+#include "source2sdk/client/DestructibleHitGroupToDestroy_t.hpp"
 #include "source2sdk/client/ECitadelDamageType.hpp"
 #include "source2sdk/client/HitGroup_t.hpp"
 #include "source2sdk/client/TakeDamageFlags_t.hpp"
@@ -28,7 +29,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0xf0
+        // Size: 0x100
         // Has VTable
         #pragma pack(push, 1)
         class CTakeDamageInfo
@@ -36,8 +37,8 @@ namespace source2sdk
         public:
             uint8_t _pad0000[0x8]; // 0x0
             Vector m_vecDamageForce; // 0x8            
-            Vector m_vecDamagePosition; // 0x14            
-            Vector m_vecReportedPosition; // 0x20            
+            VectorWS m_vecDamagePosition; // 0x14            
+            VectorWS m_vecReportedPosition; // 0x20            
             Vector m_vecDamageDirection; // 0x2c            
             // m_hInflictor has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hInflictor;
@@ -61,28 +62,42 @@ namespace source2sdk
             float m_flDamageAbsorbed; // 0x68            
             uint8_t _pad006c[0xc]; // 0x6c
             source2sdk::client::TakeDamageFlags_t m_nDamageFlags; // 0x78            
-            CGlobalSymbol m_sDamageSourceName; // 0x80            
-            source2sdk::client::HitGroup_t m_iHitGroupId; // 0x88            
-            source2sdk::client::ECitadelDamageType m_eCitadelDamageType; // 0x8c            
-            float m_flAfterBuffDamage; // 0x90            
-            float m_flPreResistDamage; // 0x94            
-            bool m_bEvaded; // 0x98            
-            uint8_t _pad0099[0x3]; // 0x99
-            Vector m_vecDamageNormal; // 0x9c            
-            uint8_t _pad00a8[0x8]; // 0xa8
+            // metadata: MNotSaved
+            source2sdk::client::HitGroup_t m_iHitGroupId; // 0x80            
+            // metadata: MNotSaved
+            source2sdk::client::ECitadelDamageType m_eCitadelDamageType; // 0x84            
+            // metadata: MNotSaved
+            float m_flAfterBuffDamage; // 0x88            
+            // metadata: MNotSaved
+            float m_flPreResistDamage; // 0x8c            
+            // metadata: MNotSaved
+            bool m_bEvaded; // 0x90            
+            uint8_t _pad0091[0x3]; // 0x91
+            // metadata: MNotSaved
+            Vector m_vecDamageNormal; // 0x94            
+            uint8_t _pad00a0[0x8]; // 0xa0
+            // metadata: MNotSaved
             // m_hOriginator has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hOriginator;
-            char m_hOriginator[0x4]; // 0xb0            
-            std::int32_t m_iBatchCount; // 0xb4            
-            float m_flEffectiveness; // 0xb8            
-            float m_timeDamage; // 0xbc            
-            float m_flCritDamage; // 0xc0            
-            uint8_t _pad00c4[0x20]; // 0xc4
-            bool m_bInTakeDamageFlow; // 0xe4            
-            uint8_t _pad00e5[0xb];
+            char m_hOriginator[0x4]; // 0xa8            
+            // metadata: MNotSaved
+            std::int32_t m_iBatchCount; // 0xac            
+            // metadata: MNotSaved
+            float m_flEffectiveness; // 0xb0            
+            // metadata: MNotSaved
+            float m_timeDamage; // 0xb4            
+            // metadata: MNotSaved
+            float m_flCritDamage; // 0xb8            
+            uint8_t _pad00bc[0x24]; // 0xbc
+            // m_nDestructibleHitGroupsToForceDestroy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<source2sdk::client::DestructibleHitGroupToDestroy_t> m_nDestructibleHitGroupsToForceDestroy;
+            char m_nDestructibleHitGroupsToForceDestroy[0x18]; // 0xe0            
+            // metadata: MNotSaved
+            bool m_bInTakeDamageFlow; // 0xf8            
+            uint8_t _pad00f9[0x7];
             
             // Datamap fields:
-            // void m_hScriptInstance; // 0xc8
+            // void m_hScriptInstance; // 0xc0
         };
         #pragma pack(pop)
         
@@ -103,20 +118,20 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_bShouldSpark) == 0x65);
         static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_flDamageAbsorbed) == 0x68);
         static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_nDamageFlags) == 0x78);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_sDamageSourceName) == 0x80);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_iHitGroupId) == 0x88);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_eCitadelDamageType) == 0x8c);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_flAfterBuffDamage) == 0x90);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_flPreResistDamage) == 0x94);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_bEvaded) == 0x98);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_vecDamageNormal) == 0x9c);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_hOriginator) == 0xb0);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_iBatchCount) == 0xb4);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_flEffectiveness) == 0xb8);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_timeDamage) == 0xbc);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_flCritDamage) == 0xc0);
-        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_bInTakeDamageFlow) == 0xe4);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_iHitGroupId) == 0x80);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_eCitadelDamageType) == 0x84);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_flAfterBuffDamage) == 0x88);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_flPreResistDamage) == 0x8c);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_bEvaded) == 0x90);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_vecDamageNormal) == 0x94);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_hOriginator) == 0xa8);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_iBatchCount) == 0xac);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_flEffectiveness) == 0xb0);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_timeDamage) == 0xb4);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_flCritDamage) == 0xb8);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_nDestructibleHitGroupsToForceDestroy) == 0xe0);
+        static_assert(offsetof(source2sdk::client::CTakeDamageInfo, m_bInTakeDamageFlow) == 0xf8);
         
-        static_assert(sizeof(source2sdk::client::CTakeDamageInfo) == 0xf0);
+        static_assert(sizeof(source2sdk::client::CTakeDamageInfo) == 0x100);
     };
 };

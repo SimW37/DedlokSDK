@@ -25,8 +25,8 @@ namespace source2sdk
         {
         public:
             std::int32_t m_eType; // 0x20            
-            Vector m_vOriginalTargetFacingPosition; // 0x24            
-            Vector m_vTargetFacingPosition; // 0x30            
+            VectorWS m_vOriginalTargetFacingPosition; // 0x24            
+            VectorWS m_vTargetFacingPosition; // 0x30            
             float m_flOriginalAngleDelta; // 0x3c            
             float m_flTurnSpeed; // 0x40            
             bool m_bWasBlockIdleTurnTagActive; // 0x44            

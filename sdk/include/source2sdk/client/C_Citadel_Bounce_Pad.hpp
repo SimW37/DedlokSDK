@@ -5,6 +5,13 @@
 #include <cstdint>
 #include "source2sdk/client/CCitadelAnimatingModelEntity.hpp"
 #include "source2sdk/entity2/GameTime_t.hpp"
+namespace source2sdk
+{
+    namespace client
+    {
+        struct C_BaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -18,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcc0
+        // Size: 0xce8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flUpFactor"
@@ -29,23 +36,26 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            float m_flUpFactor; // 0xca0            
+            float m_flUpFactor; // 0xca8            
             // metadata: MNetworkEnable
-            float m_flBounceVelocity; // 0xca4            
+            float m_flBounceVelocity; // 0xcac            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_tDeactivationTime; // 0xca8            
-            bool m_bDeactivated; // 0xcac            
-            uint8_t _pad0cad[0x3]; // 0xcad
-            float m_flBarrelBounceVelocity; // 0xcb0            
-            float m_flBarrelUpFactor; // 0xcb4            
-            bool m_bSpeedOnLand; // 0xcb8            
-            bool m_bHasBouncedPlayerBefore; // 0xcb9            
-            uint8_t _pad0cba[0x6];
+            source2sdk::entity2::GameTime_t m_tDeactivationTime; // 0xcb0            
+            bool m_bDeactivated; // 0xcb4            
+            uint8_t _pad0cb5[0x3]; // 0xcb5
+            float m_flBarrelBounceVelocity; // 0xcb8            
+            float m_flBarrelUpFactor; // 0xcbc            
+            bool m_bSpeedOnLand; // 0xcc0            
+            uint8_t _pad0cc1[0x7]; // 0xcc1
+            // m_vBouncedPlayerBefore has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_vBouncedPlayerBefore;
+            char m_vBouncedPlayerBefore[0x18]; // 0xcc8            
+            uint8_t _pad0ce0[0x8];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_Citadel_Bounce_Pad because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_Citadel_Bounce_Pad) == 0xcc0);
+        static_assert(sizeof(source2sdk::client::C_Citadel_Bounce_Pad) == 0xce8);
     };
 };

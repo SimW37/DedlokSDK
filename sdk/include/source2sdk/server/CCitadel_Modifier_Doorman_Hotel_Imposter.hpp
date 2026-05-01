@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe0
+        // Size: 0xe8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Doorman_Hotel_Imposter : public source2sdk::server::CCitadelModifier
@@ -32,15 +32,15 @@ namespace source2sdk
         public:
             // m_hRagdoll has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseAnimGraph> m_hRagdoll;
-            char m_hRagdoll[0x4]; // 0xc8            
-            Vector m_vImposterPos; // 0xcc            
-            bool m_bPlayEnd; // 0xd8            
-            uint8_t _pad00d9[0x7];
+            char m_hRagdoll[0x4]; // 0xd0            
+            VectorWS m_vImposterPos; // 0xd4            
+            bool m_bPlayEnd; // 0xe0            
+            uint8_t _pad00e1[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Doorman_Hotel_Imposter because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Doorman_Hotel_Imposter) == 0xe0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Doorman_Hotel_Imposter) == 0xe8);
     };
 };

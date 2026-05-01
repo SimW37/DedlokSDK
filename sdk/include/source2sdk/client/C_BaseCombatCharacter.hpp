@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf30
+        // Size: 0xee0
         // Has VTable
         // 
         // static metadata: MNetworkExcludeByUserGroup "LocalPlayerExclusive"
@@ -37,21 +37,27 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnWearablesChanged"
+            // metadata: MNotSaved
             // m_hMyWearables has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_NetworkUtlVectorBase<CHandle<source2sdk::client::C_EconWearable>> m_hMyWearables;
-            char m_hMyWearables[0x18]; // 0xea8            
-            source2sdk::modellib::AttachmentHandle_t m_leftFootAttachment; // 0xec0            
-            source2sdk::modellib::AttachmentHandle_t m_rightFootAttachment; // 0xec1            
-            uint8_t _pad0ec2[0x2]; // 0xec2
-            source2sdk::client::C_BaseCombatCharacter_WaterWakeMode_t m_nWaterWakeMode; // 0xec4            
-            float m_flWaterWorldZ; // 0xec8            
-            float m_flWaterNextTraceTime; // 0xecc            
-            uint8_t _pad0ed0[0x60];
+            char m_hMyWearables[0x18]; // 0xe58            
+            // metadata: MNotSaved
+            source2sdk::modellib::AttachmentHandle_t m_leftFootAttachment; // 0xe70            
+            // metadata: MNotSaved
+            source2sdk::modellib::AttachmentHandle_t m_rightFootAttachment; // 0xe71            
+            uint8_t _pad0e72[0x2]; // 0xe72
+            // metadata: MNotSaved
+            source2sdk::client::C_BaseCombatCharacter_WaterWakeMode_t m_nWaterWakeMode; // 0xe74            
+            // metadata: MNotSaved
+            float m_flWaterWorldZ; // 0xe78            
+            // metadata: MNotSaved
+            float m_flWaterNextTraceTime; // 0xe7c            
+            uint8_t _pad0e80[0x60];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_BaseCombatCharacter because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_BaseCombatCharacter) == 0xf30);
+        static_assert(sizeof(source2sdk::client::C_BaseCombatCharacter) == 0xee0);
     };
 };

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x658
+        // Size: 0x600
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "SoundeventPathCornerPairNetworked_t m_vecCornerPairsNetworked"
@@ -26,26 +26,27 @@ namespace source2sdk
         class CSoundEventPathCornerEntity : public source2sdk::server::CSoundEventEntity
         {
         public:
-            CUtlSymbolLarge m_iszPathCorner; // 0x5b8            
-            std::int32_t m_iCountMax; // 0x5c0            
-            float m_flDistanceMax; // 0x5c4            
-            float m_flDistMaxSqr; // 0x5c8            
-            float m_flDotProductMax; // 0x5cc            
-            bool m_bPlaying; // 0x5d0            
-            uint8_t _pad05d1[0x27]; // 0x5d1
+            CUtlSymbolLarge m_iszPathCorner; // 0x560            
+            std::int32_t m_iCountMax; // 0x568            
+            float m_flDistanceMax; // 0x56c            
+            float m_flDistMaxSqr; // 0x570            
+            float m_flDotProductMax; // 0x574            
+            bool m_bPlaying; // 0x578            
+            uint8_t _pad0579[0x27]; // 0x579
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             // m_vecCornerPairsNetworked has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<source2sdk::client::SoundeventPathCornerPairNetworked_t> m_vecCornerPairsNetworked;
-            char m_vecCornerPairsNetworked[0x60]; // 0x5f8            
+            char m_vecCornerPairsNetworked[0x60]; // 0x5a0            
             
             // Datamap fields:
             // void CSoundEventPathCornerEntitySoundEventPathCornerThink; // 0x0
-            // void m_vecPathCornerPairs; // 0x5d8
+            // void m_vecPathCornerPairs; // 0x580
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CSoundEventPathCornerEntity because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CSoundEventPathCornerEntity) == 0x658);
+        static_assert(sizeof(source2sdk::server::CSoundEventPathCornerEntity) == 0x600);
     };
 };

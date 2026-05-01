@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x8b0
+        // Size: 0x7f0
         // Has VTable
         #pragma pack(push, 1)
         class CGamePlayerZone : public source2sdk::server::CRuleBrushEntity
         {
         public:
-            source2sdk::entity2::CEntityIOOutput m_OnPlayerInZone; // 0x810            
-            source2sdk::entity2::CEntityIOOutput m_OnPlayerOutZone; // 0x838            
+            source2sdk::entity2::CEntityIOOutput m_OnPlayerInZone; // 0x780            
+            source2sdk::entity2::CEntityIOOutput m_OnPlayerOutZone; // 0x798            
             // m_PlayersInCount has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<std::int32_t> m_PlayersInCount;
-            char m_PlayersInCount[0x28]; // 0x860            
+            char m_PlayersInCount[0x20]; // 0x7b0            
             // m_PlayersOutCount has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<std::int32_t> m_PlayersOutCount;
-            char m_PlayersOutCount[0x28]; // 0x888            
+            char m_PlayersOutCount[0x20]; // 0x7d0            
             
             // Datamap fields:
             // void InputCountPlayersInZone; // 0x0
@@ -40,6 +40,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CGamePlayerZone because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CGamePlayerZone) == 0x8b0);
+        static_assert(sizeof(source2sdk::server::CGamePlayerZone) == 0x7f0);
     };
 };

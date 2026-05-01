@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9e0
+        // Size: 0x8e0
         // Has VTable
         #pragma pack(push, 1)
         class CTriggerTrooperDamageReductionDetector : public source2sdk::server::CBaseTrigger
         {
         public:
-            float m_flRadius; // 0x9d8            
-            uint8_t _pad09dc[0x4];
+            float m_flRadius; // 0x8d8            
+            uint8_t _pad08dc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CTriggerTrooperDamageReductionDetector because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CTriggerTrooperDamageReductionDetector) == 0x9e0);
+        static_assert(sizeof(source2sdk::server::CTriggerTrooperDamageReductionDetector) == 0x8e0);
     };
 };

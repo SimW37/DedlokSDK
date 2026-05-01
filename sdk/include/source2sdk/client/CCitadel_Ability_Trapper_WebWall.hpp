@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf00
+        // Size: 0x1488
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "Vector m_vecCastPosition"
@@ -28,20 +28,20 @@ namespace source2sdk
         class CCitadel_Ability_Trapper_WebWall : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d90[0x140]; // 0xd90
+            uint8_t _pad11d8[0x280]; // 0x11d8
             // metadata: MNetworkEnable
-            Vector m_vecCastPosition; // 0xed0            
+            Vector m_vecCastPosition; // 0x1458            
             // metadata: MNetworkEnable
-            Vector m_vecCastPositionNormal; // 0xedc            
+            Vector m_vecCastPositionNormal; // 0x1464            
             // metadata: MNetworkEnable
-            Vector m_vecEndPosition; // 0xee8            
+            Vector m_vecEndPosition; // 0x1470            
             // metadata: MNetworkEnable
-            Vector m_vecEndPositionNormal; // 0xef4            
+            Vector m_vecEndPositionNormal; // 0x147c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Trapper_WebWall because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Trapper_WebWall) == 0xf00);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Trapper_WebWall) == 0x1488);
     };
 };

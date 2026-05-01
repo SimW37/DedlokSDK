@@ -17,19 +17,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x5e0
+        // Size: 0x590
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelZiplinePath : public source2sdk::server::CPathParticleRope
         {
         public:
-            std::int32_t m_iLaneNumber; // 0x5d8            
-            uint8_t _pad05dc[0x4];
+            std::int32_t m_iLaneNumber; // 0x588            
+            bool m_bUseBaseLaneColor; // 0x58c            
+            uint8_t _pad058d[0x3];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelZiplinePath because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelZiplinePath) == 0x5e0);
+        static_assert(sizeof(source2sdk::server::CCitadelZiplinePath) == 0x590);
     };
 };

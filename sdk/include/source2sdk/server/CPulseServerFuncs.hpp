@@ -20,7 +20,6 @@ namespace source2sdk
         // Has Trivial Constructor
         // Has Trivial Destructor
         // 
-        // static metadata: MPulseLibraryBindings
         // static metadata: MPropertyFriendlyName "Server General"
         // static metadata: MPropertyDescription "General server gameplay helpers."
         #pragma pack(push, 1)

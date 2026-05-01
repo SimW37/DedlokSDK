@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd58
+        // Size: 0xf30
         // Has VTable
         #pragma pack(push, 1)
         class CProjectile_BookwormDragon_Projectile : public source2sdk::client::C_CitadelProjectile
@@ -32,13 +32,13 @@ namespace source2sdk
         public:
             // m_vecHitUnits has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::client::C_BaseEntity>> m_vecHitUnits;
-            char m_vecHitUnits[0x18]; // 0xaf8            
-            uint8_t _pad0b10[0x248];
+            char m_vecHitUnits[0x18]; // 0xad0            
+            uint8_t _pad0ae8[0x448];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CProjectile_BookwormDragon_Projectile because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CProjectile_BookwormDragon_Projectile) == 0xd58);
+        static_assert(sizeof(source2sdk::client::CProjectile_BookwormDragon_Projectile) == 0xf30);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc68
+        // Size: 0x1118
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flMaxStacksBonusDamage"
@@ -25,15 +25,15 @@ namespace source2sdk
         class CCitadel_Ability_Priest_StackingDefense : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x4]; // 0xba0
+            uint8_t _pad0f90[0x4]; // 0xf90
             // metadata: MNetworkEnable
-            float m_flMaxStacksBonusDamage; // 0xba4            
-            uint8_t _pad0ba8[0xc0];
+            float m_flMaxStacksBonusDamage; // 0xf94            
+            uint8_t _pad0f98[0x180];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Priest_StackingDefense because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_StackingDefense) == 0xc68);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_StackingDefense) == 0x1118);
     };
 };

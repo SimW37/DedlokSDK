@@ -24,22 +24,22 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xaf0
+        // Size: 0xc60
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Projectile_DustStorm : public source2sdk::server::CCitadelProjectile
         {
         public:
-            std::int32_t m_cTicksNoMovement; // 0x8e8            
+            std::int32_t m_cTicksNoMovement; // 0x858            
             // m_DustStormAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadel_Ability_Dust_Storm> m_DustStormAbility;
-            char m_DustStormAbility[0x4]; // 0x8ec            
-            uint8_t _pad08f0[0x200];
+            char m_DustStormAbility[0x4]; // 0x85c            
+            uint8_t _pad0860[0x400];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Projectile_DustStorm because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_DustStorm) == 0xaf0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_DustStorm) == 0xc60);
     };
 };

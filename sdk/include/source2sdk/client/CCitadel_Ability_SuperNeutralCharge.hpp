@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xff0
+        // Size: 0x1638
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bPreparing"
@@ -31,31 +31,31 @@ namespace source2sdk
         class CCitadel_Ability_SuperNeutralCharge : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d90[0x200]; // 0xd90
+            uint8_t _pad11d8[0x400]; // 0x11d8
             // metadata: MNetworkEnable
-            bool m_bPreparing; // 0xf90            
+            bool m_bPreparing; // 0x15d8            
             // metadata: MNetworkEnable
-            bool m_bTackling; // 0xf91            
-            uint8_t _pad0f92[0x2]; // 0xf92
+            bool m_bTackling; // 0x15d9            
+            uint8_t _pad15da[0x2]; // 0x15da
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flTackleStartTime; // 0xf94            
+            source2sdk::entity2::GameTime_t m_flTackleStartTime; // 0x15dc            
             // metadata: MNetworkEnable
-            float m_flTackleDuration; // 0xf98            
+            float m_flTackleDuration; // 0x15e0            
             // metadata: MNetworkEnable
-            Vector m_vecTackleDir; // 0xf9c            
-            Vector m_vecLastPosition; // 0xfa8            
-            std::int32_t m_nStuckFramesCount; // 0xfb4            
+            Vector m_vecTackleDir; // 0x15e4            
+            Vector m_vecLastPosition; // 0x15f0            
+            std::int32_t m_nStuckFramesCount; // 0x15fc            
             // m_vecHitEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CEntityIndex> m_vecHitEnemies;
-            char m_vecHitEnemies[0x18]; // 0xfb8            
-            source2sdk::entity2::GameTime_t m_flPrepareStartTime; // 0xfd0            
-            source2sdk::client::ParticleIndex_t m_nDistancePreview; // 0xfd4            
-            uint8_t _pad0fd8[0x18];
+            char m_vecHitEnemies[0x18]; // 0x1600            
+            source2sdk::entity2::GameTime_t m_flPrepareStartTime; // 0x1618            
+            source2sdk::client::ParticleIndex_t m_nDistancePreview; // 0x161c            
+            uint8_t _pad1620[0x18];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_SuperNeutralCharge because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_SuperNeutralCharge) == 0xff0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_SuperNeutralCharge) == 0x1638);
     };
 };

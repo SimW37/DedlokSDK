@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xea0
+        // Size: 0x13a8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CHandle< CCitadel_DoorwayPortal> m_hDoor1"
@@ -33,23 +33,23 @@ namespace source2sdk
         class CCitadel_Ability_Doorman_Doorway : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d90[0x30]; // 0xd90
+            uint8_t _pad11d8[0x30]; // 0x11d8
             // metadata: MNetworkEnable
             // m_hDoor1 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::CCitadel_DoorwayPortal> m_hDoor1;
-            char m_hDoor1[0x4]; // 0xdc0            
-            uint8_t _pad0dc4[0x4]; // 0xdc4
-            double m_flLastRangeFailCast; // 0xdc8            
-            uint8_t _pad0dd0[0xc0]; // 0xdd0
-            float m_flDoorBreakableRadius; // 0xe90            
-            uint8_t _pad0e94[0x4]; // 0xe94
-            source2sdk::client::SatVolumeIndex_t m_nDoorPlacementSphere; // 0xe98            
-            uint8_t _pad0e9c[0x4];
+            char m_hDoor1[0x4]; // 0x1208            
+            uint8_t _pad120c[0x4]; // 0x120c
+            double m_flLastRangeFailCast; // 0x1210            
+            uint8_t _pad1218[0x180]; // 0x1218
+            float m_flDoorBreakableRadius; // 0x1398            
+            uint8_t _pad139c[0x4]; // 0x139c
+            source2sdk::client::SatVolumeIndex_t m_nDoorPlacementSphere; // 0x13a0            
+            uint8_t _pad13a4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Doorman_Doorway because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Doorman_Doorway) == 0xea0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Doorman_Doorway) == 0x13a8);
     };
 };

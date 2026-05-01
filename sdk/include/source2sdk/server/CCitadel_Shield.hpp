@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x970
+        // Size: 0x8e0
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_fFlags"
@@ -29,17 +29,17 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            bool m_bAllowRotatingUp; // 0x968            
+            bool m_bAllowRotatingUp; // 0x8d8            
             // metadata: MNetworkEnable
-            bool m_bFixedPosition; // 0x969            
-            uint8_t _pad096a[0x2]; // 0x96a
+            bool m_bFixedPosition; // 0x8d9            
+            uint8_t _pad08da[0x2]; // 0x8da
             // metadata: MNetworkEnable
-            float m_flShieldOffset; // 0x96c            
+            float m_flShieldOffset; // 0x8dc            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Shield because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Shield) == 0x970);
+        static_assert(sizeof(source2sdk::server::CCitadel_Shield) == 0x8e0);
     };
 };

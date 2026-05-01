@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xba8
+        // Size: 0xf98
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Item : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            bool m_bEquipped; // 0xba0            
-            uint8_t _pad0ba1[0x7];
+            bool m_bEquipped; // 0xf90            
+            uint8_t _pad0f91[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Item) == 0xba8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Item) == 0xf98);
     };
 };

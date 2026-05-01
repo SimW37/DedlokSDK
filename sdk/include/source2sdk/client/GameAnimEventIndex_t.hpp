@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 43
+        // Enumerator count: 39
         // Alignment: 4
         // Size: 0x4
         enum class GameAnimEventIndex_t : std::uint32_t
@@ -44,23 +44,19 @@ namespace source2sdk
             AE_CL_CREATE_ANIM_SCOPE_PROP = 0x17,
             AE_SV_IKLOCK = 0x18,
             AE_PULSE_GRAPH = 0x19,
-            AE_PULSE_GRAPH_LOOKAT = 0x1a,
-            AE_PULSE_GRAPH_AIMAT = 0x1b,
-            AE_PULSE_GRAPH_IKLOCKLEFTARM = 0x1c,
-            AE_PULSE_GRAPH_IKLOCKRIGHTARM = 0x1d,
-            AE_DISABLE_PLATFORM = 0x1e,
-            AE_ENABLE_PLATFORM_PLAYER_FOLLOWS_YAW = 0x1f,
-            AE_ENABLE_PLATFORM_PLAYER_IGNORES_YAW = 0x20,
-            AE_DESTRUCTIBLE_PART_DESTROY = 0x21,
-            AE_NPC_LEFTFOOT = 0x22,
-            AE_NPC_RIGHTFOOT = 0x23,
-            AE_NPC_SWISHSOUND = 0x24,
-            AE_NPC_WEAPON_DROP = 0x25,
-            AE_NPC_ATTACK_BROADCAST = 0x26,
-            AE_PREDICTED_PLAYSOUND = 0x27,
-            AE_TAGGED_SOUND = 0x28,
-            AE_RAGDOLL_WINDOW = 0x29,
-            AE_MELEE_ATTACK = 0x2a,
+            AE_DISABLE_PLATFORM = 0x1a,
+            AE_ENABLE_PLATFORM_PLAYER_FOLLOWS_YAW = 0x1b,
+            AE_ENABLE_PLATFORM_PLAYER_IGNORES_YAW = 0x1c,
+            AE_DESTRUCTIBLE_PART_DESTROY = 0x1d,
+            AE_NPC_LEFTFOOT = 0x1e,
+            AE_NPC_RIGHTFOOT = 0x1f,
+            AE_NPC_SWISHSOUND = 0x20,
+            AE_NPC_WEAPON_DROP = 0x21,
+            AE_NPC_ATTACK_BROADCAST = 0x22,
+            AE_PREDICTED_PLAYSOUND = 0x23,
+            AE_TAGGED_SOUND = 0x24,
+            AE_RAGDOLL_WINDOW = 0x25,
+            AE_MELEE_ATTACK = 0x26,
         };
     };
 };

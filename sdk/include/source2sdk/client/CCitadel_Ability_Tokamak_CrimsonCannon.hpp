@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xfc0
+        // Size: 0x1608
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bAirCast"
@@ -26,15 +26,15 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            bool m_bAirCast; // 0xd90            
-            uint8_t _pad0d91[0x207]; // 0xd91
-            bool m_bIsZoomed; // 0xf98            
-            uint8_t _pad0f99[0x27];
+            bool m_bAirCast; // 0x11d8            
+            uint8_t _pad11d9[0x407]; // 0x11d9
+            bool m_bIsZoomed; // 0x15e0            
+            uint8_t _pad15e1[0x27];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Tokamak_CrimsonCannon because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Tokamak_CrimsonCannon) == 0xfc0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Tokamak_CrimsonCannon) == 0x1608);
     };
 };

@@ -4,6 +4,13 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/resourcesystem/InfoForResourceTypeCModel.hpp"
+namespace source2sdk
+{
+    namespace vphysics2
+    {
+        struct IPhysAggregateInstance;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -17,10 +24,12 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0x300
+        // Size: 0x260
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "HModelStrong m_hModel"
+        // static metadata: MNetworkVarNames "Vector m_vRootBoneOffset"
+        // static metadata: MNetworkVarNames "uint8 m_nRootBoneOffsetResetSerialNumber"
         // static metadata: MNetworkVarNames "bool m_bClientClothCreationSuppressed"
         // static metadata: MNetworkVarNames "MeshGroupMask_t m_MeshGroupMask"
         // static metadata: MNetworkVarNames "int32 m_nBodyGroupChoices"
@@ -29,48 +38,57 @@ namespace source2sdk
         class CModelState
         {
         public:
-            uint8_t _pad0000[0xd0]; // 0x0
+            uint8_t _pad0000[0xa0]; // 0x0
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "skeletonModelChanged"
             // m_hModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CStrongHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel;
-            char m_hModel[0x8]; // 0xd0            
-            CUtlSymbolLarge m_ModelName; // 0xd8            
-            uint8_t _pad00e0[0xc9]; // 0xe0
+            char m_hModel[0x8]; // 0xa0            
+            CUtlSymbolLarge m_ModelName; // 0xa8            
+            uint8_t _pad00b0[0x30]; // 0xb0
+            // metadata: MPhysPtr
+            source2sdk::vphysics2::IPhysAggregateInstance* m_pVPhysicsAggregate; // 0xe0            
             // metadata: MNetworkEnable
-            bool m_bClientClothCreationSuppressed; // 0x1a9            
-            uint8_t _pad01aa[0xa6]; // 0x1aa
+            // metadata: MNetworkChangeCallback "OnRootBoneOffsetChanged"
+            Vector m_vRootBoneOffset; // 0xe8            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "OnRootBoneOffsetResetChanged"
+            std::uint8_t m_nRootBoneOffsetResetSerialNumber; // 0xf4            
+            uint8_t _pad00f5[0xb]; // 0xf5
+            // metadata: MNetworkEnable
+            bool m_bClientClothCreationSuppressed; // 0x100            
+            uint8_t _pad0101[0xaf]; // 0x101
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "skeletonMeshGroupMaskChanged"
-            std::uint64_t m_MeshGroupMask; // 0x250            
-            uint8_t _pad0258[0x48]; // 0x258
+            std::uint64_t m_MeshGroupMask; // 0x1b0            
+            uint8_t _pad01b8[0x48]; // 0x1b8
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "bodyGroupChoiceChanged"
             // m_nBodyGroupChoices has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_NetworkUtlVectorBase<std::int32_t> m_nBodyGroupChoices;
-            char m_nBodyGroupChoices[0x18]; // 0x2a0            
-            uint8_t _pad02b8[0x32]; // 0x2b8
+            char m_nBodyGroupChoices[0x18]; // 0x200            
+            uint8_t _pad0218[0x32]; // 0x218
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "skeletonMotionTypeChanged"
-            std::int8_t m_nIdealMotionType; // 0x2ea            
-            std::int8_t m_nForceLOD; // 0x2eb            
-            std::int8_t m_nClothUpdateFlags; // 0x2ec            
-            uint8_t _pad02ed[0x13];
-            
-            // Datamap fields:
-            // void m_pVPhysicsAggregate; // 0x110
+            std::int8_t m_nIdealMotionType; // 0x24a            
+            std::int8_t m_nForceLOD; // 0x24b            
+            std::int8_t m_nClothUpdateFlags; // 0x24c            
+            uint8_t _pad024d[0x13];
         };
         #pragma pack(pop)
         
-        static_assert(offsetof(source2sdk::client::CModelState, m_hModel) == 0xd0);
-        static_assert(offsetof(source2sdk::client::CModelState, m_ModelName) == 0xd8);
-        static_assert(offsetof(source2sdk::client::CModelState, m_bClientClothCreationSuppressed) == 0x1a9);
-        static_assert(offsetof(source2sdk::client::CModelState, m_MeshGroupMask) == 0x250);
-        static_assert(offsetof(source2sdk::client::CModelState, m_nBodyGroupChoices) == 0x2a0);
-        static_assert(offsetof(source2sdk::client::CModelState, m_nIdealMotionType) == 0x2ea);
-        static_assert(offsetof(source2sdk::client::CModelState, m_nForceLOD) == 0x2eb);
-        static_assert(offsetof(source2sdk::client::CModelState, m_nClothUpdateFlags) == 0x2ec);
+        static_assert(offsetof(source2sdk::client::CModelState, m_hModel) == 0xa0);
+        static_assert(offsetof(source2sdk::client::CModelState, m_ModelName) == 0xa8);
+        static_assert(offsetof(source2sdk::client::CModelState, m_pVPhysicsAggregate) == 0xe0);
+        static_assert(offsetof(source2sdk::client::CModelState, m_vRootBoneOffset) == 0xe8);
+        static_assert(offsetof(source2sdk::client::CModelState, m_nRootBoneOffsetResetSerialNumber) == 0xf4);
+        static_assert(offsetof(source2sdk::client::CModelState, m_bClientClothCreationSuppressed) == 0x100);
+        static_assert(offsetof(source2sdk::client::CModelState, m_MeshGroupMask) == 0x1b0);
+        static_assert(offsetof(source2sdk::client::CModelState, m_nBodyGroupChoices) == 0x200);
+        static_assert(offsetof(source2sdk::client::CModelState, m_nIdealMotionType) == 0x24a);
+        static_assert(offsetof(source2sdk::client::CModelState, m_nForceLOD) == 0x24b);
+        static_assert(offsetof(source2sdk::client::CModelState, m_nClothUpdateFlags) == 0x24c);
         
-        static_assert(sizeof(source2sdk::client::CModelState) == 0x300);
+        static_assert(sizeof(source2sdk::client::CModelState) == 0x260);
     };
 };

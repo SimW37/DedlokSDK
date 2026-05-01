@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0x7d0
+        // Size: 0xf70
         // Has VTable
         #pragma pack(push, 1)
         class CAI_CitadelPlayerBotMotor : public source2sdk::server::CAI_Motor
         {
         public:
-            uint8_t _pad07a0[0x30];
+            uint8_t _pad0f40[0x30];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CAI_CitadelPlayerBotMotor) == 0x7d0);
+        static_assert(sizeof(source2sdk::server::CAI_CitadelPlayerBotMotor) == 0xf70);
     };
 };

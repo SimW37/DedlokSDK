@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x780
+        // Size: 0x770
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,14 +28,14 @@ namespace source2sdk
         public:
             // m_ImposterModifierFX has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadel_Modifier_Doorman_Hotel_Imposter_FX> m_ImposterModifierFX;
-            char m_ImposterModifierFX[0x10]; // 0x760            
+            char m_ImposterModifierFX[0x10]; // 0x750            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strKeyTurnSound; // 0x770            
+            CSoundEventName m_strKeyTurnSound; // 0x760            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierDoormanHotelImposterVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifierDoormanHotelImposterVData) == 0x780);
+        static_assert(sizeof(source2sdk::server::CModifierDoormanHotelImposterVData) == 0x770);
     };
 };

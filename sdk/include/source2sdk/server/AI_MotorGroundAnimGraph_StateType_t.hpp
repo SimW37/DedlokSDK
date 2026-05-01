@@ -40,7 +40,7 @@ namespace source2sdk
             eCustomMantle = 0x9,
             // MPropertyFriendlyName "Other"
             eOther = 0xa,
-            eAny = 0xb,
+            eInvalid = 0xb,
             eCount = 0xb,
         };
     };

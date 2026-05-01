@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x560
+        // Size: 0x510
         // Has VTable
         #pragma pack(push, 1)
         class CPhysThruster : public source2sdk::server::CPhysForce
         {
         public:
-            Vector m_localOrigin; // 0x550            
-            uint8_t _pad055c[0x4];
+            Vector m_localOrigin; // 0x500            
+            uint8_t _pad050c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CPhysThruster because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPhysThruster) == 0x560);
+        static_assert(sizeof(source2sdk::server::CPhysThruster) == 0x510);
     };
 };

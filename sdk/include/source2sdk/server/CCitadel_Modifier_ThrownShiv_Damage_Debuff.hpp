@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x190
+        // Size: 0x258
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_ThrownShiv_Damage_Debuff : public source2sdk::server::CCitadelModifier
         {
         public:
-            std::int32_t m_nNumTicksRemaining; // 0xc8            
-            uint8_t _pad00cc[0xc4];
+            std::int32_t m_nNumTicksRemaining; // 0xd0            
+            uint8_t _pad00d4[0x184];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_ThrownShiv_Damage_Debuff because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ThrownShiv_Damage_Debuff) == 0x190);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ThrownShiv_Damage_Debuff) == 0x258);
     };
 };

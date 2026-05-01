@@ -21,7 +21,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb00
+        // Size: 0xb78
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,19 +31,19 @@ namespace source2sdk
         public:
             // metadata: MPropertyFriendlyName "target position"
             // metadata: MVectorIsCoordinate
-            source2sdk::particleslib::CPerParticleVecInput m_vecTargetPosition; // 0x1c0            
+            source2sdk::particleslib::CPerParticleVecInput m_vecTargetPosition; // 0x1d8            
             // metadata: MPropertyFriendlyName "output"
-            source2sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x838            
+            source2sdk::particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x890            
             // metadata: MPropertyFriendlyName "set value method"
-            source2sdk::particles::ParticleSetMethod_t m_nSetMethod; // 0x998            
-            uint8_t _pad099c[0x4]; // 0x99c
+            source2sdk::particles::ParticleSetMethod_t m_nSetMethod; // 0xa00            
+            uint8_t _pad0a04[0x4]; // 0xa04
             // metadata: MPropertyFriendlyName "screen edge alignment distance"
-            source2sdk::particleslib::CPerParticleFloatInput m_flScreenEdgeAlignmentDistance; // 0x9a0            
+            source2sdk::particleslib::CPerParticleFloatInput m_flScreenEdgeAlignmentDistance; // 0xa08            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_OP_ScreenSpaceRotateTowardTarget because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::particles::C_OP_ScreenSpaceRotateTowardTarget) == 0xb00);
+        static_assert(sizeof(source2sdk::particles::C_OP_ScreenSpaceRotateTowardTarget) == 0xb78);
     };
 };

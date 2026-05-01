@@ -17,21 +17,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc10
+        // Size: 0x1040
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Item_ProjectileTest06 : public source2sdk::server::CCitadel_Item_ProjectileTest
         {
         public:
-            float m_flApproachX; // 0xc00            
-            float m_flApproachY; // 0xc04            
-            float m_flApproachZ; // 0xc08            
-            uint8_t _pad0c0c[0x4];
+            float m_flApproachX; // 0x1030            
+            float m_flApproachY; // 0x1034            
+            float m_flApproachZ; // 0x1038            
+            uint8_t _pad103c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Item_ProjectileTest06 because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Item_ProjectileTest06) == 0xc10);
+        static_assert(sizeof(source2sdk::server::CCitadel_Item_ProjectileTest06) == 0x1040);
     };
 };

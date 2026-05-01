@@ -24,23 +24,23 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe50
+        // Size: 0x14c0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Stomp : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            Vector m_vStompPos; // 0xba0            
-            Vector m_vStompDir; // 0xbac            
+            Vector m_vStompPos; // 0xf90            
+            Vector m_vStompDir; // 0xf9c            
             // m_vecStompedEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecStompedEnemies;
-            char m_vecStompedEnemies[0x18]; // 0xbb8            
-            uint8_t _pad0bd0[0x280];
+            char m_vecStompedEnemies[0x18]; // 0xfa8            
+            uint8_t _pad0fc0[0x500];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Stomp because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Stomp) == 0xe50);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Stomp) == 0x14c0);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x5e8
+        // Size: 0x590
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "Vector m_vMins"
@@ -26,17 +26,17 @@ namespace source2sdk
         class CCitadelSoundEntityOBB : public source2sdk::server::CSoundEventEntity
         {
         public:
-            uint8_t _pad05b8[0x14]; // 0x5b8
+            uint8_t _pad0560[0x14]; // 0x560
             // metadata: MNetworkEnable
-            Vector m_vMins; // 0x5cc            
+            Vector m_vMins; // 0x574            
             // metadata: MNetworkEnable
-            Vector m_vMaxs; // 0x5d8            
-            uint8_t _pad05e4[0x4];
+            Vector m_vMaxs; // 0x580            
+            uint8_t _pad058c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelSoundEntityOBB because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelSoundEntityOBB) == 0x5e8);
+        static_assert(sizeof(source2sdk::server::CCitadelSoundEntityOBB) == 0x590);
     };
 };

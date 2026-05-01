@@ -37,24 +37,30 @@ namespace source2sdk
         {
         public:
             uint8_t _pad0000[0x7c]; // 0x0
+            // metadata: MNotSaved
             bool m_bRegistered; // 0x7c            
             uint8_t _pad007d[0x3]; // 0x7d
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnOuterChanged"
+            // metadata: MNotSaved
             // m_hOuter has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hOuter;
             char m_hOuter[0x4]; // 0x80            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnFlashDataChanged"
+            // metadata: MNotSaved
             source2sdk::client::HitGroup_t m_nCritHitGroup; // 0x84            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnFlashDataChanged"
+            // metadata: MNotSaved
             std::int32_t m_nBodyGroup; // 0x88            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnPermanentlyBroken"
+            // metadata: MNotSaved
             bool m_bPermanentlyBroken; // 0x8c            
             uint8_t _pad008d[0x3]; // 0x8d
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             std::int32_t m_nBrokenBodygroupIndex; // 0x90            
             uint8_t _pad0094[0x4];
             

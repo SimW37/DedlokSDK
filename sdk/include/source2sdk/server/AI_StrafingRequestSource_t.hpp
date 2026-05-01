@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace server
     {
-        // Enumerator count: 8
+        // Enumerator count: 9
         // Alignment: 4
         // Size: 0x4
         enum class AI_StrafingRequestSource_t : std::uint32_t
@@ -22,10 +22,11 @@ namespace source2sdk
             eNPCLocomotion = 0x1,
             eLevelScript = 0x2,
             eSmartGoal = 0x3,
-            eSchedule = 0x4,
-            eDefault = 0x5,
-            eCount = 0x6,
-            eNone = 0x6,
+            eMoveStrategy = 0x4,
+            eSchedule = 0x5,
+            eDefault = 0x6,
+            eCount = 0x7,
+            eNone = 0x7,
         };
     };
 };

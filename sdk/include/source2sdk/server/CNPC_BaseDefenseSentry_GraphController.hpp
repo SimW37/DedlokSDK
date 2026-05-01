@@ -14,32 +14,34 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: unknown
+        // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x408
+        // Size: 0x158
         // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
         #pragma pack(push, 1)
         class CNPC_BaseDefenseSentry_GraphController : public source2sdk::server::CNPC_SimpleAnimatingAI_GraphController
         {
         public:
             // m_flPanel1 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CAnimGraphParamOptionalRef<float> m_flPanel1;
-            char m_flPanel1[0x20]; // 0x388            
+            // CAnimGraphParamRef<float> m_flPanel1;
+            char m_flPanel1[0x28]; // 0xb8            
             // m_bUnpackInstant has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CAnimGraphParamOptionalRef<bool> m_bUnpackInstant;
-            char m_bUnpackInstant[0x20]; // 0x3a8            
+            // CAnimGraphParamRef<bool> m_bUnpackInstant;
+            char m_bUnpackInstant[0x28]; // 0xe0            
             // m_flVelocity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CAnimGraphParamOptionalRef<float> m_flVelocity;
-            char m_flVelocity[0x20]; // 0x3c8            
+            // CAnimGraphParamRef<float> m_flVelocity;
+            char m_flVelocity[0x28]; // 0x108            
             // m_bAlert has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CAnimGraphParamOptionalRef<bool> m_bAlert;
-            char m_bAlert[0x20]; // 0x3e8            
+            // CAnimGraphParamRef<bool> m_bAlert;
+            char m_bAlert[0x28]; // 0x130            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_BaseDefenseSentry_GraphController because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_BaseDefenseSentry_GraphController) == 0x408);
+        static_assert(sizeof(source2sdk::server::CNPC_BaseDefenseSentry_GraphController) == 0x158);
     };
 };

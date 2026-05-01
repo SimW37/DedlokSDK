@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xdf8
+        // Size: 0x1428
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Viper_DebuffDagger : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x258];
+            uint8_t _pad0f90[0x498];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Viper_DebuffDagger) == 0xdf8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Viper_DebuffDagger) == 0x1428);
     };
 };

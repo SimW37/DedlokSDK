@@ -38,7 +38,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x8e0
+        // Size: 0x850
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CPropDataComponent::Storage_t m_CPropDataComponent"
@@ -46,34 +46,35 @@ namespace source2sdk
         class CBreakable : public source2sdk::server::CBaseModelEntity
         {
         public:
-            uint8_t _pad0808[0x8]; // 0x808
+            uint8_t _pad0778[0x8]; // 0x778
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "CPropDataComponent"
             // metadata: MNetworkAlias "CPropDataComponent"
             // metadata: MNetworkTypeAlias "CPropDataComponent"
-            source2sdk::server::CPropDataComponent m_CPropDataComponent; // 0x810            
-            source2sdk::server::Materials m_Material; // 0x850            
+            source2sdk::server::CPropDataComponent m_CPropDataComponent; // 0x780            
+            source2sdk::server::Materials m_Material; // 0x7c0            
             // m_hBreaker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hBreaker;
-            char m_hBreaker[0x4]; // 0x854            
-            source2sdk::server::Explosions m_Explosion; // 0x858            
-            uint8_t _pad085c[0x4]; // 0x85c
-            CUtlSymbolLarge m_iszSpawnObject; // 0x860            
-            float m_flPressureDelay; // 0x868            
-            std::int32_t m_iMinHealthDmg; // 0x86c            
-            CUtlSymbolLarge m_iszPropData; // 0x870            
-            float m_impactEnergyScale; // 0x878            
-            source2sdk::server::EOverrideBlockLOS_t m_nOverrideBlockLOS; // 0x87c            
-            source2sdk::entity2::CEntityIOOutput m_OnBreak; // 0x880            
+            char m_hBreaker[0x4]; // 0x7c4            
+            source2sdk::server::Explosions m_Explosion; // 0x7c8            
+            uint8_t _pad07cc[0x4]; // 0x7cc
+            CUtlSymbolLarge m_iszSpawnObject; // 0x7d0            
+            float m_flPressureDelay; // 0x7d8            
+            std::int32_t m_iMinHealthDmg; // 0x7dc            
+            CUtlSymbolLarge m_iszPropData; // 0x7e0            
+            float m_impactEnergyScale; // 0x7e8            
+            source2sdk::server::EOverrideBlockLOS_t m_nOverrideBlockLOS; // 0x7ec            
+            source2sdk::entity2::CEntityIOOutput m_OnStartDeath; // 0x7f0            
+            source2sdk::entity2::CEntityIOOutput m_OnBreak; // 0x808            
             // m_OnHealthChanged has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<float> m_OnHealthChanged;
-            char m_OnHealthChanged[0x28]; // 0x8a8            
-            source2sdk::client::PerformanceMode_t m_PerformanceMode; // 0x8d0            
+            char m_OnHealthChanged[0x20]; // 0x820            
+            source2sdk::client::PerformanceMode_t m_PerformanceMode; // 0x840            
             // m_hPhysicsAttacker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBasePlayerPawn> m_hPhysicsAttacker;
-            char m_hPhysicsAttacker[0x4]; // 0x8d4            
-            source2sdk::entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x8d8            
-            uint8_t _pad08dc[0x4];
+            char m_hPhysicsAttacker[0x4]; // 0x844            
+            source2sdk::entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0x848            
+            uint8_t _pad084c[0x4];
             
             // Datamap fields:
             // void InputBreak; // 0x0
@@ -81,6 +82,8 @@ namespace source2sdk
             // int32_t InputAddHealth; // 0x0
             // int32_t InputRemoveHealth; // 0x0
             // float InputSetMass; // 0x0
+            // bool InputSetEnableBreaking; // 0x0
+            // bool InputSetEnableCollisions; // 0x0
             // void CBreakableDie; // 0x0
             // int32_t material; // 0x7fffffff
             // int32_t spawnobject; // 0x7fffffff
@@ -89,11 +92,12 @@ namespace source2sdk
             // Vector masscenteroffset; // 0x7fffffff
             // float massScale; // 0x7fffffff
             // float buoyancyscale; // 0x7fffffff
+            // float fluiddragscale; // 0x7fffffff
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CBreakable because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CBreakable) == 0x8e0);
+        static_assert(sizeof(source2sdk::server::CBreakable) == 0x850);
     };
 };

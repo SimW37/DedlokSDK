@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x518
+        // Size: 0x4c8
         // Has VTable
         #pragma pack(push, 1)
         class COrbSpawner : public source2sdk::server::CBaseEntity
         {
         public:
-            uint8_t _pad04f0[0x28];
+            uint8_t _pad04a0[0x28];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::COrbSpawner) == 0x518);
+        static_assert(sizeof(source2sdk::server::COrbSpawner) == 0x4c8);
     };
 };

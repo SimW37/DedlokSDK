@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xeb0
+        // Size: 0xed8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelAbilityComponent::Storage_t m_CCitadelAbilityComponent"
@@ -31,15 +31,16 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
             // metadata: MNetworkAlias "CCitadelAbilityComponent"
             // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
-            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xce0            
+            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xce8            
             // metadata: MNetworkEnable
-            bool m_bPickedUp; // 0xea8            
-            uint8_t _pad0ea9[0x7];
+            // metadata: MNotSaved
+            bool m_bPickedUp; // 0xed0            
+            uint8_t _pad0ed1[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelItemPickupRejuv because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelItemPickupRejuv) == 0xeb0);
+        static_assert(sizeof(source2sdk::client::CCitadelItemPickupRejuv) == 0xed8);
     };
 };

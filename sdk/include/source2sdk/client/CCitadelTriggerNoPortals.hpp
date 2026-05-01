@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb10
+        // Size: 0xa70
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelTriggerNoPortals : public source2sdk::client::C_BaseTrigger
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadelTriggerNoPortals) == 0xb10);
+        static_assert(sizeof(source2sdk::client::CCitadelTriggerNoPortals) == 0xa70);
     };
 };

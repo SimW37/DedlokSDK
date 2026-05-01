@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1718
+        // Size: 0x1838
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,16 +29,19 @@ namespace source2sdk
             // metadata: MPropertyDescription "Which ability to fire a MODIFIER_EVENT_ABILITY_TRIGGER_ACTIVATED event to when this ability is triggered"
             // m_AbilityToTrigger has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CSubclassName<4> m_AbilityToTrigger;
-            char m_AbilityToTrigger[0x10]; // 0x1700            
+            char m_AbilityToTrigger[0x10]; // 0x1818            
             // metadata: MPropertyDescription "The mimumum amount of time after this ability has become active before the trigger can activate"
-            float m_flMinCancelTime; // 0x1710            
+            float m_flMinCancelTime; // 0x1828            
             // metadata: MPropertyDescription "Which lesson to associate with activating this ability"
-            source2sdk::client::ECitadelHintFeature m_eHintFeatureToMarkUsedOnTrigger; // 0x1714            
+            source2sdk::client::ECitadelHintFeature m_eHintFeatureToMarkUsedOnTrigger; // 0x182c            
+            // metadata: MPropertyDescription "Trigger on deselect?"
+            bool bTriggerOnDeselect; // 0x1830            
+            uint8_t _pad1831[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CBaseTriggerAbilityVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CBaseTriggerAbilityVData) == 0x1718);
+        static_assert(sizeof(source2sdk::client::CBaseTriggerAbilityVData) == 0x1838);
     };
 };

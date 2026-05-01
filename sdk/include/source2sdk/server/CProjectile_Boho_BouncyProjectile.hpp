@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x938
+        // Size: 0x8a8
         // Has VTable
         #pragma pack(push, 1)
         class CProjectile_Boho_BouncyProjectile : public source2sdk::server::CCitadelTrackedProjectile
         {
         public:
-            uint8_t _pad0918[0x20];
+            uint8_t _pad0888[0x20];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CProjectile_Boho_BouncyProjectile) == 0x938);
+        static_assert(sizeof(source2sdk::server::CProjectile_Boho_BouncyProjectile) == 0x8a8);
     };
 };

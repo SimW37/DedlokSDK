@@ -18,21 +18,21 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1d0
+        // Size: 0x2d8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Afterburn_DOT : public source2sdk::server::CCitadel_Modifier_Burning
         {
         public:
-            bool m_bCheckForExplosion; // 0xc8            
-            uint8_t _pad00c9[0x3]; // 0xc9
-            source2sdk::entity2::GameTime_t m_flLastBurnTime; // 0xcc            
-            uint8_t _pad00d0[0x100];
+            bool m_bCheckForExplosion; // 0xd0            
+            uint8_t _pad00d1[0x3]; // 0xd1
+            source2sdk::entity2::GameTime_t m_flLastBurnTime; // 0xd4            
+            uint8_t _pad00d8[0x200];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Afterburn_DOT because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Afterburn_DOT) == 0x1d0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Afterburn_DOT) == 0x2d8);
     };
 };

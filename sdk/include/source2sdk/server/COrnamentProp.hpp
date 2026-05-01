@@ -17,14 +17,14 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xd90
+        // Size: 0xcd0
         // Has VTable
         #pragma pack(push, 1)
         class COrnamentProp : public source2sdk::server::CDynamicProp
         {
         public:
-            CUtlSymbolLarge m_initialOwner; // 0xd80            
-            uint8_t _pad0d88[0x8];
+            CUtlSymbolLarge m_initialOwner; // 0xcc0            
+            uint8_t _pad0cc8[0x8];
             
             // Datamap fields:
             // CUtlSymbolLarge InputSetAttached; // 0x0
@@ -34,6 +34,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in COrnamentProp because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::COrnamentProp) == 0xd90);
+        static_assert(sizeof(source2sdk::server::COrnamentProp) == 0xcd0);
     };
 };

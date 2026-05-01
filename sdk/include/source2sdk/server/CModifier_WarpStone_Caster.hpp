@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc8
+        // Size: 0xd0
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_WarpStone_Caster : public source2sdk::server::CCitadelModifier
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CModifier_WarpStone_Caster) == 0xc8);
+        static_assert(sizeof(source2sdk::server::CModifier_WarpStone_Caster) == 0xd0);
     };
 };

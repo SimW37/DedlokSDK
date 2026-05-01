@@ -20,7 +20,6 @@ namespace source2sdk
         // Has Trivial Constructor
         // Has Trivial Destructor
         // 
-        // static metadata: MPulseLibraryBindings
         // static metadata: MPropertyFriendlyName "Server Sound"
         // static metadata: MPropertyDescription "Server sound helpers."
         #pragma pack(push, 1)

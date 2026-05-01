@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x860
+        // Size: 0x7d0
         // Has VTable
         // 
         // static metadata: MNetworkExcludeByName "m_hModel"
@@ -33,27 +33,25 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            source2sdk::server::ice_path_shard_model_desc_t m_ShardDesc; // 0x808            
+            source2sdk::server::ice_path_shard_model_desc_t m_ShardDesc; // 0x778            
             // metadata: MNetworkEnable
-            QAngle m_qForward; // 0x840            
+            QAngle m_qForward; // 0x7b0            
             // metadata: MNetworkEnable
-            // metadata: MNetworkChangeCallback "OnStartTimeChanged"
-            source2sdk::entity2::GameTime_t m_flStartTime; // 0x84c            
+            source2sdk::entity2::GameTime_t m_flStartTime; // 0x7bc            
             // metadata: MNetworkEnable
-            // metadata: MNetworkChangeCallback "OnEndTimeChanged"
-            source2sdk::entity2::GameTime_t m_flEndTime; // 0x850            
+            source2sdk::entity2::GameTime_t m_flEndTime; // 0x7c0            
             // metadata: MNetworkEnable
-            float m_flShardWidth; // 0x854            
-            uint8_t _pad0858[0x8];
+            float m_flShardWidth; // 0x7c4            
+            uint8_t _pad07c8[0x8];
             
             // Datamap fields:
-            // void m_bIsBase; // 0x858
-            // void m_hTrooperTrigger; // 0x85c
+            // void m_bIsBase; // 0x7c8
+            // void m_hTrooperTrigger; // 0x7cc
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ice_Path_Shard_Physics because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ice_Path_Shard_Physics) == 0x860);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ice_Path_Shard_Physics) == 0x7d0);
     };
 };

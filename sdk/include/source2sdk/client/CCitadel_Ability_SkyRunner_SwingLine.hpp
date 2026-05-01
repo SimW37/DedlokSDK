@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe80
+        // Size: 0x1388
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "ESwingState_t m_eSwingState"
@@ -32,23 +32,23 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            source2sdk::client::ESwingState_t m_eSwingState; // 0xd90            
-            uint8_t _pad0d91[0x3]; // 0xd91
+            source2sdk::client::ESwingState_t m_eSwingState; // 0x11d8            
+            uint8_t _pad11d9[0x3]; // 0x11d9
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_SwingStartTime; // 0xd94            
+            source2sdk::entity2::GameTime_t m_SwingStartTime; // 0x11dc            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_SwingEndTime; // 0xd98            
+            source2sdk::entity2::GameTime_t m_SwingEndTime; // 0x11e0            
             // metadata: MNetworkEnable
-            Vector m_vecSwingPoint; // 0xd9c            
-            Vector m_vecCurrentPosition; // 0xda8            
+            Vector m_vecSwingPoint; // 0x11e4            
+            Vector m_vecCurrentPosition; // 0x11f0            
             // metadata: MNetworkEnable
-            float m_flIdealSpringLength; // 0xdb4            
-            uint8_t _pad0db8[0xc8];
+            float m_flIdealSpringLength; // 0x11fc            
+            uint8_t _pad1200[0x188];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_SkyRunner_SwingLine because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_SkyRunner_SwingLine) == 0xe80);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_SkyRunner_SwingLine) == 0x1388);
     };
 };

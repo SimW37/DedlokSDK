@@ -17,7 +17,6 @@ namespace source2sdk
         // Alignment: 0x4
         // Standard-layout class: true
         // Size: 0x8
-        // Has Trivial Constructor
         // Has Trivial Destructor
         // 
         // static metadata: MGetKV3ClassDefaults

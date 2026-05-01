@@ -22,9 +22,6 @@ namespace source2sdk
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: MCellForDomain "ServerEntity"
-        // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "ָXתבר"
         // static metadata: MPropertyFriendlyName "Listen for AnimGraph Tag"
         // static metadata: MPropertyDescription "Creates new cursors for when an animgraph tag is handled. Will listen until canceled."
         // static metadata: MPulseEditorSubHeaderText
@@ -32,7 +29,6 @@ namespace source2sdk
         class CPulseCell_Outflow_ListenForAnimgraphTag : public source2sdk::pulse_runtime_lib::CPulseCell_BaseYieldingInflow
         {
         public:
-            // metadata: MPulseCellOutflow_IsDefault
             source2sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnStart; // 0x48            
             source2sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnEnd; // 0x90            
             source2sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnCanceled; // 0xd8            

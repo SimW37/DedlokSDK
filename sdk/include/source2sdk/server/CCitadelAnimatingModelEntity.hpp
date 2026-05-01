@@ -15,12 +15,13 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xc18
+        // Size: 0xbe0
         // Has VTable
         // 
+        // static metadata: MNetworkIncludeByName "m_vecViewOffset"
         // static metadata: MNetworkIncludeByName "m_iHealth"
         // static metadata: MNetworkIncludeByName "m_iMaxHealth"
         // static metadata: MNetworkVarNames "CCitadelRegenComponent::Storage_t m_CCitadelRegenComponent"
@@ -32,12 +33,12 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelRegenComponent"
             // metadata: MNetworkAlias "CCitadelRegenComponent"
             // metadata: MNetworkTypeAlias "CCitadelRegenComponent"
-            source2sdk::server::CCitadelRegenComponent m_CCitadelRegenComponent; // 0xab8            
+            source2sdk::server::CCitadelRegenComponent m_CCitadelRegenComponent; // 0xa80            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelAnimatingModelEntity because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelAnimatingModelEntity) == 0xc18);
+        static_assert(sizeof(source2sdk::server::CCitadelAnimatingModelEntity) == 0xbe0);
     };
 };

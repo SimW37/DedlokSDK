@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xae0
+        // Size: 0xad0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,21 +29,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ZipLineEnemyKnockdownProtectionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineEnemyKnockdownProtectionParticle;
-            char m_ZipLineEnemyKnockdownProtectionParticle[0xe0]; // 0x760            
+            char m_ZipLineEnemyKnockdownProtectionParticle[0xe0]; // 0x750            
             // m_ZipLineSelfKnockdownProtectionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineSelfKnockdownProtectionParticle;
-            char m_ZipLineSelfKnockdownProtectionParticle[0xe0]; // 0x840            
+            char m_ZipLineSelfKnockdownProtectionParticle[0xe0]; // 0x830            
             // m_ZipLineKnockdownProtectionStatusParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineKnockdownProtectionStatusParticle;
-            char m_ZipLineKnockdownProtectionStatusParticle[0xe0]; // 0x920            
+            char m_ZipLineKnockdownProtectionStatusParticle[0xe0]; // 0x910            
             // m_ZipLineKnockdownProtectionStatusEnemyParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZipLineKnockdownProtectionStatusEnemyParticle;
-            char m_ZipLineKnockdownProtectionStatusEnemyParticle[0xe0]; // 0xa00            
+            char m_ZipLineKnockdownProtectionStatusEnemyParticle[0xe0]; // 0x9f0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_ZiplineKnockdownImmuneVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_ZiplineKnockdownImmuneVData) == 0xae0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_ZiplineKnockdownImmuneVData) == 0xad0);
     };
 };

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x940
+        // Size: 0x930
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,18 +26,18 @@ namespace source2sdk
         class CCitadel_Modifier_Tier2WeakenedVData : public source2sdk::server::CCitadel_Modifier_StunnedVData
         {
         public:
-            float m_flTechDamagePctIncrease; // 0x840            
-            uint8_t _pad0844[0x4]; // 0x844
-            CSoundEventName m_WeakenedSound; // 0x848            
+            float m_flTechDamagePctIncrease; // 0x830            
+            uint8_t _pad0834[0x4]; // 0x834
+            CSoundEventName m_WeakenedSound; // 0x838            
             // m_WeakenedEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WeakenedEffect;
-            char m_WeakenedEffect[0xe0]; // 0x858            
-            CUtlString m_sWeakenedEffectAttachment; // 0x938            
+            char m_WeakenedEffect[0xe0]; // 0x848            
+            CUtlString m_sWeakenedEffectAttachment; // 0x928            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Tier2WeakenedVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Tier2WeakenedVData) == 0x940);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Tier2WeakenedVData) == 0x930);
     };
 };

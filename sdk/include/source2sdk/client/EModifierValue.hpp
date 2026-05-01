@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 226
+        // Enumerator count: 241
         // Alignment: 4
         // Size: 0x4
         enum class EModifierValue : std::uint32_t
@@ -39,331 +39,325 @@ namespace source2sdk
             // MScriptDescription "BodyGroupChoice GetModifierGravityScale"
             MODIFIER_VALUE_GRAVITY_SCALE = 0x8,
             // MPropertyFriendlyName "BodyGroupChoice"
-            // MScriptDescription "Vehicle Top Speed Scale Override GetBodyGroupChoice"
+            // MScriptDescription "modifier_handle GetBodyGroupChoice"
             MODIFIER_VALUE_BODY_GROUP_CHOICE_OVERRIDE = 0x9,
             // MPropertyFriendlyName "Vehicle Top Speed Scale Override"
             // MScriptDescription "GetAdditionalVelocity GetVehicleTopSpeedScale"
             MODIFIER_VALUE_VEHICLE_TOP_SPEED_SCALE = 0xa,
             MODIFIER_VALUE_OUTGOING_DAMAGE_PERCENTAGE = 0xb,
-            // MScriptDescription "BaseAttackDamage GetAdditionalVelocity"
+            // MScriptDescription "Movement Gait Override GetAdditionalVelocity"
             MODIFIER_VALUE_ADDITIONAL_VELOCITY = 0xc,
-            // MPropertyFriendlyName "BaseAttackDamage"
-            MODIFIER_VALUE_BASEATTACK_DAMAGE = 0xd,
-            MODIFIER_VALUE_ATTACK_DAMAGE_ADDITIVE_ONLY = 0xe,
-            // MPropertyFriendlyName "BaseAttackDamagePercent"
-            MODIFIER_VALUE_BASEATTACK_DAMAGE_PERCENT = 0xf,
-            // MPropertyFriendlyName "AllDamagePercent"
-            MODIFIER_VALUE_DAMAGE_PERCENT = 0x10,
-            // MPropertyFriendlyName "BonusBaseWeaponDamage"
-            MODIFIER_VALUE_BASE_BULLET_DAMAGE_PERCENT = 0x11,
-            MODIFIER_VALUE_BASE_BULLET_DAMAGE_PERCENT_FROM_LEVEL = 0x12,
-            MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL = 0x13,
-            MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE = 0x14,
-            MODIFIER_VALUE_BASE_BULLET_DAMAGE_OVERRIDE = 0x15,
-            MODIFIER_VALUE_BULLET_DAMAGE_PERCENT = 0x16,
-            // MPropertyFriendlyName "BonusBaseMeleeDamage"
-            MODIFIER_VALUE_BASE_MELEE_DAMAGE_PERCENT = 0x17,
-            MODIFIER_VALUE_BASE_MELEE_DAMAGE_PERCENT_FROM_LEVEL = 0x18,
-            MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL = 0x19,
-            MODIFIER_VALUE_MELEE_DAMAGE_PERCENT = 0x1a,
-            // MPropertyFriendlyName "TechDamagePercent"
-            MODIFIER_VALUE_TECH_DAMAGE_PERCENT = 0x1b,
-            // MPropertyFriendlyName "BonusHealth"
-            MODIFIER_VALUE_HEALTH_MAX = 0x1c,
-            // MPropertyFriendlyName "BonusHealthPercent"
-            MODIFIER_VALUE_HEALTH_MAX_PERCENT = 0x1d,
-            MODIFIER_VALUE_BASE_HEALTH_PERCENT = 0x1e,
-            MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL = 0x1f,
-            MODIFIER_VALUE_BONUS_MAX_HEALTH_NO_SCALE = 0x20,
-            // MPropertyFriendlyName "BonusHealthRegen"
-            MODIFIER_VALUE_HEALTH_REGEN_PER_SECOND = 0x21,
-            MODIFIER_VALUE_HEALTH_REGEN_PER_SECOND_PERCENT = 0x22,
-            // MPropertyFriendlyName "BonusRegenMaxHealthPercent"
-            MODIFIER_VALUE_REGEN_MAX_HEALTH_PERCENT_PER_SECOND = 0x23,
-            // MPropertyFriendlyName "ExternalBonusHealthRegen"
-            MODIFIER_VALUE_EXTERNAL_HEALTH_REGEN_PER_SECOND = 0x24,
-            MODIFIER_VALUE_EXTERNAL_REGEN_NO_REDUCTION = 0x25,
-            // MPropertyFriendlyName "OutOfCombatHealthRegen"
-            MODIFIER_VALUE_OUT_OF_COMBAT_HEALTH_REGEN = 0x26,
-            // MPropertyFriendlyName "HealAmpCastPercent"
-            MODIFIER_VALUE_HEAL_AMP_CAST_PERCENT = 0x27,
-            // MPropertyFriendlyName "HealAmpReceivePercent"
-            MODIFIER_VALUE_HEAL_AMP_RECEIVE_PERCENT = 0x28,
-            // MPropertyFriendlyName "HealAmpRegenPercent"
-            MODIFIER_VALUE_HEAL_AMP_REGEN_PERCENT = 0x29,
-            // MPropertyFriendlyName "HealDegenResistance"
-            MODIFIER_VALUE_HEAL_DEGEN_RESISTANCE = 0x2a,
-            // MPropertyFriendlyName "BonusClipSize"
-            MODIFIER_VALUE_AMMO_CLIP_SIZE = 0x2b,
-            // MPropertyFriendlyName "BonusClipSizePercent"
-            MODIFIER_VALUE_AMMO_CLIP_SIZE_PERCENT = 0x2c,
-            // MPropertyFriendlyName "ClipSizeOverride"
-            MODIFIER_VALUE_AMMO_CLIP_SIZE_OVERRIDE = 0x2d,
-            // MPropertyFriendlyName "ReloadSpeedMultipler"
-            MODIFIER_VALUE_RELOAD_SPEED = 0x2e,
-            // MPropertyFriendlyName "ReloadSpeedConstant"
-            MODIFIER_VALUE_RELOAD_SPEED_CONSTANT = 0x2f,
-            MODIFIER_VALUE_MOVE_SPEED_LIMIT = 0x30,
-            // MPropertyFriendlyName "BonusMoveSpeed"
-            MODIFIER_VALUE_MOVEMENT_SPEED_MAX = 0x31,
-            // MPropertyFriendlyName "BonusMoveSpeedPercent"
-            MODIFIER_VALUE_MOVEMENT_SPEED_MAX_PERCENT = 0x32,
-            // MPropertyFriendlyName "MoveWhileZoomedSpeedPenaltyReductionPercent"
-            MODIFIER_VALUE_MOVEMENT_SPEED_WHILE_ZOOMED_PENALTY_REDUCTION_PERCENT = 0x33,
-            // MPropertyFriendlyName "MoveWhileShootingSpeedPenaltyReductionPercent"
-            MODIFIER_VALUE_MOVEMENT_SPEED_WHILE_SHOOTING_PENALTY_REDUCTION_PERCENT = 0x34,
-            // MPropertyFriendlyName "MoveSpeedSlowPercent"
-            MODIFIER_VALUE_MOVEMENT_SPEED_SLOW_PERCENT = 0x35,
-            // MPropertyFriendlyName "MoveGroundReductionPercent"
-            MODIFIER_VALUE_MOVEMENT_GROUND_DASH_REDUCTION_PERCENT = 0x36,
-            // MPropertyFriendlyName "MoveDashIncreasePercent"
-            MODIFIER_VALUE_MOVEMENT_GROUND_DASH_INCREASE_PERCENT = 0x37,
-            // MPropertyFriendlyName "AirMoveIncreasePercent"
-            MODIFIER_VALUE_AIR_MOVE_DISTANCE_INCREASE_PERCENT = 0x38,
-            // MPropertyFriendlyName "SlideDistanceScale"
-            MODIFIER_VALUE_MOVEMENT_SLIDE_DISTANCE_SCALE = 0x39,
-            // MPropertyFriendlyName "SlowResistance"
-            MODIFIER_VALUE_MOVEMENT_SLOW_RESISTANCE = 0x3a,
-            // MPropertyFriendlyName "BonusAttackRange"
-            MODIFIER_VALUE_BONUS_ATTACK_RANGE = 0x3b,
-            // MPropertyFriendlyName "BonusAttackRangePercent"
-            MODIFIER_VALUE_BONUS_ATTACK_RANGE_PERCENT = 0x3c,
-            // MPropertyFriendlyName "BonusZoomPercent"
-            MODIFIER_VALUE_ZOOM_INCREASE_PERCENT = 0x3d,
-            MODIFIER_VALUE_ZOOM_POSITION = 0x3e,
-            // MPropertyFriendlyName "WeaponRecoilReduction"
-            MODIFIER_VALUE_WEAPON_RECOIL_REDUCTION_PERCENT = 0x3f,
-            // MPropertyFriendlyName "BonusSprintSpeed"
-            MODIFIER_VALUE_SPRINT_SPEED_BONUS = 0x40,
-            // MPropertyFriendlyName "BonusSprintSpeedPercent"
-            MODIFIER_VALUE_SPRINT_SPEED_MAX_PERCENT = 0x41,
-            MODIFIER_VALUE_SPRINT_DURATION = 0x42,
-            MODIFIER_VALUE_SPRINT_ACCELERATION = 0x43,
-            MODIFIER_VALUE_DISPLAY_SPEED_CURRENT = 0x44,
-            MODIFIER_VALUE_DISPLAY_SPEED_MAX = 0x45,
-            MODIFIER_VALUE_AVOID_SPELL = 0x46,
-            // MPropertyFriendlyName "BonusFireRate"
-            MODIFIER_VALUE_FIRE_RATE = 0x47,
-            // MPropertyFriendlyName "FireRateSlow"
-            MODIFIER_VALUE_FIRE_RATE_SLOW = 0x48,
-            // MPropertyFriendlyName "CycleTimeMultiplier"
-            MODIFIER_VALUE_CYCLE_TIME_PERCENTAGE = 0x49,
-            MODIFIER_VALUE_SPREAD_SCALE = 0x4a,
-            MODIFIER_VALUE_CYCLE_TIME = 0x4b,
-            MODIFIER_VALUE_AMMO_COST_REDUCTION = 0x4c,
-            MODIFIER_VALUE_DAMAGE_TAKEN_REDUCTION_PERCENT = 0x4d,
-            MODIFIER_VALUE_DAMAGE_TAKEN_INCREASE_PERCENT = 0x4e,
-            MODIFIER_VALUE_BULLET_DAMAGE_TAKEN_INCREASE_PERCENT = 0x4f,
-            MODIFIER_VALUE_ABILITY_DAMAGE_TAKEN_INCREASE_PERCENT = 0x50,
-            // MPropertyFriendlyName "TechArmor"
-            MODIFIER_VALUE_TECH_ARMOR = 0x51,
-            // MPropertyFriendlyName "TechResist"
-            MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST = 0x52,
-            MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST_PERCENT = 0x53,
-            MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST_REDUCTION = 0x54,
-            // MPropertyFriendlyName "AbilityDamageReduction"
-            MODIFIER_VALUE_ABILITY_DAMAGE_REDUCTION = 0x55,
-            MODIFIER_VALUE_ABILITY_DAMAGE_REDUCTION_PERCENT = 0x56,
-            // MPropertyFriendlyName "BulletArmor"
-            MODIFIER_VALUE_BULLET_ARMOR = 0x57,
-            // MPropertyFriendlyName "BulletResist"
-            MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST = 0x58,
-            MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST_PERCENT = 0x59,
-            MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST_REDUCTION = 0x5a,
-            MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST_NON_HERO = 0x5b,
-            MODIFIER_VALUE_CRIT_DAMAGE_RECEIVED_SCALE = 0x5c,
-            // MPropertyFriendlyName "BulletDamageReduction"
-            MODIFIER_VALUE_BULLET_DAMAGE_REDUCTION = 0x5d,
-            MODIFIER_VALUE_BULLET_DAMAGE_REDUCTION_PERCENT = 0x5e,
-            // MPropertyFriendlyName "BaseWeaponDamageTakenPercent"
-            MODIFIER_VALUE_BASE_WEAPON_DAMAGE_TAKEN_PERCENT = 0x5f,
-            // MPropertyFriendlyName "BaseBulletDamageTakenPercent"
-            MODIFIER_VALUE_BASE_BULLET_DAMAGE_TAKEN_PERCENT = 0x60,
-            // MPropertyFriendlyName "BaseMeleeDamageTakenPercent"
-            MODIFIER_VALUE_BASE_MELEE_DAMAGE_TAKEN_PERCENT = 0x61,
-            // MPropertyFriendlyName "MeleeDamageReductionPercent"
-            MODIFIER_VALUE_MELEE_DAMAGE_REDUCTION_PERCENT = 0x62,
-            MODIFIER_VALUE_MELEE_DAMAGE_INCREASE_PERCENT = 0x63,
-            // MPropertyFriendlyName "StatusResistancePercent"
-            MODIFIER_VALUE_STATUS_RESISTANCE = 0x64,
-            // MPropertyFriendlyName "CooldownReduction"
-            MODIFIER_VALUE_COOLDOWN_REDUCTION_PERCENTAGE = 0x65,
-            MODIFIER_VALUE_COOLDOWN_MAX_TIME = 0x66,
-            // MPropertyFriendlyName "CooldownBetweenChargeReduction"
-            MODIFIER_VALUE_COOLDOWN_BETWEEN_CHARGE_REDUCTION_PERCENTAGE = 0x67,
-            // MPropertyFriendlyName "ItemCooldownReduction"
-            MODIFIER_VALUE_ITEM_COOLDOWN_REDUCTION_PERCENTAGE = 0x68,
-            // MPropertyFriendlyName "BonusAbilityCharges"
-            MODIFIER_VALUE_BONUS_ABILITY_CHARGES = 0x69,
-            // MPropertyFriendlyName "BonusAbilityDurationPercent"
-            MODIFIER_VALUE_BONUS_ABILITY_DURATION_PERCENTAGE = 0x6a,
-            // MPropertyFriendlyName "BonusMeleeDamage"
-            MODIFIER_VALUE_MELEEATTACK_DAMAGE = 0x6b,
-            MODIFIER_VALUE_MELEEATTACK_DAMAGE_PERCENTAGE = 0x6c,
-            // MPropertyFriendlyName "BonusMeleeAttackSpeed"
-            MODIFIER_VALUE_MELEEATTACK_SPEED = 0x6d,
-            // MPropertyFriendlyName "BonusMeleeTravelDistancePercent"
-            MODIFIER_VALUE_MELEE_TRAVEL_DISTANCE_PERCENTAGE = 0x6e,
-            // MPropertyFriendlyName "ParryCooldownReductionFixed"
-            MODIFIER_VALUE_PARRY_COOLDOWN_REDUCTION_FIXED = 0x6f,
-            // MPropertyFriendlyName "BonusAccuracy"
-            MODIFIER_VALUE_FIREARM_ACCURACY_PERCENTAGE = 0x70,
-            MODIFIER_VALUE_TURN_SIDEMOVE_PERCENTAGE = 0x71,
-            MODIFIER_VALUE_CHARGE_SPEED = 0x72,
-            MODIFIER_VALUE_TELEPORT_COOLDOWN_REDUCTION_PERCENT = 0x73,
-            MODIFIER_VALUE_FALL_SPEED_MAX = 0x74,
-            MODIFIER_VALUE_AIR_SPEED_MAX = 0x75,
-            MODIFIER_VALUE_BULLET_EVASION = 0x76,
-            // MPropertyFriendlyName "BulletShieldHealth"
-            MODIFIER_VALUE_BULLET_SHIELD_HEALTH = 0x77,
-            // MPropertyFriendlyName "BulletShieldMaxHealth"
-            MODIFIER_VALUE_BULLET_SHIELD_HEALTH_MAX = 0x78,
-            MODIFIER_VALUE_BULLET_SHIELD_DAMAGE_PERCENT = 0x79,
-            // MPropertyFriendlyName "BarrierHealth "
-            MODIFIER_VALUE_BARRIER_HEALTH = 0x7a,
-            // MPropertyFriendlyName "BonusCritDamagePercent"
-            MODIFIER_VALUE_BONUS_CRIT_DAMAGE_PERCENT = 0x7b,
-            // MPropertyFriendlyName "HighGroundBonusBaseDamagePercent"
-            MODIFIER_VALUE_HEIGHT_ADVANTAGE_BONUS_BASE_DAMAGE_PERCENT = 0x7c,
-            // MPropertyFriendlyName "CloseRangeBonusBaseDamage"
-            MODIFIER_VALUE_CLOSE_RANGE_BONUS_BASE_DAMAGE_PERCENT = 0x7d,
-            MODIFIER_VALUE_BONUS_WEAPON_DAMAGE_CLOSE_RANGE_MAX_RANGE = 0x7e,
-            // MPropertyFriendlyName "LongRangeBonusWeaponPower"
-            MODIFIER_VALUE_LONG_RANGE_BONUS_BASE_DAMAGE_PERCENT = 0x7f,
-            MODIFIER_VALUE_BONUS_WEAPON_DAMAGE_LONG_RANGE_MIN_RANGE = 0x80,
-            // MPropertyFriendlyName "TechRangeAdditive"
-            MODIFIER_VALUE_TECH_RANGE_ADDITIVE = 0x81,
-            // MPropertyFriendlyName "TechRangeMultiplier"
-            MODIFIER_VALUE_TECH_RANGE_PERCENT = 0x82,
-            MODIFIER_VALUE_TECH_RANGE_CLAMP = 0x83,
-            // MPropertyFriendlyName "TechRadiusAdditive"
-            MODIFIER_VALUE_TECH_RADIUS_ADDITIVE = 0x84,
-            // MPropertyFriendlyName "TechRadiusMultiplier"
-            MODIFIER_VALUE_TECH_RADIUS_PERCENT = 0x85,
-            MODIFIER_VALUE_TURN_ANGLE_PER_SECOND_MAX = 0x86,
-            MODIFIER_VALUE_BONUS_JUMP_VERTICAL_SPEED_PERCENT = 0x87,
-            MODIFIER_VALUE_AIR_JUMPS = 0x88,
-            // MPropertyFriendlyName "BonusZipLineSpeed"
-            MODIFIER_VALUE_ZIP_LINE_SPEED_ADDITIVE = 0x89,
-            // MPropertyFriendlyName "ZipLineSpeedPercent"
-            MODIFIER_VALUE_ZIP_LINE_SPEED_PERCENTAGE = 0x8a,
-            // MPropertyFriendlyName "ClimbRopeSpeedPercent"
-            MODIFIER_VALUE_CLIMB_ROPE_SPEED_PERCENTAGE = 0x8b,
-            // MPropertyFriendlyName "GroundFrictionPercent"
-            MODIFIER_VALUE_GROUND_FRICTION_PERCENTAGE = 0x8c,
-            // MPropertyFriendlyName "GroundAccelerationPercent"
-            MODIFIER_VALUE_GROUND_ACCELERATION_PERCENTAGE = 0x8d,
-            MODIFIER_VALUE_INVISIBILITY_LEVEL = 0x8e,
-            MODIFIER_VALUE_CLOAK_FACTOR = 0x8f,
-            MODIFIER_VALUE_CLOAK_DESAT_FACTOR = 0x90,
-            MODIFIER_VALUE_PARTICLE_TINT_OVERRIDE = 0x91,
-            MODIFIER_VALUE_PARTICLE_DESAT_OVERRIDE = 0x92,
-            MODIFIER_VALUE_DIMENSION_TYPE = 0x93,
-            MODIFIER_VALUE_GAMEPLAY_TIME_SCALE_ADDITIVE = 0x94,
-            MODIFIER_VALUE_GAMEPLAY_TIME_SCALE_PERCENT = 0x95,
-            MODIFIER_VALUE_ANIMATION_TIME_SCALE_ADDITIVE = 0x96,
-            MODIFIER_VALUE_ANIMATION_TIME_SCALE_PERCENT = 0x97,
-            MODIFIER_VALUE_ANIMATION_FRAME_SKIP_RATE = 0x98,
-            MODIFIER_VALUE_MOVEMENT_TIME_SCALE_ADDITIVE = 0x99,
-            MODIFIER_VALUE_MOVEMENT_TIME_SCALE_PERCENT = 0x9a,
-            MODIFIER_VALUE_PARTICLE_TIME_SCALE_ADDITIVE = 0x9b,
-            MODIFIER_VALUE_PARTICLE_TIME_SCALE_PERCENT = 0x9c,
-            // MPropertyFriendlyName "Stamina"
-            MODIFIER_VALUE_STAMINA = 0x9d,
-            MODIFIER_VALUE_STAMINA_REGEN_PER_SECOND_ADDITIVE = 0x9e,
-            // MPropertyFriendlyName "StaminaRegenPercent"
-            MODIFIER_VALUE_STAMINA_REGEN_PER_SECOND_PERCENTAGE = 0x9f,
-            // MPropertyFriendlyName "WeaponPower"
-            MODIFIER_VALUE_WEAPON_POWER = 0xa0,
-            // MPropertyFriendlyName "ArmorPower"
-            MODIFIER_VALUE_ARMOR_POWER = 0xa1,
-            // MPropertyFriendlyName "TechPower"
-            MODIFIER_VALUE_TECH_POWER = 0xa2,
-            // MPropertyFriendlyName "TechPowerPercent"
-            MODIFIER_VALUE_TECH_POWER_PERCENT = 0xa3,
-            // MPropertyFriendlyName "WeaponPowerPercent"
-            MODIFIER_VALUE_WEAPON_POWER_PERCENT = 0xa4,
-            // MPropertyFriendlyName "AirControlPercent"
-            MODIFIER_VALUE_AIR_CONTROL_PERCENT = 0xa5,
-            // MPropertyFriendlyName "AirControlAccelPercent"
-            MODIFIER_VALUE_AIR_CONTROL_ACCEL_PERCENT = 0xa6,
-            // MPropertyFriendlyName "AbilityProjectileSpeedPercent"
-            MODIFIER_VALUE_ABILITY_PROJECTILE_SPEED_PERCENT = 0xa7,
-            // MPropertyFriendlyName "BonusBulletSpeedPercent"
-            MODIFIER_VALUE_BONUS_BULLET_SPEED_PERCENT = 0xa8,
-            // MPropertyFriendlyName "BaseBulletSpeedOverride"
-            MODIFIER_VALUE_BASE_BULLET_SPEED_OVERRIDE = 0xa9,
-            MODIFIER_VALUE_BULLET_SHOOT_SOUND = 0xaa,
-            MODIFIER_VALUE_BULLET_SHOOT_SOUND_FRIENDLY = 0xab,
-            MODIFIER_VALUE_BULLET_SHOOT_SOUND_ENEMY = 0xac,
-            MODIFIER_VALUE_BULLET_SHOOT_SOUND_WHIZ = 0xad,
-            MODIFIER_VALUE_BULLET_SHOOT_SOUND_WHIZ_LEFT_TO_RIGHT = 0xae,
-            MODIFIER_VALUE_BULLET_SHOOT_SOUND_WHIZ_RIGHT_TO_LEFT = 0xaf,
-            MODIFIER_VALUE_TRACER_REPLACEMENT = 0xb0,
-            MODIFIER_VALUE_TRACER_ADDITIONAL = 0xb1,
+            // MPropertyFriendlyName "Movement Gait Override"
+            // MScriptDescription "Movement Gait Set Override GetMovementGaitOverride"
+            MODIFIER_VALUE_MOVEMENT_GAIT_OVERRIDE = 0xd,
+            // MPropertyFriendlyName "Movement Gait Set Override"
+            // MScriptDescription "Stance Override GetMovementGaitSetOverride"
+            MODIFIER_VALUE_MOVEMENT_GAIT_SET_OVERRIDE = 0xe,
+            // MPropertyFriendlyName "Stance Override"
+            // MScriptDescription "affects both Bullets and Melee GetStanceOverride"
+            MODIFIER_VALUE_STANCE_OVERRIDE = 0xf,
+            // MPropertyDescription "affects both Bullets and Melee"
+            MODIFIER_VALUE_BASEATTACK_DAMAGE = 0x10,
+            // MPropertyDescription "affects both Bullets and Melee but does not get scaled with Percent"
+            MODIFIER_VALUE_ATTACK_DAMAGE_ADDITIVE_ONLY = 0x11,
+            // MPropertyDescription "affects both Bullets and Melee"
+            MODIFIER_VALUE_BASEATTACK_DAMAGE_PERCENT = 0x12,
+            // MPropertyDescription "affects all (bullet, melee, tech) damage output"
+            MODIFIER_VALUE_DAMAGE_PERCENT = 0x13,
+            // MPropertyDescription "base bullet damage % increases"
+            MODIFIER_VALUE_BASE_BULLET_DAMAGE_PERCENT = 0x14,
+            // MPropertyDescription "special version of base % increases just from levels, need to do this for tooltips because of stats and it sucks"
+            MODIFIER_VALUE_BASE_BULLET_DAMAGE_PERCENT_FROM_LEVEL = 0x15,
+            MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL = 0x16,
+            MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE = 0x17,
+            // MPropertyDescription "An override of the base bullet damage. Does nothing if zero."
+            MODIFIER_VALUE_BASE_BULLET_DAMAGE_OVERRIDE = 0x18,
+            // MPropertyDescription "only Bullet"
+            MODIFIER_VALUE_BULLET_DAMAGE_PERCENT = 0x19,
+            // MPropertyDescription "base melee damage % increases"
+            MODIFIER_VALUE_BASE_MELEE_DAMAGE_PERCENT = 0x1a,
+            // MPropertyDescription "special version of base % increases just from levels, need to do this for tooltips because of stats and it sucks"
+            MODIFIER_VALUE_BASE_MELEE_DAMAGE_PERCENT_FROM_LEVEL = 0x1b,
+            MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL = 0x1c,
+            // MPropertyDescription "only melee"
+            MODIFIER_VALUE_MELEE_DAMAGE_PERCENT = 0x1d,
+            // MPropertyDescription "only tech damage"
+            MODIFIER_VALUE_TECH_DAMAGE_PERCENT = 0x1e,
+            MODIFIER_VALUE_HEALTH_MAX = 0x1f,
+            MODIFIER_VALUE_MAX_HEALTH_OVERRIDE = 0x20,
+            MODIFIER_VALUE_HEALTH_MAX_PERCENT = 0x21,
+            // MPropertyDescription "% on Base Health (Hero Base + Level up) not items"
+            MODIFIER_VALUE_BASE_HEALTH_PERCENT = 0x22,
+            // MPropertyDescription "Base Health Increase from Level ups"
+            MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL = 0x23,
+            MODIFIER_VALUE_BONUS_MAX_HEALTH_NO_SCALE = 0x24,
+            MODIFIER_VALUE_HEALTH_REGEN_PER_SECOND = 0x25,
+            MODIFIER_VALUE_HEALTH_REGEN_PER_SECOND_PERCENT = 0x26,
+            MODIFIER_VALUE_REGEN_MAX_HEALTH_PERCENT_PER_SECOND = 0x27,
+            // MPropertyDescription "Health regen applied to us from an external source (ie. not intrinsic health regen)"
+            MODIFIER_VALUE_EXTERNAL_HEALTH_REGEN_PER_SECOND = 0x28,
+            // MPropertyDescription "Regen that cannot be reduced by anti heal sources (IE Fountain)"
+            MODIFIER_VALUE_EXTERNAL_REGEN_NO_REDUCTION = 0x29,
+            MODIFIER_VALUE_EXTERNAL_HEALTH_REGEN_LOOP_SOUND_OVERRIDE = 0x2a,
+            MODIFIER_VALUE_OUT_OF_COMBAT_HEALTH_REGEN = 0x2b,
+            MODIFIER_VALUE_BARRIER_AMP_CAST_PERCENT = 0x2c,
+            MODIFIER_VALUE_BARRIER_AMP_RECEIVE_PERCENT = 0x2d,
+            MODIFIER_VALUE_HEAL_AMP_CAST_PERCENT = 0x2e,
+            MODIFIER_VALUE_HEAL_AMP_RECEIVE_PERCENT = 0x2f,
+            MODIFIER_VALUE_HEAL_AMP_REGEN_PERCENT = 0x30,
+            // MPropertyDescription "Reduce the effects of negative heal amp"
+            MODIFIER_VALUE_HEAL_DEGEN_RESISTANCE = 0x31,
+            MODIFIER_VALUE_AMMO_CLIP_SIZE = 0x32,
+            MODIFIER_VALUE_AMMO_CLIP_SIZE_PERCENT = 0x33,
+            MODIFIER_VALUE_AMMO_CLIP_SIZE_OVERRIDE = 0x34,
+            MODIFIER_VALUE_RELOAD_SPEED = 0x35,
+            MODIFIER_VALUE_RELOAD_SPEED_CONSTANT = 0x36,
+            // MPropertyDescription "Limit on how fast you can move (walking/sprinting/whatever)"
+            MODIFIER_VALUE_MOVE_SPEED_LIMIT = 0x37,
+            // MPropertyDescription "Default walking speed (non-sprint)"
+            MODIFIER_VALUE_MOVEMENT_SPEED_MAX = 0x38,
+            MODIFIER_VALUE_MOVEMENT_SPEED_MAX_PERCENT = 0x39,
+            MODIFIER_VALUE_MOVEMENT_SPEED_WHILE_ZOOMED_PENALTY_REDUCTION_PERCENT = 0x3a,
+            MODIFIER_VALUE_MOVEMENT_SPEED_WHILE_SHOOTING_PENALTY_REDUCTION_PERCENT = 0x3b,
+            // MPropertyDescription "what abilities should use to slow enemies"
+            MODIFIER_VALUE_MOVEMENT_SPEED_SLOW_PERCENT = 0x3c,
+            // MPropertyDescription "Abilities that weaken ground dash distance"
+            MODIFIER_VALUE_MOVEMENT_GROUND_DASH_REDUCTION_PERCENT = 0x3d,
+            // MPropertyDescription "Abilities that boost ground dash distance"
+            MODIFIER_VALUE_MOVEMENT_GROUND_DASH_INCREASE_PERCENT = 0x3e,
+            MODIFIER_VALUE_AIR_MOVE_DISTANCE_INCREASE_PERCENT = 0x3f,
+            // MPropertyDescription "Scale Slide speed (alters friction) to get more distance"
+            MODIFIER_VALUE_MOVEMENT_SLIDE_DISTANCE_SCALE = 0x40,
+            // MPropertyDescription "Scale Slide Turn"
+            MODIFIER_VALUE_MOVEMENT_SLIDE_TURN_SCALE = 0x41,
+            // MPropertyDescription "Weaken the effect of Slows"
+            MODIFIER_VALUE_MOVEMENT_SLOW_RESISTANCE = 0x42,
+            MODIFIER_VALUE_BONUS_ATTACK_RANGE = 0x43,
+            MODIFIER_VALUE_BONUS_ATTACK_RANGE_PERCENT = 0x44,
+            MODIFIER_VALUE_ZOOM_INCREASE_PERCENT = 0x45,
+            MODIFIER_VALUE_ZOOM_POSITION = 0x46,
+            MODIFIER_VALUE_WEAPON_RECOIL_REDUCTION_PERCENT = 0x47,
+            MODIFIER_VALUE_SPRINT_SPEED_BONUS = 0x48,
+            MODIFIER_VALUE_SPRINT_SPEED_MAX_PERCENT = 0x49,
+            // MPropertyDescription "how long the player has been sprinting"
+            MODIFIER_VALUE_SPRINT_DURATION = 0x4a,
+            MODIFIER_VALUE_SPRINT_ACCELERATION = 0x4b,
+            MODIFIER_VALUE_DISPLAY_SPEED_CURRENT = 0x4c,
+            MODIFIER_VALUE_DISPLAY_SPEED_MAX = 0x4d,
+            MODIFIER_VALUE_AVOID_SPELL = 0x4e,
+            // MPropertyDescription "the stat version of fire rate adjustment"
+            MODIFIER_VALUE_FIRE_RATE = 0x4f,
+            // MPropertyDescription "the stat version of negative fire rate"
+            MODIFIER_VALUE_FIRE_RATE_SLOW = 0x50,
+            // MPropertyDescription "Increase Cycle Time (Decrease FireRate)"
+            MODIFIER_VALUE_CYCLE_TIME_PERCENTAGE = 0x51,
+            MODIFIER_VALUE_SPREAD_SCALE = 0x52,
+            MODIFIER_VALUE_CYCLE_TIME = 0x53,
+            MODIFIER_VALUE_AMMO_COST_REDUCTION = 0x54,
+            // MPropertyDescription "Applies to players and any entities for which GetScorer returns this player"
+            MODIFIER_VALUE_DAMAGE_TAKEN_REDUCTION_PERCENT = 0x55,
+            // MPropertyDescription "Damage Received Amplification"
+            MODIFIER_VALUE_DAMAGE_TAKEN_INCREASE_PERCENT = 0x56,
+            // MPropertyDescription "Damage Received Amplification"
+            MODIFIER_VALUE_BULLET_DAMAGE_TAKEN_INCREASE_PERCENT = 0x57,
+            // MPropertyDescription "Damage Received Amplification"
+            MODIFIER_VALUE_ABILITY_DAMAGE_TAKEN_INCREASE_PERCENT = 0x58,
+            // MPropertyDescription "step function that determines your ability damage resist %"
+            MODIFIER_VALUE_TECH_ARMOR = 0x59,
+            // MPropertyDescription "additional ability damage resist added to the value of MODIFIER_VALUE_TECH_ARMOR, negative values mean penetration"
+            MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST = 0x5a,
+            // MPropertyDescription "scales all ability damage resist"
+            MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST_PERCENT = 0x5b,
+            // MPropertyDescription "ability resist reduction"
+            MODIFIER_VALUE_TECH_ARMOR_DAMAGE_RESIST_REDUCTION = 0x5c,
+            // MPropertyDescription "flat ability damage reduction"
+            MODIFIER_VALUE_ABILITY_DAMAGE_REDUCTION = 0x5d,
+            // MPropertyDescription "% damage reduction post armor, between 0 and -100, with -100 being 100% reduction"
+            MODIFIER_VALUE_ABILITY_DAMAGE_REDUCTION_PERCENT = 0x5e,
+            // MPropertyDescription "Step function that determines your bullet damage resist %"
+            MODIFIER_VALUE_BULLET_ARMOR = 0x5f,
+            // MPropertyDescription "Additional bullet resist % added to value of MODIFIER_VALUE_BULLET_ARMOR"
+            MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST = 0x60,
+            // MPropertyDescription "scales all bullet resist"
+            MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST_PERCENT = 0x61,
+            // MPropertyDescription "Bullet resist reduction"
+            MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST_REDUCTION = 0x62,
+            // MPropertyDescription "Bullet resist against NPC"
+            MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST_NON_HERO = 0x63,
+            // MPropertyDescription "Scale the crit Multiplier"
+            MODIFIER_VALUE_CRIT_DAMAGE_RECEIVED_SCALE = 0x64,
+            // MPropertyDescription "flat bullet damage reduction"
+            MODIFIER_VALUE_BULLET_DAMAGE_REDUCTION = 0x65,
+            // MPropertyDescription "% damage reduction post armor, between 0 and -100, with -100 being 100% reduction"
+            MODIFIER_VALUE_BULLET_DAMAGE_REDUCTION_PERCENT = 0x66,
+            MODIFIER_VALUE_BASE_WEAPON_DAMAGE_TAKEN_PERCENT = 0x67,
+            MODIFIER_VALUE_BASE_BULLET_DAMAGE_TAKEN_PERCENT = 0x68,
+            MODIFIER_VALUE_BASE_MELEE_DAMAGE_TAKEN_PERCENT = 0x69,
+            MODIFIER_VALUE_MELEE_DAMAGE_REDUCTION_PERCENT = 0x6a,
+            MODIFIER_VALUE_MELEE_DAMAGE_INCREASE_PERCENT = 0x6b,
+            MODIFIER_VALUE_STATUS_RESISTANCE = 0x6c,
+            MODIFIER_VALUE_COOLDOWN_REDUCTION_PERCENTAGE = 0x6d,
+            MODIFIER_VALUE_COOLDOWN_MAX_TIME = 0x6e,
+            MODIFIER_VALUE_COOLDOWN_BETWEEN_CHARGE_REDUCTION_PERCENTAGE = 0x6f,
+            MODIFIER_VALUE_ITEM_COOLDOWN_REDUCTION_PERCENTAGE = 0x70,
+            MODIFIER_VALUE_BONUS_ABILITY_CHARGES = 0x71,
+            MODIFIER_VALUE_BONUS_ABILITY_DURATION_PERCENTAGE = 0x72,
+            MODIFIER_VALUE_ENABLE_CHARGES = 0x73,
+            MODIFIER_VALUE_MELEEATTACK_DAMAGE = 0x74,
+            MODIFIER_VALUE_MELEEATTACK_DAMAGE_PERCENTAGE = 0x75,
+            MODIFIER_VALUE_MELEEATTACK_SPEED = 0x76,
+            MODIFIER_VALUE_MELEE_TRAVEL_DISTANCE_PERCENTAGE = 0x77,
+            MODIFIER_VALUE_PARRY_COOLDOWN_REDUCTION_FIXED = 0x78,
+            MODIFIER_VALUE_FIREARM_ACCURACY_PERCENTAGE = 0x79,
+            MODIFIER_VALUE_TURN_SIDEMOVE_PERCENTAGE = 0x7a,
+            MODIFIER_VALUE_CHARGE_SPEED = 0x7b,
+            MODIFIER_VALUE_TELEPORT_COOLDOWN_REDUCTION_PERCENT = 0x7c,
+            MODIFIER_VALUE_FALL_SPEED_MAX = 0x7d,
+            MODIFIER_VALUE_AIR_SPEED_MAX = 0x7e,
+            MODIFIER_VALUE_BULLET_EVASION = 0x7f,
+            MODIFIER_VALUE_PARRY_PIERCE = 0x80,
+            MODIFIER_VALUE_BULLET_SHIELD_HEALTH = 0x81,
+            MODIFIER_VALUE_BULLET_SHIELD_HEALTH_MAX = 0x82,
+            MODIFIER_VALUE_BULLET_SHIELD_DAMAGE_PERCENT = 0x83,
+            MODIFIER_VALUE_BARRIER_HEALTH = 0x84,
+            MODIFIER_VALUE_BONUS_CRIT_DAMAGE_PERCENT = 0x85,
+            MODIFIER_VALUE_HEIGHT_ADVANTAGE_BONUS_BASE_DAMAGE_PERCENT = 0x86,
+            MODIFIER_VALUE_CLOSE_RANGE_BONUS_BASE_DAMAGE_PERCENT = 0x87,
+            MODIFIER_VALUE_BONUS_WEAPON_DAMAGE_CLOSE_RANGE_MAX_RANGE = 0x88,
+            MODIFIER_VALUE_LONG_RANGE_BONUS_BASE_DAMAGE_PERCENT = 0x89,
+            MODIFIER_VALUE_BONUS_WEAPON_DAMAGE_LONG_RANGE_MIN_RANGE = 0x8a,
+            MODIFIER_VALUE_TECH_RANGE_ADDITIVE = 0x8b,
+            MODIFIER_VALUE_TECH_RANGE_PERCENT = 0x8c,
+            MODIFIER_VALUE_TECH_RANGE_CLAMP = 0x8d,
+            MODIFIER_VALUE_TECH_RADIUS_ADDITIVE = 0x8e,
+            MODIFIER_VALUE_TECH_RADIUS_PERCENT = 0x8f,
+            MODIFIER_VALUE_TURN_ANGLE_PER_SECOND_MAX = 0x90,
+            MODIFIER_VALUE_BONUS_JUMP_VERTICAL_SPEED_PERCENT = 0x91,
+            MODIFIER_VALUE_AIR_JUMPS = 0x92,
+            MODIFIER_VALUE_ZIP_LINE_SPEED_ADDITIVE = 0x93,
+            MODIFIER_VALUE_ZIP_LINE_SPEED_PERCENTAGE = 0x94,
+            MODIFIER_VALUE_CLIMB_ROPE_SPEED_PERCENTAGE = 0x95,
+            MODIFIER_VALUE_GROUND_FRICTION_PERCENTAGE = 0x96,
+            MODIFIER_VALUE_GROUND_ACCELERATION_PERCENTAGE = 0x97,
+            MODIFIER_VALUE_INVISIBILITY_LEVEL = 0x98,
+            MODIFIER_VALUE_CLOAK_FACTOR = 0x99,
+            MODIFIER_VALUE_CLOAK_DESAT_FACTOR = 0x9a,
+            MODIFIER_VALUE_PARTICLE_TINT_OVERRIDE = 0x9b,
+            MODIFIER_VALUE_PARTICLE_DESAT_OVERRIDE = 0x9c,
+            MODIFIER_VALUE_DIMENSION_TYPE = 0x9d,
+            MODIFIER_VALUE_GAMEPLAY_TIME_SCALE_ADDITIVE = 0x9e,
+            MODIFIER_VALUE_GAMEPLAY_TIME_SCALE_PERCENT = 0x9f,
+            MODIFIER_VALUE_ANIMATION_TIME_SCALE_ADDITIVE = 0xa0,
+            MODIFIER_VALUE_ANIMATION_TIME_SCALE_PERCENT = 0xa1,
+            // MPropertyDescription "If this is set higher than 1, we skip frame when animating for the entity"
+            MODIFIER_VALUE_ANIMATION_FRAME_SKIP_RATE = 0xa2,
+            MODIFIER_VALUE_MOVEMENT_TIME_SCALE_ADDITIVE = 0xa3,
+            MODIFIER_VALUE_MOVEMENT_TIME_SCALE_PERCENT = 0xa4,
+            MODIFIER_VALUE_PARTICLE_TIME_SCALE_ADDITIVE = 0xa5,
+            MODIFIER_VALUE_PARTICLE_TIME_SCALE_PERCENT = 0xa6,
+            MODIFIER_VALUE_STAMINA = 0xa7,
+            MODIFIER_VALUE_STAMINA_REGEN_PER_SECOND_ADDITIVE = 0xa8,
+            MODIFIER_VALUE_STAMINA_REGEN_PER_SECOND_PERCENTAGE = 0xa9,
+            MODIFIER_VALUE_WEAPON_POWER = 0xaa,
+            MODIFIER_VALUE_ARMOR_POWER = 0xab,
+            MODIFIER_VALUE_TECH_POWER = 0xac,
+            MODIFIER_VALUE_TECH_POWER_PERCENT = 0xad,
+            MODIFIER_VALUE_WEAPON_POWER_PERCENT = 0xae,
+            // MPropertyDescription "Change air control by this percentage"
+            MODIFIER_VALUE_AIR_CONTROL_PERCENT = 0xaf,
+            // MPropertyDescription "How much more potential air acceleration to add"
+            MODIFIER_VALUE_AIR_CONTROL_ACCEL_PERCENT = 0xb0,
+            // MPropertyDescription "Adjust ability-spawned projectile speeds"
+            MODIFIER_VALUE_ABILITY_PROJECTILE_SPEED_PERCENT = 0xb1,
+            // MPropertyDescription "Adjust bullet projectile speeds"
+            MODIFIER_VALUE_BONUS_BULLET_SPEED_PERCENT = 0xb2,
+            MODIFIER_VALUE_BASE_BULLET_SPEED_OVERRIDE = 0xb3,
+            // MPropertyDescription "called when a bullet is shot.  Return the name of a sound to play"
+            MODIFIER_VALUE_BULLET_SHOOT_SOUND = 0xb4,
+            // MPropertyDescription "called when a bullet is shot.  Return the name of a sound to play for friendlies"
+            MODIFIER_VALUE_BULLET_SHOOT_SOUND_FRIENDLY = 0xb5,
+            // MPropertyDescription "called when a bullet is shot.  Return the name of a sound to play for enemies"
+            MODIFIER_VALUE_BULLET_SHOOT_SOUND_ENEMY = 0xb6,
+            // MPropertyDescription "Whiz Replacement sound"
+            MODIFIER_VALUE_BULLET_SHOOT_SOUND_WHIZ = 0xb7,
+            // MPropertyDescription "Whiz Left to right replacement sound"
+            MODIFIER_VALUE_BULLET_SHOOT_SOUND_WHIZ_LEFT_TO_RIGHT = 0xb8,
+            // MPropertyDescription "Whiz Right to left replacement"
+            MODIFIER_VALUE_BULLET_SHOOT_SOUND_WHIZ_RIGHT_TO_LEFT = 0xb9,
+            // MPropertyDescription "called when a player fires their gun. Takes the first string returned as a tracer replacement"
+            MODIFIER_VALUE_TRACER_REPLACEMENT = 0xba,
+            // MPropertyDescription "called when a tracer for a gun is created on the client.  Return the name of a tracer to have it show up on top of the regular tracer"
+            MODIFIER_VALUE_TRACER_ADDITIONAL = 0xbb,
             // MPropertySuppressEnumerator
-            MODIFIER_VALUE_CAMERA_TARGET_OVERRIDE = 0xb2,
+            // MPropertyDescription "override owner's camera target with this entity"
+            MODIFIER_VALUE_CAMERA_TARGET_OVERRIDE = 0xbc,
             // MPropertySuppressEnumerator
-            MODIFIER_VALUE_VISUAL_ORIGIN_OVERRIDE = 0xb3,
-            MODIFIER_VALUE_SPECTATING_SPEED_OVERRIDE = 0xb4,
-            // MPropertyFriendlyName "NonPlayerBonusWeaponPower"
-            MODIFIER_NON_PLAYER_BONUS_BASE_DAMAGE_PERCENT = 0xb5,
-            MODIFIER_VALUE_AIR_DRAG = 0xb6,
-            MODIFIER_VALUE_FALLING_DRAG = 0xb7,
-            MODIFIER_VALUE_TECH_DAMAGE_TAKEN_HEALS_ATTACKER = 0xb8,
-            MODIFIER_VALUE_BULLET_DAMAGE_TAKEN_HEALS_ATTACKER = 0xb9,
-            // MPropertyFriendlyName "AbilityLifestealPercentHero"
-            MODIFIER_VALUE_TECH_LIFESTEAL = 0xba,
-            // MPropertyFriendlyName "BulletLifestealPercent"
-            MODIFIER_VALUE_BULLET_LIFESTEAL = 0xbb,
-            MODIFIER_VALUE_OVERRIDE_BULLET_ATTACKER = 0xbc,
-            MODIFIER_VALUE_OVERRIDE_MELEE_HIT_SOUND = 0xbd,
-            MODIFIER_VALUE_OVERRIDE_MELEE_MISS_SOUND = 0xbe,
-            // MPropertyFriendlyName "ImbuedBonusDamage"
-            MODIFIER_VALUE_IMBUED_BONUS_DAMAGE = 0xbf,
-            // MPropertyFriendlyName "ImbuedBonusDuration"
-            MODIFIER_VALUE_IMBUED_BONUS_DURATION = 0xc0,
-            // MPropertyFriendlyName "IntraBurstShotCycleTimeOverride"
-            MODIFIER_VALUE_INTRA_BURST_SHOT_CYCLE_TIME_OVERRIDE = 0xc1,
-            // MPropertyFriendlyName "BonusBurstShotPercent"
-            MODIFIER_VALUE_BONUS_BURST_SHOT_PERCENT = 0xc2,
-            // MPropertyFriendlyName "BonusBurstShotConstant"
-            MODIFIER_VALUE_BONUS_BURST_SHOT_CONSTANT = 0xc3,
-            // MPropertyFriendlyName "SpinUpRateOverride"
-            MODIFIER_VALUE_SPIN_UP_RATE_OVERRIDE = 0xc4,
-            // MPropertyFriendlyName "SpinUpDecayOverride"
-            MODIFIER_VALUE_SPIN_UP_DECAY_OVERRIDE = 0xc5,
-            // MPropertyFriendlyName "SpinUpMaxCycleTimeOverride"
-            MODIFIER_VALUE_SPIN_UP_MAX_CYCLE_TIME_OVERRIDE = 0xc6,
-            // MPropertyFriendlyName "SpinUpMaxBurstFireCooldownOverride"
-            MODIFIER_VALUE_SPIN_UP_MAX_BURST_FIRE_COOLDOWN_OVERRIDE = 0xc7,
-            MODIFIER_VALUE_SPIN_UP_SOUND_OVERRIDE = 0xc8,
-            MODIFIER_VALUE_SPIN_DOWN_SOUND_OVERRIDE = 0xc9,
-            MODIFIER_VALUE_SPIN_LOOP_SOUND_OVERRIDE = 0xca,
-            // MPropertyFriendlyName "BonusChannelTimePercentage"
-            MODIFIER_VALUE_BONUS_CHANNEL_TIME_PERCENTAGE = 0xcb,
-            MODIFIER_VALUE_ABILITY_RESOURCE_MAX_ADDITIVE = 0xcc,
-            MODIFIER_VALUE_ABILITY_RESOURCE_REGEN_PER_SECOND_ADDITIVE = 0xcd,
-            MODIFIER_VALUE_ABILITY_RESOURCE_REGEN_PER_SECOND_PERCENTAGE = 0xce,
-            MODIFIER_VALUE_PENDING_INCOMING_DAMAGE = 0xcf,
-            MODIFIER_VALUE_PENDING_INCOMING_HEAL = 0xd0,
-            MODIFIER_VALUE_CAMERA_WOBBLE_INTENSITY = 0xd1,
-            MODIFIER_VALUE_CAMERA_WOBBLE_SPEED = 0xd2,
-            MODIFIER_VALUE_RESPAWN_TIME_ADDITIVE = 0xd3,
-            MODIFIER_VALUE_RESPAWN_RAMP_TIME_REDUCTION_PERCENT = 0xd4,
-            MODIFIER_VALUE_BOON_COUNT = 0xd5,
-            MODIFIER_VALUE_FOOTSTEP_ADDITIONAL = 0xd6,
-            MODIFIER_VALUE_FOOTSTEP_OVERRIDE = 0xd7,
-            MODIFIER_VALUE_MODEL_SCALE = 0xd8,
-            MODIFIER_VALUE_MODEL_CHANGE = 0xd9,
-            MODIFIER_VALUE_HERO_BULLET_LIFESTEAL_EFFECTIVENESS = 0xda,
-            MODIFIER_VALUE_HERO_SPIRIT_LIFESTEAL_EFFECTIVENESS = 0xdb,
-            MODIFIER_VALUE_PARRY_FX_OVERRIDE = 0xdc,
-            MODIFIER_VALUE_CAMERA_ENTITY_OVERRIDE = 0xdd,
-            MODIFIER_VALUE_VISION_RADIUS = 0xde,
-            MODIFIER_VALUE_MINIMAP_POSITION_OVERRIDE = 0xdf,
+            // MPropertyDescription "An offset to apply to the root bone of the entity"
+            MODIFIER_VALUE_VISUAL_ORIGIN_OFFSET = 0xbd,
+            // MPropertyDescription "Set a value to override spectating Speed (So we don't have to network the whole ent we're spectating)"
+            MODIFIER_VALUE_SPECTATING_SPEED_OVERRIDE = 0xbe,
+            MODIFIER_NON_PLAYER_BONUS_BASE_DAMAGE_PERCENT = 0xbf,
+            MODIFIER_VALUE_AIR_DRAG = 0xc0,
+            MODIFIER_VALUE_FALLING_DRAG = 0xc1,
+            // MPropertyDescription "Ability damage against me heals the attacker"
+            MODIFIER_VALUE_TECH_DAMAGE_TAKEN_HEALS_ATTACKER = 0xc2,
+            // MPropertyDescription "Bullet damage against me heals the attacker"
+            MODIFIER_VALUE_BULLET_DAMAGE_TAKEN_HEALS_ATTACKER = 0xc3,
+            // MPropertyDescription "Tech damage I deal heals me"
+            MODIFIER_VALUE_TECH_LIFESTEAL = 0xc4,
+            // MPropertyDescription "Bullet damage I deal heals me"
+            MODIFIER_VALUE_BULLET_LIFESTEAL = 0xc5,
+            // MPropertyDescription "If set, overrides the attacker on all bullets fired"
+            MODIFIER_VALUE_OVERRIDE_BULLET_ATTACKER = 0xc6,
+            // MPropertyDescription "Override the sound we play when a melee attack hits an enemy"
+            MODIFIER_VALUE_OVERRIDE_MELEE_HIT_SOUND = 0xc7,
+            // MPropertyDescription "Override the sound we play when a melee attack hits nothing"
+            MODIFIER_VALUE_OVERRIDE_MELEE_MISS_SOUND = 0xc8,
+            MODIFIER_VALUE_IMBUED_BONUS_DAMAGE = 0xc9,
+            MODIFIER_VALUE_IMBUED_BONUS_DURATION = 0xca,
+            MODIFIER_VALUE_INTRA_BURST_SHOT_CYCLE_TIME_OVERRIDE = 0xcb,
+            MODIFIER_VALUE_BONUS_BURST_SHOT_PERCENT = 0xcc,
+            MODIFIER_VALUE_BONUS_BURST_SHOT_CONSTANT = 0xcd,
+            MODIFIER_VALUE_SPIN_UP_RATE_OVERRIDE = 0xce,
+            MODIFIER_VALUE_SPIN_UP_DECAY_OVERRIDE = 0xcf,
+            MODIFIER_VALUE_SPIN_UP_MAX_CYCLE_TIME_OVERRIDE = 0xd0,
+            MODIFIER_VALUE_SPIN_UP_MAX_BURST_FIRE_COOLDOWN_OVERRIDE = 0xd1,
+            MODIFIER_VALUE_SPIN_UP_SOUND_OVERRIDE = 0xd2,
+            MODIFIER_VALUE_SPIN_DOWN_SOUND_OVERRIDE = 0xd3,
+            MODIFIER_VALUE_SPIN_LOOP_SOUND_OVERRIDE = 0xd4,
+            MODIFIER_VALUE_BONUS_CHANNEL_TIME_PERCENTAGE = 0xd5,
+            MODIFIER_VALUE_ABILITY_RESOURCE_MAX_ADDITIVE = 0xd6,
+            MODIFIER_VALUE_ABILITY_RESOURCE_REGEN_PER_SECOND_ADDITIVE = 0xd7,
+            MODIFIER_VALUE_ABILITY_RESOURCE_REGEN_PER_SECOND_PERCENTAGE = 0xd8,
+            MODIFIER_VALUE_PENDING_INCOMING_DAMAGE = 0xd9,
+            MODIFIER_VALUE_PENDING_INCOMING_HEAL = 0xda,
+            MODIFIER_VALUE_CAMERA_WOBBLE_INTENSITY = 0xdb,
+            MODIFIER_VALUE_CAMERA_WOBBLE_SPEED = 0xdc,
+            MODIFIER_VALUE_RESPAWN_TIME_ADDITIVE = 0xdd,
+            MODIFIER_VALUE_RESPAWN_TIME_PERCENTAGE = 0xde,
+            MODIFIER_VALUE_RESPAWN_RAMP_TIME_REDUCTION_PERCENT = 0xdf,
+            MODIFIER_VALUE_BOON_COUNT = 0xe0,
+            MODIFIER_VALUE_FOOTSTEP_ADDITIONAL = 0xe1,
+            MODIFIER_VALUE_FOOTSTEP_OVERRIDE = 0xe2,
+            MODIFIER_VALUE_MODEL_SCALE = 0xe3,
+            MODIFIER_VALUE_MODEL_CHANGE = 0xe4,
+            // MPropertyDescription "Effectiveness stats are base stats on heroes that give them innate bonus or deficiencies when getting certain stats from the shop"
+            MODIFIER_VALUE_HERO_BULLET_LIFESTEAL_EFFECTIVENESS = 0xe5,
+            // MPropertyDescription "Effectiveness stats are base stats on heroes that give them innate bonus or deficiencies when getting certain stats from the shop"
+            MODIFIER_VALUE_HERO_SPIRIT_LIFESTEAL_EFFECTIVENESS = 0xe6,
+            // MPropertyDescription "Override Parry FX"
+            MODIFIER_VALUE_PARRY_FX_OVERRIDE = 0xe7,
+            // MPropertyDescription "Switch the view to a named entity in the map"
+            MODIFIER_VALUE_CAMERA_ENTITY_OVERRIDE = 0xe8,
+            MODIFIER_VALUE_VISION_RADIUS = 0xe9,
+            MODIFIER_VALUE_MINIMAP_POSITION_OVERRIDE = 0xea,
+            MODIFIER_VALUE_HERO_CARD_OVERRIDE = 0xeb,
+            // MPropertyDescription "When specified, self casts will be treated as casts on another target"
+            MODIFIER_VALUE_SELFCAST_TARGET_OVERRIDE = 0xec,
+            MODIFIER_VALUE_HERO_ATTACH_PARENT = 0xed,
+            MODIFIER_VALUE_DOORWAY_MINIMAP_RANGE = 0xee,
             // MPropertySuppressEnumerator
-            MODIFIER_VALUE_COUNT = 0xe0,
+            MODIFIER_VALUE_COUNT = 0xef,
             // MPropertySuppressEnumerator
             MODIFIER_VALUE_INVALID = 0xff,
         };

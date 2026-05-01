@@ -32,7 +32,8 @@ namespace source2sdk
             float m_flBlendTimeSeconds; // 0x24            
             source2sdk::animlib::NmIKBlendMode_t m_blendMode; // 0x28            
             bool m_bIsTargetInWorldSpace; // 0x29            
-            uint8_t _pad002a[0x6];
+            uint8_t _pad002a[0x2]; // 0x2a
+            float m_flReferencePoseTwistWeight; // 0x2c            
         };
         #pragma pack(pop)
         

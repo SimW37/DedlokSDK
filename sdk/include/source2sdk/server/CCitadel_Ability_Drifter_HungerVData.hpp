@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1820
+        // Size: 0x1938
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,24 +30,24 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_TargetModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_TargetModifier;
-            char m_TargetModifier[0x10]; // 0x1700            
+            char m_TargetModifier[0x10]; // 0x1818            
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x1710            
+            char m_BuffModifier[0x10]; // 0x1828            
             // m_InvisModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_InvisModifier;
-            char m_InvisModifier[0x10]; // 0x1720            
+            char m_InvisModifier[0x10]; // 0x1838            
             // metadata: MPropertyStartGroup "Visuals"
             // m_HungerTargetKillParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HungerTargetKillParticle;
-            char m_HungerTargetKillParticle[0xe0]; // 0x1730            
+            char m_HungerTargetKillParticle[0xe0]; // 0x1848            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strStackGainedSound; // 0x1810            
+            CSoundEventName m_strStackGainedSound; // 0x1928            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Drifter_HungerVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Drifter_HungerVData) == 0x1820);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Drifter_HungerVData) == 0x1938);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x560
+        // Size: 0x510
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CitadelTeam_t m_nTeam"
@@ -26,13 +26,13 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            std::int32_t m_nTeam; // 0x558            
-            uint8_t _pad055c[0x4];
+            std::int32_t m_nTeam; // 0x508            
+            uint8_t _pad050c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CTeamTrackedStatsEntity because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CTeamTrackedStatsEntity) == 0x560);
+        static_assert(sizeof(source2sdk::server::CTeamTrackedStatsEntity) == 0x510);
     };
 };

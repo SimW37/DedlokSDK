@@ -18,25 +18,25 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x130
+        // Size: 0x178
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Containment_Victim : public source2sdk::server::CCitadelModifier
         {
         public:
-            float m_flGoalHeight; // 0xc8            
-            float m_flFallRate; // 0xcc            
-            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0xd0            
-            source2sdk::client::ParticleIndex_t m_nFXIndexVictim; // 0xd4            
-            source2sdk::client::ParticleIndex_t m_nChainFxIndex; // 0xd8            
-            float m_flTetherRadius; // 0xdc            
-            Vector m_vecOrigin; // 0xe0            
-            uint8_t _pad00ec[0x44];
+            float m_flGoalHeight; // 0xd0            
+            float m_flFallRate; // 0xd4            
+            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0xd8            
+            source2sdk::client::ParticleIndex_t m_nFXIndexVictim; // 0xdc            
+            source2sdk::client::ParticleIndex_t m_nChainFxIndex; // 0xe0            
+            float m_flTetherRadius; // 0xe4            
+            Vector m_vecOrigin; // 0xe8            
+            uint8_t _pad00f4[0x84];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Containment_Victim because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Containment_Victim) == 0x130);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Containment_Victim) == 0x178);
     };
 };

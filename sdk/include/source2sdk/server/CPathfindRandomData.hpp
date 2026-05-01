@@ -22,7 +22,7 @@ namespace source2sdk
         class CPathfindRandomData
         {
         public:
-            Vector m_vCenter; // 0x0            
+            VectorWS m_vCenter; // 0x0            
             float m_flMinRadius; // 0xc            
             float m_flMaxRadius; // 0x10            
         };

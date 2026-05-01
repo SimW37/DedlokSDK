@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 64
+        // Enumerator count: 68
         // Alignment: 4
         // Size: 0x4
         enum class ECitadelAbilityOrders : std::uint32_t
@@ -78,10 +78,14 @@ namespace source2sdk
             ECitadelAbilityOrder_Invalid_NotEnoughAbilityResource = 0x39,
             ECitadelAbilityOrder_Invalid_NotEnoughHeadRoom = 0x3a,
             ECitadelAbilityOrder_Invalid_NoDamageToClear = 0x3b,
-            ECitadelAbilityOrder_Invalid_OtherDoorTooFar = 0x3c,
-            ECitadelAbilityOrder_Invalid_UnableToTeleport = 0x3d,
+            ECitadelAbilityOrder_Invalid_UnableToTeleport = 0x3c,
+            ECitadelAbilityOrder_Invalid_OtherDoorTooFar = 0x3d,
             ECitadelAbilityOrder_Invalid_DoorwayNotAllowed = 0x3e,
-            ECitadelAbilityOrder_Max = 0x3f,
+            ECitadelAbilityOrder_Invalid_PlacementBlocked = 0x3f,
+            ECitadelAbilityOrder_Invalid_ConsumeTarget = 0x40,
+            ECitadelAbilityOrder_Invalid_ParryDisabledUrnPickup = 0x41,
+            ECitadelAbilityOrder_Invalid_NoPosterSelected = 0x42,
+            ECitadelAbilityOrder_Max = 0x43,
         };
     };
 };

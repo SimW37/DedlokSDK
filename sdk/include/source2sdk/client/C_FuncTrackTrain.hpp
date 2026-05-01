@@ -17,21 +17,24 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9e0
+        // Size: 0x9b0
         // Has VTable
         #pragma pack(push, 1)
         class C_FuncTrackTrain : public source2sdk::client::C_BaseModelEntity
         {
         public:
-            std::int32_t m_nLongAxis; // 0x9d0            
-            float m_flRadius; // 0x9d4            
-            float m_flLineLength; // 0x9d8            
-            uint8_t _pad09dc[0x4];
+            // metadata: MNotSaved
+            std::int32_t m_nLongAxis; // 0x9a0            
+            // metadata: MNotSaved
+            float m_flRadius; // 0x9a4            
+            // metadata: MNotSaved
+            float m_flLineLength; // 0x9a8            
+            uint8_t _pad09ac[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_FuncTrackTrain because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_FuncTrackTrain) == 0x9e0);
+        static_assert(sizeof(source2sdk::client::C_FuncTrackTrain) == 0x9b0);
     };
 };

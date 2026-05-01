@@ -22,7 +22,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x970
+        // Size: 0x978
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -133,12 +133,16 @@ namespace source2sdk
             // metadata: MPropertyStartGroup
             // metadata: MPropertyDescription "When set, only exists for the team the pickup is on"
             bool m_bSameTeamOnly; // 0x96c            
-            uint8_t _pad096d[0x3];
+            uint8_t _pad096d[0x3]; // 0x96d
+            // metadata: MPropertyStartGroup "Outline"
+            float m_flOutlineRange; // 0x970            
+            // metadata: MPropertyColorPlusAlpha
+            Color m_OutlineColor; // 0x974            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_BreakablePropPickupVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_BreakablePropPickupVData) == 0x970);
+        static_assert(sizeof(source2sdk::client::CCitadel_BreakablePropPickupVData) == 0x978);
     };
 };

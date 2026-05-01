@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1860
+        // Size: 0x1978
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,37 +27,37 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_sIdolDropOffSound; // 0x17e0            
+            CSoundEventName m_sIdolDropOffSound; // 0x18f8            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DropoffTimerModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DropoffTimerModifier;
-            char m_DropoffTimerModifier[0x10]; // 0x17f0            
+            char m_DropoffTimerModifier[0x10]; // 0x1908            
             // m_HoldingIdolModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_HoldingIdolModifier;
-            char m_HoldingIdolModifier[0x10]; // 0x1800            
+            char m_HoldingIdolModifier[0x10]; // 0x1918            
             // m_Bonus01 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_Bonus01;
-            char m_Bonus01[0x10]; // 0x1810            
+            char m_Bonus01[0x10]; // 0x1928            
             // m_Bonus02 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_Bonus02;
-            char m_Bonus02[0x10]; // 0x1820            
+            char m_Bonus02[0x10]; // 0x1938            
             // m_NoPickupModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_NoPickupModifier;
-            char m_NoPickupModifier[0x10]; // 0x1830            
+            char m_NoPickupModifier[0x10]; // 0x1948            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flInstantGoldPercentage; // 0x1840            
-            std::int32_t m_iComebackBounty; // 0x1844            
-            float m_flCasterBonusPercent; // 0x1848            
-            float m_flRevealTime; // 0x184c            
-            float m_flDamageTickRate; // 0x1850            
-            float m_flMaxHealthDamage; // 0x1854            
-            float m_flTimeToDamage; // 0x1858            
-            float m_flNoPickupTime; // 0x185c            
+            float m_flInstantGoldPercentage; // 0x1958            
+            std::int32_t m_iComebackBounty; // 0x195c            
+            float m_flCasterBonusPercent; // 0x1960            
+            float m_flRevealTime; // 0x1964            
+            float m_flDamageTickRate; // 0x1968            
+            float m_flMaxHealthDamage; // 0x196c            
+            float m_flTimeToDamage; // 0x1970            
+            float m_flNoPickupTime; // 0x1974            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_GoldenIdolVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_GoldenIdolVData) == 0x1860);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_GoldenIdolVData) == 0x1978);
     };
 };

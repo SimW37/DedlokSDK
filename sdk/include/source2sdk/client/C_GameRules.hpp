@@ -29,6 +29,7 @@ namespace source2sdk
         {
         public:
             uint8_t _pad0000[0x8]; // 0x0
+            // metadata: MNotSaved
             source2sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x8            
             // metadata: MNetworkEnable
             std::int32_t m_nTotalPausedTicks; // 0x30            

@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x288
+        // Size: 0x448
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Bolo : public source2sdk::client::CCitadelModifier
         {
         public:
             source2sdk::client::ParticleIndex_t m_hRingEffect; // 0xc0            
-            uint8_t _pad00c4[0x1c4];
+            uint8_t _pad00c4[0x384];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Bolo because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Bolo) == 0x288);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Bolo) == 0x448);
     };
 };

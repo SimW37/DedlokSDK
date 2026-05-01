@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x150
+        // Size: 0x1d8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Thumper_3 : public source2sdk::server::CCitadelModifier
         {
         public:
-            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0xc8            
-            float m_flVisibilityTime; // 0xcc            
-            uint8_t _pad00d0[0x80];
+            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0xd0            
+            float m_flVisibilityTime; // 0xd4            
+            uint8_t _pad00d8[0x100];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Thumper_3 because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Thumper_3) == 0x150);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Thumper_3) == 0x1d8);
     };
 };

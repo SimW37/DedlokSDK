@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 43
+        // Enumerator count: 47
         // Alignment: 4
         // Size: 0x4
         enum class ECurrencySource : std::uint32_t
@@ -41,26 +41,30 @@ namespace source2sdk
             EAssassinatePlayerKill = 0x13,
             EItemTrophyCollector = 0x14,
             EItemCultistSacrifice = 0x15,
-            EOrbPlayer = 0x16,
-            EOrbDeny = 0x17,
-            EOrbLaneTrooper = 0x18,
-            EOrbNeutralTrooper = 0x19,
-            EOrbTier1TrooperBoss = 0x1a,
-            EOrbTier2TrooperBoss = 0x1b,
-            EOrbBaseGuardians = 0x1c,
-            EOrbShrines = 0x1d,
-            EOrbTier3TrooperBoss = 0x1e,
-            EOrbBaseSentry = 0x1f,
-            EOrbDeployable = 0x20,
-            EOrbTrophyKill = 0x21,
-            EOrbTreasureChest = 0x22,
-            EOrbSiegeTrooper = 0x23,
-            EOrbSpawner = 0x24,
-            ENeutralWorldPickup = 0x25,
-            EBreakablePickup = 0x26,
-            EPlayerKillComeback = 0x27,
-            ETeamBonus = 0x28,
-            ECurrencySourceCount = 0x29,
+            EItemGooseEgg = 0x16,
+            EOrbPlayer = 0x17,
+            EOrbDeny = 0x18,
+            EOrbLaneTrooper = 0x19,
+            EOrbNeutralTrooper = 0x1a,
+            EOrbTier1TrooperBoss = 0x1b,
+            EOrbTier2TrooperBoss = 0x1c,
+            EOrbBaseGuardians = 0x1d,
+            EOrbShrines = 0x1e,
+            EOrbTier3TrooperBoss = 0x1f,
+            EOrbBaseSentry = 0x20,
+            EOrbDeployable = 0x21,
+            EOrbTrophyKill = 0x22,
+            EOrbTreasureChest = 0x23,
+            EOrbSiegeTrooper = 0x24,
+            EOrbSpawner = 0x25,
+            ENeutralWorldPickup = 0x26,
+            EBreakablePickup = 0x27,
+            EPlayerKillComeback = 0x28,
+            ETeamBonus = 0x29,
+            EItemDraftRerollUsed = 0x2a,
+            EItemEnhacementUsed = 0x2b,
+            EStreetBrawlRoundReset = 0x2c,
+            ECurrencySourceCount = 0x2d,
         };
     };
 };

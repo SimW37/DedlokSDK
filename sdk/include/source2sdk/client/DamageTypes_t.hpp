@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 28
+        // Enumerator count: 27
         // Alignment: 4
         // Size: 0x4
         enum class DamageTypes_t : std::uint32_t
@@ -31,23 +31,22 @@ namespace source2sdk
             DMG_SONIC = 0x200,
             DMG_ENERGYBEAM = 0x400,
             DMG_BUCKSHOT = 0x800,
+            DMG_BLAST_SURFACE = 0x1000,
+            DMG_DISSOLVE = 0x2000,
             DMG_DROWN = 0x4000,
             DMG_POISON = 0x8000,
             DMG_RADIATION = 0x10000,
             DMG_DROWNRECOVER = 0x20000,
             DMG_ACID = 0x40000,
-            DMG_PHYSGUN = 0x100000,
-            DMG_DISSOLVE = 0x200000,
-            DMG_BLAST_SURFACE = 0x400000,
             // MPropertySuppressEnumerator
             // MEnumeratorIsNotAFlag
-            DMG_LASTGENERICFLAG = 0x400000,
-            DMG_HEADSHOT = 0x800000,
-            DMG_CRIT = 0x1000000,
-            DMG_BUFFED = 0x2000000,
-            DMG_DOT = 0x4000000,
-            DMG_GROUND_AURA = 0x8000000,
-            DMG_LETHAL = 0x10000000,
+            DMG_LASTGENERICFLAG = 0x40000,
+            DMG_HEADSHOT = 0x80000,
+            DMG_CRIT = 0x100000,
+            DMG_BUFFED = 0x200000,
+            DMG_DOT = 0x400000,
+            DMG_GROUND_AURA = 0x800000,
+            DMG_LETHAL = 0x1000000,
         };
     };
 };

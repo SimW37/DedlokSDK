@@ -14,10 +14,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0x1a90
+        // Size: 0x1b30
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iVaultState"
@@ -26,13 +26,13 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            std::int32_t m_iVaultState; // 0x1a80            
-            uint8_t _pad1a84[0xc];
+            std::int32_t m_iVaultState; // 0x1810            
+            uint8_t _pad1814[0x31c];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_Neutral_SinnersSacrifice because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_Neutral_SinnersSacrifice) == 0x1a90);
+        static_assert(sizeof(source2sdk::server::CNPC_Neutral_SinnersSacrifice) == 0x1b30);
     };
 };

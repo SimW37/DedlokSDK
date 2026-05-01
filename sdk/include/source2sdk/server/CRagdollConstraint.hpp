@@ -17,27 +17,27 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x588
+        // Size: 0x528
         // Has VTable
         #pragma pack(push, 1)
         class CRagdollConstraint : public source2sdk::server::CPhysConstraint
         {
         public:
-            float m_xmin; // 0x560            
-            float m_xmax; // 0x564            
-            float m_ymin; // 0x568            
-            float m_ymax; // 0x56c            
-            float m_zmin; // 0x570            
-            float m_zmax; // 0x574            
-            float m_xfriction; // 0x578            
-            float m_yfriction; // 0x57c            
-            float m_zfriction; // 0x580            
-            uint8_t _pad0584[0x4];
+            float m_xmin; // 0x500            
+            float m_xmax; // 0x504            
+            float m_ymin; // 0x508            
+            float m_ymax; // 0x50c            
+            float m_zmin; // 0x510            
+            float m_zmax; // 0x514            
+            float m_xfriction; // 0x518            
+            float m_yfriction; // 0x51c            
+            float m_zfriction; // 0x520            
+            uint8_t _pad0524[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CRagdollConstraint because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CRagdollConstraint) == 0x588);
+        static_assert(sizeof(source2sdk::server::CRagdollConstraint) == 0x528);
     };
 };

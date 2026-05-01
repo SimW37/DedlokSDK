@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/client/C_CitadelBaseAbility.hpp"
+#include "source2sdk/entity2/GameTime_t.hpp"
 namespace source2sdk
 {
     namespace client
@@ -24,31 +25,34 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf18
+        // Size: 0x13a0
         // Has VTable
         // 
-        // static metadata: MNetworkVarNames "EHANDLE m_hDummyForCamera"
+        // static metadata: MNetworkVarNames "EHANDLE m_hTarget"
+        // static metadata: MNetworkVarNames "GameTime_t m_tTeleportCompletedTime"
+        // static metadata: MNetworkVarNames "VectorWS m_vTargetPosition"
+        // static metadata: MNetworkVarNames "QAngle m_vTargetAngles"
         #pragma pack(push, 1)
         class CCitadel_Ability_Mirage_Teleport : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d90[0x14]; // 0xd90
+            uint8_t _pad11d8[0x18]; // 0x11d8
             // metadata: MNetworkEnable
-            // m_hDummyForCamera has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CHandle<source2sdk::client::C_BaseEntity> m_hDummyForCamera;
-            char m_hDummyForCamera[0x4]; // 0xda4            
             // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hTarget;
-            char m_hTarget[0x4]; // 0xda8            
-            Vector m_vCastStartPosition; // 0xdac            
-            Vector m_vTargetPosition; // 0xdb8            
-            QAngle m_vTargetAngles; // 0xdc4            
-            uint8_t _pad0dd0[0x148];
+            char m_hTarget[0x4]; // 0x11f0            
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTime_t m_tTeleportCompletedTime; // 0x11f4            
+            // metadata: MNetworkEnable
+            VectorWS m_vTargetPosition; // 0x11f8            
+            // metadata: MNetworkEnable
+            QAngle m_vTargetAngles; // 0x1204            
+            uint8_t _pad1210[0x190];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Mirage_Teleport because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Mirage_Teleport) == 0xf18);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Mirage_Teleport) == 0x13a0);
     };
 };

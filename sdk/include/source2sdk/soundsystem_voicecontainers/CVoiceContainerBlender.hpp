@@ -28,8 +28,8 @@ namespace source2sdk
         class CVoiceContainerBlender : public source2sdk::soundsystem_voicecontainers::CVoiceContainerBase
         {
         public:
-            source2sdk::soundsystem_voicecontainers::CSoundContainerReference m_firstSound; // 0xb8            
-            source2sdk::soundsystem_voicecontainers::CSoundContainerReference m_secondSound; // 0xd0            
+            source2sdk::soundsystem_voicecontainers::CSoundContainerReference m_firstSound; // 0xa8            
+            source2sdk::soundsystem_voicecontainers::CSoundContainerReference m_secondSound; // 0xc8            
             float m_flBlendFactor; // 0xe8            
             uint8_t _pad00ec[0x4];
         };

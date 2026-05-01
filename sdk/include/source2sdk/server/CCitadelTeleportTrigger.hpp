@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa88
+        // Size: 0x988
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
@@ -32,21 +32,23 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
             // metadata: MNetworkAlias "CCitadelMinimapComponent"
             // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x9e8            
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x8e8            
             // metadata: MNetworkEnable
-            Vector m_vExitOrigin; // 0xa00            
-            uint8_t _pad0a0c[0x44]; // 0xa0c
-            CUtlSymbolLarge m_strExitPoint; // 0xa50            
-            source2sdk::entity2::CEntityIOOutput m_OnTeleport; // 0xa58            
-            CUtlSymbolLarge m_strPropModel; // 0xa80            
+            Vector m_vExitOrigin; // 0x908            
+            uint8_t _pad0914[0x44]; // 0x914
+            CUtlSymbolLarge m_strExitPoint; // 0x958            
+            source2sdk::entity2::CEntityIOOutput m_OnTeleport; // 0x960            
+            CUtlSymbolLarge m_strPropModel; // 0x978            
+            float m_flTeleportDelay; // 0x980            
+            uint8_t _pad0984[0x4];
             
             // Datamap fields:
-            // void m_pEntExit; // 0xa10
+            // void m_pEntExit; // 0x918
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelTeleportTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelTeleportTrigger) == 0xa88);
+        static_assert(sizeof(source2sdk::server::CCitadelTeleportTrigger) == 0x988);
     };
 };

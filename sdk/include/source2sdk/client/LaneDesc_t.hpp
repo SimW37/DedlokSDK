@@ -27,8 +27,8 @@ namespace source2sdk
             CUtlString m_strCSSClass; // 0x8            
             Color m_Color; // 0x10            
             Color m_MinimapZiplineColorOverride; // 0x14            
-            Color m_Color4Lanes; // 0x18            
-            Color m_ObjectiveColor; // 0x1c            
+            Color m_ObjectiveColor; // 0x18            
+            uint8_t _pad001c[0x4];
         };
         #pragma pack(pop)
         
@@ -36,8 +36,7 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::LaneDesc_t, m_strCSSClass) == 0x8);
         static_assert(offsetof(source2sdk::client::LaneDesc_t, m_Color) == 0x10);
         static_assert(offsetof(source2sdk::client::LaneDesc_t, m_MinimapZiplineColorOverride) == 0x14);
-        static_assert(offsetof(source2sdk::client::LaneDesc_t, m_Color4Lanes) == 0x18);
-        static_assert(offsetof(source2sdk::client::LaneDesc_t, m_ObjectiveColor) == 0x1c);
+        static_assert(offsetof(source2sdk::client::LaneDesc_t, m_ObjectiveColor) == 0x18);
         
         static_assert(sizeof(source2sdk::client::LaneDesc_t) == 0x20);
     };

@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x8f0
+        // Size: 0x860
         // Has VTable
         #pragma pack(push, 1)
         class CDoormanBombProjectile : public source2sdk::server::CCitadelProjectile
         {
         public:
-            uint8_t _pad08e8[0x8];
+            uint8_t _pad0858[0x8];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CDoormanBombProjectile) == 0x8f0);
+        static_assert(sizeof(source2sdk::server::CDoormanBombProjectile) == 0x860);
     };
 };

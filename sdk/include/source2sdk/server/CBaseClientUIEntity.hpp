@@ -3,7 +3,6 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/entity2/CEntityIOOutput.hpp"
 #include "source2sdk/server/CBaseModelEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
@@ -18,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9b8
+        // Size: 0x8d8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bEnabled"
@@ -30,24 +29,44 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            bool m_bEnabled; // 0x808            
-            uint8_t _pad0809[0x7]; // 0x809
+            bool m_bEnabled; // 0x778            
+            uint8_t _pad0779[0x7]; // 0x779
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_DialogXMLName; // 0x810            
+            CUtlSymbolLarge m_DialogXMLName; // 0x780            
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_PanelClassName; // 0x818            
+            CUtlSymbolLarge m_PanelClassName; // 0x788            
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_PanelID; // 0x820            
-            source2sdk::entity2::CEntityIOOutput m_CustomOutput0; // 0x828            
-            source2sdk::entity2::CEntityIOOutput m_CustomOutput1; // 0x850            
-            source2sdk::entity2::CEntityIOOutput m_CustomOutput2; // 0x878            
-            source2sdk::entity2::CEntityIOOutput m_CustomOutput3; // 0x8a0            
-            source2sdk::entity2::CEntityIOOutput m_CustomOutput4; // 0x8c8            
-            source2sdk::entity2::CEntityIOOutput m_CustomOutput5; // 0x8f0            
-            source2sdk::entity2::CEntityIOOutput m_CustomOutput6; // 0x918            
-            source2sdk::entity2::CEntityIOOutput m_CustomOutput7; // 0x940            
-            source2sdk::entity2::CEntityIOOutput m_CustomOutput8; // 0x968            
-            source2sdk::entity2::CEntityIOOutput m_CustomOutput9; // 0x990            
+            CUtlSymbolLarge m_PanelID; // 0x790            
+            // m_CustomOutput0 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<CUtlString> m_CustomOutput0;
+            char m_CustomOutput0[0x20]; // 0x798            
+            // m_CustomOutput1 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<CUtlString> m_CustomOutput1;
+            char m_CustomOutput1[0x20]; // 0x7b8            
+            // m_CustomOutput2 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<CUtlString> m_CustomOutput2;
+            char m_CustomOutput2[0x20]; // 0x7d8            
+            // m_CustomOutput3 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<CUtlString> m_CustomOutput3;
+            char m_CustomOutput3[0x20]; // 0x7f8            
+            // m_CustomOutput4 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<CUtlString> m_CustomOutput4;
+            char m_CustomOutput4[0x20]; // 0x818            
+            // m_CustomOutput5 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<CUtlString> m_CustomOutput5;
+            char m_CustomOutput5[0x20]; // 0x838            
+            // m_CustomOutput6 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<CUtlString> m_CustomOutput6;
+            char m_CustomOutput6[0x20]; // 0x858            
+            // m_CustomOutput7 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<CUtlString> m_CustomOutput7;
+            char m_CustomOutput7[0x20]; // 0x878            
+            // m_CustomOutput8 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<CUtlString> m_CustomOutput8;
+            char m_CustomOutput8[0x20]; // 0x898            
+            // m_CustomOutput9 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<CUtlString> m_CustomOutput9;
+            char m_CustomOutput9[0x20]; // 0x8b8            
             
             // Datamap fields:
             // void InputEnable; // 0x0
@@ -57,6 +76,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CBaseClientUIEntity because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CBaseClientUIEntity) == 0x9b8);
+        static_assert(sizeof(source2sdk::server::CBaseClientUIEntity) == 0x8d8);
     };
 };

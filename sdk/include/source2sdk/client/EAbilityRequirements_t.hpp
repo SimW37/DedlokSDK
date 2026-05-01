@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 4
+        // Enumerator count: 5
         // Alignment: 2
         // Size: 0x2
         enum class EAbilityRequirements_t : std::uint16_t
@@ -26,6 +26,8 @@ namespace source2sdk
             ERequirementChannelledAbility = 0x2,
             // MPropertyFriendlyName "Requires Non-Charges ULT"
             ERequirementNonChargedULT = 0x4,
+            // MPropertyFriendlyName "Requires Street Brawl"
+            ERequirementStreetBrawl = 0x8,
         };
     };
 };

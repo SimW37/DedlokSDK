@@ -11,7 +11,7 @@ namespace source2sdk
 {
     namespace server
     {
-        struct CBaseAnimGraph;
+        struct CBaseModelEntity;
     };
 };
 namespace source2sdk
@@ -41,7 +41,7 @@ namespace source2sdk
         {
         public:
             // m_hOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CHandle<source2sdk::server::CBaseAnimGraph> m_hOwner;
+            // CHandle<source2sdk::server::CBaseModelEntity> m_hOwner;
             char m_hOwner[0x4]; // 0x8            
             // m_hScriptedSequence has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CScriptedSequence> m_hScriptedSequence;

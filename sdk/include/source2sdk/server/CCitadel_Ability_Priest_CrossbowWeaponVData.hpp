@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1a10
+        // Size: 0x1e30
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,25 +28,30 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Gameplay"
-            CPiecewiseCurve m_SpreadPenaltyScaleCurve; // 0x1758            
+            CPiecewiseCurve m_SpreadPenaltyScaleCurve; // 0x19c8            
             // metadata: MPropertyStartGroup "Visuals"
             // m_LaserSightParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserSightParticle;
-            char m_LaserSightParticle[0xe0]; // 0x1798            
+            char m_LaserSightParticle[0xe0]; // 0x1a08            
             // m_LaserSightParticleOwnerOnly has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserSightParticleOwnerOnly;
-            char m_LaserSightParticleOwnerOnly[0xe0]; // 0x1878            
+            char m_LaserSightParticleOwnerOnly[0xe0]; // 0x1ae8            
+            // m_BlessedTracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_BlessedTracerParticle;
+            char m_BlessedTracerParticle[0xe0]; // 0x1bc8            
+            // m_CrossbowMuzzleFlashParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CrossbowMuzzleFlashParticle;
+            char m_CrossbowMuzzleFlashParticle[0xe0]; // 0x1ca8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strBoltSound; // 0x1958            
-            CSoundEventName m_strReadySound; // 0x1968            
-            CSoundEventName m_strShootDelaySound; // 0x1978            
+            CSoundEventName m_strHitSound; // 0x1d88            
+            CSoundEventName m_strHitHeadshotSound; // 0x1d98            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceBolt; // 0x1988            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceBolt; // 0x1da8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Priest_CrossbowWeaponVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_CrossbowWeaponVData) == 0x1a10);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_CrossbowWeaponVData) == 0x1e30);
     };
 };

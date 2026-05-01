@@ -28,11 +28,11 @@ namespace source2sdk
             uint8_t _pad0000[0x8]; // 0x0
             // metadata: MNetworkEnable
             // metadata: MNetworkSerializer "modifier_handle"
+            // metadata: MNotSaved
             std::uint64_t m_hStableHandle; // 0x8            
             uint8_t _pad0010[0x8];
             
             // Datamap fields:
-            // void CModifierHandleBase; // 0x0
             // void m_hRuntimeListHandle; // 0x10
         };
         #pragma pack(pop)

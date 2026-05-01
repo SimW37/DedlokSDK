@@ -17,20 +17,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xca0
+        // Size: 0xca8
         // Has VTable
         // 
+        // static metadata: MNetworkIncludeByName "m_vecViewOffset"
         // static metadata: MNetworkIncludeByName "m_iHealth"
         // static metadata: MNetworkIncludeByName "m_iMaxHealth"
         #pragma pack(push, 1)
         class CCitadelAnimatingModelEntity : public source2sdk::client::CBaseAnimGraph
         {
         public:
-            uint8_t _pad0c98[0x8];
+            uint8_t _pad0ca0[0x8];
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadelAnimatingModelEntity) == 0xca0);
+        static_assert(sizeof(source2sdk::client::CCitadelAnimatingModelEntity) == 0xca8);
     };
 };

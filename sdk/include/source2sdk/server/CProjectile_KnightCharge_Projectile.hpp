@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc18
+        // Size: 0xe50
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
@@ -30,13 +30,13 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
             // metadata: MNetworkAlias "CCitadelMinimapComponent"
             // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x8e8            
-            uint8_t _pad0900[0x318];
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x858            
+            uint8_t _pad0878[0x5d8];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CProjectile_KnightCharge_Projectile because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CProjectile_KnightCharge_Projectile) == 0xc18);
+        static_assert(sizeof(source2sdk::server::CProjectile_KnightCharge_Projectile) == 0xe50);
     };
 };

@@ -28,38 +28,40 @@ namespace source2sdk
         class CPlayer_MovementServices : public source2sdk::client::CPlayerPawnComponent
         {
         public:
-            std::int32_t m_nImpulse; // 0x40            
-            uint8_t _pad0044[0x4]; // 0x44
-            source2sdk::client::CInButtonState m_nButtons; // 0x48            
-            std::uint64_t m_nQueuedButtonDownMask; // 0x68            
-            std::uint64_t m_nQueuedButtonChangeMask; // 0x70            
-            std::uint64_t m_nButtonDoublePressed; // 0x78            
-            std::uint32_t m_pButtonPressedCmdNumber[64]; // 0x80            
-            std::uint32_t m_nLastCommandNumberProcessed; // 0x180            
-            uint8_t _pad0184[0x4]; // 0x184
+            std::int32_t m_nImpulse; // 0x48            
+            uint8_t _pad004c[0x4]; // 0x4c
+            // metadata: MNotSaved
+            source2sdk::client::CInButtonState m_nButtons; // 0x50            
+            std::uint64_t m_nQueuedButtonDownMask; // 0x70            
+            std::uint64_t m_nQueuedButtonChangeMask; // 0x78            
+            std::uint64_t m_nButtonDoublePressed; // 0x80            
+            // metadata: MNotSaved
+            std::uint32_t m_pButtonPressedCmdNumber[64]; // 0x88            
+            // metadata: MNotSaved
+            std::uint32_t m_nLastCommandNumberProcessed; // 0x188            
+            uint8_t _pad018c[0x4]; // 0x18c
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            std::uint64_t m_nToggleButtonDownMask; // 0x188            
-            uint8_t _pad0190[0x8]; // 0x190
+            std::uint64_t m_nToggleButtonDownMask; // 0x190            
+            uint8_t _pad0198[0x8]; // 0x198
             // metadata: MNetworkEnable
             // metadata: MNetworkBitCount "12"
             // metadata: MNetworkMinValue "0,000000"
             // metadata: MNetworkMaxValue "2048,000000"
             // metadata: MNetworkEncodeFlags "1"
-            float m_flMaxspeed; // 0x198            
+            float m_flMaxspeed; // 0x1a0            
             // metadata: MNetworkEnable
-            float m_arrForceSubtickMoveWhen[4]; // 0x19c            
-            float m_flForwardMove; // 0x1ac            
-            float m_flLeftMove; // 0x1b0            
-            float m_flUpMove; // 0x1b4            
-            Vector m_vecLastMovementImpulses; // 0x1b8            
-            uint8_t _pad01c4[0x5c]; // 0x1c4
-            QAngle m_vecLastFinishTickViewAngles; // 0x220            
-            QAngle m_vecOldViewAngles; // 0x22c            
-            uint8_t _pad0238[0x8];
+            float m_arrForceSubtickMoveWhen[4]; // 0x1a4            
+            float m_flForwardMove; // 0x1b4            
+            float m_flLeftMove; // 0x1b8            
+            float m_flUpMove; // 0x1bc            
+            Vector m_vecLastMovementImpulses; // 0x1c0            
+            uint8_t _pad01cc[0x5c]; // 0x1cc
+            QAngle m_vecOldViewAngles; // 0x228            
+            uint8_t _pad0234[0xc];
             
             // Datamap fields:
-            // void m_pButtonPressedCmdNumber; // 0x80
+            // void m_pButtonPressedCmdNumber; // 0x88
         };
         #pragma pack(pop)
         

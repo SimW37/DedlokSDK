@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x188
+        // Size: 0x248
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Mirage_FireScarabs_HealthLoss : public source2sdk::client::CCitadelModifier
         {
         public:
             bool m_bCanProc; // 0xc0            
-            uint8_t _pad00c1[0xc7];
+            uint8_t _pad00c1[0x187];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Mirage_FireScarabs_HealthLoss because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CModifier_Mirage_FireScarabs_HealthLoss) == 0x188);
+        static_assert(sizeof(source2sdk::client::CModifier_Mirage_FireScarabs_HealthLoss) == 0x248);
     };
 };

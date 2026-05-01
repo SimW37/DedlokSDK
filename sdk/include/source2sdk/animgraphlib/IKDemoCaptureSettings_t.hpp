@@ -20,7 +20,6 @@ namespace source2sdk
         // Size: 0x28
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: M_LEGACY_OptInToSchemaPropertyDomain
         #pragma pack(push, 1)
         struct IKDemoCaptureSettings_t
         {

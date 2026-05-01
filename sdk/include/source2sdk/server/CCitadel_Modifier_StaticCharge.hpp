@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x150
+        // Size: 0x1d8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_StaticCharge : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c8[0x80]; // 0xc8
-            float m_flRadius; // 0x148            
-            uint8_t _pad014c[0x4];
+            uint8_t _pad00d0[0x100]; // 0xd0
+            float m_flRadius; // 0x1d0            
+            uint8_t _pad01d4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_StaticCharge because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_StaticCharge) == 0x150);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_StaticCharge) == 0x1d8);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xe50
+        // Size: 0xe20
         // Has VTable
         #pragma pack(push, 1)
         class C_ItemParachute : public source2sdk::client::C_PhysicsProp
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::C_ItemParachute) == 0xe50);
+        static_assert(sizeof(source2sdk::client::C_ItemParachute) == 0xe20);
     };
 };

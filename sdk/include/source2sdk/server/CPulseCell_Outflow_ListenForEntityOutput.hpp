@@ -23,21 +23,16 @@ namespace source2sdk
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: MCellForDomain "ServerEntity"
-        // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "Zתבר"
-        // static metadata: MPropertyFriendlyName "Listen for Entity Output"
+        // static metadata: MPropertyFriendlyName "Wait for Entity Output"
         // static metadata: MPropertyDescription "Waits for the entity to fire a specific output. By default, this listens once, but can be configured to listen until canceled."
         // static metadata: MPulseEditorSubHeaderText
-        // static metadata: MPulseEditorHeaderIcon "tools/images/pulse_editor/eio_output_link.png"
+        // static metadata: MPulseEditorHeaderIcon "tools/images/pulse_editor/inflow_wait.png"
         #pragma pack(push, 1)
         class CPulseCell_Outflow_ListenForEntityOutput : public source2sdk::pulse_runtime_lib::CPulseCell_BaseYieldingInflow
         {
         public:
-            // metadata: MPulseCellOutflow_IsDefault
             source2sdk::pulse_runtime_lib::SignatureOutflow_Resume m_OnFired; // 0x48            
             source2sdk::pulse_runtime_lib::CPulse_ResumePoint m_OnCanceled; // 0x90            
-            // metadata: MPulseDocCustomAttr
             CGlobalSymbol m_strEntityOutput; // 0xd8            
             // metadata: MPropertyDescription "Optional output value to match if applicable. Leave empty to match any possible value for the output param."
             CUtlString m_strEntityOutputParam; // 0xe0            

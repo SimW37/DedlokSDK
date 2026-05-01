@@ -15,22 +15,23 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xb98
+        // Size: 0xb30
         // Has VTable
         #pragma pack(push, 1)
         class CScriptItem : public source2sdk::server::CItem
         {
         public:
-            source2sdk::client::MoveType_t m_MoveTypeOverride; // 0xb90            
-            uint8_t _pad0b91[0x7];
+            // metadata: MNotSaved
+            source2sdk::client::MoveType_t m_MoveTypeOverride; // 0xb20            
+            uint8_t _pad0b21[0xf];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CScriptItem because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CScriptItem) == 0xb98);
+        static_assert(sizeof(source2sdk::server::CScriptItem) == 0xb30);
     };
 };

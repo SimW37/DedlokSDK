@@ -3,7 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/client/CBaseAnimGraphAnimGraphController.hpp"
+#include "source2sdk/client/CAnimGraphControllerBase.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -14,20 +14,21 @@ namespace source2sdk
 {
     namespace client
     {
-        // Registered alignment: unknown
+        // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x368
+        // Size: 0x90
         // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
         #pragma pack(push, 1)
-        class CCitadelBaseAbilityGraphController : public source2sdk::client::CBaseAnimGraphAnimGraphController
+        class CCitadelBaseAbilityGraphController : public source2sdk::client::CAnimGraphControllerBase
         {
         public:
-            // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadelBaseAbilityGraphController) == 0x368);
+        static_assert(sizeof(source2sdk::client::CCitadelBaseAbilityGraphController) == 0x90);
     };
 };

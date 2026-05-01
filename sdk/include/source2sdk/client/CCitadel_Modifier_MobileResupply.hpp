@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x200
+        // Size: 0x340
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_MobileResupply : public source2sdk::client::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x140];
+            uint8_t _pad00c0[0x280];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_MobileResupply) == 0x200);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_MobileResupply) == 0x340);
     };
 };

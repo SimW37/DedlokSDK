@@ -22,7 +22,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0xa0
+        // Size: 0xb8
         // 
         // static metadata: MVDataRoot
         // static metadata: MGetKV3ClassDefaults
@@ -86,7 +86,11 @@ namespace source2sdk
             bool m_bBindable; // 0x98            
             // metadata: MPropertyDescription "Should this message be bindable on the Ping Wheel?"
             bool m_bPingWheelBindable; // 0x99            
-            uint8_t _pad009a[0x6];
+            uint8_t _pad009a[0x6]; // 0x9a
+            // metadata: MPropertyDescription "Chat text messages that trigger the concept associated with this message"
+            // m_vecChatTextTriggers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<CUtlString> m_vecChatTextTriggers;
+            char m_vecChatTextTriggers[0x18]; // 0xa0            
         };
         #pragma pack(pop)
         
@@ -107,7 +111,8 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::PingWheelMessage_t, m_vecRespondsToConcepts) == 0x80);
         static_assert(offsetof(source2sdk::client::PingWheelMessage_t, m_bBindable) == 0x98);
         static_assert(offsetof(source2sdk::client::PingWheelMessage_t, m_bPingWheelBindable) == 0x99);
+        static_assert(offsetof(source2sdk::client::PingWheelMessage_t, m_vecChatTextTriggers) == 0xa0);
         
-        static_assert(sizeof(source2sdk::client::PingWheelMessage_t) == 0xa0);
+        static_assert(sizeof(source2sdk::client::PingWheelMessage_t) == 0xb8);
     };
 };

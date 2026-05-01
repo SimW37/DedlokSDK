@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 10
+        // Enumerator count: 11
         // Alignment: 2
         // Size: 0x2
         enum class ECitadelWeaponAttributes : std::uint16_t
@@ -38,6 +38,8 @@ namespace source2sdk
             EWeaponAttribute_HeavyHitter = 0x80,
             // MPropertyFriendlyName "Projectile"
             EWeaponAttribute_Projectile = 0x100,
+            // MPropertyFriendlyName "Bouncy"
+            EWeaponAttribute_Bouncy = 0x200,
         };
     };
 };

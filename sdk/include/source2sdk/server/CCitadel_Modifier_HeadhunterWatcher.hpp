@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x2a8
+        // Size: 0x430
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_HeadhunterWatcher : public source2sdk::server::CCitadel_Modifier_HeadshotBoosterWatcher
         {
         public:
-            uint8_t _pad01e8[0xc0];
+            uint8_t _pad02b0[0x180];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_HeadhunterWatcher) == 0x2a8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_HeadhunterWatcher) == 0x430);
     };
 };

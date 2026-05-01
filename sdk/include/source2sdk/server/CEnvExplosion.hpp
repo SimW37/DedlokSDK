@@ -26,45 +26,45 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x860
+        // Size: 0x7d0
         // Has VTable
         #pragma pack(push, 1)
         class CEnvExplosion : public source2sdk::server::CModelPointEntity
         {
         public:
-            std::int32_t m_iMagnitude; // 0x808            
-            float m_flPlayerDamage; // 0x80c            
-            std::int32_t m_iRadiusOverride; // 0x810            
-            float m_flInnerRadius; // 0x814            
-            float m_flDamageForce; // 0x818            
+            std::int32_t m_iMagnitude; // 0x778            
+            float m_flPlayerDamage; // 0x77c            
+            std::int32_t m_iRadiusOverride; // 0x780            
+            float m_flInnerRadius; // 0x784            
+            float m_flDamageForce; // 0x788            
             // m_hInflictor has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hInflictor;
-            char m_hInflictor[0x4]; // 0x81c            
-            source2sdk::client::DamageTypes_t m_iCustomDamageType; // 0x820            
-            bool m_bCreateDebris; // 0x824            
-            uint8_t _pad0825[0xb]; // 0x825
-            CUtlSymbolLarge m_iszCustomEffectName; // 0x830            
-            CUtlSymbolLarge m_iszCustomSoundName; // 0x838            
-            bool m_bSuppressParticleImpulse; // 0x840            
-            uint8_t _pad0841[0x3]; // 0x841
-            source2sdk::client::Class_T m_iClassIgnore; // 0x844            
-            source2sdk::client::Class_T m_iClassIgnore2; // 0x848            
-            uint8_t _pad084c[0x4]; // 0x84c
-            CUtlSymbolLarge m_iszEntityIgnoreName; // 0x850            
+            char m_hInflictor[0x4]; // 0x78c            
+            source2sdk::client::DamageTypes_t m_iCustomDamageType; // 0x790            
+            bool m_bCreateDebris; // 0x794            
+            uint8_t _pad0795[0xb]; // 0x795
+            CUtlSymbolLarge m_iszCustomEffectName; // 0x7a0            
+            CUtlSymbolLarge m_iszCustomSoundName; // 0x7a8            
+            bool m_bSuppressParticleImpulse; // 0x7b0            
+            uint8_t _pad07b1[0x3]; // 0x7b1
+            source2sdk::client::Class_T m_iClassIgnore; // 0x7b4            
+            source2sdk::client::Class_T m_iClassIgnore2; // 0x7b8            
+            uint8_t _pad07bc[0x4]; // 0x7bc
+            CUtlSymbolLarge m_iszEntityIgnoreName; // 0x7c0            
             // m_hEntityIgnore has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hEntityIgnore;
-            char m_hEntityIgnore[0x4]; // 0x858            
-            uint8_t _pad085c[0x4];
+            char m_hEntityIgnore[0x4]; // 0x7c8            
+            uint8_t _pad07cc[0x4];
             
             // Datamap fields:
             // CUtlSymbolLarge explosion_type; // 0x7fffffff
-            // uint32_t m_nExplosionType; // 0x828
+            // CUtlSymbolLarge m_sExplosionType; // 0x798
             // void InputExplode; // 0x0
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CEnvExplosion because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CEnvExplosion) == 0x860);
+        static_assert(sizeof(source2sdk::server::CEnvExplosion) == 0x7d0);
     };
 };

@@ -17,23 +17,23 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x888
+        // Size: 0x7f8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelZapTrigger : public source2sdk::server::CFuncBrush
         {
         public:
-            float m_flShootAfterEnteringTime; // 0x828            
-            float m_flWaitForNextShootTime; // 0x82c            
-            float m_flPercentMaxHealthDamage; // 0x830            
-            uint8_t _pad0834[0x4]; // 0x834
-            CUtlSymbolLarge m_strShootOrigin; // 0x838            
-            uint8_t _pad0840[0x48];
+            float m_flShootAfterEnteringTime; // 0x798            
+            float m_flWaitForNextShootTime; // 0x79c            
+            float m_flPercentMaxHealthDamage; // 0x7a0            
+            uint8_t _pad07a4[0x4]; // 0x7a4
+            CUtlSymbolLarge m_strShootOrigin; // 0x7a8            
+            uint8_t _pad07b0[0x48];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelZapTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelZapTrigger) == 0x888);
+        static_assert(sizeof(source2sdk::server::CCitadelZapTrigger) == 0x7f8);
     };
 };

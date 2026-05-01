@@ -32,22 +32,25 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x910
+        // Size: 0x880
         // Has VTable
         #pragma pack(push, 1)
         class CFuncTrackChange : public source2sdk::server::CFuncPlatRot
         {
         public:
-            source2sdk::server::CPathTrack* m_trackTop; // 0x8d0            
-            source2sdk::server::CPathTrack* m_trackBottom; // 0x8d8            
-            source2sdk::server::CFuncTrackTrain* m_train; // 0x8e0            
-            CUtlSymbolLarge m_trackTopName; // 0x8e8            
-            CUtlSymbolLarge m_trackBottomName; // 0x8f0            
-            CUtlSymbolLarge m_trainName; // 0x8f8            
-            source2sdk::server::TRAIN_CODE m_code; // 0x900            
-            std::int32_t m_targetState; // 0x904            
-            std::int32_t m_use; // 0x908            
-            uint8_t _pad090c[0x4];
+            // metadata: MClassPtr
+            source2sdk::server::CPathTrack* m_trackTop; // 0x840            
+            // metadata: MClassPtr
+            source2sdk::server::CPathTrack* m_trackBottom; // 0x848            
+            // metadata: MClassPtr
+            source2sdk::server::CFuncTrackTrain* m_train; // 0x850            
+            CUtlSymbolLarge m_trackTopName; // 0x858            
+            CUtlSymbolLarge m_trackBottomName; // 0x860            
+            CUtlSymbolLarge m_trainName; // 0x868            
+            source2sdk::server::TRAIN_CODE m_code; // 0x870            
+            std::int32_t m_targetState; // 0x874            
+            std::int32_t m_use; // 0x878            
+            uint8_t _pad087c[0x4];
             
             // Datamap fields:
             // void CFuncTrackChangeFind; // 0x0
@@ -56,6 +59,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CFuncTrackChange because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFuncTrackChange) == 0x910);
+        static_assert(sizeof(source2sdk::server::CFuncTrackChange) == 0x880);
     };
 };

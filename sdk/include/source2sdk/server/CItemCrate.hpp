@@ -3,8 +3,16 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/EObjectivePositions_t.hpp"
 #include "source2sdk/server/CCitadelMinimapComponent.hpp"
 #include "source2sdk/server/CPhysicsProp.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -18,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xe60
+        // Size: 0xd90
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_iHealth"
@@ -33,14 +41,18 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
             // metadata: MNetworkAlias "CCitadelMinimapComponent"
             // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xe30            
-            uint8_t _pad0e48[0x14]; // 0xe48
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xd50            
+            // m_hSpawner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_hSpawner;
+            char m_hSpawner[0x4]; // 0xd70            
+            uint8_t _pad0d74[0x8]; // 0xd74
+            source2sdk::client::EObjectivePositions_t m_eObjectivePosition; // 0xd7c            
+            uint8_t _pad0d80[0x4]; // 0xd80
             // metadata: MNetworkEnable
-            std::int32_t m_eLootType; // 0xe5c            
+            std::int32_t m_eLootType; // 0xd84            
+            uint8_t _pad0d88[0x8];
             
             // Datamap fields:
-            // CHandle< CBaseEntity > m_hSpawner; // 0xe48
-            // int32_t m_eObjectivePosition; // 0xe54
             // void InputAttachedToParachute; // 0x0
             // void InputDetachedFromParachute; // 0x0
         };
@@ -48,6 +60,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CItemCrate because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CItemCrate) == 0xe60);
+        static_assert(sizeof(source2sdk::server::CItemCrate) == 0xd90);
     };
 };

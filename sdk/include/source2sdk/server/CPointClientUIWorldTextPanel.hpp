@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc10
+        // Size: 0xb30
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "char m_messageText"
@@ -26,7 +26,7 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            char m_messageText[512]; // 0xa10            
+            char m_messageText[512]; // 0x930            
             
             // Datamap fields:
             // void InputToggle; // 0x0
@@ -37,6 +37,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPointClientUIWorldTextPanel because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPointClientUIWorldTextPanel) == 0xc10);
+        static_assert(sizeof(source2sdk::server::CPointClientUIWorldTextPanel) == 0xb30);
     };
 };

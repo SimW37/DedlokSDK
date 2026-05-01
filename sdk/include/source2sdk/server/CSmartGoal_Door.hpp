@@ -41,7 +41,7 @@ namespace source2sdk
             // m_hModifierInteractionIKLock has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CModifierHandleTyped<source2sdk::server::CCitadelModifier> m_hModifierInteractionIKLock;
             char m_hModifierInteractionIKLock[0x18]; // 0x18            
-            Vector m_vGoalPostDoor; // 0x30            
+            VectorWS m_vGoalPostDoor; // 0x30            
             source2sdk::client::MoveType_t m_PrevMoveType; // 0x3c            
             uint8_t _pad003d[0x3]; // 0x3d
             float m_flDoorSpeed; // 0x40            

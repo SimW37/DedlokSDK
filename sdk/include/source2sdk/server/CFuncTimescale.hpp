@@ -17,18 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x508
+        // Size: 0x4b8
         // Has VTable
         #pragma pack(push, 1)
         class CFuncTimescale : public source2sdk::server::CBaseEntity
         {
         public:
-            float m_flDesiredTimescale; // 0x4f0            
-            float m_flAcceleration; // 0x4f4            
-            float m_flMinBlendRate; // 0x4f8            
-            float m_flBlendDeltaMultiplier; // 0x4fc            
-            bool m_isStarted; // 0x500            
-            uint8_t _pad0501[0x7];
+            float m_flDesiredTimescale; // 0x4a0            
+            float m_flAcceleration; // 0x4a4            
+            float m_flMinBlendRate; // 0x4a8            
+            float m_flBlendDeltaMultiplier; // 0x4ac            
+            // metadata: MNotSaved
+            bool m_isStarted; // 0x4b0            
+            uint8_t _pad04b1[0x7];
             
             // Datamap fields:
             // void InputStart; // 0x0
@@ -39,6 +40,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CFuncTimescale because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFuncTimescale) == 0x508);
+        static_assert(sizeof(source2sdk::server::CFuncTimescale) == 0x4b8);
     };
 };

@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x220
+        // Size: 0x4e8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c8[0x10]; // 0xc8
-            source2sdk::entity2::GameTime_t m_flLastProcTime; // 0xd8            
-            uint8_t _pad00dc[0x144];
+            uint8_t _pad00d0[0x10]; // 0xd0
+            source2sdk::entity2::GameTime_t m_flLastProcTime; // 0xe0            
+            uint8_t _pad00e4[0x404];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim) == 0x220);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Mirage_SandPhantom_Passive_Victim) == 0x4e8);
     };
 };

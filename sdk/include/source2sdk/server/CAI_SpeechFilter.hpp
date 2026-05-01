@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x508
+        // Size: 0x4b8
         // Has VTable
         #pragma pack(push, 1)
         class CAI_SpeechFilter : public source2sdk::server::CBaseEntity
         {
         public:
-            uint8_t _pad04f0[0x8]; // 0x4f0
-            CUtlSymbolLarge m_iszSubject; // 0x4f8            
-            float m_flIdleModifier; // 0x500            
-            bool m_bNeverSayHello; // 0x504            
-            bool m_bDisabled; // 0x505            
-            uint8_t _pad0506[0x2];
+            uint8_t _pad04a0[0x8]; // 0x4a0
+            CUtlSymbolLarge m_iszSubject; // 0x4a8            
+            float m_flIdleModifier; // 0x4b0            
+            bool m_bNeverSayHello; // 0x4b4            
+            bool m_bDisabled; // 0x4b5            
+            uint8_t _pad04b6[0x2];
             
             // Datamap fields:
             // void InputEnable; // 0x0
@@ -39,6 +39,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CAI_SpeechFilter because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAI_SpeechFilter) == 0x508);
+        static_assert(sizeof(source2sdk::server::CAI_SpeechFilter) == 0x4b8);
     };
 };

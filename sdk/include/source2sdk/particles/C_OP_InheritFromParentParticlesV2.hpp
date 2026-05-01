@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x5f0
+        // Size: 0x638
         // Has VTable
         // 
         // static metadata: MParticleMinVersion "9"
@@ -30,27 +30,27 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyFriendlyName "scale"
-            source2sdk::particleslib::CPerParticleFloatInput m_flScale; // 0x1c0            
+            source2sdk::particleslib::CPerParticleFloatInput m_flScale; // 0x1d8            
             // metadata: MPropertyFriendlyName "inherited field"
             // metadata: MPropertyAttributeChoiceName "particlefield"
-            source2sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x320            
-            uint8_t _pad0324[0x4]; // 0x324
+            source2sdk::particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x348            
+            uint8_t _pad034c[0x4]; // 0x34c
             // metadata: MPropertyFriendlyName "particle increment amount"
-            source2sdk::particleslib::CPerParticleFloatInput m_nIncrement; // 0x328            
+            source2sdk::particleslib::CPerParticleFloatInput m_nIncrement; // 0x350            
             // metadata: MPropertyFriendlyName "random parent particle distribution"
-            bool m_bRandomDistribution; // 0x488            
+            bool m_bRandomDistribution; // 0x4c0            
             // metadata: MPropertyFriendlyName "start at last parent particle in reverse"
-            bool m_bReverse; // 0x489            
-            uint8_t _pad048a[0x2]; // 0x48a
+            bool m_bReverse; // 0x4c1            
+            uint8_t _pad04c2[0x2]; // 0x4c2
             // metadata: MPropertyFriendlyName "behavior if parent particle dies"
-            source2sdk::particles::MissingParentInheritBehavior_t m_nMissingParentBehavior; // 0x48c            
+            source2sdk::particles::MissingParentInheritBehavior_t m_nMissingParentBehavior; // 0x4c4            
             // metadata: MPropertyFriendlyName "Interpolation"
-            source2sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x490            
+            source2sdk::particleslib::CPerParticleFloatInput m_flInterpolation; // 0x4c8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_OP_InheritFromParentParticlesV2 because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::particles::C_OP_InheritFromParentParticlesV2) == 0x5f0);
+        static_assert(sizeof(source2sdk::particles::C_OP_InheritFromParentParticlesV2) == 0x638);
     };
 };

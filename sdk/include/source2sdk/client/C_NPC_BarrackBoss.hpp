@@ -1,0 +1,55 @@
+#pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
+#include "source2sdk/client/CCitadelPlayerClipComponent.hpp"
+#include "source2sdk/client/C_AI_CitadelNPC.hpp"
+#include "source2sdk/entity2/GameTime_t.hpp"
+
+// /////////////////////////////////////////////////////////////
+// Module: client
+// Created using source2gen - github.com/neverlosecc/source2gen
+// /////////////////////////////////////////////////////////////
+
+namespace source2sdk
+{
+    namespace client
+    {
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1c00
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "CCitadelPlayerClipComponent::Storage_t m_CCitadelPlayerClipComponent"
+        // static metadata: MNetworkVarNames "int m_iLane"
+        // static metadata: MNetworkVarNames "GameTime_t m_flFadeOutStart"
+        // static metadata: MNetworkVarNames "GameTime_t m_flFadeOutEnd"
+        #pragma pack(push, 1)
+        class C_NPC_BarrackBoss : public source2sdk::client::C_AI_CitadelNPC
+        {
+        public:
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "CCitadelPlayerClipComponent"
+            // metadata: MNetworkAlias "CCitadelPlayerClipComponent"
+            // metadata: MNetworkTypeAlias "CCitadelPlayerClipComponent"
+            source2sdk::client::CCitadelPlayerClipComponent m_CCitadelPlayerClipComponent; // 0x1bc8            
+            uint8_t _pad1be8[0xc]; // 0x1be8
+            // metadata: MNetworkEnable
+            // metadata: MNotSaved
+            std::int32_t m_iLane; // 0x1bf4            
+            // metadata: MNetworkEnable
+            // metadata: MNotSaved
+            source2sdk::entity2::GameTime_t m_flFadeOutStart; // 0x1bf8            
+            // metadata: MNetworkEnable
+            // metadata: MNotSaved
+            source2sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x1bfc            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in C_NPC_BarrackBoss because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::C_NPC_BarrackBoss) == 0x1c00);
+    };
+};

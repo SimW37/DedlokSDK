@@ -33,6 +33,7 @@ namespace source2sdk
             std::int16_t odds; // 0x10            
             std::int16_t flags; // 0x12            
             uint8_t _pad0014[0x4]; // 0x14
+            // metadata: MNotSaved
             source2sdk::client::ResponseFollowup* m_pFollowup; // 0x18            
             
             // Datamap fields:

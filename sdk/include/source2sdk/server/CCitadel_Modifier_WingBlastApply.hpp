@@ -17,22 +17,22 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1b0
+        // Size: 0x278
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_WingBlastApply : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c8[0xc0]; // 0xc8
-            Vector m_vStart; // 0x188            
-            Vector m_vEnd; // 0x194            
-            Vector m_vPush; // 0x1a0            
-            uint8_t _pad01ac[0x4];
+            uint8_t _pad00d0[0x180]; // 0xd0
+            Vector m_vStart; // 0x250            
+            Vector m_vEnd; // 0x25c            
+            Vector m_vPush; // 0x268            
+            uint8_t _pad0274[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_WingBlastApply because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_WingBlastApply) == 0x1b0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_WingBlastApply) == 0x278);
     };
 };

@@ -18,23 +18,23 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb98
+        // Size: 0xae8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelHideoutTeleportTrigger : public source2sdk::client::C_BaseTrigger
         {
         public:
-            uint8_t _pad0b10[0x40]; // 0xb10
-            CUtlSymbolLarge m_strDestLandmark; // 0xb50            
-            CUtlSymbolLarge m_strDestMap; // 0xb58            
-            CUtlSymbolLarge m_strDestLocString; // 0xb60            
-            source2sdk::entity2::CEntityIOOutput m_OnHideoutTeleport; // 0xb68            
-            CUtlSymbolLarge m_strPropModel; // 0xb90            
+            uint8_t _pad0a70[0x40]; // 0xa70
+            CUtlSymbolLarge m_strDestLandmark; // 0xab0            
+            CUtlSymbolLarge m_strDestMap; // 0xab8            
+            CUtlSymbolLarge m_strDestLocString; // 0xac0            
+            source2sdk::entity2::CEntityIOOutput m_OnHideoutTeleport; // 0xac8            
+            CUtlSymbolLarge m_strPropModel; // 0xae0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelHideoutTeleportTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelHideoutTeleportTrigger) == 0xb98);
+        static_assert(sizeof(source2sdk::client::CCitadelHideoutTeleportTrigger) == 0xae8);
     };
 };

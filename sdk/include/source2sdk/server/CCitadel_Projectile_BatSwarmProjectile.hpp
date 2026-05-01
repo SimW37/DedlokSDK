@@ -18,22 +18,22 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x990
+        // Size: 0x940
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Projectile_BatSwarmProjectile : public source2sdk::server::CCitadelTrackedProjectile
         {
         public:
-            uint8_t _pad0918[0x4c]; // 0x918
-            Vector m_vecTargetVelocity; // 0x964            
-            Vector m_vecLastVelocity; // 0x970            
-            source2sdk::entity2::GameTime_t m_SpawnTime; // 0x97c            
-            uint8_t _pad0980[0x10];
+            uint8_t _pad0888[0x8c]; // 0x888
+            Vector m_vecTargetVelocity; // 0x914            
+            Vector m_vecLastVelocity; // 0x920            
+            source2sdk::entity2::GameTime_t m_SpawnTime; // 0x92c            
+            uint8_t _pad0930[0x10];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Projectile_BatSwarmProjectile because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_BatSwarmProjectile) == 0x990);
+        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_BatSwarmProjectile) == 0x940);
     };
 };

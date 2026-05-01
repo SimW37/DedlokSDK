@@ -58,9 +58,11 @@ namespace source2sdk
             Color colorSecondary; // 0x18            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "FogController"
+            // metadata: MNotSaved
             Color colorPrimaryLerpTo; // 0x1c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "FogController"
+            // metadata: MNotSaved
             Color colorSecondaryLerpTo; // 0x20            
             // metadata: MNetworkEnable
             float start; // 0x24            
@@ -77,21 +79,27 @@ namespace source2sdk
             float HDRColorScale; // 0x38            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "FogController"
+            // metadata: MNotSaved
             float skyboxFogFactor; // 0x3c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "FogController"
+            // metadata: MNotSaved
             float skyboxFogFactorLerpTo; // 0x40            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "FogController"
+            // metadata: MNotSaved
             float startLerpTo; // 0x44            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "FogController"
+            // metadata: MNotSaved
             float endLerpTo; // 0x48            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "FogController"
+            // metadata: MNotSaved
             float maxdensityLerpTo; // 0x4c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "FogController"
+            // metadata: MNotSaved
             source2sdk::entity2::GameTime_t lerptime; // 0x50            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "FogController"
@@ -109,7 +117,9 @@ namespace source2sdk
             bool enable; // 0x64            
             // metadata: MNetworkEnable
             bool blend; // 0x65            
+            // metadata: MNotSaved
             bool m_bPadding2; // 0x66            
+            // metadata: MNotSaved
             bool m_bPadding; // 0x67            
         };
         #pragma pack(pop)

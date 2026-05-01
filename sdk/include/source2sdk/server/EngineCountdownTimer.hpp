@@ -31,6 +31,7 @@ namespace source2sdk
             // metadata: MNetworkEnable
             float m_duration; // 0x8            
             // metadata: MNetworkEnable
+            // metadata: MKV3TransferSaveOpsForField
             float m_timestamp; // 0xc            
             // metadata: MNetworkEnable
             float m_timescale; // 0x10            

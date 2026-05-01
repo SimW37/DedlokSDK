@@ -19,20 +19,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x98
+        // Size: 0xa0
         // Has VTable
         #pragma pack(push, 1)
         class CAI_AnimGraphServices : public source2sdk::client::CAI_Component
         {
         public:
-            source2sdk::server::HandshakeInfo_t m_pHandshakeInfo[2]; // 0x40            
-            float m_flMinFaceTolerance; // 0x70            
-            source2sdk::server::LastIncomingHit_t m_LastIncomingHit; // 0x74            
+            source2sdk::server::HandshakeInfo_t m_pHandshakeInfo[2]; // 0x50            
+            source2sdk::server::LastIncomingHit_t m_LastIncomingHit; // 0x80            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAI_AnimGraphServices because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAI_AnimGraphServices) == 0x98);
+        static_assert(sizeof(source2sdk::server::CAI_AnimGraphServices) == 0xa0);
     };
 };

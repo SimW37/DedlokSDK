@@ -26,14 +26,13 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x16c8
+        // Size: 0x1bc8
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_iMaxHealth"
         // static metadata: MNetworkIncludeByName "m_iHealth"
         // static metadata: MNetworkIncludeByName "m_iTeam"
         // static metadata: MNetworkIncludeByName "m_vecViewOffset"
-        // static metadata: MNetworkExcludeByName "m_blinktoggle"
         // static metadata: MNetworkExcludeByUserGroup "m_flCycle"
         // static metadata: MNetworkExcludeByName "m_flEncodedController"
         // static metadata: MNetworkExcludeByName "m_flPoseParameter"
@@ -47,39 +46,43 @@ namespace source2sdk
         class C_AI_CitadelNPC : public source2sdk::client::C_AI_BaseNPC
         {
         public:
-            uint8_t _pad0f38[0x34]; // 0xf38
+            uint8_t _pad0ef8[0x34]; // 0xef8
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnEyeBeamActiveChanged"
-            bool m_bBeamActive; // 0xf6c            
-            uint8_t _pad0f6d[0x3]; // 0xf6d
+            bool m_bBeamActive; // 0xf2c            
+            uint8_t _pad0f2d[0x3]; // 0xf2d
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord"
             // metadata: MNetworkChangeCallback "OnEyeBeamTargetChanged"
-            Vector m_vEyeBeamTarget; // 0xf70            
-            uint8_t _pad0f7c[0x4a4]; // 0xf7c
-            std::int32_t m_nPlayerTeamEvent; // 0x1420            
-            uint8_t _pad1424[0x6c]; // 0x1424
+            VectorWS m_vEyeBeamTarget; // 0xf30            
+            uint8_t _pad0f3c[0x9a4]; // 0xf3c
+            // metadata: MNotSaved
+            std::int32_t m_nPlayerTeamEvent; // 0x18e0            
+            uint8_t _pad18e4[0x8c]; // 0x18e4
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             // m_vecWeakPoints has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_UtlVectorEmbeddedNetworkVar<source2sdk::client::WeakPoint_t> m_vecWeakPoints;
-            char m_vecWeakPoints[0x68]; // 0x1490            
+            char m_vecWeakPoints[0x68]; // 0x1970            
             // metadata: MNetworkEnable
-            bool m_bMinion; // 0x14f8            
-            uint8_t _pad14f9[0x3]; // 0x14f9
+            // metadata: MNotSaved
+            bool m_bMinion; // 0x19d8            
+            uint8_t _pad19d9[0x3]; // 0x19d9
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             // m_hLookTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hLookTarget;
-            char m_hLookTarget[0x4]; // 0x14fc            
+            char m_hLookTarget[0x4]; // 0x19dc            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
             // metadata: MNetworkAlias "CCitadelAbilityComponent"
             // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
-            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x1500            
+            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x19e0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_AI_CitadelNPC because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_AI_CitadelNPC) == 0x16c8);
+        static_assert(sizeof(source2sdk::client::C_AI_CitadelNPC) == 0x1bc8);
     };
 };

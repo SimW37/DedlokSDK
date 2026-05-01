@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x188
+        // Size: 0x248
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Upgrade_OverdriveClip_Reload : public source2sdk::client::CCitadelModifier
         {
         public:
             std::int32_t m_nStartingClipSize; // 0xc0            
-            uint8_t _pad00c4[0xc4];
+            uint8_t _pad00c4[0x184];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Upgrade_OverdriveClip_Reload because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Upgrade_OverdriveClip_Reload) == 0x188);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Upgrade_OverdriveClip_Reload) == 0x248);
     };
 };

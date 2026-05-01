@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xc90
+        // Size: 0xc50
         // Has VTable
         #pragma pack(push, 1)
         class CUnitStatusOverlayOld : public source2sdk::client::CUnitStatusOverlay
         {
         public:
-            uint8_t _pad0c30[0x40]; // 0xc30
-            float m_flUIScale; // 0xc70            
-            uint8_t _pad0c74[0x1c];
+            uint8_t _pad0bf0[0x40]; // 0xbf0
+            float m_flUIScale; // 0xc30            
+            uint8_t _pad0c34[0x1c];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CUnitStatusOverlayOld because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CUnitStatusOverlayOld) == 0xc90);
+        static_assert(sizeof(source2sdk::client::CUnitStatusOverlayOld) == 0xc50);
     };
 };

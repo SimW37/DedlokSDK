@@ -15,10 +15,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xac8
+        // Size: 0xa90
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_tNextDropTime"
@@ -27,17 +27,17 @@ namespace source2sdk
         class CCitadel_PickupItemSpawner : public source2sdk::server::CBaseAnimGraph
         {
         public:
-            uint8_t _pad0ab8[0x8]; // 0xab8
+            uint8_t _pad0a80[0x8]; // 0xa80
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_tNextDropTime; // 0xac0            
+            source2sdk::entity2::GameTime_t m_tNextDropTime; // 0xa88            
             // metadata: MNetworkEnable
-            bool m_bPowerupActive; // 0xac4            
-            uint8_t _pad0ac5[0x3];
+            bool m_bPowerupActive; // 0xa8c            
+            uint8_t _pad0a8d[0x3];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_PickupItemSpawner because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_PickupItemSpawner) == 0xac8);
+        static_assert(sizeof(source2sdk::server::CCitadel_PickupItemSpawner) == 0xa90);
     };
 };

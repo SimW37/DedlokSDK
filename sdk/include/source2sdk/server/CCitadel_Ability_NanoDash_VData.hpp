@@ -5,6 +5,7 @@
 #include <cstdint>
 #include "source2sdk/client/CitadelCameraOperationsSequence_t.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
+#include "source2sdk/server/CCitadelModifier.hpp"
 #include "source2sdk/server/CitadelAbilityVData.hpp"
 
 // /////////////////////////////////////////////////////////////
@@ -19,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1b38
+        // Size: 0x1ca8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,27 +31,35 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_DashImpactEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashImpactEffect;
-            char m_DashImpactEffect[0xe0]; // 0x1700            
+            char m_DashImpactEffect[0xe0]; // 0x1818            
             // m_DashSwingEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashSwingEffect;
-            char m_DashSwingEffect[0xe0]; // 0x17e0            
+            char m_DashSwingEffect[0xe0]; // 0x18f8            
             // m_DashLineEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DashLineEffect;
-            char m_DashLineEffect[0xe0]; // 0x18c0            
+            char m_DashLineEffect[0xe0]; // 0x19d8            
             // m_SlashSwingEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SlashSwingEffect;
-            char m_SlashSwingEffect[0xe0]; // 0x19a0            
+            char m_SlashSwingEffect[0xe0]; // 0x1ab8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strDashStart; // 0x1a80            
-            CSoundEventName m_strSlashStart; // 0x1a90            
-            CSoundEventName m_strSlashImpactSound; // 0x1aa0            
+            CSoundEventName m_strDashStart; // 0x1b98            
+            CSoundEventName m_strSlashStart; // 0x1ba8            
+            CSoundEventName m_strSlashImpactSound; // 0x1bb8            
+            // metadata: MPropertyStartGroup "Modifiers"
+            // m_BountyModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BountyModifier;
+            char m_BountyModifier[0x10]; // 0x1bc8            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSlash; // 0x1ab0            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceSlash; // 0x1bd8            
+            // metadata: MPropertyStartGroup "Gameplay"
+            float m_flGroundBreakOffAngle; // 0x1c60            
+            uint8_t _pad1c64[0x4]; // 0x1c64
+            CPiecewiseCurve m_SpeedCurve; // 0x1c68            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_NanoDash_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_NanoDash_VData) == 0x1b38);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_NanoDash_VData) == 0x1ca8);
     };
 };

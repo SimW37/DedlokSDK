@@ -22,7 +22,7 @@ namespace source2sdk
         struct FootSweepPusher_t
         {
         public:
-            Vector m_vC; // 0x0            
+            VectorWS m_vC; // 0x0            
             float m_flR; // 0xc            
             bool m_bIsForward; // 0x10            
             uint8_t _pad0011[0x3];

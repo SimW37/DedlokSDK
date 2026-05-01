@@ -18,26 +18,26 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xab0
+        // Size: 0xba0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Projectile_WebWall : public source2sdk::server::CCitadelProjectile
         {
         public:
-            bool bHasDetonatedOnTarget; // 0x8e8            
-            uint8_t _pad08e9[0x3]; // 0x8e9
-            source2sdk::client::ParticleIndex_t m_nWebWallFxIndex; // 0x8ec            
-            uint8_t _pad08f0[0x10]; // 0x8f0
-            Vector m_vecCastPosition; // 0x900            
-            Vector m_vecCastPositionNormal; // 0x90c            
-            Vector m_vecEndPosition; // 0x918            
-            Vector m_vecEndPositionNormal; // 0x924            
-            uint8_t _pad0930[0x180];
+            bool bHasDetonatedOnTarget; // 0x858            
+            uint8_t _pad0859[0x3]; // 0x859
+            source2sdk::client::ParticleIndex_t m_nWebWallFxIndex; // 0x85c            
+            uint8_t _pad0860[0x10]; // 0x860
+            Vector m_vecCastPosition; // 0x870            
+            Vector m_vecCastPositionNormal; // 0x87c            
+            Vector m_vecEndPosition; // 0x888            
+            Vector m_vecEndPositionNormal; // 0x894            
+            uint8_t _pad08a0[0x300];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Projectile_WebWall because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_WebWall) == 0xab0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_WebWall) == 0xba0);
     };
 };

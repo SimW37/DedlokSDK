@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc90
+        // Size: 0x11b8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Doorman_Cart : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0xf0];
+            uint8_t _pad0f90[0x228];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Doorman_Cart) == 0xc90);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Doorman_Cart) == 0x11b8);
     };
 };

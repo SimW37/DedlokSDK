@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1c0
+        // Size: 0x1d8
         // Has VTable
         // Is Abstract
         // 
@@ -30,6 +30,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::particles::CParticleFunctionOperator) == 0x1c0);
+        static_assert(sizeof(source2sdk::particles::CParticleFunctionOperator) == 0x1d8);
     };
 };

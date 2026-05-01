@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1718
+        // Size: 0x1c18
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iLane"
@@ -35,24 +35,27 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            std::int32_t m_iLane; // 0x16c8            
+            // metadata: MNotSaved
+            std::int32_t m_iLane; // 0x1bc8            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnTargetedEnemyChanged"
+            // metadata: MNotSaved
             // m_hTargetedEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hTargetedEnemy;
-            char m_hTargetedEnemy[0x4]; // 0x16cc            
+            char m_hTargetedEnemy[0x4]; // 0x1bcc            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnHealingChargeChanged"
             // metadata: MNetworkBitCount "8"
             // metadata: MNetworkMinValue "0,000000"
             // metadata: MNetworkMaxValue "1,000000"
-            float m_flHealingChargeParticlePct; // 0x16d0            
-            uint8_t _pad16d4[0x44];
+            // metadata: MNotSaved
+            float m_flHealingChargeParticlePct; // 0x1bd0            
+            uint8_t _pad1bd4[0x44];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_NPC_Trooper because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_NPC_Trooper) == 0x1718);
+        static_assert(sizeof(source2sdk::client::C_NPC_Trooper) == 0x1c18);
     };
 };

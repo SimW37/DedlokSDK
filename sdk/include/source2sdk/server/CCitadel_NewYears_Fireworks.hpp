@@ -17,32 +17,32 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xe60
+        // Size: 0xda0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_NewYears_Fireworks : public source2sdk::server::CDynamicProp
         {
         public:
-            std::uint32_t m_unShowDurationSeconds; // 0xd80            
-            std::uint32_t m_unShowDelaySeconds; // 0xd84            
-            float m_flFireworkIntervalMin; // 0xd88            
-            float m_flFireworkIntervalMax; // 0xd8c            
-            CUtlString m_sFireworkParticle1; // 0xd90            
-            CUtlString m_sFireworkParticle2; // 0xd98            
-            CUtlString m_sFireworkParticle3; // 0xda0            
-            CUtlString m_sFireworkParticle4; // 0xda8            
-            CUtlString m_sFireworkParticle5; // 0xdb0            
-            CUtlString m_sFireworkParticle6; // 0xdb8            
-            CUtlString m_sFireworkParticle7; // 0xdc0            
-            CUtlString m_sFireworkParticle8; // 0xdc8            
-            CUtlSymbolLarge m_iszSoundName; // 0xdd0            
-            float m_flStartSoundVerticalOffset; // 0xdd8            
-            uint8_t _pad0ddc[0x84];
+            std::uint32_t m_unShowDurationSeconds; // 0xcc0            
+            std::uint32_t m_unShowDelaySeconds; // 0xcc4            
+            float m_flFireworkIntervalMin; // 0xcc8            
+            float m_flFireworkIntervalMax; // 0xccc            
+            CUtlString m_sFireworkParticle1; // 0xcd0            
+            CUtlString m_sFireworkParticle2; // 0xcd8            
+            CUtlString m_sFireworkParticle3; // 0xce0            
+            CUtlString m_sFireworkParticle4; // 0xce8            
+            CUtlString m_sFireworkParticle5; // 0xcf0            
+            CUtlString m_sFireworkParticle6; // 0xcf8            
+            CUtlString m_sFireworkParticle7; // 0xd00            
+            CUtlString m_sFireworkParticle8; // 0xd08            
+            CUtlSymbolLarge m_iszSoundName; // 0xd10            
+            float m_flStartSoundVerticalOffset; // 0xd18            
+            uint8_t _pad0d1c[0x84];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_NewYears_Fireworks because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_NewYears_Fireworks) == 0xe60);
+        static_assert(sizeof(source2sdk::server::CCitadel_NewYears_Fireworks) == 0xda0);
     };
 };

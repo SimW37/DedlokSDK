@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1d0
+        // Size: 0x2d8
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Upgrade_ArcaneSurge_AbilityWatcher : public source2sdk::server::CCitadelModifier
@@ -32,14 +32,14 @@ namespace source2sdk
         public:
             // m_hBuffedAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelBaseAbility> m_hBuffedAbility;
-            char m_hBuffedAbility[0x4]; // 0xc8            
-            bool m_bRecastingBuffedAbility; // 0xcc            
-            uint8_t _pad00cd[0x103];
+            char m_hBuffedAbility[0x4]; // 0xd0            
+            bool m_bRecastingBuffedAbility; // 0xd4            
+            uint8_t _pad00d5[0x203];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Upgrade_ArcaneSurge_AbilityWatcher because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifier_Upgrade_ArcaneSurge_AbilityWatcher) == 0x1d0);
+        static_assert(sizeof(source2sdk::server::CModifier_Upgrade_ArcaneSurge_AbilityWatcher) == 0x2d8);
     };
 };

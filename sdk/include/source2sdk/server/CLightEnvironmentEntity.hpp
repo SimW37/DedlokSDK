@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x810
+        // Size: 0x780
         // Has VTable
         #pragma pack(push, 1)
         class CLightEnvironmentEntity : public source2sdk::server::CLightDirectionalEntity
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CLightEnvironmentEntity) == 0x810);
+        static_assert(sizeof(source2sdk::server::CLightEnvironmentEntity) == 0x780);
     };
 };

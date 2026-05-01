@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x900
+        // Size: 0x8f0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,17 +26,17 @@ namespace source2sdk
         class CCitadel_Modifier_CatapultStunVData : public source2sdk::client::CModifierKnockdownVData
         {
         public:
-            float m_flStunDurationOnLand; // 0x8e8            
-            uint8_t _pad08ec[0x4]; // 0x8ec
+            float m_flStunDurationOnLand; // 0x8d8            
+            uint8_t _pad08dc[0x4]; // 0x8dc
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x8f0            
+            char m_SlowModifier[0x10]; // 0x8e0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_CatapultStunVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_CatapultStunVData) == 0x900);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_CatapultStunVData) == 0x8f0);
     };
 };

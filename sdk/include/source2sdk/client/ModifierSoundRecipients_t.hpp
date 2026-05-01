@@ -20,7 +20,7 @@ namespace source2sdk
         {
             // MPropertyFriendlyName "Always"
             MODIFIER_SOUND_RECIPIENT_ALWAYS = 0x0,
-            // MPropertyFriendlyName "Modifer Owner Is Local Player"
+            // MPropertyFriendlyName "Modifier Owner Is Local Player"
             MODIFIER_SOUND_RECIPIENT_PARENT_IS_LOCAL_PLAYER = 0x1,
             // MPropertyFriendlyName "Modifier Owner on same team as Local Player"
             MODIFIER_SOUND_RECIPIENT_PARENT_ON_SAME_TEAM_AS_LOCAL_PLAYER = 0x2,

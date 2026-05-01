@@ -35,7 +35,7 @@ namespace source2sdk
             uint8_t _pad000d[0x3]; // 0xd
             float m_flDelay; // 0x10            
             // metadata: MPropertySuppressExpr "m_eCameraOperation != k_ECameraOp_Maintain"
-            // metadata: MPropertyDescription "How long to hold the current value.  A value <= 0 is forever"
+            // metadata: MPropertyDescription "How long to hold the current value. Less than zero for an indefinite end."
             float m_flMaintainDuration; // 0x14            
             // metadata: MPropertySuppressExpr "m_eCameraOperation != k_ECameraOp_Approach"
             // metadata: MPropertyDescription "How fast to approach the target value"

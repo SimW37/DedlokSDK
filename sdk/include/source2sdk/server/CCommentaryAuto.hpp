@@ -18,15 +18,15 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x568
+        // Size: 0x4e8
         // Has VTable
         #pragma pack(push, 1)
         class CCommentaryAuto : public source2sdk::server::CBaseEntity
         {
         public:
-            source2sdk::entity2::CEntityIOOutput m_OnCommentaryNewGame; // 0x4f0            
-            source2sdk::entity2::CEntityIOOutput m_OnCommentaryMidGame; // 0x518            
-            source2sdk::entity2::CEntityIOOutput m_OnCommentaryMultiplayerSpawn; // 0x540            
+            source2sdk::entity2::CEntityIOOutput m_OnCommentaryNewGame; // 0x4a0            
+            source2sdk::entity2::CEntityIOOutput m_OnCommentaryMidGame; // 0x4b8            
+            source2sdk::entity2::CEntityIOOutput m_OnCommentaryMultiplayerSpawn; // 0x4d0            
             
             // Datamap fields:
             // void InputMultiplayerSpawned; // 0x0
@@ -35,6 +35,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CCommentaryAuto because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCommentaryAuto) == 0x568);
+        static_assert(sizeof(source2sdk::server::CCommentaryAuto) == 0x4e8);
     };
 };

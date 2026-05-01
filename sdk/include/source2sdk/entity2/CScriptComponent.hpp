@@ -24,6 +24,7 @@ namespace source2sdk
         {
         public:
             uint8_t _pad0008[0x28]; // 0x8
+            // metadata: MNotSaved
             CUtlSymbolLarge m_scriptClassName; // 0x30            
         };
         #pragma pack(pop)

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x550
+        // Size: 0x508
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
@@ -30,10 +30,10 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
             // metadata: MNetworkAlias "CCitadelMinimapComponent"
             // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x4f0            
-            uint8_t _pad0508[0x18]; // 0x508
-            CUtlSymbolLarge m_iszCampName; // 0x520            
-            uint8_t _pad0528[0x28];
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x4a0            
+            uint8_t _pad04c0[0x18]; // 0x4c0
+            CUtlSymbolLarge m_iszCampName; // 0x4d8            
+            uint8_t _pad04e0[0x28];
             
             // Datamap fields:
             // bool InputSetDisabled; // 0x0
@@ -42,6 +42,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CInfoTrooperNeutralCamp because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CInfoTrooperNeutralCamp) == 0x550);
+        static_assert(sizeof(source2sdk::server::CInfoTrooperNeutralCamp) == 0x508);
     };
 };

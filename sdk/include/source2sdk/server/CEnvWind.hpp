@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x640
+        // Size: 0x5d0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CEnvWindShared m_EnvWindShared"
@@ -27,7 +27,7 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            source2sdk::server::CEnvWindShared m_EnvWindShared; // 0x4f0            
+            source2sdk::server::CEnvWindShared m_EnvWindShared; // 0x4a0            
             
             // Datamap fields:
             // void CEnvWindWindThink; // 0x0
@@ -36,6 +36,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CEnvWind because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CEnvWind) == 0x640);
+        static_assert(sizeof(source2sdk::server::CEnvWind) == 0x5d0);
     };
 };

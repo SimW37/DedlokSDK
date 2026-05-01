@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 5
+        // Enumerator count: 6
         // Alignment: 1
         // Size: 0x1
         enum class ELeapState_t : std::uint8_t
@@ -23,6 +23,7 @@ namespace source2sdk
             ELeapState_BoostingUp = 0x2,
             ELeapState_CrashingDown = 0x3,
             ELeapState_Land = 0x4,
+            ELeapState_CrashOnGroundTouch = 0x5,
         };
     };
 };

@@ -27,11 +27,11 @@ namespace source2sdk
         class CDestructiblePart_DamageLevel
         {
         public:
-            // metadata: MPropertyDescription "Name for this damage level."
+            // metadata: MPropertyDescription "Name for this damage level.  Presently only used for debugging/display - one day may be used in code to allow destroying by name."
             CUtlString m_sName; // 0x0            
             // metadata: MPropertyStartGroup "+Model Setup"
             // metadata: MPropertyDescription "Name of the breakable to trigger breaking on when health reaches zero."
-            // metadata: MPropertyAttributeEditor "ModelDocPicker( 16 )"
+            // metadata: MPropertyAttributeEditor "ModelDocPicker( MODELDOC_PICK_TYPE_BREAKPIECE )"
             CGlobalSymbol m_sBreakablePieceName; // 0x8            
             // metadata: MPropertyDescription "Value to set for the body group when the damage level is broken."
             std::int32_t m_nBodyGroupValue; // 0x10            
@@ -39,12 +39,13 @@ namespace source2sdk
             // metadata: MPropertyDescription "Total health of this damage level. When it reaches 0, the damage level is 'broken' using the breakable prop system."
             // metadata: MPropertySuppressExpr "m_nDamagePassthroughType == InvincibleAbsorb || m_nDamagePassthroughType == InvinciblePassthrough"
             source2sdk::client::CSkillInt m_nHealth; // 0x14            
+            // metadata: MPropertyDescription "% chance (0-1) of dealing 'critical' damage, which destroys this damage level, regardless of damage pass through type."
+            float m_flCriticalDamagePercent; // 0x24            
             // metadata: MPropertyDescription "How damage to this damage level is handled."
-            source2sdk::client::EDestructiblePartDamagePassThroughType m_nDamagePassthroughType; // 0x24            
+            source2sdk::client::EDestructiblePartDamagePassThroughType m_nDamagePassthroughType; // 0x28            
             // metadata: MPropertyStartGroup "+Death"
             // metadata: MPropertyDescription "Should the entity die when this damage level is destroyed?"
-            source2sdk::client::DestructiblePartDestructionDeathBehavior_t m_nDestructionDeathBehavior; // 0x28            
-            uint8_t _pad002c[0x4]; // 0x2c
+            source2sdk::client::DestructiblePartDestructionDeathBehavior_t m_nDestructionDeathBehavior; // 0x2c            
             // metadata: MPropertyDescription "Custom death handshake to set when this damage level is destroyed."
             // metadata: MPropertySuppressExpr "m_nDestructionDeathBehavior == eDoNotKill"
             CGlobalSymbol m_sCustomDeathHandshake; // 0x30            
@@ -62,8 +63,9 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CDestructiblePart_DamageLevel, m_sBreakablePieceName) == 0x8);
         static_assert(offsetof(source2sdk::client::CDestructiblePart_DamageLevel, m_nBodyGroupValue) == 0x10);
         static_assert(offsetof(source2sdk::client::CDestructiblePart_DamageLevel, m_nHealth) == 0x14);
-        static_assert(offsetof(source2sdk::client::CDestructiblePart_DamageLevel, m_nDamagePassthroughType) == 0x24);
-        static_assert(offsetof(source2sdk::client::CDestructiblePart_DamageLevel, m_nDestructionDeathBehavior) == 0x28);
+        static_assert(offsetof(source2sdk::client::CDestructiblePart_DamageLevel, m_flCriticalDamagePercent) == 0x24);
+        static_assert(offsetof(source2sdk::client::CDestructiblePart_DamageLevel, m_nDamagePassthroughType) == 0x28);
+        static_assert(offsetof(source2sdk::client::CDestructiblePart_DamageLevel, m_nDestructionDeathBehavior) == 0x2c);
         static_assert(offsetof(source2sdk::client::CDestructiblePart_DamageLevel, m_sCustomDeathHandshake) == 0x30);
         static_assert(offsetof(source2sdk::client::CDestructiblePart_DamageLevel, m_bShouldDestroyOnDeath) == 0x38);
         static_assert(offsetof(source2sdk::client::CDestructiblePart_DamageLevel, m_flDeathDestroyTime) == 0x3c);

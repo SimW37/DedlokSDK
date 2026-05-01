@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xba8
+        // Size: 0xfa0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelAbilityDruidSprout : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x8];
+            uint8_t _pad0f90[0x10];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelAbilityDruidSprout) == 0xba8);
+        static_assert(sizeof(source2sdk::server::CCitadelAbilityDruidSprout) == 0xfa0);
     };
 };

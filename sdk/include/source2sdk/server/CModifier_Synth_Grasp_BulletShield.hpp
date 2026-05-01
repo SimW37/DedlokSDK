@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x110
+        // Size: 0x148
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Synth_Grasp_BulletShield : public source2sdk::server::CCitadelModifier
         {
         public:
-            float m_fBulletShield; // 0xc8            
-            uint8_t _pad00cc[0x44];
+            float m_fBulletShield; // 0xd0            
+            uint8_t _pad00d4[0x74];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Synth_Grasp_BulletShield because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifier_Synth_Grasp_BulletShield) == 0x110);
+        static_assert(sizeof(source2sdk::server::CModifier_Synth_Grasp_BulletShield) == 0x148);
     };
 };

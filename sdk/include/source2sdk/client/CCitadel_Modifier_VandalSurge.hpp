@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x160
+        // Size: 0x1e0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_VandalSurge : public source2sdk::client::CCitadel_Modifier_Stunned
         {
         public:
-            uint8_t _pad00c8[0x80]; // 0xc8
-            Vector m_vecFloatDest; // 0x148            
-            Vector m_vecStartingPos; // 0x154            
+            uint8_t _pad00c8[0x100]; // 0xc8
+            Vector m_vecFloatDest; // 0x1c8            
+            Vector m_vecStartingPos; // 0x1d4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_VandalSurge because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_VandalSurge) == 0x160);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_VandalSurge) == 0x1e0);
     };
 };

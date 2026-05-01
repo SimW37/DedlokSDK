@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcd0
+        // Size: 0x11c0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EHANDLE m_hTeleportTarget"
@@ -35,27 +35,27 @@ namespace source2sdk
         class CAbility_Drifter_ShadowMark : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            Vector m_vLastValidTeleportPosition; // 0xba0            
+            Vector m_vLastValidTeleportPosition; // 0xf90            
             // metadata: MNetworkEnable
             // m_hTeleportTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hTeleportTarget;
-            char m_hTeleportTarget[0x4]; // 0xbac            
+            char m_hTeleportTarget[0x4]; // 0xf9c            
             // metadata: MNetworkEnable
-            bool m_bTeleported; // 0xbb0            
-            uint8_t _pad0bb1[0x3]; // 0xbb1
+            bool m_bTeleported; // 0xfa0            
+            uint8_t _pad0fa1[0x3]; // 0xfa1
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "qangle"
             // metadata: MNetworkChangeCallback "OnTeleportAnglesChanged"
-            QAngle m_qPostTeleportAngles; // 0xbb4            
-            uint8_t _pad0bc0[0x4]; // 0xbc0
-            source2sdk::entity2::GameTime_t m_flExpireTime; // 0xbc4            
-            source2sdk::entity2::GameTime_t m_flTeleportedTime; // 0xbc8            
-            uint8_t _pad0bcc[0x104];
+            QAngle m_qPostTeleportAngles; // 0xfa4            
+            uint8_t _pad0fb0[0x4]; // 0xfb0
+            source2sdk::entity2::GameTime_t m_flExpireTime; // 0xfb4            
+            source2sdk::entity2::GameTime_t m_flTeleportedTime; // 0xfb8            
+            uint8_t _pad0fbc[0x204];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Drifter_ShadowMark because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Drifter_ShadowMark) == 0xcd0);
+        static_assert(sizeof(source2sdk::server::CAbility_Drifter_ShadowMark) == 0x11c0);
     };
 };

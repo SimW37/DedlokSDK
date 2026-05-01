@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe28
+        // Size: 0x10c0
         // Has VTable
         #pragma pack(push, 1)
         class CProjectile_KnightChargeLeading_Projectile : public source2sdk::client::C_Projectile_KnightCharge_Projectile
         {
         public:
-            uint8_t _pad0e10[0x18];
+            uint8_t _pad10a8[0x18];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CProjectile_KnightChargeLeading_Projectile) == 0xe28);
+        static_assert(sizeof(source2sdk::client::CProjectile_KnightChargeLeading_Projectile) == 0x10c0);
     };
 };

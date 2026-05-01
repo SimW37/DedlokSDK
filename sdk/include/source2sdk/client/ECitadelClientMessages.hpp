@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 21
+        // Enumerator count: 22
         // Alignment: 4
         // Size: 0x4
         enum class ECitadelClientMessages : std::uint32_t
@@ -38,7 +38,8 @@ namespace source2sdk
             CITADEL_CM_HideoutSpawn = 0x3fb,
             CITADEL_CM_HideoutMatchmakingState = 0x3fc,
             CITADEL_CM_PlayerStatsUpdated = 0x3fd,
-            CITADEL_CM_HideoutUpdateHeroReleaseVoteStatus = 0x3fe,
+            CITADEL_CM_HideoutUpdateHeroReleaseVoteTally = 0x3fe,
+            CITADEL_CM_ExecuteMapPositionAbility = 0x3ff,
         };
     };
 };

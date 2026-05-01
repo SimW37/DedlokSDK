@@ -14,21 +14,21 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xc28
+        // Size: 0xbb0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Announcer : public source2sdk::server::CCitadel_Announcer_Base
         {
         public:
-            uint8_t _pad0c10[0x18];
+            uint8_t _pad0b90[0x20];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Announcer) == 0xc28);
+        static_assert(sizeof(source2sdk::server::CCitadel_Announcer) == 0xbb0);
     };
 };

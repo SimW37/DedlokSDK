@@ -22,7 +22,6 @@ namespace source2sdk
         // Size: 0x80
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: M_LEGACY_OptInToSchemaPropertyDomain
         #pragma pack(push, 1)
         class CAnimDemoCaptureSettings
         {

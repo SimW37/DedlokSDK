@@ -19,21 +19,25 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x548
+        // Size: 0x4e8
         // Has VTable
         #pragma pack(push, 1)
         class CPathTrack : public source2sdk::server::CPointEntity
         {
         public:
-            source2sdk::server::CPathTrack* m_pnext; // 0x4f0            
-            source2sdk::server::CPathTrack* m_pprevious; // 0x4f8            
-            source2sdk::server::CPathTrack* m_paltpath; // 0x500            
-            float m_flRadius; // 0x508            
-            float m_length; // 0x50c            
-            CUtlSymbolLarge m_altName; // 0x510            
-            std::int32_t m_nIterVal; // 0x518            
-            source2sdk::server::TrackOrientationType_t m_eOrientationType; // 0x51c            
-            source2sdk::entity2::CEntityIOOutput m_OnPass; // 0x520            
+            // metadata: MClassPtr
+            source2sdk::server::CPathTrack* m_pnext; // 0x4a0            
+            // metadata: MClassPtr
+            source2sdk::server::CPathTrack* m_pprevious; // 0x4a8            
+            // metadata: MClassPtr
+            source2sdk::server::CPathTrack* m_paltpath; // 0x4b0            
+            float m_flRadius; // 0x4b8            
+            float m_length; // 0x4bc            
+            CUtlSymbolLarge m_altName; // 0x4c0            
+            // metadata: MNotSaved
+            std::int32_t m_nIterVal; // 0x4c8            
+            source2sdk::server::TrackOrientationType_t m_eOrientationType; // 0x4cc            
+            source2sdk::entity2::CEntityIOOutput m_OnPass; // 0x4d0            
             
             // Datamap fields:
             // void InputPass; // 0x0
@@ -48,6 +52,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPathTrack because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPathTrack) == 0x548);
+        static_assert(sizeof(source2sdk::server::CPathTrack) == 0x4e8);
     };
 };

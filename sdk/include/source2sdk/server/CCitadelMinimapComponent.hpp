@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x1
         // Standard-layout class: false
-        // Size: 0x18
+        // Size: 0x20
         // Has VTable
         // Has Trivial Destructor
         #pragma pack(push, 1)
         class CCitadelMinimapComponent : public source2sdk::entity2::CEntityComponent
         {
         public:
-            uint8_t _pad0008[0x10];
+            uint8_t _pad0008[0x18];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelMinimapComponent) == 0x18);
+        static_assert(sizeof(source2sdk::server::CCitadelMinimapComponent) == 0x20);
     };
 };

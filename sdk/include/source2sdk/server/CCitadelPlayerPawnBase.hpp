@@ -14,21 +14,21 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xdd8
+        // Size: 0xd60
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelPlayerPawnBase : public source2sdk::server::CBasePlayerPawn
         {
         public:
-            uint8_t _pad0dc0[0x18];
+            uint8_t _pad0d40[0x20];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelPlayerPawnBase) == 0xdd8);
+        static_assert(sizeof(source2sdk::server::CCitadelPlayerPawnBase) == 0xd60);
     };
 };

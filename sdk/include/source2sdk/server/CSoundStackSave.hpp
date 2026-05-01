@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x4f8
+        // Size: 0x4a8
         // Has VTable
         #pragma pack(push, 1)
         class CSoundStackSave : public source2sdk::server::CLogicalEntity
         {
         public:
-            CUtlSymbolLarge m_iszStackName; // 0x4f0            
+            CUtlSymbolLarge m_iszStackName; // 0x4a0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CSoundStackSave because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CSoundStackSave) == 0x4f8);
+        static_assert(sizeof(source2sdk::server::CSoundStackSave) == 0x4a8);
     };
 };

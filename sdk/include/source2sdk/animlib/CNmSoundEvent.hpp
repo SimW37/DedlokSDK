@@ -6,7 +6,6 @@
 #include "source2sdk/animlib/CNmEvent.hpp"
 #include "source2sdk/animlib/CNmEventRelevance_t.hpp"
 #include "source2sdk/animlib/CNmSoundEvent_Position_t.hpp"
-#include "source2sdk/animlib/CNmSoundEvent_Type_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: animlib
@@ -29,15 +28,14 @@ namespace source2sdk
         {
         public:
             source2sdk::animlib::CNmEventRelevance_t m_relevance; // 0x20            
-            source2sdk::animlib::CNmSoundEvent_Type_t m_type; // 0x24            
+            uint8_t _pad0024[0x4]; // 0x24
             CUtlString m_name; // 0x28            
             source2sdk::animlib::CNmSoundEvent_Position_t m_position; // 0x30            
             uint8_t _pad0034[0x4]; // 0x34
             CUtlString m_attachmentName; // 0x38            
             CUtlString m_tags; // 0x40            
-            bool m_bIsServerOnly; // 0x48            
-            bool m_bContinuePlayingSoundAtDurationEnd; // 0x49            
-            uint8_t _pad004a[0x2]; // 0x4a
+            bool m_bContinuePlayingSoundAtDurationEnd; // 0x48            
+            uint8_t _pad0049[0x3]; // 0x49
             float m_flDurationInterruptionThreshold; // 0x4c            
         };
         #pragma pack(pop)

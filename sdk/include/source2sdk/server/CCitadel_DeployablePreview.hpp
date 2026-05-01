@@ -14,21 +14,21 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xac0
+        // Size: 0xa90
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_DeployablePreview : public source2sdk::server::CBaseAnimGraph
         {
         public:
-            uint8_t _pad0ab8[0x8];
+            uint8_t _pad0a80[0x10];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_DeployablePreview) == 0xac0);
+        static_assert(sizeof(source2sdk::server::CCitadel_DeployablePreview) == 0xa90);
     };
 };

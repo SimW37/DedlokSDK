@@ -61,6 +61,7 @@ namespace source2sdk
             std::int16_t m_iStackCount; // 0x62            
             std::int16_t m_iMaxStackCount; // 0x64            
             uint8_t _pad0066[0x2]; // 0x66
+            // metadata: MNotSaved
             // m_pVecStackDecayTimes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::entity2::GameTime_t>* m_pVecStackDecayTimes;
             char m_pVecStackDecayTimes[0x8]; // 0x68            
@@ -71,9 +72,11 @@ namespace source2sdk
             float m_flThinkInterval; // 0x74            
             source2sdk::entity2::GameTime_t m_flThinkIntervalStartTime; // 0x78            
             float m_flTimeScale; // 0x7c            
+            // metadata: MNotSaved
             // m_pVecTrackedObjects has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::IModifierTrackedObject*>* m_pVecTrackedObjects;
             char m_pVecTrackedObjects[0x8]; // 0x80            
+            // metadata: MNotSaved
             source2sdk::client::ModifierRuntimeHandle_t m_hModifierListHandle; // 0x88            
             uint8_t _pad008c[0x4];
             

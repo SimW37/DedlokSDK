@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x50
+        // Size: 0x60
         // Has VTable
         #pragma pack(push, 1)
         class CAI_CitadelLocalNavigator : public source2sdk::server::CAI_LocalNavigatorBase
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CAI_CitadelLocalNavigator) == 0x50);
+        static_assert(sizeof(source2sdk::server::CAI_CitadelLocalNavigator) == 0x60);
     };
 };

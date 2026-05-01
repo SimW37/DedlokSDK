@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1d0
+        // Size: 0x2d8
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Upgrade_ArcaneSurge : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c8[0x100]; // 0xc8
-            source2sdk::entity2::GameTime_t m_tNextAbilityTriggerWindow; // 0x1c8            
-            source2sdk::entity2::GameTime_t m_tAbilityWatcherInProgress; // 0x1cc            
+            uint8_t _pad00d0[0x200]; // 0xd0
+            source2sdk::entity2::GameTime_t m_tNextAbilityTriggerWindow; // 0x2d0            
+            source2sdk::entity2::GameTime_t m_tAbilityWatcherInProgress; // 0x2d4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Upgrade_ArcaneSurge because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifier_Upgrade_ArcaneSurge) == 0x1d0);
+        static_assert(sizeof(source2sdk::server::CModifier_Upgrade_ArcaneSurge) == 0x2d8);
     };
 };

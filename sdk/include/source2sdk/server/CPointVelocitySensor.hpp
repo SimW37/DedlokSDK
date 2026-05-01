@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x538
+        // Size: 0x4e0
         // Has VTable
         #pragma pack(push, 1)
         class CPointVelocitySensor : public source2sdk::server::CPointEntity
@@ -32,16 +32,16 @@ namespace source2sdk
         public:
             // m_hTargetEntity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hTargetEntity;
-            char m_hTargetEntity[0x4]; // 0x4f0            
-            Vector m_vecAxis; // 0x4f4            
-            bool m_bEnabled; // 0x500            
-            uint8_t _pad0501[0x3]; // 0x501
-            float m_fPrevVelocity; // 0x504            
-            float m_flAvgInterval; // 0x508            
-            uint8_t _pad050c[0x4]; // 0x50c
+            char m_hTargetEntity[0x4]; // 0x4a0            
+            Vector m_vecAxis; // 0x4a4            
+            bool m_bEnabled; // 0x4b0            
+            uint8_t _pad04b1[0x3]; // 0x4b1
+            float m_fPrevVelocity; // 0x4b4            
+            float m_flAvgInterval; // 0x4b8            
+            uint8_t _pad04bc[0x4]; // 0x4bc
             // m_Velocity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<float> m_Velocity;
-            char m_Velocity[0x28]; // 0x510            
+            char m_Velocity[0x20]; // 0x4c0            
             
             // Datamap fields:
             // void InputEnable; // 0x0
@@ -51,6 +51,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPointVelocitySensor because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPointVelocitySensor) == 0x538);
+        static_assert(sizeof(source2sdk::server::CPointVelocitySensor) == 0x4e0);
     };
 };

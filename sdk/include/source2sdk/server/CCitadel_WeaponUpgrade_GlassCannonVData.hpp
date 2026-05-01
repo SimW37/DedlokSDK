@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x18a0
+        // Size: 0x19c8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,21 +28,21 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strDeathSound; // 0x1790            
-            CSoundEventName m_strStackSound; // 0x17a0            
+            CSoundEventName m_strDeathSound; // 0x18b8            
+            CSoundEventName m_strStackSound; // 0x18c8            
             // metadata: MPropertyStartGroup "Visuals"
             // m_DeathParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeathParticle;
-            char m_DeathParticle[0xe0]; // 0x17b0            
+            char m_DeathParticle[0xe0]; // 0x18d8            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_ProcNotificationModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ProcNotificationModifier;
-            char m_ProcNotificationModifier[0x10]; // 0x1890            
+            char m_ProcNotificationModifier[0x10]; // 0x19b8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_WeaponUpgrade_GlassCannonVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_WeaponUpgrade_GlassCannonVData) == 0x18a0);
+        static_assert(sizeof(source2sdk::server::CCitadel_WeaponUpgrade_GlassCannonVData) == 0x19c8);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb00
+        // Size: 0xad8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bSpawnedInNoTeleportArea"
@@ -26,13 +26,13 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            bool m_bSpawnedInNoTeleportArea; // 0xaf8            
-            uint8_t _pad0af9[0x7];
+            bool m_bSpawnedInNoTeleportArea; // 0xad0            
+            uint8_t _pad0ad1[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_TrackedProjectile_Synth_PlasmaFlux because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_TrackedProjectile_Synth_PlasmaFlux) == 0xb00);
+        static_assert(sizeof(source2sdk::client::C_TrackedProjectile_Synth_PlasmaFlux) == 0xad8);
     };
 };

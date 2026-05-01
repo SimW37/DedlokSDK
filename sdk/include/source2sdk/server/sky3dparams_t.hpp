@@ -39,11 +39,14 @@ namespace source2sdk
             // metadata: MNetworkEncoder "coord"
             Vector origin; // 0xc            
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             bool bClip3DSkyBoxNearToWorldFar; // 0x18            
             uint8_t _pad0019[0x3]; // 0x19
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             float flClip3DSkyBoxNearToWorldFarOffset; // 0x1c            
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             source2sdk::server::fogparams_t fog; // 0x20            
             // metadata: MNetworkEnable
             WorldGroupId_t m_nWorldGroupID; // 0x88            

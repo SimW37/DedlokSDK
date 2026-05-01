@@ -26,6 +26,9 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "uint32 m_nEntityId"
         // static metadata: MNetworkVarNames "uint32 m_nOwnerId"
         // static metadata: MNetworkVarNames "uint16 m_nHierarchyId"
+        // static metadata: MNetworkVarNames "uint16 m_nDetailLayerMask"
+        // static metadata: MNetworkVarNames "uint8 m_nDetailLayerMaskType"
+        // static metadata: MNetworkVarNames "uint8 m_nTargetDetailLayer"
         // static metadata: MNetworkVarNames "uint8 m_nCollisionGroup"
         // static metadata: MNetworkVarNames "uint8 m_nCollisionFunctionMask"
         #pragma pack(push, 1)
@@ -46,10 +49,15 @@ namespace source2sdk
             // metadata: MNetworkEnable
             std::uint16_t m_nHierarchyId; // 0x28            
             // metadata: MNetworkEnable
-            std::uint8_t m_nCollisionGroup; // 0x2a            
+            std::uint16_t m_nDetailLayerMask; // 0x2a            
             // metadata: MNetworkEnable
-            std::uint8_t m_nCollisionFunctionMask; // 0x2b            
-            uint8_t _pad002c[0x4];
+            std::uint8_t m_nDetailLayerMaskType; // 0x2c            
+            // metadata: MNetworkEnable
+            std::uint8_t m_nTargetDetailLayer; // 0x2d            
+            // metadata: MNetworkEnable
+            std::uint8_t m_nCollisionGroup; // 0x2e            
+            // metadata: MNetworkEnable
+            std::uint8_t m_nCollisionFunctionMask; // 0x2f            
         };
         #pragma pack(pop)
         
@@ -59,8 +67,11 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::VPhysicsCollisionAttribute_t, m_nEntityId) == 0x20);
         static_assert(offsetof(source2sdk::client::VPhysicsCollisionAttribute_t, m_nOwnerId) == 0x24);
         static_assert(offsetof(source2sdk::client::VPhysicsCollisionAttribute_t, m_nHierarchyId) == 0x28);
-        static_assert(offsetof(source2sdk::client::VPhysicsCollisionAttribute_t, m_nCollisionGroup) == 0x2a);
-        static_assert(offsetof(source2sdk::client::VPhysicsCollisionAttribute_t, m_nCollisionFunctionMask) == 0x2b);
+        static_assert(offsetof(source2sdk::client::VPhysicsCollisionAttribute_t, m_nDetailLayerMask) == 0x2a);
+        static_assert(offsetof(source2sdk::client::VPhysicsCollisionAttribute_t, m_nDetailLayerMaskType) == 0x2c);
+        static_assert(offsetof(source2sdk::client::VPhysicsCollisionAttribute_t, m_nTargetDetailLayer) == 0x2d);
+        static_assert(offsetof(source2sdk::client::VPhysicsCollisionAttribute_t, m_nCollisionGroup) == 0x2e);
+        static_assert(offsetof(source2sdk::client::VPhysicsCollisionAttribute_t, m_nCollisionFunctionMask) == 0x2f);
         
         static_assert(sizeof(source2sdk::client::VPhysicsCollisionAttribute_t) == 0x30);
     };

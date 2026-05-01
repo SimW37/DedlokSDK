@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x248
+        // Size: 0x3d0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Cadence_GrandFinale_Buff : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c8[0x180];
+            uint8_t _pad00d0[0x300];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Cadence_GrandFinale_Buff) == 0x248);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Cadence_GrandFinale_Buff) == 0x3d0);
     };
 };

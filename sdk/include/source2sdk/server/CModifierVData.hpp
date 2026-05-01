@@ -14,6 +14,7 @@
 #include "source2sdk/client/ModifierScriptValue_t.hpp"
 #include "source2sdk/client/ModifierScriptedEventHandler_t.hpp"
 #include "source2sdk/client/ModifierSoundRecipients_t.hpp"
+#include "source2sdk/client/ModifierSourceType_t.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
 
 // /////////////////////////////////////////////////////////////
@@ -28,7 +29,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x3f8
+        // Size: 0x408
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -79,56 +80,57 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Sounds"
             CSoundEventName m_sAmbientLoopingSound; // 0x328            
             // metadata: MPropertyGroupName "Sounds"
-            source2sdk::client::ModifierSoundRecipients_t m_nAmbientLoopingSoundRecipients; // 0x338            
-            uint8_t _pad033c[0x4]; // 0x33c
+            source2sdk::client::ModifierSourceType_t m_nAmbientLoopingSoundSource; // 0x338            
+            // metadata: MPropertyGroupName "Sounds"
+            source2sdk::client::ModifierSoundRecipients_t m_nAmbientLoopingSoundRecipients; // 0x33c            
             // metadata: MPropertyGroupName "Sounds"
             CSoundEventName m_sEndSound; // 0x340            
             // metadata: MPropertyGroupName "Scripted Settings"
             // m_nEnabledStateMask has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CBitVecEnum<source2sdk::client::EModifierState> m_nEnabledStateMask;
-            char m_nEnabledStateMask[0x20]; // 0x350            
+            char m_nEnabledStateMask[0x28]; // 0x350            
             // metadata: MPropertyGroupName "Scripted Settings"
             // m_nDisabledStateMask has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CBitVecEnum<source2sdk::client::EModifierState> m_nDisabledStateMask;
-            char m_nDisabledStateMask[0x20]; // 0x370            
+            char m_nDisabledStateMask[0x28]; // 0x378            
             // metadata: MPropertyGroupName "Scripted Settings"
-            source2sdk::client::ModifierAttribute_t m_nAttributes; // 0x390            
-            uint8_t _pad0394[0x4]; // 0x394
+            source2sdk::client::ModifierAttribute_t m_nAttributes; // 0x3a0            
+            uint8_t _pad03a4[0x4]; // 0x3a4
             // metadata: MPropertyGroupName "Scripted Settings"
             // metadata: MPropertyDescription "Scripted Modifier Values"
             // m_vecScriptValues has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::ModifierScriptValue_t> m_vecScriptValues;
-            char m_vecScriptValues[0x18]; // 0x398            
+            char m_vecScriptValues[0x18]; // 0x3a8            
             // metadata: MPropertyGroupName "Scripted Settings"
             // metadata: MPropertyDescription "Scripted Event Handlers"
             // m_vecScriptEventHandlers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::ModifierScriptedEventHandler_t> m_vecScriptEventHandlers;
-            char m_vecScriptEventHandlers[0x18]; // 0x3b0            
-            source2sdk::client::ModifierDisableGroup_t m_nDisableGroupsMask; // 0x3c8            
+            char m_vecScriptEventHandlers[0x18]; // 0x3c0            
+            source2sdk::client::ModifierDisableGroup_t m_nDisableGroupsMask; // 0x3d8            
             // metadata: MPropertyGroupName "UI"
             // metadata: MPropertyDescription "When set, the modifier will not be visible to UI or visible modifier list."
-            bool m_bIsHidden; // 0x3cc            
-            uint8_t _pad03cd[0x3]; // 0x3cd
+            bool m_bIsHidden; // 0x3dc            
+            uint8_t _pad03dd[0x3]; // 0x3dd
             // metadata: MPropertyGroupName "UI"
             // metadata: MPropertySuppressExpr "m_bIsHidden != true"
-            source2sdk::client::ModifierHiddenType_t m_eHiddenType; // 0x3d0            
-            uint8_t _pad03d4[0x4]; // 0x3d4
+            source2sdk::client::ModifierHiddenType_t m_eHiddenType; // 0x3e0            
+            uint8_t _pad03e4[0x4]; // 0x3e4
             // metadata: MPropertyGroupName "UI"
             // metadata: MPropertyDescription "When set, use the value as localization key."
-            CUtlString m_sLocalizationName; // 0x3d8            
+            CUtlString m_sLocalizationName; // 0x3e8            
             // metadata: MPropertyDescription "When to consider the modifier a debuff."
-            source2sdk::client::ModifierDebuffType_t m_eDebuffType; // 0x3e0            
+            source2sdk::client::ModifierDebuffType_t m_eDebuffType; // 0x3f0            
             // metadata: MPropertyDescription "When set, stacks will automatically be decayed after a duration's worth of time has passed.  Only makes sense if adding a stack refreshed the modifier."
-            bool m_bAutomaticallyDecayStacks; // 0x3e4            
+            bool m_bAutomaticallyDecayStacks; // 0x3f4            
             // metadata: MPropertyStartGroup "Networking"
             // metadata: MPropertyDescription "If true, application of the modifier will be delayed on the server to match the client's latency."
-            bool m_bAllowApplicationPrediction; // 0x3e5            
-            uint8_t _pad03e6[0x12];
+            bool m_bAllowApplicationPrediction; // 0x3f5            
+            uint8_t _pad03f6[0x12];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifierVData) == 0x3f8);
+        static_assert(sizeof(source2sdk::server::CModifierVData) == 0x408);
     };
 };

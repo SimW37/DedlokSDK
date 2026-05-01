@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x218
+        // Size: 0x360
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Doorman_Hotel_TeleportFX : public source2sdk::server::CCitadelModifier
         {
         public:
-            Vector m_vMinimapPositionOverride; // 0xc8            
-            uint8_t _pad00d4[0x144];
+            Vector m_vMinimapPositionOverride; // 0xd0            
+            uint8_t _pad00dc[0x284];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Doorman_Hotel_TeleportFX because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Doorman_Hotel_TeleportFX) == 0x218);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Doorman_Hotel_TeleportFX) == 0x360);
     };
 };

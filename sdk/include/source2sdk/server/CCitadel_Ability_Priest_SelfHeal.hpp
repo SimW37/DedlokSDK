@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc68
+        // Size: 0x1118
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Priest_SelfHeal : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0xc8];
+            uint8_t _pad0f90[0x188];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_SelfHeal) == 0xc68);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Priest_SelfHeal) == 0x1118);
     };
 };

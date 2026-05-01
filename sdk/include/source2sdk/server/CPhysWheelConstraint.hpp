@@ -24,29 +24,29 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x598
+        // Size: 0x538
         // Has VTable
         #pragma pack(push, 1)
         class CPhysWheelConstraint : public source2sdk::server::CPhysConstraint
         {
         public:
-            float m_flSuspensionFrequency; // 0x560            
-            float m_flSuspensionDampingRatio; // 0x564            
-            float m_flSuspensionHeightOffset; // 0x568            
-            bool m_bEnableSuspensionLimit; // 0x56c            
-            uint8_t _pad056d[0x3]; // 0x56d
-            float m_flMinSuspensionOffset; // 0x570            
-            float m_flMaxSuspensionOffset; // 0x574            
-            bool m_bEnableSteeringLimit; // 0x578            
-            uint8_t _pad0579[0x3]; // 0x579
-            float m_flMinSteeringAngle; // 0x57c            
-            float m_flMaxSteeringAngle; // 0x580            
-            float m_flSteeringAxisFriction; // 0x584            
-            float m_flSpinAxisFriction; // 0x588            
+            float m_flSuspensionFrequency; // 0x500            
+            float m_flSuspensionDampingRatio; // 0x504            
+            float m_flSuspensionHeightOffset; // 0x508            
+            bool m_bEnableSuspensionLimit; // 0x50c            
+            uint8_t _pad050d[0x3]; // 0x50d
+            float m_flMinSuspensionOffset; // 0x510            
+            float m_flMaxSuspensionOffset; // 0x514            
+            bool m_bEnableSteeringLimit; // 0x518            
+            uint8_t _pad0519[0x3]; // 0x519
+            float m_flMinSteeringAngle; // 0x51c            
+            float m_flMaxSteeringAngle; // 0x520            
+            float m_flSteeringAxisFriction; // 0x524            
+            float m_flSpinAxisFriction; // 0x528            
             // m_hSteeringMimicsEntity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hSteeringMimicsEntity;
-            char m_hSteeringMimicsEntity[0x4]; // 0x58c            
-            uint8_t _pad0590[0x8];
+            char m_hSteeringMimicsEntity[0x4]; // 0x52c            
+            uint8_t _pad0530[0x8];
             
             // Datamap fields:
             // float InputSetMinSuspensionOffset; // 0x0
@@ -57,6 +57,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPhysWheelConstraint because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPhysWheelConstraint) == 0x598);
+        static_assert(sizeof(source2sdk::server::CPhysWheelConstraint) == 0x538);
     };
 };

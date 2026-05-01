@@ -17,26 +17,26 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x598
+        // Size: 0x528
         // Has VTable
         #pragma pack(push, 1)
         class CLogicCompare : public source2sdk::server::CLogicalEntity
         {
         public:
-            float m_flInValue; // 0x4f0            
-            float m_flCompareValue; // 0x4f4            
+            float m_flInValue; // 0x4a0            
+            float m_flCompareValue; // 0x4a4            
             // m_OnLessThan has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<float> m_OnLessThan;
-            char m_OnLessThan[0x28]; // 0x4f8            
+            char m_OnLessThan[0x20]; // 0x4a8            
             // m_OnEqualTo has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<float> m_OnEqualTo;
-            char m_OnEqualTo[0x28]; // 0x520            
+            char m_OnEqualTo[0x20]; // 0x4c8            
             // m_OnNotEqualTo has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<float> m_OnNotEqualTo;
-            char m_OnNotEqualTo[0x28]; // 0x548            
+            char m_OnNotEqualTo[0x20]; // 0x4e8            
             // m_OnGreaterThan has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<float> m_OnGreaterThan;
-            char m_OnGreaterThan[0x28]; // 0x570            
+            char m_OnGreaterThan[0x20]; // 0x508            
             
             // Datamap fields:
             // float InputSetValue; // 0x0
@@ -48,6 +48,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CLogicCompare because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CLogicCompare) == 0x598);
+        static_assert(sizeof(source2sdk::server::CLogicCompare) == 0x528);
     };
 };

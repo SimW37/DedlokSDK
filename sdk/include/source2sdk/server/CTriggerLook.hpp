@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa98
+        // Size: 0x958
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bTestOcclusion"
@@ -37,24 +37,24 @@ namespace source2sdk
         public:
             // m_hLookTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hLookTarget;
-            char m_hLookTarget[0x4]; // 0xa00            
-            float m_flFieldOfView; // 0xa04            
-            float m_flLookTime; // 0xa08            
-            float m_flLookTimeTotal; // 0xa0c            
-            source2sdk::entity2::GameTime_t m_flLookTimeLast; // 0xa10            
-            float m_flTimeoutDuration; // 0xa14            
-            bool m_bTimeoutFired; // 0xa18            
-            bool m_bIsLooking; // 0xa19            
-            bool m_b2DFOV; // 0xa1a            
-            bool m_bUseVelocity; // 0xa1b            
+            char m_hLookTarget[0x4]; // 0x8f0            
+            float m_flFieldOfView; // 0x8f4            
+            float m_flLookTime; // 0x8f8            
+            float m_flLookTimeTotal; // 0x8fc            
+            source2sdk::entity2::GameTime_t m_flLookTimeLast; // 0x900            
+            float m_flTimeoutDuration; // 0x904            
+            bool m_bTimeoutFired; // 0x908            
+            bool m_bIsLooking; // 0x909            
+            bool m_b2DFOV; // 0x90a            
+            bool m_bUseVelocity; // 0x90b            
             // metadata: MNetworkEnable
-            bool m_bTestOcclusion; // 0xa1c            
+            bool m_bTestOcclusion; // 0x90c            
             // metadata: MNetworkEnable
-            bool m_bTestAllVisibleOcclusion; // 0xa1d            
-            uint8_t _pad0a1e[0x2]; // 0xa1e
-            source2sdk::entity2::CEntityIOOutput m_OnTimeout; // 0xa20            
-            source2sdk::entity2::CEntityIOOutput m_OnStartLook; // 0xa48            
-            source2sdk::entity2::CEntityIOOutput m_OnEndLook; // 0xa70            
+            bool m_bTestAllVisibleOcclusion; // 0x90d            
+            uint8_t _pad090e[0x2]; // 0x90e
+            source2sdk::entity2::CEntityIOOutput m_OnTimeout; // 0x910            
+            source2sdk::entity2::CEntityIOOutput m_OnStartLook; // 0x928            
+            source2sdk::entity2::CEntityIOOutput m_OnEndLook; // 0x940            
             
             // Datamap fields:
             // void CTriggerLookTimeoutThink; // 0x0
@@ -63,6 +63,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CTriggerLook because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CTriggerLook) == 0xa98);
+        static_assert(sizeof(source2sdk::server::CTriggerLook) == 0x958);
     };
 };

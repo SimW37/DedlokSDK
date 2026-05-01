@@ -25,8 +25,8 @@ namespace source2sdk
         class CNmChainSolverTask : public source2sdk::animlib::CNmPoseTask
         {
         public:
-            std::int32_t m_nEffectorBoneIdx; // 0x50            
-            uint8_t _pad0054[0xc]; // 0x54
+            std::int32_t m_nEffectorBoneIdx; // 0x58            
+            std::int32_t m_nEffectorTargetBoneIdx; // 0x5c            
             CTransform m_targetTransform; // 0x60            
             std::int32_t m_nNumBonesInChain; // 0x80            
             uint8_t _pad0084[0xc]; // 0x84

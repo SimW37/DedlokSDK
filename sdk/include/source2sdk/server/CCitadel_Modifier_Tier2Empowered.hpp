@@ -17,21 +17,21 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd8
+        // Size: 0xe0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Tier2Empowered : public source2sdk::server::CCitadel_Modifier_Base
         {
         public:
-            std::int32_t m_nStartingHealth; // 0xc8            
-            std::int32_t m_nEndingHealth; // 0xcc            
-            float m_flStartingModelScale; // 0xd0            
-            uint8_t _pad00d4[0x4];
+            std::int32_t m_nStartingHealth; // 0xd0            
+            std::int32_t m_nEndingHealth; // 0xd4            
+            float m_flStartingModelScale; // 0xd8            
+            uint8_t _pad00dc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Tier2Empowered because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Tier2Empowered) == 0xd8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Tier2Empowered) == 0xe0);
     };
 };

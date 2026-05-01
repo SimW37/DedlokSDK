@@ -14,10 +14,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xd08
+        // Size: 0xc50
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelItemMetal : public source2sdk::server::CItemGeneric
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelItemMetal) == 0xd08);
+        static_assert(sizeof(source2sdk::server::CCitadelItemMetal) == 0xc50);
     };
 };

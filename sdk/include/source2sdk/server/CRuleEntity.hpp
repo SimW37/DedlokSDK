@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x810
+        // Size: 0x780
         // Has VTable
         #pragma pack(push, 1)
         class CRuleEntity : public source2sdk::server::CBaseModelEntity
         {
         public:
-            CUtlSymbolLarge m_iszMaster; // 0x808            
+            CUtlSymbolLarge m_iszMaster; // 0x778            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CRuleEntity because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CRuleEntity) == 0x810);
+        static_assert(sizeof(source2sdk::server::CRuleEntity) == 0x780);
     };
 };

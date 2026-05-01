@@ -3,6 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CitadelAbilityUpgradeInfoPacked_t.hpp"
 #include "source2sdk/client/EAbilityBucketType.hpp"
 #include "source2sdk/client/EAbilitySlots_t.hpp"
 #include "source2sdk/entity2/GameTime_t.hpp"
@@ -29,13 +30,12 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xba0
+        // Size: 0xf90
         // Has VTable
         // Is Abstract
         // 
         // static metadata: MNetworkIncludeByName "m_flTimeScale"
         // static metadata: MNetworkExcludeByName "m_angRotation"
-        // static metadata: MNetworkExcludeByName "m_blinktoggle"
         // static metadata: MNetworkExcludeByName "m_cellX"
         // static metadata: MNetworkExcludeByName "m_cellY"
         // static metadata: MNetworkExcludeByName "m_cellZ"
@@ -71,9 +71,10 @@ namespace source2sdk
         // static metadata: MNetworkOverride "m_flTimeScale"
         // static metadata: MNetworkVarNames "bool m_bChanneling"
         // static metadata: MNetworkVarNames "bool m_bInCastDelay"
+        // static metadata: MNetworkVarNames "bool m_bShouldBeExecuted"
         // static metadata: MNetworkVarNames "bool m_bCanBeUpgraded"
         // static metadata: MNetworkVarNames "CitadelStolenAbilitySlot_t m_eStolenInSlot"
-        // static metadata: MNetworkVarNames "int m_nUpgradeBits"
+        // static metadata: MNetworkVarNames "CitadelAbilityUpgradeInfoPacked_t m_nUpgradeInfo"
         // static metadata: MNetworkVarNames "EAbilityBucketType m_iBucketID"
         // static metadata: MNetworkVarNames "bool m_bToggleState"
         // static metadata: MNetworkVarNames "GameTime_t m_flCooldownStart"
@@ -97,105 +98,103 @@ namespace source2sdk
         class CCitadelBaseAbility : public source2sdk::server::CBaseEntity
         {
         public:
-            uint8_t _pad04f0[0xd8]; // 0x4f0
+            uint8_t _pad04a0[0xd8]; // 0x4a0
             // m_vecIntrinsicModifiers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CModifierHandleTyped<source2sdk::server::CCitadelModifier>> m_vecIntrinsicModifiers;
-            char m_vecIntrinsicModifiers[0x18]; // 0x5c8            
+            char m_vecIntrinsicModifiers[0x18]; // 0x578            
             // m_pCastDelayAutoModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CModifierHandleTyped<source2sdk::server::CCitadelModifier> m_pCastDelayAutoModifier;
-            char m_pCastDelayAutoModifier[0x18]; // 0x5e0            
+            char m_pCastDelayAutoModifier[0x18]; // 0x590            
             // m_pChannelAutoModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CModifierHandleTyped<source2sdk::server::CCitadelModifier> m_pChannelAutoModifier;
-            char m_pChannelAutoModifier[0x18]; // 0x5f8            
-            CGlobalSymbol m_strUsedCastGraphParam; // 0x610            
-            std::int32_t m_nCastParamNeedsResetTick; // 0x618            
-            uint8_t _pad061c[0x4]; // 0x61c
-            bool m_bIsCoolingDownInternal; // 0x620            
-            uint8_t _pad0621[0x3]; // 0x621
-            source2sdk::entity2::GameTime_t m_flCancelMashProtectionEndTime; // 0x624            
-            source2sdk::entity2::GameTime_t m_flCancelLockoutEndTime; // 0x628            
-            uint8_t _pad062c[0x1c]; // 0x62c
+            char m_pChannelAutoModifier[0x18]; // 0x5a8            
+            CGlobalSymbol m_strUsedCastGraphParam; // 0x5c0            
+            std::int32_t m_nCastParamNeedsResetTick; // 0x5c8            
+            uint8_t _pad05cc[0x4]; // 0x5cc
+            bool m_bIsCoolingDownInternal; // 0x5d0            
+            uint8_t _pad05d1[0x3]; // 0x5d1
+            source2sdk::entity2::GameTime_t m_flCancelMashProtectionEndTime; // 0x5d4            
+            source2sdk::entity2::GameTime_t m_flCancelLockoutEndTime; // 0x5d8            
+            uint8_t _pad05dc[0x1c]; // 0x5dc
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnChannelingChanged"
-            bool m_bChanneling; // 0x648            
+            bool m_bChanneling; // 0x5f8            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnInCastDelayChanged"
-            bool m_bInCastDelay; // 0x649            
-            uint8_t _pad064a[0x2]; // 0x64a
-            // m_hSupportedAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CHandle<source2sdk::server::CCitadelBaseAbility> m_hSupportedAbility;
-            char m_hSupportedAbility[0x4]; // 0x64c            
+            bool m_bInCastDelay; // 0x5f9            
             // metadata: MNetworkEnable
-            bool m_bCanBeUpgraded; // 0x650            
-            uint8_t _pad0651[0x7]; // 0x651
+            bool m_bShouldBeExecuted; // 0x5fa            
             // metadata: MNetworkEnable
-            source2sdk::server::CitadelStolenAbilitySlot_t m_eStolenInSlot; // 0x658            
+            bool m_bCanBeUpgraded; // 0x5fb            
+            uint8_t _pad05fc[0x4]; // 0x5fc
             // metadata: MNetworkEnable
-            // metadata: MNetworkChangeCallback "OnUpgradeBitsChanged"
+            source2sdk::server::CitadelStolenAbilitySlot_t m_eStolenInSlot; // 0x600            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "OnUpgradeInfoChanged"
             // metadata: MNetworkPriority "32"
-            std::int32_t m_nUpgradeBits; // 0x668            
+            source2sdk::client::CitadelAbilityUpgradeInfoPacked_t m_nUpgradeInfo; // 0x610            
             // metadata: MNetworkEnable
-            source2sdk::client::EAbilityBucketType m_iBucketID; // 0x66c            
+            source2sdk::client::EAbilityBucketType m_iBucketID; // 0x614            
             // metadata: MNetworkEnable
-            bool m_bToggleState; // 0x670            
-            uint8_t _pad0671[0x3]; // 0x671
+            bool m_bToggleState; // 0x618            
+            uint8_t _pad0619[0x3]; // 0x619
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
-            source2sdk::entity2::GameTime_t m_flCooldownStart; // 0x674            
+            source2sdk::entity2::GameTime_t m_flCooldownStart; // 0x61c            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
             // metadata: MNetworkChangeCallback "OnAbilityCooldownEndChanged"
-            source2sdk::entity2::GameTime_t m_flCooldownEnd; // 0x678            
+            source2sdk::entity2::GameTime_t m_flCooldownEnd; // 0x620            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flCastCompletedTime; // 0x67c            
+            source2sdk::entity2::GameTime_t m_flCastCompletedTime; // 0x624            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flChannelStartTime; // 0x680            
+            source2sdk::entity2::GameTime_t m_flChannelStartTime; // 0x628            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flCastDelayStartTime; // 0x684            
+            source2sdk::entity2::GameTime_t m_flCastDelayStartTime; // 0x62c            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnAbilitySlotChanged"
-            source2sdk::client::EAbilitySlots_t m_eAbilitySlot; // 0x688            
-            uint8_t _pad068a[0x2]; // 0x68a
+            source2sdk::client::EAbilitySlots_t m_eAbilitySlot; // 0x630            
+            uint8_t _pad0632[0x2]; // 0x632
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flPostCastDelayEndTime; // 0x68c            
+            source2sdk::entity2::GameTime_t m_flPostCastDelayEndTime; // 0x634            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
-            std::int32_t m_iRemainingCharges; // 0x690            
+            std::int32_t m_iRemainingCharges; // 0x638            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
-            source2sdk::entity2::GameTime_t m_flChargeRechargeStart; // 0x694            
+            source2sdk::entity2::GameTime_t m_flChargeRechargeStart; // 0x63c            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
-            source2sdk::entity2::GameTime_t m_flChargeRechargeEnd; // 0x698            
+            source2sdk::entity2::GameTime_t m_flChargeRechargeEnd; // 0x640            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flMovementControlActiveTime; // 0x69c            
-            // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flSelectedChangedTime; // 0x6a0            
+            source2sdk::entity2::GameTime_t m_flMovementControlActiveTime; // 0x644            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flAltCastHoldStartTime; // 0x6a4            
+            source2sdk::entity2::GameTime_t m_flSelectedChangedTime; // 0x648            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flAltCastDoubleTapStartTime; // 0x6a8            
+            source2sdk::entity2::GameTime_t m_flAltCastHoldStartTime; // 0x64c            
             // metadata: MNetworkEnable
-            bool m_bCanBeImbued; // 0x6ac            
-            uint8_t _pad06ad[0x3]; // 0x6ad
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            source2sdk::entity2::GameTime_t m_flAltCastDoubleTapStartTime; // 0x650            
+            // metadata: MNetworkEnable
+            bool m_bCanBeImbued; // 0x654            
+            uint8_t _pad0655[0x3]; // 0x655
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnAbilityImbuedChanged"
             // m_vecImbuedAbilities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<CUtlStringToken> m_vecImbuedAbilities;
-            char m_vecImbuedAbilities[0x18]; // 0x6b0            
+            char m_vecImbuedAbilities[0x18]; // 0x658            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bSelectionModeIsAltMode; // 0x6c8            
-            uint8_t _pad06c9[0x7]; // 0x6c9
+            bool m_bSelectionModeIsAltMode; // 0x670            
+            uint8_t _pad0671[0x7]; // 0x671
             // m_vecEnemyHeroesDamaged has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecEnemyHeroesDamaged;
-            char m_vecEnemyHeroesDamaged[0x18]; // 0x6d0            
-            float m_flPreviousEffectiveCooldown; // 0x6e8            
-            uint8_t _pad06ec[0x4b4];
+            char m_vecEnemyHeroesDamaged[0x18]; // 0x678            
+            float m_flPreviousEffectiveCooldown; // 0x690            
+            uint8_t _pad0694[0x8fc];
             
             // Datamap fields:
             // int32_t slot; // 0x7fffffff
@@ -206,6 +205,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CCitadelBaseAbility because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelBaseAbility) == 0xba0);
+        static_assert(sizeof(source2sdk::server::CCitadelBaseAbility) == 0xf90);
     };
 };

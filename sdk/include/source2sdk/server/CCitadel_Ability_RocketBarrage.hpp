@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe30
+        // Size: 0x1460
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelAutoScaledTime m_flBarrageEndTime"
@@ -28,18 +28,18 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelAutoScaledTime m_flBarrageEndTime; // 0xba0            
-            uint8_t _pad0bb8[0x240]; // 0xbb8
-            float m_flCurrentTimeScale; // 0xdf8            
-            Vector m_vecAimPos; // 0xdfc            
-            Vector m_vecAimVel; // 0xe08            
-            source2sdk::entity2::GameTime_t m_flLastUpdateTime; // 0xe14            
-            uint8_t _pad0e18[0x18];
+            source2sdk::server::CCitadelAutoScaledTime m_flBarrageEndTime; // 0xf90            
+            uint8_t _pad0fa8[0x480]; // 0xfa8
+            float m_flCurrentTimeScale; // 0x1428            
+            Vector m_vecAimPos; // 0x142c            
+            Vector m_vecAimVel; // 0x1438            
+            source2sdk::entity2::GameTime_t m_flLastUpdateTime; // 0x1444            
+            uint8_t _pad1448[0x18];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_RocketBarrage because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_RocketBarrage) == 0xe30);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_RocketBarrage) == 0x1460);
     };
 };

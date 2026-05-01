@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x140
+        // Size: 0x1c0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Siphon_Bullets_Watcher : public source2sdk::client::CCitadel_Modifier_StatStealBase
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Siphon_Bullets_Watcher) == 0x140);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Siphon_Bullets_Watcher) == 0x1c0);
     };
 };

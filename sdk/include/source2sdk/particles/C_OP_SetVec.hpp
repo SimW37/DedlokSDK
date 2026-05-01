@@ -21,7 +21,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9a8
+        // Size: 0xa10
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,22 +30,22 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyFriendlyName "value"
-            source2sdk::particleslib::CPerParticleVecInput m_InputValue; // 0x1c0            
+            source2sdk::particleslib::CPerParticleVecInput m_InputValue; // 0x1d8            
             // metadata: MPropertyFriendlyName "output field"
             // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-            source2sdk::particles::ParticleAttributeIndex_t m_nOutputField; // 0x838            
+            source2sdk::particles::ParticleAttributeIndex_t m_nOutputField; // 0x890            
             // metadata: MPropertyFriendlyName "set value method"
-            source2sdk::particles::ParticleSetMethod_t m_nSetMethod; // 0x83c            
+            source2sdk::particles::ParticleSetMethod_t m_nSetMethod; // 0x894            
             // metadata: MPropertyFriendlyName "interpolation"
-            source2sdk::particleslib::CPerParticleFloatInput m_Lerp; // 0x840            
+            source2sdk::particleslib::CPerParticleFloatInput m_Lerp; // 0x898            
             // metadata: MPropertyFriendlyName "normalize result"
-            bool m_bNormalizedOutput; // 0x9a0            
-            uint8_t _pad09a1[0x7];
+            bool m_bNormalizedOutput; // 0xa08            
+            uint8_t _pad0a09[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_OP_SetVec because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::particles::C_OP_SetVec) == 0x9a8);
+        static_assert(sizeof(source2sdk::particles::C_OP_SetVec) == 0xa10);
     };
 };

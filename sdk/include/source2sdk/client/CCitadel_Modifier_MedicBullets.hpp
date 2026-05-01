@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x218
+        // Size: 0x318
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_MedicBullets : public source2sdk::client::CCitadel_Modifier_BaseBulletPreRollProc
         {
         public:
-            uint8_t _pad0198[0x80];
+            uint8_t _pad0218[0x100];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_MedicBullets) == 0x218);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_MedicBullets) == 0x318);
     };
 };

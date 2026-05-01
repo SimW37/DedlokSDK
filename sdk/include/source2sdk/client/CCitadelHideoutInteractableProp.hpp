@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0x10a0
+        // Size: 0xfd0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CUtlString m_strInteractLocString"
@@ -33,31 +33,31 @@ namespace source2sdk
         class CCitadelHideoutInteractableProp : public source2sdk::client::C_DynamicProp
         {
         public:
-            uint8_t _pad0f60[0x8]; // 0xf60
-            source2sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0xf68            
-            source2sdk::entity2::CEntityIOOutput m_OnStartTouchAll; // 0xf90            
-            source2sdk::entity2::CEntityIOOutput m_OnEndTouch; // 0xfb8            
-            source2sdk::entity2::CEntityIOOutput m_OnEndTouchAll; // 0xfe0            
-            source2sdk::entity2::CEntityIOOutput m_OnInteracted; // 0x1008            
+            uint8_t _pad0ee0[0x8]; // 0xee0
+            source2sdk::entity2::CEntityIOOutput m_OnStartTouch; // 0xee8            
+            source2sdk::entity2::CEntityIOOutput m_OnStartTouchAll; // 0xf00            
+            source2sdk::entity2::CEntityIOOutput m_OnEndTouch; // 0xf18            
+            source2sdk::entity2::CEntityIOOutput m_OnEndTouchAll; // 0xf30            
+            source2sdk::entity2::CEntityIOOutput m_OnInteracted; // 0xf48            
             // metadata: MNetworkEnable
-            CUtlString m_strInteractLocString; // 0x1030            
+            CUtlString m_strInteractLocString; // 0xf60            
             // metadata: MNetworkEnable
-            source2sdk::client::EHideoutButtonInteractStyle m_eInteractStyle; // 0x1038            
+            source2sdk::client::EHideoutButtonInteractStyle m_eInteractStyle; // 0xf68            
             // metadata: MNetworkEnable
-            source2sdk::client::EHideoutButtonAction m_eHideoutAction; // 0x103c            
+            source2sdk::client::EHideoutButtonAction m_eHideoutAction; // 0xf6c            
             // metadata: MNetworkEnable
-            float m_flInteractDistance; // 0x1040            
-            uint8_t _pad1044[0x4]; // 0x1044
+            float m_flInteractDistance; // 0xf70            
+            uint8_t _pad0f74[0x4]; // 0xf74
             // metadata: MNetworkEnable
-            CUtlString m_strWorldPanelEntity; // 0x1048            
+            CUtlString m_strWorldPanelEntity; // 0xf78            
             // metadata: MNetworkEnable
-            CUtlString m_strOpacityCurveString; // 0x1050            
-            uint8_t _pad1058[0x48];
+            CUtlString m_strOpacityCurveString; // 0xf80            
+            uint8_t _pad0f88[0x48];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelHideoutInteractableProp because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelHideoutInteractableProp) == 0x10a0);
+        static_assert(sizeof(source2sdk::client::CCitadelHideoutInteractableProp) == 0xfd0);
     };
 };

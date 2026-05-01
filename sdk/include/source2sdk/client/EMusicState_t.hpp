@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 63
+        // Enumerator count: 78
         // Alignment: 4
         // Size: 0x4
         enum class EMusicState_t : std::uint32_t
@@ -60,11 +60,11 @@ namespace source2sdk
             EStinger_CheaterVote = 0x26,
             EMusicState_Won = 0x27,
             EMusicState_Lost = 0x28,
-            EMusicState_MainMenu = 0x29,
-            EMusicState_HideoutBuild = 0x2a,
-            EMusicState_Hideout = 0x2b,
-            EMusicState_HideoutSearch = 0x2c,
-            EMusicState_HideoutWait = 0x2d,
+            EMusicState_HideoutBuild = 0x29,
+            EMusicState_Hideout = 0x2a,
+            EMusicState_HideoutSearch = 0x2b,
+            EMusicState_HideoutWait = 0x2c,
+            EMusicState_HideoutRem = 0x2d,
             EMusicState_Title = 0x2e,
             EStinger_RevealRank_01 = 0x2f,
             EStinger_RevealRank_02 = 0x30,
@@ -79,8 +79,23 @@ namespace source2sdk
             EStinger_RevealRank_11 = 0x39,
             EStinger_RevealVote = 0x3a,
             EMusicState_AssignedGameLobby = 0x3b,
-            EMusicState_PreMatchCountdown = 0x3c,
-            EMusicState_Count = 0x3d,
+            EMusicState_MatchIntro_Connecting = 0x3c,
+            EMusicState_MatchIntro_HeroReveal = 0x3d,
+            EMusicState_Brawl_RoundWon = 0x3e,
+            EMusicState_Brawl_RoundLost = 0x3f,
+            EMusicState_Brawl_RoundWait = 0x40,
+            EStinger_Brawl_OvertimeAnnounce = 0x41,
+            EMusicState_Brawl_RoundStart1 = 0x42,
+            EMusicState_Brawl_RoundStart2 = 0x43,
+            EMusicState_Brawl_RoundStart3 = 0x44,
+            EMusicState_Brawl_RoundStart4 = 0x45,
+            EMusicState_Brawl_RoundStart5 = 0x46,
+            EMusicState_Brawl_MatchWon = 0x47,
+            EMusicState_Brawl_MatchLost = 0x48,
+            EMusicState_PostGame = 0x49,
+            EMusicState_MatchStart_Main = 0x4a,
+            EMusicState_MatchStart_Brawl = 0x4b,
+            EMusicState_Count = 0x4c,
         };
     };
 };

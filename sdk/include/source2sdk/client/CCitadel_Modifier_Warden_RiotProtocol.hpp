@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x280
+        // Size: 0x400
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Warden_RiotProtocol : public source2sdk::client::CCitadelModifier
@@ -39,12 +39,12 @@ namespace source2sdk
             std::int32_t m_nNumPlayersKilled; // 0xec            
             QAngle m_playerAngles; // 0xf0            
             source2sdk::client::ParticleIndex_t m_ConeParticle; // 0xfc            
-            uint8_t _pad0100[0x180];
+            uint8_t _pad0100[0x300];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Warden_RiotProtocol because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Warden_RiotProtocol) == 0x280);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Warden_RiotProtocol) == 0x400);
     };
 };

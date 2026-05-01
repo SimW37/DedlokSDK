@@ -21,9 +21,6 @@ namespace source2sdk
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: MCellForDomain "TestDomain"
-        // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "à°&þø"
         // static metadata: MPropertyFriendlyName "Find Fake Entity"
         #pragma pack(push, 1)
         class CPulseCell_Val_TestDomainFindEntityByName : public source2sdk::pulse_runtime_lib::CPulseCell_BaseValue

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x920
+        // Size: 0x910
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_ZapParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ZapParticle;
-            char m_ZapParticle[0xe0]; // 0x760            
+            char m_ZapParticle[0xe0]; // 0x750            
             // m_TargetScreenParticleEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetScreenParticleEffect;
-            char m_TargetScreenParticleEffect[0xe0]; // 0x840            
+            char m_TargetScreenParticleEffect[0xe0]; // 0x830            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_LightningBallVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_LightningBallVData) == 0x920);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_LightningBallVData) == 0x910);
     };
 };

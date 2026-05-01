@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x250
+        // Size: 0x268
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
         public:
             // metadata: MPropertyFriendlyName "field to init"
             // metadata: MPropertyAttributeChoiceName "particlefield"
-            source2sdk::particles::ParticleAttributeIndex_t m_nAttributeToCopy; // 0x1c8            
+            source2sdk::particles::ParticleAttributeIndex_t m_nAttributeToCopy; // 0x1e0            
             // metadata: MPropertyFriendlyName "event type"
-            source2sdk::particles::EventTypeSelection_t m_nEventType; // 0x1cc            
-            uint8_t _pad01d0[0x80];
+            source2sdk::particles::EventTypeSelection_t m_nEventType; // 0x1e4            
+            uint8_t _pad01e8[0x80];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_INIT_InitFromParentKilled because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::particles::C_INIT_InitFromParentKilled) == 0x250);
+        static_assert(sizeof(source2sdk::particles::C_INIT_InitFromParentKilled) == 0x268);
     };
 };

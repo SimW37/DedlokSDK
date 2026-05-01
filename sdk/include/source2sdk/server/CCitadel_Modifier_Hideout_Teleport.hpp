@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe0
+        // Size: 0xe8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Hideout_Teleport : public source2sdk::server::CCitadelModifier
         {
         public:
-            CUtlString m_sDestMap; // 0xc8            
-            CUtlString m_sDestLocString; // 0xd0            
-            CUtlString m_sLandmarkName; // 0xd8            
+            CUtlString m_sDestMap; // 0xd0            
+            CUtlString m_sDestLocString; // 0xd8            
+            CUtlString m_sLandmarkName; // 0xe0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Hideout_Teleport because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Hideout_Teleport) == 0xe0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Hideout_Teleport) == 0xe8);
     };
 };

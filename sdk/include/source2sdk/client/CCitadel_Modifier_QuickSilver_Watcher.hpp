@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x248
+        // Size: 0x3a0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_QuickSilver_Watcher : public source2sdk::client::CCitadel_Modifier_BaseEventProc
         {
         public:
-            uint8_t _pad0178[0xc4]; // 0x178
-            bool m_bProcNextHit; // 0x23c            
-            uint8_t _pad023d[0xb];
+            uint8_t _pad01f8[0x184]; // 0x1f8
+            bool m_bProcNextHit; // 0x37c            
+            uint8_t _pad037d[0x23];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_QuickSilver_Watcher because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_QuickSilver_Watcher) == 0x248);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_QuickSilver_Watcher) == 0x3a0);
     };
 };

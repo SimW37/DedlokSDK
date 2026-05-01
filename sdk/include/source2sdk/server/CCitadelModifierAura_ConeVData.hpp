@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x7c0
+        // Size: 0x7b0
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -25,13 +25,13 @@ namespace source2sdk
         class CCitadelModifierAura_ConeVData : public source2sdk::server::CCitadelModifierAuraVData
         {
         public:
-            float m_flAuraTargetingConeHalfWidth; // 0x7b8            
-            float m_flAuraTargetingConeAngle; // 0x7bc            
+            float m_flAuraTargetingConeHalfWidth; // 0x7a8            
+            float m_flAuraTargetingConeAngle; // 0x7ac            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelModifierAura_ConeVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelModifierAura_ConeVData) == 0x7c0);
+        static_assert(sizeof(source2sdk::server::CCitadelModifierAura_ConeVData) == 0x7b0);
     };
 };

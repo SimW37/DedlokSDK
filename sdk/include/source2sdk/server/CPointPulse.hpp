@@ -17,18 +17,17 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x4f0
+        // Size: 0x4a0
         // Has VTable
-        // 
-        // static metadata: MPulseDomainOptInVariableKeysSource
         #pragma pack(push, 1)
         class CPointPulse : public source2sdk::server::CBaseEntity
         {
         public:
+            // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CPointPulse) == 0x4f0);
+        static_assert(sizeof(source2sdk::server::CPointPulse) == 0x4a0);
     };
 };

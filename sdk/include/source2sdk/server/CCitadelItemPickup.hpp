@@ -3,6 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/EObjectivePositions_t.hpp"
 #include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/server/CCitadelAnimatingModelEntity.hpp"
 #include "source2sdk/server/CCitadelMinimapComponent.hpp"
@@ -23,10 +24,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0x6530
+        // Size: 0x5500
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
@@ -40,42 +41,44 @@ namespace source2sdk
         class CCitadelItemPickup : public source2sdk::server::CCitadelAnimatingModelEntity
         {
         public:
-            uint8_t _pad0c18[0x18]; // 0xc18
+            uint8_t _pad0be0[0x18]; // 0xbe0
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
             // metadata: MNetworkAlias "CCitadelMinimapComponent"
             // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xc30            
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xbf8            
             // metadata: MNetworkEnable
-            std::int32_t m_eLootType; // 0xc48            
+            std::int32_t m_eLootType; // 0xc18            
             // metadata: MNetworkEnable
-            std::int32_t m_nCurrencyValue; // 0xc4c            
+            std::int32_t m_nCurrencyValue; // 0xc1c            
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_iszModelName; // 0xc50            
+            CUtlSymbolLarge m_iszModelName; // 0xc20            
             // metadata: MNetworkEnable
-            float m_flModelScale; // 0xc58            
+            float m_flModelScale; // 0xc28            
             // metadata: MNetworkEnable
             // m_hTargetPlayer has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hTargetPlayer;
-            char m_hTargetPlayer[0x4]; // 0xc5c            
+            char m_hTargetPlayer[0x4]; // 0xc2c            
             // metadata: MNetworkEnable
-            float m_flFallRate; // 0xc60            
-            uint8_t _pad0c64[0xc]; // 0xc64
-            Vector m_vHomePosition; // 0xc70            
-            Vector m_vDropPosition; // 0xc7c            
-            source2sdk::entity2::GameTime_t m_tFirstPickupTime; // 0xc88            
-            uint8_t _pad0c8c[0x58a4];
+            float m_flFallRate; // 0xc30            
+            source2sdk::client::EObjectivePositions_t m_eObjectivePosition; // 0xc34            
+            bool m_bRequireGroundForPickup; // 0xc38            
+            // metadata: MNotSaved
+            bool m_bOnGround; // 0xc39            
+            uint8_t _pad0c3a[0x2]; // 0xc3a
+            std::int32_t m_nKillingTeamNumber; // 0xc3c            
+            VectorWS m_vHomePosition; // 0xc40            
+            VectorWS m_vDropPosition; // 0xc4c            
+            source2sdk::entity2::GameTime_t m_tFirstPickupTime; // 0xc58            
+            uint8_t _pad0c5c[0x48a4];
             
             // Datamap fields:
-            // bool m_bRequireGroundForPickup; // 0xc68
             // bool from_crate; // 0x7fffffff
-            // int32_t m_eObjectivePosition; // 0xc64
-            // int32_t m_nKillingTeamNumber; // 0xc6c
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelItemPickup because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelItemPickup) == 0x6530);
+        static_assert(sizeof(source2sdk::server::CCitadelItemPickup) == 0x5500);
     };
 };

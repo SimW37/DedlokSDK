@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1930
+        // Size: 0x1b10
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,34 +28,34 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Modifiers"
+            // m_InterruptNotificationModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_InterruptNotificationModifier;
+            char m_InterruptNotificationModifier[0x10]; // 0x1818            
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x1700            
-            // m_ImmunityModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_ImmunityModifier;
-            char m_ImmunityModifier[0x10]; // 0x1710            
-            // m_FireRateModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_FireRateModifier;
-            char m_FireRateModifier[0x10]; // 0x1720            
-            // m_DummyCameraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DummyCameraModifier;
-            char m_DummyCameraModifier[0x10]; // 0x1730            
+            char m_BuffModifier[0x10]; // 0x1828            
             // metadata: MPropertyStartGroup "Visuals"
+            // m_preTeleportParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_preTeleportParticle;
+            char m_preTeleportParticle[0xe0]; // 0x1838            
             // m_TeleportStartParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportStartParticle;
-            char m_TeleportStartParticle[0xe0]; // 0x1740            
+            char m_TeleportStartParticle[0xe0]; // 0x1918            
             // m_TeleportEndParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TeleportEndParticle;
-            char m_TeleportEndParticle[0xe0]; // 0x1820            
+            char m_TeleportEndParticle[0xe0]; // 0x19f8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strArriveSound; // 0x1900            
-            CSoundEventName m_strDepartSound; // 0x1910            
-            CSoundEventName m_strChannelDestinationSound; // 0x1920            
+            CSoundEventName m_strArriveSound; // 0x1ad8            
+            CSoundEventName m_strDepartSound; // 0x1ae8            
+            CSoundEventName m_strChannelDestinationSound; // 0x1af8            
+            // metadata: MPropertyStartGroup "Gameplay"
+            float m_flObjectiveOffset; // 0x1b08            
+            uint8_t _pad1b0c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Mirage_Teleport_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Mirage_Teleport_VData) == 0x1930);
+        static_assert(sizeof(source2sdk::server::CAbility_Mirage_Teleport_VData) == 0x1b10);
     };
 };

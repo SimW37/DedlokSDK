@@ -14,21 +14,21 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xcc8
+        // Size: 0xc90
         // Has VTable
         #pragma pack(push, 1)
         class CNPC_Neutral_Hideout_Rabbit : public source2sdk::server::CNPC_Neutral_Hideout_Cat
         {
         public:
-            uint8_t _pad0cb8[0x10];
+            uint8_t _pad0c80[0x10];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CNPC_Neutral_Hideout_Rabbit) == 0xcc8);
+        static_assert(sizeof(source2sdk::server::CNPC_Neutral_Hideout_Rabbit) == 0xc90);
     };
 };

@@ -19,25 +19,25 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf0
+        // Size: 0xf8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Knockdown : public source2sdk::server::CCitadel_Modifier_Stunned
         {
         public:
-            QAngle m_angStunAngles; // 0xd0            
-            source2sdk::client::EKnockDownTypes m_ePreferredKnockdownType; // 0xdc            
-            bool m_bForceTakePreferred; // 0xe0            
-            uint8_t _pad00e1[0x3]; // 0xe1
-            source2sdk::entity2::GameTime_t m_flGetUpAnimTime; // 0xe4            
-            bool m_bGetUpCamSeqStarted; // 0xe8            
+            QAngle m_angStunAngles; // 0xd8            
+            source2sdk::client::EKnockDownTypes m_ePreferredKnockdownType; // 0xe4            
+            bool m_bForceTakePreferred; // 0xe8            
             uint8_t _pad00e9[0x3]; // 0xe9
-            float m_flOnGroundDuration; // 0xec            
+            source2sdk::entity2::GameTime_t m_flGetUpAnimTime; // 0xec            
+            bool m_bGetUpCamSeqStarted; // 0xf0            
+            uint8_t _pad00f1[0x3]; // 0xf1
+            float m_flOnGroundDuration; // 0xf4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Knockdown because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Knockdown) == 0xf0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Knockdown) == 0xf8);
     };
 };

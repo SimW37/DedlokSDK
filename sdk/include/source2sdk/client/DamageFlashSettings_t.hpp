@@ -16,7 +16,7 @@ namespace source2sdk
         // Registered alignment: 0x4
         // Alignment: 0x4
         // Standard-layout class: true
-        // Size: 0x18
+        // Size: 0x1c
         // Has Trivial Destructor
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,7 +29,9 @@ namespace source2sdk
             float m_flHardness; // 0x8            
             float m_flBrightness; // 0xc            
             float m_flBrightnessInLightSensitivityMode; // 0x10            
-            Color m_Color; // 0x14            
+            bool m_bHeadOnly; // 0x14            
+            Color m_Color; // 0x15            
+            uint8_t _pad0019[0x3];
         };
         #pragma pack(pop)
         
@@ -38,8 +40,9 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::DamageFlashSettings_t, m_flHardness) == 0x8);
         static_assert(offsetof(source2sdk::client::DamageFlashSettings_t, m_flBrightness) == 0xc);
         static_assert(offsetof(source2sdk::client::DamageFlashSettings_t, m_flBrightnessInLightSensitivityMode) == 0x10);
-        static_assert(offsetof(source2sdk::client::DamageFlashSettings_t, m_Color) == 0x14);
+        static_assert(offsetof(source2sdk::client::DamageFlashSettings_t, m_bHeadOnly) == 0x14);
+        static_assert(offsetof(source2sdk::client::DamageFlashSettings_t, m_Color) == 0x15);
         
-        static_assert(sizeof(source2sdk::client::DamageFlashSettings_t) == 0x18);
+        static_assert(sizeof(source2sdk::client::DamageFlashSettings_t) == 0x1c);
     };
 };

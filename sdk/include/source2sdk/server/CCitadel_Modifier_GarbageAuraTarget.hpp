@@ -17,23 +17,23 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x188
+        // Size: 0x210
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_GarbageAuraTarget : public source2sdk::server::CCitadel_Modifier_Stunned
         {
         public:
-            uint8_t _pad00d0[0x80]; // 0xd0
-            float m_flMaxDist; // 0x150            
-            Vector m_vecOffsetDir; // 0x154            
-            Vector m_vecStartPosition; // 0x160            
-            float m_flAOERadius; // 0x16c            
-            uint8_t _pad0170[0x18];
+            uint8_t _pad00d8[0x100]; // 0xd8
+            float m_flMaxDist; // 0x1d8            
+            Vector m_vecOffsetDir; // 0x1dc            
+            Vector m_vecStartPosition; // 0x1e8            
+            float m_flAOERadius; // 0x1f4            
+            uint8_t _pad01f8[0x18];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_GarbageAuraTarget because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_GarbageAuraTarget) == 0x188);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_GarbageAuraTarget) == 0x210);
     };
 };

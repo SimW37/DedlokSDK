@@ -24,29 +24,33 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0x590
+        // Size: 0x540
         // Has VTable
         #pragma pack(push, 1)
         class CBaseMoveBehavior : public source2sdk::server::CPathKeyFrame
         {
         public:
-            std::int32_t m_iPositionInterpolator; // 0x550            
-            std::int32_t m_iRotationInterpolator; // 0x554            
-            float m_flAnimStartTime; // 0x558            
-            float m_flAnimEndTime; // 0x55c            
-            float m_flAverageSpeedAcrossFrame; // 0x560            
-            uint8_t _pad0564[0x4]; // 0x564
-            source2sdk::server::CPathKeyFrame* m_pCurrentKeyFrame; // 0x568            
-            source2sdk::server::CPathKeyFrame* m_pTargetKeyFrame; // 0x570            
-            source2sdk::server::CPathKeyFrame* m_pPreKeyFrame; // 0x578            
-            source2sdk::server::CPathKeyFrame* m_pPostKeyFrame; // 0x580            
-            float m_flTimeIntoFrame; // 0x588            
-            std::int32_t m_iDirection; // 0x58c            
+            std::int32_t m_iPositionInterpolator; // 0x500            
+            std::int32_t m_iRotationInterpolator; // 0x504            
+            float m_flAnimStartTime; // 0x508            
+            float m_flAnimEndTime; // 0x50c            
+            float m_flAverageSpeedAcrossFrame; // 0x510            
+            uint8_t _pad0514[0x4]; // 0x514
+            // metadata: MClassPtr
+            source2sdk::server::CPathKeyFrame* m_pCurrentKeyFrame; // 0x518            
+            // metadata: MClassPtr
+            source2sdk::server::CPathKeyFrame* m_pTargetKeyFrame; // 0x520            
+            // metadata: MClassPtr
+            source2sdk::server::CPathKeyFrame* m_pPreKeyFrame; // 0x528            
+            // metadata: MClassPtr
+            source2sdk::server::CPathKeyFrame* m_pPostKeyFrame; // 0x530            
+            float m_flTimeIntoFrame; // 0x538            
+            std::int32_t m_iDirection; // 0x53c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CBaseMoveBehavior because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CBaseMoveBehavior) == 0x590);
+        static_assert(sizeof(source2sdk::server::CBaseMoveBehavior) == 0x540);
     };
 };

@@ -23,10 +23,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xb48
+        // Size: 0xb20
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
@@ -45,35 +45,37 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
             // metadata: MNetworkAlias "CCitadelMinimapComponent"
             // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xab8            
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0xa80            
             // metadata: MNetworkEnable
-            bool m_bActive; // 0xad0            
-            uint8_t _pad0ad1[0x7]; // 0xad1
+            bool m_bActive; // 0xaa0            
+            uint8_t _pad0aa1[0x7]; // 0xaa1
             // metadata: MNetworkEnable
-            CUtlString m_sPickupName; // 0xad8            
+            CUtlString m_sPickupName; // 0xaa8            
             // metadata: MNetworkEnable
-            std::int32_t m_nNameOffset; // 0xae0            
-            uint8_t _pad0ae4[0x4]; // 0xae4
+            std::int32_t m_nNameOffset; // 0xab0            
+            uint8_t _pad0ab4[0x4]; // 0xab4
             // metadata: MNetworkEnable
-            CUtlString m_sAmbientNoise; // 0xae8            
+            CUtlString m_sAmbientNoise; // 0xab8            
             // metadata: MNetworkEnable
-            Vector m_vVacuumStartPos; // 0xaf0            
+            Vector m_vVacuumStartPos; // 0xac0            
             // metadata: MNetworkEnable
-            Vector m_vInitialVacuumVel; // 0xafc            
+            Vector m_vInitialVacuumVel; // 0xacc            
             // metadata: MNetworkEnable
             // m_hVacuumTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelPlayerPawn> m_hVacuumTarget;
-            char m_hVacuumTarget[0x4]; // 0xb08            
-            uint8_t _pad0b0c[0x1c]; // 0xb0c
-            source2sdk::entity2::GameTime_t m_flVacuumStartTime; // 0xb28            
-            Vector m_vImpactVel; // 0xb2c            
-            Vector m_vImpactPos; // 0xb38            
-            source2sdk::entity2::GameTime_t m_flImpactTime; // 0xb44            
+            char m_hVacuumTarget[0x4]; // 0xad8            
+            uint8_t _pad0adc[0x10]; // 0xadc
+            VectorWS m_vVacuumPos; // 0xaec            
+            source2sdk::entity2::GameTime_t m_flVacuumStartTime; // 0xaf8            
+            Vector m_vImpactVel; // 0xafc            
+            Vector m_vImpactPos; // 0xb08            
+            source2sdk::entity2::GameTime_t m_flImpactTime; // 0xb14            
+            uint8_t _pad0b18[0x8];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_BreakablePropPickup because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_BreakablePropPickup) == 0xb48);
+        static_assert(sizeof(source2sdk::server::CCitadel_BreakablePropPickup) == 0xb20);
     };
 };

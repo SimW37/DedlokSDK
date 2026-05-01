@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x930
+        // Size: 0x920
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,16 +30,16 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_LassoEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LassoEffect;
-            char m_LassoEffect[0xe0]; // 0x840            
+            char m_LassoEffect[0xe0]; // 0x830            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_StunModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_StunModifier;
-            char m_StunModifier[0x10]; // 0x920            
+            char m_StunModifier[0x10]; // 0x910            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifierGravityLassoEnemyVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifierGravityLassoEnemyVData) == 0x930);
+        static_assert(sizeof(source2sdk::server::CModifierGravityLassoEnemyVData) == 0x920);
     };
 };

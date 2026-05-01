@@ -3,7 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/client/C_BaseModelEntity.hpp"
+#include "source2sdk/client/C_NPC_Neutral_Weakpoint.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -17,10 +17,10 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9d0
+        // Size: 0x9a0
         // Has VTable
         #pragma pack(push, 1)
-        class C_NPC_Neutral_Flying_Weakpoint : public source2sdk::client::C_BaseModelEntity
+        class C_NPC_Neutral_Flying_Weakpoint : public source2sdk::client::C_NPC_Neutral_Weakpoint
         {
         public:
             // No schema binary for binding
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::C_NPC_Neutral_Flying_Weakpoint) == 0x9d0);
+        static_assert(sizeof(source2sdk::client::C_NPC_Neutral_Flying_Weakpoint) == 0x9a0);
     };
 };

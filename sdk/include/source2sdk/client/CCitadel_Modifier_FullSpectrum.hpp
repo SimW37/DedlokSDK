@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1e0
+        // Size: 0x2a0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_FullSpectrum : public source2sdk::client::CCitadel_Modifier_BaseEventProc
         {
         public:
-            uint8_t _pad0178[0x68];
+            uint8_t _pad01f8[0xa8];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_FullSpectrum) == 0x1e0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_FullSpectrum) == 0x2a0);
     };
 };

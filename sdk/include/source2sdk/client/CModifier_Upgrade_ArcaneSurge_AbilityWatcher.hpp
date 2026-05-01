@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1c8
+        // Size: 0x2c8
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Upgrade_ArcaneSurge_AbilityWatcher : public source2sdk::client::CCitadelModifier
@@ -34,12 +34,12 @@ namespace source2sdk
             // CHandle<source2sdk::client::C_CitadelBaseAbility> m_hBuffedAbility;
             char m_hBuffedAbility[0x4]; // 0xc0            
             bool m_bRecastingBuffedAbility; // 0xc4            
-            uint8_t _pad00c5[0x103];
+            uint8_t _pad00c5[0x203];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Upgrade_ArcaneSurge_AbilityWatcher because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CModifier_Upgrade_ArcaneSurge_AbilityWatcher) == 0x1c8);
+        static_assert(sizeof(source2sdk::client::CModifier_Upgrade_ArcaneSurge_AbilityWatcher) == 0x2c8);
     };
 };

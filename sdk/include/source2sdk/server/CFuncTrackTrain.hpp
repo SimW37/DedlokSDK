@@ -28,7 +28,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x960
+        // Size: 0x8a0
         // Has VTable
         #pragma pack(push, 1)
         class CFuncTrackTrain : public source2sdk::server::CBaseModelEntity
@@ -36,48 +36,54 @@ namespace source2sdk
         public:
             // m_ppath has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CPathTrack> m_ppath;
-            char m_ppath[0x4]; // 0x808            
-            float m_length; // 0x80c            
-            Vector m_vPosPrev; // 0x810            
-            QAngle m_angPrev; // 0x81c            
-            Vector m_controlMins; // 0x828            
-            Vector m_controlMaxs; // 0x834            
-            Vector m_lastBlockPos; // 0x840            
-            std::int32_t m_lastBlockTick; // 0x84c            
-            float m_flVolume; // 0x850            
-            float m_flBank; // 0x854            
-            float m_oldSpeed; // 0x858            
-            float m_flBlockDamage; // 0x85c            
-            float m_height; // 0x860            
-            float m_maxSpeed; // 0x864            
-            float m_dir; // 0x868            
-            uint8_t _pad086c[0x4]; // 0x86c
-            CUtlSymbolLarge m_iszSoundMove; // 0x870            
-            CUtlSymbolLarge m_iszSoundMovePing; // 0x878            
-            CUtlSymbolLarge m_iszSoundStart; // 0x880            
-            CUtlSymbolLarge m_iszSoundStop; // 0x888            
-            CUtlSymbolLarge m_strPathTarget; // 0x890            
-            float m_flMoveSoundMinDuration; // 0x898            
-            float m_flMoveSoundMaxDuration; // 0x89c            
-            source2sdk::entity2::GameTime_t m_flNextMoveSoundTime; // 0x8a0            
-            float m_flMoveSoundMinPitch; // 0x8a4            
-            float m_flMoveSoundMaxPitch; // 0x8a8            
-            source2sdk::server::TrainOrientationType_t m_eOrientationType; // 0x8ac            
-            source2sdk::server::TrainVelocityType_t m_eVelocityType; // 0x8b0            
-            uint8_t _pad08b4[0x14]; // 0x8b4
-            source2sdk::entity2::CEntityIOOutput m_OnStart; // 0x8c8            
-            source2sdk::entity2::CEntityIOOutput m_OnNext; // 0x8f0            
-            source2sdk::entity2::CEntityIOOutput m_OnArrivedAtDestinationNode; // 0x918            
-            bool m_bManualSpeedChanges; // 0x940            
-            uint8_t _pad0941[0x3]; // 0x941
-            float m_flDesiredSpeed; // 0x944            
-            source2sdk::entity2::GameTime_t m_flSpeedChangeTime; // 0x948            
-            float m_flAccelSpeed; // 0x94c            
-            float m_flDecelSpeed; // 0x950            
-            bool m_bAccelToSpeed; // 0x954            
-            uint8_t _pad0955[0x3]; // 0x955
-            source2sdk::entity2::GameTime_t m_flNextMPSoundTime; // 0x958            
-            uint8_t _pad095c[0x4];
+            char m_ppath[0x4]; // 0x778            
+            float m_length; // 0x77c            
+            Vector m_vPosPrev; // 0x780            
+            QAngle m_angPrev; // 0x78c            
+            Vector m_controlMins; // 0x798            
+            Vector m_controlMaxs; // 0x7a4            
+            // metadata: MNotSaved
+            Vector m_lastBlockPos; // 0x7b0            
+            // metadata: MNotSaved
+            std::int32_t m_lastBlockTick; // 0x7bc            
+            float m_flVolume; // 0x7c0            
+            float m_flBank; // 0x7c4            
+            float m_oldSpeed; // 0x7c8            
+            float m_flBlockDamage; // 0x7cc            
+            float m_height; // 0x7d0            
+            float m_maxSpeed; // 0x7d4            
+            float m_dir; // 0x7d8            
+            uint8_t _pad07dc[0x4]; // 0x7dc
+            CUtlSymbolLarge m_iszSoundMove; // 0x7e0            
+            CUtlSymbolLarge m_iszSoundMovePing; // 0x7e8            
+            CUtlSymbolLarge m_iszSoundStart; // 0x7f0            
+            CUtlSymbolLarge m_iszSoundStop; // 0x7f8            
+            CUtlSymbolLarge m_strPathTarget; // 0x800            
+            float m_flMoveSoundMinDuration; // 0x808            
+            float m_flMoveSoundMaxDuration; // 0x80c            
+            source2sdk::entity2::GameTime_t m_flNextMoveSoundTime; // 0x810            
+            float m_flMoveSoundMinPitch; // 0x814            
+            float m_flMoveSoundMaxPitch; // 0x818            
+            source2sdk::server::TrainOrientationType_t m_eOrientationType; // 0x81c            
+            source2sdk::server::TrainVelocityType_t m_eVelocityType; // 0x820            
+            uint8_t _pad0824[0x14]; // 0x824
+            source2sdk::entity2::CEntityIOOutput m_OnStart; // 0x838            
+            source2sdk::entity2::CEntityIOOutput m_OnNext; // 0x850            
+            source2sdk::entity2::CEntityIOOutput m_OnArrivedAtDestinationNode; // 0x868            
+            bool m_bManualSpeedChanges; // 0x880            
+            uint8_t _pad0881[0x3]; // 0x881
+            // metadata: MNotSaved
+            float m_flDesiredSpeed; // 0x884            
+            // metadata: MNotSaved
+            source2sdk::entity2::GameTime_t m_flSpeedChangeTime; // 0x888            
+            float m_flAccelSpeed; // 0x88c            
+            float m_flDecelSpeed; // 0x890            
+            // metadata: MNotSaved
+            bool m_bAccelToSpeed; // 0x894            
+            uint8_t _pad0895[0x3]; // 0x895
+            // metadata: MNotSaved
+            source2sdk::entity2::GameTime_t m_flNextMPSoundTime; // 0x898            
+            uint8_t _pad089c[0x4];
             
             // Datamap fields:
             // void InputStop; // 0x0
@@ -105,6 +111,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CFuncTrackTrain because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFuncTrackTrain) == 0x960);
+        static_assert(sizeof(source2sdk::server::CFuncTrackTrain) == 0x8a0);
     };
 };

@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe98
+        // Size: 0x15a0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "Vector m_vStartPosition"
@@ -38,37 +38,38 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vStartPosition; // 0xba0            
+            Vector m_vStartPosition; // 0xf90            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vDashDirection; // 0xbac            
+            Vector m_vDashDirection; // 0xf9c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bIsDashing; // 0xbb8            
+            bool m_bIsDashing; // 0xfa8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bStartedInAir; // 0xbb9            
-            uint8_t _pad0bba[0x6]; // 0xbba
+            bool m_bStartedInAir; // 0xfa9            
+            uint8_t _pad0faa[0x6]; // 0xfaa
             // m_vecHitEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CEntityIndex> m_vecHitEnemies;
-            char m_vecHitEnemies[0x18]; // 0xbc0            
-            Vector m_vecLastPosition; // 0xbd8            
-            std::int32_t m_nReductionsLeft; // 0xbe4            
-            uint8_t _pad0be8[0x280]; // 0xbe8
-            source2sdk::entity2::GameTime_t m_flStuckTime; // 0xe68            
+            char m_vecHitEnemies[0x18]; // 0xfb0            
+            Vector m_vecLastPosition; // 0xfc8            
+            std::int32_t m_nReductionsLeft; // 0xfd4            
+            uint8_t _pad0fd8[0x580]; // 0xfd8
+            source2sdk::entity2::GameTime_t m_flStuckTime; // 0x1558            
+            uint8_t _pad155c[0x14]; // 0x155c
             // m_hEchoThinker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CPointModifierThinker> m_hEchoThinker;
-            char m_hEchoThinker[0x4]; // 0xe6c            
-            source2sdk::entity2::GameTime_t m_EchoStartTime; // 0xe70            
-            bool m_bLetEchoPlay; // 0xe74            
-            uint8_t _pad0e75[0x1b]; // 0xe75
-            bool m_bDiscontinuityInEcho; // 0xe90            
-            uint8_t _pad0e91[0x7];
+            char m_hEchoThinker[0x4]; // 0x1570            
+            source2sdk::entity2::GameTime_t m_EchoStartTime; // 0x1574            
+            bool m_bLetEchoPlay; // 0x1578            
+            uint8_t _pad1579[0x1f]; // 0x1579
+            bool m_bDiscontinuityInEcho; // 0x1598            
+            uint8_t _pad1599[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_ShivDash because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ShivDash) == 0xe98);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ShivDash) == 0x15a0);
     };
 };

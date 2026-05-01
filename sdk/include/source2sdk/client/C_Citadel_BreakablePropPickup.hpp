@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xde8
+        // Size: 0xdf0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bActive"
@@ -41,35 +41,35 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnActiveChanged"
-            bool m_bActive; // 0xc98            
-            uint8_t _pad0c99[0x7]; // 0xc99
+            bool m_bActive; // 0xca0            
+            uint8_t _pad0ca1[0x7]; // 0xca1
             // metadata: MNetworkEnable
-            CUtlString m_sPickupName; // 0xca0            
+            CUtlString m_sPickupName; // 0xca8            
             // metadata: MNetworkEnable
-            std::int32_t m_nNameOffset; // 0xca8            
-            uint8_t _pad0cac[0x4]; // 0xcac
+            std::int32_t m_nNameOffset; // 0xcb0            
+            uint8_t _pad0cb4[0x4]; // 0xcb4
             // metadata: MNetworkEnable
-            CUtlString m_sAmbientNoise; // 0xcb0            
+            CUtlString m_sAmbientNoise; // 0xcb8            
             // metadata: MNetworkEnable
-            Vector m_vVacuumStartPos; // 0xcb8            
+            Vector m_vVacuumStartPos; // 0xcc0            
             // metadata: MNetworkEnable
-            Vector m_vInitialVacuumVel; // 0xcc4            
+            Vector m_vInitialVacuumVel; // 0xccc            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnVacuumTargetChanged"
             // m_hVacuumTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_CitadelPlayerPawn> m_hVacuumTarget;
-            char m_hVacuumTarget[0x4]; // 0xcd0            
-            uint8_t _pad0cd4[0xfc]; // 0xcd4
-            source2sdk::entity2::GameTime_t m_flVacuumStartTime; // 0xdd0            
-            uint8_t _pad0dd4[0xc]; // 0xdd4
-            float m_flLastFrameTime; // 0xde0            
-            bool m_bVacuumFinished; // 0xde4            
-            uint8_t _pad0de5[0x3];
+            char m_hVacuumTarget[0x4]; // 0xcd8            
+            uint8_t _pad0cdc[0xfc]; // 0xcdc
+            source2sdk::entity2::GameTime_t m_flVacuumStartTime; // 0xdd8            
+            VectorWS m_vVacuumPos; // 0xddc            
+            float m_flLastFrameTime; // 0xde8            
+            bool m_bVacuumFinished; // 0xdec            
+            uint8_t _pad0ded[0x3];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_Citadel_BreakablePropPickup because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_Citadel_BreakablePropPickup) == 0xde8);
+        static_assert(sizeof(source2sdk::client::C_Citadel_BreakablePropPickup) == 0xdf0);
     };
 };

@@ -31,7 +31,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x4
         // Standard-layout class: true
-        // Size: 0x950
+        // Size: 0x10d0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_nActivateTime"
@@ -51,7 +51,7 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord"
             // metadata: MNetworkChangeCallback "OnBeamAimPosChanged"
-            Vector m_vBeamAimPos; // 0xa0            
+            VectorWS m_vBeamAimPos; // 0xa0            
             uint8_t _pad00ac[0x84]; // 0xac
             bool m_bNeedsBeamReset; // 0x130            
             uint8_t _pad0131[0x3]; // 0x131
@@ -61,9 +61,9 @@ namespace source2sdk
             // m_hPlayerShooter has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_CitadelPlayerPawn> m_hPlayerShooter;
             char m_hPlayerShooter[0x4]; // 0x138            
-            uint8_t _pad013c[0x80c]; // 0x13c
-            bool m_bEnforceLOSToShootPosition; // 0x948            
-            uint8_t _pad0949[0x7];
+            uint8_t _pad013c[0xf8c]; // 0x13c
+            bool m_bEnforceLOSToShootPosition; // 0x10c8            
+            uint8_t _pad10c9[0x7];
         };
         #pragma pack(pop)
         
@@ -73,8 +73,8 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CCitadelAbilityBeam_t, m_bNeedsBeamReset) == 0x130);
         static_assert(offsetof(source2sdk::client::CCitadelAbilityBeam_t, m_hShooter) == 0x134);
         static_assert(offsetof(source2sdk::client::CCitadelAbilityBeam_t, m_hPlayerShooter) == 0x138);
-        static_assert(offsetof(source2sdk::client::CCitadelAbilityBeam_t, m_bEnforceLOSToShootPosition) == 0x948);
+        static_assert(offsetof(source2sdk::client::CCitadelAbilityBeam_t, m_bEnforceLOSToShootPosition) == 0x10c8);
         
-        static_assert(sizeof(source2sdk::client::CCitadelAbilityBeam_t) == 0x950);
+        static_assert(sizeof(source2sdk::client::CCitadelAbilityBeam_t) == 0x10d0);
     };
 };

@@ -24,21 +24,25 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf60
+        // Size: 0x16d0
         // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "CHandle<CNPC_SimpleAnimatingAI> m_vecDeployedSentries"
         #pragma pack(push, 1)
         class CCitadel_Ability_ShieldedSentry : public source2sdk::server::CCitadelBaseAbility
         {
         public:
+            uint8_t _pad0f90[0x28]; // 0xf90
+            // metadata: MNetworkEnable
             // m_vecDeployedSentries has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CUtlVector<CHandle<source2sdk::server::CNPC_SimpleAnimatingAI>> m_vecDeployedSentries;
-            char m_vecDeployedSentries[0x18]; // 0xba0            
-            uint8_t _pad0bb8[0x3a8];
+            // CNetworkUtlVectorBase<CHandle<source2sdk::server::CNPC_SimpleAnimatingAI>> m_vecDeployedSentries;
+            char m_vecDeployedSentries[0x18]; // 0xfb8            
+            uint8_t _pad0fd0[0x700];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_ShieldedSentry because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ShieldedSentry) == 0xf60);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_ShieldedSentry) == 0x16d0);
     };
 };

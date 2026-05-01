@@ -24,20 +24,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe10
+        // Size: 0x12d0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Frank_PrimaryWeapon : public source2sdk::server::CCitadel_Ability_PrimaryWeapon
         {
         public:
-            uint8_t _pad0d78[0x8]; // 0xd78
-            source2sdk::server::CCitadelPlayerPawn* m_pNextShooter; // 0xd80            
-            uint8_t _pad0d88[0x88];
+            uint8_t _pad11b8[0x8]; // 0x11b8
+            source2sdk::server::CCitadelPlayerPawn* m_pNextShooter; // 0x11c0            
+            uint8_t _pad11c8[0x108];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Frank_PrimaryWeapon because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Frank_PrimaryWeapon) == 0xe10);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Frank_PrimaryWeapon) == 0x12d0);
     };
 };

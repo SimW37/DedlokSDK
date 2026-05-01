@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x188
+        // Size: 0x248
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Item_Bleeding_Bullets_DamageOverTime : public source2sdk::client::CCitadelModifier
         {
         public:
             source2sdk::entity2::GameTime_t m_flLastTickTime; // 0xc0            
-            uint8_t _pad00c4[0xc4];
+            uint8_t _pad00c4[0x184];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Item_Bleeding_Bullets_DamageOverTime because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Item_Bleeding_Bullets_DamageOverTime) == 0x188);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Item_Bleeding_Bullets_DamageOverTime) == 0x248);
     };
 };

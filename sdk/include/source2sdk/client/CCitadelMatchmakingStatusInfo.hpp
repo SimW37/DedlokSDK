@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x660
+        // Size: 0x648
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelMatchmakingStatusInfo : public source2sdk::client::C_PointEntity
         {
         public:
-            source2sdk::entity2::CEntityIOOutput m_OnStartMatchmaking; // 0x5e8            
-            source2sdk::entity2::CEntityIOOutput m_OnStopMatchmaking; // 0x610            
-            uint8_t _pad0638[0x28];
+            source2sdk::entity2::CEntityIOOutput m_OnStartMatchmaking; // 0x5f0            
+            source2sdk::entity2::CEntityIOOutput m_OnStopMatchmaking; // 0x608            
+            uint8_t _pad0620[0x28];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelMatchmakingStatusInfo because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelMatchmakingStatusInfo) == 0x660);
+        static_assert(sizeof(source2sdk::client::CCitadelMatchmakingStatusInfo) == 0x648);
     };
 };

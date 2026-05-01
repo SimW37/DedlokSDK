@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1d0
+        // Size: 0x1e8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,15 +26,15 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyFriendlyName "play when emission ends"
-            bool m_bFireOnEmissionEnd; // 0x1c8            
+            bool m_bFireOnEmissionEnd; // 0x1e0            
             // metadata: MPropertyFriendlyName "wait for children to finish"
-            bool m_bIncludeChildren; // 0x1c9            
-            uint8_t _pad01ca[0x6];
+            bool m_bIncludeChildren; // 0x1e1            
+            uint8_t _pad01e2[0x6];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_OP_PlayEndCapWhenFinished because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::particles::C_OP_PlayEndCapWhenFinished) == 0x1d0);
+        static_assert(sizeof(source2sdk::particles::C_OP_PlayEndCapWhenFinished) == 0x1e8);
     };
 };

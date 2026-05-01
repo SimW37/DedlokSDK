@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x228
+        // Size: 0x330
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_EmpowerBullet : public source2sdk::server::CCitadel_Modifier_BaseBulletPreRollProc
         {
         public:
-            uint8_t _pad01a0[0x80]; // 0x1a0
-            source2sdk::client::ShotID_t m_BuffedShotId; // 0x220            
-            uint8_t _pad0224[0x4];
+            uint8_t _pad0228[0x100]; // 0x228
+            source2sdk::client::ShotID_t m_BuffedShotId; // 0x328            
+            uint8_t _pad032c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_EmpowerBullet because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_EmpowerBullet) == 0x228);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_EmpowerBullet) == 0x330);
     };
 };

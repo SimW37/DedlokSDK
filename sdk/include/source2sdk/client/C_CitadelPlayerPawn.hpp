@@ -10,12 +10,21 @@
 #include "source2sdk/client/CMsgLaneColor.hpp"
 #include "source2sdk/client/FullSellPriceAbilityUpgrades_t.hpp"
 #include "source2sdk/client/HeroBuildID_t.hpp"
+#include "source2sdk/client/InputBitMask_t.hpp"
+#include "source2sdk/client/ItemDraftRoundState_t.hpp"
 #include "source2sdk/entity2/GameTime_t.hpp"
 namespace source2sdk
 {
     namespace client
     {
         struct C_BaseEntity;
+    };
+};
+namespace source2sdk
+{
+    namespace client
+    {
+        struct C_CitadelBaseAbility;
     };
 };
 
@@ -31,7 +40,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1910
+        // Size: 0x1990
         // Has VTable
         // 
         // static metadata: MNetworkVarTypeOverride "CCitadelPlayer_CameraServices m_pCameraServices"
@@ -56,10 +65,11 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "bool m_bQuickbuyAutoPurchase"
         // static metadata: MNetworkVarNames "bool m_bQuickbuyAutoQueueBuild"
         // static metadata: MNetworkVarNames "bool m_bHasQuickbuyBeenUsed"
+        // static metadata: MNetworkVarNames "EntitySubclassID_t m_vecRestrictedToItems"
         // static metadata: MNetworkVarNames "HeroBuildID_t m_unHeroBuildID"
         // static metadata: MNetworkVarNames "CUtlString m_sHeroBuildSerialized"
+        // static metadata: MNetworkVarNames "EHANDLE m_hViewEntityForObserver"
         // static metadata: MNetworkVarNames "bool m_bNetworkDisconnected"
-        // static metadata: MNetworkVarNames "bool m_bHasIncomingThreats"
         // static metadata: MNetworkVarNames "bool m_bLearningAbility"
         // static metadata: MNetworkVarNames "int m_nFlashStartTick"
         // static metadata: MNetworkVarNames "int m_nFlashMaxStartTick"
@@ -68,6 +78,8 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "int8 m_nFlashMaxAlpha"
         // static metadata: MNetworkVarNames "int32 m_nDeducedLane"
         // static metadata: MNetworkVarNames "EHANDLE m_hEnemyPlayerAimTarget"
+        // static metadata: MNetworkVarNames "bool m_arrPreventAbilityLearning"
+        // static metadata: MNetworkVarNames "ItemDraftRoundState_t m_ItemDraftRoundState"
         // static metadata: MNetworkVarNames "CCitadelRecentDamage m_sInCombat"
         // static metadata: MNetworkVarNames "CCitadelRecentDamage m_sPlayerDamageTaken"
         // static metadata: MNetworkVarNames "CCitadelRecentDamage m_sPlayerDamageDealt"
@@ -94,189 +106,210 @@ namespace source2sdk
         class C_CitadelPlayerPawn : public source2sdk::client::CCitadelPlayerPawnBase
         {
         public:
-            uint8_t _pad1120[0xf0]; // 0x1120
+            uint8_t _pad10d0[0xb8]; // 0x10d0
+            // m_hAbilityRequiresDebounce has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::client::C_CitadelBaseAbility> m_hAbilityRequiresDebounce;
+            char m_hAbilityRequiresDebounce[0x4]; // 0x1188            
+            uint8_t _pad118c[0x24]; // 0x118c
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "qangle"
             // metadata: MNetworkBitCount "11"
             // metadata: MNetworkChangeCallback "angEyeAnglesChanged"
             // metadata: MNetworkPriority "32"
-            QAngle m_angEyeAngles; // 0x1210            
-            uint8_t _pad121c[0x84]; // 0x121c
+            QAngle m_angEyeAngles; // 0x11b0            
+            uint8_t _pad11bc[0x84]; // 0x11bc
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "qangle"
             // metadata: MNetworkBitCount "11"
             // metadata: MNetworkChangeCallback "angClientCameraChanged"
             // metadata: MNetworkPriority "32"
-            QAngle m_angClientCamera; // 0x12a0            
-            uint8_t _pad12ac[0x84]; // 0x12ac
+            QAngle m_angClientCamera; // 0x1240            
+            uint8_t _pad124c[0x84]; // 0x124c
             // metadata: MNetworkEnable
-            source2sdk::client::CMsgLaneColor m_eZipLineLaneColor; // 0x1330            
+            source2sdk::client::CMsgLaneColor m_eZipLineLaneColor; // 0x12d0            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "LevelChanged"
-            std::int32_t m_nLevel; // 0x1334            
+            std::int32_t m_nLevel; // 0x12d4            
             // metadata: MNetworkEnable
             // metadata: MNetworkPriority "32"
             // metadata: MNetworkChangeCallback "CurrenciesChanged"
-            std::int32_t m_nCurrencies[4]; // 0x1338            
+            std::int32_t m_nCurrencies[6]; // 0x12d8            
             // metadata: MNetworkEnable
-            std::int32_t m_nSpentCurrencies[4]; // 0x1348            
+            std::int32_t m_nSpentCurrencies[6]; // 0x12f0            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flLastSpawnTime; // 0x1358            
+            source2sdk::entity2::GameTime_t m_flLastSpawnTime; // 0x1308            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "RespawnTimeChanged"
-            source2sdk::entity2::GameTime_t m_flRespawnTime; // 0x135c            
+            source2sdk::entity2::GameTime_t m_flRespawnTime; // 0x130c            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "InRegenZoneChanged"
-            bool m_bInRegenerationZone; // 0x1360            
+            bool m_bInRegenerationZone; // 0x1310            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "InItemShopZoneChanged"
-            bool m_bInItemShopZone; // 0x1361            
+            bool m_bInItemShopZone; // 0x1311            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "InHideoutZoneChanged"
-            bool m_bInHideoutZone; // 0x1362            
-            uint8_t _pad1363[0x1]; // 0x1363
+            bool m_bInHideoutZone; // 0x1312            
+            uint8_t _pad1313[0x1]; // 0x1313
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_timeRevealedOnMinimapByNPC; // 0x1364            
+            source2sdk::entity2::GameTime_t m_timeRevealedOnMinimapByNPC; // 0x1314            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "ItemSellPriceChanged"
             // m_vecFullSellPriceItems has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_NetworkUtlVectorBase<CUtlStringToken> m_vecFullSellPriceItems;
-            char m_vecFullSellPriceItems[0x18]; // 0x1368            
+            char m_vecFullSellPriceItems[0x18]; // 0x1318            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "AbilityUpgradeSellPriceChanged"
             // m_vecFullSellPriceAbilityUpgrades has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_NetworkUtlVectorBase<source2sdk::client::FullSellPriceAbilityUpgrades_t> m_vecFullSellPriceAbilityUpgrades;
-            char m_vecFullSellPriceAbilityUpgrades[0x18]; // 0x1380            
+            char m_vecFullSellPriceAbilityUpgrades[0x18]; // 0x1330            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "QuickbuyChanged"
             // m_vecQuickbuyQueue has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_NetworkUtlVectorBase<CUtlStringToken> m_vecQuickbuyQueue;
-            char m_vecQuickbuyQueue[0x18]; // 0x1398            
+            char m_vecQuickbuyQueue[0x18]; // 0x1348            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "QuickbuyChanged"
             // m_vecQuickbuySellQueue has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // C_NetworkUtlVectorBase<CUtlStringToken> m_vecQuickbuySellQueue;
-            char m_vecQuickbuySellQueue[0x18]; // 0x13b0            
+            char m_vecQuickbuySellQueue[0x18]; // 0x1360            
             // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerAndObsersExclusive"
             // metadata: MNetworkChangeCallback "QuickbuyPurchaseRequestChanged"
-            CUtlStringToken m_unQuickbuyAutoPurchaseRequest; // 0x13c8            
+            CUtlStringToken m_unQuickbuyAutoPurchaseRequest; // 0x1378            
             // metadata: MNetworkEnable
-            bool m_bQuickbuyAutoPurchase; // 0x13cc            
+            bool m_bQuickbuyAutoPurchase; // 0x137c            
             // metadata: MNetworkEnable
-            bool m_bQuickbuyAutoQueueBuild; // 0x13cd            
+            bool m_bQuickbuyAutoQueueBuild; // 0x137d            
             // metadata: MNetworkEnable
-            bool m_bHasQuickbuyBeenUsed; // 0x13ce            
-            uint8_t _pad13cf[0x1]; // 0x13cf
+            bool m_bHasQuickbuyBeenUsed; // 0x137e            
+            uint8_t _pad137f[0x1]; // 0x137f
             // metadata: MNetworkEnable
-            source2sdk::client::HeroBuildID_t m_unHeroBuildID; // 0x13d0            
-            uint8_t _pad13d4[0x4]; // 0x13d4
+            // metadata: MNetworkUserGroup "LocalPlayerAndObserversExclusive"
+            // m_vecRestrictedToItems has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // C_NetworkUtlVectorBase<CUtlStringToken> m_vecRestrictedToItems;
+            char m_vecRestrictedToItems[0x18]; // 0x1380            
+            // metadata: MNetworkEnable
+            source2sdk::client::HeroBuildID_t m_unHeroBuildID; // 0x1398            
+            uint8_t _pad139c[0x4]; // 0x139c
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "HeroBuildChanged"
-            CUtlString m_sHeroBuildSerialized; // 0x13d8            
+            CUtlString m_sHeroBuildSerialized; // 0x13a0            
             // metadata: MNetworkEnable
-            bool m_bNetworkDisconnected; // 0x13e0            
+            // m_hViewEntityForObserver has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::client::C_BaseEntity> m_hViewEntityForObserver;
+            char m_hViewEntityForObserver[0x4]; // 0x13a8            
             // metadata: MNetworkEnable
-            bool m_bHasIncomingThreats; // 0x13e1            
+            bool m_bNetworkDisconnected; // 0x13ac            
             // metadata: MNetworkEnable
-            bool m_bLearningAbility; // 0x13e2            
-            uint8_t _pad13e3[0x1]; // 0x13e3
+            bool m_bLearningAbility; // 0x13ad            
+            uint8_t _pad13ae[0x2]; // 0x13ae
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnFlashStartChanged"
-            std::int32_t m_nFlashStartTick; // 0x13e4            
+            std::int32_t m_nFlashStartTick; // 0x13b0            
             // metadata: MNetworkEnable
-            std::int32_t m_nFlashMaxStartTick; // 0x13e8            
+            std::int32_t m_nFlashMaxStartTick; // 0x13b4            
             // metadata: MNetworkEnable
-            std::int32_t m_nFlashFadeStartTick; // 0x13ec            
+            std::int32_t m_nFlashFadeStartTick; // 0x13b8            
             // metadata: MNetworkEnable
-            std::int32_t m_nFlashEndTick; // 0x13f0            
+            std::int32_t m_nFlashEndTick; // 0x13bc            
             // metadata: MNetworkEnable
-            std::int8_t m_nFlashMaxAlpha; // 0x13f4            
-            uint8_t _pad13f5[0x3]; // 0x13f5
+            std::int8_t m_nFlashMaxAlpha; // 0x13c0            
+            uint8_t _pad13c1[0x3]; // 0x13c1
             // metadata: MNetworkEnable
-            std::int32_t m_nDeducedLane; // 0x13f8            
+            std::int32_t m_nDeducedLane; // 0x13c4            
             // metadata: MNetworkEnable
             // m_hEnemyPlayerAimTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hEnemyPlayerAimTarget;
-            char m_hEnemyPlayerAimTarget[0x4]; // 0x13fc            
+            char m_hEnemyPlayerAimTarget[0x4]; // 0x13c8            
             // metadata: MNetworkEnable
-            source2sdk::client::CCitadelRecentDamage m_sInCombat; // 0x1400            
+            // metadata: MNetworkUserGroup "LocalPlayerExclusive"
+            bool m_arrPreventAbilityLearning[4]; // 0x13cc            
             // metadata: MNetworkEnable
-            source2sdk::client::CCitadelRecentDamage m_sPlayerDamageTaken; // 0x1418            
+            // metadata: MNetworkChangeCallback "ItemDraftRoundChanged"
+            source2sdk::client::ItemDraftRoundState_t m_ItemDraftRoundState; // 0x13d0            
             // metadata: MNetworkEnable
-            source2sdk::client::CCitadelRecentDamage m_sPlayerDamageDealt; // 0x1430            
+            source2sdk::client::CCitadelRecentDamage m_sInCombat; // 0x1458            
             // metadata: MNetworkEnable
-            std::int8_t m_nSuccessiveDucks; // 0x1448            
-            uint8_t _pad1449[0x3]; // 0x1449
+            source2sdk::client::CCitadelRecentDamage m_sPlayerDamageTaken; // 0x1470            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flLastDuckTime; // 0x144c            
+            source2sdk::client::CCitadelRecentDamage m_sPlayerDamageDealt; // 0x1488            
             // metadata: MNetworkEnable
-            bool m_bDismissedReportCard; // 0x1450            
-            uint8_t _pad1451[0x3]; // 0x1451
+            std::int8_t m_nSuccessiveDucks; // 0x14a0            
+            uint8_t _pad14a1[0x3]; // 0x14a1
             // metadata: MNetworkEnable
-            float m_flCurrentHealingAmount; // 0x1454            
+            source2sdk::entity2::GameTime_t m_flLastDuckTime; // 0x14a4            
             // metadata: MNetworkEnable
-            QAngle m_angLockedEyeAngles; // 0x1458            
-            uint8_t _pad1464[0x4]; // 0x1464
+            bool m_bDismissedReportCard; // 0x14a8            
+            uint8_t _pad14a9[0x3]; // 0x14a9
+            // metadata: MNetworkEnable
+            float m_flCurrentHealingAmount; // 0x14ac            
+            // metadata: MNetworkEnable
+            QAngle m_angLockedEyeAngles; // 0x14b0            
+            uint8_t _pad14bc[0x4]; // 0x14bc
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
             // metadata: MNetworkAlias "CCitadelAbilityComponent"
             // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
-            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x1468            
+            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0x14c0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "CCitadelHeroComponent"
             // metadata: MNetworkAlias "CCitadelHeroComponent"
             // metadata: MNetworkTypeAlias "CCitadelHeroComponent"
-            source2sdk::client::CCitadelHeroComponent m_CCitadelHeroComponent; // 0x1630            
-            uint8_t _pad1670[0xa8]; // 0x1670
-            float m_flRichPresenceUpdateInterval; // 0x1718            
-            uint8_t _pad171c[0xf4]; // 0x171c
+            source2sdk::client::CCitadelHeroComponent m_CCitadelHeroComponent; // 0x16a8            
+            uint8_t _pad16e8[0x74]; // 0x16e8
+            Vector m_vLastVelocity; // 0x175c            
+            uint8_t _pad1768[0x24]; // 0x1768
+            float m_flRichPresenceUpdateInterval; // 0x178c            
+            uint8_t _pad1790[0xf0]; // 0x1790
+            source2sdk::client::InputBitMask_t m_nQueuedAbility; // 0x1880            
+            source2sdk::entity2::GameTime_t m_QueuedAbilityEndTime; // 0x1888            
+            uint8_t _pad188c[0x4]; // 0x188c
             // metadata: MNetworkEnable
-            bool m_bAnimGraphMovementClipped; // 0x1810            
+            bool m_bAnimGraphMovementClipped; // 0x1890            
             // metadata: MNetworkEnable
-            bool m_bAnimGraphMovementDisableGravity; // 0x1811            
+            bool m_bAnimGraphMovementDisableGravity; // 0x1891            
             // metadata: MNetworkEnable
-            bool m_bAnimGraphMovementDirectAirControl; // 0x1812            
-            uint8_t _pad1813[0x1]; // 0x1813
+            bool m_bAnimGraphMovementDirectAirControl; // 0x1892            
+            uint8_t _pad1893[0x1]; // 0x1893
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flPredTimeSlowedStart; // 0x1814            
+            source2sdk::entity2::GameTime_t m_flPredTimeSlowedStart; // 0x1894            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flPredTimeSlowedEnd; // 0x1818            
+            source2sdk::entity2::GameTime_t m_flPredTimeSlowedEnd; // 0x1898            
             // metadata: MNetworkEnable
-            float m_flPredSlowSpeed; // 0x181c            
+            float m_flPredSlowSpeed; // 0x189c            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flTimeSlowedStart[4]; // 0x1820            
+            source2sdk::entity2::GameTime_t m_flTimeSlowedStart[4]; // 0x18a0            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flTimeSlowedEnd[4]; // 0x1830            
+            source2sdk::entity2::GameTime_t m_flTimeSlowedEnd[4]; // 0x18b0            
             // metadata: MNetworkEnable
-            float m_flSlowSpeed[4]; // 0x1840            
+            float m_flSlowSpeed[4]; // 0x18c0            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flForceInCombatAnimsUntilTime; // 0x1850            
-            std::int32_t m_iCurSlowSlot; // 0x1854            
-            bool m_bLocoLeanTriggeredForDirection; // 0x1858            
-            bool m_bLocoRunToStopCanTrigger; // 0x1859            
-            uint8_t _pad185a[0x2]; // 0x185a
-            float m_flCrouchFraction; // 0x185c            
-            float m_flCrouchSpeed; // 0x1860            
-            source2sdk::entity2::GameTime_t m_fidgetTime; // 0x1864            
-            Vector m_vShootTestOffsetStanding; // 0x1868            
-            Vector m_vShootTestOffsetCrouching; // 0x1874            
-            source2sdk::entity2::GameTime_t m_leanStartTime; // 0x1880            
-            uint8_t _pad1884[0x80]; // 0x1884
+            source2sdk::entity2::GameTime_t m_flForceInCombatAnimsUntilTime; // 0x18d0            
+            std::int32_t m_iCurSlowSlot; // 0x18d4            
+            bool m_bLocoLeanTriggeredForDirection; // 0x18d8            
+            bool m_bLocoRunToStopCanTrigger; // 0x18d9            
+            uint8_t _pad18da[0x2]; // 0x18da
+            float m_flCrouchFraction; // 0x18dc            
+            float m_flCrouchSpeed; // 0x18e0            
+            source2sdk::entity2::GameTime_t m_fidgetTime; // 0x18e4            
+            Vector m_vShootTestOffsetStanding; // 0x18e8            
+            Vector m_vShootTestOffsetCrouching; // 0x18f4            
+            source2sdk::entity2::GameTime_t m_leanStartTime; // 0x1900            
+            uint8_t _pad1904[0x80]; // 0x1904
             // metadata: MNetworkEnable
-            std::uint8_t m_nAudioEnclosure; // 0x1904            
+            std::uint8_t m_nAudioEnclosure; // 0x1984            
             // metadata: MNetworkEnable
-            bool m_bAudioHasSkyExposure; // 0x1905            
-            uint8_t _pad1906[0xa];
+            bool m_bAudioHasSkyExposure; // 0x1985            
+            uint8_t _pad1986[0xa];
             
             // Datamap fields:
-            // CCitadelPlayer_CameraServices m_pCameraServices; // 0xf68
-            // CCitadelPlayer_MovementServices m_pMovementServices; // 0xf70
+            // CCitadelPlayer_CameraServices m_pCameraServices; // 0xf18
+            // CCitadelPlayer_MovementServices m_pMovementServices; // 0xf20
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_CitadelPlayerPawn because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_CitadelPlayerPawn) == 0x1910);
+        static_assert(sizeof(source2sdk::client::C_CitadelPlayerPawn) == 0x1990);
     };
 };

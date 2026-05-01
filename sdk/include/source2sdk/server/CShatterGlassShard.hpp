@@ -50,10 +50,13 @@ namespace source2sdk
             uint8_t _pad0000[0x8]; // 0x0
             std::uint32_t m_hShardHandle; // 0x8            
             uint8_t _pad000c[0x4]; // 0xc
+            // metadata: MNotSaved
             // m_vecPanelVertices has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<Vector2D> m_vecPanelVertices;
             char m_vecPanelVertices[0x18]; // 0x10            
+            // metadata: MNotSaved
             Vector2D m_vLocalPanelSpaceOrigin; // 0x28            
+            // metadata: MNotSaved
             // m_hModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CStrongHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel> m_hModel;
             char m_hModel[0x8]; // 0x30            
@@ -67,18 +70,27 @@ namespace source2sdk
             source2sdk::client::ShatterGlassStressType m_ShatterStressType; // 0x44            
             uint8_t _pad0045[0x3]; // 0x45
             Vector m_vecStressVelocity; // 0x48            
+            // metadata: MNotSaved
             bool m_bCreatedModel; // 0x54            
             uint8_t _pad0055[0x3]; // 0x55
+            // metadata: MNotSaved
             float m_flLongestEdge; // 0x58            
+            // metadata: MNotSaved
             float m_flShortestEdge; // 0x5c            
+            // metadata: MNotSaved
             float m_flLongestAcross; // 0x60            
+            // metadata: MNotSaved
             float m_flShortestAcross; // 0x64            
+            // metadata: MNotSaved
             float m_flSumOfAllEdges; // 0x68            
+            // metadata: MNotSaved
             float m_flArea; // 0x6c            
             source2sdk::client::OnFrame m_nOnFrameEdge; // 0x70            
             uint8_t _pad0071[0x3]; // 0x71
             std::int32_t m_nSubShardGeneration; // 0x74            
+            // metadata: MNotSaved
             Vector2D m_vecAverageVertPosition; // 0x78            
+            // metadata: MNotSaved
             bool m_bAverageVertPositionIsValid; // 0x80            
             uint8_t _pad0081[0x3]; // 0x81
             Vector2D m_vecPanelSpaceStressPositionA; // 0x84            

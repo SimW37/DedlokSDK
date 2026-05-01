@@ -25,6 +25,7 @@ namespace source2sdk
         {
         public:
             uint8_t _pad0008[0x8]; // 0x8
+            // metadata: MNotSaved
             source2sdk::entity2::GameTime_t m_flLastRegenThinkTime; // 0x10            
             float m_flRegenAccumulator; // 0x14            
             uint8_t _pad0018[0x148];

@@ -14,15 +14,14 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xdd8
+        // Size: 0xd60
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_iMaxHealth"
         // static metadata: MNetworkExcludeByName "m_baseLayer.m_hSequence"
-        // static metadata: MNetworkExcludeByName "m_blinktoggle"
         // static metadata: MNetworkExcludeByUserGroup "m_flCycle"
         // static metadata: MNetworkExcludeByName "m_flEncodedController"
         // static metadata: MNetworkExcludeByName "m_flPoseParameter"
@@ -37,13 +36,13 @@ namespace source2sdk
         {
         public:
             // Datamap fields:
-            // CCitadelPlayer_ObserverServices m_pObserverServices; // 0xc28
-            // CCitadelPlayer_CameraServices m_pCameraServices; // 0xc48
-            // CCitadelObserver_MovementServices m_pMovementServices; // 0xc50
+            // CCitadelPlayer_ObserverServices m_pObserverServices; // 0xba8
+            // CCitadelPlayer_CameraServices m_pCameraServices; // 0xbc8
+            // CCitadelObserver_MovementServices m_pMovementServices; // 0xbd0
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelObserverPawn) == 0xdd8);
+        static_assert(sizeof(source2sdk::server::CCitadelObserverPawn) == 0xd60);
     };
 };

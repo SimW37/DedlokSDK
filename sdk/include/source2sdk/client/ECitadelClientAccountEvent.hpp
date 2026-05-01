@@ -20,7 +20,6 @@ namespace source2sdk
         {
             k_eLaunchedHeroTest = 0x1,
             k_eViewedProfile = 0x2,
-            k_eViewedSocial = 0x3,
             k_eViewedHeroes = 0x4,
             k_eViewedHeroDetails = 0x5,
             k_eViewedPatchNotes = 0x6,
@@ -79,6 +78,7 @@ namespace source2sdk
             k_eSandboxViaPlayMenu = 0x3b,
             k_eBotMatch_Medium = 0x3c,
             k_eSandboxViaHideoutTeleport = 0x3d,
+            k_eRosterSelectSingleHero = 0x3e,
         };
     };
 };

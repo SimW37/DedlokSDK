@@ -16,18 +16,17 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xb00
+        // Size: 0xac0
         // Has VTable
         // 
         // static metadata: MNetworkExcludeByName "m_flexWeight"
-        // static metadata: MNetworkExcludeByName "m_blinktoggle"
-        // static metadata: MNetworkIncludeByName "m_nNextThinkTick"
         // static metadata: MNetworkExcludeByUserGroup "m_flPoseParameter"
         // static metadata: MNetworkExcludeByUserGroup "m_flCycle"
         // static metadata: MNetworkExcludeByUserGroup "overlay_vars"
+        // static metadata: MNetworkIncludeByName "m_nNextThinkTick"
         // static metadata: MNetworkUserGroupProxy "CBasePlayerWeapon"
         // static metadata: MNetworkVarNames "GameTick_t m_nNextPrimaryAttackTick"
         // static metadata: MNetworkVarNames "float32 m_flNextPrimaryAttackTickRatio"
@@ -42,28 +41,29 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-            source2sdk::entity2::GameTick_t m_nNextPrimaryAttackTick; // 0xab8            
+            source2sdk::entity2::GameTick_t m_nNextPrimaryAttackTick; // 0xa80            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-            float m_flNextPrimaryAttackTickRatio; // 0xabc            
+            float m_flNextPrimaryAttackTickRatio; // 0xa84            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-            source2sdk::entity2::GameTick_t m_nNextSecondaryAttackTick; // 0xac0            
+            source2sdk::entity2::GameTick_t m_nNextSecondaryAttackTick; // 0xa88            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-            float m_flNextSecondaryAttackTickRatio; // 0xac4            
+            float m_flNextSecondaryAttackTickRatio; // 0xa8c            
             // metadata: MNetworkEnable
             // metadata: MNetworkSerializer "minusone"
             // metadata: MNetworkPriority "32"
-            std::int32_t m_iClip1; // 0xac8            
+            std::int32_t m_iClip1; // 0xa90            
             // metadata: MNetworkEnable
             // metadata: MNetworkSerializer "minusone"
             // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-            std::int32_t m_iClip2; // 0xacc            
+            std::int32_t m_iClip2; // 0xa94            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-            std::int32_t m_pReserveAmmo[2]; // 0xad0            
-            source2sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0xad8            
+            std::int32_t m_pReserveAmmo[2]; // 0xa98            
+            source2sdk::entity2::CEntityIOOutput m_OnPlayerUse; // 0xaa0            
+            uint8_t _pad0ab8[0x8];
             
             // Datamap fields:
             // int32_t InputSetClipPrimary; // 0x0
@@ -73,6 +73,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CBasePlayerWeapon because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CBasePlayerWeapon) == 0xb00);
+        static_assert(sizeof(source2sdk::server::CBasePlayerWeapon) == 0xac0);
     };
 };

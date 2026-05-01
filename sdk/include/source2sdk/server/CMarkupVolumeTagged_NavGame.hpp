@@ -18,16 +18,16 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x878
+        // Size: 0x7e8
         // Has VTable
         #pragma pack(push, 1)
         class CMarkupVolumeTagged_NavGame : public source2sdk::server::CMarkupVolumeWithRef
         {
         public:
-            source2sdk::server::NavScopeFlags_t m_nScopes; // 0x870            
-            bool m_bFloodFillAttribute; // 0x871            
-            bool m_bSplitNavSpace; // 0x872            
-            uint8_t _pad0873[0x5];
+            source2sdk::server::NavScopeFlags_t m_nScopes; // 0x7e0            
+            bool m_bFloodFillAttribute; // 0x7e1            
+            bool m_bSplitNavSpace; // 0x7e2            
+            uint8_t _pad07e3[0x5];
             
             // Datamap fields:
             // CUtlSymbolLarge navProperty_NavAttributes; // 0x7fffffff
@@ -37,6 +37,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CMarkupVolumeTagged_NavGame because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CMarkupVolumeTagged_NavGame) == 0x878);
+        static_assert(sizeof(source2sdk::server::CMarkupVolumeTagged_NavGame) == 0x7e8);
     };
 };

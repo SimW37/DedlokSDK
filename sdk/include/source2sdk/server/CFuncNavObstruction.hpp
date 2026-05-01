@@ -17,21 +17,21 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x820
+        // Size: 0x798
         // Has VTable
         #pragma pack(push, 1)
         class CFuncNavObstruction : public source2sdk::server::CBaseModelEntity
         {
         public:
-            uint8_t _pad0808[0x10]; // 0x808
-            bool m_bDisabled; // 0x818            
-            bool m_bUseAsyncObstacleUpdate; // 0x819            
-            uint8_t _pad081a[0x6];
+            uint8_t _pad0778[0x18]; // 0x778
+            bool m_bDisabled; // 0x790            
+            bool m_bUseAsyncObstacleUpdate; // 0x791            
+            uint8_t _pad0792[0x6];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CFuncNavObstruction because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFuncNavObstruction) == 0x820);
+        static_assert(sizeof(source2sdk::server::CFuncNavObstruction) == 0x798);
     };
 };

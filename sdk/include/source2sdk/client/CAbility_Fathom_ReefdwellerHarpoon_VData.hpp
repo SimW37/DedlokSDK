@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17c0
+        // Size: 0x18d8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,23 +30,23 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_DetachBuff has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadel_Modifier_ReefdwellerHarpoon_DetachBuff> m_DetachBuff;
-            char m_DetachBuff[0x10]; // 0x1700            
+            char m_DetachBuff[0x10]; // 0x1818            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strSwapStarted; // 0x1710            
+            CSoundEventName m_strSwapStarted; // 0x1828            
             // metadata: MPropertyStartGroup "Camera"
-            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceFlying; // 0x1720            
+            source2sdk::client::CitadelCameraOperationsSequence_t m_cameraSequenceFlying; // 0x1838            
             // metadata: MPropertyStartGroup "+Harpoon Properties"
-            float m_flAirSpeedMax; // 0x17a8            
-            float m_flFallSpeedMax; // 0x17ac            
-            float m_flAirDrag; // 0x17b0            
-            float m_flInitialSlowSpeed; // 0x17b4            
-            float m_flInitialSpeedBias; // 0x17b8            
-            float m_flMaxSurfacePitch; // 0x17bc            
+            float m_flAirSpeedMax; // 0x18c0            
+            float m_flFallSpeedMax; // 0x18c4            
+            float m_flAirDrag; // 0x18c8            
+            float m_flInitialSlowSpeed; // 0x18cc            
+            float m_flInitialSpeedBias; // 0x18d0            
+            float m_flMaxSurfacePitch; // 0x18d4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Fathom_ReefdwellerHarpoon_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbility_Fathom_ReefdwellerHarpoon_VData) == 0x17c0);
+        static_assert(sizeof(source2sdk::client::CAbility_Fathom_ReefdwellerHarpoon_VData) == 0x18d8);
     };
 };

@@ -23,14 +23,10 @@ namespace source2sdk
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: MCellForDomain "TestDomain"
-        // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "H &þø"
         #pragma pack(push, 1)
         class CPulseCell_Test_MultiOutflow_WithParams_Yielding : public source2sdk::pulse_runtime_lib::CPulseCell_BaseYieldingInflow
         {
         public:
-            // metadata: MPulseCellOutflow_IsDefault
             source2sdk::pulse_runtime_lib::SignatureOutflow_Continue m_Out1; // 0x48            
             source2sdk::pulse_runtime_lib::SignatureOutflow_Continue m_AsyncChild1; // 0x90            
             source2sdk::pulse_runtime_lib::SignatureOutflow_Continue m_AsyncChild2; // 0xd8            

@@ -24,14 +24,16 @@ namespace source2sdk
         class CCitadelModifier : public source2sdk::client::CBaseModifier
         {
         public:
-            uint8_t _pad0090[0x30];
+            uint8_t _pad0090[0x10]; // 0x90
+            float m_flEffectiveness; // 0xa0            
+            uint8_t _pad00a4[0x1c];
+            
             // Datamap fields:
             // void m_pVecAbilityValues; // 0x98
-            // float m_flEffectiveness; // 0xa0
-            // No schema binary for binding
         };
         #pragma pack(pop)
         
+        // Cannot assert offsets of fields in CCitadelModifier because it is not a standard-layout class
         
         static_assert(sizeof(source2sdk::client::CCitadelModifier) == 0xc0);
     };

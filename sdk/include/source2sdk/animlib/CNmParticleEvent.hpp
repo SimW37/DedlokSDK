@@ -21,7 +21,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x78
+        // Size: 0x70
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -36,7 +36,9 @@ namespace source2sdk
             char m_hParticleSystem[0x8]; // 0x28            
             CUtlString m_tags; // 0x30            
             bool m_bStopImmediately; // 0x38            
-            uint8_t _pad0039[0x7]; // 0x39
+            bool m_bDetachFromOwner; // 0x39            
+            bool m_bPlayEndCap; // 0x3a            
+            uint8_t _pad003b[0x5]; // 0x3b
             CUtlString m_attachmentPoint0; // 0x40            
             source2sdk::animationsystem::ParticleAttachment_t m_attachmentType0; // 0x48            
             uint8_t _pad004c[0x4]; // 0x4c
@@ -45,14 +47,11 @@ namespace source2sdk
             uint8_t _pad005c[0x4]; // 0x5c
             CUtlString m_config; // 0x60            
             CUtlString m_effectForConfig; // 0x68            
-            bool m_bDetachFromOwner; // 0x70            
-            bool m_bPlayEndCap; // 0x71            
-            uint8_t _pad0072[0x6];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNmParticleEvent because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::animlib::CNmParticleEvent) == 0x78);
+        static_assert(sizeof(source2sdk::animlib::CNmParticleEvent) == 0x70);
     };
 };

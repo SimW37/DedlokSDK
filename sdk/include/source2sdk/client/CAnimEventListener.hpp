@@ -24,6 +24,7 @@ namespace source2sdk
         class CAnimEventListener : public source2sdk::client::CAnimEventListenerBase
         {
         public:
+            uint8_t _pad0018[0x8];
             // No schema binary for binding
         };
         #pragma pack(pop)

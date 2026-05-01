@@ -14,21 +14,23 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: unknown
+        // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x10f8
+        // Size: 0x8e8
         // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
         #pragma pack(push, 1)
         class CNPC_TrooperNeutralNodeMover_GraphController : public source2sdk::server::CNPC_TrooperNeutral_GraphController
         {
         public:
-            CAnimGraphTagRef m_sHidingInNode; // 0x10e0            
+            CAnimGraphTagRef m_sHidingInNode; // 0x8c8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_TrooperNeutralNodeMover_GraphController because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_TrooperNeutralNodeMover_GraphController) == 0x10f8);
+        static_assert(sizeof(source2sdk::server::CNPC_TrooperNeutralNodeMover_GraphController) == 0x8e8);
     };
 };

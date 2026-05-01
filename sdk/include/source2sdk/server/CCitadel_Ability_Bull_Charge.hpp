@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf30
+        // Size: 0x1660
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "QAngle m_anglesCharging"
@@ -39,31 +39,31 @@ namespace source2sdk
         public:
             // m_vecHitEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecHitEntities;
-            char m_vecHitEntities[0x18]; // 0xba0            
-            bool m_bGainedWeaponPowerBuff; // 0xbb8            
-            uint8_t _pad0bb9[0x347]; // 0xbb9
+            char m_vecHitEntities[0x18]; // 0xf90            
+            bool m_bGainedWeaponPowerBuff; // 0xfa8            
+            uint8_t _pad0fa9[0x687]; // 0xfa9
             // metadata: MNetworkEnable
-            QAngle m_anglesCharging; // 0xf00            
+            QAngle m_anglesCharging; // 0x1630            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnChargingStateChanged"
-            source2sdk::entity2::GameTime_t m_flChargeStartTime; // 0xf0c            
+            source2sdk::entity2::GameTime_t m_flChargeStartTime; // 0x163c            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flFastChargeStartTime; // 0xf10            
+            source2sdk::entity2::GameTime_t m_flFastChargeStartTime; // 0x1640            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flFastChargeEndTime; // 0xf14            
+            source2sdk::entity2::GameTime_t m_flFastChargeEndTime; // 0x1644            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bHitAPlayer; // 0xf18            
-            uint8_t _pad0f19[0x3]; // 0xf19
-            bool m_bFirstTick; // 0xf1c            
-            uint8_t _pad0f1d[0x3]; // 0xf1d
-            Vector m_vGoalDir; // 0xf20            
-            uint8_t _pad0f2c[0x4];
+            bool m_bHitAPlayer; // 0x1648            
+            uint8_t _pad1649[0x3]; // 0x1649
+            bool m_bFirstTick; // 0x164c            
+            uint8_t _pad164d[0x3]; // 0x164d
+            Vector m_vGoalDir; // 0x1650            
+            uint8_t _pad165c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Bull_Charge because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bull_Charge) == 0xf30);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bull_Charge) == 0x1660);
     };
 };

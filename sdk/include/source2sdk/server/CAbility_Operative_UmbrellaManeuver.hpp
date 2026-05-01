@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd68
+        // Size: 0x1318
         // Has VTable
         #pragma pack(push, 1)
         class CAbility_Operative_UmbrellaManeuver : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            source2sdk::client::ParticleIndex_t m_ChannelParticle; // 0xba0            
-            uint8_t _pad0ba4[0x1c4];
+            source2sdk::client::ParticleIndex_t m_ChannelParticle; // 0xf90            
+            uint8_t _pad0f94[0x384];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Operative_UmbrellaManeuver because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Operative_UmbrellaManeuver) == 0xd68);
+        static_assert(sizeof(source2sdk::server::CAbility_Operative_UmbrellaManeuver) == 0x1318);
     };
 };

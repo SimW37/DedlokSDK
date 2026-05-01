@@ -18,24 +18,28 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf18
+        // Size: 0x1648
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_flScopeStartTime"
+        // static metadata: MNetworkVarNames "int m_iSnipeKills"
         #pragma pack(push, 1)
         class CCitadel_Ability_Hornet_Snipe : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x31c]; // 0xba0
+            uint8_t _pad0f90[0x69c]; // 0xf90
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flScopeStartTime; // 0xebc            
-            uint8_t _pad0ec0[0x58];
+            source2sdk::entity2::GameTime_t m_flScopeStartTime; // 0x162c            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            std::int32_t m_iSnipeKills; // 0x1630            
+            uint8_t _pad1634[0x14];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Hornet_Snipe because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Hornet_Snipe) == 0xf18);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Hornet_Snipe) == 0x1648);
     };
 };

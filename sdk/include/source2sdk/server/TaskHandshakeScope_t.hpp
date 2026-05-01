@@ -14,9 +14,9 @@ namespace source2sdk
     namespace server
     {
         // Enumerator count: 3
-        // Alignment: 4
-        // Size: 0x4
-        enum class TaskHandshakeScope_t : std::uint32_t
+        // Alignment: 1
+        // Size: 0x1
+        enum class TaskHandshakeScope_t : std::uint8_t
         {
             eTask = 0x0,
             eSchedule = 0x1,

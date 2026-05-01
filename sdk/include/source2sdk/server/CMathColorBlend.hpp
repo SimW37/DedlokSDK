@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x528
+        // Size: 0x4d0
         // Has VTable
         #pragma pack(push, 1)
         class CMathColorBlend : public source2sdk::server::CLogicalEntity
         {
         public:
-            float m_flInMin; // 0x4f0            
-            float m_flInMax; // 0x4f4            
-            Color m_OutColor1; // 0x4f8            
-            Color m_OutColor2; // 0x4fc            
+            float m_flInMin; // 0x4a0            
+            float m_flInMax; // 0x4a4            
+            Color m_OutColor1; // 0x4a8            
+            Color m_OutColor2; // 0x4ac            
             // m_OutValue has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<Color> m_OutValue;
-            char m_OutValue[0x28]; // 0x500            
+            char m_OutValue[0x20]; // 0x4b0            
             
             // Datamap fields:
             // float InputValue; // 0x0
@@ -38,6 +38,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CMathColorBlend because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CMathColorBlend) == 0x528);
+        static_assert(sizeof(source2sdk::server::CMathColorBlend) == 0x4d0);
     };
 };

@@ -17,23 +17,23 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1a0
+        // Size: 0x268
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_GoatGoingUp : public source2sdk::server::CCitadelModifier
         {
         public:
-            bool m_bAtTargetElevation; // 0xc8            
-            uint8_t _pad00c9[0x3]; // 0xc9
-            Vector m_vKnockAwayVector; // 0xcc            
-            uint8_t _pad00d8[0xc0]; // 0xd8
-            float m_flTargetElevation; // 0x198            
-            uint8_t _pad019c[0x4];
+            bool m_bAtTargetElevation; // 0xd0            
+            uint8_t _pad00d1[0x3]; // 0xd1
+            Vector m_vKnockAwayVector; // 0xd4            
+            uint8_t _pad00e0[0x180]; // 0xe0
+            float m_flTargetElevation; // 0x260            
+            uint8_t _pad0264[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_GoatGoingUp because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_GoatGoingUp) == 0x1a0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_GoatGoingUp) == 0x268);
     };
 };

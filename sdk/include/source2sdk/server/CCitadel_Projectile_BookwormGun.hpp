@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb10
+        // Size: 0xc80
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Projectile_BookwormGun : public source2sdk::server::CCitadelProjectile
         {
         public:
-            uint8_t _pad08e8[0x228];
+            uint8_t _pad0858[0x428];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_BookwormGun) == 0xb10);
+        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_BookwormGun) == 0xc80);
     };
 };

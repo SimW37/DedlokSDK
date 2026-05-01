@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa40
+        // Size: 0xaf0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flWidth"
@@ -27,19 +27,19 @@ namespace source2sdk
         class CProjectile_Stomp_Projectile : public source2sdk::server::CCitadelProjectile
         {
         public:
-            Vector m_vLastStompPos; // 0x8e8            
-            bool m_bFinished; // 0x8f4            
-            uint8_t _pad08f5[0x3]; // 0x8f5
+            Vector m_vLastStompPos; // 0x858            
+            bool m_bFinished; // 0x864            
+            uint8_t _pad0865[0x3]; // 0x865
             // metadata: MNetworkEnable
-            float m_flWidth; // 0x8f8            
+            float m_flWidth; // 0x868            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_tDieTime; // 0x8fc            
-            uint8_t _pad0900[0x140];
+            source2sdk::entity2::GameTime_t m_tDieTime; // 0x86c            
+            uint8_t _pad0870[0x280];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CProjectile_Stomp_Projectile because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CProjectile_Stomp_Projectile) == 0xa40);
+        static_assert(sizeof(source2sdk::server::CProjectile_Stomp_Projectile) == 0xaf0);
     };
 };

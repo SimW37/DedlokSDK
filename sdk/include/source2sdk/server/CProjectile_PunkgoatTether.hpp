@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x920
+        // Size: 0x890
         // Has VTable
         #pragma pack(push, 1)
         class CProjectile_PunkgoatTether : public source2sdk::server::CCitadelTrackedProjectile
         {
         public:
-            source2sdk::client::ParticleIndex_t m_nRopeProjectileParticle; // 0x918            
-            uint8_t _pad091c[0x4];
+            source2sdk::client::ParticleIndex_t m_nRopeProjectileParticle; // 0x888            
+            uint8_t _pad088c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CProjectile_PunkgoatTether because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CProjectile_PunkgoatTether) == 0x920);
+        static_assert(sizeof(source2sdk::server::CProjectile_PunkgoatTether) == 0x890);
     };
 };

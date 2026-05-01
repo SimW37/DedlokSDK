@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x1
         // Standard-layout class: false
-        // Size: 0x40
+        // Size: 0x18
         // Has VTable
         #pragma pack(push, 1)
         class CScaleFunctionAbilityProperty_WeaponDamage : public source2sdk::client::CScaleFunctionBase
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CScaleFunctionAbilityProperty_WeaponDamage) == 0x40);
+        static_assert(sizeof(source2sdk::server::CScaleFunctionAbilityProperty_WeaponDamage) == 0x18);
     };
 };

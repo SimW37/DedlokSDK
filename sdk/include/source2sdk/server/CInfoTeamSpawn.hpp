@@ -24,25 +24,26 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x508
+        // Size: 0x4b8
         // Has VTable
         #pragma pack(push, 1)
         class CInfoTeamSpawn : public source2sdk::server::CServerOnlyPointEntity
         {
         public:
-            bool m_bIntroSpawn; // 0x4f0            
-            uint8_t _pad04f1[0x3]; // 0x4f1
-            std::int32_t m_iLaneNum; // 0x4f4            
-            CUtlSymbolLarge m_strGroupTag; // 0x4f8            
+            bool m_bIntroSpawn; // 0x4a0            
+            uint8_t _pad04a1[0x3]; // 0x4a1
+            std::int32_t m_iLaneNum; // 0x4a4            
+            CUtlSymbolLarge m_strGroupTag; // 0x4a8            
+            // metadata: MNotSaved
             // m_hAssignedPlayer has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hAssignedPlayer;
-            char m_hAssignedPlayer[0x4]; // 0x500            
-            uint8_t _pad0504[0x4];
+            char m_hAssignedPlayer[0x4]; // 0x4b0            
+            uint8_t _pad04b4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CInfoTeamSpawn because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CInfoTeamSpawn) == 0x508);
+        static_assert(sizeof(source2sdk::server::CInfoTeamSpawn) == 0x4b8);
     };
 };

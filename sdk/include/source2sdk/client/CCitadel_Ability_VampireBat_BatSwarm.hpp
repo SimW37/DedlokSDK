@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x12f8
+        // Size: 0x1d08
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iBonusBats"
@@ -31,24 +31,24 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            std::int32_t m_iBonusBats; // 0xd90            
+            std::int32_t m_iBonusBats; // 0x11d8            
             // metadata: MNetworkEnable
-            std::int32_t m_iBatCountOnCast; // 0xd94            
+            std::int32_t m_iBatCountOnCast; // 0x11dc            
             // metadata: MNetworkEnable
-            float m_flChannelTime; // 0xd98            
+            float m_flChannelTime; // 0x11e0            
             // metadata: MNetworkEnable
-            bool m_bPauseChannel; // 0xd9c            
-            uint8_t _pad0d9d[0x3]; // 0xd9d
+            bool m_bPauseChannel; // 0x11e4            
+            uint8_t _pad11e5[0x3]; // 0x11e5
             // metadata: MNetworkEnable
-            float m_flLastRemainingChannelTime; // 0xda0            
-            uint8_t _pad0da4[0x8]; // 0xda4
-            source2sdk::entity2::GameTime_t m_flNextBatTime; // 0xdac            
-            uint8_t _pad0db0[0x548];
+            float m_flLastRemainingChannelTime; // 0x11e8            
+            uint8_t _pad11ec[0xc]; // 0x11ec
+            source2sdk::entity2::GameTime_t m_flNextBatTime; // 0x11f8            
+            uint8_t _pad11fc[0xb0c];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_VampireBat_BatSwarm because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_VampireBat_BatSwarm) == 0x12f8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_VampireBat_BatSwarm) == 0x1d08);
     };
 };

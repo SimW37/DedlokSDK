@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc70
+        // Size: 0x1120
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iCurrentResistValue"
@@ -26,15 +26,15 @@ namespace source2sdk
         class CCitadel_ArmorUpgrade_AblativeCoat : public source2sdk::server::CCitadel_Item
         {
         public:
-            source2sdk::entity2::GameTime_t m_flLastDamageTime; // 0xba8            
+            source2sdk::entity2::GameTime_t m_flLastDamageTime; // 0xf98            
             // metadata: MNetworkEnable
-            std::int32_t m_iCurrentResistValue; // 0xbac            
-            uint8_t _pad0bb0[0xc0];
+            std::int32_t m_iCurrentResistValue; // 0xf9c            
+            uint8_t _pad0fa0[0x180];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_ArmorUpgrade_AblativeCoat because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_ArmorUpgrade_AblativeCoat) == 0xc70);
+        static_assert(sizeof(source2sdk::server::CCitadel_ArmorUpgrade_AblativeCoat) == 0x1120);
     };
 };

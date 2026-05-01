@@ -17,17 +17,17 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x500
+        // Size: 0x4b0
         // Has VTable
         #pragma pack(push, 1)
         class CLogicAutosave : public source2sdk::server::CLogicalEntity
         {
         public:
-            bool m_bForceNewLevelUnit; // 0x4f0            
-            uint8_t _pad04f1[0x3]; // 0x4f1
-            std::int32_t m_minHitPoints; // 0x4f4            
-            std::int32_t m_minHitPointsToCommit; // 0x4f8            
-            uint8_t _pad04fc[0x4];
+            bool m_bForceNewLevelUnit; // 0x4a0            
+            uint8_t _pad04a1[0x3]; // 0x4a1
+            std::int32_t m_minHitPoints; // 0x4a4            
+            std::int32_t m_minHitPointsToCommit; // 0x4a8            
+            uint8_t _pad04ac[0x4];
             
             // Datamap fields:
             // void InputSave; // 0x0
@@ -38,6 +38,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CLogicAutosave because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CLogicAutosave) == 0x500);
+        static_assert(sizeof(source2sdk::server::CLogicAutosave) == 0x4b0);
     };
 };

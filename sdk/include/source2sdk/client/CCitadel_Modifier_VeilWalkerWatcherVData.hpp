@@ -29,13 +29,15 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_InvisModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_InvisModifier;
-            char m_InvisModifier[0x10]; // 0x760            
+            char m_InvisModifier[0x10]; // 0x750            
             // m_VeilWalkerTriggeredModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_VeilWalkerTriggeredModifier;
-            char m_VeilWalkerTriggeredModifier[0x10]; // 0x770            
+            char m_VeilWalkerTriggeredModifier[0x10]; // 0x760            
             // m_VeilWalkerMovespeed has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_VeilWalkerMovespeed;
-            char m_VeilWalkerMovespeed[0x10]; // 0x780            
+            char m_VeilWalkerMovespeed[0x10]; // 0x770            
+            // metadata: MPropertyStartGroup "Sounds"
+            CSoundEventName m_strOwnerExpiredSound; // 0x780            
             // metadata: MPropertyStartGroup "Gameplay"
             float m_flTraceLengthMin; // 0x790            
             uint8_t _pad0794[0x4];

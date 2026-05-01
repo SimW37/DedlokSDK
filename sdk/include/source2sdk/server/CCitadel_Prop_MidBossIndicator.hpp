@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x510
+        // Size: 0x4c0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Prop_MidBossIndicator : public source2sdk::server::CPointEntity
         {
         public:
-            uint8_t _pad04f0[0x20];
+            uint8_t _pad04a0[0x20];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Prop_MidBossIndicator) == 0x510);
+        static_assert(sizeof(source2sdk::server::CCitadel_Prop_MidBossIndicator) == 0x4c0);
     };
 };

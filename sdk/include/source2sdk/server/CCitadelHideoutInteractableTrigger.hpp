@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa18
+        // Size: 0x908
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CUtlString m_strInteractLocString"
@@ -28,18 +28,18 @@ namespace source2sdk
         class CCitadelHideoutInteractableTrigger : public source2sdk::server::CBaseTrigger
         {
         public:
-            uint8_t _pad09d8[0x8]; // 0x9d8
-            source2sdk::entity2::CEntityIOOutput m_OnInteracted; // 0x9e0            
+            uint8_t _pad08d8[0x8]; // 0x8d8
+            source2sdk::entity2::CEntityIOOutput m_OnInteracted; // 0x8e0            
             // metadata: MNetworkEnable
-            CUtlString m_strInteractLocString; // 0xa08            
+            CUtlString m_strInteractLocString; // 0x8f8            
             // metadata: MNetworkEnable
-            source2sdk::client::EHideoutButtonAction m_eHideoutAction; // 0xa10            
-            uint8_t _pad0a14[0x4];
+            source2sdk::client::EHideoutButtonAction m_eHideoutAction; // 0x900            
+            uint8_t _pad0904[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelHideoutInteractableTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelHideoutInteractableTrigger) == 0xa18);
+        static_assert(sizeof(source2sdk::server::CCitadelHideoutInteractableTrigger) == 0x908);
     };
 };

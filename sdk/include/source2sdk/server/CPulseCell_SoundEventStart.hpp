@@ -22,11 +22,8 @@ namespace source2sdk
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: MCellForDomain "ServerEntity"
-        // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo " Zתבר"
         // static metadata: MPropertyFriendlyName "Start Sound Event"
-        // static metadata: MPropertyDescription "Starts a sound event, returns a handle that can be used to stop it."
+        // static metadata: MPropertyDescription "Starts a sound event, returns a handle that can be used to stop it. Keywords: create, sound, event, audio"
         #pragma pack(push, 1)
         class CPulseCell_SoundEventStart : public source2sdk::pulse_runtime_lib::CPulseCell_BaseFlow
         {

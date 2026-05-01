@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x150
+        // Size: 0x1b8
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Mirage_FireBeetles_StatStealDebuff : public source2sdk::server::CCitadelModifier
         {
         public:
-            std::int32_t nStackCount; // 0xc8            
-            uint8_t _pad00cc[0x84];
+            std::int32_t nStackCount; // 0xd0            
+            uint8_t _pad00d4[0xe4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Mirage_FireBeetles_StatStealDebuff because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifier_Mirage_FireBeetles_StatStealDebuff) == 0x150);
+        static_assert(sizeof(source2sdk::server::CModifier_Mirage_FireBeetles_StatStealDebuff) == 0x1b8);
     };
 };

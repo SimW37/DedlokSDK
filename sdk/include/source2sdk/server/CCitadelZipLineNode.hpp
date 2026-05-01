@@ -24,81 +24,91 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x8e8
+        // Size: 0x878
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CHandle<CCitadelZipLineNode> m_vecConnections"
+        // static metadata: MNetworkVarNames "int m_vecConnectionDir"
         // static metadata: MNetworkVarNames "Vector m_vTangentIn"
         // static metadata: MNetworkVarNames "Vector m_vTangentOut"
         // static metadata: MNetworkVarNames "float m_flCumulativeDistance"
         // static metadata: MNetworkVarNames "int16 m_iNodeIndex"
         // static metadata: MNetworkVarNames "int16 m_eCaptureState"
         // static metadata: MNetworkVarNames "int16 m_iPrimaryLane"
+        // static metadata: MNetworkVarNames "bool m_bUseBaseLaneColor"
         // static metadata: MNetworkVarNames "int16 m_nRopesParity"
         // static metadata: MNetworkVarNames "bool m_bCornerNode"
         // static metadata: MNetworkVarNames "bool m_bCapturable"
-        // static metadata: MNetworkVarNames "bool m_bAlwaysUsable"
-        // static metadata: MNetworkVarNames "bool m_bOneWay"
         // static metadata: MNetworkVarNames "bool m_bDisableZippingToByPlayers"
-        // static metadata: MNetworkVarNames "bool m_bUseForMinimapDrawing"
-        // static metadata: MNetworkVarNames "EHANDLE m_hGuardingBoss"
+        // static metadata: MNetworkVarNames "float m_flSpeedMultiplierToBaseBonus"
+        // static metadata: MNetworkVarNames "float m_flSpeedMultiplierFromBaseBonus"
+        // static metadata: MNetworkVarNames "EHANDLE m_hGuardingBosses"
         // static metadata: MNetworkVarNames "float m_flRopeRadius"
-        // static metadata: MNetworkVarNames "bool m_bEnabled"
         #pragma pack(push, 1)
         class CCitadelZipLineNode : public source2sdk::server::CBaseModelEntity
         {
         public:
-            uint8_t _pad0808[0x38]; // 0x808
+            uint8_t _pad0778[0x38]; // 0x778
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "connectionsChanged"
+            // metadata: MNotSaved
             // m_vecConnections has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CNetworkUtlVectorBase<CHandle<source2sdk::server::CCitadelZipLineNode>> m_vecConnections;
-            char m_vecConnections[0x18]; // 0x840            
+            char m_vecConnections[0x18]; // 0x7b0            
             // metadata: MNetworkEnable
-            Vector m_vTangentIn; // 0x858            
+            // metadata: MNotSaved
+            // m_vecConnectionDir has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CNetworkUtlVectorBase<std::int32_t> m_vecConnectionDir;
+            char m_vecConnectionDir[0x18]; // 0x7c8            
             // metadata: MNetworkEnable
-            Vector m_vTangentOut; // 0x864            
+            Vector m_vTangentIn; // 0x7e0            
             // metadata: MNetworkEnable
-            float m_flCumulativeDistance; // 0x870            
-            uint8_t _pad0874[0x3c]; // 0x874
-            CUtlSymbolLarge m_strGuardBossName; // 0x8b0            
-            CUtlSymbolLarge m_strGuardBossName2; // 0x8b8            
-            CUtlSymbolLarge m_strGuardBossName3; // 0x8c0            
+            Vector m_vTangentOut; // 0x7ec            
             // metadata: MNetworkEnable
-            std::int16_t m_iNodeIndex; // 0x8c8            
+            float m_flCumulativeDistance; // 0x7f8            
+            uint8_t _pad07fc[0x24]; // 0x7fc
+            CUtlSymbolLarge m_strGuardBossName; // 0x820            
+            CUtlSymbolLarge m_strGuardBossName2; // 0x828            
+            CUtlSymbolLarge m_strGuardBossName3; // 0x830            
+            uint8_t _pad0838[0x4]; // 0x838
             // metadata: MNetworkEnable
-            std::int16_t m_eCaptureState; // 0x8ca            
+            std::int16_t m_iNodeIndex; // 0x83c            
             // metadata: MNetworkEnable
-            std::int16_t m_iPrimaryLane; // 0x8cc            
+            // metadata: MNotSaved
+            std::int16_t m_eCaptureState; // 0x83e            
             // metadata: MNetworkEnable
-            std::int16_t m_nRopesParity; // 0x8ce            
+            std::int16_t m_iPrimaryLane; // 0x840            
             // metadata: MNetworkEnable
-            bool m_bCornerNode; // 0x8d0            
+            bool m_bUseBaseLaneColor; // 0x842            
+            uint8_t _pad0843[0x1]; // 0x843
             // metadata: MNetworkEnable
-            bool m_bCapturable; // 0x8d1            
+            // metadata: MNotSaved
+            std::int16_t m_nRopesParity; // 0x844            
             // metadata: MNetworkEnable
-            bool m_bAlwaysUsable; // 0x8d2            
+            bool m_bCornerNode; // 0x846            
             // metadata: MNetworkEnable
-            bool m_bOneWay; // 0x8d3            
+            bool m_bCapturable; // 0x847            
             // metadata: MNetworkEnable
-            bool m_bDisableZippingToByPlayers; // 0x8d4            
+            bool m_bDisableZippingToByPlayers; // 0x848            
+            uint8_t _pad0849[0x3]; // 0x849
             // metadata: MNetworkEnable
-            bool m_bUseForMinimapDrawing; // 0x8d5            
-            uint8_t _pad08d6[0x2]; // 0x8d6
+            float m_flSpeedMultiplierToBaseBonus; // 0x84c            
             // metadata: MNetworkEnable
-            // m_hGuardingBoss has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CHandle<source2sdk::server::CBaseEntity> m_hGuardingBoss;
-            char m_hGuardingBoss[0x4]; // 0x8d8            
+            float m_flSpeedMultiplierFromBaseBonus; // 0x850            
+            uint8_t _pad0854[0x4]; // 0x854
             // metadata: MNetworkEnable
-            float m_flRopeRadius; // 0x8dc            
+            // metadata: MNotSaved
+            // m_hGuardingBosses has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CNetworkUtlVectorBase<CHandle<source2sdk::server::CBaseEntity>> m_hGuardingBosses;
+            char m_hGuardingBosses[0x18]; // 0x858            
             // metadata: MNetworkEnable
-            bool m_bEnabled; // 0x8e0            
-            uint8_t _pad08e1[0x7];
+            float m_flRopeRadius; // 0x870            
+            uint8_t _pad0874[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelZipLineNode because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelZipLineNode) == 0x8e8);
+        static_assert(sizeof(source2sdk::server::CCitadelZipLineNode) == 0x878);
     };
 };

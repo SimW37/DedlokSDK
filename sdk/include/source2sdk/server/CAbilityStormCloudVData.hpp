@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1838
+        // Size: 0x1948
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -31,32 +31,30 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_AoEPreviewParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle;
-            char m_AoEPreviewParticle[0xe0]; // 0x1700            
+            char m_AoEPreviewParticle[0xe0]; // 0x1818            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_StormCloudModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_StormCloudModifier;
-            char m_StormCloudModifier[0x10]; // 0x17e0            
+            char m_StormCloudModifier[0x10]; // 0x18f8            
             // m_LightningStrikeAOEModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_LightningStrikeAOEModifier;
-            char m_LightningStrikeAOEModifier[0x10]; // 0x17f0            
+            char m_LightningStrikeAOEModifier[0x10]; // 0x1908            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strLightningStrikeCast; // 0x1800            
+            CSoundEventName m_strLightningStrikeCast; // 0x1918            
             // metadata: MPropertyStartGroup "Gameplay"
-            float m_flOscillateFrequency; // 0x1810            
-            float m_flOscillateSpeed; // 0x1814            
-            float m_flOscillateSpeedStart; // 0x1818            
-            float m_flOscillateStartOffset; // 0x181c            
-            float m_flAirDrag; // 0x1820            
-            float m_flFlightAirDrag; // 0x1824            
-            float m_flFlightLateralMoveSpeed; // 0x1828            
-            float m_flVerticalMoveSpeedPercent; // 0x182c            
-            float m_flAirAcceleration; // 0x1830            
-            uint8_t _pad1834[0x4];
+            float m_flOscillateFrequency; // 0x1928            
+            float m_flOscillateSpeed; // 0x192c            
+            float m_flOscillateSpeedStart; // 0x1930            
+            float m_flOscillateStartOffset; // 0x1934            
+            float m_flAirDrag; // 0x1938            
+            float m_flFlightAirDrag; // 0x193c            
+            float m_flVerticalMoveSpeedPercent; // 0x1940            
+            float m_flAirAcceleration; // 0x1944            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityStormCloudVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityStormCloudVData) == 0x1838);
+        static_assert(sizeof(source2sdk::server::CAbilityStormCloudVData) == 0x1948);
     };
 };

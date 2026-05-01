@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x178
+        // Size: 0x180
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelPlayer_CameraServices : public source2sdk::server::CPlayer_CameraServices
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelPlayer_CameraServices) == 0x178);
+        static_assert(sizeof(source2sdk::server::CCitadelPlayer_CameraServices) == 0x180);
     };
 };

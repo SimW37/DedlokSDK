@@ -3,7 +3,6 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/client/CCitadelModifier.hpp"
 #include "source2sdk/client/CitadelItemVData.hpp"
 
 // /////////////////////////////////////////////////////////////
@@ -18,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x17a0
+        // Size: 0x18b8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,15 +25,10 @@ namespace source2sdk
         class CCitadel_WeaponUpgrade_SiphonBulletsVData : public source2sdk::client::CitadelItemVData
         {
         public:
-            // metadata: MPropertyStartGroup "Modifiers"
-            // m_PermanentHealthLoss has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_PermanentHealthLoss;
-            char m_PermanentHealthLoss[0x10]; // 0x1790            
         };
         #pragma pack(pop)
         
-        // Cannot assert offsets of fields in CCitadel_WeaponUpgrade_SiphonBulletsVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_WeaponUpgrade_SiphonBulletsVData) == 0x17a0);
+        static_assert(sizeof(source2sdk::client::CCitadel_WeaponUpgrade_SiphonBulletsVData) == 0x18b8);
     };
 };

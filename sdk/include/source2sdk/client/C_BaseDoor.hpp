@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9d8
+        // Size: 0x9a8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bIsUsable"
@@ -26,13 +26,14 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            bool m_bIsUsable; // 0x9d0            
-            uint8_t _pad09d1[0x7];
+            // metadata: MNotSaved
+            bool m_bIsUsable; // 0x9a0            
+            uint8_t _pad09a1[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_BaseDoor because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_BaseDoor) == 0x9d8);
+        static_assert(sizeof(source2sdk::client::C_BaseDoor) == 0x9a8);
     };
 };

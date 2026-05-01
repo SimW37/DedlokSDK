@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x768
+        // Size: 0x758
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,12 +26,12 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyGroupName "Visuals"
-            CUtlString m_strSmallIconCssClassMax; // 0x760            
+            CUtlString m_strSmallIconCssClassMax; // 0x750            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelModifierCadenceGunSpikesVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelModifierCadenceGunSpikesVData) == 0x768);
+        static_assert(sizeof(source2sdk::client::CCitadelModifierCadenceGunSpikesVData) == 0x758);
     };
 };

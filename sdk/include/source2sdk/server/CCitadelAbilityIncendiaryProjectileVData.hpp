@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1720
+        // Size: 0x1838
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,15 +29,15 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Modifiers"
             // m_DebuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_DebuffModifier;
-            char m_DebuffModifier[0x10]; // 0x1700            
+            char m_DebuffModifier[0x10]; // 0x1818            
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x1710            
+            char m_SlowModifier[0x10]; // 0x1828            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelAbilityIncendiaryProjectileVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelAbilityIncendiaryProjectileVData) == 0x1720);
+        static_assert(sizeof(source2sdk::server::CCitadelAbilityIncendiaryProjectileVData) == 0x1838);
     };
 };

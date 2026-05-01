@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x930
+        // Size: 0x920
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,17 +29,17 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_CleavePlayerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CleavePlayerParticle;
-            char m_CleavePlayerParticle[0xe0]; // 0x760            
+            char m_CleavePlayerParticle[0xe0]; // 0x750            
             // m_CleaveTrooperParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CleaveTrooperParticle;
-            char m_CleaveTrooperParticle[0xe0]; // 0x840            
+            char m_CleaveTrooperParticle[0xe0]; // 0x830            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_sVictimSound; // 0x920            
+            CSoundEventName m_sVictimSound; // 0x910            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_TechCleaveVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TechCleaveVData) == 0x930);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TechCleaveVData) == 0x920);
     };
 };

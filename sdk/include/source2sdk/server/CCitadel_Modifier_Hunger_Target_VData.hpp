@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x930
+        // Size: 0x920
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,18 +30,18 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_HungerTargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HungerTargetParticle;
-            char m_HungerTargetParticle[0xe0]; // 0x760            
+            char m_HungerTargetParticle[0xe0]; // 0x750            
             // m_HungerTargetPlayerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HungerTargetPlayerParticle;
-            char m_HungerTargetPlayerParticle[0xe0]; // 0x840            
+            char m_HungerTargetPlayerParticle[0xe0]; // 0x830            
             // metadata: MPropertyGroupName "Audio"
             // metadata: MPropertyDescription "Remap values from Distance to Pitch (MinDistance, MaxDistance, MinDistancePitch, MaxDistancePitch)"
-            source2sdk::client::CRemapFloat m_distanceToPitchRemap; // 0x920            
+            source2sdk::client::CRemapFloat m_distanceToPitchRemap; // 0x910            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Hunger_Target_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Hunger_Target_VData) == 0x930);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Hunger_Target_VData) == 0x920);
     };
 };

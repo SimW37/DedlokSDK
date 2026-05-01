@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x930
+        // Size: 0x920
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,18 +28,18 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Visuals"
-            source2sdk::client::ModelChange_t m_CursedModel; // 0x760            
+            source2sdk::client::ModelChange_t m_CursedModel; // 0x750            
             // m_TargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle;
-            char m_TargetParticle[0xe0]; // 0x848            
+            char m_TargetParticle[0xe0]; // 0x838            
             // metadata: MPropertyStartGroup "+Properties"
-            float m_flModelScale; // 0x928            
-            uint8_t _pad092c[0x4];
+            float m_flModelScale; // 0x918            
+            uint8_t _pad091c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_AnimalCurseVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_AnimalCurseVData) == 0x930);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_AnimalCurseVData) == 0x920);
     };
 };

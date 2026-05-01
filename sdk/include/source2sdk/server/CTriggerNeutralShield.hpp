@@ -24,23 +24,25 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa08
+        // Size: 0x908
         // Has VTable
         #pragma pack(push, 1)
         class CTriggerNeutralShield : public source2sdk::server::CBaseTrigger
         {
         public:
+            // metadata: MNotSaved
             // m_vecPlayers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecPlayers;
-            char m_vecPlayers[0x18]; // 0x9d8            
+            char m_vecPlayers[0x18]; // 0x8d8            
+            // metadata: MNotSaved
             // m_vecNeutrals has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecNeutrals;
-            char m_vecNeutrals[0x18]; // 0x9f0            
+            char m_vecNeutrals[0x18]; // 0x8f0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CTriggerNeutralShield because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CTriggerNeutralShield) == 0xa08);
+        static_assert(sizeof(source2sdk::server::CTriggerNeutralShield) == 0x908);
     };
 };

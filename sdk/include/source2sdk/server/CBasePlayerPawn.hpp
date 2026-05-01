@@ -95,10 +95,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xdc0
+        // Size: 0xd40
         // Has VTable
         // 
         // static metadata: MNetworkUserGroupProxy "CBasePlayerPawn"
@@ -139,67 +139,70 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            source2sdk::server::CPlayer_WeaponServices* m_pWeaponServices; // 0xc10            
+            source2sdk::server::CPlayer_WeaponServices* m_pWeaponServices; // 0xb90            
             // metadata: MNetworkEnable
-            source2sdk::server::CPlayer_ItemServices* m_pItemServices; // 0xc18            
-            // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            source2sdk::server::CPlayer_AutoaimServices* m_pAutoaimServices; // 0xc20            
-            // metadata: MNetworkEnable
-            source2sdk::server::CPlayer_ObserverServices* m_pObserverServices; // 0xc28            
-            // metadata: MNetworkEnable
-            source2sdk::server::CPlayer_WaterServices* m_pWaterServices; // 0xc30            
-            // metadata: MNetworkEnable
-            source2sdk::server::CPlayer_UseServices* m_pUseServices; // 0xc38            
-            // metadata: MNetworkEnable
-            source2sdk::server::CPlayer_FlashlightServices* m_pFlashlightServices; // 0xc40            
-            // metadata: MNetworkEnable
-            source2sdk::server::CPlayer_CameraServices* m_pCameraServices; // 0xc48            
-            // metadata: MNetworkEnable
-            source2sdk::server::CPlayer_MovementServices* m_pMovementServices; // 0xc50            
-            uint8_t _pad0c58[0x8]; // 0xc58
+            source2sdk::server::CPlayer_ItemServices* m_pItemServices; // 0xb98            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
+            source2sdk::server::CPlayer_AutoaimServices* m_pAutoaimServices; // 0xba0            
+            // metadata: MNetworkEnable
+            source2sdk::server::CPlayer_ObserverServices* m_pObserverServices; // 0xba8            
+            // metadata: MNetworkEnable
+            source2sdk::server::CPlayer_WaterServices* m_pWaterServices; // 0xbb0            
+            // metadata: MNetworkEnable
+            source2sdk::server::CPlayer_UseServices* m_pUseServices; // 0xbb8            
+            // metadata: MNetworkEnable
+            source2sdk::server::CPlayer_FlashlightServices* m_pFlashlightServices; // 0xbc0            
+            // metadata: MNetworkEnable
+            source2sdk::server::CPlayer_CameraServices* m_pCameraServices; // 0xbc8            
+            // metadata: MNetworkEnable
+            source2sdk::server::CPlayer_MovementServices* m_pMovementServices; // 0xbd0            
+            uint8_t _pad0bd8[0x8]; // 0xbd8
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerExclusive"
+            // metadata: MNotSaved
             // m_ServerViewAngleChanges has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVectorEmbeddedNetworkVar<source2sdk::server::ViewAngleServerChange_t> m_ServerViewAngleChanges;
-            char m_ServerViewAngleChanges[0x68]; // 0xc60            
-            QAngle v_angle; // 0xcc8            
-            QAngle v_anglePrevious; // 0xcd4            
+            char m_ServerViewAngleChanges[0x68]; // 0xbe0            
+            QAngle v_angle; // 0xc48            
+            QAngle v_anglePrevious; // 0xc54            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            std::uint32_t m_iHideHUD; // 0xce0            
-            uint8_t _pad0ce4[0x4]; // 0xce4
+            std::uint32_t m_iHideHUD; // 0xc60            
+            uint8_t _pad0c64[0x4]; // 0xc64
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-            source2sdk::server::sky3dparams_t m_skybox3d; // 0xce8            
-            source2sdk::entity2::GameTime_t m_fTimeLastHurt; // 0xd78            
+            source2sdk::server::sky3dparams_t m_skybox3d; // 0xc68            
+            source2sdk::entity2::GameTime_t m_fTimeLastHurt; // 0xcf8            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flDeathTime; // 0xd7c            
-            source2sdk::entity2::GameTime_t m_fNextSuicideTime; // 0xd80            
-            bool m_fInitHUD; // 0xd84            
-            uint8_t _pad0d85[0x3]; // 0xd85
-            source2sdk::server::CAI_Expresser* m_pExpresser; // 0xd88            
+            source2sdk::entity2::GameTime_t m_flDeathTime; // 0xcfc            
+            // metadata: MNotSaved
+            source2sdk::entity2::GameTime_t m_fNextSuicideTime; // 0xd00            
+            bool m_fInitHUD; // 0xd04            
+            uint8_t _pad0d05[0x3]; // 0xd05
+            // metadata: MNotSaved
+            source2sdk::server::CAI_Expresser* m_pExpresser; // 0xd08            
             // metadata: MNetworkEnable
             // m_hController has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBasePlayerController> m_hController;
-            char m_hController[0x4]; // 0xd90            
+            char m_hController[0x4]; // 0xd10            
             // metadata: MNetworkEnable
             // m_hDefaultController has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBasePlayerController> m_hDefaultController;
-            char m_hDefaultController[0x4]; // 0xd94            
-            uint8_t _pad0d98[0x4]; // 0xd98
-            float m_fHltvReplayDelay; // 0xd9c            
-            float m_fHltvReplayEnd; // 0xda0            
-            CEntityIndex m_iHltvReplayEntity; // 0xda4            
+            char m_hDefaultController[0x4]; // 0xd14            
+            uint8_t _pad0d18[0x4]; // 0xd18
+            // metadata: MNotSaved
+            float m_fHltvReplayDelay; // 0xd1c            
+            // metadata: MNotSaved
+            float m_fHltvReplayEnd; // 0xd20            
+            // metadata: MNotSaved
+            CEntityIndex m_iHltvReplayEntity; // 0xd24            
             // m_sndOpvarLatchData has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::sndopvarlatchdata_t> m_sndOpvarLatchData;
-            char m_sndOpvarLatchData[0x18]; // 0xda8            
+            char m_sndOpvarLatchData[0x18]; // 0xd28            
             
             // Datamap fields:
-            // void m_hPawnListEntry; // 0xd98
-            // void m_hLastValidNavArea; // 0xb88
-            // void m_hCurrentNavArea; // 0xb78
-            // void m_hCurrentNavAreaBlocked; // 0xb98
+            // void m_hPawnListEntry; // 0xd18
             // CHandle< CBaseEntity > controller; // 0x7fffffff
             // int32_t InputSetHealth; // 0x0
             // bool InputSetHUDVisibility; // 0x0
@@ -209,6 +212,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CBasePlayerPawn because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CBasePlayerPawn) == 0xdc0);
+        static_assert(sizeof(source2sdk::server::CBasePlayerPawn) == 0xd40);
     };
 };

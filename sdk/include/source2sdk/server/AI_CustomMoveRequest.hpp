@@ -28,7 +28,7 @@ namespace source2sdk
             bool m_bForceInterrupt; // 0x3c            
             uint8_t _pad003d[0x3]; // 0x3d
             float m_flMinPathLength; // 0x40            
-            Vector m_vTargetPosition; // 0x44            
+            VectorWS m_vTargetPosition; // 0x44            
         };
         #pragma pack(pop)
         

@@ -14,10 +14,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0x1a80
+        // Size: 0x1810
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bShieldActive"
@@ -26,17 +26,17 @@ namespace source2sdk
         class CNPC_TrooperNeutral : public source2sdk::server::CAI_CitadelNPC
         {
         public:
-            uint8_t _pad1a08[0x5b]; // 0x1a08
+            uint8_t _pad1790[0x5b]; // 0x1790
             // metadata: MNetworkEnable
-            bool m_bShieldActive; // 0x1a63            
+            bool m_bShieldActive; // 0x17eb            
             // metadata: MNetworkEnable
-            bool m_bPlayingIdle; // 0x1a64            
-            uint8_t _pad1a65[0x1b];
+            bool m_bPlayingIdle; // 0x17ec            
+            uint8_t _pad17ed[0x23];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_TrooperNeutral because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_TrooperNeutral) == 0x1a80);
+        static_assert(sizeof(source2sdk::server::CNPC_TrooperNeutral) == 0x1810);
     };
 };

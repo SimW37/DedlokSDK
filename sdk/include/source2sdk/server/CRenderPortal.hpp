@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x830
+        // Size: 0x7a0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EHANDLE m_hLocalPortalLink"
@@ -43,30 +43,30 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // m_hLocalPortalLink has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hLocalPortalLink;
-            char m_hLocalPortalLink[0x4]; // 0x808            
+            char m_hLocalPortalLink[0x4]; // 0x778            
             // metadata: MNetworkEnable
             // m_hRemotePortalLink has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hRemotePortalLink;
-            char m_hRemotePortalLink[0x4]; // 0x80c            
+            char m_hRemotePortalLink[0x4]; // 0x77c            
             // metadata: MNetworkEnable
-            CUtlString m_brushModelName; // 0x810            
+            CUtlString m_brushModelName; // 0x780            
             // metadata: MNetworkEnable
-            float m_flFadeStartDist; // 0x818            
+            float m_flFadeStartDist; // 0x788            
             // metadata: MNetworkEnable
-            float m_flFadeEndDist; // 0x81c            
+            float m_flFadeEndDist; // 0x78c            
             // metadata: MNetworkEnable
-            float m_flFadeStartAngle; // 0x820            
+            float m_flFadeStartAngle; // 0x790            
             // metadata: MNetworkEnable
-            float m_flFadeEndAngle; // 0x824            
+            float m_flFadeEndAngle; // 0x794            
             // metadata: MNetworkEnable
-            float m_flRemoteViewForwardOffset; // 0x828            
+            float m_flRemoteViewForwardOffset; // 0x798            
             // metadata: MNetworkEnable
-            Color m_fadeToColor; // 0x82c            
+            Color m_fadeToColor; // 0x79c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CRenderPortal because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CRenderPortal) == 0x830);
+        static_assert(sizeof(source2sdk::server::CRenderPortal) == 0x7a0);
     };
 };

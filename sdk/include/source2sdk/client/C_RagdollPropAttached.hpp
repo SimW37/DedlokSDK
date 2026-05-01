@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd60
+        // Size: 0xd68
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "uint32 m_boneIndexAttached"
@@ -29,24 +29,31 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            std::uint32_t m_boneIndexAttached; // 0xd28            
+            // metadata: MNotSaved
+            std::uint32_t m_boneIndexAttached; // 0xd30            
             // metadata: MNetworkEnable
-            std::uint32_t m_ragdollAttachedObjectIndex; // 0xd2c            
+            // metadata: MNotSaved
+            std::uint32_t m_ragdollAttachedObjectIndex; // 0xd34            
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord"
-            Vector m_attachmentPointBoneSpace; // 0xd30            
+            // metadata: MNotSaved
+            Vector m_attachmentPointBoneSpace; // 0xd38            
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord"
-            Vector m_attachmentPointRagdollSpace; // 0xd3c            
-            Vector m_vecOffset; // 0xd48            
-            float m_parentTime; // 0xd54            
-            bool m_bHasParent; // 0xd58            
-            uint8_t _pad0d59[0x7];
+            // metadata: MNotSaved
+            Vector m_attachmentPointRagdollSpace; // 0xd44            
+            // metadata: MNotSaved
+            Vector m_vecOffset; // 0xd50            
+            // metadata: MNotSaved
+            float m_parentTime; // 0xd5c            
+            // metadata: MNotSaved
+            bool m_bHasParent; // 0xd60            
+            uint8_t _pad0d61[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_RagdollPropAttached because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_RagdollPropAttached) == 0xd60);
+        static_assert(sizeof(source2sdk::client::C_RagdollPropAttached) == 0xd68);
     };
 };

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1ac0
+        // Size: 0x1bd8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,33 +28,33 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_ShockShootSound; // 0x1700            
-            CSoundEventName m_ShockImpactSound; // 0x1710            
+            CSoundEventName m_ShockShootSound; // 0x1818            
+            CSoundEventName m_ShockImpactSound; // 0x1828            
             // metadata: MPropertyStartGroup "Visuals"
             // m_ShockImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShockImpactParticle;
-            char m_ShockImpactParticle[0xe0]; // 0x1720            
+            char m_ShockImpactParticle[0xe0]; // 0x1838            
             // m_TracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TracerParticle;
-            char m_TracerParticle[0xe0]; // 0x1800            
+            char m_TracerParticle[0xe0]; // 0x1918            
             // m_ShockReadyParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ShockReadyParticle;
-            char m_ShockReadyParticle[0xe0]; // 0x18e0            
+            char m_ShockReadyParticle[0xe0]; // 0x19f8            
             // m_CastParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_CastParticle;
-            char m_CastParticle[0xe0]; // 0x19c0            
+            char m_CastParticle[0xe0]; // 0x1ad8            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x1aa0            
+            char m_SlowModifier[0x10]; // 0x1bb8            
             // m_FullyChargedFXModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_FullyChargedFXModifier;
-            char m_FullyChargedFXModifier[0x10]; // 0x1ab0            
+            char m_FullyChargedFXModifier[0x10]; // 0x1bc8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Frank_ShockTarget2VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Frank_ShockTarget2VData) == 0x1ac0);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Frank_ShockTarget2VData) == 0x1bd8);
     };
 };

@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x158
+        // Size: 0x1d8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_AbsorbingArmor : public source2sdk::client::CCitadelModifier
         {
         public:
-            uint8_t _pad00c0[0x98];
+            uint8_t _pad00c0[0x118];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_AbsorbingArmor) == 0x158);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_AbsorbingArmor) == 0x1d8);
     };
 };

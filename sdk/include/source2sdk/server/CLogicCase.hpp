@@ -4,7 +4,6 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/entity2/CVariantDefaultAllocator.hpp"
 #include "source2sdk/server/CLogicalEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
@@ -19,20 +18,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb40
+        // Size: 0x8e8
         // Has VTable
         #pragma pack(push, 1)
         class CLogicCase : public source2sdk::server::CLogicalEntity
         {
         public:
-            CUtlSymbolLarge m_nCase[32]; // 0x4f0            
-            std::int32_t m_nShuffleCases; // 0x5f0            
-            std::int32_t m_nLastShuffleCase; // 0x5f4            
-            std::uint8_t m_uchShuffleCaseMap[32]; // 0x5f8            
-            source2sdk::entity2::CEntityIOOutput m_OnCase[32]; // 0x618            
+            CUtlSymbolLarge m_nCase[32]; // 0x4a0            
+            std::int32_t m_nShuffleCases; // 0x5a0            
+            std::int32_t m_nLastShuffleCase; // 0x5a4            
+            std::uint8_t m_uchShuffleCaseMap[32]; // 0x5a8            
+            source2sdk::entity2::CEntityIOOutput m_OnCase[32]; // 0x5c8            
             // m_OnDefault has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEntityOutputTemplate<CVariantBase<source2sdk::entity2::CVariantDefaultAllocator>> m_OnDefault;
-            char m_OnDefault[0x28]; // 0xb18            
+            // CEntityOutputTemplate<CUtlString> m_OnDefault;
+            char m_OnDefault[0x20]; // 0x8c8            
             
             // Datamap fields:
             // CUtlSymbolLarge InputValue; // 0x0
@@ -44,6 +43,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CLogicCase because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CLogicCase) == 0xb40);
+        static_assert(sizeof(source2sdk::server::CLogicCase) == 0x8e8);
     };
 };

@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9d8
+        // Size: 0x9a8
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_iHealth"
@@ -26,11 +26,11 @@ namespace source2sdk
         class CCitadelModelEntity : public source2sdk::client::C_BaseModelEntity
         {
         public:
-            uint8_t _pad09d0[0x8];
+            uint8_t _pad09a0[0x8];
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadelModelEntity) == 0x9d8);
+        static_assert(sizeof(source2sdk::client::CCitadelModelEntity) == 0x9a8);
     };
 };

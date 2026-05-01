@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x768
+        // Size: 0x758
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -27,14 +27,14 @@ namespace source2sdk
         public:
             // metadata: MPropertyStartGroup "Objective Health Regen"
             // metadata: MPropertyDescription "How health per second when out of combat?"
-            float m_flOutOfCombatHealthRegen; // 0x760            
+            float m_flOutOfCombatHealthRegen; // 0x750            
             // metadata: MPropertyDescription "How longer after taking no damage will out out of combat regen kick in?"
-            float m_flOutOfCombatRegenDelay; // 0x764            
+            float m_flOutOfCombatRegenDelay; // 0x754            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Objective_RegenVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Objective_RegenVData) == 0x768);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Objective_RegenVData) == 0x758);
     };
 };

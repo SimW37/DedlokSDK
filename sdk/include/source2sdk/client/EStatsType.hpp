@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 97
+        // Enumerator count: 100
         // Alignment: 4
         // Size: 0x4
         enum class EStatsType : std::uint32_t
@@ -113,8 +113,11 @@ namespace source2sdk
             EGroundDashDuration = 0x5c,
             EAirDashDistanceInMeters = 0x5d,
             EAirDashDuration = 0x5e,
-            EStatsCount = 0x5f,
-            EStatsInvalid = 0x5f,
+            EDashSpeedInMeters = 0x5f,
+            EEnableAbilityCharges = 0x60,
+            EAbilityLevel = 0x61,
+            EStatsCount = 0x62,
+            EStatsInvalid = 0x62,
         };
     };
 };

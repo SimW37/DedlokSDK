@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1028
+        // Size: 0x16b0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bIsVisibleOnMinimap"
@@ -29,30 +29,30 @@ namespace source2sdk
         class CAbility_Fathom_LurkersAmbush : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d90[0x240]; // 0xd90
+            uint8_t _pad11d8[0x480]; // 0x11d8
             // m_hRegenModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CModifierHandleTyped<source2sdk::client::CCitadelModifier> m_hRegenModifier;
-            char m_hRegenModifier[0x18]; // 0xfd0            
+            char m_hRegenModifier[0x18]; // 0x1658            
             // m_hInvisModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CModifierHandleTyped<source2sdk::client::CCitadelModifier> m_hInvisModifier;
-            char m_hInvisModifier[0x18]; // 0xfe8            
+            char m_hInvisModifier[0x18]; // 0x1670            
             // metadata: MNetworkEnable
-            bool m_bIsVisibleOnMinimap; // 0x1000            
-            uint8_t _pad1001[0x3]; // 0x1001
+            bool m_bIsVisibleOnMinimap; // 0x1688            
+            uint8_t _pad1689[0x3]; // 0x1689
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flStoppedMovingStartTime; // 0x1004            
-            Vector m_vLastPos; // 0x1008            
-            float m_flDebuffDuration; // 0x1014            
-            source2sdk::entity2::GameTime_t m_flChannelTimeStarted; // 0x1018            
-            bool m_bWasLatchedWhenCast; // 0x101c            
-            uint8_t _pad101d[0x3]; // 0x101d
-            source2sdk::client::ParticleIndex_t m_ChargeUpParticle; // 0x1020            
-            uint8_t _pad1024[0x4];
+            source2sdk::entity2::GameTime_t m_flStoppedMovingStartTime; // 0x168c            
+            Vector m_vLastPos; // 0x1690            
+            float m_flDebuffDuration; // 0x169c            
+            source2sdk::entity2::GameTime_t m_flChannelTimeStarted; // 0x16a0            
+            bool m_bWasLatchedWhenCast; // 0x16a4            
+            uint8_t _pad16a5[0x3]; // 0x16a5
+            source2sdk::client::ParticleIndex_t m_ChargeUpParticle; // 0x16a8            
+            uint8_t _pad16ac[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Fathom_LurkersAmbush because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbility_Fathom_LurkersAmbush) == 0x1028);
+        static_assert(sizeof(source2sdk::client::CAbility_Fathom_LurkersAmbush) == 0x16b0);
     };
 };

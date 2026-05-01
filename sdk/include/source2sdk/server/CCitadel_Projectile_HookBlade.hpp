@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x920
+        // Size: 0x890
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Projectile_HookBlade : public source2sdk::server::CCitadelTrackedProjectile
         {
         public:
-            bool bIsReturning; // 0x918            
-            uint8_t _pad0919[0x7];
+            bool bIsReturning; // 0x888            
+            uint8_t _pad0889[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Projectile_HookBlade because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_HookBlade) == 0x920);
+        static_assert(sizeof(source2sdk::server::CCitadel_Projectile_HookBlade) == 0x890);
     };
 };

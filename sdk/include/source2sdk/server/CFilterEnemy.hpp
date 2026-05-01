@@ -17,23 +17,23 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x568
+        // Size: 0x4f8
         // Has VTable
         #pragma pack(push, 1)
         class CFilterEnemy : public source2sdk::server::CBaseFilter
         {
         public:
-            CUtlSymbolLarge m_iszEnemyName; // 0x548            
-            float m_flRadius; // 0x550            
-            float m_flOuterRadius; // 0x554            
-            std::int32_t m_nMaxSquadmatesPerEnemy; // 0x558            
-            uint8_t _pad055c[0x4]; // 0x55c
-            CUtlSymbolLarge m_iszPlayerName; // 0x560            
+            CUtlSymbolLarge m_iszEnemyName; // 0x4d8            
+            float m_flRadius; // 0x4e0            
+            float m_flOuterRadius; // 0x4e4            
+            std::int32_t m_nMaxSquadmatesPerEnemy; // 0x4e8            
+            uint8_t _pad04ec[0x4]; // 0x4ec
+            CUtlSymbolLarge m_iszPlayerName; // 0x4f0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CFilterEnemy because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFilterEnemy) == 0x568);
+        static_assert(sizeof(source2sdk::server::CFilterEnemy) == 0x4f8);
     };
 };

@@ -36,7 +36,7 @@ namespace source2sdk
             // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hTarget;
             char m_hTarget[0x4]; // 0x0            
-            Vector m_vPosition; // 0x4            
+            VectorWS m_vPosition; // 0x4            
             Vector m_vDirection; // 0x10            
             bool m_bDiscardOutsideViewcone; // 0x1c            
             uint8_t _pad001d[0x3]; // 0x1d

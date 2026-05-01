@@ -24,7 +24,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xc38
+        // Size: 0x10a8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Boho_DamageShare : public source2sdk::server::CCitadelBaseAbility
@@ -32,13 +32,13 @@ namespace source2sdk
         public:
             // m_vecLinkedEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecLinkedEnemies;
-            char m_vecLinkedEnemies[0x18]; // 0xba0            
-            uint8_t _pad0bb8[0x80];
+            char m_vecLinkedEnemies[0x18]; // 0xf90            
+            uint8_t _pad0fa8[0x100];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Boho_DamageShare because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Boho_DamageShare) == 0xc38);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Boho_DamageShare) == 0x10a8);
     };
 };

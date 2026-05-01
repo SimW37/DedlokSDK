@@ -17,25 +17,25 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1e8
+        // Size: 0x2f0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_PunkgoatPull : public source2sdk::server::CCitadelModifier
         {
         public:
-            float m_flDamageToDealAtEnd; // 0xc8            
-            float m_flDamageLeftToDealOverPull; // 0xcc            
-            float m_flDamageOverPullAccumulator; // 0xd0            
-            Vector m_vPullToLocation; // 0xd4            
-            bool m_bAllowTrackTarget; // 0xe0            
-            uint8_t _pad00e1[0x3]; // 0xe1
-            float m_flCurrentVerticalSpeed; // 0xe4            
-            uint8_t _pad00e8[0x100];
+            float m_flDamageToDealAtEnd; // 0xd0            
+            float m_flDamageLeftToDealOverPull; // 0xd4            
+            float m_flDamageOverPullAccumulator; // 0xd8            
+            Vector m_vPullToLocation; // 0xdc            
+            bool m_bAllowTrackTarget; // 0xe8            
+            uint8_t _pad00e9[0x3]; // 0xe9
+            float m_flCurrentVerticalSpeed; // 0xec            
+            uint8_t _pad00f0[0x200];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_PunkgoatPull because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_PunkgoatPull) == 0x1e8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_PunkgoatPull) == 0x2f0);
     };
 };

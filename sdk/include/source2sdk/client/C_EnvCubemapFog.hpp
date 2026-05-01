@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x638
+        // Size: 0x640
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flEndDistance"
@@ -44,47 +44,47 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            float m_flEndDistance; // 0x5e8            
+            float m_flEndDistance; // 0x5f0            
             // metadata: MNetworkEnable
-            float m_flStartDistance; // 0x5ec            
+            float m_flStartDistance; // 0x5f4            
             // metadata: MNetworkEnable
-            float m_flFogFalloffExponent; // 0x5f0            
+            float m_flFogFalloffExponent; // 0x5f8            
             // metadata: MNetworkEnable
-            bool m_bHeightFogEnabled; // 0x5f4            
-            uint8_t _pad05f5[0x3]; // 0x5f5
+            bool m_bHeightFogEnabled; // 0x5fc            
+            uint8_t _pad05fd[0x3]; // 0x5fd
             // metadata: MNetworkEnable
-            float m_flFogHeightWidth; // 0x5f8            
+            float m_flFogHeightWidth; // 0x600            
             // metadata: MNetworkEnable
-            float m_flFogHeightEnd; // 0x5fc            
+            float m_flFogHeightEnd; // 0x604            
             // metadata: MNetworkEnable
-            float m_flFogHeightStart; // 0x600            
+            float m_flFogHeightStart; // 0x608            
             // metadata: MNetworkEnable
-            float m_flFogHeightExponent; // 0x604            
+            float m_flFogHeightExponent; // 0x60c            
             // metadata: MNetworkEnable
-            float m_flLODBias; // 0x608            
+            float m_flLODBias; // 0x610            
             // metadata: MNetworkEnable
-            bool m_bActive; // 0x60c            
+            bool m_bActive; // 0x614            
             // metadata: MNetworkEnable
-            bool m_bStartDisabled; // 0x60d            
-            uint8_t _pad060e[0x2]; // 0x60e
+            bool m_bStartDisabled; // 0x615            
+            uint8_t _pad0616[0x2]; // 0x616
             // metadata: MNetworkEnable
-            float m_flFogMaxOpacity; // 0x610            
+            float m_flFogMaxOpacity; // 0x618            
             // metadata: MNetworkEnable
-            std::int32_t m_nCubemapSourceType; // 0x614            
+            std::int32_t m_nCubemapSourceType; // 0x61c            
             // metadata: MNetworkEnable
             // m_hSkyMaterial has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CStrongHandle<source2sdk::resourcesystem::InfoForResourceTypeIMaterial2> m_hSkyMaterial;
-            char m_hSkyMaterial[0x8]; // 0x618            
+            char m_hSkyMaterial[0x8]; // 0x620            
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_iszSkyEntity; // 0x620            
+            CUtlSymbolLarge m_iszSkyEntity; // 0x628            
             // metadata: MNetworkEnable
             // m_hFogCubemapTexture has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CStrongHandle<source2sdk::resourcesystem::InfoForResourceTypeCTextureBase> m_hFogCubemapTexture;
-            char m_hFogCubemapTexture[0x8]; // 0x628            
+            char m_hFogCubemapTexture[0x8]; // 0x630            
             // metadata: MNetworkEnable
-            bool m_bHasHeightFogEnd; // 0x630            
-            bool m_bFirstTime; // 0x631            
-            uint8_t _pad0632[0x6];
+            bool m_bHasHeightFogEnd; // 0x638            
+            bool m_bFirstTime; // 0x639            
+            uint8_t _pad063a[0x6];
             
             // Datamap fields:
             // bool InputEnable; // 0x0
@@ -94,6 +94,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in C_EnvCubemapFog because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_EnvCubemapFog) == 0x638);
+        static_assert(sizeof(source2sdk::client::C_EnvCubemapFog) == 0x640);
     };
 };

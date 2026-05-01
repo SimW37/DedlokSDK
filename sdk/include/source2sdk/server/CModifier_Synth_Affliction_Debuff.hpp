@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x190
+        // Size: 0x2d8
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Synth_Affliction_Debuff : public source2sdk::server::CCitadelModifier
         {
         public:
-            uint8_t _pad00c8[0xc8];
+            uint8_t _pad00d0[0x208];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CModifier_Synth_Affliction_Debuff) == 0x190);
+        static_assert(sizeof(source2sdk::server::CModifier_Synth_Affliction_Debuff) == 0x2d8);
     };
 };

@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa38
+        // Size: 0x928
         // Has VTable
         #pragma pack(push, 1)
         class CTriggerImpact : public source2sdk::server::CTriggerMultiple
         {
         public:
-            float m_flMagnitude; // 0xa00            
-            float m_flNoise; // 0xa04            
-            float m_flViewkick; // 0xa08            
-            uint8_t _pad0a0c[0x4]; // 0xa0c
+            float m_flMagnitude; // 0x8f0            
+            float m_flNoise; // 0x8f4            
+            float m_flViewkick; // 0x8f8            
+            uint8_t _pad08fc[0x4]; // 0x8fc
             // m_pOutputForce has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEntityOutputTemplate<Vector> m_pOutputForce;
-            char m_pOutputForce[0x28]; // 0xa10            
+            char m_pOutputForce[0x28]; // 0x900            
             
             // Datamap fields:
             // void InputImpact; // 0x0
@@ -40,6 +40,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CTriggerImpact because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CTriggerImpact) == 0xa38);
+        static_assert(sizeof(source2sdk::server::CTriggerImpact) == 0x928);
     };
 };

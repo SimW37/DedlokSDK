@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1810
+        // Size: 0x1ae8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,19 +30,25 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_LiftModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_LiftModifier;
-            char m_LiftModifier[0x10]; // 0x1700            
+            char m_LiftModifier[0x10]; // 0x1818            
             // metadata: MPropertyStartGroup "Visuals"
             // m_TargetParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_TargetParticle;
-            char m_TargetParticle[0xe0]; // 0x1710            
+            char m_TargetParticle[0xe0]; // 0x1828            
+            // m_AoEPreviewParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AoEPreviewParticle;
+            char m_AoEPreviewParticle[0xe0]; // 0x1908            
+            // m_DirectionalBeamParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DirectionalBeamParticle;
+            char m_DirectionalBeamParticle[0xe0]; // 0x19e8            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_TargetCastSound; // 0x17f0            
-            CSoundEventName m_HitConfirmSound; // 0x1800            
+            CSoundEventName m_TargetCastSound; // 0x1ac8            
+            CSoundEventName m_HitConfirmSound; // 0x1ad8            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbilityPsychicLiftVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbilityPsychicLiftVData) == 0x1810);
+        static_assert(sizeof(source2sdk::server::CAbilityPsychicLiftVData) == 0x1ae8);
     };
 };

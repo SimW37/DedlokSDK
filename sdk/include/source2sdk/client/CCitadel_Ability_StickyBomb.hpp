@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xfa8
+        // Size: 0x15f0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EHANDLE m_hAutoTarget"
@@ -36,23 +36,23 @@ namespace source2sdk
         class CCitadel_Ability_StickyBomb : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d90[0x4]; // 0xd90
+            uint8_t _pad11d8[0x4]; // 0x11d8
             // metadata: MNetworkEnable
             // m_hAutoTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hAutoTarget;
-            char m_hAutoTarget[0x4]; // 0xd94            
+            char m_hAutoTarget[0x4]; // 0x11dc            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flHookEndTime; // 0xd98            
+            source2sdk::entity2::GameTime_t m_flHookEndTime; // 0x11e0            
             // metadata: MNetworkEnable
-            float m_flBombBonusHits; // 0xd9c            
+            float m_flBombBonusHits; // 0x11e4            
             // metadata: MNetworkEnable
-            float m_flBombBonusKills; // 0xda0            
-            uint8_t _pad0da4[0x204];
+            float m_flBombBonusKills; // 0x11e8            
+            uint8_t _pad11ec[0x404];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_StickyBomb because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_StickyBomb) == 0xfa8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_StickyBomb) == 0x15f0);
     };
 };

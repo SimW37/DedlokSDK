@@ -210,6 +210,7 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "animationgraph"
             // metadata: MNetworkChangeCallback "OnTeleportTimeChanged"
+            // metadata: MKV3TransferSaveOpsForField
             float m_flLastTeleportTime; // 0x1f4            
             uint8_t _pad01f8[0x1298];
         };

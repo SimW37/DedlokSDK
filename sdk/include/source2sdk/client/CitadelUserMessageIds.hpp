@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 56
+        // Enumerator count: 61
         // Alignment: 4
         // Size: 0x4
         enum class CitadelUserMessageIds : std::uint32_t
@@ -49,7 +49,7 @@ namespace source2sdk
             k_EUserMsg_DeathReplayData = 0x14d,
             k_EUserMsg_PlayerLifetimeStatInfo = 0x14e,
             k_EUserMsg_ForceShopClosed = 0x150,
-            k_EUserMsg_StaminaDrained = 0x151,
+            k_EUserMsg_StaminaConsumed = 0x151,
             k_EUserMsg_AbilityNotify = 0x152,
             k_EUserMsg_GetDamageStatsResponse = 0x153,
             k_EUserMsg_ParticipantStartSoundEvent = 0x154,
@@ -74,6 +74,11 @@ namespace source2sdk
             k_EUserMsg_AG2ParamTrigger = 0x167,
             k_EUserMsg_ItemPurchaseNotification = 0x168,
             k_EUserMsg_EntityPortalled = 0x169,
+            k_EUserMsg_StreetBrawlScoring = 0x16a,
+            k_EUserMsg_HudGameAnnouncement = 0x16b,
+            k_EUserMsg_ItemDraftReaction = 0x16c,
+            k_EUserMsg_ImportantAbilityUsed = 0x16d,
+            k_EUserMsg_BannedHeroes = 0x16e,
         };
     };
 };

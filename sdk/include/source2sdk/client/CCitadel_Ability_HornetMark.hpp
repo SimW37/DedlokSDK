@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd98
+        // Size: 0x11e0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_HornetMark : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0xd90            
-            uint8_t _pad0d94[0x4];
+            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0x11d8            
+            uint8_t _pad11dc[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_HornetMark because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_HornetMark) == 0xd98);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_HornetMark) == 0x11e0);
     };
 };

@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa00
+        // Size: 0x900
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelPushTrigger : public source2sdk::server::CTriggerModifier
         {
         public:
-            Vector m_vPush; // 0x9e8            
-            QAngle m_angPushEntitySpace; // 0x9f4            
+            Vector m_vPush; // 0x8e8            
+            QAngle m_angPushEntitySpace; // 0x8f4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelPushTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelPushTrigger) == 0xa00);
+        static_assert(sizeof(source2sdk::server::CCitadelPushTrigger) == 0x900);
     };
 };

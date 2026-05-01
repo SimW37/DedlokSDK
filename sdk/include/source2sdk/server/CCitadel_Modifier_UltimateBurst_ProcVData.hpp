@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x8a0
+        // Size: 0x890
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_LightningParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LightningParticle;
-            char m_LightningParticle[0xe0]; // 0x790            
+            char m_LightningParticle[0xe0]; // 0x780            
             // metadata: MPropertyGroupName "Modifiers"
             // m_DelayedEffectModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_DelayedEffectModifier;
-            char m_DelayedEffectModifier[0x10]; // 0x870            
+            char m_DelayedEffectModifier[0x10]; // 0x860            
             // m_SlowModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CBaseModifier> m_SlowModifier;
-            char m_SlowModifier[0x10]; // 0x880            
+            char m_SlowModifier[0x10]; // 0x870            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strLightningSound; // 0x890            
+            CSoundEventName m_strLightningSound; // 0x880            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_UltimateBurst_ProcVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_UltimateBurst_ProcVData) == 0x8a0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_UltimateBurst_ProcVData) == 0x890);
     };
 };

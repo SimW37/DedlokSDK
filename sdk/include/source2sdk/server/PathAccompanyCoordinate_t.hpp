@@ -24,7 +24,7 @@ namespace source2sdk
         public:
             float m_flProgress; // 0x0            
             float m_flLeftOffset; // 0x4            
-            Vector m_vOriginalPosition; // 0x8            
+            VectorWS m_vOriginalPosition; // 0x8            
         };
         #pragma pack(pop)
         

@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1790
+        // Size: 0x1c90
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iLane"
@@ -38,35 +38,39 @@ namespace source2sdk
         class C_NPC_Boss_Tier2 : public source2sdk::client::C_AI_CitadelNPC
         {
         public:
-            uint8_t _pad16c8[0x18]; // 0x16c8
+            uint8_t _pad1bc8[0x1c]; // 0x1bc8
             // metadata: MNetworkEnable
-            std::int32_t m_iLane; // 0x16e0            
+            // metadata: MNotSaved
+            std::int32_t m_iLane; // 0x1be4            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flFadeOutStart; // 0x16e4            
+            // metadata: MNotSaved
+            source2sdk::entity2::GameTime_t m_flFadeOutStart; // 0x1be8            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x16e8            
+            // metadata: MNotSaved
+            source2sdk::entity2::GameTime_t m_flFadeOutEnd; // 0x1bec            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flLastWeakpointHitTime; // 0x16ec            
+            // metadata: MNotSaved
+            source2sdk::entity2::GameTime_t m_flLastWeakpointHitTime; // 0x1bf0            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnBossTargetedEnemyChanged"
+            // metadata: MNotSaved
             // m_hTargetedEnemy has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hTargetedEnemy;
-            char m_hTargetedEnemy[0x4]; // 0x16f0            
-            uint8_t _pad16f4[0x4]; // 0x16f4
+            char m_hTargetedEnemy[0x4]; // 0x1bf4            
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord"
             // metadata: MNetworkChangeCallback "OnLookTargetChanged"
-            Vector m_vecElectricBeamLookTarget; // 0x16f8            
-            uint8_t _pad1704[0x84]; // 0x1704
+            VectorWS m_vecElectricBeamLookTarget; // 0x1bf8            
+            uint8_t _pad1c04[0x84]; // 0x1c04
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnElectricBeamCastsChanged"
-            std::int32_t m_nElectricBeamCasts; // 0x1788            
-            uint8_t _pad178c[0x4];
+            std::int32_t m_nElectricBeamCasts; // 0x1c88            
+            uint8_t _pad1c8c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_NPC_Boss_Tier2 because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_NPC_Boss_Tier2) == 0x1790);
+        static_assert(sizeof(source2sdk::client::C_NPC_Boss_Tier2) == 0x1c90);
     };
 };

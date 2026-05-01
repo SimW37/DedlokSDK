@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf70
+        // Size: 0x1538
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_iRemainingCasts"
@@ -29,22 +29,23 @@ namespace source2sdk
         class CCitadel_Ability_VampireBat_BatBlink : public source2sdk::client::C_CitadelBaseAbility
         {
         public:
-            uint8_t _pad0d90[0x188]; // 0xd90
+            uint8_t _pad11d8[0x308]; // 0x11d8
             // metadata: MNetworkEnable
-            std::int32_t m_iRemainingCasts; // 0xf18            
+            std::int32_t m_iRemainingCasts; // 0x14e0            
             // metadata: MNetworkEnable
-            bool m_bIsBlinking; // 0xf1c            
-            uint8_t _pad0f1d[0x3]; // 0xf1d
+            // metadata: MNetworkChangeCallback "BlinkStateChanged"
+            bool m_bIsBlinking; // 0x14e4            
+            uint8_t _pad14e5[0x3]; // 0x14e5
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_RecastEndTime; // 0xf20            
+            source2sdk::entity2::GameTime_t m_RecastEndTime; // 0x14e8            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_BlinkEndTime; // 0xf24            
-            uint8_t _pad0f28[0x48];
+            source2sdk::entity2::GameTime_t m_BlinkEndTime; // 0x14ec            
+            uint8_t _pad14f0[0x48];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_VampireBat_BatBlink because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_VampireBat_BatBlink) == 0xf70);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_VampireBat_BatBlink) == 0x1538);
     };
 };

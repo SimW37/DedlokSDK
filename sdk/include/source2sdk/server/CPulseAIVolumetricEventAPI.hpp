@@ -20,7 +20,6 @@ namespace source2sdk
         // Has Trivial Constructor
         // Has Trivial Destructor
         // 
-        // static metadata: MPulseLibraryBindings
         // static metadata: MPropertyFriendlyName "AI Volumetric Events"
         // static metadata: MPropertyDescription "General helpers for ai volumetric events."
         #pragma pack(push, 1)

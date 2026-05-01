@@ -22,10 +22,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xbc0
+        // Size: 0xb90
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_nModelIndex"
@@ -42,53 +42,64 @@ namespace source2sdk
         public:
             // m_pool has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CFishPool> m_pool;
-            char m_pool[0x4]; // 0xab8            
-            std::uint32_t m_id; // 0xabc            
+            char m_pool[0x4]; // 0xa80            
+            std::uint32_t m_id; // 0xa84            
             // metadata: MNetworkEnable
             // metadata: MNetworkSerializer "fish_pos_x"
-            float m_x; // 0xac0            
+            // metadata: MNotSaved
+            float m_x; // 0xa88            
             // metadata: MNetworkEnable
             // metadata: MNetworkSerializer "fish_pos_y"
-            float m_y; // 0xac4            
+            // metadata: MNotSaved
+            float m_y; // 0xa8c            
             // metadata: MNetworkEnable
             // metadata: MNetworkSerializer "fish_pos_z"
-            float m_z; // 0xac8            
+            // metadata: MNotSaved
+            float m_z; // 0xa90            
             // metadata: MNetworkEnable
             // metadata: MNetworkSerializer "angle_normalize_positive"
             // metadata: MNetworkBitCount "7"
             // metadata: MNetworkMinValue "0,000000"
             // metadata: MNetworkMaxValue "360,000000"
             // metadata: MNetworkEncodeFlags "1"
-            float m_angle; // 0xacc            
-            float m_angleChange; // 0xad0            
-            Vector m_forward; // 0xad4            
-            Vector m_perp; // 0xae0            
+            float m_angle; // 0xa94            
+            float m_angleChange; // 0xa98            
+            Vector m_forward; // 0xa9c            
+            Vector m_perp; // 0xaa8            
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord"
-            Vector m_poolOrigin; // 0xaec            
+            Vector m_poolOrigin; // 0xab4            
             // metadata: MNetworkEnable
-            float m_waterLevel; // 0xaf8            
-            float m_speed; // 0xafc            
-            float m_desiredSpeed; // 0xb00            
-            float m_calmSpeed; // 0xb04            
-            float m_panicSpeed; // 0xb08            
-            float m_avoidRange; // 0xb0c            
-            source2sdk::server::CountdownTimer m_turnTimer; // 0xb10            
-            bool m_turnClockwise; // 0xb28            
-            uint8_t _pad0b29[0x7]; // 0xb29
-            source2sdk::server::CountdownTimer m_goTimer; // 0xb30            
-            source2sdk::server::CountdownTimer m_moveTimer; // 0xb48            
-            source2sdk::server::CountdownTimer m_panicTimer; // 0xb60            
-            source2sdk::server::CountdownTimer m_disperseTimer; // 0xb78            
-            source2sdk::server::CountdownTimer m_proximityTimer; // 0xb90            
+            float m_waterLevel; // 0xac0            
+            float m_speed; // 0xac4            
+            float m_desiredSpeed; // 0xac8            
+            float m_calmSpeed; // 0xacc            
+            float m_panicSpeed; // 0xad0            
+            float m_avoidRange; // 0xad4            
+            // metadata: MNotSaved
+            source2sdk::server::CountdownTimer m_turnTimer; // 0xad8            
+            bool m_turnClockwise; // 0xaf0            
+            uint8_t _pad0af1[0x7]; // 0xaf1
+            // metadata: MNotSaved
+            source2sdk::server::CountdownTimer m_goTimer; // 0xaf8            
+            // metadata: MNotSaved
+            source2sdk::server::CountdownTimer m_moveTimer; // 0xb10            
+            // metadata: MNotSaved
+            source2sdk::server::CountdownTimer m_panicTimer; // 0xb28            
+            // metadata: MNotSaved
+            source2sdk::server::CountdownTimer m_disperseTimer; // 0xb40            
+            // metadata: MNotSaved
+            source2sdk::server::CountdownTimer m_proximityTimer; // 0xb58            
+            // metadata: MNotSaved
             // m_visible has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::server::CFish*> m_visible;
-            char m_visible[0x18]; // 0xba8            
+            char m_visible[0x18]; // 0xb70            
+            uint8_t _pad0b88[0x8];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CFish because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFish) == 0xbc0);
+        static_assert(sizeof(source2sdk::server::CFish) == 0xb90);
     };
 };

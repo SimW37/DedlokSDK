@@ -18,19 +18,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x150
+        // Size: 0x1d8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Out_Of_Combat_Health_Regen : public source2sdk::server::CCitadelModifier
         {
         public:
-            source2sdk::entity2::GameTime_t m_LastDamageTaken; // 0xc8            
-            uint8_t _pad00cc[0x84];
+            uint8_t _pad00d0[0x100]; // 0xd0
+            source2sdk::entity2::GameTime_t m_LastDamageTaken; // 0x1d0            
+            uint8_t _pad01d4[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Out_Of_Combat_Health_Regen because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Out_Of_Combat_Health_Regen) == 0x150);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Out_Of_Combat_Health_Regen) == 0x1d8);
     };
 };

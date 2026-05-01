@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd88
+        // Size: 0x12f8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EHANDLE m_hActiveProjectile"
@@ -33,26 +33,26 @@ namespace source2sdk
         class CAbility_Synth_PlasmaFlux : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x28]; // 0xba0
-            bool m_bTeleported; // 0xbc8            
-            uint8_t _pad0bc9[0x7]; // 0xbc9
+            uint8_t _pad0f90[0x28]; // 0xf90
+            bool m_bTeleported; // 0xfb8            
+            uint8_t _pad0fb9[0x7]; // 0xfb9
             // m_vecUniqueHitList has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecUniqueHitList;
-            char m_vecUniqueHitList[0x18]; // 0xbd0            
-            Vector m_vLastValidTeleportPosition; // 0xbe8            
-            source2sdk::entity2::GameTime_t m_flProjectileLaunchTime; // 0xbf4            
-            source2sdk::entity2::GameTime_t m_flProjectileExpireTime; // 0xbf8            
+            char m_vecUniqueHitList[0x18]; // 0xfc0            
+            Vector m_vLastValidTeleportPosition; // 0xfd8            
+            source2sdk::entity2::GameTime_t m_flProjectileLaunchTime; // 0xfe4            
+            source2sdk::entity2::GameTime_t m_flProjectileExpireTime; // 0xfe8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             // m_hActiveProjectile has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hActiveProjectile;
-            char m_hActiveProjectile[0x4]; // 0xbfc            
-            uint8_t _pad0c00[0x188];
+            char m_hActiveProjectile[0x4]; // 0xfec            
+            uint8_t _pad0ff0[0x308];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Synth_PlasmaFlux because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Synth_PlasmaFlux) == 0xd88);
+        static_assert(sizeof(source2sdk::server::CAbility_Synth_PlasmaFlux) == 0x12f8);
     };
 };

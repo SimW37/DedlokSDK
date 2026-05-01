@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd88
+        // Size: 0x1338
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_VampireBat_BatCloud : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x20]; // 0xba0
-            source2sdk::entity2::GameTime_t m_flBatCloudEndTime; // 0xbc0            
-            uint8_t _pad0bc4[0x1c4];
+            uint8_t _pad0f90[0x20]; // 0xf90
+            source2sdk::entity2::GameTime_t m_flBatCloudEndTime; // 0xfb0            
+            uint8_t _pad0fb4[0x384];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_VampireBat_BatCloud because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_VampireBat_BatCloud) == 0xd88);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_VampireBat_BatCloud) == 0x1338);
     };
 };

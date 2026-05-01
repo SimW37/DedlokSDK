@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x4
         // Standard-layout class: false
-        // Size: 0x50
+        // Size: 0x60
         // Has VTable
         // Is Abstract
         #pragma pack(push, 1)
         class CAI_LocalNavigatorBase : public source2sdk::client::CAI_Component
         {
         public:
-            uint8_t _pad0040[0x10];
+            uint8_t _pad0050[0x10];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CAI_LocalNavigatorBase) == 0x50);
+        static_assert(sizeof(source2sdk::server::CAI_LocalNavigatorBase) == 0x60);
     };
 };

@@ -3,7 +3,7 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/server/CTriggerModifier.hpp"
+#include "source2sdk/server/CBaseTrigger.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -17,17 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x9e8
+        // Size: 0x8e0
         // Has VTable
         #pragma pack(push, 1)
-        class CCitadelSpeedBoostTrigger : public source2sdk::server::CTriggerModifier
+        class CCitadelSpeedBoostTrigger : public source2sdk::server::CBaseTrigger
         {
         public:
-            // No schema binary for binding
+            float m_flMovespeedOverride; // 0x8d8            
+            uint8_t _pad08dc[0x4];
         };
         #pragma pack(pop)
         
+        // Cannot assert offsets of fields in CCitadelSpeedBoostTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelSpeedBoostTrigger) == 0x9e8);
+        static_assert(sizeof(source2sdk::server::CCitadelSpeedBoostTrigger) == 0x8e0);
     };
 };

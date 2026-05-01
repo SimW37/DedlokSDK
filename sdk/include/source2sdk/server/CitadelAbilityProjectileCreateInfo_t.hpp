@@ -21,7 +21,7 @@ namespace source2sdk
         struct CitadelAbilityProjectileCreateInfo_t
         {
         public:
-            Vector m_vecCreatePosition; // 0x0            
+            VectorWS m_vecCreatePosition; // 0x0            
             QAngle m_angAngles; // 0xc            
             Vector m_vecVelocity; // 0x18            
             float m_flGravity; // 0x24            

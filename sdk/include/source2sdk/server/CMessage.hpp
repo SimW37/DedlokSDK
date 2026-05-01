@@ -18,19 +18,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x538
+        // Size: 0x4d8
         // Has VTable
         #pragma pack(push, 1)
         class CMessage : public source2sdk::server::CPointEntity
         {
         public:
-            CUtlSymbolLarge m_iszMessage; // 0x4f0            
-            float m_MessageVolume; // 0x4f8            
-            std::int32_t m_MessageAttenuation; // 0x4fc            
-            float m_Radius; // 0x500            
-            uint8_t _pad0504[0x4]; // 0x504
-            CUtlSymbolLarge m_sNoise; // 0x508            
-            source2sdk::entity2::CEntityIOOutput m_OnShowMessage; // 0x510            
+            CUtlSymbolLarge m_iszMessage; // 0x4a0            
+            float m_MessageVolume; // 0x4a8            
+            std::int32_t m_MessageAttenuation; // 0x4ac            
+            float m_Radius; // 0x4b0            
+            uint8_t _pad04b4[0x4]; // 0x4b4
+            CUtlSymbolLarge m_sNoise; // 0x4b8            
+            source2sdk::entity2::CEntityIOOutput m_OnShowMessage; // 0x4c0            
             
             // Datamap fields:
             // void InputShowMessage; // 0x0
@@ -39,6 +39,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CMessage because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CMessage) == 0x538);
+        static_assert(sizeof(source2sdk::server::CMessage) == 0x4d8);
     };
 };

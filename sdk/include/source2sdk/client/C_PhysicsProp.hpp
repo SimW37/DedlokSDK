@@ -17,11 +17,10 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xe50
+        // Size: 0xe20
         // Has VTable
         // 
         // static metadata: MNetworkExcludeByName "m_flexWeight"
-        // static metadata: MNetworkExcludeByName "m_blinktoggle"
         // static metadata: MNetworkExcludeByUserGroup "m_flPoseParameter"
         // static metadata: MNetworkExcludeByName "m_animationController.m_flPlaybackRate"
         // static metadata: MNetworkExcludeByUserGroup "overlay_vars"
@@ -32,13 +31,14 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            bool m_bAwake; // 0xe40            
-            uint8_t _pad0e41[0xf];
+            // metadata: MNotSaved
+            bool m_bAwake; // 0xe10            
+            uint8_t _pad0e11[0xf];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_PhysicsProp because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_PhysicsProp) == 0xe50);
+        static_assert(sizeof(source2sdk::client::C_PhysicsProp) == 0xe20);
     };
 };

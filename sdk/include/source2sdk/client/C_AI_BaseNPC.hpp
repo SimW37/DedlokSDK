@@ -5,6 +5,13 @@
 #include <cstdint>
 #include "source2sdk/client/C_BaseCombatCharacter.hpp"
 #include "source2sdk/client/NPC_STATE.hpp"
+namespace source2sdk
+{
+    namespace client
+    {
+        struct C_AI_Motor;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -18,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xf38
+        // Size: 0xef8
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_lifeState"
@@ -26,22 +33,29 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "NPC_STATE m_NPCState"
         // static metadata: MNetworkVarNames "bool m_bFadeCorpse"
         // static metadata: MNetworkVarNames "bool m_bImportantRagdoll"
+        // static metadata: MNetworkVarNames "C_AI_Motor * m_pMotor"
         #pragma pack(push, 1)
         class C_AI_BaseNPC : public source2sdk::client::C_BaseCombatCharacter
         {
         public:
+            uint8_t _pad0ee0[0x8]; // 0xee0
             // metadata: MNetworkEnable
-            source2sdk::client::NPC_STATE m_NPCState; // 0xf30            
+            // metadata: MNotSaved
+            source2sdk::client::NPC_STATE m_NPCState; // 0xee8            
             // metadata: MNetworkEnable
-            bool m_bFadeCorpse; // 0xf34            
+            // metadata: MNotSaved
+            bool m_bFadeCorpse; // 0xeec            
             // metadata: MNetworkEnable
-            bool m_bImportantRagdoll; // 0xf35            
-            uint8_t _pad0f36[0x2];
+            // metadata: MNotSaved
+            bool m_bImportantRagdoll; // 0xeed            
+            uint8_t _pad0eee[0x2]; // 0xeee
+            // metadata: MNetworkEnable
+            source2sdk::client::C_AI_Motor* m_pMotor; // 0xef0            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_AI_BaseNPC because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_AI_BaseNPC) == 0xf38);
+        static_assert(sizeof(source2sdk::client::C_AI_BaseNPC) == 0xef8);
     };
 };

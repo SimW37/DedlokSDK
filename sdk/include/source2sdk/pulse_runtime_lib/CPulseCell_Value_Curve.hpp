@@ -21,9 +21,6 @@ namespace source2sdk
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: MCellForDomain "BaseDomain"
-        // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "0œnÖø"
         // static metadata: MPropertyFriendlyName "Curve"
         #pragma pack(push, 1)
         class CPulseCell_Value_Curve : public source2sdk::pulse_runtime_lib::CPulseCell_BaseValue

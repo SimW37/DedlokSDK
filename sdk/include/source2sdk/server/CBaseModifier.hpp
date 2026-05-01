@@ -35,7 +35,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0x90
+        // Size: 0x98
         // Has VTable
         // Is Abstract
         #pragma pack(push, 1)
@@ -56,6 +56,7 @@ namespace source2sdk
             source2sdk::server::CModifierHandleBase m_hAuraProvider; // 0x40            
             bool m_bInAuraRange; // 0x58            
             uint8_t _pad0059[0x1]; // 0x59
+            // metadata: MNotSaved
             source2sdk::client::ModifierQueuedRefreshHandle_t m_nQueuedModifierRefreshHandle; // 0x5a            
             CUtlStringToken m_nAbilitySubclassID; // 0x5c            
             std::uint8_t m_iAttributes; // 0x60            
@@ -63,6 +64,7 @@ namespace source2sdk
             std::int16_t m_iStackCount; // 0x62            
             std::int16_t m_iMaxStackCount; // 0x64            
             uint8_t _pad0066[0x2]; // 0x66
+            // metadata: MNotSaved
             // m_pVecStackDecayTimes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::entity2::GameTime_t>* m_pVecStackDecayTimes;
             char m_pVecStackDecayTimes[0x8]; // 0x68            
@@ -72,12 +74,17 @@ namespace source2sdk
             uint8_t _pad0073[0x1]; // 0x73
             float m_flThinkInterval; // 0x74            
             source2sdk::entity2::GameTime_t m_flThinkIntervalStartTime; // 0x78            
-            float m_flTimeScale; // 0x7c            
+            float m_flAsyncThinkInterval; // 0x7c            
+            source2sdk::entity2::GameTime_t m_flAsyncThinkIntervalStartTime; // 0x80            
+            float m_flTimeScale; // 0x84            
+            // metadata: MNotSaved
             // m_pVecTrackedObjects has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::client::IModifierTrackedObject*>* m_pVecTrackedObjects;
-            char m_pVecTrackedObjects[0x8]; // 0x80            
-            source2sdk::client::ModifierRuntimeHandle_t m_hModifierListHandle; // 0x88            
-            std::int32_t m_iStringIndex; // 0x8c            
+            char m_pVecTrackedObjects[0x8]; // 0x88            
+            // metadata: MNotSaved
+            source2sdk::client::ModifierRuntimeHandle_t m_hModifierListHandle; // 0x90            
+            // metadata: MNotSaved
+            std::int32_t m_iStringIndex; // 0x94            
             
             // Datamap fields:
             // void m_pModifierProp; // 0x20
@@ -105,11 +112,13 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::server::CBaseModifier, m_bSuppressSendModifier) == 0x72);
         static_assert(offsetof(source2sdk::server::CBaseModifier, m_flThinkInterval) == 0x74);
         static_assert(offsetof(source2sdk::server::CBaseModifier, m_flThinkIntervalStartTime) == 0x78);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_flTimeScale) == 0x7c);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_pVecTrackedObjects) == 0x80);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_hModifierListHandle) == 0x88);
-        static_assert(offsetof(source2sdk::server::CBaseModifier, m_iStringIndex) == 0x8c);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_flAsyncThinkInterval) == 0x7c);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_flAsyncThinkIntervalStartTime) == 0x80);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_flTimeScale) == 0x84);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_pVecTrackedObjects) == 0x88);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_hModifierListHandle) == 0x90);
+        static_assert(offsetof(source2sdk::server::CBaseModifier, m_iStringIndex) == 0x94);
         
-        static_assert(sizeof(source2sdk::server::CBaseModifier) == 0x90);
+        static_assert(sizeof(source2sdk::server::CBaseModifier) == 0x98);
     };
 };

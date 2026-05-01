@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x878
+        // Size: 0x7e8
         // Has VTable
         #pragma pack(push, 1)
         class CSpriteAlias_env_glow : public source2sdk::server::CSprite
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CSpriteAlias_env_glow) == 0x878);
+        static_assert(sizeof(source2sdk::server::CSpriteAlias_env_glow) == 0x7e8);
     };
 };

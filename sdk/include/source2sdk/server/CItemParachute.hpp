@@ -3,7 +3,15 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/EObjectivePositions_t.hpp"
 #include "source2sdk/server/CPhysicsProp.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -17,21 +25,23 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xe50
+        // Size: 0xd70
         // Has VTable
         #pragma pack(push, 1)
         class CItemParachute : public source2sdk::server::CPhysicsProp
         {
         public:
-            uint8_t _pad0e30[0x20];
-            // Datamap fields:
-            // CHandle< CBaseEntity > m_hAttachedEntity; // 0xe30
-            // int32_t m_eObjectivePosition; // 0xe44
-            // No schema binary for binding
+            // m_hAttachedEntity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_hAttachedEntity;
+            char m_hAttachedEntity[0x4]; // 0xd50            
+            uint8_t _pad0d54[0x10]; // 0xd54
+            source2sdk::client::EObjectivePositions_t m_eObjectivePosition; // 0xd64            
+            uint8_t _pad0d68[0x8];
         };
         #pragma pack(pop)
         
+        // Cannot assert offsets of fields in CItemParachute because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CItemParachute) == 0xe50);
+        static_assert(sizeof(source2sdk::server::CItemParachute) == 0xd70);
     };
 };

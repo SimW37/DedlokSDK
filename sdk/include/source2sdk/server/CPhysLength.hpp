@@ -17,24 +17,22 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x598
+        // Size: 0x530
         // Has VTable
         #pragma pack(push, 1)
         class CPhysLength : public source2sdk::server::CPhysConstraint
         {
         public:
-            Vector m_offset[2]; // 0x560            
-            Vector m_vecAttach; // 0x578            
-            float m_addLength; // 0x584            
-            float m_minLength; // 0x588            
-            float m_totalLength; // 0x58c            
-            bool m_bEnableCollision; // 0x590            
-            uint8_t _pad0591[0x7];
+            Vector m_offset[2]; // 0x500            
+            VectorWS m_vecAttach; // 0x518            
+            float m_addLength; // 0x524            
+            float m_minLength; // 0x528            
+            float m_totalLength; // 0x52c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CPhysLength because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPhysLength) == 0x598);
+        static_assert(sizeof(source2sdk::server::CPhysLength) == 0x530);
     };
 };

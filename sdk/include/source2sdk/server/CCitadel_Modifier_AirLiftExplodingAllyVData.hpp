@@ -4,7 +4,6 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
-#include "source2sdk/server/CCitadelModifier.hpp"
 #include "source2sdk/server/CCitadelModifierVData.hpp"
 
 // /////////////////////////////////////////////////////////////
@@ -19,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x850
+        // Size: 0x830
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,16 +29,12 @@ namespace source2sdk
             // metadata: MPropertyGroupName "Visuals"
             // m_strExplodeEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_strExplodeEffect;
-            char m_strExplodeEffect[0xe0]; // 0x760            
-            // metadata: MPropertyGroupName "Modifiers"
-            // m_AOEModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_AOEModifier;
-            char m_AOEModifier[0x10]; // 0x840            
+            char m_strExplodeEffect[0xe0]; // 0x750            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_AirLiftExplodingAllyVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_AirLiftExplodingAllyVData) == 0x850);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_AirLiftExplodingAllyVData) == 0x830);
     };
 };

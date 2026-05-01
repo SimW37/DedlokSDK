@@ -21,9 +21,6 @@ namespace source2sdk
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: MCellForDomain "BaseDomain"
-        // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "@D¤ù"
         // static metadata: MPropertyFriendlyName "Linear Length"
         // static metadata: MPropertyDescription "Specifies the length of this element, used when fitting an element on to a line."
         #pragma pack(push, 1)

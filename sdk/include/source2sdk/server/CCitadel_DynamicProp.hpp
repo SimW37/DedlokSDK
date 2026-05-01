@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xdb0
+        // Size: 0xcf0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CUtlString m_strDefaultSkin"
@@ -28,16 +28,16 @@ namespace source2sdk
         class CCitadel_DynamicProp : public source2sdk::server::CDynamicProp
         {
         public:
-            uint8_t _pad0d80[0x10]; // 0xd80
+            uint8_t _pad0cc0[0x10]; // 0xcc0
             // metadata: MNetworkEnable
-            CUtlString m_strDefaultSkin; // 0xd90            
+            CUtlString m_strDefaultSkin; // 0xcd0            
             // metadata: MNetworkEnable
-            CUtlString m_strFriendlySkin; // 0xd98            
+            CUtlString m_strFriendlySkin; // 0xcd8            
             // metadata: MNetworkEnable
-            CUtlString m_strEnemySkin; // 0xda0            
+            CUtlString m_strEnemySkin; // 0xce0            
             // metadata: MNetworkEnable
-            bool m_bIsWorld; // 0xda8            
-            uint8_t _pad0da9[0x7];
+            bool m_bIsWorld; // 0xce8            
+            uint8_t _pad0ce9[0x7];
             
             // Datamap fields:
             // CUtlSymbolLarge SetFriendlySkin; // 0x0
@@ -47,6 +47,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CCitadel_DynamicProp because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_DynamicProp) == 0xdb0);
+        static_assert(sizeof(source2sdk::server::CCitadel_DynamicProp) == 0xcf0);
     };
 };

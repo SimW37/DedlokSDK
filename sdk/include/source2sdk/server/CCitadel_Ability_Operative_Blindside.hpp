@@ -17,20 +17,20 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd78
+        // Size: 0x1328
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_Operative_Blindside : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            Vector m_vLaunchPosition; // 0xba0            
-            QAngle m_qLaunchAngle; // 0xbac            
-            uint8_t _pad0bb8[0x1c0];
+            VectorWS m_vLaunchPosition; // 0xf90            
+            QAngle m_qLaunchAngle; // 0xf9c            
+            uint8_t _pad0fa8[0x380];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Operative_Blindside because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Operative_Blindside) == 0xd78);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Operative_Blindside) == 0x1328);
     };
 };

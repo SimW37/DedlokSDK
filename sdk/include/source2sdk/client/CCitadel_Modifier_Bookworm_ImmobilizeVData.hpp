@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x778
+        // Size: 0x768
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,15 +26,15 @@ namespace source2sdk
         {
         public:
             // metadata: MPropertyStartGroup "Gameplay"
-            float flMaxDrag; // 0x768            
-            float flSpeedForNoDrag; // 0x76c            
-            float flSpeedForMaxDrag; // 0x770            
-            uint8_t _pad0774[0x4];
+            float flMaxDrag; // 0x758            
+            float flSpeedForNoDrag; // 0x75c            
+            float flSpeedForMaxDrag; // 0x760            
+            uint8_t _pad0764[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Bookworm_ImmobilizeVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Bookworm_ImmobilizeVData) == 0x778);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Bookworm_ImmobilizeVData) == 0x768);
     };
 };

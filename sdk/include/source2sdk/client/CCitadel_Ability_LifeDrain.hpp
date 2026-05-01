@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe20
+        // Size: 0x12e8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_tDrainLifeStopTime"
@@ -30,19 +30,19 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_tDrainLifeStopTime; // 0xd90            
+            source2sdk::entity2::GameTime_t m_tDrainLifeStopTime; // 0x11d8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-            source2sdk::entity2::GameTime_t m_tSlowStartTime; // 0xd94            
+            source2sdk::entity2::GameTime_t m_tSlowStartTime; // 0x11dc            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-            source2sdk::entity2::GameTime_t m_tSlowStopTime; // 0xd98            
-            uint8_t _pad0d9c[0x84];
+            source2sdk::entity2::GameTime_t m_tSlowStopTime; // 0x11e0            
+            uint8_t _pad11e4[0x104];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_LifeDrain because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_LifeDrain) == 0xe20);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_LifeDrain) == 0x12e8);
     };
 };

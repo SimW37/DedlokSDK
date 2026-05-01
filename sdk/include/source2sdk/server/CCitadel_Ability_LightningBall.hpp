@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd68
+        // Size: 0x1318
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Ability_LightningBall : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            float m_flInitialSpeed; // 0xba0            
-            uint8_t _pad0ba4[0x1c4];
+            float m_flInitialSpeed; // 0xf90            
+            uint8_t _pad0f94[0x384];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_LightningBall because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_LightningBall) == 0xd68);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_LightningBall) == 0x1318);
     };
 };

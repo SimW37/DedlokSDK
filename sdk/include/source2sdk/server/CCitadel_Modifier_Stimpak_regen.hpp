@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x150
+        // Size: 0x1d8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Stimpak_regen : public source2sdk::server::CCitadelModifier
         {
         public:
-            float m_flTotalPendingHeal; // 0xc8            
-            uint8_t _pad00cc[0x84];
+            float m_flTotalPendingHeal; // 0xd0            
+            uint8_t _pad00d4[0x104];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Stimpak_regen because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Stimpak_regen) == 0x150);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Stimpak_regen) == 0x1d8);
     };
 };

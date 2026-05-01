@@ -17,19 +17,19 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x210
+        // Size: 0x300
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Synth_Grasp_Victim : public source2sdk::client::CCitadelModifier
         {
         public:
             Vector m_vecOrigin; // 0xc0            
-            uint8_t _pad00cc[0x144];
+            uint8_t _pad00cc[0x234];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Synth_Grasp_Victim because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CModifier_Synth_Grasp_Victim) == 0x210);
+        static_assert(sizeof(source2sdk::client::CModifier_Synth_Grasp_Victim) == 0x300);
     };
 };

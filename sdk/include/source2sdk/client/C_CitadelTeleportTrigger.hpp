@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb20
+        // Size: 0xa80
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "Vector m_vExitOrigin"
@@ -26,13 +26,13 @@ namespace source2sdk
         {
         public:
             // metadata: MNetworkEnable
-            Vector m_vExitOrigin; // 0xb10            
-            uint8_t _pad0b1c[0x4];
+            Vector m_vExitOrigin; // 0xa70            
+            uint8_t _pad0a7c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_CitadelTeleportTrigger because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_CitadelTeleportTrigger) == 0xb20);
+        static_assert(sizeof(source2sdk::client::C_CitadelTeleportTrigger) == 0xa80);
     };
 };

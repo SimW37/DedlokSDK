@@ -24,16 +24,17 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x4f8
+        // Size: 0x4a8
         // Has VTable
         #pragma pack(push, 1)
         class CSkyboxReference : public source2sdk::server::CBaseEntity
         {
         public:
-            WorldGroupId_t m_worldGroupId; // 0x4f0            
+            WorldGroupId_t m_worldGroupId; // 0x4a0            
+            // metadata: MNotSaved
             // m_hSkyCamera has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CSkyCamera> m_hSkyCamera;
-            char m_hSkyCamera[0x4]; // 0x4f4            
+            char m_hSkyCamera[0x4]; // 0x4a4            
             
             // Datamap fields:
             // const char * worldGroupID; // 0x7fffffff
@@ -42,6 +43,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CSkyboxReference because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CSkyboxReference) == 0x4f8);
+        static_assert(sizeof(source2sdk::server::CSkyboxReference) == 0x4a8);
     };
 };

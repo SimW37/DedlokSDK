@@ -24,21 +24,22 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xc40
+        // Size: 0xc00
         // Has VTable
         #pragma pack(push, 1)
         class C_InWorldKeyBindPanel : public source2sdk::client::C_PointClientUIWorldPanel
         {
         public:
+            // metadata: MNotSaved
             // m_hPlayer has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_CitadelPlayerPawn> m_hPlayer;
-            char m_hPlayer[0x4]; // 0xc30            
-            uint8_t _pad0c34[0xc];
+            char m_hPlayer[0x4]; // 0xbf0            
+            uint8_t _pad0bf4[0xc];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_InWorldKeyBindPanel because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_InWorldKeyBindPanel) == 0xc40);
+        static_assert(sizeof(source2sdk::client::C_InWorldKeyBindPanel) == 0xc00);
     };
 };

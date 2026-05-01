@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x508
+        // Size: 0x4b8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flVisibilityStrength"
@@ -32,21 +32,21 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "PlayerVisibilityStateChanged"
-            float m_flVisibilityStrength; // 0x4f0            
+            float m_flVisibilityStrength; // 0x4a0            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "PlayerVisibilityStateChanged"
-            float m_flFogDistanceMultiplier; // 0x4f4            
+            float m_flFogDistanceMultiplier; // 0x4a4            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "PlayerVisibilityStateChanged"
-            float m_flFogMaxDensityMultiplier; // 0x4f8            
+            float m_flFogMaxDensityMultiplier; // 0x4a8            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "PlayerVisibilityStateChanged"
-            float m_flFadeTime; // 0x4fc            
+            float m_flFadeTime; // 0x4ac            
             // metadata: MNetworkEnable
-            bool m_bStartDisabled; // 0x500            
+            bool m_bStartDisabled; // 0x4b0            
             // metadata: MNetworkEnable
-            bool m_bIsEnabled; // 0x501            
-            uint8_t _pad0502[0x6];
+            bool m_bIsEnabled; // 0x4b1            
+            uint8_t _pad04b2[0x6];
             
             // Datamap fields:
             // bool InputEnable; // 0x0
@@ -59,6 +59,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPlayerVisibility because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPlayerVisibility) == 0x508);
+        static_assert(sizeof(source2sdk::server::CPlayerVisibility) == 0x4b8);
     };
 };

@@ -4,7 +4,7 @@
 #include <cstddef>
 #include <cstdint>
 #include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/server/CCitadelModifierAura_Cone.hpp"
+#include "source2sdk/server/CCitadelModifierAura.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x150
+        // Size: 0x198
         // Has VTable
         #pragma pack(push, 1)
-        class CCitadel_Modifier_Bull_Heal_Aura : public source2sdk::server::CCitadelModifierAura_Cone
+        class CCitadel_Modifier_Bull_Heal_Aura : public source2sdk::server::CCitadelModifierAura
         {
         public:
-            QAngle m_playerAngles; // 0x100            
-            source2sdk::client::ParticleIndex_t m_ConeParticle; // 0x10c            
-            uint8_t _pad0110[0x40];
+            QAngle m_playerAngles; // 0x108            
+            source2sdk::client::ParticleIndex_t m_AuraParticle; // 0x114            
+            uint8_t _pad0118[0x80];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Bull_Heal_Aura because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Bull_Heal_Aura) == 0x150);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Bull_Heal_Aura) == 0x198);
     };
 };

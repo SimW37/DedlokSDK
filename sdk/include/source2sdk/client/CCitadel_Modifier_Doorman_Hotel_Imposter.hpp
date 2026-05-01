@@ -33,7 +33,7 @@ namespace source2sdk
             // m_hRagdoll has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::CBaseAnimGraph> m_hRagdoll;
             char m_hRagdoll[0x4]; // 0xc0            
-            Vector m_vImposterPos; // 0xc4            
+            VectorWS m_vImposterPos; // 0xc4            
             bool m_bPlayEnd; // 0xd0            
             uint8_t _pad00d1[0x7];
         };

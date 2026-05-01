@@ -28,7 +28,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe30
+        // Size: 0x10e0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelMinimapComponent::Storage_t m_CCitadelMinimapComponent"
@@ -46,36 +46,38 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelMinimapComponent"
             // metadata: MNetworkAlias "CCitadelMinimapComponent"
             // metadata: MNetworkTypeAlias "CCitadelMinimapComponent"
-            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x9d8            
-            source2sdk::entity2::CEntityIOOutput m_OnBecomeCapturable; // 0x9f0            
-            source2sdk::entity2::CEntityIOOutput m_OnFullyCaptured; // 0xa18            
-            CUtlSymbolLarge m_iszGroupName; // 0xa40            
-            source2sdk::client::ParticleIndex_t m_nEnabledParticle; // 0xa48            
-            source2sdk::client::ParticleIndex_t m_nPreEnableFX; // 0xa4c            
-            uint8_t _pad0a50[0x3c0]; // 0xa50
+            source2sdk::server::CCitadelMinimapComponent m_CCitadelMinimapComponent; // 0x8d8            
+            source2sdk::entity2::CEntityIOOutput m_OnBecomeCapturable; // 0x8f8            
+            // m_OnFullyCaptured has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<std::int32_t> m_OnFullyCaptured;
+            char m_OnFullyCaptured[0x20]; // 0x910            
+            CUtlSymbolLarge m_iszGroupName; // 0x930            
+            source2sdk::client::ParticleIndex_t m_nEnabledParticle; // 0x938            
+            source2sdk::client::ParticleIndex_t m_nPreEnableFX; // 0x93c            
+            uint8_t _pad0940[0x780]; // 0x940
             // m_hEscort has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CNPC_Escort> m_hEscort;
-            char m_hEscort[0x4]; // 0xe10            
+            char m_hEscort[0x4]; // 0x10c0            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnQueuedEnableTimeChanged"
-            source2sdk::entity2::GameTime_t m_tQueuedEnableTime; // 0xe14            
+            source2sdk::entity2::GameTime_t m_tQueuedEnableTime; // 0x10c4            
             // metadata: MNetworkEnable
-            float m_flCaptureProgress; // 0xe18            
+            float m_flCaptureProgress; // 0x10c8            
             // metadata: MNetworkEnable
-            std::int32_t m_nCaptureProgressOwner; // 0xe1c            
+            std::int32_t m_nCaptureProgressOwner; // 0x10cc            
             // metadata: MNetworkEnable
-            std::int32_t m_nActivelyCapturingTeam; // 0xe20            
+            std::int32_t m_nActivelyCapturingTeam; // 0x10d0            
             // metadata: MNetworkEnable
-            std::int32_t m_nActiveCapturers; // 0xe24            
+            std::int32_t m_nActiveCapturers; // 0x10d4            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnEnableStateChanged"
-            std::uint8_t m_nEnableState; // 0xe28            
-            uint8_t _pad0e29[0x7];
+            std::uint8_t m_nEnableState; // 0x10d8            
+            uint8_t _pad10d9[0x7];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelTriggerCapturePoint because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadelTriggerCapturePoint) == 0xe30);
+        static_assert(sizeof(source2sdk::server::CCitadelTriggerCapturePoint) == 0x10e0);
     };
 };

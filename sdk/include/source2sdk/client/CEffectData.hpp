@@ -22,8 +22,8 @@ namespace source2sdk
         // Has VTable
         // Has Trivial Destructor
         // 
-        // static metadata: MNetworkVarNames "Vector m_vOrigin"
-        // static metadata: MNetworkVarNames "Vector m_vStart"
+        // static metadata: MNetworkVarNames "VectorWS m_vOrigin"
+        // static metadata: MNetworkVarNames "VectorWS m_vStart"
         // static metadata: MNetworkVarNames "Vector m_vNormal"
         // static metadata: MNetworkVarNames "QAngle m_vAngles"
         // static metadata: MNetworkVarNames "CEntityHandle m_hEntity"
@@ -42,7 +42,6 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "AttachmentHandle_t m_nAttachmentIndex"
         // static metadata: MNetworkVarNames "CUtlStringToken m_nAttachmentName"
         // static metadata: MNetworkVarNames "uint16 m_iEffectName"
-        // static metadata: MNetworkVarNames "uint8 m_nExplosionType"
         #pragma pack(push, 1)
         class CEffectData
         {
@@ -50,10 +49,10 @@ namespace source2sdk
             uint8_t _pad0000[0x8]; // 0x0
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord_integral"
-            Vector m_vOrigin; // 0x8            
+            VectorWS m_vOrigin; // 0x8            
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord_integral"
-            Vector m_vStart; // 0x14            
+            VectorWS m_vStart; // 0x14            
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "normal"
             Vector m_vNormal; // 0x20            
@@ -104,9 +103,7 @@ namespace source2sdk
             CUtlStringToken m_nAttachmentName; // 0x68            
             // metadata: MNetworkEnable
             std::uint16_t m_iEffectName; // 0x6c            
-            // metadata: MNetworkEnable
-            std::uint8_t m_nExplosionType; // 0x6e            
-            uint8_t _pad006f[0x9];
+            uint8_t _pad006e[0xa];
         };
         #pragma pack(pop)
         
@@ -130,7 +127,6 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CEffectData, m_nAttachmentIndex) == 0x64);
         static_assert(offsetof(source2sdk::client::CEffectData, m_nAttachmentName) == 0x68);
         static_assert(offsetof(source2sdk::client::CEffectData, m_iEffectName) == 0x6c);
-        static_assert(offsetof(source2sdk::client::CEffectData, m_nExplosionType) == 0x6e);
         
         static_assert(sizeof(source2sdk::client::CEffectData) == 0x78);
     };

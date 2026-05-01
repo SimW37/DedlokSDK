@@ -3,7 +3,6 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
-#include "source2sdk/server/CCitadelModifier.hpp"
 #include "source2sdk/server/CitadelAbilityVData.hpp"
 
 // /////////////////////////////////////////////////////////////
@@ -18,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1720
+        // Size: 0x1818
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -26,18 +25,10 @@ namespace source2sdk
         class CAbility_Mirage_SandPhantom_VData : public source2sdk::server::CitadelAbilityVData
         {
         public:
-            // metadata: MPropertyStartGroup "Modifiers"
-            // m_WhirlwindEvasionModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_WhirlwindEvasionModifier;
-            char m_WhirlwindEvasionModifier[0x10]; // 0x1700            
-            // m_SandPhantomModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_SandPhantomModifier;
-            char m_SandPhantomModifier[0x10]; // 0x1710            
         };
         #pragma pack(pop)
         
-        // Cannot assert offsets of fields in CAbility_Mirage_SandPhantom_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CAbility_Mirage_SandPhantom_VData) == 0x1720);
+        static_assert(sizeof(source2sdk::server::CAbility_Mirage_SandPhantom_VData) == 0x1818);
     };
 };

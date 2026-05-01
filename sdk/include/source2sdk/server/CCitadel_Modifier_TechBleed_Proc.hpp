@@ -24,25 +24,25 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x290
+        // Size: 0x498
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_TechBleed_Proc : public source2sdk::server::CCitadel_Modifier_BaseEventProc
         {
         public:
-            bool m_bNoDeath; // 0x180            
-            uint8_t _pad0181[0x3]; // 0x181
-            float m_flDamage; // 0x184            
-            std::int32_t m_nDamageTick; // 0x188            
+            bool m_bNoDeath; // 0x1e8            
+            uint8_t _pad01e9[0x3]; // 0x1e9
+            float m_flDamage; // 0x1ec            
+            std::int32_t m_nDamageTick; // 0x1f0            
             // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hTarget;
-            char m_hTarget[0x4]; // 0x18c            
-            uint8_t _pad0190[0x100];
+            char m_hTarget[0x4]; // 0x1f4            
+            uint8_t _pad01f8[0x2a0];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_TechBleed_Proc because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TechBleed_Proc) == 0x290);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_TechBleed_Proc) == 0x498);
     };
 };

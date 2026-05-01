@@ -27,12 +27,11 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0x1020
+        // Size: 0xec0
         // Has VTable
         // Is Abstract
         // 
         // static metadata: MNetworkExcludeByName "m_flexWeight"
-        // static metadata: MNetworkExcludeByName "m_blinktoggle"
         // static metadata: MNetworkExcludeByUserGroup "m_flPoseParameter"
         // static metadata: MNetworkExcludeByName "m_animationController.m_flPlaybackRate"
         // static metadata: MNetworkExcludeByUserGroup "overlay_vars"
@@ -47,72 +46,76 @@ namespace source2sdk
         class CBasePropDoor : public source2sdk::server::CDynamicProp
         {
         public:
-            uint8_t _pad0d80[0x10]; // 0xd80
-            float m_flAutoReturnDelay; // 0xd90            
-            uint8_t _pad0d94[0x4]; // 0xd94
+            uint8_t _pad0cc0[0x10]; // 0xcc0
+            float m_flAutoReturnDelay; // 0xcd0            
+            uint8_t _pad0cd4[0x4]; // 0xcd4
+            // metadata: MNotSaved
             // m_hDoorList has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CHandle<source2sdk::server::CBasePropDoor>> m_hDoorList;
-            char m_hDoorList[0x18]; // 0xd98            
-            std::int32_t m_nHardwareType; // 0xdb0            
-            bool m_bNeedsHardware; // 0xdb4            
-            uint8_t _pad0db5[0x3]; // 0xdb5
+            char m_hDoorList[0x18]; // 0xcd8            
+            std::int32_t m_nHardwareType; // 0xcf0            
+            bool m_bNeedsHardware; // 0xcf4            
+            uint8_t _pad0cf5[0x3]; // 0xcf5
             // metadata: MNetworkEnable
-            source2sdk::client::DoorState_t m_eDoorState; // 0xdb8            
+            source2sdk::client::DoorState_t m_eDoorState; // 0xcf8            
             // metadata: MNetworkEnable
-            bool m_bLocked; // 0xdbc            
+            bool m_bLocked; // 0xcfc            
             // metadata: MNetworkEnable
-            bool m_bNoNPCs; // 0xdbd            
-            uint8_t _pad0dbe[0x2]; // 0xdbe
+            bool m_bNoNPCs; // 0xcfd            
+            uint8_t _pad0cfe[0x2]; // 0xcfe
             // metadata: MNetworkEnable
-            Vector m_closedPosition; // 0xdc0            
+            Vector m_closedPosition; // 0xd00            
             // metadata: MNetworkEnable
-            QAngle m_closedAngles; // 0xdcc            
+            QAngle m_closedAngles; // 0xd0c            
             // m_hBlocker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hBlocker;
-            char m_hBlocker[0x4]; // 0xdd8            
-            bool m_bFirstBlocked; // 0xddc            
-            uint8_t _pad0ddd[0x3]; // 0xddd
-            source2sdk::server::locksound_t m_ls; // 0xde0            
-            bool m_bForceClosed; // 0xe00            
-            uint8_t _pad0e01[0x3]; // 0xe01
-            Vector m_vecLatchWorldPosition; // 0xe04            
+            char m_hBlocker[0x4]; // 0xd18            
+            bool m_bFirstBlocked; // 0xd1c            
+            uint8_t _pad0d1d[0x3]; // 0xd1d
+            source2sdk::server::locksound_t m_ls; // 0xd20            
+            bool m_bForceClosed; // 0xd40            
+            uint8_t _pad0d41[0x3]; // 0xd41
+            VectorWS m_vecLatchWorldPosition; // 0xd44            
             // m_hActivator has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hActivator;
-            char m_hActivator[0x4]; // 0xe10            
-            uint8_t _pad0e14[0x14]; // 0xe14
-            CUtlSymbolLarge m_SoundMoving; // 0xe28            
-            CUtlSymbolLarge m_SoundOpen; // 0xe30            
-            CUtlSymbolLarge m_SoundClose; // 0xe38            
-            CUtlSymbolLarge m_SoundLock; // 0xe40            
-            CUtlSymbolLarge m_SoundUnlock; // 0xe48            
-            CUtlSymbolLarge m_SoundLatch; // 0xe50            
-            CUtlSymbolLarge m_SoundPound; // 0xe58            
-            CUtlSymbolLarge m_SoundJiggle; // 0xe60            
-            CUtlSymbolLarge m_SoundLockedAnim; // 0xe68            
-            std::int32_t m_numCloseAttempts; // 0xe70            
-            CUtlStringToken m_nPhysicsMaterial; // 0xe74            
-            CUtlSymbolLarge m_SlaveName; // 0xe78            
+            char m_hActivator[0x4]; // 0xd50            
+            uint8_t _pad0d54[0x14]; // 0xd54
+            CUtlSymbolLarge m_SoundMoving; // 0xd68            
+            CUtlSymbolLarge m_SoundOpen; // 0xd70            
+            CUtlSymbolLarge m_SoundClose; // 0xd78            
+            CUtlSymbolLarge m_SoundLock; // 0xd80            
+            CUtlSymbolLarge m_SoundUnlock; // 0xd88            
+            CUtlSymbolLarge m_SoundLatch; // 0xd90            
+            // metadata: MNotSaved
+            CUtlSymbolLarge m_SoundPound; // 0xd98            
+            CUtlSymbolLarge m_SoundJiggle; // 0xda0            
+            CUtlSymbolLarge m_SoundLockedAnim; // 0xda8            
+            // metadata: MNotSaved
+            std::int32_t m_numCloseAttempts; // 0xdb0            
+            // metadata: MNotSaved
+            CUtlStringToken m_nPhysicsMaterial; // 0xdb4            
+            CUtlSymbolLarge m_SlaveName; // 0xdb8            
             // metadata: MNetworkEnable
             // m_hMaster has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBasePropDoor> m_hMaster;
-            char m_hMaster[0x4]; // 0xe80            
-            uint8_t _pad0e84[0x4]; // 0xe84
-            source2sdk::entity2::CEntityIOOutput m_OnBlockedClosing; // 0xe88            
-            source2sdk::entity2::CEntityIOOutput m_OnBlockedOpening; // 0xeb0            
-            source2sdk::entity2::CEntityIOOutput m_OnUnblockedClosing; // 0xed8            
-            source2sdk::entity2::CEntityIOOutput m_OnUnblockedOpening; // 0xf00            
-            source2sdk::entity2::CEntityIOOutput m_OnFullyClosed; // 0xf28            
-            source2sdk::entity2::CEntityIOOutput m_OnFullyOpen; // 0xf50            
-            source2sdk::entity2::CEntityIOOutput m_OnClose; // 0xf78            
-            source2sdk::entity2::CEntityIOOutput m_OnOpen; // 0xfa0            
-            source2sdk::entity2::CEntityIOOutput m_OnLockedUse; // 0xfc8            
-            source2sdk::entity2::CEntityIOOutput m_OnAjarOpen; // 0xff0            
-            uint8_t _pad1018[0x8];
+            char m_hMaster[0x4]; // 0xdc0            
+            uint8_t _pad0dc4[0x4]; // 0xdc4
+            source2sdk::entity2::CEntityIOOutput m_OnBlockedClosing; // 0xdc8            
+            source2sdk::entity2::CEntityIOOutput m_OnBlockedOpening; // 0xde0            
+            source2sdk::entity2::CEntityIOOutput m_OnUnblockedClosing; // 0xdf8            
+            source2sdk::entity2::CEntityIOOutput m_OnUnblockedOpening; // 0xe10            
+            source2sdk::entity2::CEntityIOOutput m_OnFullyClosed; // 0xe28            
+            source2sdk::entity2::CEntityIOOutput m_OnFullyOpen; // 0xe40            
+            source2sdk::entity2::CEntityIOOutput m_OnClose; // 0xe58            
+            source2sdk::entity2::CEntityIOOutput m_OnOpen; // 0xe70            
+            source2sdk::entity2::CEntityIOOutput m_OnLockedUse; // 0xe88            
+            source2sdk::entity2::CEntityIOOutput m_OnAjarOpen; // 0xea0            
+            uint8_t _pad0eb8[0x8];
             
             // Datamap fields:
-            // void m_hSoundMoving; // 0xe14
-            //  m_ls.sLockedSound; // 0xde8
-            //  m_ls.sUnlockedSound; // 0xdf0
+            // void m_hSoundMoving; // 0xd54
+            //  m_ls.sLockedSound; // 0xd28
+            //  m_ls.sUnlockedSound; // 0xd30
             // void InputOpen; // 0x0
             // CUtlSymbolLarge InputOpenAwayFrom; // 0x0
             // float InputOpenAwayFromActivator; // 0x0
@@ -132,6 +135,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CBasePropDoor because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CBasePropDoor) == 0x1020);
+        static_assert(sizeof(source2sdk::server::CBasePropDoor) == 0xec0);
     };
 };

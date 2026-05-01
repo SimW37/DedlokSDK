@@ -18,11 +18,10 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: unknown
         // Standard-layout class: false
-        // Size: 0x490
+        // Size: 0x420
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CModelState m_modelState"
-        // static metadata: MNetworkVarNames "bool m_bIsAnimationEnabled"
         // static metadata: MNetworkVarNames "bool m_bUseParentRenderBounds"
         // static metadata: MNetworkVarNames "CUtlStringToken m_materialGroup"
         // static metadata: MNetworkVarNames "uint8 m_nHitboxSet"
@@ -30,24 +29,28 @@ namespace source2sdk
         class CSkeletonInstance : public source2sdk::server::CGameSceneNode
         {
         public:
-            uint8_t _pad0160[0x10]; // 0x160
+            uint8_t _pad0120[0x10]; // 0x120
             // metadata: MNetworkEnable
-            source2sdk::server::CModelState m_modelState; // 0x170            
+            source2sdk::server::CModelState m_modelState; // 0x130            
             // metadata: MNetworkEnable
-            bool m_bIsAnimationEnabled; // 0x3f0            
-            // metadata: MNetworkEnable
-            bool m_bUseParentRenderBounds; // 0x3f1            
-            bool m_bDisableSolidCollisionsForHierarchy; // 0x3f2            
+            // metadata: MNotSaved
+            bool m_bUseParentRenderBounds; // 0x380            
+            bool m_bDisableSolidCollisionsForHierarchy; // 0x381            
             // start of bitfield block
+            // metadata: MNotSaved
             uint8_t m_bDirtyMotionType: 1;
+            // metadata: MNotSaved
             uint8_t m_bIsGeneratingLatchedParentSpaceState: 1;
             // end of bitfield block// 2 bits
+            uint8_t _pad0383[0x1]; // 0x383
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "skeletonMaterialGroupChanged"
-            CUtlStringToken m_materialGroup; // 0x3f4            
+            CUtlStringToken m_materialGroup; // 0x384            
             // metadata: MNetworkEnable
-            std::uint8_t m_nHitboxSet; // 0x3f8            
-            uint8_t _pad03f9[0x97];
+            std::uint8_t m_nHitboxSet; // 0x388            
+            uint8_t _pad0389[0x5b]; // 0x389
+            bool m_bForceServerConstraintsEnabled; // 0x3e4            
+            uint8_t _pad03e5[0x3b];
             
             // Datamap fields:
             // Vector velocity; // 0x7fffffff
@@ -58,6 +61,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CSkeletonInstance because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CSkeletonInstance) == 0x490);
+        static_assert(sizeof(source2sdk::server::CSkeletonInstance) == 0x420);
     };
 };

@@ -40,15 +40,17 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "uint16 m_iGustDirChange"
         // static metadata: MNetworkVarNames "uint16 m_iInitialWindDir"
         // static metadata: MNetworkVarNames "float32 m_flInitialWindSpeed"
-        // static metadata: MNetworkVarNames "Vector m_location"
+        // static metadata: MNetworkVarNames "VectorWS m_location"
         #pragma pack(push, 1)
         class C_EnvWindShared
         {
         public:
             uint8_t _pad0000[0x8]; // 0x0
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             source2sdk::entity2::GameTime_t m_flStartTime; // 0x8            
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             std::uint32_t m_iWindSeed; // 0xc            
             // metadata: MNetworkEnable
             std::uint16_t m_iMinWind; // 0x10            
@@ -69,12 +71,16 @@ namespace source2sdk
             // metadata: MNetworkEnable
             std::uint16_t m_iGustDirChange; // 0x28            
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             std::uint16_t m_iInitialWindDir; // 0x2a            
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             float m_flInitialWindSpeed; // 0x2c            
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "coord"
-            Vector m_location; // 0x30            
+            // metadata: MNotSaved
+            VectorWS m_location; // 0x30            
+            // metadata: MNotSaved
             // m_hEntOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hEntOwner;
             char m_hEntOwner[0x4]; // 0x3c            

@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x930
+        // Size: 0x880
         // Has VTable
         // 
         // static metadata: MNetworkIncludeByName "m_fFlags"
@@ -29,22 +29,22 @@ namespace source2sdk
         class CFuncMoveLinear : public source2sdk::server::CBaseToggle
         {
         public:
-            source2sdk::server::MoveLinearAuthoredPos_t m_authoredPosition; // 0x888            
-            QAngle m_angMoveEntitySpace; // 0x88c            
-            Vector m_vecMoveDirParentSpace; // 0x898            
-            uint8_t _pad08a4[0x4]; // 0x8a4
-            CUtlSymbolLarge m_soundStart; // 0x8a8            
-            CUtlSymbolLarge m_soundStop; // 0x8b0            
-            CUtlSymbolLarge m_currentSound; // 0x8b8            
-            float m_flBlockDamage; // 0x8c0            
-            float m_flStartPosition; // 0x8c4            
-            uint8_t _pad08c8[0x8]; // 0x8c8
-            source2sdk::entity2::CEntityIOOutput m_OnFullyOpen; // 0x8d0            
-            source2sdk::entity2::CEntityIOOutput m_OnFullyClosed; // 0x8f8            
-            bool m_bCreateMovableNavMesh; // 0x920            
-            bool m_bAllowMovableNavMeshDockingOnEntireEntity; // 0x921            
-            bool m_bCreateNavObstacle; // 0x922            
-            uint8_t _pad0923[0xd];
+            source2sdk::server::MoveLinearAuthoredPos_t m_authoredPosition; // 0x7f8            
+            QAngle m_angMoveEntitySpace; // 0x7fc            
+            Vector m_vecMoveDirParentSpace; // 0x808            
+            uint8_t _pad0814[0x4]; // 0x814
+            CUtlSymbolLarge m_soundStart; // 0x818            
+            CUtlSymbolLarge m_soundStop; // 0x820            
+            CUtlSymbolLarge m_currentSound; // 0x828            
+            float m_flBlockDamage; // 0x830            
+            float m_flStartPosition; // 0x834            
+            uint8_t _pad0838[0x8]; // 0x838
+            source2sdk::entity2::CEntityIOOutput m_OnFullyOpen; // 0x840            
+            source2sdk::entity2::CEntityIOOutput m_OnFullyClosed; // 0x858            
+            bool m_bCreateMovableNavMesh; // 0x870            
+            bool m_bAllowMovableNavMeshDockingOnEntireEntity; // 0x871            
+            bool m_bCreateNavObstacle; // 0x872            
+            uint8_t _pad0873[0xd];
             
             // Datamap fields:
             // bool movewithoutpushingblockers; // 0x7fffffff
@@ -64,6 +64,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CFuncMoveLinear because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CFuncMoveLinear) == 0x930);
+        static_assert(sizeof(source2sdk::server::CFuncMoveLinear) == 0x880);
     };
 };

@@ -25,7 +25,8 @@ namespace source2sdk
         class C_GlobalLight : public source2sdk::client::C_BaseEntity
         {
         public:
-            uint8_t _pad05e8[0x4c8]; // 0x5e8
+            uint8_t _pad05f0[0x4c0]; // 0x5f0
+            // metadata: MNotSaved
             std::uint16_t m_WindClothForceHandle; // 0xab0            
             uint8_t _pad0ab2[0x2e];
             

@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcb0
+        // Size: 0x11a0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_ToggleOnTime"
@@ -26,15 +26,15 @@ namespace source2sdk
         class CCitadel_Ability_Frank_PainAura : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x4]; // 0xba0
+            uint8_t _pad0f90[0x4]; // 0xf90
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_ToggleOnTime; // 0xba4            
-            uint8_t _pad0ba8[0x108];
+            source2sdk::entity2::GameTime_t m_ToggleOnTime; // 0xf94            
+            uint8_t _pad0f98[0x208];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Frank_PainAura because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Frank_PainAura) == 0xcb0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Frank_PainAura) == 0x11a0);
     };
 };

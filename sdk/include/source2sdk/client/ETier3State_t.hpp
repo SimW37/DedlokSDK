@@ -21,7 +21,7 @@ namespace source2sdk
             ETier3State_Alive = 0x0,
             ETier3State_Dying = 0x1,
             ETier3State_Falling = 0x2,
-            ETier3Staet_Vulnerable = 0x3,
+            ETier3State_Vulnerable = 0x3,
         };
     };
 };

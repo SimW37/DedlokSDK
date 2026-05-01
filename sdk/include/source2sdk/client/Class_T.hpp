@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 97
+        // Enumerator count: 109
         // Alignment: 4
         // Size: 0x4
         enum class Class_T : std::uint32_t
@@ -25,7 +25,7 @@ namespace source2sdk
             CLASS_TROOPER = 0x4,
             CLASS_TROOPER_BOSS = 0x5,
             CLASS_TROOPER_NEUTRAL = 0x6,
-            CLASS_TROOPER_FLYING_WEAKPOINT = 0x7,
+            CLASS_NEUTRAL_WEAKPOINT = 0x7,
             CLASS_SUPER_NEUTRAL = 0x8,
             CLASS_ITEM_SHOP = 0x9,
             CLASS_ABILITY_SHOP = 0xa,
@@ -58,9 +58,9 @@ namespace source2sdk
             CLASS_VAULT_NEUTRAL_CAMP = 0x25,
             CLASS_SUPER_NEUTRAL_CAMP = 0x26,
             CLASS_EXPLOSIVE_BARREL = 0x27,
-            CLASS_PAYLOAD = 0x28,
-            CLASS_BULLET_TIME_WARP = 0x29,
-            CLASS_BREAKABLE_PROP_PICKUP = 0x2a,
+            CLASS_BULLET_TIME_WARP = 0x28,
+            CLASS_BREAKABLE_PROP_PICKUP = 0x29,
+            CLASS_NEUTRAL_BUG = 0x2a,
             CLASS_PUNCHABLE_POWERUP = 0x2b,
             CLASS_ITEM_PICKUP = 0x2c,
             CLASS_GOLDEN_IDOL_PICKUP = 0x2d,
@@ -102,19 +102,31 @@ namespace source2sdk
             CLASS_TRIGGER_HIDEOUT = 0x51,
             CLASS_SWAN_FEATHERBOOMERANG = 0x52,
             CLASS_BULLET_REDIRECT_VOLUME = 0x53,
-            CLASS_BOOKWORM_KNIGHTCHARGE = 0x54,
-            CLASS_DOORMAN_DOORWAY = 0x55,
-            CLASS_HIDEOUT_INTERACTABLE_PROP = 0x56,
-            CLASS_HIDEOUT_INTERACTABLE_TRIGGER = 0x57,
-            CLASS_CAPTURE_POINT = 0x58,
-            CLASS_ESCORT = 0x59,
-            CLASS_TIER2 = 0x5a,
+            CLASS_PROJECTILE_TOUCH_VOLUME = 0x54,
+            CLASS_BOOKWORM_KNIGHTCHARGE = 0x55,
+            CLASS_DOORMAN_DOORWAY = 0x56,
+            CLASS_HIDEOUT_INTERACTABLE_PROP = 0x57,
+            CLASS_HIDEOUT_INTERACTABLE_TRIGGER = 0x58,
+            CLASS_CAPTURE_POINT = 0x59,
+            CLASS_ESCORT = 0x5a,
             CLASS_NPC_FLYING_PIGEON = 0x5b,
             CLASS_NPC_HIDEOUT_CAT = 0x5c,
             CLASS_HIDEOUT_BALL = 0x5d,
-            CLASS_SHIELD = 0x5e,
-            CLASS_TRIGGER_NO_PORTALS = 0x5f,
-            NUM_CLASSIFY_CLASSES = 0x60,
+            CLASS_PRIEST_BEARTRAP_PROJECTILE = 0x5e,
+            CLASS_SHIELD = 0x5f,
+            CLASS_NECRO_SKELE = 0x60,
+            CLASS_NECRO_HAUNTINGSKULL = 0x61,
+            CLASS_NECRO_GRAVESTONE = 0x62,
+            CLASS_TRIGGER_NO_PORTALS = 0x63,
+            CLASS_AIRHEART_STICKYBOMBINWORLD = 0x64,
+            CLASS_AIRHEART_PACKAGE = 0x65,
+            CLASS_FAMILIAR_SHIELD = 0x66,
+            CLASS_TEAM_REVEAL_HERO_CARD = 0x67,
+            CLASS_FAMILIAR_HELPINGHAND = 0x68,
+            CLASS_MATCH_INTRO_HERO_CARD = 0x69,
+            CLASS_SMALL_DEPLOYABLE = 0x6a,
+            CLASS_PLAYER_SPRAY = 0x6b,
+            NUM_CLASSIFY_CLASSES = 0x6c,
         };
     };
 };

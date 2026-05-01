@@ -19,21 +19,26 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xe70
+        // Size: 0xe40
         // Has VTable
         #pragma pack(push, 1)
         class C_PhysPropClientside : public source2sdk::client::C_BreakableProp
         {
         public:
-            source2sdk::entity2::GameTime_t m_flTouchDelta; // 0xe40            
-            source2sdk::entity2::GameTime_t m_fDeathTime; // 0xe44            
-            Vector m_vecDamagePosition; // 0xe48            
-            Vector m_vecDamageDirection; // 0xe54            
-            source2sdk::client::DamageTypes_t m_nDamageType; // 0xe60            
-            uint8_t _pad0e64[0xc];
+            // metadata: MNotSaved
+            source2sdk::entity2::GameTime_t m_flTouchDelta; // 0xe10            
+            // metadata: MNotSaved
+            source2sdk::entity2::GameTime_t m_fDeathTime; // 0xe14            
+            // metadata: MNotSaved
+            Vector m_vecDamagePosition; // 0xe18            
+            // metadata: MNotSaved
+            Vector m_vecDamageDirection; // 0xe24            
+            // metadata: MNotSaved
+            source2sdk::client::DamageTypes_t m_nDamageType; // 0xe30            
+            uint8_t _pad0e34[0xc];
             
             // Datamap fields:
-            // float m_impactEnergyScale; // 0xdb0
+            // float m_impactEnergyScale; // 0xd78
             // bool forcemotiondisabled; // 0x7fffffff
             // bool phys_start_asleep; // 0x7fffffff
             // float fademaxdist; // 0x7fffffff
@@ -46,6 +51,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in C_PhysPropClientside because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_PhysPropClientside) == 0xe70);
+        static_assert(sizeof(source2sdk::client::C_PhysPropClientside) == 0xe40);
     };
 };

@@ -26,7 +26,7 @@ namespace source2sdk
             uint8_t _pad0000[0x8]; // 0x0
             float m_speed; // 0x8            
             float m_maxTorque; // 0xc            
-            Vector m_axis; // 0x10            
+            VectorWS m_axis; // 0x10            
             float m_inertiaFactor; // 0x1c            
         };
         #pragma pack(pop)

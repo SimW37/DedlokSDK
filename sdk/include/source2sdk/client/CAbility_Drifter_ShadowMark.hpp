@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xeb0
+        // Size: 0x13f8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EHANDLE m_hTeleportTarget"
@@ -38,23 +38,23 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // m_hTeleportTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hTeleportTarget;
-            char m_hTeleportTarget[0x4]; // 0xd90            
+            char m_hTeleportTarget[0x4]; // 0x11d8            
             // metadata: MNetworkEnable
-            bool m_bTeleported; // 0xd94            
-            uint8_t _pad0d95[0x3]; // 0xd95
+            bool m_bTeleported; // 0x11dc            
+            uint8_t _pad11dd[0x3]; // 0x11dd
             // metadata: MNetworkEnable
             // metadata: MNetworkEncoder "qangle"
             // metadata: MNetworkChangeCallback "OnTeleportAnglesChanged"
-            QAngle m_qPostTeleportAngles; // 0xd98            
-            uint8_t _pad0da4[0x4]; // 0xda4
-            source2sdk::entity2::GameTime_t m_flExpireTime; // 0xda8            
-            source2sdk::entity2::GameTime_t m_flTeleportedTime; // 0xdac            
-            uint8_t _pad0db0[0x100];
+            QAngle m_qPostTeleportAngles; // 0x11e0            
+            uint8_t _pad11ec[0x4]; // 0x11ec
+            source2sdk::entity2::GameTime_t m_flExpireTime; // 0x11f0            
+            source2sdk::entity2::GameTime_t m_flTeleportedTime; // 0x11f4            
+            uint8_t _pad11f8[0x200];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CAbility_Drifter_ShadowMark because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CAbility_Drifter_ShadowMark) == 0xeb0);
+        static_assert(sizeof(source2sdk::client::CAbility_Drifter_ShadowMark) == 0x13f8);
     };
 };

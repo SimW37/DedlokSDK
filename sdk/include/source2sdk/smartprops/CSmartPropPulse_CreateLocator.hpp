@@ -21,9 +21,6 @@ namespace source2sdk
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: MCellForDomain "SmartPropEval"
-        // static metadata: MPulseCellMethodBindings
-        // static metadata: MPulseCellOutflowHookInfo "0P¤ù"
         // static metadata: MPropertyFriendlyName "Create Locator"
         // static metadata: MPropertyDescription "Create a locator with the current transform. The locator may optionally be configurable, so that its transform can be modified in Hammer."
         // static metadata: MVDataClassGroup

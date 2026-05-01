@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1030
+        // Size: 0x1900
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EHANDLE m_hGrabTarget"
@@ -41,24 +41,28 @@ namespace source2sdk
             // metadata: MNetworkEnable
             // m_hGrabTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::client::C_BaseEntity> m_hGrabTarget;
-            char m_hGrabTarget[0x4]; // 0xd90            
-            source2sdk::client::ParticleIndex_t m_nHoldBombEffect; // 0xd94            
-            uint8_t _pad0d98[0x280]; // 0xd98
+            char m_hGrabTarget[0x4]; // 0x11d8            
+            source2sdk::client::ParticleIndex_t m_nHoldBombEffect; // 0x11dc            
+            uint8_t _pad11e0[0x708]; // 0x11e0
             // metadata: MNetworkEnable
-            source2sdk::client::EFlightState m_eFlightState; // 0x1018            
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            source2sdk::client::EFlightState m_eFlightState; // 0x18e8            
             // metadata: MNetworkEnable
-            bool m_bIsGrabbing; // 0x1019            
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            bool m_bIsGrabbing; // 0x18e9            
             // metadata: MNetworkEnable
-            bool m_bIsHoldingBomb; // 0x101a            
-            uint8_t _pad101b[0x1]; // 0x101b
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            bool m_bIsHoldingBomb; // 0x18ea            
+            uint8_t _pad18eb[0x1]; // 0x18eb
             // metadata: MNetworkEnable
-            float m_flCurrentSpeed; // 0x101c            
-            uint8_t _pad1020[0x10];
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
+            float m_flCurrentSpeed; // 0x18ec            
+            uint8_t _pad18f0[0x10];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Tengu_AirLift because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Tengu_AirLift) == 0x1030);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Tengu_AirLift) == 0x1900);
     };
 };

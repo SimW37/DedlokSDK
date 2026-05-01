@@ -25,21 +25,21 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x108
+        // Size: 0x110
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_ControlPointCapturerAura : public source2sdk::server::CCitadelModifierAura
         {
         public:
-            source2sdk::client::ParticleIndex_t m_particle; // 0x100            
+            source2sdk::client::ParticleIndex_t m_particle; // 0x108            
             // m_hCP has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelControlPointTrigger> m_hCP;
-            char m_hCP[0x4]; // 0x104            
+            char m_hCP[0x4]; // 0x10c            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_ControlPointCapturerAura because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ControlPointCapturerAura) == 0x108);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_ControlPointCapturerAura) == 0x110);
     };
 };

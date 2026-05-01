@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x448
+        // Size: 0x458
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -52,24 +52,25 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Sounds"
             CSoundEventName m_sSpawnSound; // 0x3e0            
             CSoundEventName m_sKillExplosionSound; // 0x3f0            
-            CSoundEventName m_sTargetAcquiredLocalSound; // 0x400            
-            CSoundEventName m_sTargetAcquiredSound; // 0x410            
+            CSoundEventName m_sLastHitSound; // 0x400            
+            CSoundEventName m_sTargetAcquiredLocalSound; // 0x410            
+            CSoundEventName m_sTargetAcquiredSound; // 0x420            
             // metadata: MPropertyStartGroup "Stats"
-            float m_flIdleTurnSpeed; // 0x420            
-            float m_flIdleTurnAngles; // 0x424            
-            float m_flTrooperTakeDamageMult; // 0x428            
-            float m_flNeutralTakeDamageMulti; // 0x42c            
-            float m_flNotifyEventTime; // 0x430            
-            float m_flNearDeathDuration; // 0x434            
-            float m_flMinimapRevealTime; // 0x438            
-            float m_flMinLifetime; // 0x43c            
-            float m_flAttackThinkTime; // 0x440            
-            uint8_t _pad0444[0x4];
+            float m_flIdleTurnSpeed; // 0x430            
+            float m_flIdleTurnAngles; // 0x434            
+            float m_flTrooperTakeDamageMult; // 0x438            
+            float m_flNeutralTakeDamageMulti; // 0x43c            
+            float m_flNotifyEventTime; // 0x440            
+            float m_flNearDeathDuration; // 0x444            
+            float m_flMinimapRevealTime; // 0x448            
+            float m_flMinLifetime; // 0x44c            
+            float m_flAttackThinkTime; // 0x450            
+            uint8_t _pad0454[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_ShieldedSentryVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CNPC_ShieldedSentryVData) == 0x448);
+        static_assert(sizeof(source2sdk::client::CNPC_ShieldedSentryVData) == 0x458);
     };
 };

@@ -43,6 +43,7 @@ namespace source2sdk
             uint8_t _pad007b[0x1]; // 0x7b
             std::int32_t m_nLastSpokenPriority; // 0x7c            
             uint8_t _pad0080[0x18]; // 0x80
+            // metadata: MNotSaved
             source2sdk::server::CBaseFlex* m_pOuter; // 0x98            
             
             // Datamap fields:

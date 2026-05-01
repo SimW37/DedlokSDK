@@ -26,7 +26,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xd48
+        // Size: 0x1138
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "Vector m_vecCastStartPos"
@@ -44,53 +44,53 @@ namespace source2sdk
         class CCitadel_Ability_TangoTether : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            std::int32_t m_iTargetPosIndex; // 0xba0            
+            std::int32_t m_iTargetPosIndex; // 0xf90            
             // m_hLockOnTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hLockOnTarget;
-            char m_hLockOnTarget[0x4]; // 0xba4            
+            char m_hLockOnTarget[0x4]; // 0xf94            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vecCastStartPos; // 0xba8            
+            Vector m_vecCastStartPos; // 0xf98            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vecDashStartPos; // 0xbb4            
+            Vector m_vecDashStartPos; // 0xfa4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            Vector m_vecDashEndPos; // 0xbc0            
+            Vector m_vecDashEndPos; // 0xfb0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            QAngle m_angDashStartAng; // 0xbcc            
+            QAngle m_angDashStartAng; // 0xfbc            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flDashStartTime; // 0xbd8            
+            source2sdk::entity2::GameTime_t m_flDashStartTime; // 0xfc8            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flGrappleStartTime; // 0xbdc            
+            source2sdk::entity2::GameTime_t m_flGrappleStartTime; // 0xfcc            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flGrappleArriveTime; // 0xbe0            
+            source2sdk::entity2::GameTime_t m_flGrappleArriveTime; // 0xfd0            
             // metadata: MNetworkEnable
             // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hTarget;
-            char m_hTarget[0x4]; // 0xbe4            
-            float m_flVelSpring; // 0xbe8            
+            char m_hTarget[0x4]; // 0xfd4            
+            float m_flVelSpring; // 0xfd8            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_flGrappleShotAttackTime; // 0xbec            
-            std::int32_t m_nTicksNotMoving; // 0xbf0            
-            Vector m_vecPrevPos; // 0xbf4            
+            source2sdk::entity2::GameTime_t m_flGrappleShotAttackTime; // 0xfdc            
+            std::int32_t m_nTicksNotMoving; // 0xfe0            
+            Vector m_vecPrevPos; // 0xfe4            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
             // metadata: MNetworkEncoder "coord"
-            Vector m_rgTargetPos[20]; // 0xc00            
+            Vector m_rgTargetPos[20]; // 0xff0            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            source2sdk::entity2::GameTime_t m_rgTargetPosTime[20]; // 0xcf0            
-            source2sdk::client::ParticleIndex_t m_nGrappleTravelEffect; // 0xd40            
-            uint8_t _pad0d44[0x4];
+            source2sdk::entity2::GameTime_t m_rgTargetPosTime[20]; // 0x10e0            
+            source2sdk::client::ParticleIndex_t m_nGrappleTravelEffect; // 0x1130            
+            uint8_t _pad1134[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_TangoTether because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_TangoTether) == 0xd48);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_TangoTether) == 0x1138);
     };
 };

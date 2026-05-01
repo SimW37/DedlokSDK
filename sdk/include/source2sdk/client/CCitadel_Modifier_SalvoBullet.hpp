@@ -18,20 +18,20 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x220
+        // Size: 0x320
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_SalvoBullet : public source2sdk::client::CCitadel_Modifier_BaseBulletPreRollProc
         {
         public:
-            uint8_t _pad0198[0x80]; // 0x198
-            source2sdk::client::ShotID_t m_BuffedShotId; // 0x218            
-            uint8_t _pad021c[0x4];
+            uint8_t _pad0218[0x100]; // 0x218
+            source2sdk::client::ShotID_t m_BuffedShotId; // 0x318            
+            uint8_t _pad031c[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_SalvoBullet because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_SalvoBullet) == 0x220);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_SalvoBullet) == 0x320);
     };
 };

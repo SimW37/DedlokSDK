@@ -14,10 +14,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xc10
+        // Size: 0xb90
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Announcer_Base : public source2sdk::server::CBaseCombatCharacter
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Announcer_Base) == 0xc10);
+        static_assert(sizeof(source2sdk::server::CCitadel_Announcer_Base) == 0xb90);
     };
 };

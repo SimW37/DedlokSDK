@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x168
+        // Size: 0x1c8
         // Has VTable
         #pragma pack(push, 1)
         class CModifier_Mirage_SandPhantom : public source2sdk::client::CCitadelModifier
@@ -30,12 +30,12 @@ namespace source2sdk
             Vector m_vecStartPosition; // 0xcc            
             float m_flStartDelay; // 0xd8            
             Vector m_vecApplyOffset; // 0xdc            
-            uint8_t _pad00e8[0x80];
+            uint8_t _pad00e8[0xe0];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Mirage_SandPhantom because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CModifier_Mirage_SandPhantom) == 0x168);
+        static_assert(sizeof(source2sdk::client::CModifier_Mirage_SandPhantom) == 0x1c8);
     };
 };

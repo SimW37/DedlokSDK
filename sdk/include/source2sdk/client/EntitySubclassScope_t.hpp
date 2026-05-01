@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 8
+        // Enumerator count: 9
         // Alignment: 4
         // Size: 0x4
         enum class EntitySubclassScope_t : std::uint32_t
@@ -37,7 +37,10 @@ namespace source2sdk
             // MPropertyFriendlyName "ScaleFunctions"
             // MEntitySubclassScopeFile
             SUBCLASS_SCOPE_SCALE_FUNCTIONS = 0x5,
-            SUBCLASS_SCOPE_COUNT = 0x6,
+            // MPropertyFriendlyName "Loot Tables"
+            // MEntitySubclassScopeFile
+            SUBCLASS_SCOPE_LOOT_TABLES = 0x6,
+            SUBCLASS_SCOPE_COUNT = 0x7,
         };
     };
 };

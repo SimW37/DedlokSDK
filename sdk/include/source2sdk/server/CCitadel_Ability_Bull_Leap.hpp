@@ -7,6 +7,13 @@
 #include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/server/CCitadelAutoScaledTime.hpp"
 #include "source2sdk/server/CCitadelBaseAbility.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -20,7 +27,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xde0
+        // Size: 0x13c0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "bool m_bBraceParamTriggered"
@@ -37,33 +44,40 @@ namespace source2sdk
         public:
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerAndObserversExclusive"
-            bool m_bBraceParamTriggered; // 0xba0            
-            uint8_t _pad0ba1[0x3]; // 0xba1
+            bool m_bBraceParamTriggered; // 0xf90            
+            uint8_t _pad0f91[0x3]; // 0xf91
             // metadata: MNetworkEnable
-            float m_flBoostYaw; // 0xba4            
+            float m_flBoostYaw; // 0xf94            
             // metadata: MNetworkEnable
-            Vector m_vecCrashPosition; // 0xba8            
+            Vector m_vecCrashPosition; // 0xf98            
             // metadata: MNetworkEnable
-            Vector m_vecCrashDirection; // 0xbb4            
+            Vector m_vecCrashDirection; // 0xfa4            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnLeapStateChanged"
-            source2sdk::client::ELeapState_t m_eLeapState; // 0xbc0            
-            uint8_t _pad0bc1[0x3]; // 0xbc1
+            source2sdk::client::ELeapState_t m_eLeapState; // 0xfb0            
+            uint8_t _pad0fb1[0x3]; // 0xfb1
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flStateEnterTime; // 0xbc4            
+            source2sdk::entity2::GameTime_t m_flStateEnterTime; // 0xfb4            
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelAutoScaledTime m_flNextStateTime; // 0xbc8            
+            source2sdk::server::CCitadelAutoScaledTime m_flNextStateTime; // 0xfb8            
             // metadata: MNetworkEnable
-            source2sdk::server::CCitadelAutoScaledTime m_flBoostEndTime; // 0xbe0            
-            uint8_t _pad0bf8[0x1cc]; // 0xbf8
-            Vector m_vecLastVel; // 0xdc4            
-            Vector m_vecCrashDownLastPos; // 0xdd0            
-            uint8_t _pad0ddc[0x4];
+            source2sdk::server::CCitadelAutoScaledTime m_flBoostEndTime; // 0xfd0            
+            uint8_t _pad0fe8[0x380]; // 0xfe8
+            Vector m_vPrevPos; // 0x1368            
+            uint8_t _pad1374[0x4]; // 0x1374
+            // m_vecDraggedEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecDraggedEntities;
+            char m_vecDraggedEntities[0x18]; // 0x1378            
+            uint8_t _pad1390[0xc]; // 0x1390
+            Vector m_vecLastVel; // 0x139c            
+            Vector m_vecCrashDownLastPos; // 0x13a8            
+            bool m_bInputBufferCrash; // 0x13b4            
+            uint8_t _pad13b5[0xb];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Bull_Leap because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bull_Leap) == 0xde0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_Bull_Leap) == 0x13c0);
     };
 };

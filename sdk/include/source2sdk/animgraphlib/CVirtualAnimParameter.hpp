@@ -22,7 +22,6 @@ namespace source2sdk
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
-        // static metadata: M_LEGACY_OptOutFromSchemaPropertyDomain
         #pragma pack(push, 1)
         class CVirtualAnimParameter : public source2sdk::animgraphlib::CAnimParameterBase
         {

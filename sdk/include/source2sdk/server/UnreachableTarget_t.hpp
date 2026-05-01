@@ -35,11 +35,11 @@ namespace source2sdk
             // hTargetEnt has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> hTargetEnt;
             char hTargetEnt[0x4]; // 0x4            
-            Vector vecTargetWorldPos; // 0x8            
+            VectorWS vecTargetWorldPos; // 0x8            
             uint8_t _pad0014[0x4]; // 0x14
             CGlobalSymbol sTargetSymbol; // 0x18            
             source2sdk::entity2::GameTime_t fExpireTime; // 0x20            
-            Vector vecTargetLocationWhenUnreachable; // 0x24            
+            VectorWS vecTargetLocationWhenUnreachable; // 0x24            
         };
         #pragma pack(pop)
         

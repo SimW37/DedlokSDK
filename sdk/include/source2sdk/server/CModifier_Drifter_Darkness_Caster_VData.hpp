@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x930
+        // Size: 0x920
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,17 +29,17 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Visuals"
             // m_SpiritBulletImpactParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpiritBulletImpactParticle;
-            char m_SpiritBulletImpactParticle[0xe0]; // 0x760            
+            char m_SpiritBulletImpactParticle[0xe0]; // 0x750            
             // m_SpiritBulletTracerParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SpiritBulletTracerParticle;
-            char m_SpiritBulletTracerParticle[0xe0]; // 0x840            
+            char m_SpiritBulletTracerParticle[0xe0]; // 0x830            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strSpiritBulletHitSound; // 0x920            
+            CSoundEventName m_strSpiritBulletHitSound; // 0x910            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CModifier_Drifter_Darkness_Caster_VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CModifier_Drifter_Darkness_Caster_VData) == 0x930);
+        static_assert(sizeof(source2sdk::server::CModifier_Drifter_Darkness_Caster_VData) == 0x920);
     };
 };

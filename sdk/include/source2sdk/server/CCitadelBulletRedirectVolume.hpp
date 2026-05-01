@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x828
+        // Size: 0x798
         // Has VTable
         #pragma pack(push, 1)
         class CCitadelBulletRedirectVolume : public source2sdk::server::CBaseModelEntity
         {
         public:
-            uint8_t _pad0808[0x20];
+            uint8_t _pad0778[0x20];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadelBulletRedirectVolume) == 0x828);
+        static_assert(sizeof(source2sdk::server::CCitadelBulletRedirectVolume) == 0x798);
     };
 };

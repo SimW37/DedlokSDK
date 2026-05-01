@@ -35,7 +35,7 @@ namespace source2sdk
         public:
             Vector m_vAccumulatedRootMotion; // 0x0            
             QAngle m_angAccumulatedRootMotionRotation; // 0xc            
-            Vector m_vSrc; // 0x18            
+            VectorWS m_vSrc; // 0x18            
             QAngle m_angSrc; // 0x24            
             QAngle m_angCurrent; // 0x30            
             float m_flLockedSpeed; // 0x3c            

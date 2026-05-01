@@ -22,7 +22,7 @@ namespace source2sdk
         class CAI_MoveMonitor
         {
         public:
-            Vector m_vMark; // 0x0            
+            VectorWS m_vMark; // 0x0            
             float m_flMarkTolerance; // 0xc            
         };
         #pragma pack(pop)

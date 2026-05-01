@@ -17,22 +17,22 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x150
+        // Size: 0x1b8
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Tech_Bleed : public source2sdk::server::CCitadelModifier
         {
         public:
-            bool m_bNoDeath; // 0xc8            
-            bool m_bDamageInProgress; // 0xc9            
-            uint8_t _pad00ca[0x2]; // 0xca
-            float m_flDamage; // 0xcc            
-            uint8_t _pad00d0[0x80];
+            bool m_bNoDeath; // 0xd0            
+            bool m_bDamageInProgress; // 0xd1            
+            uint8_t _pad00d2[0x2]; // 0xd2
+            float m_flDamage; // 0xd4            
+            uint8_t _pad00d8[0xe0];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_Tech_Bleed because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Tech_Bleed) == 0x150);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_Tech_Bleed) == 0x1b8);
     };
 };

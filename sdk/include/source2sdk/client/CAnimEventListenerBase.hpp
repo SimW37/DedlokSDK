@@ -16,20 +16,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x1
         // Standard-layout class: true
-        // Size: 0x20
-        // Has VTable
-        // Is Abstract
+        // Size: 0x18
         // Has Trivial Destructor
         #pragma pack(push, 1)
         class CAnimEventListenerBase
         {
         public:
-            uint8_t _pad0000[0x20];
+            uint8_t _pad0000[0x18];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CAnimEventListenerBase) == 0x20);
+        static_assert(sizeof(source2sdk::client::CAnimEventListenerBase) == 0x18);
     };
 };

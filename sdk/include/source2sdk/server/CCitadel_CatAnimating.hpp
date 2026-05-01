@@ -14,21 +14,21 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xc30
+        // Size: 0xc00
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_CatAnimating : public source2sdk::server::CCitadelAnimatingModelEntity
         {
         public:
-            uint8_t _pad0c18[0x18];
+            uint8_t _pad0be0[0x20];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CCitadel_CatAnimating) == 0xc30);
+        static_assert(sizeof(source2sdk::server::CCitadel_CatAnimating) == 0xc00);
     };
 };

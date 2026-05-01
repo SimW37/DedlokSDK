@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xb30
+        // Size: 0xa90
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "GameTime_t m_tQueuedEnableTime"
@@ -38,27 +38,27 @@ namespace source2sdk
         class CCitadelTriggerCapturePoint : public source2sdk::client::C_BaseTrigger
         {
         public:
-            source2sdk::client::CCitadelInWorldEventTimer* m_pUIWorldEventTimer; // 0xb10            
+            source2sdk::client::CCitadelInWorldEventTimer* m_pUIWorldEventTimer; // 0xa70            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnQueuedEnableTimeChanged"
-            source2sdk::entity2::GameTime_t m_tQueuedEnableTime; // 0xb18            
+            source2sdk::entity2::GameTime_t m_tQueuedEnableTime; // 0xa78            
             // metadata: MNetworkEnable
-            float m_flCaptureProgress; // 0xb1c            
+            float m_flCaptureProgress; // 0xa7c            
             // metadata: MNetworkEnable
-            std::int32_t m_nCaptureProgressOwner; // 0xb20            
+            std::int32_t m_nCaptureProgressOwner; // 0xa80            
             // metadata: MNetworkEnable
-            std::int32_t m_nActivelyCapturingTeam; // 0xb24            
+            std::int32_t m_nActivelyCapturingTeam; // 0xa84            
             // metadata: MNetworkEnable
-            std::int32_t m_nActiveCapturers; // 0xb28            
+            std::int32_t m_nActiveCapturers; // 0xa88            
             // metadata: MNetworkEnable
             // metadata: MNetworkChangeCallback "OnEnableStateChanged"
-            std::uint8_t m_nEnableState; // 0xb2c            
-            uint8_t _pad0b2d[0x3];
+            std::uint8_t m_nEnableState; // 0xa8c            
+            uint8_t _pad0a8d[0x3];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadelTriggerCapturePoint because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadelTriggerCapturePoint) == 0xb30);
+        static_assert(sizeof(source2sdk::client::CCitadelTriggerCapturePoint) == 0xa90);
     };
 };

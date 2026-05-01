@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x10
         // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xf60
+        // Size: 0xee0
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_ShopProp : public source2sdk::client::C_DynamicProp
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_ShopProp) == 0xf60);
+        static_assert(sizeof(source2sdk::client::CCitadel_ShopProp) == 0xee0);
     };
 };

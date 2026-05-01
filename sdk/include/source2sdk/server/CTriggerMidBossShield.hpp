@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa08
+        // Size: 0x908
         // Has VTable
         #pragma pack(push, 1)
         class CTriggerMidBossShield : public source2sdk::server::CTriggerNeutralShield
@@ -28,6 +28,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CTriggerMidBossShield) == 0xa08);
+        static_assert(sizeof(source2sdk::server::CTriggerMidBossShield) == 0x908);
     };
 };

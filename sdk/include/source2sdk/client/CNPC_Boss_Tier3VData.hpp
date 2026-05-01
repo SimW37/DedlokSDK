@@ -20,7 +20,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1b30
+        // Size: 0x26c8
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -28,106 +28,170 @@ namespace source2sdk
         class CNPC_Boss_Tier3VData : public source2sdk::client::CAI_CitadelNPCVData
         {
         public:
-            std::int32_t m_nPhase2Health; // 0x11d8            
-            float m_flEyeZOffset; // 0x11dc            
-            float m_flDefaultMoveSpeed; // 0x11e0            
-            float m_flNoShieldMoveSpeed; // 0x11e4            
-            float m_flEnemyTrooperProtectionRange; // 0x11e8            
-            uint8_t _pad11ec[0x4]; // 0x11ec
+            float m_flAllyPitTimeMin; // 0x1338            
+            std::int32_t m_nPhase2Health; // 0x133c            
+            float m_flEyeZOffset; // 0x1340            
+            float m_flDefaultMoveSpeed; // 0x1344            
+            float m_flEnemyTrooperProtectionRange; // 0x1348            
+            Vector m_vPhase1ObserverOrigin; // 0x134c            
+            Vector m_vPhase2ObserverOrigin; // 0x1358            
+            float m_flPhase1ObserverPitch; // 0x1364            
+            float m_flPhase2ObserverPitch; // 0x1368            
+            float m_flPhase2MaxAnimSpinRate; // 0x136c            
+            float m_flPhase2AttackBias; // 0x1370            
+            float m_flRotateSpeed; // 0x1374            
+            float m_flPhase2SightRange; // 0x1378            
+            float m_flCoreRadius; // 0x137c            
+            float m_flCoreDeathTime; // 0x1380            
+            float m_flTransitionLightTime01; // 0x1384            
+            float m_flTransitionLightTime02; // 0x1388            
+            float m_flTransitionLightTime03; // 0x138c            
+            float m_flTransitionLightTime04; // 0x1390            
+            // metadata: MPropertyStartGroup "Shrine Gameplay"
+            float m_flShrineAttackHealthLossPerAttack; // 0x1394            
+            float m_flShrineAttackMinTimeBetweenAttacks; // 0x1398            
+            uint8_t _pad139c[0x4]; // 0x139c
             // metadata: MPropertyStartGroup "Visuals"
-            // m_DeathSmallExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeathSmallExplosionParticle;
-            char m_DeathSmallExplosionParticle[0xe0]; // 0x11f0            
-            // m_DeathLargeExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DeathLargeExplosionParticle;
-            char m_DeathLargeExplosionParticle[0xe0]; // 0x12d0            
-            // m_WeakpointBrokenExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_WeakpointBrokenExplosionParticle;
-            char m_WeakpointBrokenExplosionParticle[0xe0]; // 0x13b0            
-            // m_ChargeUpExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ChargeUpExplosionParticle;
-            char m_ChargeUpExplosionParticle[0xe0]; // 0x1490            
+            // m_AmberEffigyExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberEffigyExplosionParticle;
+            char m_AmberEffigyExplosionParticle[0xe0]; // 0x13a0            
+            // m_AmberTransformUpExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberTransformUpExplosionParticle;
+            char m_AmberTransformUpExplosionParticle[0xe0]; // 0x1480            
+            // m_AmberBeginDyingParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberBeginDyingParticle;
+            char m_AmberBeginDyingParticle[0xe0]; // 0x1560            
+            // m_AmberDeathLargeExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberDeathLargeExplosionParticle;
+            char m_AmberDeathLargeExplosionParticle[0xe0]; // 0x1640            
+            // m_AmberHitResponseParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberHitResponseParticle;
+            char m_AmberHitResponseParticle[0xe0]; // 0x1720            
+            // m_AmberPhase2AmbientParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_AmberPhase2AmbientParticle;
+            char m_AmberPhase2AmbientParticle[0xe0]; // 0x1800            
+            // m_SapphEffigyExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphEffigyExplosionParticle;
+            char m_SapphEffigyExplosionParticle[0xe0]; // 0x18e0            
+            // m_SapphTransformUpExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphTransformUpExplosionParticle;
+            char m_SapphTransformUpExplosionParticle[0xe0]; // 0x19c0            
+            // m_SapphBeginDyingParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphBeginDyingParticle;
+            char m_SapphBeginDyingParticle[0xe0]; // 0x1aa0            
+            // m_SapphDeathLargeExplosionParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphDeathLargeExplosionParticle;
+            char m_SapphDeathLargeExplosionParticle[0xe0]; // 0x1b80            
+            // m_SapphHitResponseParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphHitResponseParticle;
+            char m_SapphHitResponseParticle[0xe0]; // 0x1c60            
+            // m_SapphPhase2AmbientParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_SapphPhase2AmbientParticle;
+            char m_SapphPhase2AmbientParticle[0xe0]; // 0x1d40            
+            // m_PatronTransformDownEyeParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_PatronTransformDownEyeParticle;
+            char m_PatronTransformDownEyeParticle[0xe0]; // 0x1e20            
             // m_strWIPModelName has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_strWIPModelName;
-            char m_strWIPModelName[0xe0]; // 0x1570            
+            char m_strWIPModelName[0xe0]; // 0x1f00            
+            // m_strTeamAmberModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_strTeamAmberModel;
+            char m_strTeamAmberModel[0xe0]; // 0x1fe0            
+            // m_AmberEffigyModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_AmberEffigyModel;
+            char m_AmberEffigyModel[0xe0]; // 0x20c0            
+            // m_SapphEffigyModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_SapphEffigyModel;
+            char m_SapphEffigyModel[0xe0]; // 0x21a0            
+            // m_AmberCoreModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_AmberCoreModel;
+            char m_AmberCoreModel[0xe0]; // 0x2280            
+            // m_SapphCoreModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeCModel>> m_SapphCoreModel;
+            char m_SapphCoreModel[0xe0]; // 0x2360            
+            float m_flCoreVerticalOffset; // 0x2440            
+            uint8_t _pad2444[0x4]; // 0x2444
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_DyingSmallExplosion; // 0x1650            
-            CSoundEventName m_PatronTransformStartSound; // 0x1660            
-            CSoundEventName m_PatronTransformEndSound; // 0x1670            
-            CSoundEventName m_PatronKilledSound; // 0x1680            
-            CSoundEventName m_TransformingLoopSound; // 0x1690            
-            CSoundEventName m_LaserSound; // 0x16a0            
+            CSoundEventName m_PatronTransformStartSound; // 0x2448            
+            CSoundEventName m_PatronKilledSound; // 0x2458            
+            CSoundEventName m_EffigySapphireExplodeSound; // 0x2468            
+            CSoundEventName m_EffigyAmberExplodeSound; // 0x2478            
+            CSoundEventName m_AmberReformSound; // 0x2488            
+            CSoundEventName m_SapphireReformSound; // 0x2498            
+            CSoundEventName m_AmberReformingLoopSound; // 0x24a8            
+            CSoundEventName m_SapphireReformingLoopSound; // 0x24b8            
             // metadata: MPropertyStartGroup "Modifiers"
             // m_LaserBeamModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_LaserBeamModifier;
-            char m_LaserBeamModifier[0x10]; // 0x16b0            
+            char m_LaserBeamModifier[0x10]; // 0x24c8            
             // m_DyingModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_DyingModifier;
-            char m_DyingModifier[0x10]; // 0x16c0            
+            char m_DyingModifier[0x10]; // 0x24d8            
             // m_VulnerableModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_VulnerableModifier;
-            char m_VulnerableModifier[0x10]; // 0x16d0            
+            char m_VulnerableModifier[0x10]; // 0x24e8            
             // m_Phase1Modifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_Phase1Modifier;
-            char m_Phase1Modifier[0x10]; // 0x16e0            
-            // m_Phase2Modifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_Phase2Modifier;
-            char m_Phase2Modifier[0x10]; // 0x16f0            
+            char m_Phase1Modifier[0x10]; // 0x24f8            
+            // m_EffigyModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_EffigyModifier;
+            char m_EffigyModifier[0x10]; // 0x2508            
+            // m_Phase2DamagePulseModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_Phase2DamagePulseModifier;
+            char m_Phase2DamagePulseModifier[0x10]; // 0x2518            
             // m_BackdoorProtection has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_BackdoorProtection;
-            char m_BackdoorProtection[0x10]; // 0x1700            
+            char m_BackdoorProtection[0x10]; // 0x2528            
             // m_RangedArmorModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_RangedArmorModifier;
-            char m_RangedArmorModifier[0x10]; // 0x1710            
+            char m_RangedArmorModifier[0x10]; // 0x2538            
             // m_ObjectiveRegen has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_ObjectiveRegen;
-            char m_ObjectiveRegen[0x10]; // 0x1720            
+            char m_ObjectiveRegen[0x10]; // 0x2548            
             // m_ObjectiveHealthGrowthPhase1 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_ObjectiveHealthGrowthPhase1;
-            char m_ObjectiveHealthGrowthPhase1[0x10]; // 0x1730            
+            char m_ObjectiveHealthGrowthPhase1[0x10]; // 0x2558            
             // m_ObjectiveHealthGrowthPhase2 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_ObjectiveHealthGrowthPhase2;
-            char m_ObjectiveHealthGrowthPhase2[0x10]; // 0x1740            
-            // m_EnemyTrooperDamageReduction has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_EnemyTrooperDamageReduction;
-            char m_EnemyTrooperDamageReduction[0x10]; // 0x1750            
+            char m_ObjectiveHealthGrowthPhase2[0x10]; // 0x2568            
             // m_DefenderInPitInvulnerable has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_DefenderInPitInvulnerable;
-            char m_DefenderInPitInvulnerable[0x10]; // 0x1760            
+            char m_DefenderInPitInvulnerable[0x10]; // 0x2578            
             // metadata: MPropertyStartGroup "Laser"
-            // m_LaserChargingParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserChargingParticle;
-            char m_LaserChargingParticle[0xe0]; // 0x1770            
-            // m_LaserBeamEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserBeamEffect;
-            char m_LaserBeamEffect[0xe0]; // 0x1850            
-            // m_LaserPreviewEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserPreviewEffect;
-            char m_LaserPreviewEffect[0xe0]; // 0x1930            
-            // m_LaserDamageEffect has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_LaserDamageEffect;
-            char m_LaserDamageEffect[0xe0]; // 0x1a10            
-            float m_flLaserTargetingZOffset; // 0x1af0            
-            float m_flLaserTrackingSpeed; // 0x1af4            
-            float m_flLaserTrackingMaxSpeed; // 0x1af8            
-            float m_flLaserCastingTrackSpeed; // 0x1afc            
-            float m_flLaserCastingTrackMaxSpeed; // 0x1b00            
-            float m_flLaserDPSToPlayers; // 0x1b04            
-            float m_flLaserDPSToNPCs; // 0x1b08            
-            float m_flLaserDPSMaxHealth; // 0x1b0c            
-            float m_flNoShieldLaserTrackingSpeed; // 0x1b10            
-            float m_flNoShieldLaserTrackingMaxSpeed; // 0x1b14            
-            float m_flNoShieldLaserCastingTrackSpeed; // 0x1b18            
-            float m_flNoShieldLaserCastingTrackMaxSpeed; // 0x1b1c            
-            float m_flNoShieldLaserDPSToPlayers; // 0x1b20            
-            float m_flNoShieldLaserDPSToNPCs; // 0x1b24            
-            float m_flAllyPitTimeMin; // 0x1b28            
-            uint8_t _pad1b2c[0x4];
+            float m_flLaserMoveSpeed; // 0x2588            
+            float m_flLaserCooldownPhase1; // 0x258c            
+            float m_flLaserCooldownPhase2; // 0x2590            
+            float m_flLaserDurationPhase1; // 0x2594            
+            float m_flLaserDurationPhase2; // 0x2598            
+            // metadata: MPropertyStartGroup "TransitionProperties"
+            float m_flPhase1DyingBegin; // 0x259c            
+            float m_flPhase1DyingDrop; // 0x25a0            
+            float m_flPhase2DyingDropScale; // 0x25a4            
+            float m_flPhase1DyingWait; // 0x25a8            
+            float m_flPhase1DyingTransformUp; // 0x25ac            
+            float m_flPhase1BossScale; // 0x25b0            
+            float m_flPhase2BossScale; // 0x25b4            
+            float m_flPostShrineTransition; // 0x25b8            
+            uint8_t _pad25bc[0x4]; // 0x25bc
+            // metadata: MPropertyStartGroup "Arm Attacks"
+            // m_ArmAttackGroundHit has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ArmAttackGroundHit;
+            char m_ArmAttackGroundHit[0xe0]; // 0x25c0            
+            float m_flArmAttackHealthMin; // 0x26a0            
+            float m_flArmAttackHealthMax; // 0x26a4            
+            float m_flArmAttackCooldownMin; // 0x26a8            
+            float m_flArmAttackCooldownMax; // 0x26ac            
+            float m_flArmAttackTimeToHit; // 0x26b0            
+            float m_flArmAttackRadius; // 0x26b4            
+            float m_flArmAttackPosDotThres; // 0x26b8            
+            float m_flArmAttackDamage; // 0x26bc            
+            float m_flArmAttackKnockbackStrength; // 0x26c0            
+            float m_flArmAttackInvulCooldownScale; // 0x26c4            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_Boss_Tier3VData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CNPC_Boss_Tier3VData) == 0x1b30);
+        static_assert(sizeof(source2sdk::client::CNPC_Boss_Tier3VData) == 0x26c8);
     };
 };

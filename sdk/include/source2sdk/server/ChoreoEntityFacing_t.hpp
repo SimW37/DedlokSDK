@@ -24,7 +24,7 @@ namespace source2sdk
         {
         public:
             source2sdk::client::SceneEventId_t m_nSceneEventId; // 0x0            
-            Vector m_vFacingTarget; // 0x4            
+            VectorWS m_vFacingTarget; // 0x4            
             float m_flImportance; // 0x10            
         };
         #pragma pack(pop)

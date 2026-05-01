@@ -17,18 +17,18 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x240
+        // Size: 0x360
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_Mirage_FireScarabs_Watcher : public source2sdk::client::CCitadel_Modifier_StatStealBase
         {
         public:
-            uint8_t _pad0140[0x100];
+            uint8_t _pad01a0[0x1c0];
             // No schema binary for binding
         };
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Mirage_FireScarabs_Watcher) == 0x240);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_Mirage_FireScarabs_Watcher) == 0x360);
     };
 };

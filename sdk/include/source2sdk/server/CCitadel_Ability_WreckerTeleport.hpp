@@ -25,7 +25,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcf8
+        // Size: 0x11e8
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "EHANDLE m_hProjectile"
@@ -35,28 +35,28 @@ namespace source2sdk
         class CCitadel_Ability_WreckerTeleport : public source2sdk::server::CCitadelBaseAbility
         {
         public:
-            uint8_t _pad0ba0[0x8]; // 0xba0
+            uint8_t _pad0f90[0x8]; // 0xf90
             // metadata: MNetworkEnable
             // m_hProjectile has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hProjectile;
-            char m_hProjectile[0x4]; // 0xba8            
+            char m_hProjectile[0x4]; // 0xf98            
             // metadata: MNetworkEnable
-            float m_flArrowSpeed; // 0xbac            
+            float m_flArrowSpeed; // 0xf9c            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flSnapAnglesBackTime; // 0xbb0            
-            float m_flCastTimeDamage; // 0xbb4            
-            source2sdk::entity2::GameTime_t m_flCastTime; // 0xbb8            
-            bool m_bNeedsExplosion; // 0xbbc            
-            uint8_t _pad0bbd[0x3]; // 0xbbd
-            Vector m_vProjectileRemovedOrigin; // 0xbc0            
-            QAngle m_angCasterAnglesAtCastTime; // 0xbcc            
-            float m_flTravelDistance; // 0xbd8            
-            uint8_t _pad0bdc[0x11c];
+            source2sdk::entity2::GameTime_t m_flSnapAnglesBackTime; // 0xfa0            
+            float m_flCastTimeDamage; // 0xfa4            
+            source2sdk::entity2::GameTime_t m_flCastTime; // 0xfa8            
+            bool m_bNeedsExplosion; // 0xfac            
+            uint8_t _pad0fad[0x3]; // 0xfad
+            Vector m_vProjectileRemovedOrigin; // 0xfb0            
+            QAngle m_angCasterAnglesAtCastTime; // 0xfbc            
+            float m_flTravelDistance; // 0xfc8            
+            uint8_t _pad0fcc[0x21c];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_WreckerTeleport because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Ability_WreckerTeleport) == 0xcf8);
+        static_assert(sizeof(source2sdk::server::CCitadel_Ability_WreckerTeleport) == 0x11e8);
     };
 };

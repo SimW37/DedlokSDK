@@ -33,7 +33,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1a8
+        // Size: 0x268
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_SmokeGrenade : public source2sdk::client::CCitadelModifier
@@ -50,14 +50,14 @@ namespace source2sdk
             char m_hEnemyAura[0x4]; // 0xc8            
             source2sdk::client::ParticleIndex_t m_nParticleIndex; // 0xcc            
             source2sdk::entity2::GameTime_t m_flStartTime; // 0xd0            
-            uint8_t _pad00d4[0xc4]; // 0xd4
-            Vector m_vOrigin; // 0x198            
-            uint8_t _pad01a4[0x4];
+            uint8_t _pad00d4[0x184]; // 0xd4
+            Vector m_vOrigin; // 0x258            
+            uint8_t _pad0264[0x4];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_SmokeGrenade because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_SmokeGrenade) == 0x1a8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_SmokeGrenade) == 0x268);
     };
 };

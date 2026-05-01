@@ -18,26 +18,26 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1e0
+        // Size: 0x290
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_HookTarget : public source2sdk::server::CCitadel_Modifier_Link
         {
         public:
-            float m_flCurrentVerticalSpeed; // 0xe8            
-            bool m_bSuccess; // 0xec            
-            bool m_bSameTeam; // 0xed            
-            bool m_bPlayedApproachingWhoosh; // 0xee            
-            uint8_t _pad00ef[0x1]; // 0xef
-            float m_flInitialTravelDistance; // 0xf0            
-            source2sdk::entity2::GameTime_t m_flStuckStartTime; // 0xf4            
-            Vector m_vLastPos; // 0xf8            
-            uint8_t _pad0104[0xdc];
+            float m_flCurrentVerticalSpeed; // 0xf0            
+            bool m_bSuccess; // 0xf4            
+            bool m_bSameTeam; // 0xf5            
+            bool m_bPlayedApproachingWhoosh; // 0xf6            
+            uint8_t _pad00f7[0x1]; // 0xf7
+            float m_flInitialTravelDistance; // 0xf8            
+            source2sdk::entity2::GameTime_t m_flStuckStartTime; // 0xfc            
+            Vector m_vLastPos; // 0x100            
+            uint8_t _pad010c[0x184];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_HookTarget because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_HookTarget) == 0x1e0);
+        static_assert(sizeof(source2sdk::server::CCitadel_Modifier_HookTarget) == 0x290);
     };
 };

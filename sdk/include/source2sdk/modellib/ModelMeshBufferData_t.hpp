@@ -34,7 +34,8 @@ namespace source2sdk
             bool m_bCreateBufferUAV; // 0x10            
             bool m_bCreateRawBuffer; // 0x11            
             bool m_bCreatePooledBuffer; // 0x12            
-            uint8_t _pad0013[0x5]; // 0x13
+            std::uint8_t m_nBufferUsage; // 0x13            
+            uint8_t _pad0014[0x4]; // 0x14
             // m_inputLayoutFields has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<source2sdk::modellib::RenderInputLayoutField_t> m_inputLayoutFields;
             char m_inputLayoutFields[0x18]; // 0x18            
@@ -51,6 +52,7 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::modellib::ModelMeshBufferData_t, m_bCreateBufferUAV) == 0x10);
         static_assert(offsetof(source2sdk::modellib::ModelMeshBufferData_t, m_bCreateRawBuffer) == 0x11);
         static_assert(offsetof(source2sdk::modellib::ModelMeshBufferData_t, m_bCreatePooledBuffer) == 0x12);
+        static_assert(offsetof(source2sdk::modellib::ModelMeshBufferData_t, m_nBufferUsage) == 0x13);
         static_assert(offsetof(source2sdk::modellib::ModelMeshBufferData_t, m_inputLayoutFields) == 0x18);
         
         static_assert(sizeof(source2sdk::modellib::ModelMeshBufferData_t) == 0x30);

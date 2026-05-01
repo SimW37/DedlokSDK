@@ -5,6 +5,7 @@
 #include <cstdint>
 #include "source2sdk/client/CCitadelAbilityComponent.hpp"
 #include "source2sdk/client/C_NPC_SimpleAnimatingAI.hpp"
+#include "source2sdk/entity2/GameTime_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
@@ -18,12 +19,15 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xe78
+        // Size: 0xeb0
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelAbilityComponent::Storage_t m_CCitadelAbilityComponent"
         // static metadata: MNetworkVarNames "float m_flAttackRange"
         // static metadata: MNetworkVarNames "float m_flAimPitch"
+        // static metadata: MNetworkVarNames "bool m_bHasRecentlyAttacked"
+        // static metadata: MNetworkVarNames "float m_flLifeTime"
+        // static metadata: MNetworkVarNames "GameTime_t m_flSpawnTime"
         #pragma pack(push, 1)
         class C_NPC_ShieldedSentry : public source2sdk::client::C_NPC_SimpleAnimatingAI
         {
@@ -32,18 +36,27 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
             // metadata: MNetworkAlias "CCitadelAbilityComponent"
             // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
-            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xca0            
-            uint8_t _pad0e68[0x4]; // 0xe68
+            source2sdk::client::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xcb0            
+            uint8_t _pad0e98[0x4]; // 0xe98
             // metadata: MNetworkEnable
-            float m_flAttackRange; // 0xe6c            
+            // metadata: MNotSaved
+            float m_flAttackRange; // 0xe9c            
             // metadata: MNetworkEnable
-            float m_flAimPitch; // 0xe70            
-            uint8_t _pad0e74[0x4];
+            // metadata: MNotSaved
+            float m_flAimPitch; // 0xea0            
+            // metadata: MNetworkEnable
+            // metadata: MNotSaved
+            bool m_bHasRecentlyAttacked; // 0xea4            
+            uint8_t _pad0ea5[0x3]; // 0xea5
+            // metadata: MNetworkEnable
+            float m_flLifeTime; // 0xea8            
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTime_t m_flSpawnTime; // 0xeac            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in C_NPC_ShieldedSentry because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::C_NPC_ShieldedSentry) == 0xe78);
+        static_assert(sizeof(source2sdk::client::C_NPC_ShieldedSentry) == 0xeb0);
     };
 };

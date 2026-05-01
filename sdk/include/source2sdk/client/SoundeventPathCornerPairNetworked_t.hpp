@@ -18,14 +18,16 @@ namespace source2sdk
         // Standard-layout class: true
         // Size: 0x24
         // Has Trivial Destructor
+        // 
+        // static metadata: MNetworkStructNotInNetworkUtlVectorEmbedded
         #pragma pack(push, 1)
         struct SoundeventPathCornerPairNetworked_t
         {
         public:
             // metadata: MNetworkEnable
-            Vector vP1; // 0x0            
+            VectorWS vP1; // 0x0            
             // metadata: MNetworkEnable
-            Vector vP2; // 0xc            
+            VectorWS vP2; // 0xc            
             // metadata: MNetworkEnable
             float flPathLengthSqr; // 0x18            
             // metadata: MNetworkEnable

@@ -25,23 +25,24 @@ namespace source2sdk
         {
         public:
             uint8_t _pad0000[0x8]; // 0x0
+            // metadata: MNotSaved
             source2sdk::server::VelocitySampler m_vSampler; // 0x8            
             uint8_t _pad001c[0x4]; // 0x1c
             source2sdk::server::SimpleConstraintSoundProfile m_soundProfile; // 0x20            
+            // metadata: MNotSaved
             Vector m_forwardAxis; // 0x40            
             uint8_t _pad004c[0x4]; // 0x4c
             CUtlSymbolLarge m_iszTravelSoundFwd; // 0x50            
             CUtlSymbolLarge m_iszTravelSoundBack; // 0x58            
             uint8_t _pad0060[0x18]; // 0x60
-            CUtlSymbolLarge m_iszReversalSounds[3]; // 0x78            
+            CUtlSymbolLarge m_iszReversalSoundSmall; // 0x78            
+            CUtlSymbolLarge m_iszReversalSoundMedium; // 0x80            
+            CUtlSymbolLarge m_iszReversalSoundLarge; // 0x88            
+            // metadata: MNotSaved
             bool m_bPlayTravelSound; // 0x90            
+            // metadata: MNotSaved
             bool m_bPlayReversalSound; // 0x91            
             uint8_t _pad0092[0x6];
-            
-            // Datamap fields:
-            // CUtlSymbolLarge m_iszReversalSounds[0]; // 0x78
-            // CUtlSymbolLarge m_iszReversalSounds[1]; // 0x80
-            // CUtlSymbolLarge m_iszReversalSounds[2]; // 0x88
         };
         #pragma pack(pop)
         
@@ -50,7 +51,9 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::server::ConstraintSoundInfo, m_forwardAxis) == 0x40);
         static_assert(offsetof(source2sdk::server::ConstraintSoundInfo, m_iszTravelSoundFwd) == 0x50);
         static_assert(offsetof(source2sdk::server::ConstraintSoundInfo, m_iszTravelSoundBack) == 0x58);
-        static_assert(offsetof(source2sdk::server::ConstraintSoundInfo, m_iszReversalSounds) == 0x78);
+        static_assert(offsetof(source2sdk::server::ConstraintSoundInfo, m_iszReversalSoundSmall) == 0x78);
+        static_assert(offsetof(source2sdk::server::ConstraintSoundInfo, m_iszReversalSoundMedium) == 0x80);
+        static_assert(offsetof(source2sdk::server::ConstraintSoundInfo, m_iszReversalSoundLarge) == 0x88);
         static_assert(offsetof(source2sdk::server::ConstraintSoundInfo, m_bPlayTravelSound) == 0x90);
         static_assert(offsetof(source2sdk::server::ConstraintSoundInfo, m_bPlayReversalSound) == 0x91);
         

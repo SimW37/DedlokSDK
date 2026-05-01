@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 6
+        // Enumerator count: 8
         // Alignment: 4
         // Size: 0x4
         enum class ECurrencyType : std::uint32_t
@@ -23,8 +23,10 @@ namespace source2sdk
             EAbilityPoints = 0x1,
             EAbilityUnlocks = 0x2,
             EDeathPenaltyGold = 0x3,
+            EItemDraftRerolls = 0x4,
+            EItemEnhancements = 0x5,
             // MPropertySuppressEnumerator
-            ECurrencyCount = 0x4,
+            ECurrencyCount = 0x6,
         };
     };
 };

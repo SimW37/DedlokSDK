@@ -20,7 +20,6 @@ namespace source2sdk
         // Size: 0xa0
         // Has VTable
         // 
-        // static metadata: M_LEGACY_OptInToSchemaPropertyDomain
         // static metadata: MGetKV3ClassDefaults
         // static metadata: MPropertyFriendlyName "Quaternion Parameter"
         #pragma pack(push, 1)

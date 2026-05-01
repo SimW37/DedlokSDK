@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1120
+        // Size: 0x1868
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "ELashGrappleState m_EGrappleState"
@@ -30,22 +30,22 @@ namespace source2sdk
         class CCitadel_Ability_Lash_Ultimate : public source2sdk::client::CCitadelBaseLockonAbility
         {
         public:
-            uint8_t _pad0f88[0x2]; // 0xf88
+            uint8_t _pad1550[0x2]; // 0x1550
             // metadata: MNetworkEnable
-            source2sdk::client::ELashGrappleState m_EGrappleState; // 0xf8a            
-            uint8_t _pad0f8b[0x1]; // 0xf8b
+            source2sdk::client::ELashGrappleState m_EGrappleState; // 0x1552            
+            uint8_t _pad1553[0x1]; // 0x1553
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flStateEnterTime; // 0xf8c            
+            source2sdk::entity2::GameTime_t m_flStateEnterTime; // 0x1554            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flNextStateTime; // 0xf90            
+            source2sdk::entity2::GameTime_t m_flNextStateTime; // 0x1558            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_flBoostEndTime; // 0xf94            
-            uint8_t _pad0f98[0x188];
+            source2sdk::entity2::GameTime_t m_flBoostEndTime; // 0x155c            
+            uint8_t _pad1560[0x308];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Ability_Lash_Ultimate because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Lash_Ultimate) == 0x1120);
+        static_assert(sizeof(source2sdk::client::CCitadel_Ability_Lash_Ultimate) == 0x1868);
     };
 };

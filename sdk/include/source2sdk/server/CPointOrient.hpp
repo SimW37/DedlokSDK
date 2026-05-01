@@ -27,7 +27,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x510
+        // Size: 0x4c0
         // Has VTable
         // 
         // static metadata: MEntityAllowsPortraitWorldSpawn
@@ -35,16 +35,16 @@ namespace source2sdk
         class CPointOrient : public source2sdk::server::CBaseEntity
         {
         public:
-            CUtlSymbolLarge m_iszSpawnTargetName; // 0x4f0            
+            CUtlSymbolLarge m_iszSpawnTargetName; // 0x4a0            
             // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CBaseEntity> m_hTarget;
-            char m_hTarget[0x4]; // 0x4f8            
-            bool m_bActive; // 0x4fc            
-            uint8_t _pad04fd[0x3]; // 0x4fd
-            source2sdk::client::PointOrientGoalDirectionType_t m_nGoalDirection; // 0x500            
-            source2sdk::client::PointOrientConstraint_t m_nConstraint; // 0x504            
-            float m_flMaxTurnRate; // 0x508            
-            source2sdk::entity2::GameTime_t m_flLastGameTime; // 0x50c            
+            char m_hTarget[0x4]; // 0x4a8            
+            bool m_bActive; // 0x4ac            
+            uint8_t _pad04ad[0x3]; // 0x4ad
+            source2sdk::client::PointOrientGoalDirectionType_t m_nGoalDirection; // 0x4b0            
+            source2sdk::client::PointOrientConstraint_t m_nConstraint; // 0x4b4            
+            float m_flMaxTurnRate; // 0x4b8            
+            source2sdk::entity2::GameTime_t m_flLastGameTime; // 0x4bc            
             
             // Datamap fields:
             // bool InputSetActive; // 0x0
@@ -55,6 +55,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPointOrient because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPointOrient) == 0x510);
+        static_assert(sizeof(source2sdk::server::CPointOrient) == 0x4c0);
     };
 };

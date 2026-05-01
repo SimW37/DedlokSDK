@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xda0
+        // Size: 0xd10
         // Has VTable
         // 
         // static metadata: MNetworkExcludeByName "m_iEffectIndex"
@@ -29,21 +29,23 @@ namespace source2sdk
         class CTeamRelativeParticleSystem : public source2sdk::server::CParticleSystem
         {
         public:
-            CUtlSymbolLarge m_iszFriendlyEffectName; // 0xd80            
-            CUtlSymbolLarge m_iszEnemyEffectName; // 0xd88            
+            CUtlSymbolLarge m_iszFriendlyEffectName; // 0xcf0            
+            CUtlSymbolLarge m_iszEnemyEffectName; // 0xcf8            
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             // m_iFriendlyEffectIndex has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CStrongHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iFriendlyEffectIndex;
-            char m_iFriendlyEffectIndex[0x8]; // 0xd90            
+            char m_iFriendlyEffectIndex[0x8]; // 0xd00            
             // metadata: MNetworkEnable
+            // metadata: MNotSaved
             // m_iEnemyEffectIndex has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CStrongHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition> m_iEnemyEffectIndex;
-            char m_iEnemyEffectIndex[0x8]; // 0xd98            
+            char m_iEnemyEffectIndex[0x8]; // 0xd08            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CTeamRelativeParticleSystem because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CTeamRelativeParticleSystem) == 0xda0);
+        static_assert(sizeof(source2sdk::server::CTeamRelativeParticleSystem) == 0xd10);
     };
 };

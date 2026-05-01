@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x4
         // Standard-layout class: false
-        // Size: 0x40
+        // Size: 0x48
         // Has VTable
         // Is Abstract
         #pragma pack(push, 1)
@@ -29,6 +29,6 @@ namespace source2sdk
         #pragma pack(pop)
         
         
-        static_assert(sizeof(source2sdk::server::CPlayer_AutoaimServices) == 0x40);
+        static_assert(sizeof(source2sdk::server::CPlayer_AutoaimServices) == 0x48);
     };
 };

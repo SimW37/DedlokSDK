@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: unknown
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x1c8
+        // Size: 0x288
         // Has VTable
         #pragma pack(push, 1)
         class CCitadel_Modifier_HookTarget : public source2sdk::client::CCitadel_Modifier_Link
@@ -32,12 +32,12 @@ namespace source2sdk
             float m_flInitialTravelDistance; // 0xf0            
             source2sdk::entity2::GameTime_t m_flStuckStartTime; // 0xf4            
             Vector m_vLastPos; // 0xf8            
-            uint8_t _pad0104[0xc4];
+            uint8_t _pad0104[0x184];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_HookTarget because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_HookTarget) == 0x1c8);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_HookTarget) == 0x288);
     };
 };

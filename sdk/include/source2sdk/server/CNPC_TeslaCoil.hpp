@@ -15,10 +15,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xe88
+        // Size: 0xe80
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "CCitadelAbilityComponent::Storage_t m_CCitadelAbilityComponent"
@@ -30,19 +30,20 @@ namespace source2sdk
             // metadata: MNetworkUserGroup "CCitadelAbilityComponent"
             // metadata: MNetworkAlias "CCitadelAbilityComponent"
             // metadata: MNetworkTypeAlias "CCitadelAbilityComponent"
-            source2sdk::server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xc30            
+            source2sdk::server::CCitadelAbilityComponent m_CCitadelAbilityComponent; // 0xc00            
+            uint8_t _pad0e68[0x4]; // 0xe68
+            float m_flDeployTime; // 0xe6c            
             uint8_t _pad0e70[0x4]; // 0xe70
-            float m_flDeployTime; // 0xe74            
-            uint8_t _pad0e78[0x10];
+            float m_flLifeTime; // 0xe74            
+            uint8_t _pad0e78[0x8];
             
             // Datamap fields:
-            // float m_flLifeTime; // 0xe7c
-            // void m_flSpawnTime; // 0xe78
+            // void m_flSpawnTime; // 0xe70
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CNPC_TeslaCoil because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CNPC_TeslaCoil) == 0xe88);
+        static_assert(sizeof(source2sdk::server::CNPC_TeslaCoil) == 0xe80);
     };
 };

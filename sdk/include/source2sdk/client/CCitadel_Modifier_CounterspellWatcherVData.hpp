@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x940
+        // Size: 0x930
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -30,21 +30,21 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Modifiers"
             // m_BuffModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CCitadelModifier> m_BuffModifier;
-            char m_BuffModifier[0x10]; // 0x760            
+            char m_BuffModifier[0x10]; // 0x750            
             // metadata: MPropertyGroupName "Visuals"
             // m_ParryFXOverride has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_ParryFXOverride;
-            char m_ParryFXOverride[0xe0]; // 0x770            
+            char m_ParryFXOverride[0xe0]; // 0x760            
             // m_HealFX has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_HealFX;
-            char m_HealFX[0xe0]; // 0x850            
+            char m_HealFX[0xe0]; // 0x840            
             // metadata: MPropertyStartGroup "Sounds"
-            CSoundEventName m_strSuccessProcSound; // 0x930            
+            CSoundEventName m_strSuccessProcSound; // 0x920            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Modifier_CounterspellWatcherVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_CounterspellWatcherVData) == 0x940);
+        static_assert(sizeof(source2sdk::client::CCitadel_Modifier_CounterspellWatcherVData) == 0x930);
     };
 };

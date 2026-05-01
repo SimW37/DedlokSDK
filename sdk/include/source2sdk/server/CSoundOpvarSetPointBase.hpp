@@ -17,7 +17,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x598
+        // Size: 0x548
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "string_t m_iszStackName"
@@ -25,29 +25,33 @@ namespace source2sdk
         // static metadata: MNetworkVarNames "string_t m_iszOpvarName"
         // static metadata: MNetworkVarNames "int m_iOpvarIndex"
         // static metadata: MNetworkVarNames "bool m_bUseAutoCompare"
+        // static metadata: MNetworkVarNames "bool m_bFastRefresh"
         #pragma pack(push, 1)
         class CSoundOpvarSetPointBase : public source2sdk::server::CBaseEntity
         {
         public:
-            bool m_bDisabled; // 0x4f0            
-            uint8_t _pad04f1[0x3]; // 0x4f1
-            CEntityHandle m_hSource; // 0x4f4            
-            uint8_t _pad04f8[0x18]; // 0x4f8
-            CUtlSymbolLarge m_iszSourceEntityName; // 0x510            
-            uint8_t _pad0518[0x50]; // 0x518
-            Vector m_vLastPosition; // 0x568            
-            uint8_t _pad0574[0x4]; // 0x574
+            bool m_bDisabled; // 0x4a0            
+            uint8_t _pad04a1[0x3]; // 0x4a1
+            CEntityHandle m_hSource; // 0x4a4            
+            uint8_t _pad04a8[0x18]; // 0x4a8
+            CUtlSymbolLarge m_iszSourceEntityName; // 0x4c0            
+            uint8_t _pad04c8[0x50]; // 0x4c8
+            // metadata: MNotSaved
+            Vector m_vLastPosition; // 0x518            
+            float m_flRefreshTime; // 0x524            
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_iszStackName; // 0x578            
+            CUtlSymbolLarge m_iszStackName; // 0x528            
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_iszOperatorName; // 0x580            
+            CUtlSymbolLarge m_iszOperatorName; // 0x530            
             // metadata: MNetworkEnable
-            CUtlSymbolLarge m_iszOpvarName; // 0x588            
+            CUtlSymbolLarge m_iszOpvarName; // 0x538            
             // metadata: MNetworkEnable
-            std::int32_t m_iOpvarIndex; // 0x590            
+            std::int32_t m_iOpvarIndex; // 0x540            
             // metadata: MNetworkEnable
-            bool m_bUseAutoCompare; // 0x594            
-            uint8_t _pad0595[0x3];
+            bool m_bUseAutoCompare; // 0x544            
+            // metadata: MNetworkEnable
+            bool m_bFastRefresh; // 0x545            
+            uint8_t _pad0546[0x2];
             
             // Datamap fields:
             // uint64_t InputSetEventGuid; // 0x0
@@ -59,13 +63,13 @@ namespace source2sdk
             // void InputEnable; // 0x0
             // void InputDisable; // 0x0
             // void CSoundOpvarSetPointBaseSetOpvarThink; // 0x0
-            // void m_nGUID; // 0x4f8
-            // void m_hOpvarData; // 0x518
+            // void m_nGUID; // 0x4a8
+            // void m_hOpvarData; // 0x4c8
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CSoundOpvarSetPointBase because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CSoundOpvarSetPointBase) == 0x598);
+        static_assert(sizeof(source2sdk::server::CSoundOpvarSetPointBase) == 0x548);
     };
 };

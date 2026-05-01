@@ -19,7 +19,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xa90
+        // Size: 0xa98
         // Has VTable
         // 
         // static metadata: MGetKV3ClassDefaults
@@ -29,23 +29,23 @@ namespace source2sdk
         public:
             // m_AuraModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::server::CCitadelModifier> m_AuraModifier;
-            char m_AuraModifier[0x10]; // 0x980            
-            std::int32_t m_iHitsRequired; // 0x990            
-            float m_flCollisionRadius; // 0x994            
-            float m_flCenterHeightOffset; // 0x998            
-            uint8_t _pad099c[0x4]; // 0x99c
+            char m_AuraModifier[0x10]; // 0x988            
+            std::int32_t m_iHitsRequired; // 0x998            
+            float m_flCollisionRadius; // 0x99c            
+            float m_flCenterHeightOffset; // 0x9a0            
+            uint8_t _pad09a4[0x4]; // 0x9a4
             // metadata: MPropertyStartGroup "Visuals"
             // metadata: MPropertyFriendlyName "Damaged Particle"
             // m_DamagedParticle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CResourceNameTyped<CWeakHandle<source2sdk::resourcesystem::InfoForResourceTypeIParticleSystemDefinition>> m_DamagedParticle;
-            char m_DamagedParticle[0xe0]; // 0x9a0            
+            char m_DamagedParticle[0xe0]; // 0x9a8            
             // metadata: MPropertyGroupName "Audio"
-            CSoundEventName m_sHitSound; // 0xa80            
+            CSoundEventName m_sHitSound; // 0xa88            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_PunchablePowerupVData because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_PunchablePowerupVData) == 0xa90);
+        static_assert(sizeof(source2sdk::server::CCitadel_PunchablePowerupVData) == 0xa98);
     };
 };

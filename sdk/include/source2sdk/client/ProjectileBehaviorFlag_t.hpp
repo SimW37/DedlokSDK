@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 19
+        // Enumerator count: 21
         // Alignment: 4
         // Size: 0x4
         enum class ProjectileBehaviorFlag_t : std::uint32_t
@@ -61,6 +61,12 @@ namespace source2sdk
             // MPropertyFriendlyName "Disable passing through portals"
             // MPropertyDescription "When set, this projectile will not travel through portals and will never recive a OnPortalled() call, because it can't"
             PBF_DontTravelThroughPortals = 0x20000,
+            // MPropertyFriendlyName "Switch to position tracking if target dies."
+            // MPropertyDescription "When set, this projectile will track to the last known good location of the target, if the target dies, instead of getting removed."
+            PBF_LocationTrackingOnTargetDeath = 0x40000,
+            // MPropertyFriendlyName "Projetile should hit when near position"
+            // MPropertyDescription "When set, this projectile will fire an on hit event when reaching a tracked position. Useful if your position isn't going to hit the ground."
+            PBF_DetonateWhenReachingTrackedPosition = 0x80000,
         };
     };
 };

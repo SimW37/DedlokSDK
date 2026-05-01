@@ -46,8 +46,9 @@ namespace source2sdk
             uint8_t _pad0029[0x7]; // 0x29
             // metadata: MPropertyStartGroup "+Model Setup/+Body Group"
             // metadata: MPropertyDescription "Body group to set when this damage level is broken."
-            // metadata: MPropertyAttributeEditor "ModelDocPicker( 4 )"
+            // metadata: MPropertyAttributeEditor "ModelDocPicker( MODELDOC_PICK_TYPE_BODY_GROUP )"
             CGlobalSymbol m_sBodyGroupName; // 0x30            
+            // metadata: MPropertyStartGroup
             // metadata: MPropertyDescription "The various damage levels for this hitgroup."
             // metadata: MPropertyFriendlyName "Damage Levels"
             // metadata: MPropertyAutoExpandSelf

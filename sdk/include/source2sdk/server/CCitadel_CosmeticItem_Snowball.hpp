@@ -18,7 +18,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0xcf8
+        // Size: 0x1228
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "int m_nSeasonal2025Level"
@@ -29,22 +29,22 @@ namespace source2sdk
         class CCitadel_CosmeticItem_Snowball : public source2sdk::server::CCitadel_Item
         {
         public:
-            uint8_t _pad0ba8[0x140]; // 0xba8
+            uint8_t _pad0f98[0x280]; // 0xf98
             // metadata: MNetworkEnable
-            std::int32_t m_nSeasonal2025Level; // 0xce8            
+            std::int32_t m_nSeasonal2025Level; // 0x1218            
             // metadata: MNetworkEnable
-            float m_flSeasonal2025LevelFrac; // 0xcec            
-            // metadata: MNetworkEnable
-            // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-            source2sdk::entity2::GameTime_t m_flNextShotTime; // 0xcf0            
+            float m_flSeasonal2025LevelFrac; // 0x121c            
             // metadata: MNetworkEnable
             // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
-            std::int32_t m_nShotsRemaining; // 0xcf4            
+            source2sdk::entity2::GameTime_t m_flNextShotTime; // 0x1220            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerOwnerExclusive"
+            std::int32_t m_nShotsRemaining; // 0x1224            
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_CosmeticItem_Snowball because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_CosmeticItem_Snowball) == 0xcf8);
+        static_assert(sizeof(source2sdk::server::CCitadel_CosmeticItem_Snowball) == 0x1228);
     };
 };

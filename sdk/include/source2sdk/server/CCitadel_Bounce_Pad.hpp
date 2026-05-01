@@ -9,6 +9,13 @@ namespace source2sdk
 {
     namespace server
     {
+        struct CBaseEntity;
+    };
+};
+namespace source2sdk
+{
+    namespace server
+    {
         struct CCitadelBaseAbility;
     };
 };
@@ -22,10 +29,10 @@ namespace source2sdk
 {
     namespace server
     {
-        // Registered alignment: 0x8
-        // Alignment: 0x8
+        // Registered alignment: 0x10
+        // Alignment: 0x10
         // Standard-layout class: false
-        // Size: 0xc40
+        // Size: 0xc20
         // Has VTable
         // 
         // static metadata: MNetworkVarNames "float m_flUpFactor"
@@ -37,25 +44,28 @@ namespace source2sdk
         public:
             // m_hAbility has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CHandle<source2sdk::server::CCitadelBaseAbility> m_hAbility;
-            char m_hAbility[0x4]; // 0xc18            
+            char m_hAbility[0x4]; // 0xbe0            
             // metadata: MNetworkEnable
-            float m_flUpFactor; // 0xc1c            
+            float m_flUpFactor; // 0xbe4            
             // metadata: MNetworkEnable
-            float m_flBounceVelocity; // 0xc20            
+            float m_flBounceVelocity; // 0xbe8            
             // metadata: MNetworkEnable
-            source2sdk::entity2::GameTime_t m_tDeactivationTime; // 0xc24            
-            bool m_bDeactivated; // 0xc28            
-            uint8_t _pad0c29[0x3]; // 0xc29
-            float m_flBarrelBounceVelocity; // 0xc2c            
-            float m_flBarrelUpFactor; // 0xc30            
-            bool m_bSpeedOnLand; // 0xc34            
-            bool m_bHasBouncedPlayerBefore; // 0xc35            
-            uint8_t _pad0c36[0xa];
+            source2sdk::entity2::GameTime_t m_tDeactivationTime; // 0xbec            
+            bool m_bDeactivated; // 0xbf0            
+            uint8_t _pad0bf1[0x3]; // 0xbf1
+            float m_flBarrelBounceVelocity; // 0xbf4            
+            float m_flBarrelUpFactor; // 0xbf8            
+            bool m_bSpeedOnLand; // 0xbfc            
+            uint8_t _pad0bfd[0x3]; // 0xbfd
+            // m_vBouncedPlayerBefore has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vBouncedPlayerBefore;
+            char m_vBouncedPlayerBefore[0x18]; // 0xc00            
+            uint8_t _pad0c18[0x8];
         };
         #pragma pack(pop)
         
         // Cannot assert offsets of fields in CCitadel_Bounce_Pad because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CCitadel_Bounce_Pad) == 0xc40);
+        static_assert(sizeof(source2sdk::server::CCitadel_Bounce_Pad) == 0xc20);
     };
 };

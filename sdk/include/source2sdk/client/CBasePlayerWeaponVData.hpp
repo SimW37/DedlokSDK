@@ -70,50 +70,52 @@ namespace source2sdk
             float m_flMuzzleSmokeTimeout; // 0x3cc            
             // metadata: MPropertyDescription "Barrel smoke decrement rate when not firing"
             float m_flMuzzleSmokeDecrementRate; // 0x3d0            
+            bool m_bGenerateMuzzleLight; // 0x3d4            
             // metadata: MPropertyStartGroup "Behavior"
             // metadata: MPropertyDescription "Should both primary and secondary attacks be cooled down together (so cooling down primary attack would cooldown both primary + secondary attacks)?"
-            bool m_bLinkedCooldowns; // 0x3d4            
-            uint8_t _pad03d5[0x3]; // 0x3d5
+            bool m_bLinkedCooldowns; // 0x3d5            
+            uint8_t _pad03d6[0x2]; // 0x3d6
             // m_vecIntrinsicModifiers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CUtlVector<CEmbeddedSubclass<source2sdk::client::CCitadelModifier>> m_vecIntrinsicModifiers;
             char m_vecIntrinsicModifiers[0x18]; // 0x3d8            
             source2sdk::client::ItemFlagTypes_t m_iFlags; // 0x3f0            
+            uint8_t _pad03f1[0x3]; // 0x3f1
+            // metadata: MPropertyDescription "This value used to determine this weapon's importance in autoselection"
+            std::int32_t m_iWeight; // 0x3f4            
+            // metadata: MPropertyFriendlyName "Safe To Auto-Switch To"
+            // metadata: MPropertyDescription "Whether this weapon is safe to automatically switch to (should be false for eg. explosives that can the player may accidentally hurt themselves with)"
+            bool m_bAutoSwitchTo; // 0x3f8            
+            // metadata: MPropertyFriendlyName "Safe To Auto-Switch Away From"
+            bool m_bAutoSwitchFrom; // 0x3f9            
             // metadata: MPropertyStartGroup "Ammo"
             // metadata: MPropertyAttributeEditor "VDataChoice( scripts/ammo.vdata )"
             // metadata: MPropertyCustomFGDType "string"
-            source2sdk::client::AmmoIndex_t m_nPrimaryAmmoType; // 0x3f1            
+            source2sdk::client::AmmoIndex_t m_nPrimaryAmmoType; // 0x3fa            
             // metadata: MPropertyAttributeEditor "VDataChoice( scripts/ammo.vdata )"
             // metadata: MPropertyCustomFGDType "string"
-            source2sdk::client::AmmoIndex_t m_nSecondaryAmmoType; // 0x3f2            
-            uint8_t _pad03f3[0x1]; // 0x3f3
+            source2sdk::client::AmmoIndex_t m_nSecondaryAmmoType; // 0x3fb            
             // metadata: MPropertyFriendlyName "Primary Clip Size"
             // metadata: MPropertyDescription "How many bullets this gun can fire before it reloads (0 if no clip)"
             // metadata: MPropertyAttributeRange "0 255"
-            std::int32_t m_iMaxClip1; // 0x3f4            
+            std::int32_t m_iMaxClip1; // 0x3fc            
             // metadata: MPropertyFriendlyName "Secondary Clip Size"
             // metadata: MPropertyDescription "How many secondary bullets this gun can fire before it reloads (0 if no clip)"
             // metadata: MPropertyAttributeRange "0 255"
-            std::int32_t m_iMaxClip2; // 0x3f8            
+            std::int32_t m_iMaxClip2; // 0x400            
             // metadata: MPropertyDescription "Primary Initial Clip (-1 means use clip size)"
             // metadata: MPropertyAttributeRange "-1 255"
-            std::int32_t m_iDefaultClip1; // 0x3fc            
+            std::int32_t m_iDefaultClip1; // 0x404            
             // metadata: MPropertyDescription "Secondary Initial Clip (-1 means use clip size)"
             // metadata: MPropertyAttributeRange "-1 255"
-            std::int32_t m_iDefaultClip2; // 0x400            
+            std::int32_t m_iDefaultClip2; // 0x408            
             // metadata: MPropertyDescription "Indicates whether to treat reserve ammo as clips (reloads) instead of raw bullets"
-            bool m_bReserveAmmoAsClips; // 0x404            
+            bool m_bReserveAmmoAsClips; // 0x40c            
             // metadata: MPropertyDescription "Regardless of ammo position, we'll always use clip1 as where our bullets come from"
-            bool m_bTreatAsSingleClip; // 0x405            
-            uint8_t _pad0406[0x2]; // 0x406
+            bool m_bTreatAsSingleClip; // 0x40d            
+            // metadata: MPropertyDescription "Indicates whether to keep any loaded ammo in the weapon on reload"
+            bool m_bKeepLoadedAmmo; // 0x40e            
+            uint8_t _pad040f[0x1]; // 0x40f
             // metadata: MPropertyStartGroup "UI"
-            // metadata: MPropertyDescription "This value used to determine this weapon's importance in autoselection"
-            std::int32_t m_iWeight; // 0x408            
-            // metadata: MPropertyFriendlyName "Safe To Auto-Switch To"
-            // metadata: MPropertyDescription "Whether this weapon is safe to automatically switch to (should be false for eg. explosives that can the player may accidentally hurt themselves with)"
-            bool m_bAutoSwitchTo; // 0x40c            
-            // metadata: MPropertyFriendlyName "Safe To Auto-Switch Away From"
-            bool m_bAutoSwitchFrom; // 0x40d            
-            uint8_t _pad040e[0x2]; // 0x40e
             source2sdk::client::RumbleEffect_t m_iRumbleEffect; // 0x410            
             float m_flDropSpeed; // 0x414            
             // metadata: MPropertyFriendlyName "HUD Bucket"
@@ -141,20 +143,22 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_nMuzzleSmokeShotThreshold) == 0x3c8);
         static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_flMuzzleSmokeTimeout) == 0x3cc);
         static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_flMuzzleSmokeDecrementRate) == 0x3d0);
-        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_bLinkedCooldowns) == 0x3d4);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_bGenerateMuzzleLight) == 0x3d4);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_bLinkedCooldowns) == 0x3d5);
         static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_vecIntrinsicModifiers) == 0x3d8);
         static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iFlags) == 0x3f0);
-        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_nPrimaryAmmoType) == 0x3f1);
-        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_nSecondaryAmmoType) == 0x3f2);
-        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iMaxClip1) == 0x3f4);
-        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iMaxClip2) == 0x3f8);
-        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iDefaultClip1) == 0x3fc);
-        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iDefaultClip2) == 0x400);
-        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_bReserveAmmoAsClips) == 0x404);
-        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_bTreatAsSingleClip) == 0x405);
-        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iWeight) == 0x408);
-        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_bAutoSwitchTo) == 0x40c);
-        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_bAutoSwitchFrom) == 0x40d);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iWeight) == 0x3f4);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_bAutoSwitchTo) == 0x3f8);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_bAutoSwitchFrom) == 0x3f9);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_nPrimaryAmmoType) == 0x3fa);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_nSecondaryAmmoType) == 0x3fb);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iMaxClip1) == 0x3fc);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iMaxClip2) == 0x400);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iDefaultClip1) == 0x404);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iDefaultClip2) == 0x408);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_bReserveAmmoAsClips) == 0x40c);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_bTreatAsSingleClip) == 0x40d);
+        static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_bKeepLoadedAmmo) == 0x40e);
         static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iRumbleEffect) == 0x410);
         static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_flDropSpeed) == 0x414);
         static_assert(offsetof(source2sdk::client::CBasePlayerWeaponVData, m_iSlot) == 0x418);

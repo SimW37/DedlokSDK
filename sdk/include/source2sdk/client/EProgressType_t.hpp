@@ -13,7 +13,7 @@ namespace source2sdk
 {
     namespace client
     {
-        // Enumerator count: 12
+        // Enumerator count: 17
         // Alignment: 4
         // Size: 0x4
         enum class EProgressType_t : std::uint32_t
@@ -30,6 +30,11 @@ namespace source2sdk
             EProgress_FillDown = 0x9,
             EProgress_RadialCW = 0xa,
             EProgress_RadialCCW = 0xb,
+            EProgress_ClipLeft = 0xc,
+            EProgress_ClipRight = 0xd,
+            EProgress_ClipUp = 0xe,
+            EProgress_ClipDown = 0xf,
+            EProgress_Scale = 0x10,
         };
     };
 };

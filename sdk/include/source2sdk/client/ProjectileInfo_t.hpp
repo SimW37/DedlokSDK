@@ -21,7 +21,7 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: true
-        // Size: 0x3a0
+        // Size: 0x398
         // 
         // static metadata: MGetKV3ClassDefaults
         #pragma pack(push, 1)
@@ -79,7 +79,7 @@ namespace source2sdk
             // metadata: MPropertyStartGroup "Sounds"
             // metadata: MPropertyDescription "Plays when a projectile hits a valid target - or the world. Not the same as detonating, just colliding."
             CSoundEventName m_HitSound; // 0x318            
-            // metadata: MPropertyDescription "Plays when a projectile hits a valid target ONLY."
+            // metadata: MPropertyDescription "Plays when a projectile hits a valid target ONLY. Should use a soundevent with base 'Base.Ability.Hit'."
             CSoundEventName m_HitTargetSound; // 0x328            
             // metadata: MPropertyDescription "Plays when a projectile hits the world ONLY."
             CSoundEventName m_HitWorldSound; // 0x338            
@@ -94,12 +94,10 @@ namespace source2sdk
             float m_flTrackingDuration; // 0x37c            
             float m_flTrackingStartTime; // 0x380            
             float m_flTrackingEndTime; // 0x384            
-            float m_flTrackingStopDuration; // 0x388            
-            uint8_t _pad038c[0x4]; // 0x38c
             // metadata: MPropertyStartGroup "Modifiers"
             // m_AutoProjectileModifier has a template type with potentially unknown template parameters. You can try uncommenting the field below.
             // CEmbeddedSubclass<source2sdk::client::CBaseModifier> m_AutoProjectileModifier;
-            char m_AutoProjectileModifier[0x10]; // 0x390            
+            char m_AutoProjectileModifier[0x10]; // 0x388            
         };
         #pragma pack(pop)
         
@@ -136,9 +134,8 @@ namespace source2sdk
         static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_flTrackingDuration) == 0x37c);
         static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_flTrackingStartTime) == 0x380);
         static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_flTrackingEndTime) == 0x384);
-        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_flTrackingStopDuration) == 0x388);
-        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_AutoProjectileModifier) == 0x390);
+        static_assert(offsetof(source2sdk::client::ProjectileInfo_t, m_AutoProjectileModifier) == 0x388);
         
-        static_assert(sizeof(source2sdk::client::ProjectileInfo_t) == 0x3a0);
+        static_assert(sizeof(source2sdk::client::ProjectileInfo_t) == 0x398);
     };
 };

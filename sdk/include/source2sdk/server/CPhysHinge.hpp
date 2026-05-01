@@ -3,10 +3,10 @@
 #include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/constraint_hingeparams_t.hpp"
 #include "source2sdk/entity2/CEntityIOOutput.hpp"
 #include "source2sdk/server/CPhysConstraint.hpp"
 #include "source2sdk/server/ConstraintSoundInfo.hpp"
-#include "source2sdk/vphysics2/constraint_hingeparams_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
@@ -20,38 +20,40 @@ namespace source2sdk
         // Registered alignment: 0x8
         // Alignment: 0x8
         // Standard-layout class: false
-        // Size: 0x710
+        // Size: 0x670
         // Has VTable
         #pragma pack(push, 1)
         class CPhysHinge : public source2sdk::server::CPhysConstraint
         {
         public:
-            uint8_t _pad0560[0x8]; // 0x560
-            source2sdk::server::ConstraintSoundInfo m_soundInfo; // 0x568            
-            source2sdk::entity2::CEntityIOOutput m_NotifyMinLimitReached; // 0x600            
-            source2sdk::entity2::CEntityIOOutput m_NotifyMaxLimitReached; // 0x628            
-            bool m_bAtMinLimit; // 0x650            
-            bool m_bAtMaxLimit; // 0x651            
-            uint8_t _pad0652[0x2]; // 0x652
-            source2sdk::vphysics2::constraint_hingeparams_t m_hinge; // 0x654            
-            float m_hingeFriction; // 0x694            
-            float m_systemLoadScale; // 0x698            
-            bool m_bIsAxisLocal; // 0x69c            
-            uint8_t _pad069d[0x3]; // 0x69d
-            float m_flMinRotation; // 0x6a0            
-            float m_flMaxRotation; // 0x6a4            
-            float m_flInitialRotation; // 0x6a8            
-            float m_flMotorFrequency; // 0x6ac            
-            float m_flMotorDampingRatio; // 0x6b0            
-            float m_flAngleSpeed; // 0x6b4            
-            float m_flAngleSpeedThreshold; // 0x6b8            
-            uint8_t _pad06bc[0x4]; // 0x6bc
-            source2sdk::entity2::CEntityIOOutput m_OnStartMoving; // 0x6c0            
-            source2sdk::entity2::CEntityIOOutput m_OnStopMoving; // 0x6e8            
+            uint8_t _pad0500[0x8]; // 0x500
+            // metadata: MNotSaved
+            source2sdk::server::ConstraintSoundInfo m_soundInfo; // 0x508            
+            source2sdk::entity2::CEntityIOOutput m_NotifyMinLimitReached; // 0x5a0            
+            source2sdk::entity2::CEntityIOOutput m_NotifyMaxLimitReached; // 0x5b8            
+            bool m_bAtMinLimit; // 0x5d0            
+            bool m_bAtMaxLimit; // 0x5d1            
+            uint8_t _pad05d2[0x2]; // 0x5d2
+            source2sdk::client::constraint_hingeparams_t m_hinge; // 0x5d4            
+            float m_hingeFriction; // 0x614            
+            float m_systemLoadScale; // 0x618            
+            // metadata: MNotSaved
+            bool m_bIsAxisLocal; // 0x61c            
+            uint8_t _pad061d[0x3]; // 0x61d
+            float m_flMinRotation; // 0x620            
+            float m_flMaxRotation; // 0x624            
+            float m_flInitialRotation; // 0x628            
+            float m_flMotorFrequency; // 0x62c            
+            float m_flMotorDampingRatio; // 0x630            
+            float m_flAngleSpeed; // 0x634            
+            float m_flAngleSpeedThreshold; // 0x638            
+            float m_flLimitsDebugVisRotation; // 0x63c            
+            source2sdk::entity2::CEntityIOOutput m_OnStartMoving; // 0x640            
+            source2sdk::entity2::CEntityIOOutput m_OnStopMoving; // 0x658            
             
             // Datamap fields:
-            // Vector m_hinge.worldPosition; // 0x654
-            // Vector m_hinge.worldAxisDirection; // 0x660
+            // Vector m_hinge.worldPosition; // 0x5d4
+            // Vector m_hinge.worldAxisDirection; // 0x5e0
             // float InputSetMotorTargetAngle; // 0x0
             // float InputSetVelocity; // 0x0
             // float InputSetHingeFriction; // 0x0
@@ -65,6 +67,6 @@ namespace source2sdk
         
         // Cannot assert offsets of fields in CPhysHinge because it is not a standard-layout class
         
-        static_assert(sizeof(source2sdk::server::CPhysHinge) == 0x710);
+        static_assert(sizeof(source2sdk::server::CPhysHinge) == 0x670);
     };
 };

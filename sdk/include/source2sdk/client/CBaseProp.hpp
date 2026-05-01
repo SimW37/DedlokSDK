@@ -23,11 +23,11 @@ namespace source2sdk
         class CBaseProp : public source2sdk::client::CBaseAnimGraph
         {
         public:
-            bool m_bModelOverrodeBlockLOS; // 0xc98            
-            uint8_t _pad0c99[0x3]; // 0xc99
-            std::int32_t m_iShapeType; // 0xc9c            
-            bool m_bConformToCollisionBounds; // 0xca0            
-            uint8_t _pad0ca1[0xf]; // 0xca1
+            bool m_bModelOverrodeBlockLOS; // 0xca0            
+            uint8_t _pad0ca1[0x3]; // 0xca1
+            std::int32_t m_iShapeType; // 0xca4            
+            bool m_bConformToCollisionBounds; // 0xca8            
+            uint8_t _pad0ca9[0x7]; // 0xca9
             CTransform m_mPreferredCatchTransform; // 0xcb0            
             
             // Datamap fields:
